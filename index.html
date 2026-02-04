@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>OnlineTools - Free Online Tools for Developers & Marketers</title>
+    <meta name="title" content="OnlineTools - Free Online Tools for Developers & Marketers">
+    <meta name="description" content="Access powerful free online tools for text editing, SEO optimization, case conversion, and image processing. Professional web utilities for enhanced productivity.">
+    <meta name="keywords" content="online tools, free tools, web tools, text tools, seo tools, case converter, image tools, developer tools, productivity tools">
+    <meta name="author" content="Rakib Alom">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rakibalom.com/tools">
+    <meta property="og:title" content="OnlineTools - Free Online Tools">
+    <meta property="og:description" content="Access powerful free online tools for text editing, SEO optimization, case conversion, and image processing.">
+    <meta property="og:image" content="https://rakibalom.com/tools/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://rakibalom.com/tools">
+    <meta property="twitter:title" content="OnlineTools - Free Online Tools">
+    <meta property="twitter:description" content="Access powerful free online tools for text editing, SEO optimization, case conversion, and image processing.">
+    <meta property="twitter:image" content="https://rakibalom.com/tools/twitter-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛠️</text></svg>">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://rakibalom.com/tools">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            line-height: 1.6;
+        }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        .nav-link {
+            color: #888;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        .nav-link:hover {
+            color: #fff;
+        }
+        
+        .tool-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            padding: 20px;
+            display: block;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        
+        .tool-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+        
+        .tool-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 6px;
+            margin-bottom: 16px;
+        }
+        
+        .tool-icon svg {
+            width: 20px;
+            height: 20px;
+            stroke: #fff;
+        }
+        
+        .faq-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 24px 0;
+            cursor: pointer;
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        
+        .faq-icon {
+            transition: transform 0.2s;
+            stroke: #888;
+        }
+        
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s;
+            color: #888;
+            font-size: 14px;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding-top: 16px;
+        }
+        
+        article h2 { margin-top: 48px; margin-bottom: 16px; }
+        article h3 { margin-top: 32px; margin-bottom: 12px; }
+        article p { color: #888; font-size: 15px; line-height: 1.8; margin-bottom: 16px; }
+        
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.1); border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                    </svg>
+                    <span class="font-semibold">OnlineTools</span>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="https://rakibalom.com/" class="nav-link">Home</a>
+                    <a href="dashboard.html" class="nav-link">Dashboard</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="max-w-6xl mx-auto px-6 pt-24 pb-16 text-center">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6" style="line-height: 1.1;">Online Free Tools</h1>
+        <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-12">
+            Professional web utilities for developers, marketers, and content creators. Fast, reliable, and completely free.
+        </p>
+        <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-400">
+            <div class="flex items-center space-x-2">
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <polyline points="20 6 9 17 4 12" stroke-width="2"/>
+                </svg>
+                <span>No Registration</span>
+            </div>
+            <div class="flex items-center space-x-2">
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <polyline points="20 6 9 17 4 12" stroke-width="2"/>
+                </svg>
+                <span>100% Free</span>
+            </div>
+            <div class="flex items-center space-x-2">
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <polyline points="20 6 9 17 4 12" stroke-width="2"/>
+                </svg>
+                <span>Instant Results</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools -->
+    <section class="max-w-6xl mx-auto px-6 py-16">
+        <div id="toolsContainer">
+            <div class="text-center py-16 text-gray-400"><p>Loading tools...</p></div>
+        </div>
+    </section>
+
+    <!-- Article -->
+    <section class="max-w-4xl mx-auto px-6 py-16">
+        <article>
+            <h2 class="text-2xl font-bold">Essential Online Tools for Modern Web Development</h2>
+            <p>In today's digital landscape, having access to reliable online tools is crucial for developers, marketers, and content creators. Our suite of free web utilities helps streamline workflows, optimize content, and improve productivity without requiring software installation or subscriptions.</p>
+
+            <h3 class="text-lg font-semibold">Why Use Online Tools?</h3>
+            <p>Online tools offer unparalleled convenience and accessibility. Work from any device with an internet connection, eliminate software updates and installations, and access professional-grade functionality without cost barriers.</p>
+
+            <h3 class="text-lg font-semibold">Text Processing Tools</h3>
+            <p>Text manipulation tools provide essential functionality for content creators and developers. From word counting and character analysis to advanced formatting and duplicate removal, these utilities help polish content to professional standards.</p>
+
+            <h3 class="text-lg font-semibold">Case Conversion Utilities</h3>
+            <p>Proper text formatting is critical for professional communication and development work. Case converter tools instantly transform text between uppercase, lowercase, title case, sentence case, and camelCase formats.</p>
+
+            <h3 class="text-lg font-semibold">SEO Optimization Tools</h3>
+            <p>Search engine optimization drives online visibility and business growth. Our SEO toolkit includes keyword analyzers, meta tag generators, and readability checkers that help create content ranking higher in search results.</p>
+
+            <h3 class="text-lg font-semibold">Image Processing Solutions</h3>
+            <p>Visual content plays a vital role in modern web design. Image processing tools enable resizing, compression, conversion, and optimization without quality loss. Support for multiple formats ensures compatibility across platforms.</p>
+        </article>
+    </section>
+
+    <!-- FAQ -->
+    <section class="max-w-4xl mx-auto px-6 py-16">
+        <h2 class="text-3xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
+        <div class="space-y-0">
+            <div class="faq-item">
+                <div class="flex justify-between items-center font-semibold text-sm">
+                    <span>Are these tools completely free?</span>
+                    <svg class="faq-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </div>
+                <div class="faq-answer">Yes, all tools are completely free to use without hidden costs, subscriptions, or usage limits.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="flex justify-between items-center font-semibold text-sm">
+                    <span>Do I need to create an account?</span>
+                    <svg class="faq-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </div>
+                <div class="faq-answer">No registration required. Simply select the tool you need and start working immediately.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="flex justify-between items-center font-semibold text-sm">
+                    <span>Is my data secure?</span>
+                    <svg class="faq-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </div>
+                <div class="faq-answer">Your privacy is our priority. Most tools process data directly in your browser, so your information never leaves your device.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="flex justify-between items-center font-semibold text-sm">
+                    <span>Can I use these tools on mobile devices?</span>
+                    <svg class="faq-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </div>
+                <div class="faq-answer">Yes, all tools are fully responsive and work on smartphones, tablets, laptops, and desktop computers.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 mt-24">
+        <div class="max-w-6xl mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                        <span class="font-semibold">OnlineTools</span>
+                    </div>
+                    <p class="text-sm text-gray-400">Professional online tools for modern web development and digital marketing.</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4 text-sm">Quick Links</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="https://rakibalom.com/" class="hover:text-white">Home</a></li>
+                        <li><a href="dashboard.html" class="hover:text-white">Dashboard</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4 text-sm">Legal</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8">
+                <p class="text-sm text-gray-400 text-center">Developed by <a href="https://rakibalom.com/" class="text-white hover:underline">Rakib Alom</a> • © 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyD...",
+            authDomain: "your-project.firebaseapp.com",
+            databaseURL: "https://your-project.firebaseio.com",
+            projectId: "your-project",
+            storageBucket: "your-project.appspot.com",
+            messagingSenderId: "123456789",
+            appId: "1:123456789:web:abc123"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
+
+        function loadTools() {
+            const container = document.getElementById('toolsContainer');
+            
+            database.ref('categories').once('value').then(catSnap => {
+                database.ref('tools').once('value').then(toolSnap => {
+                    const categories = catSnap.val() || {};
+                    const tools = toolSnap.val() || {};
+                    
+                    if (Object.keys(categories).length === 0) {
+                        container.innerHTML = '<div class="text-center py-16 text-gray-400"><p>No tools available yet.</p></div>';
+                        return;
+                    }
+                    
+                    container.innerHTML = '';
+                    
+                    Object.entries(categories).forEach(([catId, cat]) => {
+                        const catTools = Object.entries(tools).filter(([id, t]) => t.categoryId === catId);
+                        
+                        if (catTools.length > 0) {
+                            const section = document.createElement('div');
+                            section.className = 'mb-20';
+                            section.innerHTML = `
+                                <div class="mb-8">
+                                    <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider">${cat.name}</span>
+                                    ${cat.description ? `<h2 class="text-2xl font-bold mt-2">${cat.description}</h2>` : ''}
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                                    ${catTools.map(([id, tool]) => `
+                                        <a href="${tool.url}" target="_blank" rel="noopener noreferrer" class="tool-card">
+                                            <div class="tool-icon">${tool.icon}</div>
+                                            <div class="font-semibold text-sm mb-1">${tool.name}</div>
+                                            ${tool.description ? `<div class="text-xs text-gray-400">${tool.description}</div>` : ''}
+                                        </a>
+                                    `).join('')}
+                                </div>
+                            `;
+                            container.appendChild(section);
+                        }
+                    });
+                });
+            }).catch(() => {
+                container.innerHTML = '<div class="text-center py-16 text-gray-400"><p>Error loading tools.</p></div>';
+            });
+        }
+
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const active = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                if (!active) item.classList.add('active');
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', loadTools);
+    </script>
+</body>
+</html>
