@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiple URL Opener Tool - Free One-Click Access - Rakib Alom</title>
+  <meta name="description" content="Boost productivity with the Multiple URL Opener Tool, a free one-click solution to open multiple links instantly. No setup, works with all browsers.">
+  <meta name="keywords" content="Multiple URL Opener, open multiple URLs, free URL opener, one-click URL tool, browser URL opener, productivity tool">
+  <meta name="author" content="Rakib Alom">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Multiple URL Opener Tool - Free One-Click Access">
+  <meta property="og:description" content="Open multiple URLs instantly with our free Multiple URL Opener Tool. No setup required, perfect for productivity.">
+  <meta property="og:image" content="cover.jpg">
+  <meta property="og:url" content="https://yourdomain.com">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Multiple URL Opener Tool - Free One-Click Access">
+  <meta name="twitter:description" content="Open multiple URLs instantly with our free tool. No setup, works with all browsers.">
+  <meta name="twitter:image" content="cover.jpg">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+    
+  <style>
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .gradient-bg {
+      background: linear-gradient(135deg, #000000 0%, #3E001F 100%);
+    }
+    
+    .dark .gradient-bg {
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    }
+    
+    .glass-effect {
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .dark .glass-effect {
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .animate-fade-in {
+      animation: fadeIn 0.6s ease-out;
+    }
+    
+    .animate-slide-up {
+      animation: slideUp 0.8s ease-out;
+    }
+    
+    .animate-pulse-slow {
+      animation: pulse 3s ease-in-out infinite;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes slideUp {
+      from { 
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to { 
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .floating-animation {
+      animation: floating 6s ease-in-out infinite;
+    }
+    
+    @keyframes floating {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+    
+    .url-counter {
+      transition: all 0.3s ease;
+    }
+    
+    .success-animation {
+      animation: successPulse 0.6s ease-out;
+    }
+    
+    @keyframes successPulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    
+    .modal-backdrop {
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+    }
+    
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, #f59e0b, #ef4444);
+      transition: .4s;
+      border-radius: 34px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    input:checked + .slider {
+      background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+    }
+    
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+    
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+    }
+    
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      border-radius: 4px;
+    }
+    
+    .dark .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+    }
+  </style>
+</head>
+<body class="min-h-screen transition-all duration-500 ease-in-out">
+  <div class="gradient-bg min-h-screen">
+    <!-- Header -->
+    <header class="relative z-10 p-4 md:p-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="glass-effect rounded-2xl p-4 md:p-6 animate-fade-in">
+          <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center floating-animation">
+                <i class="fas fa-external-link-alt text-white text-xl"></i>
+              </div>
+              <div>
+                <h1 class="text-2xl md:text-3xl font-bold text-white">Multiple URL Opener</h1>
+                <p class="text-white/80 text-sm">Open multiple links with one click</p>
+              </div>
+            </div>
+            
+            <div class="flex items-center gap-4">
+              <div class="flex items-center gap-3">
+                <i class="fas fa-sun text-yellow-400 text-lg"></i>
+                <label class="switch">
+                  <input type="checkbox" id="modeToggle">
+                  <span class="slider"></span>
+                </label>
+                <i class="fas fa-moon text-blue-300 text-lg"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="relative z-10 p-4 md:p-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 xl:grid-cols-3 gap-6">
+          
+          <!-- Left Side - Features & Info -->
+          <div class="xl:col-span-1 space-y-6 animate-slide-up">
+            <!-- Features Card -->
+            <div class="glass-effect rounded-2xl p-6">
+              <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <i class="fas fa-star text-yellow-400"></i>
+                Key Features
+              </h2>
+              <div class="space-y-4">
+                <div class="flex items-start gap-3">
+                  <div class="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i class="fas fa-rocket text-white text-sm"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-white">Lightning Fast</h3>
+                    <p class="text-white/70 text-sm">Open hundreds of URLs simultaneously</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start gap-3">
+                  <div class="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i class="fas fa-shield-alt text-white text-sm"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-white">100% Free & Safe</h3>
+                    <p class="text-white/70 text-sm">No registration or data collection</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start gap-3">
+                  <div class="w-8 h-8 bg-purple-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i class="fas fa-mobile-alt text-white text-sm"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-white">Mobile Friendly</h3>
+                    <p class="text-white/70 text-sm">Works perfectly on all devices</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start gap-3">
+                  <div class="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i class="fas fa-globe text-white text-sm"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-white">Universal Browser Support</h3>
+                    <p class="text-white/70 text-sm">Chrome, Firefox, Safari, Edge & more</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stats Card -->
+            <div class="glass-effect rounded-2xl p-6">
+              <h3 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                <i class="fas fa-chart-line text-green-400"></i>
+                Session Stats
+              </h3>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="text-center p-3 bg-white/10 rounded-lg">
+                  <div class="text-2xl font-bold text-white" id="urlCount">0</div>
+                  <div class="text-white/70 text-xs">URLs Ready</div>
+                </div>
+                <div class="text-center p-3 bg-white/10 rounded-lg">
+                  <div class="text-2xl font-bold text-green-400" id="openedCount">0</div>
+                  <div class="text-white/70 text-xs">Opened</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side - Main Tool -->
+          <div class="xl:col-span-2 animate-slide-up" style="animation-delay: 0.2s;">
+            <div class="glass-effect rounded-2xl p-6 md:p-8">
+              <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
+                <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+                  <i class="fas fa-list text-blue-400"></i>
+                  URL Manager
+                </h2>
+                <div class="url-counter bg-white/10 px-4 py-2 rounded-full">
+                  <span class="text-white font-semibold" id="liveCount">0 URLs</span>
+                </div>
+              </div>
+
+              <!-- URL Input -->
+              <div class="relative mb-6">
+                <textarea 
+                  id="urls" 
+                  class="w-full h-64 md:h-80 p-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent resize-none custom-scrollbar transition-all duration-300"
+                  placeholder="🔗 Paste your URLs here, one per line...&#10;&#10;Examples:&#10;https://google.com&#10;https://github.com&#10;https://stackoverflow.com"
+                ></textarea>
+                <div class="absolute bottom-4 right-4 flex gap-2">
+                  <button id="pasteBtn" class="bg-white/10 hover:bg-white/20 text-white p-2 rounded-lg transition-all duration-300 group" title="Paste from clipboard">
+                    <i class="fas fa-paste group-hover:scale-110 transition-transform"></i>
+                  </button>
+                  <button id="clearBtn" class="bg-red-500/20 hover:bg-red-500/30 text-red-300 p-2 rounded-lg transition-all duration-300 group" title="Clear all URLs">
+                    <i class="fas fa-trash group-hover:scale-110 transition-transform"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                <button id="openBtn" class="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center justify-center gap-2 group">
+                  <i class="fas fa-external-link-alt group-hover:rotate-12 transition-transform"></i>
+                  Open All URLs
+                </button>
+                <button id="validateBtn" class="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center justify-center gap-2 group">
+                  <i class="fas fa-check-circle group-hover:rotate-12 transition-transform"></i>
+                  Validate URLs
+                </button>
+                <button id="sortBtn" class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center justify-center gap-2 group">
+                  <i class="fas fa-sort group-hover:rotate-12 transition-transform"></i>
+                  Sort URLs
+                </button>
+              </div>
+
+              <!-- URL List Display -->
+              <div id="urlListContainer" class="hidden">
+                <h3 class="text-lg font-semibold text-white mb-3 flex items-center gap-2">
+                  <i class="fas fa-link text-blue-400"></i>
+                  Processed URLs
+                </h3>
+                <div id="urlList" class="space-y-2 max-h-40 overflow-y-auto custom-scrollbar p-3 bg-white/5 rounded-xl border border-white/10"></div>
+              </div>
+
+              <!-- Tips -->
+              <div class="mt-6 p-4 bg-blue-500/10 border border-blue-500/20 rounded-xl">
+                <div class="flex items-start gap-3">
+                  <i class="fas fa-lightbulb text-yellow-400 mt-1 flex-shrink-0"></i>
+                  <div>
+                    <h4 class="font-semibold text-white mb-2">💡 Pro Tips</h4>
+                    <ul class="text-white/70 text-sm space-y-1">
+                      <li>• Enable pop-ups in your browser for best results</li>
+                      <li>• Use Ctrl+V (or Cmd+V on Mac) to quickly paste URLs</li>
+                      <li>• Validate URLs before opening to avoid errors</li>
+                      <li>• Limit to 20-30 URLs at once for optimal performance</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="mt-8 animate-slide-up" style="animation-delay: 0.4s;">
+          <div class="glass-effect rounded-2xl p-6 md:p-8">
+            <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-2">
+              <i class="fas fa-question-circle text-blue-400"></i>
+              Frequently Asked Questions
+            </h2>
+            
+            <div class="space-y-4">
+              <div class="faq-item bg-white/5 p-4 rounded-xl border border-white/10">
+                <button class="faq-question w-full text-left flex items-center justify-between text-white font-semibold hover:text-blue-300 transition-colors">
+                  <span>How does the Multiple URL Opener work?</span>
+                  <i class="fas fa-chevron-down transform transition-transform"></i>
+                </button>
+                <div class="faq-answer hidden mt-3 text-white/80 text-sm leading-relaxed">
+                  Simply paste your URLs (one per line) into the text area and click "Open All URLs". The tool will open each link in a new browser tab instantly. Make sure your browser allows pop-ups for this site for the best experience.
+                </div>
+              </div>
+
+              <div class="faq-item bg-white/5 p-4 rounded-xl border border-white/10">
+                <button class="faq-question w-full text-left flex items-center justify-between text-white font-semibold hover:text-blue-300 transition-colors">
+                  <span>Is it completely free to use?</span>
+                  <i class="fas fa-chevron-down transform transition-transform"></i>
+                </button>
+                <div class="faq-answer hidden mt-3 text-white/80 text-sm leading-relaxed">
+                  Yes! The Multiple URL Opener is 100% free with no hidden charges, registration requirements, or limits. We don't collect any personal data or track your usage.
+                </div>
+              </div>
+
+              <div class="faq-item bg-white/5 p-4 rounded-xl border border-white/10">
+                <button class="faq-question w-full text-left flex items-center justify-between text-white font-semibold hover:text-blue-300 transition-colors">
+                  <span>What if my browser blocks the pop-ups?</span>
+                  <i class="fas fa-chevron-down transform transition-transform"></i>
+                </button>
+                <div class="faq-answer hidden mt-3 text-white/80 text-sm leading-relaxed">
+                  If your browser blocks pop-ups, you'll see a permission modal. Click "Grant Permission" to automatically allow pop-ups for this site. You can also manually enable pop-ups in your browser settings.
+                </div>
+              </div>
+
+              <div class="faq-item bg-white/5 p-4 rounded-xl border border-white/10">
+                <button class="faq-question w-full text-left flex items-center justify-between text-white font-semibold hover:text-blue-300 transition-colors">
+                  <span>How many URLs can I open at once?</span>
+                  <i class="fas fa-chevron-down transform transition-transform"></i>
+                </button>
+                <div class="faq-answer hidden mt-3 text-white/80 text-sm leading-relaxed">
+                  While there's no strict limit, we recommend opening 20-30 URLs at once for optimal performance. Opening too many simultaneously might slow down your browser or device.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative z-10 mt-12 p-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="glass-effect rounded-2xl p-6 text-center">
+          <p class="text-white/80">
+            &copy; 2025 Developed with ❤️ by 
+            <a href="https://rakibalom.com/" target="_blank" class="text-blue-300 hover:text-blue-200 font-semibold transition-colors">
+              Rakib Alom
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Permission Modal -->
+  <div id="permissionModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden modal-backdrop">
+    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl max-w-md w-full p-6 transform scale-95 transition-all duration-300" id="modalContent">
+      <div class="text-center">
+        <div class="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+          <i class="fas fa-exclamation-triangle text-white text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Permission Required</h3>
+        <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+          Your browser blocked some pop-ups. To open multiple URLs, please allow pop-ups for this site.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-3">
+          <button id="grantPermissionBtn" class="flex-1 bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white py-3 px-6 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+            <i class="fas fa-unlock"></i>
+            Grant Permission
+          </button>
+          <button id="cancelPermissionBtn" class="flex-1 bg-gray-200 hover:bg-gray-300 dark:bg-gray-600 dark:hover:bg-gray-500 text-gray-700 dark:text-gray-200 py-3 px-6 rounded-xl font-semibold transition-all duration-300">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success Toast -->
+  <div id="successToast" class="fixed top-4 right-4 z-50 transform translate-x-full transition-all duration-300">
+    <div class="bg-green-500 text-white px-6 py-3 rounded-xl shadow-lg flex items-center gap-3">
+      <i class="fas fa-check-circle"></i>
+      <span id="toastMessage">URLs opened successfully!</span>
+    </div>
+  </div>
+
+  <script>
+    // Global variables
+    let urlCount = 0;
+    let openedCount = 0;
+
+    // Initialize the application
+    document.addEventListener('DOMContentLoaded', () => {
+      initializeDarkMode();
+      initializeEventListeners();
+      initializeFAQ();
+    });
+
+    // Dark mode functionality
+    function initializeDarkMode() {
+      const modeToggle = document.getElementById('modeToggle');
+      const isDarkMode = localStorage.getItem('darkMode') === 'true';
+      
+      if (isDarkMode) {
+        document.documentElement.classList.add('dark');
+        modeToggle.checked = true;
+      }
+
+      modeToggle.addEventListener('change', function() {
+        document.documentElement.classList.toggle('dark', this.checked);
+        localStorage.setItem('darkMode', this.checked);
+      });
+    }
+
+    // Initialize event listeners
+    function initializeEventListeners() {
+      const urlsTextarea = document.getElementById('urls');
+      const openBtn = document.getElementById('openBtn');
+      const clearBtn = document.getElementById('clearBtn');
+      const pasteBtn = document.getElementById('pasteBtn');
+      const validateBtn = document.getElementById('validateBtn');
+      const sortBtn = document.getElementById('sortBtn');
+
+      // URL textarea event listeners
+      urlsTextarea.addEventListener('input', updateURLCount);
+      urlsTextarea.addEventListener('paste', () => setTimeout(updateURLCount, 100));
+
+      // Button event listeners
+      openBtn.addEventListener('click', openAllURLs);
+      clearBtn.addEventListener('click', clearAllURLs);
+      pasteBtn.addEventListener('click', pasteFromClipboard);
+      validateBtn.addEventListener('click', validateURLs);
+      sortBtn.addEventListener('click', sortURLs);
+
+      // Modal event listeners
+      document.getElementById('grantPermissionBtn').addEventListener('click', grantPermission);
+      document.getElementById('cancelPermissionBtn').addEventListener('click', closePermissionModal);
+    }
+
+    // Update URL count
+    function updateURLCount() {
+      const textarea = document.getElementById('urls');
+      const urls = getURLsFromTextarea();
+      urlCount = urls.length;
+      
+      document.getElementById('urlCount').textContent = urlCount;
+      document.getElementById('liveCount').textContent = urlCount === 1 ? '1 URL' : `${urlCount} URLs`;
+      
+      // Add animation effect
+      const counter = document.querySelector('.url-counter');
+      counter.classList.add('success-animation');
+      setTimeout(() => counter.classList.remove('success-animation'), 600);
+    }
+
+    // Get URLs from textarea
+    function getURLsFromTextarea() {
+      const textarea = document.getElementById('urls');
+      return textarea.value.split('\n')
+        .map(url => url.trim())
+        .filter(url => url !== '' && !url.startsWith('#'));
+    }
+
+    // Open all URLs
+    function openAllURLs() {
+      const urls = getURLsFromTextarea();
+      
+      if (urls.length === 0) {
+        showToast('Please enter some URLs first!', 'warning');
+        return;
+      }
+
+      let blockedCount = 0;
+      let successCount = 0;
+
+      urls.forEach((url, index) => {
+        setTimeout(() => {
+          try {
+            const formattedURL = formatURL(url);
+            const newWindow = window.open(formattedURL, '_blank');
+            
+            if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
+              blockedCount++;
+            } else {
+              successCount++;
+            }
+            
+            // Update opened count
+            if (index === urls.length - 1) {
+              setTimeout(() => {
+                openedCount += successCount;
+                document.getElementById('openedCount').textContent = openedCount;
+                
+                if (blockedCount > 0) {
+                  showPermissionModal();
+                } else {
+                  showToast(`${successCount} URLs opened successfully!`, 'success');
+                  displayURLList(urls);
+                }
+              }, 100);
+            }
+          } catch (error) {
+            console.error('Error opening URL:', url, error);
+          }
+        }, index * 50); // Staggered opening to prevent browser overwhelm
+      });
+    }
+
+    // Format URL to ensure it has protocol
+    function formatURL(url) {
+      if (!url.match(/^https?:\/\//)) {
+        return 'https://' + url;
+      }
+      return url;
+    }
+
+    // Validate URLs
+    function validateURLs() {
+      const urls = getURLsFromTextarea();
+      
+      if (urls.length === 0) {
+        showToast('Please enter some URLs first!', 'warning');
+        return;
+      }
+
+      const validURLs = [];
+      const invalidURLs = [];
+
+      urls.forEach(url => {
+        try {
+          const formattedURL = formatURL(url);
+          new URL(formattedURL);
+          validURLs.push(url);
+        } catch {
+          invalidURLs.push(url);
+        }
+      });
+
+      const message = `✅ Valid: ${validURLs.length}, ❌ Invalid: ${invalidURLs.length}`;
+      showToast(message, invalidURLs.length > 0 ? 'warning' : 'success');
+      
+      if (invalidURLs.length > 0) {
+        console.log('Invalid URLs:', invalidURLs);
+      }
+    }
+
+    // Sort URLs alphabetically
+    function sortURLs() {
+      const urls = getURLsFromTextarea();
+      
+      if (urls.length === 0) {
+        showToast('Please enter some URLs first!', 'warning');
+        return;
+      }
+
+      const sortedURLs = urls.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+      document.getElementById('urls').value = sortedURLs.join('\n');
+      updateURLCount();
+      showToast('URLs sorted alphabetically!', 'success');
+    }
+
+    // Clear all URLs
+    function clearAllURLs() {
+      document.getElementById('urls').value = '';
+      document.getElementById('urlList').innerHTML = '';
+      document.getElementById('urlListContainer').classList.add('hidden');
+      urlCount = 0;
+      updateURLCount();
+      showToast('All URLs cleared!', 'success');
+    }
+
+    // Paste from clipboard
+    async function pasteFromClipboard() {
+      try {
+        const text = await navigator.clipboard.readText();
+        const textarea = document.getElementById('urls');
+        const currentValue = textarea.value;
+        textarea.value = currentValue + (currentValue ? '\n' : '') + text;
+        updateURLCount();
+        showToast('URLs pasted from clipboard!', 'success');
+      } catch (error) {
+        showToast('Failed to access clipboard. Please paste manually.', 'warning');
+      }
+    }
+
+    // Display URL list
+    function displayURLList(urls) {
+      const urlList = document.getElementById('urlList');
+      const urlListContainer = document.getElementById('urlListContainer');
+      
+      urlList.innerHTML = '';
+      
+      urls.forEach((url, index) => {
+        const urlItem = document.createElement('div');
+        urlItem.className = 'flex items-center justify-between p-2 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition-all duration-200';
+        
+        urlItem.innerHTML = `
+          <div class="flex items-center gap-3 flex-1 min-w-0">
+            <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-check text-white text-xs"></i>
+            </div>
+            <a href="${formatURL(url)}" target="_blank" class="text-blue-300 hover:text-blue-200 text-sm truncate transition-colors">
+              ${url}
+            </a>
+          </div>
+          <div class="text-white/50 text-xs">#${index + 1}</div>
+        `;
+        
+        urlList.appendChild(urlItem);
+      });
+      
+      urlListContainer.classList.remove('hidden');
+    }
+
+    // Show permission modal
+    function showPermissionModal() {
+      const modal = document.getElementById('permissionModal');
+      const modalContent = document.getElementById('modalContent');
+      
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        modalContent.style.transform = 'scale(1)';
+      }, 50);
+    }
+
+    // Close permission modal
+    function closePermissionModal() {
+      const modal = document.getElementById('permissionModal');
+      const modalContent = document.getElementById('modalContent');
+      
+      modalContent.style.transform = 'scale(0.95)';
+      setTimeout(() => {
+        modal.classList.add('hidden');
+      }, 200);
+    }
+
+    // Grant permission (open browser settings)
+    function grantPermission() {
+      // For modern browsers, we can't programmatically change pop-up settings
+      // But we can provide instructions and try to detect if permission was granted
+      showToast('Please allow pop-ups in your browser settings for this site', 'info');
+      closePermissionModal();
+      
+      // Try opening a test popup to check if permission was granted
+      setTimeout(() => {
+        const testPopup = window.open('about:blank', 'test', 'width=1,height=1');
+        if (testPopup) {
+          testPopup.close();
+          showToast('Pop-ups are now allowed! Try opening URLs again.', 'success');
+        }
+      }, 1000);
+    }
+
+    // Show toast notification
+    function showToast(message, type = 'success') {
+      const toast = document.getElementById('successToast');
+      const toastMessage = document.getElementById('toastMessage');
+      const toastElement = toast.querySelector('div');
+      
+      // Set message
+      toastMessage.textContent = message;
+      
+      // Set color based on type
+      toastElement.className = `px-6 py-3 rounded-xl shadow-lg flex items-center gap-3 ${
+        type === 'success' ? 'bg-green-500 text-white' :
+        type === 'warning' ? 'bg-yellow-500 text-white' :
+        type === 'info' ? 'bg-blue-500 text-white' :
+        'bg-red-500 text-white'
+      }`;
+      
+      // Show toast
+      toast.style.transform = 'translateX(0)';
+      
+      // Hide after 3 seconds
+      setTimeout(() => {
+        toast.style.transform = 'translateX(100%)';
+      }, 3000);
+    }
+
+    // Initialize FAQ functionality
+    function initializeFAQ() {
+      const faqItems = document.querySelectorAll('.faq-item');
+      
+      faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        const chevron = question.querySelector('i');
+        
+        question.addEventListener('click', () => {
+          const isOpen = !answer.classList.contains('hidden');
+          
+          // Close all other FAQ items
+          faqItems.forEach(otherItem => {
+            if (otherItem !== item) {
+              otherItem.querySelector('.faq-answer').classList.add('hidden');
+              otherItem.querySelector('.faq-question i').style.transform = 'rotate(0deg)';
+            }
+          });
+          
+          // Toggle current item
+          if (isOpen) {
+            answer.classList.add('hidden');
+            chevron.style.transform = 'rotate(0deg)';
+          } else {
+            answer.classList.remove('hidden');
+            chevron.style.transform = 'rotate(180deg)';
+          }
+        });
+      });
+    }
+
+    // Keyboard shortcuts
+    document.addEventListener('keydown', (e) => {
+      if (e.ctrlKey || e.metaKey) {
+        switch (e.key) {
+          case 'Enter':
+            e.preventDefault();
+            openAllURLs();
+            break;
+          case 'k':
+            e.preventDefault();
+            document.getElementById('urls').focus();
+            break;
+          case 'l':
+            e.preventDefault();
+            clearAllURLs();
+            break;
+        }
+      }
+      
+      if (e.key === 'Escape') {
+        closePermissionModal();
+      }
+    });
+
+    // Add some visual feedback for button clicks
+    document.querySelectorAll('button').forEach(button => {
+      button.addEventListener('click', function(e) {
+        // Create ripple effect
+        const ripple = document.createElement('div');
+        const rect = this.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        const x = e.clientX - rect.left - size / 2;
+        const y = e.clientY - rect.top - size / 2;
+        
+        ripple.style.cssText = `
+          position: absolute;
+          width: ${size}px;
+          height: ${size}px;
+          left: ${x}px;
+          top: ${y}px;
+          background: rgba(255, 255, 255, 0.3);
+          border-radius: 50%;
+          transform: scale(0);
+          animation: ripple 0.6s linear;
+          pointer-events: none;
+        `;
+        
+        this.style.position = 'relative';
+        this.style.overflow = 'hidden';
+        this.appendChild(ripple);
+        
+        setTimeout(() => {
+          ripple.remove();
+        }, 600);
+      });
+    });
+
+    // Add CSS for ripple animation
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes ripple {
+        to {
+          transform: scale(2);
+          opacity: 0;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+
+    // Performance optimization: Debounce URL counting
+    let countDebounceTimer;
+    const originalUpdateURLCount = updateURLCount;
+    
+    updateURLCount = function() {
+      clearTimeout(countDebounceTimer);
+      countDebounceTimer = setTimeout(originalUpdateURLCount, 150);
+    };
+
+    // Add loading states for buttons
+    function setButtonLoading(buttonId, loading = true) {
+      const button = document.getElementById(buttonId);
+      const icon = button.querySelector('i');
+      
+      if (loading) {
+        icon.className = 'fas fa-spinner fa-spin';
+        button.disabled = true;
+        button.style.opacity = '0.7';
+      } else {
+        // Restore original icon based on button
+        const iconMap = {
+          'openBtn': 'fas fa-external-link-alt',
+          'validateBtn': 'fas fa-check-circle',
+          'sortBtn': 'fas fa-sort'
+        };
+        
+        icon.className = iconMap[buttonId] || 'fas fa-check';
+        button.disabled = false;
+        button.style.opacity = '1';
+      }
+    }
+
+    // Enhanced URL validation with better error handling
+    const originalValidateURLs = validateURLs;
+    validateURLs = function() {
+      setButtonLoading('validateBtn', true);
+      
+      setTimeout(() => {
+        originalValidateURLs();
+        setButtonLoading('validateBtn', false);
+      }, 500);
+    };
+
+    // Auto-save URLs to localStorage
+    function saveURLsToStorage() {
+      const urls = document.getElementById('urls').value;
+      try {
+        localStorage.setItem('savedURLs', urls);
+      } catch (e) {
+        console.warn('Could not save URLs to localStorage:', e);
+      }
+    }
+
+    // Load URLs from localStorage
+    function loadURLsFromStorage() {
+      try {
+        const savedURLs = localStorage.getItem('savedURLs');
+        if (savedURLs) {
+          document.getElementById('urls').value = savedURLs;
+          updateURLCount();
+        }
+      } catch (e) {
+        console.warn('Could not load URLs from localStorage:', e);
+      }
+    }
+
+    // Initialize auto-save functionality
+    document.getElementById('urls').addEventListener('input', () => {
+      clearTimeout(window.saveTimer);
+      window.saveTimer = setTimeout(saveURLsToStorage, 1000);
+    });
+
+    // Load saved URLs on page load
+    loadURLsFromStorage();
+  </script>
+</body>
+</html>
