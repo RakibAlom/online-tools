@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Audit Report Prompt Generator - SEO Tool</title>
+    <meta name="title" content="Website Audit Report Prompt Generator - SEO Tool">
+    <meta name="description" content="Generate professional website audit reports instantly with the Website Audit Report Prompt Generator by Rakib Alom. Ideal for SEO experts, agencies, and web professionals.">
+    <meta name="keywords" content="website audit report generator, seo audit prompt generator, website audit tool, seo audit report prompt, website analysis tool">
+    <meta name="author" content="Rakib Alom">
+    <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+    <link rel="icon" href="https://rakibalom.com/wp-content/uploads/2025/12/rakibalom-favicon.png" sizes="32x32" />
+    <link rel="icon" href="https://rakibalom.com/wp-content/uploads/2025/12/rakibalom-favicon.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://rakibalom.com/wp-content/uploads/2025/12/rakibalom-favicon.png" />
+    <meta name="msapplication-TileImage" content="https://rakibalom.com/wp-content/uploads/2025/12/rakibalom-favicon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 25%, #16213e 50%, #0f0f1a 100%);
+            min-height: 100vh;
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        }
+        
+        .glass-input {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-input:focus {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(99, 102, 241, 0.5);
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
+            outline: none;
+        }
+        
+        .glass-input::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
+        
+        .glass-select {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .glass-select option {
+            background: #1a1a2e;
+            color: #fff;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .gradient-border {
+            position: relative;
+        }
+        
+        .gradient-border::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            padding: 1px;
+            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+        
+        .btn-success {
+            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-success:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(34, 197, 94, 0.4);
+        }
+        
+        .section-tab {
+            transition: all 0.3s ease;
+        }
+        
+        .section-tab.active {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.3), rgba(118, 75, 162, 0.3));
+            border-color: rgba(102, 126, 234, 0.5);
+        }
+        
+        .section-tab:hover:not(.active) {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .floating-orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.3;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .orb-1 {
+            width: 400px;
+            height: 400px;
+            background: #667eea;
+            top: -100px;
+            right: -100px;
+        }
+        
+        .orb-2 {
+            width: 300px;
+            height: 300px;
+            background: #764ba2;
+            bottom: -50px;
+            left: -50px;
+        }
+        
+        .orb-3 {
+            width: 200px;
+            height: 200px;
+            background: #f093fb;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .form-section {
+            display: none;
+        }
+        
+        .form-section.active {
+            display: block;
+            animation: fadeIn 0.4s ease;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .output-area {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .progress-bar {
+            background: rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.5s ease;
+        }
+        
+        .tooltip {
+            position: relative;
+        }
+        
+        .tooltip:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.9);
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 12px;
+            white-space: nowrap;
+            z-index: 100;
+            margin-bottom: 8px;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .status-badge {
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        .status-good {
+            background: rgba(34, 197, 94, 0.2);
+            color: #22c55e;
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+        
+        .status-warning {
+            background: rgba(234, 179, 8, 0.2);
+            color: #eab308;
+            border: 1px solid rgba(234, 179, 8, 0.3);
+        }
+        
+        .status-poor {
+            background: rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+
+        .additional-issue, .custom-field {
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .custom-field-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .custom-field-card:hover {
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        .field-number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-width: 28px;
+            height: 28px;
+        }
+
+        .textarea-counter {
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.4);
+        }
+    </style>
+</head>
+<body class="text-white p-4 md:p-8">
+    <!-- Floating Orbs -->
+    <div class="floating-orb orb-1"></div>
+    <div class="floating-orb orb-2"></div>
+    <div class="floating-orb orb-3"></div>
+    
+    <div class="max-w-6xl mx-auto">
+        <!-- Header -->
+        <header class="text-center mb-8 md:mb-12">
+            <div class="inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-2xl glass-card mb-4">
+                <i class="fas fa-chart-line text-2xl md:text-3xl gradient-text"></i>
+            </div>
+            <h1 class="text-3xl md:text-5xl font-bold mb-3">
+                <span class="gradient-text">Website Audit</span>
+                <span class="text-white">Report Prompt Generator</span>
+            </h1>
+            <p class="text-gray-400 text-sm md:text-base max-w-2xl mx-auto">
+                Fill in the audit details below to generate a professional prompt for creating your client audit report
+            </p>
+        </header>
+        
+        <!-- Progress Bar -->
+        <div class="glass-card rounded-full p-1 mb-8">
+            <div class="progress-bar rounded-full h-2">
+                <div class="progress-fill h-full rounded-full" id="progressBar" style="width: 11.1%"></div>
+            </div>
+        </div>
+        
+        <!-- Section Tabs -->
+        <div class="glass-card rounded-2xl p-2 mb-6 overflow-x-auto">
+            <div class="flex space-x-2 min-w-max">
+                <button class="section-tab active px-3 py-2 md:px-4 md:py-2.5 rounded-xl text-xs md:text-sm font-medium border border-transparent whitespace-nowrap" data-section="1">
+                    <i class="fas fa-info-circle mr-1 md:mr-2"></i>Basic Info
+                </button>
+                <button class="section-tab px-3 py-2 md:px-4 md:py-2.5 rounded-xl text-xs md:text-sm font-medium border border-transparent whitespace-nowrap" data-section="2">
+                    <i class="fas fa-tachometer-alt mr-1 md:mr-2"></i>Performance
+                </button>
+                <button class="section-tab px-3 py-2 md:px-4 md:py-2.5 rounded-xl text-xs md:text-sm font-medium border border-transparent whitespace-nowrap" data-section="3">
+                    <i class="fas fa-search mr-1 md:mr-2"></i>SEO
+                </button>
+                <button class="section-tab px-3 py-2 md:px-4 md:py-2.5 rounded-xl text-xs md:text-sm font-medium border border-transparent whitespace-nowrap" data-section="4">
+                    <i class="fas fa-mobile-alt mr-1 md:mr-2"></i>Mobile & Security
+                </button>
+                <button class="section-tab px-3 py-2 md:px-4 md:py-2.5 rounded-xl text-xs md:text-sm font-medium border border-transparent whitespace-nowrap" data-section="5">
+                    <i class="fas fa-file-alt mr-1 md:mr-2"></i>Content
+                </button>
+                <button class="section-tab px-3 py-2 md:px-4 md:py-2.5 rounded-xl text-xs md:text-sm font-medium border border-transparent whitespace-nowrap" data-section="6">
+                    <i class="fas fa-exclamation-triangle mr-1 md:mr-2"></i>Additional
+                </button>
+                <button class="section-tab px-3 py-2 md:px-4 md:py-2.5 rounded-xl text-xs md:text-sm font-medium border border-transparent whitespace-nowrap" data-section="7">
+                    <i class="fas fa-edit mr-1 md:mr-2"></i>Custom Fields
+                </button>
+                <button class="section-tab px-3 py-2 md:px-4 md:py-2.5 rounded-xl text-xs md:text-sm font-medium border border-transparent whitespace-nowrap" data-section="8">
+                    <i class="fas fa-users mr-1 md:mr-2"></i>Competitor
+                </button>
+                <button class="section-tab px-3 py-2 md:px-4 md:py-2.5 rounded-xl text-xs md:text-sm font-medium border border-transparent whitespace-nowrap" data-section="9">
+                    <i class="fas fa-cog mr-1 md:mr-2"></i>Preferences
+                </button>
+            </div>
+        </div>
+        
+        <!-- Main Form -->
+        <form id="auditForm" class="glass-card rounded-3xl p-6 md:p-8 mb-8">
+            
+            <!-- Section 1: Basic Information -->
+            <div class="form-section active" data-section="1">
+                <div class="flex items-center mb-6">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center mr-4">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-xl md:text-2xl font-bold">Basic Information</h2>
+                        <p class="text-gray-400 text-sm">Enter client and agency details</p>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">
+                            <i class="fas fa-building mr-2 text-indigo-400"></i>Client Business Name
+                        </label>
+                        <input type="text" name="clientName" placeholder="Enter client business name" 
+                            class="glass-input w-full px-4 py-3 rounded-xl text-white">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">
+                            <i class="fas fa-globe mr-2 text-indigo-400"></i>Client Website URL
+                        </label>
+                        <input type="url" name="clientUrl" placeholder="https://example.com" 
+                            class="glass-input w-full px-4 py-3 rounded-xl text-white">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">
+                            <i class="fas fa-industry mr-2 text-indigo-400"></i>Client Industry
+                        </label>
+                        <input type="text" name="clientIndustry" placeholder="e.g., E-commerce, Healthcare, Finance" 
+                            class="glass-input w-full px-4 py-3 rounded-xl text-white">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">
+                            <i class="fas fa-briefcase mr-2 text-indigo-400"></i>Your Agency Name
+                        </label>
+                        <input type="text" name="agencyName" placeholder="Enter your agency name" 
+                            class="glass-input w-full px-4 py-3 rounded-xl text-white">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">
+                            <i class="fas fa-calendar mr-2 text-indigo-400"></i>Audit Date
+                        </label>
+                        <input type="date" name="auditDate" 
+                            class="glass-input w-full px-4 py-3 rounded-xl text-white">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section 2: Performance Scores -->
+            <div class="form-section" data-section="2">
+                <div class="flex items-center mb-6">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center mr-4">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-xl md:text-2xl font-bold">Performance Scores</h2>
+                        <p class="text-gray-400 text-sm">Enter speed and Core Web Vitals data</p>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">
+                            <i class="fas fa-desktop mr-2 text-green-400"></i>Desktop Speed Score (0-100)
+                        </label>
+                        <input type="number" name="desktopSpeed" min="0" max="100" placeholder="e.g., 75" 
+                            class="glass-input w-full px-4 py-3 rounded-xl text-white">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">
+                            <i class="fas fa-mobile-alt mr-2 text-green-400"></i>Mobile Speed Score (0-100)
+                        </label>
+                        <input type="number" name="mobileSpeed" min="0" max="100" placeholder="e.g., 45" 
+                            class="glass-input w-full px-4 py-3 rounded-xl text-white">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">
+                            <i class="fas fa-clock mr-2 text-green-400"></i>Page Load Time (seconds)
+                        </label>
+                        <input type="text" name="loadTime" placeholder="e.g., 3.5s" 
+                            class="glass-input w-full px-4 py-3 rounded-xl text-white">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">
+                            <i class="fas fa-weight mr-2 text-green-400"></i>Page Size (MB)
+                        </label>
+                        <input type="text" name="pageSize" placeholder="e.g., 2.5 MB" 
+                            class="glass-input w-full px-4 py-3 rounded-xl text-white">
+                    </div>
+                </div>
+                
+                <!-- Core Web Vitals -->
+                <div class="glass-card rounded-2xl p-4 md:p-6 border border-white/5">
+                    <h3 class="text-lg font-semibold mb-4 flex items-center">
+                        <i class="fas fa-heartbeat mr-2 text-red-400"></i>Core Web Vitals
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <!-- LCP -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-end">
+                            <div class="md:col-span-2">
+                                <label class="block text-sm font-medium text-gray-300 mb-2">
+                                    LCP (Largest Contentful Paint)
+                                </label>
+                                <input type="text" name="lcp" placeholder="e.g., 2.5s" 
+                                    class="glass-input w-full px-4 py-3 rounded-xl text-white">
+                            </div>
+                            <div>
+                                <select name="lcpStatus" class="glass-select w-full px-4 py-3 rounded-xl text-white">
+                                    <option value="Good">Good</option>
+                                    <option value="Needs Improvement">Needs Improvement</option>
+                                    <option value="Poor">Poor</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <!-- FID -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-end">
+                            <div class="md:col-span-2">
+                                <label class="block text-sm font-medium text-gray-300 mb-2">
+                                    FID (First Input Delay)
+                                </label>
+                                <input type="text" name="fid" placeholder="e.g., 100ms" 
+                                    class="glass-input w-full px-4 py-3 rounded-xl text-white">
+                            </div>
+                            <div>
+                                <select name="fidStatus" class="glass-select w-full px-4 py-3 rounded-xl text-white">
+                                    <option value="Good">Good</option>
+                                    <option value="Needs Improvement">Needs Improvement</option>
+                                    <option value="Poor">Poor</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <!-- CLS -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-end">
+                            <div class="md:col-span-2">
+                                <label class="block text-sm font-medium text-gray-300 mb-2">
+                                    CLS (Cumulative Layout Shift)
+                                </label>
+                                <input type="text" name="cls" placeholder="e.g., 0.1" 
+                                    class="glass-input w-full px-4 py-3 rounded-xl text-white">
+                            </div>
+                            <div>
+                                <select name="clsStatus" class="glass-select w-full px-4 py-3 rounded-xl text-white">
+                                    <option value="Good">Good</option>
+                                    <option value="Needs Improvement">Needs Improvement</option>
+                                    <option value="Poor">Poor</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section 3: SEO Issues -->
+            <div class="form-section" data-section="3">
+                <div class="flex items-center mb-6">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center mr-4">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-xl md:text-2xl font-bold">SEO Issues</h2>
+                        <p class="text-gray-400 text-sm">Enter on-page SEO problems found</p>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">
+                            <i class="fas fa-heading mr-2 text-blue-400"></i>Missing Meta Titles
+                        </label>
+                        <input type="number" name="missingTitles" min="0" placeholder="Number of pages" 
+                            class="glass-input w-full px-4 py-3 rounded-xl text-white">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">
+                            <i class="fas fa-align-left mr-2 text-blue-400"></i>Missing Meta Descriptions
+                        </label>
+                        <input type="number" name="missingDescriptions" min="0" placeholder="Number of pages" 
+                            class="glass-input w-full px-4 py-3 rounded-xl text-white">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">
+                            <i class="fas fa-h1 mr-2 text-blue-400"></i>Missing H1 Tags
+                        </label>
+                        <input type="number" name="missingH1" min="0" placeholder="Number of pages" 
+                            class="glass-input w-full px-4 py-3 rounded-xl text-white">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">
+                            <i class="fas fa-clone mr-2 text-blue-400"></i>Duplicate H1 Tags
+                        </label>
+                        <input type="number" name="duplicateH1" min="0" placeholder="Number found" 
+                            class="glass-input w-full px-4 py-3 rounded-xl text-white">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">
+                            <i class="fas fa-image mr-2 text-blue-400"></i>Missing Alt Tags
+                        </label>
+                        <input type="number" name="missingAlt" min="0" placeholder="Number of images" 
+                            class="glass-input w-full px-4 py-3 rounded-xl text-white">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">
+                            <i class="fas fa-unlink mr-2 text-blue-400"></i>Broken Links (404)
+                        </label>
+                        <input type="number" name="brokenLinks" min="0" placeholder="Number found" 
+                            class="glass-input w-full px-4 py-3 rounded-xl text-white">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">
+                            <i class="fas fa-random mr-2 text-blue-400"></i>Redirect Chains
+                        </label>
+                        <input type="number" name="redirectChains" min="0" placeholder="Number found" 
+                            class="glass-input w-full px-4 py-3 rounded-xl text-white">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">
+                            <i class="fas fa-sitemap mr-2 text-blue-400"></i>Sitemap Status
+                        </label>
+                        <select name="sitemapStatus" class="glass-select w-full px-4 py-3 rounded-xl text-white">
+                            <option value="Present">Present</option>
+                            <option value="Missing">Missing</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">
+                            <i class="fas fa-robot mr-2 text-blue-400"></i>Robots.txt Status
+                        </label>
+                        <select name="robotsStatus" class="glass-select w-full px-4 py-3 rounded-xl text-white">
+                            <option value="Present">Present</option>
+                            <option value="Missing">Missing</option>
+                            <option value="Has Issues">Has Issues</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section 4: Mobile & Security -->
+            <div class="form-section" data-section="4">
+                <div class="flex items-center mb-6">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-r from-yellow-500 to-orange-500 flex items-center justify-center mr-4">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-xl md:text-2xl font-bold">Mobile & Security</h2>
+                        <p class="text-gray-400 text-sm">Enter mobile and security check results</p>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Mobile Section -->
+                    <div class="glass-card rounded-2xl p-4 md:p-6 border border-white/5">
+                        <h3 class="text-lg font-semibold mb-4 flex items-center">
+                            <i class="fas fa-mobile-alt mr-2 text-yellow-400"></i>Mobile Friendliness
+                        </h3>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-2">Mobile Friendly?</label>
+                                <select name="mobileFriendly" class="glass-select w-full px-4 py-3 rounded-xl text-white">
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-2">Mobile Usability Issues</label>
+                                <textarea name="mobileIssues" rows="3" placeholder="List any mobile issues found or write 'None'" 
+                                    class="glass-input w-full px-4 py-3 rounded-xl text-white resize-none"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Security Section -->
+                    <div class="glass-card rounded-2xl p-4 md:p-6 border border-white/5">
+                        <h3 class="text-lg font-semibold mb-4 flex items-center">
+                            <i class="fas fa-lock mr-2 text-orange-400"></i>Security
+                        </h3>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-2">SSL Certificate</label>
+                                <select name="sslStatus" class="glass-select w-full px-4 py-3 rounded-xl text-white">
+                                    <option value="Valid">Valid</option>
+                                    <option value="Invalid">Invalid</option>
+                                    <option value="Missing">Missing</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-2">Mixed Content Warnings</label>
+                                <select name="mixedContent" class="glass-select w-full px-4 py-3 rounded-xl text-white">
+                                    <option value="No">No</option>
+                                    <option value="Yes">Yes</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-2">Security Headers</label>
+                                <select name="securityHeaders" class="glass-select w-full px-4 py-3 rounded-xl text-white">
+                                    <option value="Present">Present</option>
+                                    <option value="Missing">Missing</option>
+                                    <option value="Partial">Partial</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section 5: Content Issues -->
+            <div class="form-section" data-section="5">
+                <div class="flex items-center mb-6">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-r from-pink-500 to-rose-500 flex items-center justify-center mr-4">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-xl md:text-2xl font-bold">Content Issues</h2>
+                        <p class="text-gray-400 text-sm">Enter content-related problems</p>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">
+                            <i class="fas fa-file-minus mr-2 text-pink-400"></i>Thin Content Pages
+                            <span class="text-gray-500 text-xs">(< 300 words)</span>
+                        </label>
+                        <input type="number" name="thinContent" min="0" placeholder="Number of pages" 
+                            class="glass-input w-full px-4 py-3 rounded-xl text-white">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">
+                            <i class="fas fa-copy mr-2 text-pink-400"></i>Duplicate Content Issues
+                        </label>
+                        <input type="text" name="duplicateContent" placeholder="Number or 'None'" 
+                            class="glass-input w-full px-4 py-3 rounded-xl text-white">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">
+                            <i class="fas fa-unlink mr-2 text-pink-400"></i>Orphan Pages
+                        </label>
+                        <input type="text" name="orphanPages" placeholder="Number or 'None'" 
+                            class="glass-input w-full px-4 py-3 rounded-xl text-white">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section 6: Additional Issues -->
+            <div class="form-section" data-section="6">
+                <div class="flex items-center mb-6">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-r from-red-500 to-pink-500 flex items-center justify-center mr-4">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-xl md:text-2xl font-bold">Additional Issues</h2>
+                        <p class="text-gray-400 text-sm">Add quick issues found (optional)</p>
+                    </div>
+                </div>
+                
+                <div id="additionalIssuesContainer" class="space-y-4 mb-4">
+                    <div class="additional-issue flex gap-3">
+                        <input type="text" name="additionalIssue[]" placeholder="Enter additional issue..." 
+                            class="glass-input flex-1 px-4 py-3 rounded-xl text-white">
+                        <button type="button" onclick="removeIssue(this)" class="btn-secondary px-4 py-3 rounded-xl text-red-400 hover:text-red-300">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <button type="button" onclick="addIssue()" class="btn-secondary px-4 py-3 rounded-xl text-sm">
+                    <i class="fas fa-plus mr-2"></i>Add Another Issue
+                </button>
+            </div>
+            
+            <!-- Section 7: Custom Fields (NEW) -->
+            <div class="form-section" data-section="7">
+                <div class="flex items-center mb-6">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 flex items-center justify-center mr-4">
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-xl md:text-2xl font-bold">Custom Fields</h2>
+                        <p class="text-gray-400 text-sm">Add detailed custom notes, findings, or extra information</p>
+                    </div>
+                </div>
+
+                <!-- Info Box -->
+                <div class="mb-6 p-4 rounded-xl bg-gradient-to-r from-teal-500/10 to-cyan-500/10 border border-teal-500/20">
+                    <div class="flex items-start">
+                        <i class="fas fa-info-circle text-teal-400 mr-3 mt-0.5"></i>
+                        <div>
+                            <h4 class="font-medium text-white mb-1">How to use Custom Fields</h4>
+                            <p class="text-gray-400 text-sm">Add any extra information you want to include in the audit report. Give each field a title (e.g., "Accessibility Issues", "UX Problems", "Branding Notes") and add detailed description in the textarea.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="customFieldsContainer" class="space-y-4 mb-4">
+                    <!-- Default Custom Field -->
+                    <div class="custom-field custom-field-card rounded-2xl p-4 md:p-5">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <span class="field-number rounded-lg flex items-center justify-center text-sm font-bold mr-3">1</span>
+                                <span class="text-gray-400 text-sm">Custom Field</span>
+                            </div>
+                            <button type="button" onclick="removeCustomField(this)" class="text-red-400 hover:text-red-300 p-2 rounded-lg hover:bg-red-500/10 transition-all">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-2">
+                                    <i class="fas fa-tag mr-2 text-teal-400"></i>Field Title
+                                </label>
+                                <input type="text" name="customFieldTitle[]" placeholder="e.g., Accessibility Issues, UX Problems, Conversion Issues..." 
+                                    class="glass-input w-full px-4 py-3 rounded-xl text-white">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-2">
+                                    <i class="fas fa-align-left mr-2 text-teal-400"></i>Detailed Description
+                                </label>
+                                <textarea name="customFieldContent[]" rows="4" placeholder="Enter detailed information, findings, issues, or notes here. You can write multiple points, descriptions, or any relevant data you want to include in the audit report..." 
+                                    class="glass-input w-full px-4 py-3 rounded-xl text-white resize-none" oninput="updateCharCount(this)"></textarea>
+                                <div class="flex justify-end mt-1">
+                                    <span class="textarea-counter"><span class="char-count">0</span> characters</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="button" onclick="addCustomField()" class="btn-success px-5 py-3 rounded-xl text-sm font-medium w-full md:w-auto">
+                    <i class="fas fa-plus mr-2"></i>Add New Custom Field
+                </button>
+
+                <!-- Preset Templates -->
+                <div class="mt-6">
+                    <h4 class="text-sm font-medium text-gray-400 mb-3">
+                        <i class="fas fa-magic mr-2"></i>Quick Add Preset Fields
+                    </h4>
+                    <div class="flex flex-wrap gap-2">
+                        <button type="button" onclick="addPresetField('Accessibility Issues', 'List any accessibility problems found including WCAG compliance issues, missing ARIA labels, color contrast problems, keyboard navigation issues, screen reader compatibility, etc.')" 
+                            class="btn-secondary px-3 py-2 rounded-lg text-xs">
+                            <i class="fas fa-universal-access mr-1"></i>Accessibility
+                        </button>
+                        <button type="button" onclick="addPresetField('UX/UI Problems', 'Describe user experience and interface issues such as confusing navigation, poor button placement, unclear CTAs, inconsistent design elements, cluttered layouts, etc.')" 
+                            class="btn-secondary px-3 py-2 rounded-lg text-xs">
+                            <i class="fas fa-paint-brush mr-1"></i>UX/UI
+                        </button>
+                        <button type="button" onclick="addPresetField('Conversion Optimization', 'Note conversion-related issues like weak call-to-actions, long forms, missing trust signals, poor checkout flow, lack of social proof, unclear value proposition, etc.')" 
+                            class="btn-secondary px-3 py-2 rounded-lg text-xs">
+                            <i class="fas fa-chart-line mr-1"></i>Conversion
+                        </button>
+                        <button type="button" onclick="addPresetField('Branding Consistency', 'Document branding issues including inconsistent logo usage, mismatched colors, varying typography, mixed messaging tone, outdated visual elements, etc.')" 
+                            class="btn-secondary px-3 py-2 rounded-lg text-xs">
+                            <i class="fas fa-palette mr-1"></i>Branding
+                        </button>
+                        <button type="button" onclick="addPresetField('Technical Debt', 'List technical issues such as outdated plugins, deprecated code, legacy systems, unoptimized database, poor code structure, missing documentation, etc.')" 
+                            class="btn-secondary px-3 py-2 rounded-lg text-xs">
+                            <i class="fas fa-code mr-1"></i>Technical
+                        </button>
+                        <button type="button" onclick="addPresetField('Analytics & Tracking', 'Note analytics setup issues like missing Google Analytics, incorrect event tracking, no goal configuration, missing heatmaps, broken tracking codes, etc.')" 
+                            class="btn-secondary px-3 py-2 rounded-lg text-xs">
+                            <i class="fas fa-chart-bar mr-1"></i>Analytics
+                        </button>
+                        <button type="button" onclick="addPresetField('Local SEO Issues', 'Describe local SEO problems such as inconsistent NAP, missing Google Business Profile optimization, no local schema markup, missing local keywords, etc.')" 
+                            class="btn-secondary px-3 py-2 rounded-lg text-xs">
+                            <i class="fas fa-map-marker-alt mr-1"></i>Local SEO
+                        </button>
+                        <button type="button" onclick="addPresetField('Social Media Integration', 'List social media issues like missing social links, no Open Graph tags, poor social sharing buttons, inconsistent social branding, etc.')" 
+                            class="btn-secondary px-3 py-2 rounded-lg text-xs">
+                            <i class="fas fa-share-alt mr-1"></i>Social Media
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section 8: Competitor Comparison -->
+            <div class="form-section" data-section="8">
+                <div class="flex items-center mb-6">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-r from-violet-500 to-purple-500 flex items-center justify-center mr-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-xl md:text-2xl font-bold">Competitor Comparison</h2>
+                        <p class="text-gray-400 text-sm">Optional competitor analysis data</p>
+                    </div>
+                </div>
+                
+                <div class="glass-card rounded-2xl p-4 md:p-6 border border-white/5">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">
+                                <i class="fas fa-globe mr-2 text-violet-400"></i>Competitor Website URL
+                            </label>
+                            <input type="url" name="competitorUrl" placeholder="https://competitor.com" 
+                                class="glass-input w-full px-4 py-3 rounded-xl text-white">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">
+                                <i class="fas fa-tachometer-alt mr-2 text-violet-400"></i>Competitor Speed Score
+                            </label>
+                            <input type="number" name="competitorSpeed" min="0" max="100" placeholder="0-100" 
+                                class="glass-input w-full px-4 py-3 rounded-xl text-white">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">
+                                <i class="fas fa-chart-line mr-2 text-violet-400"></i>Competitor Domain Authority
+                            </label>
+                            <input type="number" name="competitorDA" min="0" max="100" placeholder="0-100" 
+                                class="glass-input w-full px-4 py-3 rounded-xl text-white">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">
+                                <i class="fas fa-chart-bar mr-2 text-violet-400"></i>Client Domain Authority
+                            </label>
+                            <input type="number" name="clientDA" min="0" max="100" placeholder="0-100" 
+                                class="glass-input w-full px-4 py-3 rounded-xl text-white">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section 9: Report Preferences -->
+            <div class="form-section" data-section="9">
+                <div class="flex items-center mb-6">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center mr-4">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-xl md:text-2xl font-bold">Report Preferences</h2>
+                        <p class="text-gray-400 text-sm">Customize your report output</p>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">
+                            <i class="fas fa-comment mr-2 text-cyan-400"></i>Report Tone
+                        </label>
+                        <select name="reportTone" class="glass-select w-full px-4 py-3 rounded-xl text-white">
+                            <option value="Professional">Professional</option>
+                            <option value="Friendly">Friendly</option>
+                            <option value="Formal">Formal</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">
+                            <i class="fas fa-ruler mr-2 text-cyan-400"></i>Report Length
+                        </label>
+                        <select name="reportLength" class="glass-select w-full px-4 py-3 rounded-xl text-white">
+                            <option value="Short (5 pages)">Short (5 pages)</option>
+                            <option value="Medium (8 pages)" selected>Medium (8 pages)</option>
+                            <option value="Detailed (10+ pages)">Detailed (10+ pages)</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">
+                            <i class="fas fa-images mr-2 text-cyan-400"></i>Include Visual Suggestions
+                        </label>
+                        <select name="includeVisuals" class="glass-select w-full px-4 py-3 rounded-xl text-white">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">
+                            <i class="fas fa-dollar-sign mr-2 text-cyan-400"></i>Include Pricing Section
+                        </label>
+                        <select name="includePricing" class="glass-select w-full px-4 py-3 rounded-xl text-white">
+                            <option value="No">No</option>
+                            <option value="Yes">Yes</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Extra Instructions -->
+                <div class="mt-6">
+                    <label class="block text-sm font-medium text-gray-300 mb-2">
+                        <i class="fas fa-pen mr-2 text-cyan-400"></i>Extra Instructions for AI (Optional)
+                    </label>
+                    <textarea name="extraInstructions" rows="3" placeholder="Add any extra instructions for how you want the report to be generated. E.g., 'Focus more on SEO issues', 'Make it more visual', 'Include comparison tables', etc." 
+                        class="glass-input w-full px-4 py-3 rounded-xl text-white resize-none"></textarea>
+                </div>
+            </div>
+            
+            <!-- Navigation Buttons -->
+            <div class="flex flex-col sm:flex-row justify-between gap-4 mt-8 pt-6 border-t border-white/10">
+                <button type="button" id="prevBtn" onclick="navigateSection(-1)" 
+                    class="btn-secondary px-6 py-3 rounded-xl font-medium order-2 sm:order-1 opacity-50 cursor-not-allowed" disabled>
+                    <i class="fas fa-arrow-left mr-2"></i>Previous
+                </button>
+                
+                <div class="flex gap-3 order-1 sm:order-2">
+                    <button type="button" id="nextBtn" onclick="navigateSection(1)" 
+                        class="btn-primary px-6 py-3 rounded-xl font-medium flex-1 sm:flex-none">
+                        Next<i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                    
+                    <button type="button" id="generateBtn" onclick="generatePrompt()" 
+                        class="btn-primary px-6 py-3 rounded-xl font-medium hidden">
+                        <i class="fas fa-magic mr-2"></i>Generate Prompt
+                    </button>
+                </div>
+            </div>
+        </form>
+        
+        <!-- Output Section -->
+        <div id="outputSection" class="hidden">
+            <div class="glass-card rounded-3xl p-6 md:p-8">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center mr-4">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-xl md:text-2xl font-bold">Generated Prompt</h2>
+                            <p class="text-gray-400 text-sm">Copy and use with AI to create your report</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-3">
+                        <button onclick="copyPrompt()" class="btn-secondary px-4 py-2 rounded-xl text-sm">
+                            <i class="fas fa-copy mr-2"></i>Copy
+                        </button>
+                        <button onclick="downloadPrompt()" class="btn-primary px-4 py-2 rounded-xl text-sm">
+                            <i class="fas fa-download mr-2"></i>Download
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="output-area rounded-2xl p-4 md:p-6 max-h-96 overflow-y-auto">
+                    <pre id="promptOutput" class="text-gray-300 text-sm whitespace-pre-wrap font-mono"></pre>
+                </div>
+                
+                <div class="mt-6 p-4 rounded-xl bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border border-indigo-500/20">
+                    <div class="flex items-start">
+                        <i class="fas fa-lightbulb text-yellow-400 mr-3 mt-1"></i>
+                        <div>
+                            <h4 class="font-medium text-white mb-1">Next Steps</h4>
+                            <p class="text-gray-400 text-sm">Copy this prompt and paste it into ChatGPT, Claude, or any AI assistant to generate your professional audit report.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Toast Notification -->
+        <div id="toast" class="fixed bottom-4 right-4 glass-card px-6 py-3 rounded-xl transform translate-y-20 opacity-0 transition-all duration-300 z-50">
+            <div class="flex items-center">
+                <i class="fas fa-check-circle text-green-400 mr-3"></i>
+                <span id="toastMessage">Copied to clipboard!</span>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="text-center mt-8 pb-4">
+            <p class="text-gray-500 text-sm">
+                <i class="fas fa-heart text-red-400 mx-1"></i> 
+                Website Audit Report Prompt Generator by Rakib Alom
+            </p>
+        </footer>
+    </div>
+    
+    <script>
+        let currentSection = 1;
+        const totalSections = 9;
+        let customFieldCount = 1;
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set today's date as default
+            const today = new Date().toISOString().split('T')[0];
+            document.querySelector('input[name="auditDate"]').value = today;
+            
+            // Add click handlers to tabs
+            document.querySelectorAll('.section-tab').forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const section = parseInt(this.dataset.section);
+                    goToSection(section);
+                });
+            });
+        });
+        
+        function goToSection(section) {
+            currentSection = section;
+            updateUI();
+        }
+        
+        function navigateSection(direction) {
+            currentSection += direction;
+            if (currentSection < 1) currentSection = 1;
+            if (currentSection > totalSections) currentSection = totalSections;
+            updateUI();
+        }
+        
+        function updateUI() {
+            // Update sections
+            document.querySelectorAll('.form-section').forEach(sec => {
+                sec.classList.remove('active');
+            });
+            document.querySelector(`.form-section[data-section="${currentSection}"]`).classList.add('active');
+            
+            // Update tabs
+            document.querySelectorAll('.section-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelector(`.section-tab[data-section="${currentSection}"]`).classList.add('active');
+            
+            // Update progress bar
+            const progress = (currentSection / totalSections) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+            
+            // Update buttons
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const generateBtn = document.getElementById('generateBtn');
+            
+            if (currentSection === 1) {
+                prevBtn.disabled = true;
+                prevBtn.classList.add('opacity-50', 'cursor-not-allowed');
+            } else {
+                prevBtn.disabled = false;
+                prevBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+            }
+            
+            if (currentSection === totalSections) {
+                nextBtn.classList.add('hidden');
+                generateBtn.classList.remove('hidden');
+            } else {
+                nextBtn.classList.remove('hidden');
+                generateBtn.classList.add('hidden');
+            }
+        }
+        
+        // Additional Issues Functions
+        function addIssue() {
+            const container = document.getElementById('additionalIssuesContainer');
+            const issueDiv = document.createElement('div');
+            issueDiv.className = 'additional-issue flex gap-3';
+            issueDiv.innerHTML = `
+                <input type="text" name="additionalIssue[]" placeholder="Enter additional issue..." 
+                    class="glass-input flex-1 px-4 py-3 rounded-xl text-white">
+                <button type="button" onclick="removeIssue(this)" class="btn-secondary px-4 py-3 rounded-xl text-red-400 hover:text-red-300">
+                    <i class="fas fa-trash"></i>
+                </button>
+            `;
+            container.appendChild(issueDiv);
+        }
+        
+        function removeIssue(btn) {
+            const container = document.getElementById('additionalIssuesContainer');
+            if (container.children.length > 1) {
+                btn.parentElement.remove();
+            }
+        }
+
+        // Custom Fields Functions
+        function addCustomField() {
+            customFieldCount++;
+            const container = document.getElementById('customFieldsContainer');
+            const fieldDiv = document.createElement('div');
+            fieldDiv.className = 'custom-field custom-field-card rounded-2xl p-4 md:p-5';
+            fieldDiv.innerHTML = `
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center">
+                        <span class="field-number rounded-lg flex items-center justify-center text-sm font-bold mr-3">${customFieldCount}</span>
+                        <span class="text-gray-400 text-sm">Custom Field</span>
+                    </div>
+                    <button type="button" onclick="removeCustomField(this)" class="text-red-400 hover:text-red-300 p-2 rounded-lg hover:bg-red-500/10 transition-all">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">
+                            <i class="fas fa-tag mr-2 text-teal-400"></i>Field Title
+                        </label>
+                        <input type="text" name="customFieldTitle[]" placeholder="e.g., Accessibility Issues, UX Problems, Conversion Issues..." 
+                            class="glass-input w-full px-4 py-3 rounded-xl text-white">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">
+                            <i class="fas fa-align-left mr-2 text-teal-400"></i>Detailed Description
+                        </label>
+                        <textarea name="customFieldContent[]" rows="4" placeholder="Enter detailed information, findings, issues, or notes here. You can write multiple points, descriptions, or any relevant data you want to include in the audit report..." 
+                            class="glass-input w-full px-4 py-3 rounded-xl text-white resize-none" oninput="updateCharCount(this)"></textarea>
+                        <div class="flex justify-end mt-1">
+                            <span class="textarea-counter"><span class="char-count">0</span> characters</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+            container.appendChild(fieldDiv);
+            updateFieldNumbers();
+        }
+
+        function removeCustomField(btn) {
+            const container = document.getElementById('customFieldsContainer');
+            if (container.children.length > 1) {
+                btn.closest('.custom-field').remove();
+                updateFieldNumbers();
+            } else {
+                showToast('You need at least one custom field!');
+            }
+        }
+
+        function updateFieldNumbers() {
+            const fields = document.querySelectorAll('#customFieldsContainer .custom-field');
+            fields.forEach((field, index) => {
+                const numberSpan = field.querySelector('.field-number');
+                if (numberSpan) {
+                    numberSpan.textContent = index + 1;
+                }
+            });
+            customFieldCount = fields.length;
+        }
+
+        function updateCharCount(textarea) {
+            const counter = textarea.parentElement.querySelector('.char-count');
+            if (counter) {
+                counter.textContent = textarea.value.length;
+            }
+        }
+
+        function addPresetField(title, content) {
+            customFieldCount++;
+            const container = document.getElementById('customFieldsContainer');
+            const fieldDiv = document.createElement('div');
+            fieldDiv.className = 'custom-field custom-field-card rounded-2xl p-4 md:p-5';
+            fieldDiv.innerHTML = `
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center">
+                        <span class="field-number rounded-lg flex items-center justify-center text-sm font-bold mr-3">${customFieldCount}</span>
+                        <span class="text-gray-400 text-sm">Custom Field</span>
+                    </div>
+                    <button type="button" onclick="removeCustomField(this)" class="text-red-400 hover:text-red-300 p-2 rounded-lg hover:bg-red-500/10 transition-all">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">
+                            <i class="fas fa-tag mr-2 text-teal-400"></i>Field Title
+                        </label>
+                        <input type="text" name="customFieldTitle[]" value="${title}" 
+                            class="glass-input w-full px-4 py-3 rounded-xl text-white">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">
+                            <i class="fas fa-align-left mr-2 text-teal-400"></i>Detailed Description
+                        </label>
+                        <textarea name="customFieldContent[]" rows="4" 
+                            class="glass-input w-full px-4 py-3 rounded-xl text-white resize-none" oninput="updateCharCount(this)">${content}</textarea>
+                        <div class="flex justify-end mt-1">
+                            <span class="textarea-counter"><span class="char-count">${content.length}</span> characters</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+            container.appendChild(fieldDiv);
+            updateFieldNumbers();
+            showToast(`Added "${title}" field!`);
+        }
+        
+        function generatePrompt() {
+            const form = document.getElementById('auditForm');
+            const formData = new FormData(form);
+            
+            // Get additional issues
+            const additionalIssues = [];
+            document.querySelectorAll('input[name="additionalIssue[]"]').forEach(input => {
+                if (input.value.trim()) {
+                    additionalIssues.push(input.value.trim());
+                }
+            });
+
+            // Get custom fields
+            const customFields = [];
+            const customTitles = document.querySelectorAll('input[name="customFieldTitle[]"]');
+            const customContents = document.querySelectorAll('textarea[name="customFieldContent[]"]');
+            
+            customTitles.forEach((titleInput, index) => {
+                const title = titleInput.value.trim();
+                const content = customContents[index] ? customContents[index].value.trim() : '';
+                if (title || content) {
+                    customFields.push({
+                        title: title || `Custom Field ${index + 1}`,
+                        content: content || 'No details provided'
+                    });
+                }
+            });
+
+            // Build custom fields section
+            let customFieldsSection = '';
+            if (customFields.length > 0) {
+                customFieldsSection = `
+===========================================
+SECTION 7: CUSTOM AUDIT FINDINGS
+===========================================
+
+`;
+                customFields.forEach((field, index) => {
+                    customFieldsSection += `--- ${field.title} ---
+${field.content}
+
+`;
+                });
+            }
+            
+            const prompt = `Create a professional website audit report for lead generation based on the following information:
+
+===========================================
+SECTION 1: BASIC INFORMATION
+===========================================
+
+Client Business Name: ${formData.get('clientName') || '[Not provided]'}
+Client Website URL: ${formData.get('clientUrl') || '[Not provided]'}
+Client Industry: ${formData.get('clientIndustry') || '[Not provided]'}
+Your Agency Name: ${formData.get('agencyName') || '[Not provided]'}
+Audit Date: ${formData.get('auditDate') || '[Not provided]'}
+
+===========================================
+SECTION 2: PERFORMANCE SCORES
+===========================================
+
+Desktop Speed Score (0-100): ${formData.get('desktopSpeed') || '[Not provided]'}
+Mobile Speed Score (0-100): ${formData.get('mobileSpeed') || '[Not provided]'}
+Page Load Time: ${formData.get('loadTime') || '[Not provided]'}
+Page Size: ${formData.get('pageSize') || '[Not provided]'}
+
+Core Web Vitals:
+- LCP (Largest Contentful Paint): ${formData.get('lcp') || '[Not provided]'} | Status: ${formData.get('lcpStatus') || 'Good'}
+- FID (First Input Delay): ${formData.get('fid') || '[Not provided]'} | Status: ${formData.get('fidStatus') || 'Good'}
+- CLS (Cumulative Layout Shift): ${formData.get('cls') || '[Not provided]'} | Status: ${formData.get('clsStatus') || 'Good'}
+
+===========================================
+SECTION 3: SEO ISSUES
+===========================================
+
+Missing Meta Titles: ${formData.get('missingTitles') || '0'}
+Missing Meta Descriptions: ${formData.get('missingDescriptions') || '0'}
+Missing H1 Tags: ${formData.get('missingH1') || '0'}
+Duplicate H1 Tags: ${formData.get('duplicateH1') || '0'}
+Missing Alt Tags on Images: ${formData.get('missingAlt') || '0'}
+Broken Links (404 Errors): ${formData.get('brokenLinks') || '0'}
+Redirect Chains: ${formData.get('redirectChains') || '0'}
+
+Sitemap Status: ${formData.get('sitemapStatus') || 'Present'}
+Robots.txt Status: ${formData.get('robotsStatus') || 'Present'}
+
+===========================================
+SECTION 4: MOBILE & SECURITY
+===========================================
+
+Mobile Friendly: ${formData.get('mobileFriendly') || 'Yes'}
+Mobile Usability Issues: ${formData.get('mobileIssues') || 'None'}
+
+SSL Certificate: ${formData.get('sslStatus') || 'Valid'}
+Mixed Content Warnings: ${formData.get('mixedContent') || 'No'}
+Security Headers: ${formData.get('securityHeaders') || 'Present'}
+
+===========================================
+SECTION 5: CONTENT ISSUES
+===========================================
+
+Thin Content Pages (less than 300 words): ${formData.get('thinContent') || '0'}
+Duplicate Content Issues: ${formData.get('duplicateContent') || 'None'}
+Orphan Pages: ${formData.get('orphanPages') || 'None'}
+
+===========================================
+SECTION 6: ADDITIONAL ISSUES
+===========================================
+
+Other Issues Found:
+${additionalIssues.length > 0 ? additionalIssues.map((issue, i) => `${i + 1}. ${issue}`).join('\n') : 'None specified'}
+${customFieldsSection}
+===========================================
+SECTION 8: COMPETITOR COMPARISON
+===========================================
+
+Main Competitor URL: ${formData.get('competitorUrl') || '[Not provided]'}
+Competitor Speed Score: ${formData.get('competitorSpeed') || '[Not provided]'}
+Competitor Domain Authority: ${formData.get('competitorDA') || '[Not provided]'}
+Client Domain Authority: ${formData.get('clientDA') || '[Not provided]'}
+
+===========================================
+SECTION 9: REPORT PREFERENCES
+===========================================
+
+Report Tone: ${formData.get('reportTone') || 'Professional'}
+Report Length: ${formData.get('reportLength') || 'Medium (8 pages)'}
+Include Visuals Suggestions: ${formData.get('includeVisuals') || 'Yes'}
+Include Pricing Section: ${formData.get('includePricing') || 'No'}
+
+Extra Instructions: ${formData.get('extraInstructions') || 'None'}
+
+===========================================
+
+Please generate a complete audit report with:
+- Executive Summary with overall website health score
+- Color-coded scoring system (Green/Yellow/Red)
+- Detailed findings organized by category
+- Include all custom audit findings in dedicated sections
+- Top 5 priority recommendations with quick wins
+- Professional call-to-action section for agency services
+- Charts and visual suggestions where applicable
+
+Make it persuasive but honest. Show problems clearly but hint at solutions without giving complete implementation details. The goal is to demonstrate expertise and encourage the prospect to hire our agency for full implementation.`;
+
+            document.getElementById('promptOutput').textContent = prompt;
+            document.getElementById('outputSection').classList.remove('hidden');
+            document.getElementById('outputSection').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function copyPrompt() {
+            const prompt = document.getElementById('promptOutput').textContent;
+            navigator.clipboard.writeText(prompt).then(() => {
+                showToast('Copied to clipboard!');
+            });
+        }
+        
+        function downloadPrompt() {
+            const prompt = document.getElementById('promptOutput').textContent;
+            const blob = new Blob([prompt], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'audit-report-prompt.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            showToast('Downloaded successfully!');
+        }
+        
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMessage').textContent = message;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+            
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+                toast.classList.remove('translate-y-0', 'opacity-100');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
