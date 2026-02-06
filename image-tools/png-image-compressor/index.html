@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="title" content="PNG Image Compressor - Free Online PNG Compression Tool">
     <meta name="description" content="Compress PNG images online for free. Reduce PNG file size without losing quality. Fast, secure, and works directly in your browser. No upload limits, no registration required.">
-    <meta name="keywords" content="PNG compressor, compress PNG, PNG image compression, reduce PNG size, online PNG compressor, free PNG compression, image optimizer, PNG optimizer, compress images online, reduce image file size, PNG size reducer, lossless PNG compression, lossy PNG compression, image compression tool">
+    <meta name="keywords" content="PNG compressor, compress PNG, PNG image compression, reduce PNG size, online PNG compressor, free PNG compression, image optimizer, PNG optimizer, compress images online, reduce image file size, PNG size reducer, lossless PNG compression, lossy PNG compression, image compression tool, optimize images for web, shrink PNG files, bulk image compressor, photo compression tool, web image optimizer, decrease image size, image file reducer, online image optimizer, PNG shrinker, compress pictures, image size converter, photo size reducer, webp to png compressor, transparent PNG compressor, batch image compression, high quality image compression, fast image compressor, secure image compression, browser based image compressor">
     <meta name="author" content="RakibAlom">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://rakibalom.com/tools/png-image-compressor/">
@@ -199,6 +199,26 @@
             background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
             background-color: #252532;
         }
+
+        /* Mobile menu styles */
+        .mobile-menu {
+            display: none;
+        }
+        
+        .mobile-menu.active {
+            display: block;
+        }
+
+        @media (max-width: 640px) {
+            .quality-slider-container {
+                width: 100%;
+                margin-top: 0.5rem;
+            }
+            
+            .quality-slider {
+                width: 100% !important;
+            }
+        }
     </style>
 </head>
 <body class="text-gray-100 custom-scrollbar">
@@ -208,12 +228,13 @@
         <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse-slow" style="animation-delay: 1.5s;"></div>
     </div>
     
-    <!-- Navbar -->
+    <!-- Navbar - MOBILE RESPONSIVE -->
     <nav class="glass sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
                 <div class="flex items-center space-x-3">
-                    <svg class="w-9 h-9" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="w-8 h-8 sm:w-9 sm:h-9" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
                         <path d="M12 20L17 25L28 14" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M10 28H30" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
@@ -224,12 +245,13 @@
                             </linearGradient>
                         </defs>
                     </svg>
-                    <span class="text-lg font-semibold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                    <span class="text-base sm:text-lg font-semibold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
                         PNG Compressor
                     </span>
                 </div>
                 
-                <div class="flex items-center space-x-6">
+                <!-- Desktop Navigation -->
+                <div class="hidden sm:flex items-center space-x-6">
                     <a href="https://rakibalom.com/" class="text-gray-300 hover:text-white transition-colors duration-200 text-sm font-medium flex items-center space-x-1">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
@@ -243,17 +265,42 @@
                         <span>All Tools</span>
                     </a>
                 </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="sm:hidden p-2 rounded-lg text-gray-300 hover:text-white hover:bg-white/10 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobileMenu" class="mobile-menu sm:hidden pb-4">
+                <div class="flex flex-col space-y-2 pt-2 border-t border-white/10">
+                    <a href="https://rakibalom.com/" class="flex items-center space-x-3 px-3 py-2 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                        </svg>
+                        <span>Home</span>
+                    </a>
+                    <a href="https://rakibalom.com/tools/" class="flex items-center space-x-3 px-3 py-2 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+                        </svg>
+                        <span>All Tools</span>
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
     
     <!-- Banner Section -->
-    <section class="py-8 px-4">
+    <section class="py-6 sm:py-8 px-4">
         <div class="max-w-4xl mx-auto text-center">
-            <h1 class="text-3xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-white via-indigo-200 to-purple-200 bg-clip-text text-transparent glow-text">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-white via-indigo-200 to-purple-200 bg-clip-text text-transparent glow-text px-2">
                 PNG Image Compressor
             </h1>
-            <p class="text-gray-400 text-lg">
+            <p class="text-gray-400 text-base sm:text-lg px-4">
                 Online Free Image Compression Tool — Reduce Image File Size Instantly
             </p>
         </div>
@@ -262,41 +309,45 @@
     <!-- Main Tool Section -->
     <main class="px-4 pb-16">
         <div class="max-w-6xl mx-auto">
-            <div class="glass-card rounded-2xl p-6 md:p-8 glow">
-                <!-- Settings Panel -->
+            <div class="glass-card rounded-2xl p-4 sm:p-6 md:p-8 glow">
+                <!-- Settings Panel - MOBILE RESPONSIVE -->
                 <div class="mb-6">
-                    <div class="flex flex-wrap items-center justify-between gap-4">
-                        <div class="flex items-center space-x-3">
-                            <label class="text-sm font-medium text-gray-300">Quality:</label>
-                            <div class="flex items-center space-x-3 bg-dark-700 rounded-lg px-4 py-2">
-                                <span class="text-xs text-gray-400">Low</span>
-                                <input type="range" id="qualitySlider" min="1" max="100" value="80" class="slider w-32 h-2 bg-dark-600 rounded-lg appearance-none cursor-pointer">
-                                <span class="text-xs text-gray-400">High</span>
-                                <span id="qualityValue" class="text-sm font-semibold text-indigo-400 ml-2 w-12">80%</span>
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                        <!-- Quality Control -->
+                        <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 w-full sm:w-auto">
+                            <label class="text-sm font-medium text-gray-300 whitespace-nowrap">Quality:</label>
+                            <div class="flex items-center space-x-3 bg-dark-700 rounded-lg px-3 sm:px-4 py-2 w-full sm:w-auto quality-slider-container">
+                                <span class="text-xs text-gray-400 whitespace-nowrap">Low</span>
+                                <input type="range" id="qualitySlider" min="1" max="100" value="80" class="slider flex-1 sm:w-32 h-2 bg-dark-600 rounded-lg appearance-none cursor-pointer quality-slider">
+                                <span class="text-xs text-gray-400 whitespace-nowrap">High</span>
+                                <span id="qualityValue" class="text-sm font-semibold text-indigo-400 ml-2 w-12 text-right">80%</span>
                             </div>
                         </div>
-                        <div class="flex items-center space-x-2 text-sm text-gray-400">
-                            <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        
+                        <!-- Supported Formats -->
+                        <div class="flex items-center space-x-2 text-xs sm:text-sm text-gray-400">
+                            <svg class="w-4 h-4 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                             </svg>
-                            <span>Supports: PNG, JPG, JPEG, WebP, GIF, BMP</span>
+                            <span class="hidden sm:inline">Supports: PNG, JPG, JPEG, WebP, GIF, BMP</span>
+                            <span class="sm:hidden">PNG, JPG, WebP, GIF, BMP</span>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Drop Zone -->
-                <div id="dropZone" class="drop-zone rounded-xl p-12 text-center cursor-pointer transition-all duration-300 mb-6">
+                <div id="dropZone" class="drop-zone rounded-xl p-8 sm:p-12 text-center cursor-pointer transition-all duration-300 mb-6">
                     <input type="file" id="fileInput" accept="image/*" multiple class="hidden">
                     <div class="flex flex-col items-center">
-                        <svg class="w-16 h-16 text-indigo-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-12 h-12 sm:w-16 sm:h-16 text-indigo-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                         </svg>
-                        <p class="text-lg font-medium text-gray-200 mb-2">Drag & Drop Images Here</p>
-                        <p class="text-sm text-gray-400 mb-4">or click to browse files</p>
-                        <button id="browseBtn" class="px-6 py-2.5 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
+                        <p class="text-base sm:text-lg font-medium text-gray-200 mb-2">Drag & Drop Images Here</p>
+                        <p class="text-xs sm:text-sm text-gray-400 mb-4">or click to browse files</p>
+                        <button id="browseBtn" class="px-5 sm:px-6 py-2 sm:py-2.5 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 text-sm sm:text-base">
                             Select Images
                         </button>
-                        <p class="text-xs text-gray-500 mt-4">Max 50MB per file • Unlimited files • Original format preserved</p>
+                        <p class="text-xs text-gray-500 mt-4 text-center px-2">Max 50MB per file • Unlimited files • Original format preserved</p>
                     </div>
                 </div>
                 
@@ -316,49 +367,49 @@
                 <!-- Results Section -->
                 <div id="resultsSection" class="hidden">
                     <!-- Summary Stats -->
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-                        <div class="glass rounded-lg p-4 text-center">
-                            <p class="text-2xl font-bold text-white" id="totalImages">0</p>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-6">
+                        <div class="glass rounded-lg p-3 sm:p-4 text-center">
+                            <p class="text-xl sm:text-2xl font-bold text-white" id="totalImages">0</p>
                             <p class="text-xs text-gray-400">Images</p>
                         </div>
-                        <div class="glass rounded-lg p-4 text-center">
-                            <p class="text-2xl font-bold text-white" id="originalSize">0 KB</p>
+                        <div class="glass rounded-lg p-3 sm:p-4 text-center">
+                            <p class="text-xl sm:text-2xl font-bold text-white" id="originalSize">0 KB</p>
                             <p class="text-xs text-gray-400">Original Size</p>
                         </div>
-                        <div class="glass rounded-lg p-4 text-center">
-                            <p class="text-2xl font-bold text-green-400" id="compressedSize">0 KB</p>
+                        <div class="glass rounded-lg p-3 sm:p-4 text-center">
+                            <p class="text-xl sm:text-2xl font-bold text-green-400" id="compressedSize">0 KB</p>
                             <p class="text-xs text-gray-400">Compressed Size</p>
                         </div>
-                        <div class="glass rounded-lg p-4 text-center">
-                            <p class="text-2xl font-bold text-indigo-400" id="savedPercent">0%</p>
+                        <div class="glass rounded-lg p-3 sm:p-4 text-center">
+                            <p class="text-xl sm:text-2xl font-bold text-indigo-400" id="savedPercent">0%</p>
                             <p class="text-xs text-gray-400">Space Saved</p>
                         </div>
                     </div>
                     
                     <!-- Bulk Actions -->
-                    <div class="flex flex-wrap gap-3 mb-6">
-                        <button id="downloadAllBtn" class="flex items-center space-x-2 px-5 py-2.5 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="flex flex-wrap gap-2 sm:gap-3 mb-6">
+                        <button id="downloadAllBtn" class="flex items-center space-x-2 px-4 sm:px-5 py-2 sm:py-2.5 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 text-sm sm:text-base">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
                             </svg>
                             <span>Download All (ZIP)</span>
                         </button>
-                        <button id="clearAllBtn" class="flex items-center space-x-2 px-5 py-2.5 bg-dark-600 hover:bg-dark-500 border border-gray-600 hover:border-gray-500 rounded-lg font-medium transition-all duration-300">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <button id="clearAllBtn" class="flex items-center space-x-2 px-4 sm:px-5 py-2 sm:py-2.5 bg-dark-600 hover:bg-dark-500 border border-gray-600 hover:border-gray-500 rounded-lg font-medium transition-all duration-300 text-sm sm:text-base">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
                             </svg>
                             <span>Clear All</span>
                         </button>
-                        <button id="addMoreBtn" class="flex items-center space-x-2 px-5 py-2.5 bg-dark-600 hover:bg-dark-500 border border-gray-600 hover:border-gray-500 rounded-lg font-medium transition-all duration-300">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <button id="addMoreBtn" class="flex items-center space-x-2 px-4 sm:px-5 py-2 sm:py-2.5 bg-dark-600 hover:bg-dark-500 border border-gray-600 hover:border-gray-500 rounded-lg font-medium transition-all duration-300 text-sm sm:text-base">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
                             </svg>
                             <span>Add More</span>
                         </button>
                     </div>
                     
-                    <!-- Image Grid -->
-                    <div id="imageGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-h-[600px] overflow-y-auto custom-scrollbar pr-2">
+                    <!-- Image Grid - INCREASED HEIGHT TO 800px -->
+                    <div id="imageGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-h-[800px] overflow-y-auto custom-scrollbar pr-2">
                     </div>
                 </div>
             </div>
@@ -730,6 +781,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
     
     <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+
         // Global state
         let compressedImages = [];
         
@@ -825,8 +891,10 @@
                 
                 try {
                     const result = await compressImage(file, quality);
-                    compressedImages.push(result);
-                    addImageCard(result);
+                    // CHANGED: Add to beginning of array (new to old)
+                    compressedImages.unshift(result);
+                    // CHANGED: Prepend to grid instead of append
+                    addImageCard(result, true);
                     updateStats();
                 } catch (error) {
                     console.error(`Error compressing ${file.name}:`, error);
@@ -1096,8 +1164,8 @@
             });
         }
         
-        // Add image card to grid
-        function addImageCard(imageData) {
+        // Add image card to grid - MODIFIED to support prepend for new-to-old order
+        function addImageCard(imageData, prepend = false) {
             const savings = imageData.originalSize > 0 
                 ? ((1 - imageData.compressedSize / imageData.originalSize) * 100) 
                 : 0;
@@ -1150,7 +1218,12 @@
                 </div>
             `;
             
-            imageGrid.appendChild(card);
+            // CHANGED: Prepend instead of append for new-to-old order
+            if (prepend && imageGrid.firstChild) {
+                imageGrid.insertBefore(card, imageGrid.firstChild);
+            } else {
+                imageGrid.appendChild(card);
+            }
         }
         
         // Update statistics
