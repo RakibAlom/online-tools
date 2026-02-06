@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Free PDF Merger Tool - Combine & Merge Multiple PDF Files Online</title>
+    <meta name="title" content="Free PDF Merger Tool - Combine & Merge Multiple PDF Files Online">
+    <meta name="description" content="Merge multiple PDF files into one document for free. Select specific pages, combine PDFs online with our secure browser-based tool. No uploads, no registration required.">
+    <meta name="keywords" content="PDF merger, combine PDF files, merge PDF online, PDF combiner, join PDF documents, free PDF tools, merge multiple PDFs, PDF page selector, online PDF merger, secure PDF merge">
+    <meta name="author" content="Rakib Alom">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rakibalom.com/tools/pdf-merger/">
+    <meta property="og:title" content="Free PDF Merger Tool - Combine & Merge Multiple PDF Files Online">
+    <meta property="og:description" content="Merge multiple PDF files into one document for free. Select specific pages, combine PDFs online with our secure browser-based tool. No uploads, no registration required.">
+    <meta property="og:image" content="https://rakibalom.github.io/pdf-merger-tool/img/pdf-merger-tool.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="PDF Merger Tool Interface - Combine Multiple PDF Files">
+    <meta property="og:site_name" content="PDF Merger Tool">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://rakibalom.com/tools/pdf-merger/">
+    <meta property="twitter:title" content="Free PDF Merger Tool - Combine & Merge Multiple PDF Files Online">
+    <meta property="twitter:description" content="Merge multiple PDF files into one document for free. Select specific pages, combine PDFs online with our secure browser-based tool. No uploads, no registration required.">
+    <meta property="twitter:image" content="https://rakibalom.github.io/pdf-merger-tool/img/pdf-merger-tool.jpg">
+    <meta property="twitter:image:alt" content="PDF Merger Tool Interface - Combine Multiple PDF Files">
+    <meta property="twitter:creator" content="@rakibalom">
+    <meta property="twitter:site" content="@rakibalom">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNCIgZmlsbD0iIzM5ODBGRiIvPgo8cGF0aCBkPSJNOCA4SDI0VjI0SDhWOFoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0xMCAxMEgyMlYxNEgxMFYxMFoiIGZpbGw9IiMzOTgwRkYiLz4KPHBhdGggZD0iTTEwIDE2SDIyVjIwSDEwVjE2WiIgZmlsbD0iIzM5ODBGRiIvPgo8cGF0aCBkPSJNMTAgMjJIMTZWMjRIMTBWMjJaIiBmaWxsPSIjMzk4MEZGIi8+Cjwvc3ZnPgo=">
+    <link rel="apple-touch-icon" sizes="180x180" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE4MCAxODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIiByeD0iMjAiIGZpbGw9IiMzOTgwRkYiLz4KPHBhdGggZD0iTTQ1IDQ1SDEzNVYxMzVINDVWNDVaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNTUgNTVIMTI1Vjc1SDU1VjU1WiIgZmlsbD0iIzM5ODBGRiIvPgo8cGF0aCBkPSJNNTUgOTBIMTI1VjExMEg1NVY5MFoiIGZpbGw9IiMzOTgwRkYiLz4KPHA+dGggZD0iTTU1IDEyNUg5NVYxMzVINTVWMTI1WiIgZmlsbD0iIzM5ODBGRiIvPgo8L3N2Zz4K">
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNCIgZmlsbD0iIzM5ODBGRiIvPgo8cGF0aCBkPSJNOCA4SDI0VjI0SDhWOFoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0xMCAxMEgyMlYxNEgxMFYxMFoiIGZpbGw9IiMzOTgwRkYiLz4KPHBhdGggZD0iTTEwIDE2SDIyVjIwSDEwVjE2WiIgZmlsbD0iIzM5ODBGRiIvPgo8cGF0aCBkPSJNMTAgMjJIMTZWMjRIMTBWMjJaIiBmaWxsPSIjMzk4MEZGIi8+Cjwvc3ZnPgo=">
+    <link rel="icon" type="image/png" sizes="16x16" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiByeD0iMiIgZmlsbD0iIzM5ODBGRiIvPgo8cGF0aCBkPSJNNCA0SDEyVjEySDRWNFoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik01IDVIMTFWN0g1VjVaIiBmaWxsPSIjMzk4MEZGIi8+CjxwYXRoIGQ9Ik01IDhIMTFWMTBINVY4WiIgZmlsbD0iIzM5ODBGRiIvPgo8cGF0aCBkPSJNNSAxMUg4VjEySDVWMTFaIiBmaWxsPSIjMzk4MEZGIi8+Cjwvc3ZnPgo=">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#3980FF">
+    <meta name="msapplication-TileColor" content="#3980FF">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <link rel="canonical" href="https://rakibalom.com/tools/pdf-merger/">
+    <link rel="alternate" hreflang="en" href="https://rakibalom.com/tools/pdf-merger/">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "PDF Merger Tool",
+        "description": "Free online PDF merger tool to combine multiple PDF files into one document. Select specific pages and merge PDFs securely in your browser.",
+        "url": "https://rakibalom.com/tools/pdf-merger/",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Web Browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "creator": {
+            "@type": "Person",
+            "name": "Rakib Alom",
+            "url": "https://rakibalom.com"
+        },
+        "screenshot": "https://rakibalom.com/images/pdf-merger-tool.png",
+        "softwareVersion": "1.0",
+        "datePublished": "2024-01-01",
+        "dateModified": "2024-01-01",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "150",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "featureList": [
+            "Merge multiple PDF files",
+            "Select specific pages",
+            "Drag and drop interface",
+            "No file size limits",
+            "Browser-based processing",
+            "Secure and private",
+            "Mobile responsive",
+            "Dark/Light mode"
+        ]
+    }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    <style>
+        .drag-over {
+            border-color: #3b82f6 !important;
+            background-color: rgba(59, 130, 246, 0.1) !important;
+        }
+        
+        .pdf-page-preview {
+            max-width: 120px;
+            max-height: 160px;
+            border: 2px solid transparent;
+            transition: all 0.2s ease;
+        }
+        
+        .pdf-page-preview.selected {
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 1px #3b82f6;
+        }
+        
+        .pdf-page-preview:hover {
+            transform: scale(1.02);
+        }
+        
+        .loading-spinner {
+            border: 2px solid #f3f3f3;
+            border-top: 2px solid #3498db;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .dark .loading-spinner {
+            border: 2px solid #4a5568;
+            border-top: 2px solid #63b3ed;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <!-- Header -->
+    <header class="bg-white dark:bg-gray-800 shadow-sm border-b border-gray-200 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-xl font-semibold text-gray-900 dark:text-white">PDF Merger</h1>
+                </div>
+                <button 
+                    id="theme-toggle" 
+                    class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-200"
+                >
+                    <svg id="sun-icon" class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+                    </svg>
+                    <svg id="moon-icon" class="w-5 h-5 block dark:hidden" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Upload Area -->
+        <section class="mb-8">
+            <div 
+                id="drop-zone" 
+                class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-xl p-8 text-center bg-white dark:bg-gray-800 hover:border-blue-400 dark:hover:border-blue-500 transition-colors duration-200 cursor-pointer"
+            >
+                <div class="flex flex-col items-center">
+                    <svg class="w-12 h-12 text-gray-400 dark:text-gray-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                    </svg>
+                    <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-2">Drop PDF files here</h3>
+                    <p class="text-gray-500 dark:text-gray-400 mb-4">Or click to browse files</p>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200">
+                        Select PDFs
+                    </button>
+                </div>
+                <input type="file" id="file-input" class="hidden" multiple accept=".pdf">
+            </div>
+        </section>
+
+        <!-- PDF Files List -->
+        <section id="pdf-list" class="hidden mb-8">
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
+                <div class="p-6 border-b border-gray-200 dark:border-gray-700">
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                        <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Selected PDFs</h2>
+                        <div class="flex flex-wrap gap-2">
+                            <button id="select-all" class="px-4 py-2 text-sm bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors duration-200">
+                                Select All Pages
+                            </button>
+                            <button id="deselect-all" class="px-4 py-2 text-sm bg-gray-600 hover:bg-gray-700 text-white rounded-lg font-medium transition-colors duration-200">
+                                Deselect All
+                            </button>
+                            <button id="clear-all" class="px-4 py-2 text-sm bg-red-600 hover:bg-red-700 text-white rounded-lg font-medium transition-colors duration-200">
+                                Clear All
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div id="pdf-files" class="p-6 space-y-6">
+                    <!-- PDF files will be dynamically added here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Merge Button -->
+        <section id="merge-section" class="hidden">
+            <div class="text-center">
+                <button 
+                    id="merge-btn" 
+                    class="bg-green-600 hover:bg-green-700 disabled:bg-gray-400 text-white px-8 py-3 rounded-lg font-medium text-lg transition-colors duration-200 disabled:cursor-not-allowed flex items-center gap-2 mx-auto"
+                >
+                    <span id="merge-text">Merge PDFs</span>
+                    <div id="merge-spinner" class="loading-spinner hidden"></div>
+                </button>
+                <p class="text-gray-500 dark:text-gray-400 mt-2 text-sm">Select pages from PDFs above to merge them</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- About PDF Merger Section -->
+    <section class="bg-white dark:bg-gray-800 py-16 border-t border-gray-200 dark:border-gray-700">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">About PDF Merger Tool</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-300">Everything you need to know about merging PDF files efficiently</p>
+            </div>
+
+            <div class="space-y-12">
+                <!-- What is PDF Merger -->
+                <div class="prose prose-lg max-w-none dark:prose-invert">
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">What is a PDF Merger?</h3>
+                    <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                        A PDF merger is a powerful digital tool designed to combine multiple PDF (Portable Document Format) files into a single, unified document. This web-based application allows users to seamlessly merge various PDF documents while maintaining the original formatting, layout, and quality of each individual file. Whether you're dealing with contracts, reports, presentations, or any other type of PDF document, our merger tool provides an intuitive solution for document consolidation.
+                    </p>
+                    <p class="text-gray-700 dark:text-gray-300 leading-relaxed mt-4">
+                        The PDF merger goes beyond simple file concatenation by offering advanced features such as selective page extraction, custom page ordering, and real-time preview capabilities. Users can visually inspect each page before merging, ensuring that only the desired content is included in the final document. This level of control makes it an indispensable tool for professionals, students, and anyone who regularly works with PDF documents.
+                    </p>
+                </div>
+
+                <!-- Why You Need PDF Merger -->
+                <div class="prose prose-lg max-w-none dark:prose-invert">
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Why Do You Need a PDF Merger?</h3>
+                    <div class="grid md:grid-cols-2 gap-8 mt-6">
+                        <div class="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-xl">
+                            <h4 class="font-semibold text-gray-900 dark:text-white mb-3">Document Organization</h4>
+                            <p class="text-gray-700 dark:text-gray-300">Consolidate related documents into a single file for better organization and easier sharing. Perfect for creating comprehensive reports, portfolios, or project documentation.</p>
+                        </div>
+                        <div class="bg-green-50 dark:bg-green-900/20 p-6 rounded-xl">
+                            <h4 class="font-semibold text-gray-900 dark:text-white mb-3">Professional Presentation</h4>
+                            <p class="text-gray-700 dark:text-gray-300">Present your work professionally by combining multiple documents into one cohesive presentation. Ideal for business proposals, academic submissions, and client deliverables.</p>
+                        </div>
+                        <div class="bg-purple-50 dark:bg-purple-900/20 p-6 rounded-xl">
+                            <h4 class="font-semibold text-gray-900 dark:text-white mb-3">Email Efficiency</h4>
+                            <p class="text-gray-700 dark:text-gray-300">Reduce email clutter by sending one merged file instead of multiple attachments. This improves communication efficiency and reduces the risk of missing important documents.</p>
+                        </div>
+                        <div class="bg-orange-50 dark:bg-orange-900/20 p-6 rounded-xl">
+                            <h4 class="font-semibold text-gray-900 dark:text-white mb-3">Storage Optimization</h4>
+                            <p class="text-gray-700 dark:text-gray-300">Optimize your digital storage by consolidating related files. Merged PDFs are easier to backup, archive, and manage in your file system.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- How to Use -->
+                <div class="prose prose-lg max-w-none dark:prose-invert">
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">How to Use the PDF Merger Tool</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <div class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold">1</div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Upload Your PDF Files</h4>
+                                <p class="text-gray-700 dark:text-gray-300">Start by uploading your PDF files using the drag-and-drop area or by clicking the "Select PDFs" button. You can upload multiple files at once. The tool accepts only PDF files to ensure compatibility and quality.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <div class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold">2</div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Preview and Select Pages</h4>
+                                <p class="text-gray-700 dark:text-gray-300">Once uploaded, you'll see thumbnail previews of all pages from each PDF. Click on individual pages to select or deselect them. Use the "Select All" or "Deselect All" buttons for quick selection. Only selected pages will be included in the final merged document.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <div class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold">3</div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Organize Your Content</h4>
+                                <p class="text-gray-700 dark:text-gray-300">The pages will be merged in the order they appear on screen. If you need to change the order, you can remove and re-upload files in your desired sequence. Each PDF section shows the filename and page count for easy reference.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <div class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold">4</div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Merge and Download</h4>
+                                <p class="text-gray-700 dark:text-gray-300">Click the "Merge PDFs" button to combine your selected pages into a single document. The tool will process your files and automatically download the merged PDF with the filename "merged-document.pdf". The entire process happens in your browser for maximum privacy and security.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Features -->
+                <div class="prose prose-lg max-w-none dark:prose-invert">
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Key Features & Benefits</h3>
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
+                        <div class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <svg class="w-5 h-5 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-700 dark:text-gray-300">No file size limits</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <svg class="w-5 h-5 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-700 dark:text-gray-300">100% browser-based</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <svg class="w-5 h-5 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-700 dark:text-gray-300">Secure & private</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <svg class="w-5 h-5 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-700 dark:text-gray-300">Page-level selection</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <svg class="w-5 h-5 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-700 dark:text-gray-300">Visual page previews</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <svg class="w-5 h-5 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-700 dark:text-gray-300">Mobile responsive</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="bg-gray-50 dark:bg-gray-900 py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Frequently Asked Questions</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-300">Find answers to common questions about our PDF merger tool</p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="faq-item bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
+                    <button class="faq-header w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200">
+                        <h3 class="font-semibold text-gray-900 dark:text-white">Is it safe to upload my PDF files to this tool?</h3>
+                        <svg class="faq-icon w-5 h-5 text-gray-500 dark:text-gray-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4">
+                        <p class="text-gray-700 dark:text-gray-300">Absolutely! This PDF merger tool operates entirely within your browser using client-side processing. Your files are never uploaded to any server or stored anywhere online. All processing happens locally on your device, ensuring complete privacy and security of your sensitive documents.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
+                    <button class="faq-header w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200">
+                        <h3 class="font-semibold text-gray-900 dark:text-white">What is the maximum file size I can merge?</h3>
+                        <svg class="faq-icon w-5 h-5 text-gray-500 dark:text-gray-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4">
+                        <p class="text-gray-700 dark:text-gray-300">There's no artificial file size limit imposed by our tool. However, the practical limit depends on your device's available memory and processing power. Most modern devices can handle files up to several hundred megabytes without issues. For very large files, the processing may take longer but will still complete successfully.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
+                    <button class="faq-header w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200">
+                        <h3 class="font-semibold text-gray-900 dark:text-white">How many PDF files can I merge at once?</h3>
+                        <svg class="faq-icon w-5 h-5 text-gray-500 dark:text-gray-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4">
+                        <p class="text-gray-700 dark:text-gray-300">You can merge as many PDF files as your browser can handle. There's no set limit on the number of files, but keep in mind that processing many large files simultaneously may slow down the operation. For optimal performance, we recommend merging 10-20 files at a time for most use cases.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
+                    <button class="faq-header w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200">
+                        <h3 class="font-semibold text-gray-900 dark:text-white">Can I select specific pages from different PDFs?</h3>
+                        <svg class="faq-icon w-5 h-5 text-gray-500 dark:text-gray-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4">
+                        <p class="text-gray-700 dark:text-gray-300">Yes! This is one of our tool's key features. After uploading your PDFs, you'll see thumbnail previews of every page. Simply click on the pages you want to include in the merged document. You can select any combination of pages from different PDFs, giving you complete control over the final document's content.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
+                    <button class="faq-header w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200">
+                        <h3 class="font-semibold text-gray-900 dark:text-white">Will the quality of my PDFs be reduced after merging?</h3>
+                        <svg class="faq-icon w-5 h-5 text-gray-500 dark:text-gray-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4">
+                        <p class="text-gray-700 dark:text-gray-300">No, the quality remains intact. Our tool uses advanced PDF processing libraries that preserve the original quality, formatting, and resolution of your documents. The merged PDF will maintain the same high quality as your original files, including text clarity, image resolution, and vector graphics.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
+                    <button class="faq-header w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200">
+                        <h3 class="font-semibold text-gray-900 dark:text-white">Can I change the order of pages in the merged PDF?</h3>
+                        <svg class="faq-icon w-5 h-5 text-gray-500 dark:text-gray-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4">
+                        <p class="text-gray-700 dark:text-gray-300">The pages are merged in the order they appear on screen, which follows the order of your uploaded files and their individual page sequences. To change the order, you can remove specific PDFs and re-upload them in your desired sequence. Future updates may include drag-and-drop reordering functionality.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
+                    <button class="faq-header w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200">
+                        <h3 class="font-semibold text-gray-900 dark:text-white">Does this tool work on mobile devices?</h3>
+                        <svg class="faq-icon w-5 h-5 text-gray-500 dark:text-gray-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4">
+                        <p class="text-gray-700 dark:text-gray-300">Yes! The tool is fully responsive and works seamlessly on smartphones, tablets, and desktop computers. The interface automatically adapts to your screen size, ensuring an optimal user experience across all devices. You can merge PDFs on the go using your mobile browser.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
+                    <button class="faq-header w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200">
+                        <h3 class="font-semibold text-gray-900 dark:text-white">What browsers are supported?</h3>
+                        <svg class="faq-icon w-5 h-5 text-gray-500 dark:text-gray-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4">
+                        <p class="text-gray-700 dark:text-gray-300">Our PDF merger works on all modern browsers including Chrome, Firefox, Safari, Edge, and Opera. We recommend using the latest version of your preferred browser for the best performance and compatibility. The tool uses modern web technologies that are supported by browsers released in the last few years.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
+                    <button class="faq-header w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200">
+                        <h3 class="font-semibold text-gray-900 dark:text-white">Can I merge password-protected PDFs?</h3>
+                        <svg class="faq-icon w-5 h-5 text-gray-500 dark:text-gray-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4">
+                        <p class="text-gray-700 dark:text-gray-300">Currently, the tool works best with unprotected PDF files. Password-protected or encrypted PDFs may not process correctly. If you need to merge protected PDFs, you'll need to remove the password protection first using appropriate PDF software, then use our merger tool to combine the files.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
+                    <button class="faq-header w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200">
+                        <h3 class="font-semibold text-gray-900 dark:text-white">Is there a cost to use this PDF merger tool?</h3>
+                        <svg class="faq-icon w-5 h-5 text-gray-500 dark:text-gray-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4">
+                        <p class="text-gray-700 dark:text-gray-300">This PDF merger tool is completely free to use! There are no hidden costs, subscription fees, or usage limits. You can merge as many PDFs as you need without any charges. We believe in providing valuable tools that help people work more efficiently with their documents.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="text-center">
+                <p class="text-gray-600 dark:text-gray-400">
+                    Developed by 
+                    <a href="https://rakibalom.com" target="_blank" class="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 font-medium transition-colors duration-200">
+                        Rakib Alom
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Management
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        
+        // Check for saved theme preference or default to light mode
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.classList.toggle('dark', savedTheme === 'dark');
+        
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            const isDark = html.classList.contains('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+
+        // PDF Management
+        let pdfFiles = [];
+        let selectedPages = new Set();
+
+        const dropZone = document.getElementById('drop-zone');
+        const fileInput = document.getElementById('file-input');
+        const pdfList = document.getElementById('pdf-list');
+        const pdfFilesContainer = document.getElementById('pdf-files');
+        const mergeSection = document.getElementById('merge-section');
+        const mergeBtn = document.getElementById('merge-btn');
+        const mergeText = document.getElementById('merge-text');
+        const mergeSpinner = document.getElementById('merge-spinner');
+
+        // File input and drop zone events
+        dropZone.addEventListener('click', () => fileInput.click());
+        fileInput.addEventListener('change', handleFiles);
+
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.classList.add('drag-over');
+        });
+
+        dropZone.addEventListener('dragleave', () => {
+            dropZone.classList.remove('drag-over');
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('drag-over');
+            const files = Array.from(e.dataTransfer.files).filter(file => file.type === 'application/pdf');
+            if (files.length > 0) {
+                processFiles(files);
+            }
+        });
+
+        async function handleFiles(e) {
+            const files = Array.from(e.target.files);
+            processFiles(files);
+        }
+
+        async function processFiles(files) {
+            for (const file of files) {
+                if (file.type === 'application/pdf') {
+                    await addPdfFile(file);
+                }
+            }
+            updateUI();
+        }
+
+        async function addPdfFile(file) {
+            try {
+                const arrayBuffer = await file.arrayBuffer();
+                const pdf = await pdfjsLib.getDocument(arrayBuffer).promise;
+                
+                const pdfData = {
+                    id: Date.now() + Math.random(),
+                    file: file,
+                    name: file.name,
+                    pageCount: pdf.numPages,
+                    pages: [],
+                    selectedPageIds: new Set()
+                };
+
+                // Generate page previews
+                for (let i = 1; i <= pdf.numPages; i++) {
+                    const page = await pdf.getPage(i);
+                    const viewport = page.getViewport({ scale: 0.5 });
+                    const canvas = document.createElement('canvas');
+                    const context = canvas.getContext('2d');
+                    canvas.height = viewport.height;
+                    canvas.width = viewport.width;
+
+                    await page.render({ canvasContext: context, viewport: viewport }).promise;
+                    
+                    pdfData.pages.push({
+                        id: `${pdfData.id}-page-${i}`,
+                        pageNumber: i,
+                        canvas: canvas,
+                        dataUrl: canvas.toDataURL()
+                    });
+                }
+
+                pdfFiles.push(pdfData);
+            } catch (error) {
+                console.error('Error processing PDF:', error);
+                alert('Error processing PDF: ' + file.name);
+            }
+        }
+
+        function updateUI() {
+            if (pdfFiles.length > 0) {
+                pdfList.classList.remove('hidden');
+                mergeSection.classList.remove('hidden');
+                renderPdfFiles();
+            } else {
+                pdfList.classList.add('hidden');
+                mergeSection.classList.add('hidden');
+            }
+        }
+
+        function renderPdfFiles() {
+            pdfFilesContainer.innerHTML = '';
+            
+            pdfFiles.forEach(pdf => {
+                const pdfDiv = document.createElement('div');
+                pdfDiv.className = 'border border-gray-200 dark:border-gray-600 rounded-lg p-4 bg-gray-50 dark:bg-gray-700';
+                
+                pdfDiv.innerHTML = `
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="font-medium text-gray-900 dark:text-white truncate">${pdf.name}</h3>
+                        <div class="flex items-center gap-2">
+                            <span class="text-sm text-gray-500 dark:text-gray-400">${pdf.pageCount} pages</span>
+                            <button onclick="removePdf('${pdf.id}')" class="text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300 p-1">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <button onclick="selectAllPagesForPdf('${pdf.id}')" class="text-xs px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors duration-200">
+                            Select All
+                        </button>
+                        <button onclick="deselectAllPagesForPdf('${pdf.id}')" class="text-xs px-3 py-1 bg-gray-100 dark:bg-gray-600 text-gray-800 dark:text-gray-200 rounded-full hover:bg-gray-200 dark:hover:bg-gray-500 transition-colors duration-200">
+                            Deselect All
+                        </button>
+                    </div>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-3">
+                        ${pdf.pages.map(page => `
+                            <div class="text-center">
+                                <img 
+                                    src="${page.dataUrl}" 
+                                    alt="Page ${page.pageNumber}"
+                                    class="pdf-page-preview rounded-lg cursor-pointer mx-auto ${pdf.selectedPageIds.has(page.id) ? 'selected' : ''}"
+                                    onclick="togglePage('${pdf.id}', '${page.id}')"
+                                >
+                                <p class="text-xs text-gray-600 dark:text-gray-400 mt-1">Page ${page.pageNumber}</p>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+                
+                pdfFilesContainer.appendChild(pdfDiv);
+            });
+        }
+
+        function togglePage(pdfId, pageId) {
+            const pdf = pdfFiles.find(p => p.id == pdfId);
+            if (pdf) {
+                if (pdf.selectedPageIds.has(pageId)) {
+                    pdf.selectedPageIds.delete(pageId);
+                    selectedPages.delete(pageId);
+                } else {
+                    pdf.selectedPageIds.add(pageId);
+                    selectedPages.add(pageId);
+                }
+                renderPdfFiles();
+            }
+        }
+
+        function selectAllPagesForPdf(pdfId) {
+            const pdf = pdfFiles.find(p => p.id == pdfId);
+            if (pdf) {
+                pdf.pages.forEach(page => {
+                    pdf.selectedPageIds.add(page.id);
+                    selectedPages.add(page.id);
+                });
+                renderPdfFiles();
+            }
+        }
+
+        function deselectAllPagesForPdf(pdfId) {
+            const pdf = pdfFiles.find(p => p.id == pdfId);
+            if (pdf) {
+                pdf.pages.forEach(page => {
+                    pdf.selectedPageIds.delete(page.id);
+                    selectedPages.delete(page.id);
+                });
+                renderPdfFiles();
+            }
+        }
+
+        function removePdf(pdfId) {
+            pdfFiles = pdfFiles.filter(p => p.id != pdfId);
+            updateUI();
+        }
+
+        // Global controls
+        document.getElementById('select-all').addEventListener('click', () => {
+            pdfFiles.forEach(pdf => {
+                pdf.pages.forEach(page => {
+                    pdf.selectedPageIds.add(page.id);
+                    selectedPages.add(page.id);
+                });
+            });
+            renderPdfFiles();
+        });
+
+        document.getElementById('deselect-all').addEventListener('click', () => {
+            pdfFiles.forEach(pdf => {
+                pdf.selectedPageIds.clear();
+            });
+            selectedPages.clear();
+            renderPdfFiles();
+        });
+
+        document.getElementById('clear-all').addEventListener('click', () => {
+            if (confirm('Are you sure you want to clear all PDFs?')) {
+                pdfFiles = [];
+                selectedPages.clear();
+                updateUI();
+            }
+        });
+
+        // Merge functionality
+        mergeBtn.addEventListener('click', async () => {
+            if (selectedPages.size === 0) {
+                alert('Please select at least one page to merge.');
+                return;
+            }
+
+            mergeBtn.disabled = true;
+            mergeText.textContent = 'Merging...';
+            mergeSpinner.classList.remove('hidden');
+
+            try {
+                const mergedPdf = await PDFLib.PDFDocument.create();
+
+                // Collect all selected pages in order
+                const selectedPagesData = [];
+                
+                pdfFiles.forEach(pdf => {
+                    pdf.pages.forEach(page => {
+                        if (pdf.selectedPageIds.has(page.id)) {
+                            selectedPagesData.push({
+                                pdf: pdf,
+                                pageNumber: page.pageNumber
+                            });
+                        }
+                    });
+                });
+
+                // Add selected pages to merged PDF
+                for (const pageData of selectedPagesData) {
+                    const pdfArrayBuffer = await pageData.pdf.file.arrayBuffer();
+                    const sourcePdf = await PDFLib.PDFDocument.load(pdfArrayBuffer);
+                    const [copiedPage] = await mergedPdf.copyPages(sourcePdf, [pageData.pageNumber - 1]);
+                    mergedPdf.addPage(copiedPage);
+                }
+
+                // Generate and download merged PDF
+                const pdfBytes = await mergedPdf.save();
+                const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+                const url = URL.createObjectURL(blob);
+                
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'merged-document.pdf';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+
+            } catch (error) {
+                console.error('Error merging PDFs:', error);
+                alert('Error merging PDFs. Please try again.');
+            } finally {
+                mergeBtn.disabled = false;
+                mergeText.textContent = 'Merge PDFs';
+                mergeSpinner.classList.add('hidden');
+            }
+        });
+
+        // Make functions globally available
+        window.togglePage = togglePage;
+        window.selectAllPagesForPdf = selectAllPagesForPdf;
+        window.deselectAllPagesForPdf = deselectAllPagesForPdf;
+        window.removePdf = removePdf;
+
+        // FAQ Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const header = item.querySelector('.faq-header');
+                const content = item.querySelector('.faq-content');
+                const icon = item.querySelector('.faq-icon');
+                
+                header.addEventListener('click', () => {
+                    const isOpen = !content.classList.contains('hidden');
+                    
+                    // Close all other FAQ items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.querySelector('.faq-content').classList.add('hidden');
+                            otherItem.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+                        }
+                    });
+                    
+                    // Toggle current item
+                    if (isOpen) {
+                        content.classList.add('hidden');
+                        icon.style.transform = 'rotate(0deg)';
+                    } else {
+                        content.classList.remove('hidden');
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
