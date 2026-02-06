@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="PNG Image Compressor - Free Online PNG Compression Tool">
+    <meta name="description" content="Compress PNG images online for free. Reduce PNG file size without losing quality. Fast, secure, and works directly in your browser. No upload limits, no registration required.">
+    <meta name="keywords" content="PNG compressor, compress PNG, PNG image compression, reduce PNG size, online PNG compressor, free PNG compression, image optimizer, PNG optimizer, compress images online, reduce image file size, PNG size reducer, lossless PNG compression, lossy PNG compression, image compression tool">
+    <meta name="author" content="RakibAlom">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://rakibalom.com/tools/png-image-compressor/">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rakibalom.com/tools/png-image-compressor/">
+    <meta property="og:title" content="PNG Image Compressor - Free Online PNG Compression Tool">
+    <meta property="og:description" content="Compress PNG images online for free. Reduce PNG file size without losing quality. Fast, secure, and works directly in your browser.">
+    <meta property="og:image" content="https://rakibalom.com/tools/png-image-compressor/og-image.png">
+    <meta property="og:site_name" content="RakibAlom Tools">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://rakibalom.com/tools/png-image-compressor/">
+    <meta name="twitter:title" content="PNG Image Compressor - Free Online PNG Compression Tool">
+    <meta name="twitter:description" content="Compress PNG images online for free. Reduce PNG file size without losing quality. Fast, secure, and works directly in your browser.">
+    <meta name="twitter:image" content="https://rakibalom.com/tools/png-image-compressor/twitter-image.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://rakibalom.com/wp-content/uploads/2025/12/rakibalom-favicon.png">
+    
+    <title>PNG Image Compressor - Free Online PNG Compression Tool | RakibAlom</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            900: '#0a0a0f',
+                            800: '#12121a',
+                            700: '#1a1a25',
+                            600: '#252532',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0a0a0f 0%, #12121a 50%, #0a0a0f 100%);
+            min-height: 100vh;
+        }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .glass-hover:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+        
+        .glow {
+            box-shadow: 0 0 40px rgba(99, 102, 241, 0.15);
+        }
+        
+        .glow-text {
+            text-shadow: 0 0 30px rgba(99, 102, 241, 0.5);
+        }
+        
+        .drop-zone {
+            border: 2px dashed rgba(99, 102, 241, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        .drop-zone:hover, .drop-zone.dragover {
+            border-color: rgba(99, 102, 241, 0.8);
+            background: rgba(99, 102, 241, 0.1);
+        }
+        
+        .progress-bar {
+            background: linear-gradient(90deg, #6366f1, #8b5cf6);
+            transition: width 0.3s ease;
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 3px;
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(99, 102, 241, 0.5);
+            border-radius: 3px;
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: rgba(99, 102, 241, 0.7);
+        }
+        
+        .slider::-webkit-slider-thumb {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+        }
+        
+        .slider::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+        }
+        
+        .animate-pulse-slow {
+            animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s ease forwards;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .article-content h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #e2e8f0;
+        }
+        
+        .article-content h3 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #cbd5e1;
+        }
+        
+        .article-content p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+            color: #94a3b8;
+        }
+        
+        .article-content ul, .article-content ol {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            color: #94a3b8;
+        }
+        
+        .article-content li {
+            margin-bottom: 0.5rem;
+            line-height: 1.7;
+        }
+        
+        .article-content strong {
+            color: #e2e8f0;
+        }
+        
+        .checkerboard {
+            background-image: linear-gradient(45deg, #1a1a25 25%, transparent 25%), 
+                              linear-gradient(-45deg, #1a1a25 25%, transparent 25%), 
+                              linear-gradient(45deg, transparent 75%, #1a1a25 75%), 
+                              linear-gradient(-45deg, transparent 75%, #1a1a25 75%);
+            background-size: 16px 16px;
+            background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+            background-color: #252532;
+        }
+    </style>
+</head>
+<body class="text-gray-100 custom-scrollbar">
+    <!-- Ambient Background Effects -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse-slow" style="animation-delay: 1.5s;"></div>
+    </div>
+    
+    <!-- Navbar -->
+    <nav class="glass sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-3">
+                    <svg class="w-9 h-9" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+                        <path d="M12 20L17 25L28 14" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10 28H30" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+                        <defs>
+                            <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#6366f1"/>
+                                <stop offset="1" stop-color="#8b5cf6"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span class="text-lg font-semibold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                        PNG Compressor
+                    </span>
+                </div>
+                
+                <div class="flex items-center space-x-6">
+                    <a href="https://rakibalom.com/" class="text-gray-300 hover:text-white transition-colors duration-200 text-sm font-medium flex items-center space-x-1">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                        </svg>
+                        <span>Home</span>
+                    </a>
+                    <a href="https://rakibalom.com/tools/" class="text-gray-300 hover:text-white transition-colors duration-200 text-sm font-medium flex items-center space-x-1">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+                        </svg>
+                        <span>All Tools</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Banner Section -->
+    <section class="py-8 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-3xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-white via-indigo-200 to-purple-200 bg-clip-text text-transparent glow-text">
+                PNG Image Compressor
+            </h1>
+            <p class="text-gray-400 text-lg">
+                Online Free Image Compression Tool — Reduce Image File Size Instantly
+            </p>
+        </div>
+    </section>
+    
+    <!-- Main Tool Section -->
+    <main class="px-4 pb-16">
+        <div class="max-w-6xl mx-auto">
+            <div class="glass-card rounded-2xl p-6 md:p-8 glow">
+                <!-- Settings Panel -->
+                <div class="mb-6">
+                    <div class="flex flex-wrap items-center justify-between gap-4">
+                        <div class="flex items-center space-x-3">
+                            <label class="text-sm font-medium text-gray-300">Quality:</label>
+                            <div class="flex items-center space-x-3 bg-dark-700 rounded-lg px-4 py-2">
+                                <span class="text-xs text-gray-400">Low</span>
+                                <input type="range" id="qualitySlider" min="1" max="100" value="80" class="slider w-32 h-2 bg-dark-600 rounded-lg appearance-none cursor-pointer">
+                                <span class="text-xs text-gray-400">High</span>
+                                <span id="qualityValue" class="text-sm font-semibold text-indigo-400 ml-2 w-12">80%</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-2 text-sm text-gray-400">
+                            <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>Supports: PNG, JPG, JPEG, WebP, GIF, BMP</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Drop Zone -->
+                <div id="dropZone" class="drop-zone rounded-xl p-12 text-center cursor-pointer transition-all duration-300 mb-6">
+                    <input type="file" id="fileInput" accept="image/*" multiple class="hidden">
+                    <div class="flex flex-col items-center">
+                        <svg class="w-16 h-16 text-indigo-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                        <p class="text-lg font-medium text-gray-200 mb-2">Drag & Drop Images Here</p>
+                        <p class="text-sm text-gray-400 mb-4">or click to browse files</p>
+                        <button id="browseBtn" class="px-6 py-2.5 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
+                            Select Images
+                        </button>
+                        <p class="text-xs text-gray-500 mt-4">Max 50MB per file • Unlimited files • Original format preserved</p>
+                    </div>
+                </div>
+                
+                <!-- Processing Status -->
+                <div id="processingStatus" class="hidden mb-6">
+                    <div class="glass rounded-lg p-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-sm font-medium text-gray-300">Compressing images...</span>
+                            <span id="processingCount" class="text-sm text-indigo-400">0/0</span>
+                        </div>
+                        <div class="w-full h-2 bg-dark-600 rounded-full overflow-hidden">
+                            <div id="processingProgress" class="progress-bar h-full rounded-full" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Results Section -->
+                <div id="resultsSection" class="hidden">
+                    <!-- Summary Stats -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                        <div class="glass rounded-lg p-4 text-center">
+                            <p class="text-2xl font-bold text-white" id="totalImages">0</p>
+                            <p class="text-xs text-gray-400">Images</p>
+                        </div>
+                        <div class="glass rounded-lg p-4 text-center">
+                            <p class="text-2xl font-bold text-white" id="originalSize">0 KB</p>
+                            <p class="text-xs text-gray-400">Original Size</p>
+                        </div>
+                        <div class="glass rounded-lg p-4 text-center">
+                            <p class="text-2xl font-bold text-green-400" id="compressedSize">0 KB</p>
+                            <p class="text-xs text-gray-400">Compressed Size</p>
+                        </div>
+                        <div class="glass rounded-lg p-4 text-center">
+                            <p class="text-2xl font-bold text-indigo-400" id="savedPercent">0%</p>
+                            <p class="text-xs text-gray-400">Space Saved</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Bulk Actions -->
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <button id="downloadAllBtn" class="flex items-center space-x-2 px-5 py-2.5 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                            </svg>
+                            <span>Download All (ZIP)</span>
+                        </button>
+                        <button id="clearAllBtn" class="flex items-center space-x-2 px-5 py-2.5 bg-dark-600 hover:bg-dark-500 border border-gray-600 hover:border-gray-500 rounded-lg font-medium transition-all duration-300">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                            </svg>
+                            <span>Clear All</span>
+                        </button>
+                        <button id="addMoreBtn" class="flex items-center space-x-2 px-5 py-2.5 bg-dark-600 hover:bg-dark-500 border border-gray-600 hover:border-gray-500 rounded-lg font-medium transition-all duration-300">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                            </svg>
+                            <span>Add More</span>
+                        </button>
+                    </div>
+                    
+                    <!-- Image Grid -->
+                    <div id="imageGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-h-[600px] overflow-y-auto custom-scrollbar pr-2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Features Section -->
+    <section class="px-4 py-16 bg-dark-800/50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-12 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                Why Choose Our PNG Compressor?
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="glass-card rounded-xl p-6 glass-hover transition-all duration-300">
+                    <div class="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Lightning Fast</h3>
+                    <p class="text-gray-400 text-sm">Compress images instantly using advanced algorithms. No waiting, no server uploads required.</p>
+                </div>
+                
+                <div class="glass-card rounded-xl p-6 glass-hover transition-all duration-300">
+                    <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">100% Secure</h3>
+                    <p class="text-gray-400 text-sm">All processing happens in your browser. Your images never leave your device.</p>
+                </div>
+                
+                <div class="glass-card rounded-xl p-6 glass-hover transition-all duration-300">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Quality Preserved</h3>
+                    <p class="text-gray-400 text-sm">Smart compression maintains image quality while significantly reducing file size.</p>
+                </div>
+                
+                <div class="glass-card rounded-xl p-6 glass-hover transition-all duration-300">
+                    <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-amber-500 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Batch Processing</h3>
+                    <p class="text-gray-400 text-sm">Compress multiple images at once. Save time with bulk compression capabilities.</p>
+                </div>
+                
+                <div class="glass-card rounded-xl p-6 glass-hover transition-all duration-300">
+                    <div class="w-12 h-12 bg-gradient-to-br from-pink-500 to-rose-500 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Mobile Friendly</h3>
+                    <p class="text-gray-400 text-sm">Works perfectly on all devices - desktop, tablet, or smartphone.</p>
+                </div>
+                
+                <div class="glass-card rounded-xl p-6 glass-hover transition-all duration-300">
+                    <div class="w-12 h-12 bg-gradient-to-br from-violet-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">100% Free</h3>
+                    <p class="text-gray-400 text-sm">No registration, no limits, no watermarks. Completely free to use forever.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- How to Use Section -->
+    <section class="px-4 py-16">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-12 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                How to Compress Images
+            </h2>
+            <div class="space-y-6">
+                <div class="glass-card rounded-xl p-6 flex items-start space-x-4">
+                    <div class="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span class="text-white font-bold">1</span>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-1">Upload Your Images</h3>
+                        <p class="text-gray-400 text-sm">Drag and drop your image files into the upload area or click to browse and select files from your device. Supports PNG, JPG, JPEG, WebP, GIF, and BMP formats.</p>
+                    </div>
+                </div>
+                
+                <div class="glass-card rounded-xl p-6 flex items-start space-x-4">
+                    <div class="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span class="text-white font-bold">2</span>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-1">Adjust Quality Settings</h3>
+                        <p class="text-gray-400 text-sm">Use the quality slider to balance between file size and image quality. Higher values preserve more quality while lower values create smaller files.</p>
+                    </div>
+                </div>
+                
+                <div class="glass-card rounded-xl p-6 flex items-start space-x-4">
+                    <div class="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span class="text-white font-bold">3</span>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-1">Download Compressed Images</h3>
+                        <p class="text-gray-400 text-sm">Download individual images with their original filename and format, or use "Download All" to get a ZIP file with all compressed images.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Article Section -->
+    <section class="px-4 py-16 bg-dark-800/30">
+        <div class="max-w-4xl mx-auto">
+            <article class="glass-card rounded-2xl p-8 md:p-12 article-content">
+                <h2>The Ultimate Guide to PNG Image Compression: Everything You Need to Know</h2>
+                
+                <p>In today's digital landscape, images play a crucial role in web design, digital marketing, social media, and countless other applications. Among the various image formats available, <strong>PNG (Portable Network Graphics)</strong> stands out as one of the most popular choices for its excellent quality and support for transparency. However, PNG files can often be quite large, leading to slower website loading times, increased storage costs, and bandwidth issues. This is where a <strong>PNG image compressor</strong> becomes an invaluable tool.</p>
+                
+                <p>Our <strong>free online PNG compressor</strong> tool is designed to help you reduce image file sizes significantly while maintaining optimal image quality. Whether you're a web developer, graphic designer, blogger, e-commerce store owner, or simply someone who wants to optimize images for faster sharing, this comprehensive guide will help you understand everything about PNG compression and how to use our tool effectively.</p>
+                
+                <h2>What is PNG Image Compression?</h2>
+                
+                <p><strong>PNG image compression</strong> is the process of reducing the file size of a PNG image by applying various optimization techniques. Unlike JPEG compression, which uses lossy compression (meaning some image data is permanently lost), PNG traditionally uses lossless compression. However, modern <strong>PNG compression tools</strong> can apply both lossless and lossy techniques to achieve even greater file size reductions.</p>
+                
+                <p>When you compress a PNG image, the compressor analyzes the image data and removes redundant information, optimizes color palettes, and applies efficient encoding algorithms. The result is a smaller file that loads faster while retaining the visual quality that makes PNG images so popular.</p>
+                
+                <h3>How PNG Compression Works</h3>
+                
+                <p>PNG compression involves several sophisticated techniques working together:</p>
+                
+                <ul>
+                    <li><strong>Filtering:</strong> Before compression, PNG applies filters to prepare the image data for better compression. These filters predict pixel values based on neighboring pixels, storing only the differences.</li>
+                    <li><strong>DEFLATE Compression:</strong> PNG uses the DEFLATE algorithm (the same used in ZIP files) to compress the filtered data. This combines LZ77 compression with Huffman coding for excellent compression ratios.</li>
+                    <li><strong>Color Quantization:</strong> Advanced compressors can reduce the number of colors in an image's palette, significantly reducing file size with minimal visual impact.</li>
+                    <li><strong>Metadata Removal:</strong> PNG files often contain metadata (EXIF data, color profiles, etc.) that can be safely removed to reduce file size.</li>
+                </ul>
+                
+                <h2>Why You Need to Compress PNG Images</h2>
+                
+                <p>There are numerous compelling reasons why <strong>compressing PNG images</strong> should be part of your workflow:</p>
+                
+                <h3>1. Faster Website Loading Speed</h3>
+                
+                <p>Website speed is a critical factor for user experience and SEO. Large images are often the primary cause of slow-loading websites. By using a <strong>PNG optimizer</strong>, you can reduce image file sizes by 50-80%, dramatically improving page load times. Google's Core Web Vitals specifically measure loading performance, making image optimization essential for SEO success.</p>
+                
+                <h3>2. Improved SEO Rankings</h3>
+                
+                <p>Search engines like Google consider page speed as a ranking factor. Websites with faster loading times tend to rank higher in search results. By compressing your PNG images, you're not just improving user experience—you're also boosting your SEO performance. A well-optimized website with compressed images can see significant improvements in search visibility.</p>
+                
+                <h3>3. Reduced Bandwidth Costs</h3>
+                
+                <p>For websites with high traffic, bandwidth costs can quickly add up. Smaller image files mean less data transfer, which translates to lower hosting and CDN costs. This is especially important for e-commerce sites with extensive product catalogs or media-heavy websites.</p>
+                
+                <h3>4. Better Mobile Experience</h3>
+                
+                <p>Mobile users often have limited data plans and slower connections. Compressed images load faster on mobile devices, providing a better user experience. With mobile traffic accounting for over half of all web traffic globally, <strong>image optimization for mobile</strong> is more important than ever.</p>
+                
+                <h3>5. More Storage Space</h3>
+                
+                <p>Whether you're storing images on your local device, cloud storage, or web server, compressed images take up less space. This means you can store more images without running out of space or paying for additional storage.</p>
+                
+                <h3>6. Faster Email Attachments</h3>
+                
+                <p>Email services often have attachment size limits. Compressed PNG images allow you to share more images via email without hitting these limits or causing long upload times.</p>
+                
+                <h2>Understanding PNG vs Other Image Formats</h2>
+                
+                <p>To make informed decisions about image compression, it's helpful to understand how PNG compares to other formats:</p>
+                
+                <h3>PNG vs JPEG</h3>
+                
+                <p><strong>PNG</strong> uses lossless compression and supports transparency, making it ideal for logos, graphics, screenshots, and images with text. <strong>JPEG</strong> uses lossy compression, resulting in smaller file sizes but with some quality loss. JPEG is better for photographs where minor quality loss isn't noticeable.</p>
+                
+                <h3>PNG vs WebP</h3>
+                
+                <p><strong>WebP</strong> is a modern image format developed by Google that offers both lossy and lossless compression. WebP files are typically 25-35% smaller than PNG files at equivalent quality. However, PNG remains the standard for maximum compatibility across all platforms and browsers.</p>
+                
+                <h3>PNG vs GIF</h3>
+                
+                <p><strong>GIF</strong> is limited to 256 colors and supports simple animations. <strong>PNG</strong> offers much better color depth (up to 16 million colors) and superior compression for static images. PNG-8 (256 colors) can be a good alternative to GIF for simple graphics.</p>
+                
+                <h2>Types of PNG Compression</h2>
+                
+                <h3>Lossless PNG Compression</h3>
+                
+                <p><strong>Lossless compression</strong> reduces file size without any loss in image quality. The compressed image is pixel-for-pixel identical to the original. This is achieved by optimizing the compression algorithm, removing unnecessary metadata, and applying better filtering techniques.</p>
+                
+                <p>Lossless compression typically achieves 10-30% file size reduction. It's ideal when you need to preserve exact image quality, such as for:</p>
+                
+                <ul>
+                    <li>Professional photography archives</li>
+                    <li>Medical imaging</li>
+                    <li>Technical diagrams</li>
+                    <li>Images that may be edited again</li>
+                </ul>
+                
+                <h3>Lossy PNG Compression</h3>
+                
+                <p><strong>Lossy compression</strong> achieves greater file size reductions (50-80% or more) by selectively removing image data. Modern lossy PNG compression techniques, like those used in pngquant and our tool, are sophisticated enough that the quality loss is often imperceptible to the human eye.</p>
+                
+                <p>Lossy compression works by:</p>
+                
+                <ul>
+                    <li>Reducing the color palette (color quantization)</li>
+                    <li>Applying dithering to simulate colors that were removed</li>
+                    <li>Optimizing for visual perception rather than exact pixel matching</li>
+                </ul>
+                
+                <h2>Best Practices for PNG Compression</h2>
+                
+                <h3>1. Choose the Right Compression Level</h3>
+                
+                <p>Our <strong>PNG compressor</strong> features an adjustable quality slider. For most web use cases, a quality setting of 60-80% provides an excellent balance between file size and visual quality. For critical images where quality is paramount, use higher settings (80-100%).</p>
+                
+                <h3>2. Consider Your Use Case</h3>
+                
+                <p>Different use cases require different approaches:</p>
+                
+                <ul>
+                    <li><strong>Website Images:</strong> Prioritize smaller file sizes; use 60-75% quality</li>
+                    <li><strong>Social Media:</strong> Medium compression; these platforms often recompress anyway</li>
+                    <li><strong>Print Materials:</strong> Use minimal compression to maintain quality</li>
+                    <li><strong>Email Attachments:</strong> Aggressive compression for faster sending</li>
+                </ul>
+                
+                <h3>3. Batch Process When Possible</h3>
+                
+                <p>If you have multiple images to compress, use our batch processing feature to save time. Upload all your images at once and download them all in a single ZIP file.</p>
+                
+                <h3>4. Keep Originals</h3>
+                
+                <p>Always keep backup copies of your original, uncompressed images. If you ever need higher quality versions or want to try different compression settings, having the originals is essential.</p>
+                
+                <h2>Common Use Cases for PNG Compression</h2>
+                
+                <h3>Website Optimization</h3>
+                
+                <p>Web developers and site owners use <strong>PNG compression tools</strong> to optimize images for faster page loads. This includes hero images, product photos, icons, and background graphics. Compressed images contribute to better Core Web Vitals scores and improved SEO performance.</p>
+                
+                <h3>E-commerce Product Images</h3>
+                
+                <p>Online stores often have hundreds or thousands of product images. Compressing these images reduces page load times, improves user experience, and can directly impact conversion rates. Studies show that even a 1-second delay in page load can reduce conversions by 7%.</p>
+                
+                <h3>Blog and Content Publishing</h3>
+                
+                <p>Bloggers and content creators use PNG compression to optimize featured images, infographics, and illustrations. This ensures readers can access content quickly, reducing bounce rates and improving engagement metrics.</p>
+                
+                <h3>App Development</h3>
+                
+                <p>Mobile and desktop application developers compress PNG assets to reduce app size. Smaller app packages download faster and use less device storage, leading to higher installation rates and better app store rankings.</p>
+                
+                <h3>Email Marketing</h3>
+                
+                <p>Email marketers compress images to ensure emails load quickly across all email clients and devices. Large images can cause emails to load slowly or be clipped by email providers, reducing engagement.</p>
+                
+                <h3>Social Media Management</h3>
+                
+                <p>Social media managers compress images before uploading to platforms. While social media sites compress images on their end, starting with optimized images often results in better final quality.</p>
+                
+                <h2>Technical Specifications and Capabilities</h2>
+                
+                <p>Our <strong>online PNG compressor</strong> offers professional-grade features:</p>
+                
+                <ul>
+                    <li><strong>Supported Formats:</strong> PNG, JPG, JPEG, WebP, GIF, BMP</li>
+                    <li><strong>Maximum File Size:</strong> Up to 50MB per image</li>
+                    <li><strong>Batch Processing:</strong> Unlimited images at once</li>
+                    <li><strong>Quality Control:</strong> Adjustable from 1% to 100%</li>
+                    <li><strong>Browser Processing:</strong> All compression happens locally in your browser</li>
+                    <li><strong>Privacy:</strong> Images never leave your device</li>
+                    <li><strong>Original Format:</strong> Downloaded files keep their original format and filename</li>
+                </ul>
+                
+                <h2>Comparing Our Tool to Other PNG Compressors</h2>
+                
+                <p>There are many <strong>PNG compression tools</strong> available online. Here's how our tool stands out:</p>
+                
+                <h3>Privacy and Security</h3>
+                
+                <p>Unlike many online compressors that upload your images to their servers, our tool processes everything locally in your browser. Your images never leave your device, ensuring complete privacy and security.</p>
+                
+                <h3>No Upload Limits</h3>
+                
+                <p>Many free online tools limit the number of images you can process or the file size. Our tool has no such limits—compress as many images as you need, of any size up to 50MB.</p>
+                
+                <h3>No Registration Required</h3>
+                
+                <p>Start compressing images immediately without creating an account, providing email addresses, or jumping through any hoops.</p>
+                
+                <h3>Speed</h3>
+                
+                <p>Because processing happens in your browser rather than on a remote server, compression is nearly instantaneous. There's no waiting for uploads or downloads to complete.</p>
+                
+                <h2>Tips for Maximum Compression</h2>
+                
+                <p>Here are expert tips to get the most out of your <strong>PNG image optimization</strong>:</p>
+                
+                <ol>
+                    <li><strong>Start with clean images:</strong> Remove unnecessary elements and crop to the needed dimensions before compressing.</li>
+                    <li><strong>Use PNG-8 when possible:</strong> If your image has fewer than 256 colors, PNG-8 format provides much smaller files than PNG-24.</li>
+                    <li><strong>Optimize in batches:</strong> Process similar images together to establish efficient compression settings.</li>
+                    <li><strong>Test different quality levels:</strong> Start with lower quality and increase until the result meets your needs.</li>
+                    <li><strong>Remove metadata:</strong> Our tool automatically removes unnecessary metadata, contributing to smaller file sizes.</li>
+                    <li><strong>Consider image dimensions:</strong> Resize large images before compression for even greater file size savings.</li>
+                </ol>
+                
+                <h2>The Future of Image Compression</h2>
+                
+                <p>Image compression technology continues to evolve. New formats like <strong>AVIF</strong> and <strong>JPEG XL</strong> promise even better compression ratios while maintaining quality. However, PNG remains the gold standard for images requiring transparency and lossless quality, making PNG compression tools essential for years to come.</p>
+                
+                <p>Machine learning is also playing an increasingly important role in image compression. AI-powered compressors can analyze images and apply optimized compression strategies based on the content, achieving better results than traditional algorithms.</p>
+                
+                <h2>Conclusion</h2>
+                
+                <p>A quality <strong>PNG image compressor</strong> is an essential tool for anyone working with digital images. Whether you're optimizing a website, managing an e-commerce store, creating content, or simply trying to save storage space, compressing your images offers numerous benefits with virtually no downsides.</p>
+                
+                <p>Our <strong>free online PNG compression tool</strong> makes it easy to reduce file sizes while maintaining image quality. With features like batch processing, adjustable quality settings, original filename preservation, and complete privacy through browser-based processing, it's the ideal solution for all your image optimization needs.</p>
+                
+                <p>Start compressing your images today and experience faster loading times, reduced storage costs, and improved user experience across all your digital platforms.</p>
+            </article>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="px-4 py-16">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-12 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                Frequently Asked Questions
+            </h2>
+            <div class="space-y-4" id="faqContainer">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="glass border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 py-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="flex items-center space-x-3">
+                    <svg class="w-8 h-8" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="40" height="40" rx="10" fill="url(#footer-logo-gradient)"/>
+                        <path d="M12 20L17 25L28 14" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10 28H30" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+                        <defs>
+                            <linearGradient id="footer-logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#6366f1"/>
+                                <stop offset="1" stop-color="#8b5cf6"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span class="text-gray-400 text-sm">
+                        © <span id="currentYear"></span> All rights reserved.
+                    </span>
+                </div>
+                <div class="text-gray-400 text-sm">
+                    Developed by <a href="https://rakibalom.com/" class="text-indigo-400 hover:text-indigo-300 transition-colors font-medium">RakibAlom</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JSZip Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    
+    <script>
+        // Global state
+        let compressedImages = [];
+        
+        // DOM Elements
+        const dropZone = document.getElementById('dropZone');
+        const fileInput = document.getElementById('fileInput');
+        const browseBtn = document.getElementById('browseBtn');
+        const qualitySlider = document.getElementById('qualitySlider');
+        const qualityValue = document.getElementById('qualityValue');
+        const processingStatus = document.getElementById('processingStatus');
+        const processingProgress = document.getElementById('processingProgress');
+        const processingCount = document.getElementById('processingCount');
+        const resultsSection = document.getElementById('resultsSection');
+        const imageGrid = document.getElementById('imageGrid');
+        const downloadAllBtn = document.getElementById('downloadAllBtn');
+        const clearAllBtn = document.getElementById('clearAllBtn');
+        const addMoreBtn = document.getElementById('addMoreBtn');
+        
+        // Stats elements
+        const totalImagesEl = document.getElementById('totalImages');
+        const originalSizeEl = document.getElementById('originalSize');
+        const compressedSizeEl = document.getElementById('compressedSize');
+        const savedPercentEl = document.getElementById('savedPercent');
+        
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Event Listeners
+        dropZone.addEventListener('click', (e) => {
+            if (e.target !== browseBtn) {
+                fileInput.click();
+            }
+        });
+        
+        browseBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            fileInput.click();
+        });
+        
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.classList.add('dragover');
+        });
+        
+        dropZone.addEventListener('dragleave', () => {
+            dropZone.classList.remove('dragover');
+        });
+        
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('dragover');
+            const files = Array.from(e.dataTransfer.files).filter(f => f.type.startsWith('image/'));
+            if (files.length > 0) {
+                processFiles(files);
+            }
+        });
+        
+        fileInput.addEventListener('change', (e) => {
+            const files = Array.from(e.target.files);
+            if (files.length > 0) {
+                processFiles(files);
+            }
+            fileInput.value = '';
+        });
+        
+        qualitySlider.addEventListener('input', (e) => {
+            qualityValue.textContent = `${e.target.value}%`;
+        });
+        
+        downloadAllBtn.addEventListener('click', downloadAllAsZip);
+        clearAllBtn.addEventListener('click', clearAll);
+        addMoreBtn.addEventListener('click', () => fileInput.click());
+        
+        // Process uploaded files
+        async function processFiles(files) {
+            processingStatus.classList.remove('hidden');
+            resultsSection.classList.remove('hidden');
+            
+            const quality = qualitySlider.value / 100;
+            
+            let processed = 0;
+            const total = files.length;
+            
+            for (const file of files) {
+                if (file.size > 50 * 1024 * 1024) {
+                    console.warn(`Skipping ${file.name}: File too large (max 50MB)`);
+                    processed++;
+                    continue;
+                }
+                
+                processingCount.textContent = `${processed + 1}/${total}`;
+                processingProgress.style.width = `${(processed / total) * 100}%`;
+                
+                try {
+                    const result = await compressImage(file, quality);
+                    compressedImages.push(result);
+                    addImageCard(result);
+                    updateStats();
+                } catch (error) {
+                    console.error(`Error compressing ${file.name}:`, error);
+                }
+                
+                processed++;
+                processingProgress.style.width = `${(processed / total) * 100}%`;
+            }
+            
+            processingStatus.classList.add('hidden');
+            processingProgress.style.width = '0%';
+        }
+        
+        // Compress single image
+        function compressImage(file, quality) {
+            return new Promise((resolve, reject) => {
+                const originalName = file.name;
+                const originalType = file.type;
+                const originalSize = file.size;
+                
+                // Get format info
+                const extension = originalName.split('.').pop().toLowerCase();
+                const formatMap = {
+                    'png': 'PNG',
+                    'jpg': 'JPEG',
+                    'jpeg': 'JPEG',
+                    'webp': 'WebP',
+                    'gif': 'GIF',
+                    'bmp': 'BMP'
+                };
+                const format = formatMap[extension] || extension.toUpperCase();
+                
+                const reader = new FileReader();
+                
+                reader.onload = (e) => {
+                    const img = new Image();
+                    
+                    img.onload = () => {
+                        const canvas = document.createElement('canvas');
+                        const ctx = canvas.getContext('2d');
+                        
+                        canvas.width = img.width;
+                        canvas.height = img.height;
+                        ctx.drawImage(img, 0, 0);
+                        
+                        // Determine output type and quality
+                        let outputType = originalType;
+                        let compressionQuality = quality;
+                        
+                        // For formats that support quality compression
+                        if (originalType === 'image/jpeg' || originalType === 'image/webp') {
+                            // Direct quality compression
+                            canvas.toBlob((compressedBlob) => {
+                                if (!compressedBlob) {
+                                    reject(new Error('Compression failed'));
+                                    return;
+                                }
+                                
+                                // Compare sizes - use smaller one
+                                let finalBlob, finalSize, wasCompressed;
+                                
+                                if (compressedBlob.size < originalSize) {
+                                    finalBlob = compressedBlob;
+                                    finalSize = compressedBlob.size;
+                                    wasCompressed = true;
+                                } else {
+                                    // Use original file
+                                    finalBlob = file;
+                                    finalSize = originalSize;
+                                    wasCompressed = false;
+                                }
+                                
+                                resolve({
+                                    id: Date.now() + Math.random(),
+                                    originalFile: file,
+                                    originalSize: originalSize,
+                                    compressedBlob: finalBlob,
+                                    compressedSize: finalSize,
+                                    name: originalName,
+                                    mimeType: originalType,
+                                    preview: wasCompressed ? URL.createObjectURL(compressedBlob) : e.target.result,
+                                    width: img.width,
+                                    height: img.height,
+                                    format: format,
+                                    wasCompressed: wasCompressed
+                                });
+                            }, outputType, compressionQuality);
+                        } 
+                        // For PNG - try multiple compression approaches
+                        else if (originalType === 'image/png') {
+                            // Try PNG compression
+                            canvas.toBlob((pngBlob) => {
+                                if (!pngBlob) {
+                                    reject(new Error('Compression failed'));
+                                    return;
+                                }
+                                
+                                // Also try converting to reduced quality and back
+                                const tempQuality = 0.7 + (quality * 0.3); // Map to 0.7-1.0
+                                
+                                canvas.toBlob((jpgBlob) => {
+                                    if (jpgBlob) {
+                                        // Redraw from JPG to PNG for color reduction effect
+                                        const tempImg = new Image();
+                                        tempImg.onload = () => {
+                                            const tempCanvas = document.createElement('canvas');
+                                            const tempCtx = tempCanvas.getContext('2d');
+                                            tempCanvas.width = img.width;
+                                            tempCanvas.height = img.height;
+                                            tempCtx.drawImage(tempImg, 0, 0);
+                                            
+                                            tempCanvas.toBlob((reducedPngBlob) => {
+                                                // Find the smallest option
+                                                let candidates = [
+                                                    { blob: file, size: originalSize },
+                                                    { blob: pngBlob, size: pngBlob.size }
+                                                ];
+                                                
+                                                if (reducedPngBlob) {
+                                                    candidates.push({ blob: reducedPngBlob, size: reducedPngBlob.size });
+                                                }
+                                                
+                                                // Sort by size and pick smallest
+                                                candidates.sort((a, b) => a.size - b.size);
+                                                const best = candidates[0];
+                                                
+                                                const wasCompressed = best.blob !== file && best.size < originalSize;
+                                                
+                                                resolve({
+                                                    id: Date.now() + Math.random(),
+                                                    originalFile: file,
+                                                    originalSize: originalSize,
+                                                    compressedBlob: best.blob,
+                                                    compressedSize: wasCompressed ? best.size : originalSize,
+                                                    name: originalName,
+                                                    mimeType: originalType,
+                                                    preview: wasCompressed ? URL.createObjectURL(best.blob) : e.target.result,
+                                                    width: img.width,
+                                                    height: img.height,
+                                                    format: format,
+                                                    wasCompressed: wasCompressed
+                                                });
+                                            }, 'image/png');
+                                        };
+                                        tempImg.onerror = () => {
+                                            // Fall back to direct comparison
+                                            finalizePngCompression(pngBlob);
+                                        };
+                                        tempImg.src = URL.createObjectURL(jpgBlob);
+                                    } else {
+                                        finalizePngCompression(pngBlob);
+                                    }
+                                }, 'image/jpeg', tempQuality);
+                                
+                                function finalizePngCompression(pngBlob) {
+                                    let finalBlob, finalSize, wasCompressed;
+                                    
+                                    if (pngBlob.size < originalSize) {
+                                        finalBlob = pngBlob;
+                                        finalSize = pngBlob.size;
+                                        wasCompressed = true;
+                                    } else {
+                                        finalBlob = file;
+                                        finalSize = originalSize;
+                                        wasCompressed = false;
+                                    }
+                                    
+                                    resolve({
+                                        id: Date.now() + Math.random(),
+                                        originalFile: file,
+                                        originalSize: originalSize,
+                                        compressedBlob: finalBlob,
+                                        compressedSize: finalSize,
+                                        name: originalName,
+                                        mimeType: originalType,
+                                        preview: wasCompressed ? URL.createObjectURL(finalBlob) : e.target.result,
+                                        width: img.width,
+                                        height: img.height,
+                                        format: format,
+                                        wasCompressed: wasCompressed
+                                    });
+                                }
+                            }, 'image/png');
+                        }
+                        // For GIF and BMP - convert to same format via canvas
+                        else {
+                            // Try to compress by re-encoding
+                            let targetType = originalType;
+                            
+                            // BMP and GIF don't compress well, try PNG
+                            if (originalType === 'image/bmp' || originalType === 'image/gif') {
+                                // Just use canvas re-encoding
+                                canvas.toBlob((blob) => {
+                                    if (!blob) {
+                                        // Return original if compression fails
+                                        resolve({
+                                            id: Date.now() + Math.random(),
+                                            originalFile: file,
+                                            originalSize: originalSize,
+                                            compressedBlob: file,
+                                            compressedSize: originalSize,
+                                            name: originalName,
+                                            mimeType: originalType,
+                                            preview: e.target.result,
+                                            width: img.width,
+                                            height: img.height,
+                                            format: format,
+                                            wasCompressed: false
+                                        });
+                                        return;
+                                    }
+                                    
+                                    // For GIF/BMP, we'll keep original format in name but use PNG blob if smaller
+                                    let finalBlob, finalSize, wasCompressed;
+                                    
+                                    if (blob.size < originalSize) {
+                                        finalBlob = blob;
+                                        finalSize = blob.size;
+                                        wasCompressed = true;
+                                    } else {
+                                        finalBlob = file;
+                                        finalSize = originalSize;
+                                        wasCompressed = false;
+                                    }
+                                    
+                                    resolve({
+                                        id: Date.now() + Math.random(),
+                                        originalFile: file,
+                                        originalSize: originalSize,
+                                        compressedBlob: finalBlob,
+                                        compressedSize: finalSize,
+                                        name: originalName,
+                                        mimeType: wasCompressed ? 'image/png' : originalType,
+                                        preview: wasCompressed ? URL.createObjectURL(finalBlob) : e.target.result,
+                                        width: img.width,
+                                        height: img.height,
+                                        format: format,
+                                        wasCompressed: wasCompressed
+                                    });
+                                }, 'image/png');
+                            } else {
+                                // Unknown format - return original
+                                resolve({
+                                    id: Date.now() + Math.random(),
+                                    originalFile: file,
+                                    originalSize: originalSize,
+                                    compressedBlob: file,
+                                    compressedSize: originalSize,
+                                    name: originalName,
+                                    mimeType: originalType,
+                                    preview: e.target.result,
+                                    width: img.width,
+                                    height: img.height,
+                                    format: format,
+                                    wasCompressed: false
+                                });
+                            }
+                        }
+                    };
+                    
+                    img.onerror = () => reject(new Error('Failed to load image'));
+                    img.src = e.target.result;
+                };
+                
+                reader.onerror = () => reject(new Error('Failed to read file'));
+                reader.readAsDataURL(file);
+            });
+        }
+        
+        // Add image card to grid
+        function addImageCard(imageData) {
+            const savings = imageData.originalSize > 0 
+                ? ((1 - imageData.compressedSize / imageData.originalSize) * 100) 
+                : 0;
+            
+            const savingsDisplay = savings > 0 ? savings.toFixed(1) : '0';
+            const savingsColor = savings > 0 ? 'text-green-400' : 'text-gray-400';
+            const savingsSign = savings > 0 ? '-' : '';
+            
+            const card = document.createElement('div');
+            card.className = 'glass-card rounded-xl overflow-hidden fade-in';
+            card.id = `image-${imageData.id}`;
+            
+            card.innerHTML = `
+                <div class="relative aspect-video checkerboard overflow-hidden">
+                    <img src="${imageData.preview}" alt="${imageData.name}" class="w-full h-full object-contain">
+                    <div class="absolute top-2 right-2 px-2 py-1 bg-black/70 rounded text-xs font-medium text-white">
+                        ${imageData.format}
+                    </div>
+                    ${!imageData.wasCompressed ? '<div class="absolute top-2 left-2 px-2 py-1 bg-yellow-500/80 rounded text-xs font-medium text-black">Original</div>' : ''}
+                </div>
+                <div class="p-4">
+                    <p class="text-sm font-medium text-gray-200 truncate mb-2" title="${imageData.name}">${imageData.name}</p>
+                    <div class="grid grid-cols-2 gap-2 text-xs mb-3">
+                        <div>
+                            <p class="text-gray-500">Original</p>
+                            <p class="text-gray-300 font-medium">${formatFileSize(imageData.originalSize)}</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-500">Compressed</p>
+                            <p class="${savings > 0 ? 'text-green-400' : 'text-gray-300'} font-medium">${formatFileSize(imageData.compressedSize)}</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs text-gray-500">${imageData.width} × ${imageData.height}px</span>
+                        <span class="${savingsColor} text-sm font-semibold">${savingsSign}${savingsDisplay}%</span>
+                    </div>
+                    <div class="flex gap-2">
+                        <button onclick="downloadImage('${imageData.id}')" class="flex-1 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 rounded-lg text-xs font-medium transition-all duration-300 flex items-center justify-center space-x-1">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                            </svg>
+                            <span>Download</span>
+                        </button>
+                        <button onclick="removeImage('${imageData.id}')" class="py-2 px-3 bg-dark-600 hover:bg-red-600/20 border border-gray-600 hover:border-red-500/50 rounded-lg text-xs transition-all duration-300">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            imageGrid.appendChild(card);
+        }
+        
+        // Update statistics
+        function updateStats() {
+            const totalOriginal = compressedImages.reduce((sum, img) => sum + img.originalSize, 0);
+            const totalCompressed = compressedImages.reduce((sum, img) => sum + img.compressedSize, 0);
+            const savedPercent = totalOriginal > 0 ? ((1 - totalCompressed / totalOriginal) * 100) : 0;
+            
+            totalImagesEl.textContent = compressedImages.length;
+            originalSizeEl.textContent = formatFileSize(totalOriginal);
+            compressedSizeEl.textContent = formatFileSize(totalCompressed);
+            savedPercentEl.textContent = `${savedPercent > 0 ? savedPercent.toFixed(1) : '0'}%`;
+        }
+        
+        // Download single image with original name
+        function downloadImage(id) {
+            const image = compressedImages.find(img => img.id == id);
+            if (image) {
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(image.compressedBlob);
+                link.download = image.name;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+        }
+        
+        // Remove single image
+        function removeImage(id) {
+            const index = compressedImages.findIndex(img => img.id == id);
+            if (index > -1) {
+                if (compressedImages[index].preview.startsWith('blob:')) {
+                    URL.revokeObjectURL(compressedImages[index].preview);
+                }
+                compressedImages.splice(index, 1);
+                const card = document.getElementById(`image-${id}`);
+                if (card) card.remove();
+                updateStats();
+                
+                if (compressedImages.length === 0) {
+                    resultsSection.classList.add('hidden');
+                }
+            }
+        }
+        
+        // Download all as ZIP with original names
+        async function downloadAllAsZip() {
+            if (compressedImages.length === 0) return;
+            
+            downloadAllBtn.disabled = true;
+            downloadAllBtn.innerHTML = `
+                <svg class="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                <span>Creating ZIP...</span>
+            `;
+            
+            try {
+                const zip = new JSZip();
+                const usedNames = {};
+                
+                for (const image of compressedImages) {
+                    let fileName = image.name;
+                    
+                    if (usedNames[fileName]) {
+                        const nameParts = fileName.split('.');
+                        const ext = nameParts.pop();
+                        const baseName = nameParts.join('.');
+                        fileName = `${baseName}_${usedNames[fileName]}.${ext}`;
+                        usedNames[image.name]++;
+                    } else {
+                        usedNames[fileName] = 1;
+                    }
+                    
+                    zip.file(fileName, image.compressedBlob);
+                }
+                
+                const content = await zip.generateAsync({ type: 'blob' });
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(content);
+                link.download = `compressed_images.zip`;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                URL.revokeObjectURL(link.href);
+            } catch (error) {
+                console.error('Error creating ZIP:', error);
+                alert('Failed to create ZIP file. Please try downloading images individually.');
+            }
+            
+            downloadAllBtn.disabled = false;
+            downloadAllBtn.innerHTML = `
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                </svg>
+                <span>Download All (ZIP)</span>
+            `;
+        }
+        
+        // Clear all images
+        function clearAll() {
+            compressedImages.forEach(img => {
+                if (img.preview.startsWith('blob:')) {
+                    URL.revokeObjectURL(img.preview);
+                }
+            });
+            compressedImages = [];
+            imageGrid.innerHTML = '';
+            resultsSection.classList.add('hidden');
+            updateStats();
+        }
+        
+        // Format file size
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+        
+        // FAQ Data
+        const faqData = [
+            {
+                question: "Is this PNG compressor free to use?",
+                answer: "Yes, our PNG image compressor is completely free to use. There are no hidden fees, no registration required, and no limits on the number of images you can compress. You can use it as many times as you need without any cost."
+            },
+            {
+                question: "What image formats are supported?",
+                answer: "Our tool supports all major image formats including PNG, JPG, JPEG, WebP, GIF, and BMP. You can upload any of these formats and the compressed image will be downloaded in the same original format with the original filename preserved."
+            },
+            {
+                question: "Are my images safe and private?",
+                answer: "Absolutely! Your images never leave your device. All compression processing happens directly in your web browser using JavaScript. We don't upload your images to any server, which means your files remain completely private and secure."
+            },
+            {
+                question: "What happens if compression doesn't reduce the file size?",
+                answer: "If our compression algorithm cannot reduce the file size (which can happen with already optimized images), we return the original file unchanged and show 0% compression. This ensures you never get a larger file than what you started with."
+            },
+            {
+                question: "Will the original filename be preserved?",
+                answer: "Yes! When you download compressed images, they will retain their original filename exactly as uploaded. We don't add any prefixes, suffixes, or modify the filename in any way."
+            },
+            {
+                question: "Will compression affect my image quality?",
+                answer: "Our tool offers adjustable compression levels. At higher quality settings (80-100%), the visual difference is typically imperceptible. Lower quality settings achieve smaller file sizes with some quality trade-off. You can preview the result before downloading."
+            },
+            {
+                question: "Can I compress multiple images at once?",
+                answer: "Yes! Our batch processing feature allows you to upload and compress multiple images simultaneously. You can download them individually with their original names or all at once as a ZIP file. There's no limit to the number of images you can process."
+            },
+            {
+                question: "What is the maximum file size I can upload?",
+                answer: "You can upload images up to 50MB each. For most use cases, this is more than sufficient. If you have larger files, consider resizing them before compression."
+            },
+            {
+                question: "Can I use this tool on my mobile device?",
+                answer: "Yes! Our PNG compressor is fully responsive and works on all devices including smartphones, tablets, and desktop computers. You can compress images on the go from any device with a web browser."
+            },
+            {
+                question: "Does the compressed image keep its original format?",
+                answer: "Yes, the compressed image will be downloaded in the same format as the original. If you upload a JPEG, you'll get a compressed JPEG. If you upload a PNG, you'll get a compressed PNG, and so on."
+            }
+        ];
+        
+        // Render FAQs
+        const faqContainer = document.getElementById('faqContainer');
+        faqData.forEach((faq, index) => {
+            const faqItem = document.createElement('div');
+            faqItem.className = 'glass-card rounded-xl overflow-hidden';
+            faqItem.innerHTML = `
+                <button class="faq-toggle w-full p-5 text-left flex items-center justify-between" onclick="toggleFaq(${index})">
+                    <span class="font-medium text-gray-200 pr-4">${faq.question}</span>
+                    <svg class="faq-icon w-5 h-5 text-indigo-400 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+                <div class="faq-content hidden px-5 pb-5">
+                    <p class="text-gray-400 text-sm leading-relaxed">${faq.answer}</p>
+                </div>
+            `;
+            faqContainer.appendChild(faqItem);
+        });
+        
+        // Toggle FAQ
+        function toggleFaq(index) {
+            const faqItems = faqContainer.children;
+            const item = faqItems[index];
+            const content = item.querySelector('.faq-content');
+            const icon = item.querySelector('.faq-icon');
+            
+            content.classList.toggle('hidden');
+            icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+        }
+    </script>
+</body>
+</html>
