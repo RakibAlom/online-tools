@@ -1,51 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Multiple URL Opener Tool - Free One-Click Access - Rakib Alom</title>
-  <meta name="description" content="Boost productivity with the Multiple URL Opener Tool, a free one-click solution to open multiple links instantly. No setup, works with all browsers.">
-  <meta name="keywords" content="Multiple URL Opener, open multiple URLs, free URL opener, one-click URL tool, browser URL opener, productivity tool">
+  <title>Multiple URL Opener Tool - Open Multiple Links Instantly | Free Bulk URL Opener</title>
+  <meta name="description" content="Open multiple URLs instantly with our free Multiple URL Opener tool. Bulk link opener, batch URL opener, and one-click multi-tab opener for Chrome, Firefox, and all browsers. No signup required.">
+  <meta name="keywords" content="multiple url opener, bulk url opener, batch url opener, open multiple links, url opener tool, multi tab opener, link opener, bulk link opener, url batch opener, multiple link opener, open urls in bulk, chrome url opener, firefox bulk opener, safari multi opener, online url opener, free url opener, instant url opener, productivity tool, browser tab manager, mass url opener, url list opener">
   <meta name="author" content="Rakib Alom">
   <meta name="robots" content="index, follow">
-  <meta property="og:title" content="Multiple URL Opener Tool - Free One-Click Access">
-  <meta property="og:description" content="Open multiple URLs instantly with our free Multiple URL Opener Tool. No setup required, perfect for productivity.">
+  <meta property="og:title" content="Multiple URL Opener Tool - Open Multiple Links Instantly">
+  <meta property="og:description" content="Open multiple URLs instantly with our free Multiple URL Opener tool. Bulk link opener for all browsers with no signup required.">
   <meta property="og:image" content="cover.jpg">
-  <meta property="og:url" content="https://yourdomain.com">
+  <meta property="og:url" content="https://rakibalom.com/tools/multiple-url-opener">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Multiple URL Opener Tool - Free One-Click Access">
-  <meta name="twitter:description" content="Open multiple URLs instantly with our free tool. No setup, works with all browsers.">
+  <meta name="twitter:title" content="Multiple URL Opener Tool - Open Multiple Links Instantly">
+  <meta name="twitter:description" content="Open multiple URLs instantly with our free bulk link opener. No signup, works with all browsers.">
   <meta name="twitter:image" content="cover.jpg">
+  <link rel="canonical" href="https://rakibalom.com/tools/multiple-url-opener">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            glass: {
+              light: 'rgba(255, 255, 255, 0.7)',
+              dark: 'rgba(0, 0, 0, 0.3)',
+            }
+          }
+        }
+      }
+    }
+  </script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
-    
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3QV1BRL4VZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3QV1BRL4VZ');
+  </script>
+  
   <style>
+    :root {
+      /* Light Mode Colors */
+      --bg-primary: #f0f4f8;
+      --bg-secondary: #ffffff;
+      --bg-gradient-from: #e2e8f0;
+      --bg-gradient-to: #cbd5e1;
+      --text-primary: #1e293b;
+      --text-secondary: #475569;
+      --text-muted: #64748b;
+      --glass-bg: rgba(255, 255, 255, 0.7);
+      --glass-border: rgba(255, 255, 255, 0.5);
+      --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+      --input-bg: rgba(255, 255, 255, 0.8);
+      --input-border: rgba(203, 213, 225, 0.5);
+      --card-bg: rgba(255, 255, 255, 0.6);
+      --hover-bg: rgba(255, 255, 255, 0.9);
+      --accent-blue: #3b82f6;
+      --accent-green: #10b981;
+      --accent-purple: #8b5cf6;
+      --accent-yellow: #f59e0b;
+      --counter-bg: rgba(59, 130, 246, 0.1);
+      --counter-border: rgba(59, 130, 246, 0.2);
+    }
+
+    .dark {
+      /* Dark Mode Colors */
+      --bg-primary: #0a0a0a;
+      --bg-secondary: #1a1a2e;
+      --bg-gradient-from: #0a0a0a;
+      --bg-gradient-to: #16213e;
+      --text-primary: #ffffff;
+      --text-secondary: rgba(255, 255, 255, 0.8);
+      --text-muted: rgba(255, 255, 255, 0.6);
+      --glass-bg: rgba(255, 255, 255, 0.03);
+      --glass-border: rgba(255, 255, 255, 0.08);
+      --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      --input-bg: rgba(0, 0, 0, 0.3);
+      --input-border: rgba(255, 255, 255, 0.1);
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --hover-bg: rgba(255, 255, 255, 0.08);
+      --accent-blue: #60a5fa;
+      --accent-green: #34d399;
+      --accent-purple: #a78bfa;
+      --accent-yellow: #fbbf24;
+      --counter-bg: rgba(59, 130, 246, 0.2);
+      --counter-border: rgba(59, 130, 246, 0.3);
+    }
+
     * {
       font-family: 'Inter', sans-serif;
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
+    
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
     }
     
     .gradient-bg {
-      background: linear-gradient(135deg, #000000 0%, #3E001F 100%);
-    }
-    
-    .dark .gradient-bg {
-      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      background: linear-gradient(135deg, var(--bg-gradient-from) 0%, var(--bg-gradient-to) 100%);
+      min-height: 100vh;
     }
     
     .glass-effect {
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      box-shadow: var(--glass-shadow);
     }
     
-    .dark .glass-effect {
-      background: rgba(0, 0, 0, 0.2);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+    .glass-effect:hover {
+      background: var(--hover-bg);
+    }
+    
+    .glass-input {
+      background: var(--input-bg);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--input-border);
+      color: var(--text-primary);
+    }
+    
+    .glass-input:focus {
+      background: var(--input-bg);
+      border-color: var(--accent-blue);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+      outline: none;
+    }
+    
+    .glass-input::placeholder {
+      color: var(--text-muted);
     }
     
     .animate-fade-in {
@@ -54,10 +147,6 @@
     
     .animate-slide-up {
       animation: slideUp 0.8s ease-out;
-    }
-    
-    .animate-pulse-slow {
-      animation: pulse 3s ease-in-out infinite;
     }
     
     @keyframes fadeIn {
@@ -82,11 +171,38 @@
     
     @keyframes floating {
       0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-20px); }
+      50% { transform: translateY(-10px); }
     }
     
-    .url-counter {
-      transition: all 0.3s ease;
+    .glow-effect {
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    }
+    
+    .btn-gradient-green {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: white;
+    }
+    
+    .dark .btn-gradient-green {
+      background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    }
+    
+    .btn-gradient-yellow {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: white;
+    }
+    
+    .dark .btn-gradient-yellow {
+      background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+    }
+    
+    .btn-gradient-purple {
+      background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+      color: white;
+    }
+    
+    .dark .btn-gradient-purple {
+      background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
     }
     
     .success-animation {
@@ -100,15 +216,16 @@
     }
     
     .modal-backdrop {
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background: rgba(0, 0, 0, 0.6);
     }
     
     .switch {
       position: relative;
       display: inline-block;
-      width: 60px;
-      height: 34px;
+      width: 50px;
+      height: 26px;
     }
     
     .switch input {
@@ -124,83 +241,184 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: linear-gradient(45deg, #f59e0b, #ef4444);
+      background: var(--text-muted);
       transition: .4s;
       border-radius: 34px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
     
     .slider:before {
       position: absolute;
       content: "";
-      height: 26px;
-      width: 26px;
+      height: 18px;
+      width: 18px;
       left: 4px;
       bottom: 4px;
       background-color: white;
       transition: .4s;
       border-radius: 50%;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
     
     input:checked + .slider {
-      background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
     }
     
     input:checked + .slider:before {
-      transform: translateX(26px);
+      transform: translateX(24px);
     }
     
     .custom-scrollbar::-webkit-scrollbar {
-      width: 8px;
+      width: 6px;
     }
     
     .custom-scrollbar::-webkit-scrollbar-track {
-      background: rgba(0, 0, 0, 0.1);
-      border-radius: 4px;
+      background: var(--input-bg);
+      border-radius: 3px;
     }
     
     .custom-scrollbar::-webkit-scrollbar-thumb {
-      background: linear-gradient(45deg, #667eea, #764ba2);
-      border-radius: 4px;
+      background: var(--text-muted);
+      border-radius: 3px;
+      opacity: 0.5;
     }
     
-    .dark .custom-scrollbar::-webkit-scrollbar-thumb {
-      background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: var(--text-secondary);
+    }
+    
+    .nav-link {
+      position: relative;
+      overflow: hidden;
+      color: var(--text-secondary);
+    }
+    
+    .nav-link:hover {
+      color: var(--text-primary);
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    .url-counter {
+      background: var(--counter-bg);
+      border: 1px solid var(--counter-border);
+    }
+    
+    .text-primary { color: var(--text-primary); }
+    .text-secondary { color: var(--text-secondary); }
+    .text-muted { color: var(--text-muted); }
+    .bg-card { background-color: var(--card-bg); }
+    
+    .validation-valid {
+      border-left: 3px solid var(--accent-green);
+    }
+    
+    .validation-invalid {
+      border-left: 3px solid #ef4444;
+    }
+    
+    .article-content h2 {
+      color: var(--accent-blue);
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    
+    .article-content h3 {
+      color: var(--accent-purple);
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+    
+    .article-content p {
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+    
+    .article-content ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: var(--text-primary);
+    }
+    
+    .border-subtle {
+      border-color: var(--glass-border);
+    }
+    
+    @media (max-width: 768px) {
+      .glass-effect {
+        backdrop-filter: blur(10px);
+      }
     }
   </style>
 </head>
-<body class="min-h-screen transition-all duration-500 ease-in-out">
-  <div class="gradient-bg min-h-screen">
-    <!-- Header -->
-    <header class="relative z-10 p-4 md:p-6">
+<body class="min-h-screen">
+  <div class="gradient-bg">
+    <!-- Navigation -->
+    <nav class="relative z-50 p-4 md:p-6">
       <div class="max-w-7xl mx-auto">
-        <div class="glass-effect rounded-2xl p-4 md:p-6 animate-fade-in">
+        <div class="glass-effect rounded-2xl p-4 animate-fade-in">
           <div class="flex flex-col md:flex-row justify-between items-center gap-4">
             <div class="flex items-center gap-3">
-              <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center floating-animation">
-                <i class="fas fa-external-link-alt text-white text-xl"></i>
+              <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center floating-animation">
+                <i class="fas fa-external-link-alt text-white text-lg"></i>
               </div>
               <div>
-                <h1 class="text-2xl md:text-3xl font-bold text-white">Multiple URL Opener</h1>
-                <p class="text-white/80 text-sm">Open multiple links with one click</p>
+                <h1 class="text-xl md:text-2xl font-bold text-primary tracking-tight">Multiple URL Opener</h1>
+                <p class="text-muted text-xs md:text-sm">Bulk Link Opener Tool</p>
               </div>
             </div>
             
-            <div class="flex items-center gap-4">
-              <div class="flex items-center gap-3">
-                <i class="fas fa-sun text-yellow-400 text-lg"></i>
+            <div class="flex items-center gap-6">
+              <div class="hidden md:flex items-center gap-6">
+                <a href="https://rakibalom.com/" class="nav-link font-medium transition-colors text-sm">Home</a>
+                <a href="https://rakibalom.com/tools/" class="nav-link font-medium transition-colors text-sm">All Tools</a>
+              </div>
+              
+              <div class="flex items-center gap-2">
+                <i class="fas fa-sun text-yellow-500 text-sm"></i>
                 <label class="switch">
                   <input type="checkbox" id="modeToggle">
                   <span class="slider"></span>
                 </label>
-                <i class="fas fa-moon text-blue-300 text-lg"></i>
+                <i class="fas fa-moon text-blue-400 text-sm"></i>
               </div>
             </div>
           </div>
+          
+          <!-- Mobile Nav -->
+          <div class="md:hidden flex justify-center gap-4 mt-4 pt-4 border-t border-subtle">
+            <a href="https://rakibalom.com/" class="text-secondary hover:text-primary text-sm font-medium transition-colors">Home</a>
+            <a href="https://rakibalom.com/tools/" class="text-secondary hover:text-primary text-sm font-medium transition-colors">All Tools</a>
+          </div>
         </div>
       </div>
-    </header>
+    </nav>
 
     <!-- Main Content -->
     <main class="relative z-10 p-4 md:p-6">
@@ -211,48 +429,48 @@
           <div class="xl:col-span-1 space-y-6 animate-slide-up">
             <!-- Features Card -->
             <div class="glass-effect rounded-2xl p-6">
-              <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                <i class="fas fa-star text-yellow-400"></i>
+              <h2 class="text-lg font-bold text-primary mb-4 flex items-center gap-2">
+                <i class="fas fa-star text-yellow-500"></i>
                 Key Features
               </h2>
               <div class="space-y-4">
                 <div class="flex items-start gap-3">
-                  <div class="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <i class="fas fa-rocket text-white text-sm"></i>
+                  <div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 border border-green-500/30">
+                    <i class="fas fa-rocket text-green-500 text-sm"></i>
                   </div>
                   <div>
-                    <h3 class="font-semibold text-white">Lightning Fast</h3>
-                    <p class="text-white/70 text-sm">Open hundreds of URLs simultaneously</p>
+                    <h3 class="font-semibold text-primary text-sm">Lightning Fast</h3>
+                    <p class="text-muted text-xs">Open hundreds of URLs simultaneously</p>
                   </div>
                 </div>
                 
                 <div class="flex items-start gap-3">
-                  <div class="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <i class="fas fa-shield-alt text-white text-sm"></i>
+                  <div class="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 border border-blue-500/30">
+                    <i class="fas fa-shield-alt text-blue-500 text-sm"></i>
                   </div>
                   <div>
-                    <h3 class="font-semibold text-white">100% Free & Safe</h3>
-                    <p class="text-white/70 text-sm">No registration or data collection</p>
+                    <h3 class="font-semibold text-primary text-sm">100% Free & Safe</h3>
+                    <p class="text-muted text-xs">No registration or data collection</p>
                   </div>
                 </div>
                 
                 <div class="flex items-start gap-3">
-                  <div class="w-8 h-8 bg-purple-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <i class="fas fa-mobile-alt text-white text-sm"></i>
+                  <div class="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 border border-purple-500/30">
+                    <i class="fas fa-mobile-alt text-purple-500 text-sm"></i>
                   </div>
                   <div>
-                    <h3 class="font-semibold text-white">Mobile Friendly</h3>
-                    <p class="text-white/70 text-sm">Works perfectly on all devices</p>
+                    <h3 class="font-semibold text-primary text-sm">Mobile Friendly</h3>
+                    <p class="text-muted text-xs">Works perfectly on all devices</p>
                   </div>
                 </div>
                 
                 <div class="flex items-start gap-3">
-                  <div class="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <i class="fas fa-globe text-white text-sm"></i>
+                  <div class="w-8 h-8 bg-orange-500/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 border border-orange-500/30">
+                    <i class="fas fa-globe text-orange-500 text-sm"></i>
                   </div>
                   <div>
-                    <h3 class="font-semibold text-white">Universal Browser Support</h3>
-                    <p class="text-white/70 text-sm">Chrome, Firefox, Safari, Edge & more</p>
+                    <h3 class="font-semibold text-primary text-sm">Universal Support</h3>
+                    <p class="text-muted text-xs">Chrome, Firefox, Safari, Edge & more</p>
                   </div>
                 </div>
               </div>
@@ -260,33 +478,58 @@
 
             <!-- Stats Card -->
             <div class="glass-effect rounded-2xl p-6">
-              <h3 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-                <i class="fas fa-chart-line text-green-400"></i>
+              <h3 class="text-lg font-semibold text-primary mb-4 flex items-center gap-2">
+                <i class="fas fa-chart-line text-green-500"></i>
                 Session Stats
               </h3>
               <div class="grid grid-cols-2 gap-4">
-                <div class="text-center p-3 bg-white/10 rounded-lg">
-                  <div class="text-2xl font-bold text-white" id="urlCount">0</div>
-                  <div class="text-white/70 text-xs">URLs Ready</div>
+                <div class="text-center p-3 glass-effect rounded-lg">
+                  <div class="text-2xl font-bold text-primary" id="urlCount">0</div>
+                  <div class="text-muted text-xs mt-1">URLs Ready</div>
                 </div>
-                <div class="text-center p-3 bg-white/10 rounded-lg">
-                  <div class="text-2xl font-bold text-green-400" id="openedCount">0</div>
-                  <div class="text-white/70 text-xs">Opened</div>
+                <div class="text-center p-3 glass-effect rounded-lg">
+                  <div class="text-2xl font-bold text-green-500" id="openedCount">0</div>
+                  <div class="text-muted text-xs mt-1">Opened</div>
                 </div>
               </div>
+            </div>
+
+            <!-- Validation Results -->
+            <div id="validationCard" class="glass-effect rounded-2xl p-6 hidden">
+              <h3 class="text-lg font-semibold text-primary mb-4 flex items-center gap-2">
+                <i class="fas fa-check-double text-blue-500"></i>
+                Validation Results
+              </h3>
+              <div id="validationResults" class="space-y-2 max-h-48 overflow-y-auto custom-scrollbar"></div>
             </div>
           </div>
 
           <!-- Right Side - Main Tool -->
           <div class="xl:col-span-2 animate-slide-up" style="animation-delay: 0.2s;">
             <div class="glass-effect rounded-2xl p-6 md:p-8">
-              <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
-                <h2 class="text-2xl font-bold text-white flex items-center gap-2">
-                  <i class="fas fa-list text-blue-400"></i>
-                  URL Manager
-                </h2>
-                <div class="url-counter bg-white/10 px-4 py-2 rounded-full">
-                  <span class="text-white font-semibold" id="liveCount">0 URLs</span>
+              
+              <!-- Toolbar Above Textarea -->
+              <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 gap-4">
+                <div class="flex items-center gap-3">
+                  <h2 class="text-xl font-bold text-primary flex items-center gap-2">
+                    <i class="fas fa-list text-blue-500"></i>
+                    URL Manager
+                  </h2>
+                  <div class="url-counter px-3 py-1 rounded-full">
+                    <span class="text-primary font-semibold text-sm" id="liveCount">0 URLs</span>
+                  </div>
+                </div>
+                
+                <!-- Copy & Clear Buttons -->
+                <div class="flex items-center gap-2">
+                  <button id="copyBtn" class="glass-effect hover:bg-card text-secondary hover:text-primary px-3 py-1.5 rounded-lg transition-all duration-300 text-sm flex items-center gap-2" title="Copy all text">
+                    <i class="fas fa-copy"></i>
+                    <span class="hidden sm:inline">Copy</span>
+                  </button>
+                  <button id="clearBtn" class="glass-effect hover:bg-red-500/20 text-red-500 hover:text-red-600 px-3 py-1.5 rounded-lg transition-all duration-300 text-sm flex items-center gap-2" title="Clear all">
+                    <i class="fas fa-trash"></i>
+                    <span class="hidden sm:inline">Clear</span>
+                  </button>
                 </div>
               </div>
 
@@ -294,30 +537,30 @@
               <div class="relative mb-6">
                 <textarea 
                   id="urls" 
-                  class="w-full h-64 md:h-80 p-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent resize-none custom-scrollbar transition-all duration-300"
-                  placeholder="🔗 Paste your URLs here, one per line...&#10;&#10;Examples:&#10;https://google.com&#10;https://github.com&#10;https://stackoverflow.com"
+                  class="w-full h-64 md:h-80 p-4 glass-input rounded-xl placeholder:text-muted focus:outline-none resize-none custom-scrollbar text-sm leading-relaxed"
+                  placeholder="🔗 Paste your URLs here, one per line...&#10;&#10;Examples:&#10;https://google.com&#10;https://github.com&#10;https://stackoverflow.com&#10;&#10;Invalid entries will be filtered automatically."
+                  spellcheck="false"
                 ></textarea>
-                <div class="absolute bottom-4 right-4 flex gap-2">
-                  <button id="pasteBtn" class="bg-white/10 hover:bg-white/20 text-white p-2 rounded-lg transition-all duration-300 group" title="Paste from clipboard">
+                
+                <!-- Paste Button -->
+                <div class="absolute bottom-4 right-4">
+                  <button id="pasteBtn" class="glass-effect hover:bg-card text-secondary hover:text-primary p-2 rounded-lg transition-all duration-300 group" title="Paste from clipboard">
                     <i class="fas fa-paste group-hover:scale-110 transition-transform"></i>
-                  </button>
-                  <button id="clearBtn" class="bg-red-500/20 hover:bg-red-500/30 text-red-300 p-2 rounded-lg transition-all duration-300 group" title="Clear all URLs">
-                    <i class="fas fa-trash group-hover:scale-110 transition-transform"></i>
                   </button>
                 </div>
               </div>
 
               <!-- Action Buttons -->
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                <button id="openBtn" class="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center justify-center gap-2 group">
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+                <button id="openBtn" class="btn-gradient-green hover:opacity-90 py-3 px-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-[1.02] hover:shadow-lg flex items-center justify-center gap-2 group">
                   <i class="fas fa-external-link-alt group-hover:rotate-12 transition-transform"></i>
                   Open All URLs
                 </button>
-                <button id="validateBtn" class="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center justify-center gap-2 group">
+                <button id="validateBtn" class="btn-gradient-yellow hover:opacity-90 py-3 px-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-[1.02] hover:shadow-lg flex items-center justify-center gap-2 group">
                   <i class="fas fa-check-circle group-hover:rotate-12 transition-transform"></i>
                   Validate URLs
                 </button>
-                <button id="sortBtn" class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center justify-center gap-2 group">
+                <button id="sortBtn" class="btn-gradient-purple hover:opacity-90 py-3 px-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-[1.02] hover:shadow-lg flex items-center justify-center gap-2 group">
                   <i class="fas fa-sort group-hover:rotate-12 transition-transform"></i>
                   Sort URLs
                 </button>
@@ -325,24 +568,25 @@
 
               <!-- URL List Display -->
               <div id="urlListContainer" class="hidden">
-                <h3 class="text-lg font-semibold text-white mb-3 flex items-center gap-2">
-                  <i class="fas fa-link text-blue-400"></i>
+                <h3 class="text-lg font-semibold text-primary mb-3 flex items-center gap-2">
+                  <i class="fas fa-link text-blue-500"></i>
                   Processed URLs
                 </h3>
-                <div id="urlList" class="space-y-2 max-h-40 overflow-y-auto custom-scrollbar p-3 bg-white/5 rounded-xl border border-white/10"></div>
+                <div id="urlList" class="space-y-2 max-h-40 overflow-y-auto custom-scrollbar p-3 glass-effect rounded-xl"></div>
               </div>
 
               <!-- Tips -->
-              <div class="mt-6 p-4 bg-blue-500/10 border border-blue-500/20 rounded-xl">
+              <div class="mt-6 p-4 glass-effect rounded-xl border-l-4 border-blue-500">
                 <div class="flex items-start gap-3">
-                  <i class="fas fa-lightbulb text-yellow-400 mt-1 flex-shrink-0"></i>
+                  <i class="fas fa-lightbulb text-yellow-500 mt-1 flex-shrink-0"></i>
                   <div>
-                    <h4 class="font-semibold text-white mb-2">💡 Pro Tips</h4>
-                    <ul class="text-white/70 text-sm space-y-1">
+                    <h4 class="font-semibold text-primary mb-2 text-sm">💡 Pro Tips</h4>
+                    <ul class="text-muted text-xs space-y-1.5">
                       <li>• Enable pop-ups in your browser for best results</li>
                       <li>• Use Ctrl+V (or Cmd+V on Mac) to quickly paste URLs</li>
                       <li>• Validate URLs before opening to avoid errors</li>
-                      <li>• Limit to 20-30 URLs at once for optimal performance</li>
+                      <li>• Only valid URLs (http/https) will be opened</li>
+                      <li>• Empty lines and non-URL text are automatically filtered</li>
                     </ul>
                   </div>
                 </div>
@@ -351,52 +595,189 @@
           </div>
         </div>
 
+        <!-- SEO Article Section -->
+        <div class="mt-8 animate-slide-up" style="animation-delay: 0.3s;">
+          <article class="glass-effect rounded-2xl p-6 md:p-8 article-content">
+            <h2 class="text-2xl font-bold text-primary mb-6 flex items-center gap-2">
+              <i class="fas fa-newspaper text-blue-500"></i>
+              Complete Guide to Multiple URL Opener Tools
+            </h2>
+            
+            <p>In today's fast-paced digital environment, productivity is key. Whether you're a digital marketer managing multiple campaigns, a researcher gathering sources, a developer testing various endpoints, or simply someone who needs to access numerous websites simultaneously, the <strong>Multiple URL Opener</strong> tool is an essential browser utility that can save you hours of manual work.</p>
+
+            <h2>What is a Multiple URL Opener?</h2>
+            <p>A <strong>Multiple URL Opener</strong> (also known as a <strong>bulk URL opener</strong>, <strong>batch link opener</strong>, or <strong>multi-tab opener</strong>) is a specialized web tool designed to open multiple web addresses simultaneously with a single click. Instead of copying and pasting each URL individually into your browser's address bar, this productivity tool allows you to paste a list of URLs and open them all at once in separate browser tabs.</p>
+
+            <h2>Why Use a Bulk URL Opener?</h2>
+            <p>The benefits of using a <strong>bulk link opener</strong> are numerous:</p>
+            <ul>
+              <li><strong>Time Savings:</strong> Open 50, 100, or even 500 URLs in seconds rather than minutes</li>
+              <li><strong>Error Reduction:</strong> Eliminate copy-paste mistakes and typos when entering addresses</li>
+              <li><strong>Workflow Efficiency:</strong> Perfect for SEO audits, competitor analysis, and bulk checking</li>
+              <li><strong>Browser Compatibility:</strong> Works seamlessly with Chrome, Firefox, Safari, Edge, and Opera</li>
+              <li><strong>No Installation:</strong> Web-based <strong>online URL opener</strong> requires no software downloads</li>
+            </ul>
+
+            <h2>Key Features of Our Multi URL Opener</h2>
+            <p>Our <strong>free URL opener tool</strong> comes packed with features designed for professional use:</p>
+            
+            <h3>Smart URL Validation</h3>
+            <p>Before opening any links, our <strong>URL validator</strong> checks each address for proper formatting. It detects malformed URLs, missing protocols, and invalid domain structures, ensuring only working links are opened.</p>
+
+            <h3>Automatic Protocol Addition</h3>
+            <p>Simply type "example.com" and our <strong>smart URL formatter</strong> automatically adds "https://" to ensure secure connections.</p>
+
+            <h3>Duplicate Removal</h3>
+            <p>The built-in <strong>URL deduplication</strong> feature prevents the same link from being opened multiple times, saving system resources.</p>
+
+            <h3>Sorting Capabilities</h3>
+            <p>Organize your <strong>URL list</strong> alphabetically or by domain with our one-click sorting feature.</p>
+
+            <h2>Use Cases for Batch URL Opening</h2>
+            <p>The <strong>mass URL opener</strong> serves various professional needs:</p>
+            
+            <h3>SEO Professionals</h3>
+            <p>Open multiple competitor websites, backlink sources, or client sites for quick analysis. The <strong>SEO URL opener</strong> is perfect for site audits and rank checking.</p>
+
+            <h3>Digital Marketers</h3>
+            <p>Launch advertising campaigns across multiple platforms, check affiliate links, or monitor various social media profiles simultaneously using this <strong>marketing URL tool</strong>.</p>
+
+            <h3>Web Developers</h3>
+            <p>Test multiple endpoints, check API status codes, or verify website responsiveness across different URLs with this <strong>developer tool</strong>.</p>
+
+            <h3>Researchers & Students</h3>
+            <p>Quickly access reference materials, academic journals, and research databases. The <strong>research URL opener</strong> makes literature reviews faster.</p>
+
+            <h3>E-commerce Managers</h3>
+            <p>Monitor competitor prices, check inventory across multiple supplier sites, or manage various marketplace listings with our <strong>e-commerce URL manager</strong>.</p>
+
+            <h2>How to Use Our Multiple Link Opener</h2>
+            <p>Using our <strong>instant URL opener</strong> is straightforward:</p>
+            <ol class="list-decimal pl-6 space-y-2 text-secondary mb-4">
+              <li>Copy your list of URLs from any source (Excel, Word, notepad, etc.)</li>
+              <li>Paste them into the text area above (one URL per line)</li>
+              <li>Click "Validate URLs" to check for any errors (optional)</li>
+              <li>Click "Open All URLs" to launch them in new tabs</li>
+              <li>Allow pop-ups if prompted by your browser</li>
+            </ol>
+
+            <h2>Browser Compatibility & Pop-up Settings</h2>
+            <p>Our <strong>universal URL opener</strong> works with all modern browsers. However, most browsers block pop-ups by default. To use this tool effectively:</p>
+            <ul>
+              <li><strong>Chrome:</strong> Click the blocked pop-up icon in the address bar and select "Always allow pop-ups from this site"</li>
+              <li><strong>Firefox:</strong> Click "Options" on the blocked notification and allow pop-ups</li>
+              <li><strong>Safari:</strong> Go to Preferences > Websites > Pop-up Windows and allow for this site</li>
+              <li><strong>Edge:</strong> Click the blocked icon and choose "Always allow"</li>
+            </ul>
+
+            <h2>Advanced Tips for Power Users</h2>
+            <p>Maximize your productivity with these expert strategies:</p>
+            <ul>
+              <li>Use the <strong>sort feature</strong> to group similar domains together</li>
+              <li>Validate large lists (100+ URLs) before opening to catch errors</li>
+              <li>Use keyboard shortcuts: Ctrl+Enter to open, Ctrl+K to focus input</li>
+              <li>Save frequently used URL lists in a text file for quick access</li>
+              <li>Combine with browser extensions like "The Great Suspender" to manage memory with many tabs</li>
+            </ul>
+
+            <h2>Privacy & Security</h2>
+            <p>Our <strong>secure URL opener</strong> prioritizes your privacy:</p>
+            <ul>
+              <li>No URL data is sent to our servers</li>
+              <li>All processing happens in your browser</li>
+              <li>No registration or login required</li>
+              <li>No tracking cookies or analytics that identify personal data</li>
+              <li>HTTPS enforcement for all opened links</li>
+            </ul>
+
+            <h2>Comparing URL Opener Solutions</h2>
+            <p>While browser extensions exist, our <strong>web-based URL opener</strong> offers distinct advantages:</p>
+            <ul>
+              <li>No browser extension bloat or permissions</li>
+              <li>Works on mobile devices and tablets</li>
+              <li>No updates or maintenance required</li>
+              <li>Accessible from any computer</li>
+              <li>Compatible with corporate environments that restrict extensions</li>
+            </ul>
+
+            <h2>Common Questions About Bulk Link Opening</h2>
+            <p><strong>Is there a limit to how many URLs I can open?</strong><br>
+            While there's no strict limit, we recommend opening 20-50 URLs at once for optimal browser performance. Modern computers can handle 100+ tabs, but system resources may become constrained.</p>
+
+            <p><strong>Can I open URLs in a specific browser?</strong><br>
+            This tool opens URLs in your default browser. To use a specific browser, set it as your system default or copy the validated URLs to your preferred browser.</p>
+
+            <p><strong>Does it work with shortened URLs (bit.ly, tinyurl)?</strong><br>
+            Yes! Our <strong>link opener</strong> handles shortened URLs, redirect chains, and any valid web address.</p>
+
+            <h2>Future of URL Management Tools</h2>
+            <p>As browser technology evolves, <strong>batch URL management</strong> tools continue to improve. Features like automatic grouping, tab hibernation integration, and AI-powered URL categorization are on the horizon. Our tool remains committed to providing the fastest, simplest, and most reliable <strong>multiple link opening</strong> experience available.</p>
+
+            <h2>Conclusion</h2>
+            <p>The <strong>Multiple URL Opener</strong> is an indispensable tool for anyone working with web links regularly. From <strong>bulk opening</strong> research sources to managing <strong>multiple site monitoring</strong>, this free utility saves time and reduces frustration. Bookmark this page for quick access to the best <strong>online URL opener</strong> available, and experience the productivity boost of opening all your links with a single click.</p>
+
+            <p class="text-sm text-muted mt-6 pt-6 border-t border-subtle">
+              <strong>Related Terms:</strong> URL batch opener, link batch opener, multi site opener, tab opener tool, website opener, domain opener, hyperlink opener, bulk web opener, mass link opener, URL list processor, Chrome bulk opener, Firefox multi opener, Safari batch opener, Edge URL tool, browser productivity, web automation tool, link management, URL organizer, tab management, browser workflow, digital productivity, web research tool, SEO bulk tool, marketing automation, link checker, URL validator.
+            </p>
+          </article>
+        </div>
+
         <!-- FAQ Section -->
         <div class="mt-8 animate-slide-up" style="animation-delay: 0.4s;">
           <div class="glass-effect rounded-2xl p-6 md:p-8">
-            <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-              <i class="fas fa-question-circle text-blue-400"></i>
+            <h2 class="text-2xl font-bold text-primary mb-6 flex items-center gap-2">
+              <i class="fas fa-question-circle text-blue-500"></i>
               Frequently Asked Questions
             </h2>
             
             <div class="space-y-4">
-              <div class="faq-item bg-white/5 p-4 rounded-xl border border-white/10">
-                <button class="faq-question w-full text-left flex items-center justify-between text-white font-semibold hover:text-blue-300 transition-colors">
-                  <span>How does the Multiple URL Opener work?</span>
-                  <i class="fas fa-chevron-down transform transition-transform"></i>
+              <div class="faq-item glass-effect p-4 rounded-xl cursor-pointer transition-all duration-300 hover:bg-card">
+                <button class="faq-question w-full text-left flex items-center justify-between text-primary font-semibold">
+                  <span class="pr-4">How does the Multiple URL Opener work?</span>
+                  <i class="fas fa-chevron-down transform transition-transform duration-300 flex-shrink-0 text-muted"></i>
                 </button>
-                <div class="faq-answer hidden mt-3 text-white/80 text-sm leading-relaxed">
-                  Simply paste your URLs (one per line) into the text area and click "Open All URLs". The tool will open each link in a new browser tab instantly. Make sure your browser allows pop-ups for this site for the best experience.
+                <div class="faq-answer hidden mt-3 text-secondary text-sm leading-relaxed pl-0">
+                  Simply paste your URLs (one per line) into the text area and click "Open All URLs". The tool filters out invalid entries and opens each valid link in a new browser tab. Make sure your browser allows pop-ups for this site.
                 </div>
               </div>
 
-              <div class="faq-item bg-white/5 p-4 rounded-xl border border-white/10">
-                <button class="faq-question w-full text-left flex items-center justify-between text-white font-semibold hover:text-blue-300 transition-colors">
-                  <span>Is it completely free to use?</span>
-                  <i class="fas fa-chevron-down transform transition-transform"></i>
+              <div class="faq-item glass-effect p-4 rounded-xl cursor-pointer transition-all duration-300 hover:bg-card">
+                <button class="faq-question w-full text-left flex items-center justify-between text-primary font-semibold">
+                  <span class="pr-4">Is it completely free to use?</span>
+                  <i class="fas fa-chevron-down transform transition-transform duration-300 flex-shrink-0 text-muted"></i>
                 </button>
-                <div class="faq-answer hidden mt-3 text-white/80 text-sm leading-relaxed">
-                  Yes! The Multiple URL Opener is 100% free with no hidden charges, registration requirements, or limits. We don't collect any personal data or track your usage.
+                <div class="faq-answer hidden mt-3 text-secondary text-sm leading-relaxed pl-0">
+                  Yes! The Multiple URL Opener is 100% free with no hidden charges, registration requirements, or usage limits. We don't collect any personal data or track your browsing activity.
                 </div>
               </div>
 
-              <div class="faq-item bg-white/5 p-4 rounded-xl border border-white/10">
-                <button class="faq-question w-full text-left flex items-center justify-between text-white font-semibold hover:text-blue-300 transition-colors">
-                  <span>What if my browser blocks the pop-ups?</span>
-                  <i class="fas fa-chevron-down transform transition-transform"></i>
+              <div class="faq-item glass-effect p-4 rounded-xl cursor-pointer transition-all duration-300 hover:bg-card">
+                <button class="faq-question w-full text-left flex items-center justify-between text-primary font-semibold">
+                  <span class="pr-4">What if my browser blocks the pop-ups?</span>
+                  <i class="fas fa-chevron-down transform transition-transform duration-300 flex-shrink-0 text-muted"></i>
                 </button>
-                <div class="faq-answer hidden mt-3 text-white/80 text-sm leading-relaxed">
-                  If your browser blocks pop-ups, you'll see a permission modal. Click "Grant Permission" to automatically allow pop-ups for this site. You can also manually enable pop-ups in your browser settings.
+                <div class="faq-answer hidden mt-3 text-secondary text-sm leading-relaxed pl-0">
+                  If pop-ups are blocked, look for an icon in your browser's address bar (usually top-right) to allow them. In Chrome, click the blocked icon and select "Always allow pop-ups from this site".
                 </div>
               </div>
 
-              <div class="faq-item bg-white/5 p-4 rounded-xl border border-white/10">
-                <button class="faq-question w-full text-left flex items-center justify-between text-white font-semibold hover:text-blue-300 transition-colors">
-                  <span>How many URLs can I open at once?</span>
-                  <i class="fas fa-chevron-down transform transition-transform"></i>
+              <div class="faq-item glass-effect p-4 rounded-xl cursor-pointer transition-all duration-300 hover:bg-card">
+                <button class="faq-question w-full text-left flex items-center justify-between text-primary font-semibold">
+                  <span class="pr-4">How does URL validation work?</span>
+                  <i class="fas fa-chevron-down transform transition-transform duration-300 flex-shrink-0 text-muted"></i>
                 </button>
-                <div class="faq-answer hidden mt-3 text-white/80 text-sm leading-relaxed">
-                  While there's no strict limit, we recommend opening 20-30 URLs at once for optimal performance. Opening too many simultaneously might slow down your browser or device.
+                <div class="faq-answer hidden mt-3 text-secondary text-sm leading-relaxed pl-0">
+                  Our validation checks for proper URL format, valid domain structure, and accessible protocols (http/https). Invalid URLs are highlighted so you can fix them before opening. Empty lines and non-URL text are automatically filtered out.
+                </div>
+              </div>
+
+              <div class="faq-item glass-effect p-4 rounded-xl cursor-pointer transition-all duration-300 hover:bg-card">
+                <button class="faq-question w-full text-left flex items-center justify-between text-primary font-semibold">
+                  <span class="pr-4">How many URLs can I open at once?</span>
+                  <i class="fas fa-chevron-down transform transition-transform duration-300 flex-shrink-0 text-muted"></i>
+                </button>
+                <div class="faq-answer hidden mt-3 text-secondary text-sm leading-relaxed pl-0">
+                  While there's no strict limit, we recommend 20-50 URLs for optimal performance. Opening 100+ tabs may slow down your browser or device. The tool staggers opening by 50ms per URL to prevent browser overwhelm.
                 </div>
               </div>
             </div>
@@ -409,11 +790,20 @@
     <footer class="relative z-10 mt-12 p-6">
       <div class="max-w-7xl mx-auto">
         <div class="glass-effect rounded-2xl p-6 text-center">
-          <p class="text-white/80">
-            &copy; 2025 Developed with ❤️ by 
-            <a href="https://rakibalom.com/" target="_blank" class="text-blue-300 hover:text-blue-200 font-semibold transition-colors">
-              Rakib Alom
-            </a>
+          <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-4">
+            <div class="flex gap-4 text-sm">
+              <a href="https://rakibalom.com/" class="text-muted hover:text-primary transition-colors">Home</a>
+              <a href="https://rakibalom.com/tools/" class="text-muted hover:text-primary transition-colors">All Tools</a>
+            </div>
+            <p class="text-muted text-sm">
+              &copy; 2025 Developed with <span class="text-red-500">❤️</span> by 
+              <a href="https://rakibalom.com/" target="_blank" class="text-blue-500 hover:text-blue-600 font-semibold transition-colors">
+                Rakib Alom
+              </a>
+            </p>
+          </div>
+          <p class="text-muted/60 text-xs">
+            Free online tools for productivity and digital workflow enhancement.
           </p>
         </div>
       </div>
@@ -422,14 +812,14 @@
 
   <!-- Permission Modal -->
   <div id="permissionModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden modal-backdrop">
-    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl max-w-md w-full p-6 transform scale-95 transition-all duration-300" id="modalContent">
+    <div class="glass-effect rounded-2xl shadow-2xl max-w-md w-full p-6 transform scale-95 transition-all duration-300 bg-[var(--bg-secondary)]" id="modalContent">
       <div class="text-center">
-        <div class="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+        <div class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse">
           <i class="fas fa-exclamation-triangle text-white text-2xl"></i>
         </div>
-        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Permission Required</h3>
-        <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-          Your browser blocked some pop-ups. To open multiple URLs, please allow pop-ups for this site.
+        <h3 class="text-xl font-bold text-primary mb-3">Permission Required</h3>
+        <p class="text-secondary mb-6 leading-relaxed">
+          Your browser blocked some pop-ups. To open multiple URLs, please allow pop-ups for this site by clicking the icon in your address bar.
         </p>
         
         <div class="flex flex-col sm:flex-row gap-3">
@@ -437,7 +827,7 @@
             <i class="fas fa-unlock"></i>
             Grant Permission
           </button>
-          <button id="cancelPermissionBtn" class="flex-1 bg-gray-200 hover:bg-gray-300 dark:bg-gray-600 dark:hover:bg-gray-500 text-gray-700 dark:text-gray-200 py-3 px-6 rounded-xl font-semibold transition-all duration-300">
+          <button id="cancelPermissionBtn" class="flex-1 glass-effect hover:bg-card text-secondary hover:text-primary py-3 px-6 rounded-xl font-semibold transition-all duration-300">
             Cancel
           </button>
         </div>
@@ -447,9 +837,9 @@
 
   <!-- Success Toast -->
   <div id="successToast" class="fixed top-4 right-4 z-50 transform translate-x-full transition-all duration-300">
-    <div class="bg-green-500 text-white px-6 py-3 rounded-xl shadow-lg flex items-center gap-3">
-      <i class="fas fa-check-circle"></i>
-      <span id="toastMessage">URLs opened successfully!</span>
+    <div class="px-6 py-3 rounded-xl shadow-lg flex items-center gap-3" id="toastContent">
+      <i class="fas fa-check-circle text-xl"></i>
+      <span id="toastMessage" class="font-medium">URLs opened successfully!</span>
     </div>
   </div>
 
@@ -457,6 +847,7 @@
     // Global variables
     let urlCount = 0;
     let openedCount = 0;
+    let validatedURLs = [];
 
     // Initialize the application
     document.addEventListener('DOMContentLoaded', () => {
@@ -465,19 +856,37 @@
       initializeFAQ();
     });
 
-    // Dark mode functionality
+    // Dark mode functionality - Fixed to properly toggle
     function initializeDarkMode() {
       const modeToggle = document.getElementById('modeToggle');
-      const isDarkMode = localStorage.getItem('darkMode') === 'true';
+      const html = document.documentElement;
       
-      if (isDarkMode) {
-        document.documentElement.classList.add('dark');
-        modeToggle.checked = true;
+      // Check for saved preference, default to dark if none exists
+      const savedMode = localStorage.getItem('darkMode');
+      
+      if (savedMode === null) {
+        // Default to dark mode
+        html.classList.add('dark');
+        modeToggle.checked = false; // Unchecked = dark mode (sun icon visible)
+      } else if (savedMode === 'false') {
+        // Light mode
+        html.classList.remove('dark');
+        modeToggle.checked = true; // Checked = light mode (moon icon visible)
+      } else {
+        // Dark mode
+        html.classList.add('dark');
+        modeToggle.checked = false;
       }
 
       modeToggle.addEventListener('change', function() {
-        document.documentElement.classList.toggle('dark', this.checked);
-        localStorage.setItem('darkMode', this.checked);
+        // Toggle logic: checked = light mode, unchecked = dark mode
+        if (this.checked) {
+          html.classList.remove('dark');
+          localStorage.setItem('darkMode', 'false');
+        } else {
+          html.classList.add('dark');
+          localStorage.setItem('darkMode', 'true');
+        }
       });
     }
 
@@ -486,17 +895,27 @@
       const urlsTextarea = document.getElementById('urls');
       const openBtn = document.getElementById('openBtn');
       const clearBtn = document.getElementById('clearBtn');
+      const copyBtn = document.getElementById('copyBtn');
       const pasteBtn = document.getElementById('pasteBtn');
       const validateBtn = document.getElementById('validateBtn');
       const sortBtn = document.getElementById('sortBtn');
 
       // URL textarea event listeners
-      urlsTextarea.addEventListener('input', updateURLCount);
-      urlsTextarea.addEventListener('paste', () => setTimeout(updateURLCount, 100));
+      urlsTextarea.addEventListener('input', () => {
+        updateURLCount();
+        clearValidationResults();
+      });
+      urlsTextarea.addEventListener('paste', () => {
+        setTimeout(() => {
+          updateURLCount();
+          clearValidationResults();
+        }, 100);
+      });
 
       // Button event listeners
       openBtn.addEventListener('click', openAllURLs);
       clearBtn.addEventListener('click', clearAllURLs);
+      copyBtn.addEventListener('click', copyAllText);
       pasteBtn.addEventListener('click', pasteFromClipboard);
       validateBtn.addEventListener('click', validateURLs);
       sortBtn.addEventListener('click', sortURLs);
@@ -506,10 +925,16 @@
       document.getElementById('cancelPermissionBtn').addEventListener('click', closePermissionModal);
     }
 
-    // Update URL count
+    // Clear validation results
+    function clearValidationResults() {
+      document.getElementById('validationCard').classList.add('hidden');
+      document.getElementById('validationResults').innerHTML = '';
+      validatedURLs = [];
+    }
+
+    // Update URL count with intelligent filtering
     function updateURLCount() {
-      const textarea = document.getElementById('urls');
-      const urls = getURLsFromTextarea();
+      const urls = getValidURLsFromTextarea();
       urlCount = urls.length;
       
       document.getElementById('urlCount').textContent = urlCount;
@@ -521,25 +946,70 @@
       setTimeout(() => counter.classList.remove('success-animation'), 600);
     }
 
-    // Get URLs from textarea
-    function getURLsFromTextarea() {
+    // Get valid URLs from textarea (filters out non-URLs)
+    function getValidURLsFromTextarea() {
       const textarea = document.getElementById('urls');
-      return textarea.value.split('\n')
-        .map(url => url.trim())
-        .filter(url => url !== '' && !url.startsWith('#'));
+      const lines = textarea.value.split('\n');
+      
+      return lines
+        .map(line => line.trim())
+        .filter(line => {
+          if (!line || line.startsWith('#') || line.startsWith('//')) return false;
+          return isValidURLFormat(line);
+        });
+    }
+
+    // Improved URL format validation
+    function isValidURLFormat(string) {
+      if (!string.includes('.') && !string.match(/^https?:\/\//)) return false;
+      
+      const nonURLPatterns = [
+        /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+        /^[0-9+\-\s()]+$/,
+        /^(file|ftp|data|javascript|vbscript):/i,
+        /^[\d\s\-\.]+\s*$/,
+        /^\s*$/,
+      ];
+      
+      for (let pattern of nonURLPatterns) {
+        if (pattern.test(string)) return false;
+      }
+      
+      if (!string.includes('.') && !string.includes('localhost')) return false;
+      
+      const urlPattern = /^(https?:\/\/)?([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}(\/[^\s]*)?$/i;
+      const localhostPattern = /^(https?:\/\/)?localhost(:\d+)?(\/[^\s]*)?$/i;
+      const ipPattern = /^(https?:\/\/)?(\d{1,3}\.){3}\d{1,3}(:\d+)?(\/[^\s]*)?$/;
+      
+      return urlPattern.test(string) || localhostPattern.test(string) || ipPattern.test(string);
+    }
+
+    // Strict URL validation
+    function strictValidateURL(string) {
+      try {
+        let url = string;
+        if (!url.match(/^https?:\/\//)) {
+          url = 'https://' + url;
+        }
+        new URL(url);
+        return true;
+      } catch {
+        return false;
+      }
     }
 
     // Open all URLs
     function openAllURLs() {
-      const urls = getURLsFromTextarea();
+      const urls = getValidURLsFromTextarea();
       
       if (urls.length === 0) {
-        showToast('Please enter some URLs first!', 'warning');
+        showToast('No valid URLs found! Please check your input.', 'error');
         return;
       }
 
       let blockedCount = 0;
       let successCount = 0;
+      let processedCount = 0;
 
       urls.forEach((url, index) => {
         setTimeout(() => {
@@ -553,8 +1023,9 @@
               successCount++;
             }
             
-            // Update opened count
-            if (index === urls.length - 1) {
+            processedCount++;
+            
+            if (processedCount === urls.length) {
               setTimeout(() => {
                 openedCount += successCount;
                 document.getElementById('openedCount').textContent = openedCount;
@@ -563,18 +1034,19 @@
                   showPermissionModal();
                 } else {
                   showToast(`${successCount} URLs opened successfully!`, 'success');
-                  displayURLList(urls);
+                  displayURLList(urls, 'success');
                 }
               }, 100);
             }
           } catch (error) {
+            processedCount++;
             console.error('Error opening URL:', url, error);
           }
-        }, index * 50); // Staggered opening to prevent browser overwhelm
+        }, index * 50);
       });
     }
 
-    // Format URL to ensure it has protocol
+    // Format URL
     function formatURL(url) {
       if (!url.match(/^https?:\/\//)) {
         return 'https://' + url;
@@ -582,42 +1054,112 @@
       return url;
     }
 
-    // Validate URLs
+    // Enhanced URL validation
     function validateURLs() {
-      const urls = getURLsFromTextarea();
+      const textarea = document.getElementById('urls');
+      const allLines = textarea.value.split('\n');
       
-      if (urls.length === 0) {
+      if (textarea.value.trim().length === 0) {
         showToast('Please enter some URLs first!', 'warning');
         return;
       }
 
+      const results = [];
       const validURLs = [];
       const invalidURLs = [];
 
-      urls.forEach(url => {
-        try {
-          const formattedURL = formatURL(url);
-          new URL(formattedURL);
-          validURLs.push(url);
-        } catch {
-          invalidURLs.push(url);
+      allLines.forEach((line, index) => {
+        const trimmed = line.trim();
+        if (!trimmed) return;
+        
+        const isValid = strictValidateURL(trimmed);
+        const looksLikeURL = isValidURLFormat(trimmed);
+        
+        if (isValid) {
+          validURLs.push(trimmed);
+          results.push({
+            line: index + 1,
+            url: trimmed,
+            status: 'valid',
+            message: 'Valid URL'
+          });
+        } else if (looksLikeURL) {
+          invalidURLs.push(trimmed);
+          results.push({
+            line: index + 1,
+            url: trimmed,
+            status: 'warning',
+            message: 'Invalid format or unreachable'
+          });
+        } else {
+          invalidURLs.push(trimmed);
+          results.push({
+            line: index + 1,
+            url: trimmed,
+            status: 'invalid',
+            message: 'Not a valid URL format'
+          });
         }
       });
 
+      displayValidationResults(results, validURLs.length, invalidURLs.length);
+      validatedURLs = validURLs;
+      
       const message = `✅ Valid: ${validURLs.length}, ❌ Invalid: ${invalidURLs.length}`;
       showToast(message, invalidURLs.length > 0 ? 'warning' : 'success');
-      
-      if (invalidURLs.length > 0) {
-        console.log('Invalid URLs:', invalidURLs);
-      }
     }
 
-    // Sort URLs alphabetically
+    // Display validation results
+    function displayValidationResults(results, validCount, invalidCount) {
+      const card = document.getElementById('validationCard');
+      const container = document.getElementById('validationResults');
+      
+      container.innerHTML = '';
+      
+      if (results.length === 0) {
+        card.classList.add('hidden');
+        return;
+      }
+      
+      results.forEach(result => {
+        const item = document.createElement('div');
+        const isDark = document.documentElement.classList.contains('dark');
+        const statusColor = result.status === 'valid' ? (isDark ? 'text-green-400' : 'text-green-600') : 
+                           result.status === 'warning' ? (isDark ? 'text-yellow-400' : 'text-yellow-600') : (isDark ? 'text-red-400' : 'text-red-600');
+        const borderColor = result.status === 'valid' ? 'border-green-500/30' : 
+                           result.status === 'warning' ? 'border-yellow-500/30' : 'border-red-500/30';
+        const bgColor = result.status === 'valid' ? 'bg-green-500/10' : 
+                       result.status === 'warning' ? 'bg-yellow-500/10' : 'bg-red-500/10';
+        
+        item.className = `flex items-center justify-between p-2 rounded-lg border ${borderColor} ${bgColor}`;
+        item.innerHTML = `
+          <div class="flex items-center gap-2 flex-1 min-w-0">
+            <i class="fas ${result.status === 'valid' ? 'fa-check-circle' : result.status === 'warning' ? 'fa-exclamation-circle' : 'fa-times-circle'} ${statusColor}"></i>
+            <span class="text-secondary text-xs truncate flex-1">${result.url}</span>
+          </div>
+          <span class="text-muted text-xs ml-2">Line ${result.line}</span>
+        `;
+        container.appendChild(item);
+      });
+      
+      const summary = document.createElement('div');
+      summary.className = 'mt-3 pt-3 border-t border-subtle text-center';
+      summary.innerHTML = `
+        <span class="${validCount > 0 ? (document.documentElement.classList.contains('dark') ? 'text-green-400' : 'text-green-600') : 'text-muted'} text-sm font-semibold">${validCount} Valid</span>
+        <span class="text-muted mx-2">|</span>
+        <span class="${invalidCount > 0 ? (document.documentElement.classList.contains('dark') ? 'text-red-400' : 'text-red-600') : 'text-muted'} text-sm font-semibold">${invalidCount} Invalid</span>
+      `;
+      container.appendChild(summary);
+      
+      card.classList.remove('hidden');
+    }
+
+    // Sort URLs
     function sortURLs() {
-      const urls = getURLsFromTextarea();
+      const urls = getValidURLsFromTextarea();
       
       if (urls.length === 0) {
-        showToast('Please enter some URLs first!', 'warning');
+        showToast('No valid URLs to sort!', 'warning');
         return;
       }
 
@@ -629,12 +1171,35 @@
 
     // Clear all URLs
     function clearAllURLs() {
-      document.getElementById('urls').value = '';
-      document.getElementById('urlList').innerHTML = '';
-      document.getElementById('urlListContainer').classList.add('hidden');
-      urlCount = 0;
-      updateURLCount();
-      showToast('All URLs cleared!', 'success');
+      if (document.getElementById('urls').value.length > 0) {
+        if (confirm('Are you sure you want to clear all URLs?')) {
+          document.getElementById('urls').value = '';
+          document.getElementById('urlList').innerHTML = '';
+          document.getElementById('urlListContainer').classList.add('hidden');
+          clearValidationResults();
+          urlCount = 0;
+          updateURLCount();
+          showToast('All URLs cleared!', 'success');
+        }
+      }
+    }
+
+    // Copy all text
+    async function copyAllText() {
+      const textarea = document.getElementById('urls');
+      if (textarea.value.trim().length === 0) {
+        showToast('Nothing to copy!', 'warning');
+        return;
+      }
+      
+      try {
+        await navigator.clipboard.writeText(textarea.value);
+        showToast('All text copied to clipboard!', 'success');
+      } catch (error) {
+        textarea.select();
+        document.execCommand('copy');
+        showToast('Text copied!', 'success');
+      }
     }
 
     // Paste from clipboard
@@ -643,35 +1208,45 @@
         const text = await navigator.clipboard.readText();
         const textarea = document.getElementById('urls');
         const currentValue = textarea.value;
-        textarea.value = currentValue + (currentValue ? '\n' : '') + text;
+        const cursorPos = textarea.selectionStart;
+        const before = currentValue.substring(0, cursorPos);
+        const after = currentValue.substring(cursorPos);
+        const separator = (before && !before.endsWith('\n') && text && !text.startsWith('\n')) ? '\n' : '';
+        textarea.value = before + separator + text + after;
+        
         updateURLCount();
-        showToast('URLs pasted from clipboard!', 'success');
+        clearValidationResults();
+        showToast('Content pasted from clipboard!', 'success');
       } catch (error) {
-        showToast('Failed to access clipboard. Please paste manually.', 'warning');
+        showToast('Failed to access clipboard. Please paste manually (Ctrl+V).', 'warning');
       }
     }
 
     // Display URL list
-    function displayURLList(urls) {
+    function displayURLList(urls, status = 'neutral') {
       const urlList = document.getElementById('urlList');
       const urlListContainer = document.getElementById('urlListContainer');
+      const isDark = document.documentElement.classList.contains('dark');
       
       urlList.innerHTML = '';
       
       urls.forEach((url, index) => {
         const urlItem = document.createElement('div');
-        urlItem.className = 'flex items-center justify-between p-2 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition-all duration-200';
+        const statusColor = status === 'success' ? (isDark ? 'text-green-400' : 'text-green-600') : (isDark ? 'text-blue-400' : 'text-blue-600');
+        const statusBg = status === 'success' ? 'bg-green-500/10' : 'bg-card';
+        
+        urlItem.className = `flex items-center justify-between p-2 ${statusBg} rounded-lg border border-subtle hover:border-blue-500/30 transition-all duration-200`;
         
         urlItem.innerHTML = `
           <div class="flex items-center gap-3 flex-1 min-w-0">
-            <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+            <div class="w-6 h-6 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
               <i class="fas fa-check text-white text-xs"></i>
             </div>
-            <a href="${formatURL(url)}" target="_blank" class="text-blue-300 hover:text-blue-200 text-sm truncate transition-colors">
+            <a href="${formatURL(url)}" target="_blank" class="${statusColor} hover:text-primary text-sm truncate transition-colors" title="${url}">
               ${url}
             </a>
           </div>
-          <div class="text-white/50 text-xs">#${index + 1}</div>
+          <div class="text-muted text-xs ml-2">#${index + 1}</div>
         `;
         
         urlList.appendChild(urlItem);
@@ -702,19 +1277,16 @@
       }, 200);
     }
 
-    // Grant permission (open browser settings)
+    // Grant permission
     function grantPermission() {
-      // For modern browsers, we can't programmatically change pop-up settings
-      // But we can provide instructions and try to detect if permission was granted
-      showToast('Please allow pop-ups in your browser settings for this site', 'info');
+      showToast('Please allow pop-ups in your browser settings', 'info');
       closePermissionModal();
       
-      // Try opening a test popup to check if permission was granted
       setTimeout(() => {
         const testPopup = window.open('about:blank', 'test', 'width=1,height=1');
         if (testPopup) {
           testPopup.close();
-          showToast('Pop-ups are now allowed! Try opening URLs again.', 'success');
+          showToast('Pop-ups are now allowed!', 'success');
         }
       }, 1000);
     }
@@ -722,30 +1294,29 @@
     // Show toast notification
     function showToast(message, type = 'success') {
       const toast = document.getElementById('successToast');
+      const toastContent = document.getElementById('toastContent');
       const toastMessage = document.getElementById('toastMessage');
-      const toastElement = toast.querySelector('div');
+      const isDark = document.documentElement.classList.contains('dark');
       
-      // Set message
       toastMessage.textContent = message;
       
-      // Set color based on type
-      toastElement.className = `px-6 py-3 rounded-xl shadow-lg flex items-center gap-3 ${
-        type === 'success' ? 'bg-green-500 text-white' :
-        type === 'warning' ? 'bg-yellow-500 text-white' :
-        type === 'info' ? 'bg-blue-500 text-white' :
-        'bg-red-500 text-white'
-      }`;
+      const styles = {
+        success: isDark ? 'bg-green-600 text-white' : 'bg-green-500 text-white',
+        warning: isDark ? 'bg-yellow-600 text-white' : 'bg-yellow-500 text-white',
+        error: isDark ? 'bg-red-600 text-white' : 'bg-red-500 text-white',
+        info: isDark ? 'bg-blue-600 text-white' : 'bg-blue-500 text-white'
+      };
       
-      // Show toast
+      toastContent.className = `px-6 py-3 rounded-xl shadow-lg flex items-center gap-3 ${styles[type] || styles.success}`;
+      
       toast.style.transform = 'translateX(0)';
       
-      // Hide after 3 seconds
       setTimeout(() => {
-        toast.style.transform = 'translateX(100%)';
+        toast.style.transform = 'translateX(120%)';
       }, 3000);
     }
 
-    // Initialize FAQ functionality
+    // Initialize FAQ
     function initializeFAQ() {
       const faqItems = document.querySelectorAll('.faq-item');
       
@@ -757,7 +1328,6 @@
         question.addEventListener('click', () => {
           const isOpen = !answer.classList.contains('hidden');
           
-          // Close all other FAQ items
           faqItems.forEach(otherItem => {
             if (otherItem !== item) {
               otherItem.querySelector('.faq-answer').classList.add('hidden');
@@ -765,7 +1335,6 @@
             }
           });
           
-          // Toggle current item
           if (isOpen) {
             answer.classList.add('hidden');
             chevron.style.transform = 'rotate(0deg)';
@@ -785,13 +1354,11 @@
             e.preventDefault();
             openAllURLs();
             break;
-          case 'k':
-            e.preventDefault();
-            document.getElementById('urls').focus();
-            break;
-          case 'l':
-            e.preventDefault();
-            clearAllURLs();
+          case 'v':
+            if (document.activeElement.id !== 'urls') {
+              e.preventDefault();
+              pasteFromClipboard();
+            }
             break;
         }
       }
@@ -801,10 +1368,11 @@
       }
     });
 
-    // Add some visual feedback for button clicks
+    // Add ripple effect
     document.querySelectorAll('button').forEach(button => {
       button.addEventListener('click', function(e) {
-        // Create ripple effect
+        if (this.disabled) return;
+        
         const ripple = document.createElement('div');
         const rect = this.getBoundingClientRect();
         const size = Math.max(rect.width, rect.height);
@@ -846,16 +1414,16 @@
     `;
     document.head.appendChild(style);
 
-    // Performance optimization: Debounce URL counting
+    // Debounce URL counting
     let countDebounceTimer;
     const originalUpdateURLCount = updateURLCount;
     
     updateURLCount = function() {
       clearTimeout(countDebounceTimer);
-      countDebounceTimer = setTimeout(originalUpdateURLCount, 150);
+      countDebounceTimer = setTimeout(originalUpdateURLCount, 100);
     };
 
-    // Add loading states for buttons
+    // Set button loading states
     function setButtonLoading(buttonId, loading = true) {
       const button = document.getElementById(buttonId);
       const icon = button.querySelector('i');
@@ -864,8 +1432,8 @@
         icon.className = 'fas fa-spinner fa-spin';
         button.disabled = true;
         button.style.opacity = '0.7';
+        button.style.cursor = 'not-allowed';
       } else {
-        // Restore original icon based on button
         const iconMap = {
           'openBtn': 'fas fa-external-link-alt',
           'validateBtn': 'fas fa-check-circle',
@@ -875,10 +1443,11 @@
         icon.className = iconMap[buttonId] || 'fas fa-check';
         button.disabled = false;
         button.style.opacity = '1';
+        button.style.cursor = 'pointer';
       }
     }
 
-    // Enhanced URL validation with better error handling
+    // Enhanced validation with loading state
     const originalValidateURLs = validateURLs;
     validateURLs = function() {
       setButtonLoading('validateBtn', true);
@@ -886,23 +1455,23 @@
       setTimeout(() => {
         originalValidateURLs();
         setButtonLoading('validateBtn', false);
-      }, 500);
+      }, 300);
     };
 
-    // Auto-save URLs to localStorage
+    // Auto-save URLs
     function saveURLsToStorage() {
       const urls = document.getElementById('urls').value;
       try {
-        localStorage.setItem('savedURLs', urls);
+        localStorage.setItem('savedURLs_v2', urls);
       } catch (e) {
         console.warn('Could not save URLs to localStorage:', e);
       }
     }
 
-    // Load URLs from localStorage
+    // Load URLs from storage
     function loadURLsFromStorage() {
       try {
-        const savedURLs = localStorage.getItem('savedURLs');
+        const savedURLs = localStorage.getItem('savedURLs_v2');
         if (savedURLs) {
           document.getElementById('urls').value = savedURLs;
           updateURLCount();
@@ -912,13 +1481,13 @@
       }
     }
 
-    // Initialize auto-save functionality
+    // Initialize auto-save
     document.getElementById('urls').addEventListener('input', () => {
       clearTimeout(window.saveTimer);
       window.saveTimer = setTimeout(saveURLsToStorage, 1000);
     });
 
-    // Load saved URLs on page load
+    // Load saved URLs
     loadURLsFromStorage();
   </script>
 </body>
