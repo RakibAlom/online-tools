@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitemap URL Extractor | Extract URLs from XML Sitemaps</title>
+    <meta name="title" content="Sitemap URL Extractor | Extract URLs from XML Sitemaps">
+    <meta name="description" content="Free online tool to extract all URLs from any sitemap.xml file. Supports nested sitemaps, bulk export, and detailed analysis.">
+    <meta name="author" content="Rakib Alom">
+    <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+    <link rel="canonical" href="https://rakibalom.com/tools/sitemap-url-extractor/" />
+    <link rel="icon" href="https://rakibalom.com/wp-content/uploads/2025/12/rakibalom-favicon.png" sizes="32x32" />
+    <link rel="icon" href="https://rakibalom.com/wp-content/uploads/2025/12/rakibalom-favicon.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://rakibalom.com/wp-content/uploads/2025/12/rakibalom-favicon.png" />
+    <meta name="msapplication-TileImage" content="https://rakibalom.com/wp-content/uploads/2025/12/rakibalom-favicon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+   
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 25%, #16213e 50%, #1a1a2e 75%, #0f0f1a 100%);
+            background-attachment: fixed;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(ellipse at 20% 20%, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(139, 92, 246, 0.06) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(59, 130, 246, 0.04) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 
+                0 8px 32px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        }
+
+        .glass-card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .glass-card-hover:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.12);
+            transform: translateY(-4px);
+            box-shadow: 
+                0 12px 40px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.08);
+        }
+
+        .glass-input {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .glass-input:focus {
+            border-color: rgba(99, 102, 241, 0.5);
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.15);
+            outline: none;
+        }
+
+        .glass-button {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.8) 0%, rgba(139, 92, 246, 0.8) 100%);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glass-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .glass-button:hover::before {
+            left: 100%;
+        }
+
+        .glass-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+        }
+
+        .glass-button:active {
+            transform: translateY(0);
+        }
+
+        .glass-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .glass-button:disabled:hover::before {
+            left: -100%;
+        }
+
+        .secondary-button {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .secondary-button:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .url-item {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.2s ease;
+        }
+
+        .url-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        .scrollbar-custom::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .scrollbar-custom::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+        }
+
+        .scrollbar-custom::-webkit-scrollbar-thumb {
+            background: rgba(99, 102, 241, 0.5);
+            border-radius: 4px;
+        }
+
+        .scrollbar-custom::-webkit-scrollbar-thumb:hover {
+            background: rgba(99, 102, 241, 0.7);
+        }
+
+        .loader {
+            width: 48px;
+            height: 48px;
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            border-top-color: rgba(99, 102, 241, 0.8);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        .fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .pulse-dot {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .progress-bar {
+            background: linear-gradient(90deg, rgba(99, 102, 241, 0.8), rgba(139, 92, 246, 0.8));
+            transition: width 0.3s ease;
+        }
+
+        .tag {
+            background: rgba(99, 102, 241, 0.2);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+        }
+
+        .floating-shapes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(99, 102, 241, 0.03);
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .shape:nth-child(1) {
+            width: 300px;
+            height: 300px;
+            top: 10%;
+            left: -5%;
+            animation-delay: 0s;
+        }
+
+        .shape:nth-child(2) {
+            width: 200px;
+            height: 200px;
+            top: 60%;
+            right: -3%;
+            animation-delay: -5s;
+        }
+
+        .shape:nth-child(3) {
+            width: 150px;
+            height: 150px;
+            bottom: 10%;
+            left: 20%;
+            animation-delay: -10s;
+        }
+
+        .shape:nth-child(4) {
+            width: 250px;
+            height: 250px;
+            top: 40%;
+            left: 50%;
+            animation-delay: -15s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(20px, -20px) rotate(5deg); }
+            50% { transform: translate(0, -30px) rotate(0deg); }
+            75% { transform: translate(-20px, -20px) rotate(-5deg); }
+        }
+
+        .tooltip {
+            position: relative;
+        }
+
+        .tooltip::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 6px 12px;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            font-size: 12px;
+            border-radius: 6px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease;
+            z-index: 100;
+        }
+
+        .tooltip:hover::after {
+            opacity: 1;
+            visibility: visible;
+            bottom: calc(100% + 8px);
+        }
+
+        .copy-notification {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(34, 197, 94, 0.9);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .copy-notification.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #818cf8 0%, #a78bfa 50%, #c4b5fd 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .feature-icon {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+        }
+
+        .step-number {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.8) 0%, rgba(139, 92, 246, 0.8) 100%);
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+        }
+
+        .glow-effect {
+            position: relative;
+        }
+
+        .glow-effect::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150%;
+            height: 150%;
+            background: radial-gradient(ellipse, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .accordion-content.open {
+            max-height: 500px;
+        }
+
+        .accordion-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-icon.rotate {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="font-inter text-gray-200">
+    <!-- Floating Background Shapes -->
+    <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <!-- Copy Notification -->
+    <div id="copyNotification" class="copy-notification">
+        <span id="notificationText">Copied to clipboard!</span>
+    </div>
+
+    <!-- Main Container -->
+    <div class="relative z-10 min-h-screen">
+        
+        <!-- Hero Section -->
+        <section class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-5xl mx-auto text-center">
+                <!-- Badge -->
+                <div class="fade-in-up inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-6" style="animation-delay: 0.1s;">
+                    <span class="w-2 h-2 rounded-full bg-green-400 pulse-dot"></span>
+                    <span class="text-sm text-gray-400">Free Online Tool • No Registration Required</span>
+                </div>
+
+                <!-- Main Title -->
+                <h1 class="fade-in-up text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6" style="animation-delay: 0.2s;">
+                    Sitemap <span class="gradient-text">URL Extractor</span>
+                </h1>
+
+                <!-- Description -->
+                <p class="fade-in-up text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto mb-8 leading-relaxed" style="animation-delay: 0.3s;">
+                    Instantly extract, analyze, and export all URLs from any XML sitemap. 
+                    Our powerful tool handles complex nested sitemaps, giving you complete visibility 
+                    into any website's structure in seconds.
+                </p>
+
+                <!-- Stats Row -->
+                <div class="fade-in-up flex flex-wrap justify-center gap-8 sm:gap-12 mb-12" style="animation-delay: 0.4s;">
+                    <div class="text-center">
+                        <p class="text-3xl sm:text-4xl font-bold text-white">100%</p>
+                        <p class="text-sm text-gray-500">Free to Use</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-3xl sm:text-4xl font-bold text-white">∞</p>
+                        <p class="text-sm text-gray-500">Unlimited URLs</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-3xl sm:text-4xl font-bold text-white">3+</p>
+                        <p class="text-sm text-gray-500">Export Formats</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Tool Section -->
+        <section class="px-4 sm:px-6 lg:px-8 pb-16">
+            <div class="max-w-5xl mx-auto">
+                <!-- Main Input Card -->
+                <div class="glass-card rounded-2xl p-6 sm:p-8 mb-8 fade-in-up glow-effect" style="animation-delay: 0.5s;">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl feature-icon flex items-center justify-center">
+                            <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h2 class="text-xl font-semibold text-white">Enter Sitemap URL</h2>
+                            <p class="text-sm text-gray-500">Paste your sitemap.xml link below to start extraction</p>
+                        </div>
+                    </div>
+
+                    <form id="sitemapForm" class="space-y-6">
+                        <div>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+                                    </svg>
+                                </div>
+                                <input 
+                                    type="url" 
+                                    id="sitemapUrl" 
+                                    placeholder="https://example.com/sitemap.xml"
+                                    class="glass-input w-full pl-12 pr-4 py-4 rounded-xl text-white placeholder-gray-500 text-base"
+                                    required
+                                >
+                            </div>
+                            <div class="flex flex-wrap gap-2 mt-3">
+                                <span class="text-xs text-gray-500">Try examples:</span>
+                                <button type="button" onclick="document.getElementById('sitemapUrl').value='https://www.sitemaps.org/sitemap.xml'" class="text-xs text-indigo-400 hover:text-indigo-300 transition-colors">sitemaps.org</button>
+                                <span class="text-gray-600">•</span>
+                                <button type="button" onclick="document.getElementById('sitemapUrl').value='https://wordpress.org/sitemap.xml'" class="text-xs text-indigo-400 hover:text-indigo-300 transition-colors">wordpress.org</button>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button 
+                                type="submit" 
+                                id="extractBtn"
+                                class="glass-button flex-1 py-4 px-6 rounded-xl text-white font-semibold flex items-center justify-center gap-2"
+                            >
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                                </svg>
+                                <span id="extractBtnText">Extract URLs</span>
+                            </button>
+                            <button 
+                                type="button" 
+                                id="clearBtn"
+                                class="secondary-button py-4 px-6 rounded-xl text-gray-300 font-medium flex items-center justify-center gap-2"
+                            >
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+                                </svg>
+                                Clear
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Loading State -->
+                <div id="loadingState" class="hidden glass-card rounded-2xl p-8 mb-8 text-center">
+                    <div class="loader mx-auto mb-4"></div>
+                    <p class="text-gray-300 font-medium" id="loadingText">Fetching sitemap...</p>
+                    <p class="text-gray-500 text-sm mt-2" id="loadingSubtext">This may take a moment for large sitemaps</p>
+                    <div class="mt-4 h-2 bg-gray-800 rounded-full overflow-hidden max-w-md mx-auto">
+                        <div id="progressBar" class="progress-bar h-full rounded-full" style="width: 0%"></div>
+                    </div>
+                    <p class="text-gray-500 text-xs mt-2" id="progressText">0 URLs found</p>
+                </div>
+
+                <!-- Error State -->
+                <div id="errorState" class="hidden glass-card rounded-2xl p-6 mb-8 border-red-500/30">
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-full bg-red-500/10 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-red-400 font-semibold">Error Occurred</h3>
+                            <p id="errorMessage" class="text-gray-400 text-sm mt-1"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results Section -->
+                <div id="resultsSection" class="hidden space-y-6 fade-in">
+                    <!-- Statistics Cards -->
+                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="stat-card rounded-xl p-4 sm:p-5">
+                            <div class="flex items-center gap-3 mb-2">
+                                <div class="w-8 h-8 rounded-lg bg-indigo-500/10 flex items-center justify-center">
+                                    <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-gray-400 text-xs sm:text-sm">Total URLs</span>
+                            </div>
+                            <p class="text-2xl sm:text-3xl font-bold text-white" id="totalUrls">0</p>
+                        </div>
+
+                        <div class="stat-card rounded-xl p-4 sm:p-5">
+                            <div class="flex items-center gap-3 mb-2">
+                                <div class="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center">
+                                    <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-gray-400 text-xs sm:text-sm">Sitemaps</span>
+                            </div>
+                            <p class="text-2xl sm:text-3xl font-bold text-white" id="totalSitemaps">1</p>
+                        </div>
+
+                        <div class="stat-card rounded-xl p-4 sm:p-5">
+                            <div class="flex items-center gap-3 mb-2">
+                                <div class="w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center">
+                                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-gray-400 text-xs sm:text-sm">Status</span>
+                            </div>
+                            <p class="text-lg sm:text-xl font-bold text-green-400" id="statusText">Success</p>
+                        </div>
+
+                        <div class="stat-card rounded-xl p-4 sm:p-5">
+                            <div class="flex items-center gap-3 mb-2">
+                                <div class="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center">
+                                    <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-gray-400 text-xs sm:text-sm">Time Taken</span>
+                            </div>
+                            <p class="text-lg sm:text-xl font-bold text-white" id="timeTaken">0s</p>
+                        </div>
+                    </div>
+
+                    <!-- Sitemap Info -->
+                    <div class="glass-card rounded-2xl p-6">
+                        <h3 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                            <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            Sitemap Information
+                        </h3>
+                        <div class="grid gap-4 text-sm">
+                            <div class="flex flex-col sm:flex-row sm:items-center gap-2">
+                                <span class="text-gray-400 min-w-32">Source URL:</span>
+                                <code id="sourceUrl" class="text-indigo-400 bg-black/30 px-3 py-1 rounded-lg break-all"></code>
+                            </div>
+                            <div class="flex flex-col sm:flex-row sm:items-center gap-2">
+                                <span class="text-gray-400 min-w-32">Type:</span>
+                                <span id="sitemapType" class="tag px-3 py-1 rounded-lg text-indigo-300"></span>
+                            </div>
+                            <div id="subSitemapsInfo" class="hidden flex-col sm:flex-row sm:items-start gap-2">
+                                <span class="text-gray-400 min-w-32">Sub-sitemaps:</span>
+                                <div id="subSitemapsList" class="flex flex-wrap gap-2"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex flex-wrap gap-3">
+                        <button 
+                            id="copyAllBtn"
+                            class="secondary-button py-3 px-5 rounded-xl text-gray-300 font-medium flex items-center gap-2 text-sm"
+                        >
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path>
+                            </svg>
+                            Copy All URLs
+                        </button>
+                        <button 
+                            id="downloadCsvBtn"
+                            class="secondary-button py-3 px-5 rounded-xl text-gray-300 font-medium flex items-center gap-2 text-sm"
+                        >
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            Download CSV
+                        </button>
+                        <button 
+                            id="downloadTxtBtn"
+                            class="secondary-button py-3 px-5 rounded-xl text-gray-300 font-medium flex items-center gap-2 text-sm"
+                        >
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            Download TXT
+                        </button>
+                    </div>
+
+                    <!-- Search and Filter -->
+                    <div class="glass-card rounded-2xl p-6">
+                        <div class="flex flex-col sm:flex-row gap-4 mb-4">
+                            <div class="relative flex-1">
+                                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                    <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                    </svg>
+                                </div>
+                                <input 
+                                    type="text" 
+                                    id="searchInput" 
+                                    placeholder="Search URLs..."
+                                    class="glass-input w-full pl-10 pr-4 py-3 rounded-xl text-white placeholder-gray-500 text-sm"
+                                >
+                            </div>
+                            <select id="filterSelect" class="glass-input py-3 px-4 rounded-xl text-white text-sm min-w-40">
+                                <option value="all">All URLs</option>
+                                <option value="page">Pages only</option>
+                                <option value="image">Images</option>
+                                <option value="video">Videos</option>
+                            </select>
+                        </div>
+                        <p class="text-gray-400 text-sm">
+                            Showing <span id="showingCount" class="text-white font-medium">0</span> of <span id="totalCount" class="text-white font-medium">0</span> URLs
+                        </p>
+                    </div>
+
+                    <!-- URL List -->
+                    <div class="glass-card rounded-2xl p-6">
+                        <h3 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                            <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
+                            </svg>
+                            URL List
+                        </h3>
+                        <div id="urlList" class="space-y-2 max-h-96 overflow-y-auto scrollbar-custom pr-2">
+                            <!-- URLs will be rendered here -->
+                        </div>
+                        <div id="loadMoreContainer" class="hidden mt-4 text-center">
+                            <button id="loadMoreBtn" class="secondary-button py-2 px-6 rounded-lg text-gray-300 text-sm">
+                                Load More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-16 px-4 sm:px-6 lg:px-8 border-t border-white/5">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Powerful Features</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">
+                        Everything you need to analyze and extract URLs from any XML sitemap
+                    </p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Feature 1 -->
+                    <div class="glass-card glass-card-hover rounded-2xl p-6">
+                        <div class="w-12 h-12 rounded-xl feature-icon flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Nested Sitemap Support</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Automatically detects and crawls sitemap index files with multiple sub-sitemaps, handling any level of nesting.
+                        </p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="glass-card glass-card-hover rounded-2xl p-6">
+                        <div class="w-12 h-12 rounded-xl feature-icon flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Lightning Fast</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Optimized for speed with parallel processing. Extract thousands of URLs in seconds with real-time progress updates.
+                        </p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="glass-card glass-card-hover rounded-2xl p-6">
+                        <div class="w-12 h-12 rounded-xl feature-icon flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Multiple Export Formats</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Export your extracted URLs as CSV with full metadata, plain TXT files, or copy directly to clipboard.
+                        </p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="glass-card glass-card-hover rounded-2xl p-6">
+                        <div class="w-12 h-12 rounded-xl feature-icon flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Smart Filtering</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Search through URLs and filter by type - pages, images, videos, or documents. Find exactly what you need.
+                        </p>
+                    </div>
+
+                    <!-- Feature 5 -->
+                    <div class="glass-card glass-card-hover rounded-2xl p-6">
+                        <div class="w-12 h-12 rounded-xl feature-icon flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Detailed Analytics</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Get comprehensive statistics including total URLs, sitemap count, processing time, and metadata analysis.
+                        </p>
+                    </div>
+
+                    <!-- Feature 6 -->
+                    <div class="glass-card glass-card-hover rounded-2xl p-6">
+                        <div class="w-12 h-12 rounded-xl feature-icon flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Privacy Focused</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            All processing happens in your browser. No data is stored on any server. Your sitemaps stay private.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="py-16 px-4 sm:px-6 lg:px-8 border-t border-white/5">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">How It Works</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">
+                        Extract all URLs from any sitemap in just three simple steps
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Step 1 -->
+                    <div class="text-center">
+                        <div class="w-14 h-14 step-number rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">
+                            1
+                        </div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Paste Sitemap URL</h3>
+                        <p class="text-gray-400 text-sm">
+                            Enter the full URL of any sitemap.xml file. Works with any website's sitemap.
+                        </p>
+                    </div>
+
+                    <!-- Connector -->
+                    <div class="hidden md:flex items-center justify-center">
+                        <svg class="w-12 h-12 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="text-center md:col-start-2 md:row-start-1">
+                        <div class="w-14 h-14 step-number rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">
+                            2
+                        </div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Click Extract</h3>
+                        <p class="text-gray-400 text-sm">
+                            Our tool fetches and parses the sitemap, including all nested sub-sitemaps automatically.
+                        </p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="text-center md:col-start-3">
+                        <div class="w-14 h-14 step-number rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">
+                            3
+                        </div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Export Results</h3>
+                        <p class="text-gray-400 text-sm">
+                            View, search, filter, and export your URLs in your preferred format.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Use Cases Section -->
+        <section class="py-16 px-4 sm:px-6 lg:px-8 border-t border-white/5">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Who Is This For?</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">
+                        Perfect for SEO professionals, developers, and content managers
+                    </p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <!-- Use Case 1 -->
+                    <div class="glass-card rounded-2xl p-6 flex gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-white mb-1">SEO Professionals</h3>
+                            <p class="text-gray-400 text-sm">
+                                Audit website structures, check indexed pages, and analyze competitor sitemaps for better SEO strategies.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Use Case 2 -->
+                    <div class="glass-card rounded-2xl p-6 flex gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-white mb-1">Web Developers</h3>
+                            <p class="text-gray-400 text-sm">
+                                Verify sitemap integrity, debug crawling issues, and ensure all pages are properly included.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Use Case 3 -->
+                    <div class="glass-card rounded-2xl p-6 flex gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-white mb-1">Content Managers</h3>
+                            <p class="text-gray-400 text-sm">
+                                Get a complete inventory of all published content, identify orphan pages, and manage content audits.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Use Case 4 -->
+                    <div class="glass-card rounded-2xl p-6 flex gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-white mb-1">Digital Agencies</h3>
+                            <p class="text-gray-400 text-sm">
+                                Quickly analyze client websites, prepare migration plans, and create comprehensive site documentation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-16 px-4 sm:px-6 lg:px-8 border-t border-white/5">
+            <div class="max-w-3xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
+                    <p class="text-gray-400">
+                        Got questions? We've got answers.
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- FAQ 1 -->
+                    <div class="glass-card rounded-xl overflow-hidden">
+                        <button class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between" onclick="toggleFaq(this)">
+                            <span class="font-medium text-white">What is a sitemap.xml file?</span>
+                            <svg class="accordion-icon w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="accordion-content px-6 pb-4">
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                A sitemap.xml is an XML file that lists all important URLs on a website. It helps search engines like Google discover and crawl pages more efficiently. Most websites have their sitemap at /sitemap.xml (e.g., example.com/sitemap.xml).
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="glass-card rounded-xl overflow-hidden">
+                        <button class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between" onclick="toggleFaq(this)">
+                            <span class="font-medium text-white">What are nested or sub-sitemaps?</span>
+                            <svg class="accordion-icon w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="accordion-content px-6 pb-4">
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                Large websites often use a "sitemap index" that contains links to multiple smaller sitemaps. For example, a news site might have separate sitemaps for articles, categories, and authors. Our tool automatically detects and crawls all these sub-sitemaps.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="glass-card rounded-xl overflow-hidden">
+                        <button class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between" onclick="toggleFaq(this)">
+                            <span class="font-medium text-white">Is there a limit on how many URLs can be extracted?</span>
+                            <svg class="accordion-icon w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="accordion-content px-6 pb-4">
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                No, there's no limit! Our tool can handle sitemaps with thousands or even millions of URLs. Processing time depends on the number of sub-sitemaps and your internet connection, but we've optimized for handling large sitemaps efficiently.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="glass-card rounded-xl overflow-hidden">
+                        <button class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between" onclick="toggleFaq(this)">
+                            <span class="font-medium text-white">Is my data secure?</span>
+                            <svg class="accordion-icon w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="accordion-content px-6 pb-4">
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                Absolutely! All processing happens directly in your browser. We don't store, log, or transmit any of your sitemap data to our servers. Your data stays completely private and secure.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 5 -->
+                    <div class="glass-card rounded-xl overflow-hidden">
+                        <button class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between" onclick="toggleFaq(this)">
+                            <span class="font-medium text-white">Why might some sitemaps fail to load?</span>
+                            <svg class="accordion-icon w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="accordion-content px-6 pb-4">
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                Some websites block cross-origin requests or require authentication. Our tool uses multiple CORS proxies as fallbacks, but some highly restricted sites may still not work. In such cases, you might need to download the sitemap manually.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 6 -->
+                    <div class="glass-card rounded-xl overflow-hidden">
+                        <button class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between" onclick="toggleFaq(this)">
+                            <span class="font-medium text-white">What metadata is extracted from URLs?</span>
+                            <svg class="accordion-icon w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="accordion-content px-6 pb-4">
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                We extract all available metadata including the URL location (loc), last modification date (lastmod), change frequency (changefreq), and priority. This data is included when you export to CSV format.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-16 px-4 sm:px-6 lg:px-8 border-t border-white/5">
+            <div class="max-w-3xl mx-auto text-center">
+                <div class="glass-card rounded-3xl p-8 sm:p-12 glow-effect">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">
+                        Ready to Extract Your Sitemap URLs?
+                    </h2>
+                    <p class="text-gray-400 mb-8 max-w-xl mx-auto">
+                        Start extracting URLs from any sitemap for free. No registration, no limits, no hassle.
+                    </p>
+                    <a href="#" onclick="document.getElementById('sitemapUrl').focus(); window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="glass-button inline-flex items-center gap-2 py-4 px-8 rounded-xl text-white font-semibold">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+                        </svg>
+                        Get Started Now
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-12 px-4 sm:px-6 lg:px-8 border-t border-white/5">
+            <div class="max-w-5xl mx-auto">
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 flex items-center justify-center">
+                            <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                        </div>
+                        <span class="text-lg font-semibold text-white">Sitemap URL Extractor</span>
+                    </div>
+
+                    <div class="flex items-center gap-2 text-sm">
+                        <span class="text-gray-500">Developed by</span>
+                        <a 
+                            href="https://rakibalom.com/" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            class="text-indigo-400 hover:text-indigo-300 font-medium transition-colors"
+                        >
+                            Rakib Alom
+                        </a>
+                    </div>
+                </div>
+
+                <div class="divider my-8"></div>
+
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+                    <p>© 2024 Sitemap URL Extractor. All rights reserved.</p>
+                    <div class="flex items-center gap-6">
+                        <span class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            100% Free
+                        </span>
+                        <span class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            No Registration
+                        </span>
+                        <span class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Privacy Focused
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Global state
+        let allUrls = [];
+        let filteredUrls = [];
+        let displayedCount = 0;
+        const ITEMS_PER_PAGE = 50;
+
+        // CORS Proxies for fallback
+        const CORS_PROXIES = [
+            (url) => `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
+            (url) => `https://corsproxy.io/?${encodeURIComponent(url)}`,
+            (url) => `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(url)}`,
+        ];
+
+        // DOM Elements
+        const sitemapForm = document.getElementById('sitemapForm');
+        const sitemapUrlInput = document.getElementById('sitemapUrl');
+        const extractBtn = document.getElementById('extractBtn');
+        const extractBtnText = document.getElementById('extractBtnText');
+        const clearBtn = document.getElementById('clearBtn');
+        const loadingState = document.getElementById('loadingState');
+        const loadingText = document.getElementById('loadingText');
+        const loadingSubtext = document.getElementById('loadingSubtext');
+        const progressBar = document.getElementById('progressBar');
+        const progressText = document.getElementById('progressText');
+        const errorState = document.getElementById('errorState');
+        const errorMessage = document.getElementById('errorMessage');
+        const resultsSection = document.getElementById('resultsSection');
+        const urlList = document.getElementById('urlList');
+        const searchInput = document.getElementById('searchInput');
+        const filterSelect = document.getElementById('filterSelect');
+        const copyNotification = document.getElementById('copyNotification');
+        const notificationText = document.getElementById('notificationText');
+
+        // FAQ Toggle Function
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('.accordion-icon');
+            
+            content.classList.toggle('open');
+            icon.classList.toggle('rotate');
+        }
+
+        // Fetch with CORS proxy fallback
+        async function fetchWithFallback(url) {
+            // First try direct fetch
+            try {
+                const response = await fetch(url, {
+                    method: 'GET',
+                    headers: {
+                        'Accept': 'application/xml, text/xml, */*'
+                    }
+                });
+                if (response.ok) {
+                    return await response.text();
+                }
+            } catch (e) {
+                console.log('Direct fetch failed, trying proxies...');
+            }
+
+            // Try CORS proxies
+            for (let i = 0; i < CORS_PROXIES.length; i++) {
+                try {
+                    const proxyUrl = CORS_PROXIES[i](url);
+                    const response = await fetch(proxyUrl);
+                    if (response.ok) {
+                        return await response.text();
+                    }
+                } catch (e) {
+                    console.log(`Proxy ${i + 1} failed, trying next...`);
+                }
+            }
+
+            throw new Error('Failed to fetch sitemap. Please check the URL and try again.');
+        }
+
+        // Parse XML string to document
+        function parseXML(xmlString) {
+            const parser = new DOMParser();
+            const xmlDoc = parser.parseFromString(xmlString, 'text/xml');
+            
+            // Check for parsing errors
+            const parseError = xmlDoc.querySelector('parsererror');
+            if (parseError) {
+                throw new Error('Invalid XML format');
+            }
+            
+            return xmlDoc;
+        }
+
+        // Check if sitemap is a sitemap index (contains other sitemaps)
+        function isSitemapIndex(xmlDoc) {
+            const sitemapIndex = xmlDoc.getElementsByTagName('sitemapindex')[0];
+            return sitemapIndex !== null && sitemapIndex !== undefined;
+        }
+
+        // Get sitemap URLs from sitemap index
+        function getSitemapUrls(xmlDoc) {
+            const urls = [];
+            const sitemaps = xmlDoc.getElementsByTagName('sitemap');
+            
+            for (let i = 0; i < sitemaps.length; i++) {
+                const locElement = sitemaps[i].getElementsByTagName('loc')[0];
+                if (locElement && locElement.textContent) {
+                    urls.push(locElement.textContent.trim());
+                }
+            }
+            
+            return urls;
+        }
+
+        // Extract URLs from a sitemap
+        function extractUrlsFromSitemap(xmlDoc) {
+            const urls = [];
+            const urlElements = xmlDoc.getElementsByTagName('url');
+            
+            for (let i = 0; i < urlElements.length; i++) {
+                const locElement = urlElements[i].getElementsByTagName('loc')[0];
+                if (locElement && locElement.textContent) {
+                    const urlData = {
+                        loc: locElement.textContent.trim(),
+                        lastmod: null,
+                        changefreq: null,
+                        priority: null
+                    };
+                    
+                    // Get optional fields
+                    const lastmod = urlElements[i].getElementsByTagName('lastmod')[0];
+                    if (lastmod) urlData.lastmod = lastmod.textContent.trim();
+                    
+                    const changefreq = urlElements[i].getElementsByTagName('changefreq')[0];
+                    if (changefreq) urlData.changefreq = changefreq.textContent.trim();
+                    
+                    const priority = urlElements[i].getElementsByTagName('priority')[0];
+                    if (priority) urlData.priority = priority.textContent.trim();
+                    
+                    urls.push(urlData);
+                }
+            }
+            
+            return urls;
+        }
+
+        // Update progress UI
+        function updateProgress(current, total, message) {
+            const percentage = Math.min((current / Math.max(total, 1)) * 100, 100);
+            progressBar.style.width = `${percentage}%`;
+            progressText.textContent = `${current} URLs found`;
+            if (message) {
+                loadingSubtext.textContent = message;
+            }
+        }
+
+        // Main extraction function
+        async function extractSitemap(url) {
+            const startTime = Date.now();
+            let totalSitemaps = 0;
+            let subSitemapUrls = [];
+            allUrls = [];
+
+            try {
+                // Show loading state
+                loadingState.classList.remove('hidden');
+                errorState.classList.add('hidden');
+                resultsSection.classList.add('hidden');
+                extractBtn.disabled = true;
+                extractBtnText.textContent = 'Extracting...';
+
+                // Fetch main sitemap
+                loadingText.textContent = 'Fetching main sitemap...';
+                const xmlContent = await fetchWithFallback(url);
+                const xmlDoc = parseXML(xmlContent);
+
+                if (isSitemapIndex(xmlDoc)) {
+                    // It's a sitemap index - get all sub-sitemaps
+                    loadingText.textContent = 'Detected sitemap index, fetching sub-sitemaps...';
+                    subSitemapUrls = getSitemapUrls(xmlDoc);
+                    totalSitemaps = subSitemapUrls.length;
+
+                    // Fetch each sub-sitemap
+                    for (let i = 0; i < subSitemapUrls.length; i++) {
+                        try {
+                            loadingSubtext.textContent = `Processing sitemap ${i + 1} of ${totalSitemaps}`;
+                            const subXmlContent = await fetchWithFallback(subSitemapUrls[i]);
+                            const subXmlDoc = parseXML(subXmlContent);
+                            
+                            // Check if sub-sitemap is also an index (nested)
+                            if (isSitemapIndex(subXmlDoc)) {
+                                const nestedUrls = getSitemapUrls(subXmlDoc);
+                                for (const nestedUrl of nestedUrls) {
+                                    try {
+                                        const nestedXmlContent = await fetchWithFallback(nestedUrl);
+                                        const nestedXmlDoc = parseXML(nestedXmlContent);
+                                        const urls = extractUrlsFromSitemap(nestedXmlDoc);
+                                        allUrls = allUrls.concat(urls);
+                                        updateProgress(allUrls.length, 0, `Processing nested sitemap...`);
+                                    } catch (e) {
+                                        console.warn(`Failed to fetch nested sitemap: ${nestedUrl}`);
+                                    }
+                                }
+                            } else {
+                                const urls = extractUrlsFromSitemap(subXmlDoc);
+                                allUrls = allUrls.concat(urls);
+                            }
+                            
+                            updateProgress(allUrls.length, 0, `Processed ${i + 1} of ${totalSitemaps} sitemaps`);
+                        } catch (e) {
+                            console.warn(`Failed to fetch sub-sitemap: ${subSitemapUrls[i]}`);
+                        }
+                    }
+                } else {
+                    // Regular sitemap
+                    totalSitemaps = 1;
+                    allUrls = extractUrlsFromSitemap(xmlDoc);
+                    updateProgress(allUrls.length, allUrls.length, 'Extraction complete');
+                }
+
+                const endTime = Date.now();
+                const timeTaken = ((endTime - startTime) / 1000).toFixed(2);
+
+                // Display results
+                displayResults(url, allUrls, totalSitemaps, subSitemapUrls, timeTaken);
+
+            } catch (error) {
+                showError(error.message);
+            } finally {
+                loadingState.classList.add('hidden');
+                extractBtn.disabled = false;
+                extractBtnText.textContent = 'Extract URLs';
+            }
+        }
+
+        // Display results
+        function displayResults(sourceUrl, urls, sitemapCount, subSitemaps, timeTaken) {
+            // Update stats
+            document.getElementById('totalUrls').textContent = urls.length.toLocaleString();
+            document.getElementById('totalSitemaps').textContent = sitemapCount;
+            document.getElementById('timeTaken').textContent = `${timeTaken}s`;
+            document.getElementById('sourceUrl').textContent = sourceUrl;
+            document.getElementById('sitemapType').textContent = subSitemaps.length > 0 ? 'Sitemap Index' : 'Regular Sitemap';
+
+            // Show sub-sitemaps if any
+            if (subSitemaps.length > 0) {
+                const subSitemapsInfo = document.getElementById('subSitemapsInfo');
+                const subSitemapsList = document.getElementById('subSitemapsList');
+                subSitemapsInfo.classList.remove('hidden');
+                subSitemapsInfo.classList.add('flex');
+                
+                subSitemapsList.innerHTML = subSitemaps.slice(0, 5).map(url => {
+                    const shortUrl = new URL(url).pathname;
+                    return `<span class="tag px-2 py-1 rounded text-xs text-indigo-300 truncate max-w-48" title="${url}">${shortUrl}</span>`;
+                }).join('');
+                
+                if (subSitemaps.length > 5) {
+                    subSitemapsList.innerHTML += `<span class="tag px-2 py-1 rounded text-xs text-gray-400">+${subSitemaps.length - 5} more</span>`;
+                }
+            }
+
+            // Initialize filtered URLs
+            filteredUrls = [...urls];
+            displayedCount = 0;
+
+            // Update counts
+            document.getElementById('showingCount').textContent = Math.min(ITEMS_PER_PAGE, urls.length);
+            document.getElementById('totalCount').textContent = urls.length.toLocaleString();
+
+            // Render URL list
+            renderUrlList();
+
+            // Show results section
+            resultsSection.classList.remove('hidden');
+        }
+
+        // Render URL list
+        function renderUrlList(reset = true) {
+            if (reset) {
+                urlList.innerHTML = '';
+                displayedCount = 0;
+            }
+
+            const startIndex = displayedCount;
+            const endIndex = Math.min(displayedCount + ITEMS_PER_PAGE, filteredUrls.length);
+
+            for (let i = startIndex; i < endIndex; i++) {
+                const urlData = filteredUrls[i];
+                const urlItem = createUrlItem(urlData, i + 1);
+                urlList.appendChild(urlItem);
+            }
+
+            displayedCount = endIndex;
+
+            // Update showing count
+            document.getElementById('showingCount').textContent = displayedCount;
+
+            // Show/hide load more button
+            const loadMoreContainer = document.getElementById('loadMoreContainer');
+            if (displayedCount < filteredUrls.length) {
+                loadMoreContainer.classList.remove('hidden');
+            } else {
+                loadMoreContainer.classList.add('hidden');
+            }
+        }
+
+        // Create URL item element
+        function createUrlItem(urlData, index) {
+            const div = document.createElement('div');
+            div.className = 'url-item rounded-lg p-3 flex items-center gap-3 group';
+            
+            const type = getUrlType(urlData.loc);
+            const typeIcon = getTypeIcon(type);
+            
+            div.innerHTML = `
+                <span class="text-gray-500 text-xs font-mono min-w-10">${index}</span>
+                <div class="w-8 h-8 rounded-lg bg-gray-800/50 flex items-center justify-center flex-shrink-0">
+                    ${typeIcon}
+                </div>
+                <div class="flex-1 min-w-0">
+                    <a href="${urlData.loc}" target="_blank" rel="noopener noreferrer" 
+                       class="text-gray-300 hover:text-indigo-400 text-sm truncate block transition-colors">
+                        ${urlData.loc}
+                    </a>
+                    ${urlData.lastmod ? `<span class="text-gray-600 text-xs">Last modified: ${urlData.lastmod}</span>` : ''}
+                </div>
+                <button 
+                    onclick="copyToClipboard('${urlData.loc.replace(/'/g, "\\'")}')" 
+                    class="opacity-0 group-hover:opacity-100 p-2 hover:bg-gray-700/50 rounded-lg transition-all tooltip"
+                    data-tooltip="Copy URL"
+                >
+                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path>
+                    </svg>
+                </button>
+            `;
+            
+            return div;
+        }
+
+        // Get URL type
+        function getUrlType(url) {
+            const lower = url.toLowerCase();
+            if (/\.(jpg|jpeg|png|gif|webp|svg|bmp|ico)(\?.*)?$/i.test(lower)) return 'image';
+            if (/\.(mp4|webm|avi|mov|wmv)(\?.*)?$/i.test(lower)) return 'video';
+            if (/\.(pdf|doc|docx|xls|xlsx|ppt|pptx)(\?.*)?$/i.test(lower)) return 'document';
+            return 'page';
+        }
+
+        // Get type icon
+        function getTypeIcon(type) {
+            const icons = {
+                page: '<svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>',
+                image: '<svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>',
+                video: '<svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>',
+                document: '<svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>'
+            };
+            return icons[type] || icons.page;
+        }
+
+        // Copy to clipboard
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                showNotification('Copied to clipboard!');
+            }).catch(() => {
+                // Fallback for older browsers
+                const textarea = document.createElement('textarea');
+                textarea.value = text;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                showNotification('Copied to clipboard!');
+            });
+        }
+
+        // Show notification
+        function showNotification(message) {
+            notificationText.textContent = message;
+            copyNotification.classList.add('show');
+            setTimeout(() => {
+                copyNotification.classList.remove('show');
+            }, 2000);
+        }
+
+        // Show error
+        function showError(message) {
+            errorMessage.textContent = message;
+            errorState.classList.remove('hidden');
+        }
+
+        // Filter URLs
+        function filterUrls() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const filterType = filterSelect.value;
+
+            filteredUrls = allUrls.filter(urlData => {
+                const matchesSearch = urlData.loc.toLowerCase().includes(searchTerm);
+                const matchesType = filterType === 'all' || getUrlType(urlData.loc) === filterType;
+                return matchesSearch && matchesType;
+            });
+
+            document.getElementById('totalCount').textContent = filteredUrls.length.toLocaleString();
+            renderUrlList(true);
+        }
+
+        // Copy all URLs
+        function copyAllUrls() {
+            const urlText = filteredUrls.map(u => u.loc).join('\n');
+            copyToClipboard(urlText);
+            showNotification(`Copied ${filteredUrls.length} URLs to clipboard!`);
+        }
+
+        // Download as CSV
+        function downloadCSV() {
+            const headers = ['URL', 'Last Modified', 'Change Frequency', 'Priority'];
+            const rows = filteredUrls.map(u => [
+                u.loc,
+                u.lastmod || '',
+                u.changefreq || '',
+                u.priority || ''
+            ]);
+
+            let csv = headers.join(',') + '\n';
+            rows.forEach(row => {
+                csv += row.map(field => `"${field}"`).join(',') + '\n';
+            });
+
+            downloadFile(csv, 'sitemap-urls.csv', 'text/csv');
+        }
+
+        // Download as TXT
+        function downloadTXT() {
+            const text = filteredUrls.map(u => u.loc).join('\n');
+            downloadFile(text, 'sitemap-urls.txt', 'text/plain');
+        }
+
+        // Download file helper
+        function downloadFile(content, filename, mimeType) {
+            const blob = new Blob([content], { type: mimeType });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            showNotification(`Downloaded ${filename}`);
+        }
+
+        // Clear results
+        function clearResults() {
+            sitemapUrlInput.value = '';
+            allUrls = [];
+            filteredUrls = [];
+            urlList.innerHTML = '';
+            resultsSection.classList.add('hidden');
+            errorState.classList.add('hidden');
+            searchInput.value = '';
+            filterSelect.value = 'all';
+        }
+
+        // Event Listeners
+        sitemapForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const url = sitemapUrlInput.value.trim();
+            if (url) {
+                extractSitemap(url);
+            }
+        });
+
+        clearBtn.addEventListener('click', clearResults);
+
+        searchInput.addEventListener('input', debounce(filterUrls, 300));
+        filterSelect.addEventListener('change', filterUrls);
+
+        document.getElementById('copyAllBtn').addEventListener('click', copyAllUrls);
+        document.getElementById('downloadCsvBtn').addEventListener('click', downloadCSV);
+        document.getElementById('downloadTxtBtn').addEventListener('click', downloadTXT);
+        document.getElementById('loadMoreBtn').addEventListener('click', () => renderUrlList(false));
+
+        // Debounce helper
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        // Add sample URL on placeholder click for demo
+        sitemapUrlInput.addEventListener('focus', function() {
+            if (!this.value) {
+                this.placeholder = 'https://example.com/sitemap.xml';
+            }
+        });
+    </script>
+</body>
+</html>
