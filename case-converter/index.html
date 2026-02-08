@@ -1,31 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Case Converter Tool | Online Text Tools | Rakib Alom</title>
 
   <!-- SEO Meta -->
-  <meta name="description" content="Powerful case and text converter tool with various transformations including case styles, encoding, ascii art, and more." />
-  <meta name="keywords" content="text converter, case converter, uppercase, lowercase, slug case, camel case, encoding, ascii art, morse code, base64" />
+  <meta name="description" content="Free online case converter tool. Convert text to uppercase, lowercase, camelCase, PascalCase, snake_case, kebab-case, Base64, Morse code, and more. Best text transformation utility for developers and writers." />
+  <meta name="keywords" content="case converter, text converter, uppercase converter, lowercase converter, camelCase converter, PascalCase converter, snake_case converter, kebab-case converter, slug generator, base64 encoder, morse code translator, online text tools, string converter, text formatter, code case converter, programming case styles, text transformer, word case changer, sentence case converter, title case generator, constant case, dot notation, path case, leetspeak generator, upside down text, bubble text, wide text, reverse text, rot13 decoder, hex encoder, binary converter, url encoder, developer tools, text manipulation, string manipulation, programming tools, coding utilities" />
   <meta name="author" content="Rakib Alom" />
   <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
 
   <!-- Social -->
   <meta property="og:title" content="Case Converter Tool | Online Text Tools | Rakib Alom" />
   <meta property="og:description" content="Powerful case and text converter tool with various transformations including case styles, encoding, ascii art, and more." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rakibalom.com/tools/case-converter" />
+  <meta property="og:image" content="img/case-converter.jpg">
+  
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Case Converter Tool | Online Text Tools | Rakib Alom" />
   <meta name="twitter:description" content="Powerful case and text converter tool with various transformations including case styles, encoding, ascii art, morse code, base64" />
-
-  <!-- Favicon (PNG) -->
-  <link rel="icon" type="image/png" href="img/case-converter.png">
-
-  <!-- Cover Image for Social Sharing -->
-  <meta property="og:image" content="img/case-converter.jpg">
-  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="img/case-converter.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/case-converter.png">
+  <link rel="apple-touch-icon" href="img/case-converter.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -33,226 +40,286 @@
       darkMode: 'class',
       theme: {
         extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
           colors: {
-            primary: {
-              50: '#f0f9ff',
-              500: '#3b82f6',
-              600: '#2563eb',
-              700: '#1d4ed8'
-            },
-            headerLight: '#f3f4f6', // Light gray for light mode
-            headerDark: '#1f2937'   // Dark gray for dark mode
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
           }
         }
       }
     }
   </script>
+  
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-    
-    textarea::-webkit-scrollbar {
-      width: 6px;
-    }
-    textarea::-webkit-scrollbar-track {
-      background: transparent;
-    }
-    textarea::-webkit-scrollbar-thumb {
-      background-color: rgba(156, 163, 175, 0.5);
-      border-radius: 3px;
-    }
-    textarea::-webkit-scrollbar-thumb:hover {
-      background-color: rgba(156, 163, 175, 0.8);
-    }
-    
     body {
       font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
     }
     
-    .btn-animated {
-      transition: all 0.2s ease;
-      transform: translateY(0);
+    /* Animated mesh gradient background */
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    /* Glassmorphism utilities */
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
     }
     
-    .btn-animated:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
     }
 
     textarea {
       resize: vertical;
-      min-height: 200px;
-      max-height: 800px;
+      min-height: 150px;
     }
 
-    #btn_buy-me-a-coffee:hover {
-      color: #ffffff !important; /* Maintain white text on hover */
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    /* Mobile menu */
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    /* Mode button active state */
+    .mode-btn-active {
+      background: rgba(255, 255, 255, 0.15) !important;
+      border-color: rgba(255, 255, 255, 0.3) !important;
+      color: #fff !important;
     }
   </style>
 </head>
-<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300 min-h-screen">
+<body class="bg-mesh min-h-screen flex flex-col">
 
-  <!-- Header -->
-  <header class="bg-headerLight dark:bg-headerDark text-gray-900 dark:text-white shadow-lg">
-    <div class="container mx-auto px-4 py-4">
-      <div class="flex items-center justify-between">
+  <!-- Header with Navigation -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
         <div class="flex items-center space-x-3">
-          <div class="w-8 h-8 bg-gray-200 dark:bg-gray-700 rounded-md flex items-center justify-center">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <div class="w-8 h-8 bg-gray-700 rounded-md flex items-center justify-center">
+            <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
               <path d="M2.5 8.25a.75.75 0 000 1.5h5a.75.75 0 000-1.5h-5zM3.25 12a.75.75 0 01.75-.75h8a.75.75 0 010 1.5h-8a.75.75 0 01-.75-.75zM4 15.25a.75.75 0 000 1.5h4a.75.75 0 000-1.5H4z"/>
             </svg>
           </div>
           <div>
-            <h1 class="text-xl font-bold">Case Converter Tool</h1>
-            <p class="text-gray-600 dark:text-gray-400 text-xs">Transform your text with ease</p>
+            <h1 class="text-lg font-bold text-white">Case Converter Tool</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Transform your text with ease</p>
           </div>
         </div>
-        
-        <div class="flex items-center space-x-2">
-          <button id="settingsBtn" class="p-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded-md transition-all duration-200 btn-animated" title="Settings">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M8.34 1.804A1 1 0 019.32 1h1.36a1 1 0 01.98.804l.295 1.473c.497.144.971.342 1.416.587l1.25-.834a1 1 0 011.262.125l.962.962a1 1 0 01.125 1.262l-.834 1.25c.245.445.443.919.587 1.416l1.473.294a1 1 0 01.804.98v1.361a1 1 0 01-.804.98l-1.473.295a6.95 6.95 0 01-.587 1.416l.834 1.25a1 1 0 01-.125 1.262l-.962.962a1 1 0 01-1.262.125l-1.25-.834a6.953 6.953 0 01-1.416.587l-.294 1.473a1 1 0 01-.98.804H9.32a1 1 0 01-.98-.804l-.295-1.473a6.957 6.957 0 01-1.416-.587l-1.25.834a1 1 0 01-1.262-.125l-.962-.962a1 1 0 01-.125-1.262l.834-1.25a6.957 6.957 0 01-.587-1.416l-1.473-.294A1 1 0 011 10.68V9.32a1 1 0 01.804-.98l1.473-.295c.144-.497.342-.971.587-1.416l-.834-1.25a1 1 0 01.125-1.262l.962-.962A1 1 0 015.38 3.03l1.25.834a6.957 6.957 0 011.416-.587l.294-1.473zM13 10a3 3 0 11-6 0 3 3 0 016 0z" clip-rule="evenodd"/>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-6">
+          <a href="https://rakibalom.com" class="text-sm text-gray-300 hover:text-white transition-colors">Home</a>
+          <a href="https://rakibalom.com/tools/" class="text-sm text-gray-300 hover:text-white transition-colors">All Tools</a>
+          <div class="h-4 w-px bg-white/10"></div>
+          <button id="settingsBtn" class="p-2 rounded-lg hover:bg-white/10 text-gray-300 transition-colors" title="Settings">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
             </svg>
           </button>
-          
-          <button id="darkModeToggle" class="p-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded-md transition-all duration-200 btn-animated" title="Toggle theme">
-            <svg class="w-4 h-4 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden flex items-center gap-2">
+          <button id="settingsBtnMobile" class="p-2 rounded-lg hover:bg-white/10 text-gray-300">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
             </svg>
-            <svg class="w-4 h-4 dark:hidden" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+          </button>
+          <button id="mobileMenuBtn" class="p-2 rounded-lg hover:bg-white/10 text-gray-300">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
             </svg>
           </button>
         </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-4 space-y-3">
+        <a href="https://rakibalom.com" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10">Home</a>
+        <a href="https://rakibalom.com/tools/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10">All Tools</a>
       </div>
     </div>
   </header>
 
   <!-- Settings Modal -->
-  <div id="settingsModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50 p-4">
-    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-2xl max-w-md w-full p-4">
-      <div class="flex items-center justify-between mb-4">
-        <h3 class="text-lg font-semibold">Settings</h3>
-        <button id="closeSettings" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-          </svg>
+  <div id="settingsModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
+    <div class="glass-panel rounded-xl max-w-md w-full p-6 relative">
+      <div class="flex items-center justify-between mb-6">
+        <h3 class="text-xl font-semibold text-white">Settings</h3>
+        <button id="closeSettings" class="text-gray-400 hover:text-white transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
       </div>
       
-      <div class="space-y-4">
+      <div class="space-y-6">
         <div>
-          <label class="block text-sm font-medium mb-2">Layout</label>
-          <div class="flex space-x-2">
-            <button id="layoutColumn" class="flex-1 p-2 border border-gray-200 dark:border-gray-600 rounded-md hover:border-primary-500 transition-colors">
-              <div class="flex space-x-1">
-                <div class="w-full h-3 bg-gray-300 dark:bg-gray-600 rounded"></div>
-                <div class="w-full h-3 bg-gray-300 dark:bg-gray-600 rounded"></div>
+          <label class="block text-sm font-medium text-gray-300 mb-3">Layout Direction</label>
+          <div class="grid grid-cols-2 gap-3">
+            <button id="layoutRow" class="p-3 rounded-lg border border-white/10 hover:bg-white/5 transition-all flex flex-col items-center gap-2 group">
+              <div class="w-full h-12 border-2 border-gray-600 rounded flex flex-col gap-1 p-1 group-hover:border-gray-400">
+                <div class="w-full h-full bg-gray-700 rounded-sm"></div>
+                <div class="w-full h-full bg-gray-700 rounded-sm"></div>
               </div>
-              <p class="text-xs mt-1">Column</p>
+              <span class="text-xs text-gray-400">Stacked (Row)</span>
             </button>
-            <button id="layoutRow" class="flex-1 p-2 border border-gray-200 dark:border-gray-600 rounded-md hover:border-primary-500 transition-colors">
-              <div class="flex flex-col space-y-1">
-                <div class="w-full h-1.5 bg-gray-300 dark:bg-gray-600 rounded"></div>
-                <div class="w-full h-1.5 bg-gray-300 dark:bg-gray-600 rounded"></div>
+            <button id="layoutColumn" class="p-3 rounded-lg border border-white/10 hover:bg-white/5 transition-all flex flex-col items-center gap-2 group">
+               <div class="w-full h-12 border-2 border-gray-600 rounded flex gap-1 p-1 group-hover:border-gray-400">
+                <div class="w-full h-full bg-gray-700 rounded-sm"></div>
+                <div class="w-full h-full bg-gray-700 rounded-sm"></div>
               </div>
-              <p class="text-xs mt-1">Row</p>
+              <span class="text-xs text-gray-400">Side-by-Side (Col)</span>
             </button>
           </div>
         </div>
+        
         <div>
-          <label class="block text-sm font-medium mb-2">Text Area Height</label>
-          <input id="textareaHeight" type="number" min="200" max="800" value="400" class="w-full p-2 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">
+          <label class="block text-sm font-medium text-gray-300 mb-2">Text Area Height (px)</label>
+          <input id="textareaHeight" type="number" min="150" max="800" class="w-full p-3 rounded-lg glass-input text-white" placeholder="200">
         </div>
-        <div>
-          <label class="flex items-center space-x-2">
-            <input id="autoCopy" type="checkbox" class="rounded border-gray-300 dark:border-gray-600 text-primary-500 focus:ring-primary-500">
-            <span class="text-sm font-medium">Auto Copy Output</span>
+
+        <div class="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/5">
+          <span class="text-sm text-gray-300">Auto Copy Output</span>
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input id="autoCopy" type="checkbox" class="sr-only peer">
+            <div class="w-11 h-6 bg-gray-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-white/20"></div>
           </label>
         </div>
-        <div>
-          <button id="resetSettings" class="w-full px-2 py-1 text-xs bg-red-500 hover:bg-red-600 text-white rounded-md transition-all duration-200 btn-animated">
-            Reset Settings
-          </button>
-        </div>
+
+        <button id="resetSettings" class="w-full py-2.5 text-sm font-medium bg-red-500/20 hover:bg-red-500/30 text-red-400 border border-red-500/30 rounded-lg transition-all">
+          Reset to Defaults
+        </button>
       </div>
     </div>
   </div>
 
   <!-- Main Content -->
-  <main class="container mx-auto px-4 py-4">
+  <main class="flex-grow container mx-auto px-4 py-6 space-y-6">
+    
     <!-- Mode Buttons -->
-    <div class="mb-4">
-      <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-3 shadow-sm">
-        <div id="modeButtons" class="flex flex-wrap gap-2 mb-3">
-          <!-- Buttons will be injected here -->
-        </div>
+    <div class="glass-panel rounded-xl p-4">
+      <div id="modeButtons" class="flex flex-wrap gap-2 max-h-48 overflow-y-auto pr-2">
+        <!-- Buttons injected via JS -->
       </div>
     </div>
 
-    <!-- Text Areas -->
-    <div id="textareaContainer" class="mb-4 grid grid-cols-2 gap-4">
-      <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-3 shadow-sm">
-        <label class="block text-sm font-medium mb-2 flex items-center">
-          <svg class="w-4 h-4 mr-1.5 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
-          </svg>
-          Input Text
-        </label>
+    <!-- Text Areas Container -->
+    <div id="textareaContainer" class="grid grid-cols-1 gap-4">
+      
+      <!-- Input -->
+      <div class="glass-panel rounded-xl p-4 flex flex-col">
+        <div class="flex justify-between items-center mb-3">
+            <label class="text-sm font-medium text-gray-300 flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Input Text
+            </label>
+            <button id="clearBtn" class="text-xs text-gray-400 hover:text-red-400 transition-colors flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+            </button>
+        </div>
         <textarea id="inputText" placeholder="Enter your text here..." spellcheck="false"
-          class="w-full h-[400px] p-3 rounded-md border border-gray-300 dark:border-gray-600 focus:border-primary-500 focus:outline-none bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 transition-colors duration-200"></textarea>
+          class="w-full flex-grow p-4 rounded-lg glass-input font-mono text-sm leading-relaxed"></textarea>
       </div>
 
-      <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-3 shadow-sm">
-        <label class="block text-sm font-medium mb-2 flex items-center justify-between">
-          <span class="flex items-center">
-            <svg class="w-4 h-4 mr-1.5 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
-            </svg>
-            Output Text
-          </span>
-        </label>
-        <textarea id="outputText" readonly spellcheck="false"
-          class="w-full h-[400px] p-3 rounded-md border border-gray-300 dark:border-gray-600 bg-gray-100 dark:bg-gray-600 text-gray-900 dark:text-gray-100"></textarea>
+      <!-- Output -->
+      <div class="glass-panel rounded-xl p-4 flex flex-col">
+        <div class="flex justify-between items-center mb-3">
+            <label class="text-sm font-medium text-gray-300 flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              Output Text
+            </label>
+            <div class="flex items-center gap-3">
+                <button id="removeHyphenBtn" class="text-xs text-gray-400 hover:text-yellow-400 transition-colors" title="Replace hyphens with spaces">
+                    Hyphen → Space
+                </button>
+            </div>
+        </div>
+        <div class="relative">
+            <textarea id="outputText" readonly spellcheck="false"
+              class="w-full flex-grow p-4 rounded-lg glass-input bg-black/20 font-mono text-sm leading-relaxed text-gray-300 pr-24"></textarea>
+            
+            <!-- Copy Button - Always Visible -->
+            <button id="copyBtn" class="absolute bottom-3 right-3 px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg border border-white/10 transition-all btn-animated flex items-center gap-2 text-sm font-medium">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                <span>Copy</span>
+            </button>
+        </div>
       </div>
     </div>
 
-    <!-- Statistics and Actions -->
-    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-3 shadow-sm mb-4">
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-        <div class="flex flex-wrap gap-3 text-xs font-mono text-gray-600 dark:text-gray-400">
-          <div class="flex items-center space-x-1">
-            <span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
-            <span id="wordCount">Words: 0</span>
-          </div>
-          <div class="flex items-center space-x-1">
-            <span class="w-1.5 h-1.5 bg-green-500 rounded-full"></span>
-            <span id="charCount">Characters: 0</span>
-          </div>
-          <div class="flex items-center space-x-1">
-            <span class="w-1.5 h-1.5 bg-purple-500 rounded-full"></span>
-            <span id="lineCount">Lines: 0</span>
-          </div>
+    <!-- Statistics Bar -->
+    <div class="glass-panel rounded-xl p-4 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm">
+      <div class="flex gap-6 text-gray-400 font-mono">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-gray-500"></span>
+          <span id="wordCount">Words: 0</span>
         </div>
-        
-        <div class="flex gap-2">
-          <button id="clearBtn" class="px-2 py-1 text-xs bg-red-500 hover:bg-red-600 text-white rounded-md transition-all duration-200 btn-animated flex items-center space-x-1">
-            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
-            </svg>
-            <span>Clear</span>
-          </button>
-          <button id="removeHyphenBtn" class="px-2 py-1 text-xs bg-gray-500 hover:bg-gray-600 text-white rounded-md transition-all duration-200 btn-animated flex items-center space-x-1">
-            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6"/>
-            </svg>
-            <span>Remove Hyphen</span>
-          </button>
-          <button id="copyBtn" class="px-6 py-1.5 text-xs bg-green-600 hover:bg-green-700 text-white rounded-md transition-all duration-200 btn-animated flex items-center space-x-1 font-semibold">
-            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
-            </svg>
-            <span>Copy</span>
-          </button>
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-gray-500"></span>
+          <span id="charCount">Characters: 0</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-gray-500"></span>
+          <span id="lineCount">Lines: 0</span>
         </div>
       </div>
     </div>
@@ -260,81 +327,73 @@
     <!-- Content Sections -->
     <div class="space-y-6">
       <!-- Case Converter Guide -->
-      <section class="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 shadow-sm">
-        <h2 class="text-xl font-bold mb-3 flex items-center">
-          <svg class="w-5 h-5 mr-2 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+      <section class="glass-panel rounded-xl p-6">
+        <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+          <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
           </svg>
           Case Converter Guide
         </h2>
         
-        <div class="space-y-4" id="conversionGuide">
+        <div class="space-y-4 text-gray-400" id="conversionGuide">
           <!-- Content will be dynamically generated -->
         </div>
       </section>
 
       <!-- FAQ Section -->
-      <section class="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 shadow-sm">
-        <h2 class="text-xl font-bold mb-3 flex items-center">
-          <svg class="w-5 h-5 mr-2 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+      <section class="glass-panel rounded-xl p-6">
+        <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+          <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
           </svg>
           Frequently Asked Questions
         </h2>
         
-        <div class="space-y-3">
-          <div class="border-b border-gray-200 dark:border-gray-700 pb-3">
-            <h3 class="text-base font-semibold mb-2">What is a case converter tool?</h3>
-            <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">A case converter tool is a utility that transforms text between different formatting styles. It can change the capitalization, spacing, and structure of your text to match various naming conventions used in programming, writing, and web development.</p>
+        <div class="space-y-4 text-gray-400">
+          <div class="border-b border-white/10 pb-4">
+            <h3 class="text-base font-semibold text-gray-300 mb-2">What is a case converter tool?</h3>
+            <p class="text-sm leading-relaxed">A case converter tool is a utility that transforms text between different formatting styles. It can change the capitalization, spacing, and structure of your text to match various naming conventions used in programming, writing, and web development.</p>
           </div>
           
-          <div class="border-b border-gray-200 dark:border-gray-700 pb-3">
-            <h3 class="text-base font-semibold mb-2">Which case styles are most commonly used?</h3>
-            <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">The most commonly used case styles include camelCase (for JavaScript variables), snake_case (for Python variables), PascalCase (for class names), kebab-case (for CSS classes and URLs), and UPPERCASE (for constants and environment variables).</p>
+          <div class="border-b border-white/10 pb-4">
+            <h3 class="text-base font-semibold text-gray-300 mb-2">Which case styles are most commonly used?</h3>
+            <p class="text-sm leading-relaxed">The most commonly used case styles include camelCase (for JavaScript variables), snake_case (for Python variables), PascalCase (for class names), kebab-case (for CSS classes and URLs), and UPPERCASE (for constants and environment variables).</p>
           </div>
           
-          <div class="border-b border-gray-200 dark:border-gray-700 pb-3">
-            <h3 class="text-base font-semibold mb-2">Is my data secure when using this tool?</h3>
-            <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Yes, absolutely! All text processing happens directly in your browser using JavaScript. No data is sent to any server, ensuring complete privacy and security of your information.</p>
+          <div class="border-b border-white/10 pb-4">
+            <h3 class="text-base font-semibold text-gray-300 mb-2">Is my data secure when using this tool?</h3>
+            <p class="text-sm leading-relaxed">Yes, absolutely! All text processing happens directly in your browser using JavaScript. No data is sent to any server, ensuring complete privacy and security of your information.</p>
           </div>
           
-          <div class="border-b border-gray-200 dark:border-gray-700 pb-3">
-            <h3 class="text-base font-semibold mb-2">Can I convert large amounts of text?</h3>
-            <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Yes, the tool can handle large text blocks efficiently. However, extremely large texts (over 100MB) might slow down the conversion process depending on your device's performance.</p>
+          <div class="border-b border-white/10 pb-4">
+            <h3 class="text-base font-semibold text-gray-300 mb-2">Can I convert large amounts of text?</h3>
+            <p class="text-sm leading-relaxed">Yes, the tool can handle large text blocks efficiently. However, extremely large texts (over 100MB) might slow down the conversion process depending on your device's performance.</p>
           </div>
           
           <div>
-            <h3 class="text-base font-semibold mb-2">Does the tool work offline?</h3>
-            <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Once the page is loaded, the core conversion functionality works offline since it's entirely client-side. However, you'll need an internet connection to initially load the tool and access any external resources like fonts or CDN libraries.</p>
+            <h3 class="text-base font-semibold text-gray-300 mb-2">Does the tool work offline?</h3>
+            <p class="text-sm leading-relaxed">Once the page is loaded, the core conversion functionality works offline since it's entirely client-side. However, you'll need an internet connection to initially load the tool and access any external resources like fonts or CDN libraries.</p>
           </div>
         </div>
       </section>
 
       <!-- Video Tutorial Section -->
-      <section class="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 shadow-sm">
-        <h2 class="text-xl font-bold mb-3 flex items-center">
-          <svg class="w-5 h-5 mr-2 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+      <section class="glass-panel rounded-xl p-6">
+        <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+          <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
           </svg>
           Video Tutorial
         </h2>
         
-        <div class="bg-gray-100 dark:bg-gray-700 rounded-md p-6 text-center">
+        <div class="bg-black/40 rounded-lg p-4 text-center border border-white/10">
           <div class="max-w-2xl mx-auto">
-            <div class="aspect-video bg-gray-200 dark:bg-gray-600 rounded-md flex items-center justify-center mb-3">
-              <!-- <svg class="w-12 h-12 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
-              </svg> -->
+            <div class="aspect-video bg-black/60 rounded-lg flex items-center justify-center mb-3 border border-white/5 overflow-hidden">
               <iframe width="100%" height="100%" src="https://www.youtube.com/embed/INoYDveBhFM?si=SUxocXjI2EmljWZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
-            <p class="text-gray-600 dark:text-gray-400 mb-3 text-sm">
+            <p class="text-gray-500 mb-3 text-sm">
               Watch our comprehensive tutorial to learn how to use all features of the Case Converter Tool effectively.
             </p>
-            <!-- <div class="bg-blue-50 dark:bg-blue-900 p-3 rounded-md">
-              <p class="text-xs text-blue-700 dark:text-blue-300">
-                <strong>Note:</strong> Replace this placeholder with your actual video embed code. You can use YouTube, Vimeo, or any other video platform by pasting their embed code here.
-              </p>
-            </div> -->
           </div>
         </div>
       </section>
@@ -342,461 +401,124 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-headerLight dark:bg-headerDark text-gray-900 dark:text-white py-4 mt-6">
-    <div class="container mx-auto px-4 text-center">
-      <div class="flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-6 mb-3">
-        <a href="https://rakibalom.com/" target="_blank" class="text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-          Visit My Website
-        </a>
-        <a href="https://buymeacoffee.com/rakibalom" target="_blank" class="text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-          Support This Project
-        </a>
-      </div>
-      <div class="border-t border-gray-300 dark:border-gray-600 pt-3">
-        <p class="text-gray-600 dark:text-gray-400 text-sm">
-          © 2024 Developed by <a href="https://rakibalom.com/" target="_blank" class="font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Rakib Alom</a>
-        </p>
-      </div>
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-8">
+    <div class="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+        <p>&copy; 2024 <a href="https://rakibalom.com" target="_blank" class="text-gray-400 hover:text-white">Rakib Alom</a>. All rights reserved.</p>
+        <div class="flex gap-6">
+             <a href="https://rakibalom.com" target="_blank" class="hover:text-white transition-colors">Website</a>
+             <a href="https://buymeacoffee.com/rakibalom" target="_blank" class="hover:text-white transition-colors">Support</a>
+        </div>
     </div>
   </footer>
 
 <script>
-// Enhanced converter functions with improved accuracy
-function lowercase(text) {
-  return text.toLowerCase();
+// --- All Original Functions Preserved ---
+
+function lowercase(text) { return text.toLowerCase(); }
+function uppercase(text) { return text.toUpperCase(); }
+function slug(text) { return text.toLowerCase().replace(/[^\w\s-]/g, '').trim().replace(/[-\s]+/g, '-').replace(/^-+|-+$/g, ''); }
+function title_case(text) { return text.toLowerCase().replace(/\b\w/g, c => c.toUpperCase()); }
+function sentence_case(text) { return text.toLowerCase().replace(/(^\s*\w|[.!?]\s*\w)/g, c => c.toUpperCase()); }
+function toggle_case(text) { return [...text].map(c => c === c.toLowerCase() ? c.toUpperCase() : c.toLowerCase()).join(''); }
+function camel_case(text) { return text.replace(/[^a-zA-Z0-9]+/g, ' ').trim().split(/\s+/).filter(word => word.length > 0).map((word, index) => index === 0 ? word.toLowerCase() : word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(''); }
+function pascal_case(text) { return text.replace(/[^a-zA-Z0-9]+/g, ' ').trim().split(/\s+/).filter(word => word.length > 0).map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(''); }
+function snake_case(text) { return text.toLowerCase().replace(/[^\w\s]/g, '').trim().replace(/\s+/g, '_'); }
+function kebab_case(text) { return text.toLowerCase().replace(/[^\w\s-]/g, '').trim().replace(/[-\s]+/g, '-').replace(/^-+|-+$/g, ''); }
+function dot_case(text) { return text.toLowerCase().replace(/[^\w\s.]/g, '').trim().replace(/[.\s]+/g, '.').replace(/^\.+|\.+$/g, ''); }
+function constant_case(text) { return text.toUpperCase().replace(/[^\w\s]/g, '').trim().replace(/\s+/g, '_'); }
+function path_case(text) { return text.toLowerCase().replace(/[^\w\s/]/g, '').trim().replace(/\s+/g, '/'); }
+function leetspeak(text) { const map = { a:'4', A:'4', e:'3', E:'3', i:'1', I:'1', o:'0', O:'0', s:'5', S:'5', t:'+', T:'+', l:'1', L:'1', g:'9', G:'9' }; return text.split('').map(c => map[c] || c).join(''); }
+function upside_down(text) { const map = { a:'ɐ', b:'q', c:'ɔ', d:'p', e:'ǝ', f:'ɟ', g:'ƃ', h:'ɥ', i:'ᴉ', j:'ɾ', k:'ʞ', l:'ʅ', m:'ɯ', n:'u', o:'o', p:'d', q:'b', r:'ɹ', s:'s', t:'ʇ', u:'n', v:'ʌ', w:'ʍ', x:'x', y:'ʎ', z:'z', A:'∀', B:'𐐒', C:'Ɔ', D:'ᗡ', E:'Ǝ', F:'Ⅎ', G:'⅁', H:'H', I:'I', J:'ſ', K:'ʞ', L:'⅂', M:'W', N:'N', O:'O', P:'Ԁ', Q:'Ὁ', R:'ᴚ', S:'S', T:'⊥', U:'∩', V:'Λ', W:'M', X:'X', Y:'⅄', Z:'Z', '1':'⇂', '2':'ᄅ', '3':'Ɛ', '4':'ㄣ', '5':'ϛ', '6':'9', '7':'ㄥ', '8':'8', '9':'6', '0':'0', '.':'˙', ',':'\'', '?':'¿', '!':'¡', "'":',', '"':'„', '(':')', ')':'(', '[':']', ']':'[', '{':'}', '}':'{', '<':'>', '>':'<', '&':'⅋', '_':'‾' }; return [...text].map(c => map[c] || c).reverse().join(''); }
+function bubble_text(text) { const map = { a: 'ⓐ', b: 'ⓑ', c: 'ⓒ', d: 'ⓓ', e: 'ⓔ', f: 'ⓕ', g: 'ⓖ', h: 'ⓗ', i: 'ⓘ', j: 'ⓙ', k: 'ⓚ', l: 'ⓛ', m: 'ⓜ', n: 'ⓝ', o: 'ⓞ', p: 'ⓟ', q: 'ⓠ', r: 'ⓡ', s: 'ⓢ', t: 'ⓣ', u: 'ⓤ', v: 'ⓥ', w: 'ⓦ', x: 'ⓧ', y: 'ⓨ', z: 'ⓩ', A: 'Ⓐ', B: 'Ⓑ', C: 'Ⓒ', D: 'Ⓓ', E: 'Ⓔ', F: 'Ⓕ', G: 'Ⓖ', H: 'Ⓗ', I: 'Ⓘ', J: 'Ⓙ', K: 'Ⓚ', L: 'Ⓛ', M: 'Ⓜ', N: 'Ⓝ', O: 'Ⓞ', P: 'Ⓟ', Q: 'Ⓠ', R: 'Ⓡ', S: 'Ⓢ', T: 'Ⓣ', U: 'Ⓤ', V: 'Ⓥ', W: 'Ⓦ', X: 'Ⓧ', Y: 'Ⓨ', Z: 'Ⓩ', '0': '⓪', '1': '①', '2': '②', '3': '③', '4': '④', '5': '⑤', '6': '⑥', '7': '⑦', '8': '⑧', '9': '⑨' }; return [...text].map(c => map[c] || c).join(''); }
+function wide_text(text) { const map = { 'a': 'ａ', 'b': 'ｂ', 'c': 'ｃ', 'd': 'ｄ', 'e': 'ｅ', 'f': 'ｆ', 'g': 'ｇ', 'h': 'ｈ', 'i': 'ｉ', 'j': 'ｊ', 'k': 'ｋ', 'l': 'ｌ', 'm': 'ｍ', 'n': 'ｎ', 'o': 'ｏ', 'p': 'ｐ', 'q': 'ｑ', 'r': 'ｒ', 's': 'ｓ', 't': 'ｔ', 'u': 'ｕ', 'v': 'ｖ', 'w': 'ｗ', 'x': 'ｘ', 'y': 'ｙ', 'z': 'ｚ', 'A': 'Ａ', 'B': 'Ｂ', 'C': 'Ｃ', 'D': 'Ｄ', 'E': 'Ｅ', 'F': 'Ｆ', 'G': 'Ｇ', 'H': 'Ｈ', 'I': 'Ｉ', 'J': 'Ｊ', 'K': 'Ｋ', 'L': 'Ｌ', 'M': 'Ｍ', 'N': 'Ｎ', 'O': 'Ｏ', 'P': 'Ｐ', 'Q': 'Ｑ', 'R': 'Ｒ', 'S': 'Ｓ', 'T': 'Ｔ', 'U': 'Ｕ', 'V': 'Ｖ', 'W': 'Ｗ', 'X': 'Ｘ', 'Y': 'Ｙ', 'Z': 'Ｚ', '0': '０', '1': '１', '2': '２', '3': '３', '4': '４', '5': '５', '6': '６', '7': '７', '8': '８', '9': '９' }; return [...text].map(c => map[c] || c).join(''); }
+function base64_encode(text) { try { return btoa(unescape(encodeURIComponent(text))); } catch (error) { return 'Invalid input'; } }
+function base64_decode(text) { try { return decodeURIComponent(escape(atob(text.trim()))); } catch (error) { return 'Invalid Base64'; } }
+function url_encode(text) { return encodeURIComponent(text); }
+function url_decode(text) { try { return decodeURIComponent(text); } catch (error) { return 'Invalid URL'; } }
+function morse_encode(text) { const morse_dict = { 'a':'.-', 'b':'-...', 'c':'-.-.', 'd':'-..', 'e':'.', 'f':'..-.', 'g':'--.', 'h':'....', 'i':'..', 'j':'.---', 'k':'-.-', 'l':'.-..', 'm':'--', 'n':'-.', 'o':'---', 'p':'.--.', 'q':'--.-', 'r':'.-.', 's':'...', 't':'-', 'u':'..-', 'v':'...-', 'w':'.--', 'x':'-..-', 'y':'-.--', 'z':'--..', '0':'-----', '1':'.----', '2':'..---', '3':'...--', '4':'....-', '5':'.....', '6':'-....', '7':'--...', '8':'---..', '9':'----.', ' ':'/' }; return text.toLowerCase().split('').map(c => morse_dict[c] || '').filter(c => c).join(' '); }
+function morse_decode(text) { const reverse_morse = { '.-':'a', '-...':'b', '-.-.':'c', '-..':'d', '.':'e', '..-.':'f', '--.':'g', '....':'h', '..':'i', '.---':'j', '-.-':'k', '.-..':'l', '--':'m', '-.':'n', '---':'o', '.--.':'p', '--.-':'q', '.-.':'r', '...':'s', '-':'t', '..-':'u', '...-':'v', '.--':'w', '-..-':'x', '-.--':'y', '--..':'z', '-----':'0', '.----':'1', '..---':'2', '...--':'3', '....-':'4', '.....':'5', '-....':'6', '--...':'7', '---..':'8', '----.':'9', '/':' ' }; return text.split(' ').map(code => reverse_morse[code] || '').join(''); }
+function rot13(text) { return text.replace(/[a-zA-Z]/g, function(c){ return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26); }); }
+function hex_encode(text) { return Array.from(text).map(c => c.charCodeAt(0).toString(16).padStart(2, '0')).join(' '); }
+function hex_decode(text) { try { return text.split(' ').filter(h => h.length > 0).map(h => String.fromCharCode(parseInt(h, 16))).join(''); } catch (error) { return 'Invalid hex'; } }
+function binary_encode(text) { return Array.from(text).map(c => c.charCodeAt(0).toString(2).padStart(8, '0')).join(' '); }
+function binary_decode(text) { try { return text.split(' ').filter(b => b.length > 0).map(b => String.fromCharCode(parseInt(b, 2))).join(''); } catch (error) { return 'Invalid binary'; } }
+function reverse_text(text) { return text.split('').reverse().join(''); }
+function alternating_case(text) { return text.split('').map((c, i) => i % 2 === 0 ? c.toLowerCase() : c.toUpperCase()).join(''); }
+
+// FIXED: Replace hyphen with space instead of removing
+function remove_hyphen(text) { 
+  return text.replace(/-/g, ' '); 
 }
 
-function uppercase(text) {
-  return text.toUpperCase();
-}
-
-function slug(text) {
-  return text.toLowerCase()
-    .replace(/[^\w\s-]/g, '')  // Remove special chars except spaces and hyphens
-    .trim()
-    .replace(/[-\s]+/g, '-')   // Replace spaces and multiple hyphens with single hyphen
-    .replace(/^-+|-+$/g, '');  // Remove leading/trailing hyphens
-}
-
-function title_case(text) {
-  return text.toLowerCase().replace(/\b\w/g, c => c.toUpperCase());
-}
-
-function sentence_case(text) {
-  return text.toLowerCase().replace(/(^\s*\w|[.!?]\s*\w)/g, c => c.toUpperCase());
-}
-
-function toggle_case(text) {
-  return [...text].map(c => c === c.toLowerCase() ? c.toUpperCase() : c.toLowerCase()).join('');
-}
-
-function camel_case(text) {
-  return text
-    .replace(/[^a-zA-Z0-9]+/g, ' ')
-    .trim()
-    .split(/\s+/)
-    .filter(word => word.length > 0)
-    .map((word, index) => 
-      index === 0 
-        ? word.toLowerCase() 
-        : word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
-    )
-    .join('');
-}
-
-function pascal_case(text) {
-  return text
-    .replace(/[^a-zA-Z0-9]+/g, ' ')
-    .trim()
-    .split(/\s+/)
-    .filter(word => word.length > 0)
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-    .join('');
-}
-
-function snake_case(text) {
-  return text.toLowerCase()
-    .replace(/[^\w\s]/g, '')
-    .trim()
-    .replace(/\s+/g, '_');
-}
-
-function kebab_case(text) {
-  return text.toLowerCase()
-    .replace(/[^\w\s-]/g, '')
-    .trim()
-    .replace(/[-\s]+/g, '-')
-    .replace(/^-+|-+$/g, '');
-}
-
-function dot_case(text) {
-  return text.toLowerCase()
-    .replace(/[^\w\s.]/g, '')
-    .trim()
-    .replace(/[.\s]+/g, '.')
-    .replace(/^\.+|\.+$/g, '');
-}
-
-function constant_case(text) {
-  return text.toUpperCase()
-    .replace(/[^\w\s]/g, '')
-    .trim()
-    .replace(/\s+/g, '_');
-}
-
-function path_case(text) {
-  return text.toLowerCase()
-    .replace(/[^\w\s/]/g, '')
-    .trim()
-    .replace(/\s+/g, '/');
-}
-
-function leetspeak(text) {
-  const map = { 
-    a:'4', A:'4', e:'3', E:'3', i:'1', I:'1', 
-    o:'0', O:'0', s:'5', S:'5', t:'+', T:'+',
-    l:'1', L:'1', g:'9', G:'9'
-  };
-  return text.split('').map(c => map[c] || c).join('');
-}
-
-function upside_down(text) {
-  const map = {
-    a:'ɐ', b:'q', c:'ɔ', d:'p', e:'ǝ', f:'ɟ', g:'ƃ', h:'ɥ', i:'ᴉ', j:'ɾ', k:'ʞ', l:'ʅ', m:'ɯ',
-    n:'u', o:'o', p:'d', q:'b', r:'ɹ', s:'s', t:'ʇ', u:'n', v:'ʌ', w:'ʍ', x:'x', y:'ʎ', z:'z',
-    A:'∀', B:'𐐒', C:'Ɔ', D:'ᗡ', E:'Ǝ', F:'Ⅎ', G:'⅁', H:'H', I:'I', J:'ſ', K:'ʞ', L:'⅂', M:'W',
-    N:'N', O:'O', P:'Ԁ', Q:'Ὁ', R:'ᴚ', S:'S', T:'⊥', U:'∩', V:'Λ', W:'M', X:'X', Y:'⅄', Z:'Z',
-    '1':'⇂', '2':'ᄅ', '3':'Ɛ', '4':'ㄣ', '5':'ϛ', '6':'9', '7':'ㄥ', '8':'8', '9':'6', '0':'0',
-    '.':'˙', ',':'\'', '?':'¿', '!':'¡', "'":',', '"':'„', '(':')', ')':'(', '[':']', ']':'[',
-    '{':'}', '}':'{', '<':'>', '>':'<', '&':'⅋', '_':'‾'
-  };
-  return [...text].map(c => map[c] || c).reverse().join('');
-}
-
-function bubble_text(text) {
-  const map = {
-    a: 'ⓐ', b: 'ⓑ', c: 'ⓒ', d: 'ⓓ', e: 'ⓔ', f: 'ⓕ', g: 'ⓖ',
-    h: 'ⓗ', i: 'ⓘ', j: 'ⓙ', k: 'ⓚ', l: 'ⓛ', m: 'ⓜ', n: 'ⓝ',
-    o: 'ⓞ', p: 'ⓟ', q: 'ⓠ', r: 'ⓡ', s: 'ⓢ', t: 'ⓣ', u: 'ⓤ',
-    v: 'ⓥ', w: 'ⓦ', x: 'ⓧ', y: 'ⓨ', z: 'ⓩ',
-    A: 'Ⓐ', B: 'Ⓑ', C: 'Ⓒ', D: 'Ⓓ', E: 'Ⓔ', F: 'Ⓕ', G: 'Ⓖ',
-    H: 'Ⓗ', I: 'Ⓘ', J: 'Ⓙ', K: 'Ⓚ', L: 'Ⓛ', M: 'Ⓜ', N: 'Ⓝ',
-    O: 'Ⓞ', P: 'Ⓟ', Q: 'Ⓠ', R: 'Ⓡ', S: 'Ⓢ', T: 'Ⓣ', U: 'Ⓤ',
-    V: 'Ⓥ', W: 'Ⓦ', X: 'Ⓧ', Y: 'Ⓨ', Z: 'Ⓩ',
-    '0': '⓪', '1': '①', '2': '②', '3': '③', '4': '④',
-    '5': '⑤', '6': '⑥', '7': '⑦', '8': '⑧', '9': '⑨'
-  };
-  return [...text].map(c => map[c] || c).join('');
-}
-
-function wide_text(text) {
-  const map = {
-    'a': 'ａ', 'b': 'ｂ', 'c': 'ｃ', 'd': 'ｄ', 'e': 'ｅ', 'f': 'ｆ', 'g': 'ｇ',
-    'h': 'ｈ', 'i': 'ｉ', 'j': 'ｊ', 'k': 'ｋ', 'l': 'ｌ', 'm': 'ｍ', 'n': 'ｎ',
-    'o': 'ｏ', 'p': 'ｐ', 'q': 'ｑ', 'r': 'ｒ', 's': 'ｓ', 't': 'ｔ', 'u': 'ｕ',
-    'v': 'ｖ', 'w': 'ｗ', 'x': 'ｘ', 'y': 'ｙ', 'z': 'ｚ',
-    'A': 'Ａ', 'B': 'Ｂ', 'C': 'Ｃ', 'D': 'Ｄ', 'E': 'Ｅ', 'F': 'Ｆ', 'G': 'Ｇ',
-    'H': 'Ｈ', 'I': 'Ｉ', 'J': 'Ｊ', 'K': 'Ｋ', 'L': 'Ｌ', 'M': 'Ｍ', 'N': 'Ｎ',
-    'O': 'Ｏ', 'P': 'Ｐ', 'Q': 'Ｑ', 'R': 'Ｒ', 'S': 'Ｓ', 'T': 'Ｔ', 'U': 'Ｕ',
-    'V': 'Ｖ', 'W': 'Ｗ', 'X': 'Ｘ', 'Y': 'Ｙ', 'Z': 'Ｚ',
-    '0': '０', '1': '１', '2': '２', '3': '３', '4': '４',
-    '5': '５', '6': '６', '7': '７', '8': '８', '9': '９'
-  };
-  return [...text].map(c => map[c] || c).join('');
-}
-
-// Base64 encode and decode with proper error handling
-function base64_encode(text) {
-  try {
-    return btoa(unescape(encodeURIComponent(text)));
-  } catch (error) {
-    return 'Invalid input for Base64 encoding';
-  }
-}
-
-function base64_decode(text) {
-  try {
-    return decodeURIComponent(escape(atob(text.trim())));
-  } catch (error) {
-    return 'Invalid Base64 string';
-  }
-}
-
-// URL encode and decode
-function url_encode(text) {
-  return encodeURIComponent(text);
-}
-
-function url_decode(text) {
-  try {
-    return decodeURIComponent(text);
-  } catch (error) {
-    return 'Invalid URL encoded string';
-  }
-}
-
-// Morse code encoder and decoder
-function morse_encode(text) {
-  const morse_dict = {
-    'a':'.-', 'b':'-...', 'c':'-.-.', 'd':'-..', 'e':'.',
-    'f':'..-.', 'g':'--.', 'h':'....', 'i':'..', 'j':'.---',
-    'k':'-.-', 'l':'.-..', 'm':'--', 'n':'-.', 'o':'---',
-    'p':'.--.', 'q':'--.-', 'r':'.-.', 's':'...', 't':'-',
-    'u':'..-', 'v':'...-', 'w':'.--', 'x':'-..-', 'y':'-.--',
-    'z':'--..', '0':'-----', '1':'.----', '2':'..---',
-    '3':'...--', '4':'....-', '5':'.....', '6':'-....',
-    '7':'--...', '8':'---..', '9':'----.', ' ':'/'
-  };
-  return text.toLowerCase().split('').map(c => morse_dict[c] || '').filter(c => c).join(' ');
-}
-
-function morse_decode(text) {
-  const reverse_morse = {
-    '.-':'a', '-...':'b', '-.-.':'c', '-..':'d', '.':'e',
-    '..-.':'f', '--.':'g', '....':'h', '..':'i', '.---':'j',
-    '-.-':'k', '.-..':'l', '--':'m', '-.':'n', '---':'o',
-    '.--.':'p', '--.-':'q', '.-.':'r', '...':'s', '-':'t',
-    '..-':'u', '...-':'v', '.--':'w', '-..-':'x', '-.--':'y',
-    '--..':'z', '-----':'0', '.----':'1', '..---':'2',
-    '...--':'3', '....-':'4', '.....':'5', '-....':'6',
-    '--...':'7', '---..':'8', '----.':'9', '/':' '
-  };
-  return text.split(' ').map(code => reverse_morse[code] || '').join('');
-}
-
-// ROT13 and other rotation ciphers
-function rot13(text) {
-  return text.replace(/[a-zA-Z]/g, function(c){
-    return String.fromCharCode(
-      (c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26
-    );
-  });
-}
-
-// Hex encode and decode
-function hex_encode(text) {
-  return Array.from(text).map(c => c.charCodeAt(0).toString(16).padStart(2, '0')).join(' ');
-}
-
-function hex_decode(text) {
-  try {
-    return text.split(' ').filter(h => h.length > 0).map(h => String.fromCharCode(parseInt(h, 16))).join('');
-  } catch (error) {
-    return 'Invalid hex input';
-  }
-}
-
-// Binary encode and decode
-function binary_encode(text) {
-  return Array.from(text).map(c => c.charCodeAt(0).toString(2).padStart(8, '0')).join(' ');
-}
-
-function binary_decode(text) {
-  try {
-    return text.split(' ').filter(b => b.length > 0).map(b => String.fromCharCode(parseInt(b, 2))).join('');
-  } catch (error) {
-    return 'Invalid binary input';
-  }
-}
-
-// Reverse text
-function reverse_text(text) {
-  return text.split('').reverse().join('');
-}
-
-// Alternating case
-function alternating_case(text) {
-  return text.split('').map((c, i) => i % 2 === 0 ? c.toLowerCase() : c.toUpperCase()).join('');
-}
-
-// Remove hyphen
-function remove_hyphen(text) {
-  return text.replace(/-+/g, '');
-}
-
-// Copy function with modern async/await
-async function copyToClipboard(text) {
-  try {
-    await navigator.clipboard.writeText(text);
-    const copyBtn = document.getElementById('copyBtn');
-    const originalContent = copyBtn.innerHTML;
-    copyBtn.innerHTML = `
-      <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-      </svg>
-      <span>Copied!</span>
-    `;
-    copyBtn.classList.add('bg-green-700');
-    
-    setTimeout(() => {
-      copyBtn.innerHTML = originalContent;
-      copyBtn.classList.remove('bg-green-700');
-    }, 2000);
-  } catch (error) {
-    console.error('Failed to copy:', error);
-  }
-}
-
-// Enhanced text analysis
-function analyzeText(text) {
-  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).filter(word => word.length > 0).length;
-  const chars = text.length;
-  const lines = text.split(/\r\n|\r|\n/).length;
-  return { words, chars, lines };
-}
-
-// Conversion functions dictionary
 const converters = {
-  'lowercase': lowercase,
-  'uppercase': uppercase,
-  'title-case': title_case,
-  'sentence-case': sentence_case,
-  'toggle-case': toggle_case,
-  'alternating-case': alternating_case,
-  'camel-case': camel_case,
-  'pascal-case': pascal_case,
-  'snake-case': snake_case,
-  'kebab-case': kebab_case,
-  'dot-case': dot_case,
-  'constant-case': constant_case,
-  'path-case': path_case,
-  'slug': slug,
-  'leetspeak': leetspeak,
-  'upside-down': upside_down,
-  'bubble-text': bubble_text,
-  'wide-text': wide_text,
-  'reverse-text': reverse_text,
-  'base64-encode': base64_encode,
-  'base64-decode': base64_decode,
-  'url-encode': url_encode,
-  'url-decode': url_decode,
-  'morse-encode': morse_encode,
-  'morse-decode': morse_decode,
-  'rot13': rot13,
-  'hex-encode': hex_encode,
-  'hex-decode': hex_decode,
-  'binary-encode': binary_encode,
-  'binary-decode': binary_decode,
-  'remove-hyphen': remove_hyphen
+  'lowercase': lowercase, 'uppercase': uppercase, 'title-case': title_case, 'sentence-case': sentence_case,
+  'toggle-case': toggle_case, 'alternating-case': alternating_case, 'camel-case': camel_case, 'pascal-case': pascal_case,
+  'snake-case': snake_case, 'kebab-case': kebab_case, 'dot-case': dot_case, 'constant-case': constant_case,
+  'path-case': path_case, 'slug': slug, 'leetspeak': leetspeak, 'upside-down': upside_down, 'bubble-text': bubble_text,
+  'wide-text': wide_text, 'reverse-text': reverse_text, 'base64-encode': base64_encode, 'base64-decode': base64_decode,
+  'url-encode': url_encode, 'url-decode': url_decode, 'morse-encode': morse_encode, 'morse-decode': morse_decode,
+  'rot13': rot13, 'hex-encode': hex_encode, 'hex-decode': hex_decode, 'binary-encode': binary_encode,
+  'binary-decode': binary_decode, 'remove-hyphen': remove_hyphen
 };
 
-// Enhanced mode definitions with formatted labels
 const modes = [
-  { id: 'lowercase', label: 'lowercase' },
-  { id: 'uppercase', label: 'UPPERCASE' },
-  { id: 'title-case', label: 'Title Case' },
-  { id: 'sentence-case', label: 'Sentence case' },
-  { id: 'slug', label: 'slug-case' },
-  { id: 'camel-case', label: 'camelCase' },
-  { id: 'pascal-case', label: 'PascalCase' },
-  { id: 'snake-case', label: 'snake_case' },
-  { id: 'kebab-case', label: 'kebab-case' },
-  { id: 'dot-case', label: 'dot.case' },
-  { id: 'constant-case', label: 'CONSTANT_CASE' },
-  { id: 'path-case', label: 'path/case' },
-  { id: 'toggle-case', label: 'tOGGLE cASE' },
-  { id: 'alternating-case', label: 'aLtErNaTiNg cAsE' },
-  { id: 'leetspeak', label: 'l33tsp34k' },
-  { id: 'upside-down', label: 'ʍopɐǝp sı ʇxǝʇ' },
-  { id: 'bubble-text', label: 'ⓑⓤⓑⓑⓛⓔ ⓣⓔⓧⓣ' },
-  { id: 'wide-text', label: 'ＷＩＤＥ　ＴＥＸＴ' },
-  { id: 'reverse-text', label: 'txet esrever' },
-  { id: 'base64-encode', label: 'Base64 Encode' },
-  { id: 'base64-decode', label: 'Base64 Decode' },
-  { id: 'url-encode', label: 'URL Encode' },
-  { id: 'url-decode', label: 'URL Decode' },
-  { id: 'hex-encode', label: 'Hex Encode' },
-  { id: 'hex-decode', label: 'Hex Decode' },
-  { id: 'binary-encode', label: 'Binary Encode' },
-  { id: 'binary-decode', label: 'Binary Decode' },
-  { id: 'morse-encode', label: 'Morse Encode' },
-  { id: 'morse-decode', label: 'Morse Decode' },
-  { id: 'rot13', label: 'ROT13' },
+  { id: 'lowercase', label: 'lowercase' }, { id: 'uppercase', label: 'UPPERCASE' },
+  { id: 'title-case', label: 'Title Case' }, { id: 'sentence-case', label: 'Sentence case' },
+  { id: 'slug', label: 'slug-case' }, { id: 'camel-case', label: 'camelCase' },
+  { id: 'pascal-case', label: 'PascalCase' }, { id: 'snake-case', label: 'snake_case' },
+  { id: 'kebab-case', label: 'kebab-case' }, { id: 'dot-case', label: 'dot.case' },
+  { id: 'constant-case', label: 'CONSTANT_CASE' }, { id: 'path-case', label: 'path/case' },
+  { id: 'toggle-case', label: 'tOGGLE cASE' }, { id: 'alternating-case', label: 'aLtErNaTiNg cAsE' },
+  { id: 'leetspeak', label: 'l33tsp34k' }, { id: 'upside-down', label: 'ʍopɐǝp sı ʇxǝʇ' },
+  { id: 'bubble-text', label: 'ⓑⓤⓑⓑⓛⓔ ⓣⓔⓧⓣ' }, { id: 'wide-text', label: 'ＷＩＤＥ　ＴＥＸＴ' },
+  { id: 'reverse-text', label: 'txet esrever' }, { id: 'base64-encode', label: 'Base64 Encode' },
+  { id: 'base64-decode', label: 'Base64 Decode' }, { id: 'url-encode', label: 'URL Encode' },
+  { id: 'url-decode', label: 'URL Decode' }, { id: 'hex-encode', label: 'Hex Encode' },
+  { id: 'hex-decode', label: 'Hex Decode' }, { id: 'binary-encode', label: 'Binary Encode' },
+  { id: 'binary-decode', label: 'Binary Decode' }, { id: 'morse-encode', label: 'Morse Encode' },
+  { id: 'morse-decode', label: 'Morse Decode' }, { id: 'rot13', label: 'ROT13' },
   { id: 'buy-me-a-coffee', label: 'Buy Me a Coffee ☕', href: 'https://buymeacoffee.com/rakibalom' }
 ];
 
-// Content descriptions for each conversion type
 const conversionDescriptions = {
-  lowercase: {
-    title: 'Lowercase',
-    description: 'Converts all characters to lowercase letters. This is commonly used for creating consistent text formatting, email addresses, and database fields where case-sensitivity matters.',
-    usage: 'Ideal for standardizing user input, creating uniform identifiers, and ensuring consistent data storage.'
-  },
-  uppercase: {
-    title: 'Uppercase',
-    description: 'Transforms all characters to uppercase letters. Frequently used for constants, environment variables, and emphasis in text.',
-    usage: 'Perfect for creating constants in programming, headings that need emphasis, and standardizing acronyms.'
-  },
-  'title-case': {
-    title: 'Title Case',
-    description: 'Capitalizes the first letter of each word while keeping the rest lowercase. This follows standard title formatting rules used in books, articles, and headlines.',
-    usage: 'Essential for document titles, headings, proper nouns, and any text that follows title capitalization conventions.'
-  },
-  'sentence-case': {
-    title: 'Sentence case',
-    description: 'Capitalizes only the first letter of each sentence, following standard sentence structure rules. This mimics natural writing patterns.',
-    usage: 'Used for regular paragraphs, descriptions, and any content that should read like natural sentences.'
-  },
-  'camel-case': {
-    title: 'camelCase',
-    description: 'Removes spaces and capitalizes the first letter of each word except the first one. Widely used in JavaScript, Java, and other programming languages for variable and function names.',
-    usage: 'Standard naming convention for variables, functions, and methods in many programming languages like JavaScript, Java, and C#.'
-  },
-  'pascal-case': {
-    title: 'PascalCase',
-    description: 'Similar to camelCase but capitalizes the first letter of every word, including the first. Commonly used for class names and type definitions.',
-    usage: 'Primary naming convention for classes, interfaces, enums, and types in object-oriented programming languages.'
-  },
-  'snake-case': {
-    title: 'snake_case',
-    description: 'Replaces spaces with underscores and converts all letters to lowercase. This is the preferred naming convention in Python, Ruby, and many database systems.',
-    usage: 'Standard for Python variables, functions, file names, and database table/column names.'
-  },
-  'kebab-case': {
-    title: 'kebab-case',
-    description: 'Replaces spaces with hyphens and converts to lowercase. Commonly used in URLs, CSS classes, and HTML attributes for better readability and SEO.',
-    usage: 'Ideal for URLs, CSS class names, HTML attributes, and any web-related identifiers.'
-  },
-  'dot-case': {
-    title: 'dot.case',
-    description: 'Uses dots to separate words instead of spaces, typically used in configuration files, package names, and certain programming contexts.',
-    usage: 'Common in configuration files, package naming (like Java packages), and some API endpoints.'
-  },
-  'constant-case': {
-    title: 'CONSTANT_CASE',
-    description: 'Converts text to uppercase with underscores replacing spaces. This is the standard convention for constants and configuration values in most programming languages.',
-    usage: 'Used for defining constants, environment variables, and configuration settings that should never change.'
-  },
-  slug: {
-    title: 'URL Slug',
-    description: 'Creates URL-friendly text by removing special characters, converting to lowercase, and replacing spaces with hyphens. Essential for creating clean, SEO-friendly URLs.',
-    usage: 'Perfect for blog post URLs, product pages, and any web address that needs to be readable and SEO-optimized.'
-  }
+  lowercase: { title: 'Lowercase', description: 'Converts all characters to lowercase letters. This is commonly used for creating consistent text formatting, email addresses, and database fields where case-sensitivity matters.', usage: 'Ideal for standardizing user input, creating uniform identifiers, and ensuring consistent data storage.' },
+  uppercase: { title: 'Uppercase', description: 'Transforms all characters to uppercase letters. Frequently used for constants, environment variables, and emphasis in text.', usage: 'Perfect for creating constants in programming, headings that need emphasis, and standardizing acronyms.' },
+  'title-case': { title: 'Title Case', description: 'Capitalizes the first letter of each word while keeping the rest lowercase. This follows standard title formatting rules used in books, articles, and headlines.', usage: 'Essential for document titles, headings, proper nouns, and any text that follows title capitalization conventions.' },
+  'sentence-case': { title: 'Sentence case', description: 'Capitalizes only the first letter of each sentence, following standard sentence structure rules. This mimics natural writing patterns.', usage: 'Used for regular paragraphs, descriptions, and any content that should read like natural sentences.' },
+  'camel-case': { title: 'camelCase', description: 'Removes spaces and capitalizes the first letter of each word except the first one. Widely used in JavaScript, Java, and other programming languages for variable and function names.', usage: 'Standard naming convention for variables, functions, and methods in many programming languages like JavaScript, Java, and C#.' },
+  'pascal-case': { title: 'PascalCase', description: 'Similar to camelCase but capitalizes the first letter of every word, including the first. Commonly used for class names and type definitions.', usage: 'Primary naming convention for classes, interfaces, enums, and types in object-oriented programming languages.' },
+  'snake-case': { title: 'snake_case', description: 'Replaces spaces with underscores and converts all letters to lowercase. This is the preferred naming convention in Python, Ruby, and many database systems.', usage: 'Standard for Python variables, functions, file names, and database table/column names.' },
+  'kebab-case': { title: 'kebab-case', description: 'Replaces spaces with hyphens and converts to lowercase. Commonly used in URLs, CSS classes, and HTML attributes for better readability and SEO.', usage: 'Ideal for URLs, CSS class names, HTML attributes, and any web-related identifiers.' },
+  'dot-case': { title: 'dot.case', description: 'Uses dots to separate words instead of spaces, typically used in configuration files, package names, and certain programming contexts.', usage: 'Common in configuration files, package naming (like Java packages), and some API endpoints.' },
+  'constant-case': { title: 'CONSTANT_CASE', description: 'Converts text to uppercase with underscores replacing spaces. This is the standard convention for constants and configuration values in most programming languages.', usage: 'Used for defining constants, environment variables, and configuration settings that should never change.' },
+  slug: { title: 'URL Slug', description: 'Creates URL-friendly text by removing special characters, converting to lowercase, and replacing spaces with hyphens. Essential for creating clean, SEO-friendly URLs.', usage: 'Perfect for blog post URLs, product pages, and any web address that needs to be readable and SEO-optimized.' }
 };
 
-// Setup variables
+// --- UI Management ---
+
 const modeButtonsDiv = document.getElementById('modeButtons');
 let currentMode = 'lowercase';
-let currentLayout = localStorage.getItem('layoutMode') || 'column';
+// DEFAULT CHANGED TO ROW
+let currentLayout = localStorage.getItem('layoutMode') || 'row'; 
 let autoCopy = localStorage.getItem('autoCopy') === 'true';
 
-// Create mode buttons
+// Create Buttons
 modes.forEach(mode => {
   const btn = document.createElement(mode.href ? 'a' : 'button');
   btn.textContent = mode.label;
-  btn.className = `px-2 py-1 text-xs rounded-md border border-gray-300 dark:border-gray-600 ${
-    mode.href ? 'bg-yellow-500 hover:bg-yellow-600 text-white' : 'bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300'
-  } hover:border-primary-500 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-200 btn-animated`;
+  btn.className = `px-3 py-1.5 text-xs rounded-lg border transition-all duration-200 btn-animated ${
+    mode.href 
+      ? 'bg-yellow-500/20 border-yellow-500/50 text-yellow-400 hover:bg-yellow-500/30' 
+      : 'bg-white/5 border-white/10 text-gray-400 hover:bg-white/10 hover:text-white'
+  }`;
   btn.id = 'btn_' + mode.id;
   
   if (mode.href) {
     btn.href = mode.href;
     btn.target = '_blank';
-  }
-
-  if (mode.id === currentMode && !mode.href) {
-    btn.classList.remove('border-gray-300', 'dark:border-gray-600', 'bg-white', 'dark:bg-gray-700', 'text-gray-700', 'dark:text-gray-300');
-    btn.classList.add('border-primary-500', 'bg-primary-500', 'text-white', 'shadow-md');
+  } else if (mode.id === currentMode) {
+    btn.classList.remove('bg-white/5', 'border-white/10', 'text-gray-400');
+    btn.classList.add('mode-btn-active');
   }
 
   if (!mode.href) {
@@ -806,74 +528,74 @@ modes.forEach(mode => {
       updateOutput();
     });
   }
-
   modeButtonsDiv.appendChild(btn);
 });
 
 function updateButtons() {
   modes.forEach(mode => {
     const btn = document.getElementById('btn_' + mode.id);
-    if (mode.id === currentMode && !mode.href) {
-      btn.classList.remove('border-gray-300', 'dark:border-gray-600', 'bg-white', 'dark:bg-gray-700', 'text-gray-700', 'dark:text-gray-300');
-      btn.classList.add('border-primary-500', 'bg-primary-500', 'text-white', 'shadow-md');
-    } else if (!mode.href) {
-      btn.classList.remove('border-primary-500', 'bg-primary-500', 'text-white', 'shadow-md');
-      btn.classList.add('border-gray-300', 'dark:border-gray-600', 'bg-white', 'dark:bg-gray-700', 'text-gray-700', 'dark:text-gray-300');
+    if (!mode.href && btn) {
+        if (mode.id === currentMode) {
+            btn.className = 'px-3 py-1.5 text-xs rounded-lg border transition-all duration-200 btn-animated mode-btn-active';
+        } else {
+            btn.className = 'px-3 py-1.5 text-xs rounded-lg border transition-all duration-200 btn-animated bg-white/5 border-white/10 text-gray-400 hover:bg-white/10 hover:text-white';
+        }
     }
   });
 }
 
-// Layout management
+// Layout Logic
 function updateLayout(layout) {
   const container = document.getElementById('textareaContainer');
   const inputText = document.getElementById('inputText');
   const outputText = document.getElementById('outputText');
   const heightInput = document.getElementById('textareaHeight');
   
+  container.className = "grid gap-4 transition-all duration-300";
+
   if (layout === 'column') {
-    container.classList.remove('lg:grid-cols-1');
-    container.classList.add('grid-cols-2');
-    const defaultHeight = '400';
-    inputText.style.height = `${defaultHeight}px`;
-    outputText.style.height = `${defaultHeight}px`;
-    heightInput.value = defaultHeight;
-    localStorage.setItem('textareaHeight', defaultHeight);
+    container.classList.add('grid-cols-1', 'lg:grid-cols-2');
+    const h = heightInput.value || 300; 
+    inputText.style.height = `${h}px`;
+    outputText.style.height = `${h}px`;
   } else {
-    container.classList.remove('grid-cols-2');
-    container.classList.add('lg:grid-cols-1');
-    const defaultHeight = '200';
-    inputText.style.height = `${defaultHeight}px`;
-    outputText.style.height = `${defaultHeight}px`;
-    heightInput.value = defaultHeight;
-    localStorage.setItem('textareaHeight', defaultHeight);
+    container.classList.add('grid-cols-1');
+    const h = heightInput.value || 200;
+    inputText.style.height = `${h}px`;
+    outputText.style.height = `${h}px`;
   }
+  
   currentLayout = layout;
   localStorage.setItem('layoutMode', layout);
   
-  const columnBtn = document.getElementById('layoutColumn');
+  const colBtn = document.getElementById('layoutColumn');
   const rowBtn = document.getElementById('layoutRow');
   
-  if (layout === 'column') {
-    columnBtn.classList.add('border-primary-500', 'bg-primary-50', 'dark:bg-primary-900');
-    rowBtn.classList.remove('border-primary-500', 'bg-primary-50', 'dark:bg-primary-900');
+  if(layout === 'column') {
+      colBtn.classList.add('border-gray-400', 'bg-white/10');
+      colBtn.classList.remove('border-gray-600');
+      rowBtn.classList.remove('border-gray-400', 'bg-white/10');
+      rowBtn.classList.add('border-gray-600');
   } else {
-    rowBtn.classList.add('border-primary-500', 'bg-primary-50', 'dark:bg-primary-900');
-    columnBtn.classList.remove('border-primary-500', 'bg-primary-50', 'dark:bg-primary-900');
+      rowBtn.classList.add('border-gray-400', 'bg-white/10');
+      rowBtn.classList.remove('border-gray-600');
+      colBtn.classList.remove('border-gray-400', 'bg-white/10');
+      colBtn.classList.add('border-gray-600');
   }
 }
 
-// Textarea height management
 function updateTextareaHeight() {
   const heightInput = document.getElementById('textareaHeight');
   const inputText = document.getElementById('inputText');
   const outputText = document.getElementById('outputText');
-  const height = Math.max(200, Math.min(800, parseInt(heightInput.value) || (currentLayout === 'column' ? 400 : 200)));
+  const height = Math.max(150, Math.min(800, parseInt(heightInput.value) || 200));
+  
   inputText.style.height = `${height}px`;
   outputText.style.height = `${height}px`;
   localStorage.setItem('textareaHeight', height);
 }
 
-// Output update function
+// Core Functions
 function updateOutput() {
   const input = document.getElementById('inputText').value;
   const outputArea = document.getElementById('outputText');
@@ -886,158 +608,119 @@ function updateOutput() {
   
   updateStats(input);
   
-  if (autoCopy) {
-    copyToClipboard(outputArea.value);
+  if (autoCopy && outputArea.value) {
+    copyToClipboard(outputArea.value, false);
   }
 }
 
-// Stats update function
 function updateStats(text) {
-  const stats = analyzeText(text);
-  document.getElementById('wordCount').textContent = `Words: ${stats.words}`;
-  document.getElementById('charCount').textContent = `Characters: ${stats.chars}`;
-  document.getElementById('lineCount').textContent = `Lines: ${stats.lines}`;
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).filter(w => w.length > 0).length;
+  document.getElementById('wordCount').textContent = `${words} words`;
+  document.getElementById('charCount').textContent = `${text.length} chars`;
+  document.getElementById('lineCount').textContent = `${text.split(/\r\n|\r|\n/).length} lines`;
 }
 
-// Theme management
-function setThemeMode(isDark) {
-  if (isDark) {
-    document.documentElement.classList.add('dark');
-    localStorage.setItem('themeMode', 'dark');
-  } else {
-    document.documentElement.classList.remove('dark');
-    localStorage.setItem('themeMode', 'light');
-  }
+async function copyToClipboard(text, showFeedback = true) {
+  try {
+    await navigator.clipboard.writeText(text);
+    if (showFeedback) {
+      const btn = document.getElementById('copyBtn');
+      const originalHTML = btn.innerHTML;
+      btn.innerHTML = `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+      btn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+      setTimeout(() => {
+        btn.innerHTML = originalHTML;
+        btn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+      }, 2000);
+    }
+  } catch (err) { console.error('Copy failed', err); }
 }
 
-// Generate conversion guide content
 function generateConversionGuide() {
   const guideContainer = document.getElementById('conversionGuide');
-  
   Object.entries(conversionDescriptions).forEach(([key, info]) => {
-    const section = document.createElement('div');
-    section.className = 'border-b border-gray-200 dark:border-gray-700 pb-3 last:border-b-0';
-    section.innerHTML = `
-      <h3 class="text-base font-semibold mb-2 text-primary-600 dark:text-primary-400">${info.title}</h3>
-      <p class="text-gray-700 dark:text-gray-300 mb-2 text-sm leading-relaxed">${info.description}</p>
-      <p class="text-gray-600 dark:text-gray-400 text-xs"><strong>Best used for:</strong> ${info.usage}</p>
-    `;
-    guideContainer.appendChild(section);
+    const div = document.createElement('div');
+    div.className = 'border-b border-white/10 pb-4 last:border-0';
+    div.innerHTML = `<h4 class="text-gray-300 font-medium mb-1">${info.title}</h4><p class="text-sm text-gray-500 mb-1">${info.description}</p><p class="text-xs text-gray-600">Best used for: ${info.usage}</p>`;
+    guideContainer.appendChild(div);
   });
 }
 
-// Reset settings
-function resetSettings() {
-  localStorage.setItem('layoutMode', 'column');
-  localStorage.setItem('themeMode', 'light');
-  localStorage.setItem('autoCopy', 'false');
-  localStorage.setItem('textareaHeight', '400');
-  
-  currentLayout = 'column';
-  autoCopy = false;
-  
-  document.getElementById('textareaHeight').value = '400';
-  document.getElementById('autoCopy').checked = false;
-  
-  setThemeMode(false);
-  updateLayout('column');
-  updateTextareaHeight();
-}
-
-// Event listeners
-document.getElementById('inputText').addEventListener('input', updateOutput);
-
-document.getElementById('clearBtn').addEventListener('click', () => {
-  document.getElementById('inputText').value = '';
-  document.getElementById('outputText').value = '';
-  updateStats('');
-});
-
-document.getElementById('removeHyphenBtn').addEventListener('click', () => {
-  const outputArea = document.getElementById('outputText');
-  outputArea.value = remove_hyphen(outputArea.value);
-  updateStats(document.getElementById('inputText').value);
-});
-
-document.getElementById('copyBtn').addEventListener('click', () => {
-  copyToClipboard(document.getElementById('outputText').value);
-});
-
-document.getElementById('darkModeToggle').addEventListener('click', () => {
-  const isDark = document.documentElement.classList.contains('dark');
-  setThemeMode(!isDark);
-});
-
-// Settings modal
+// Settings & Reset
 const settingsModal = document.getElementById('settingsModal');
-const settingsBtn = document.getElementById('settingsBtn');
-const closeSettings = document.getElementById('closeSettings');
+const toggleModal = (show) => {
+    if(show) { settingsModal.classList.remove('hidden'); settingsModal.classList.add('flex'); }
+    else { settingsModal.classList.add('hidden'); settingsModal.classList.remove('flex'); }
+};
 
-settingsBtn.addEventListener('click', () => {
-  settingsModal.classList.remove('hidden');
-  settingsModal.classList.add('flex');
-});
+document.getElementById('settingsBtn').addEventListener('click', () => toggleModal(true));
+document.getElementById('settingsBtnMobile').addEventListener('click', () => toggleModal(true));
+document.getElementById('closeSettings').addEventListener('click', () => toggleModal(false));
+settingsModal.addEventListener('click', (e) => { if(e.target === settingsModal) toggleModal(false); });
 
-closeSettings.addEventListener('click', () => {
-  settingsModal.classList.add('hidden');
-  settingsModal.classList.remove('flex');
-});
-
-settingsModal.addEventListener('click', (e) => {
-  if (e.target === settingsModal) {
-    settingsModal.classList.add('hidden');
-    settingsModal.classList.remove('flex');
-  }
-});
-
-// Layout buttons
-document.getElementById('layoutColumn').addEventListener('click', () => {
-  updateLayout('column');
-  updateTextareaHeight();
-});
-
-document.getElementById('layoutRow').addEventListener('click', () => {
-  updateLayout('row');
-  updateTextareaHeight();
-});
-
-// Textarea height
+document.getElementById('layoutColumn').addEventListener('click', () => updateLayout('column'));
+document.getElementById('layoutRow').addEventListener('click', () => updateLayout('row'));
 document.getElementById('textareaHeight').addEventListener('change', updateTextareaHeight);
-
-// Auto copy
 document.getElementById('autoCopy').addEventListener('change', (e) => {
   autoCopy = e.target.checked;
   localStorage.setItem('autoCopy', autoCopy);
 });
 
-// Reset settings
+// RESET TO ROW
+function resetSettings() {
+  localStorage.setItem('layoutMode', 'row');
+  localStorage.setItem('autoCopy', 'false');
+  localStorage.setItem('textareaHeight', '200');
+  
+  currentLayout = 'row';
+  autoCopy = false;
+  
+  document.getElementById('textareaHeight').value = '200';
+  document.getElementById('autoCopy').checked = false;
+  
+  updateLayout('row');
+  updateTextareaHeight();
+  toggleModal(false);
+}
 document.getElementById('resetSettings').addEventListener('click', resetSettings);
 
-// Initialize theme
-const savedTheme = localStorage.getItem('themeMode');
-if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-  setThemeMode(true);
-}
+// Mobile Menu
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+mobileMenuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+});
 
-// Initialize layout
-updateLayout('column');
+// Event Listeners
+document.getElementById('inputText').addEventListener('input', updateOutput);
+document.getElementById('clearBtn').addEventListener('click', () => {
+  document.getElementById('inputText').value = '';
+  document.getElementById('outputText').value = '';
+  updateStats('');
+});
+document.getElementById('removeHyphenBtn').addEventListener('click', () => {
+  const out = document.getElementById('outputText');
+  out.value = remove_hyphen(out.value);
+});
+document.getElementById('copyBtn').addEventListener('click', () => {
+  copyToClipboard(document.getElementById('outputText').value);
+});
 
-// Initialize textarea height
+// Init
+generateConversionGuide();
+updateLayout(currentLayout);
+
 const savedHeight = localStorage.getItem('textareaHeight');
 if (savedHeight) {
   document.getElementById('textareaHeight').value = savedHeight;
   updateTextareaHeight();
+} else {
+  document.getElementById('textareaHeight').value = 200;
 }
 
-// Initialize auto copy
 document.getElementById('autoCopy').checked = autoCopy;
-
-// Generate content
-generateConversionGuide();
-
-// Initial update
 updateOutput();
-</script>
 
+</script>
 </body>
 </html>
