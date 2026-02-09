@@ -7,7 +7,7 @@
 
   <!-- SEO Meta -->
   <meta name="description" content="Free online Lorem Ipsum generator tool. Create dummy text, placeholder content, and filler text for web design, graphic design, and publishing. Generate paragraphs, words, sentences, and lists instantly. No registration required." />
-  <meta name="keywords" content="lorem ipsum generator, dummy text generator, placeholder text, filler text, lorem ipsum dolor sit amet, blind text generator, mock text generator, text placeholder, web design tools, graphic design tools, typesetting tool, content placeholder, random text generator, latin text generator, design mockup text, wireframe text, prototype text, web development tools, UI design tools, UX design tools, content strategy, layout testing, typography tool, text filler, paragraph generator, sentence generator, word generator, list generator, HTML text generator, copywriting tools, content creation tools, design resources, web design resources, free online tools, text manipulation, string generator, dummy content, sample text, template text, boilerplate text, greeking text, greek text, design placeholder, layout placeholder, print design tools, digital publishing tools, content management, website builder tools, page layout tools, font testing tool, typeface testing, readability testing, text layout, column layout testing, responsive design testing, mobile design tools, app design tools, software design tools, interface design, user interface tools, front end development tools, CSS layout testing, HTML prototyping, wireframing tools, mockup tools, prototype tools, design systems, component library, style guide tools, brand guidelines, visual design, creative tools, design workflow, productivity tools, developer tools, designer tools, freelancer tools, agency tools, studio tools" />
+  <meta name="keywords" content="lorem ipsum generator, dummy text generator, placeholder text, filler text, lorem ipsum dolor sit amet, blind text generator, mock text generator, text placeholder, web design tools, graphic design tools, typesetting tool, content placeholder, random text generator, latin text generator, design mockup text, wireframe text, prototype text, web development tools, UI design tools, UX design tools" />
   <meta name="author" content="RakibAlom" />
   <meta name="robots" content="index, follow" />
   <meta name="googlebot" content="index, follow" />
@@ -36,7 +36,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -67,7 +67,7 @@
       color: #e5e5e5;
     }
     
-    /* Animated mesh gradient background */
+    /* Clean mesh gradient background */
     .bg-mesh {
       background-color: #0a0a0a;
       background-image: 
@@ -78,7 +78,7 @@
       background-attachment: fixed;
     }
 
-    /* Glassmorphism utilities */
+    /* Clean glassmorphism - minimal tint */
     .glass-panel {
       background: rgba(20, 20, 20, 0.6);
       backdrop-filter: blur(20px);
@@ -98,6 +98,11 @@
       outline: none;
     }
 
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
     /* Scrollbar */
     ::-webkit-scrollbar {
       width: 8px;
@@ -112,11 +117,6 @@
     }
     ::-webkit-scrollbar-thumb:hover {
       background: rgba(255,255,255,0.25); 
-    }
-
-    textarea {
-      resize: vertical;
-      min-height: 150px;
     }
 
     .btn-animated {
@@ -138,11 +138,23 @@
       opacity: 1;
     }
 
-    /* Mode button active state */
-    .mode-btn-active {
+    /* Type button styling - minimal clean version */
+    .type-btn {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .type-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+    
+    .type-btn.active {
       background: rgba(255, 255, 255, 0.15) !important;
       border-color: rgba(255, 255, 255, 0.3) !important;
       color: #fff !important;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
     }
 
     /* Article content styling */
@@ -201,26 +213,19 @@
       transform: rotate(180deg);
     }
 
-    /* Custom range slider */
-    input[type=range] {
-      -webkit-appearance: none;
-      background: transparent;
+    /* Fade animation */
+    .fade-in {
+      animation: fadeIn 0.3s ease forwards;
     }
-    input[type=range]::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      height: 16px;
-      width: 16px;
-      border-radius: 50%;
-      background: #fff;
-      cursor: pointer;
-      margin-top: -6px;
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-    input[type=range]::-webkit-slider-runnable-track {
-      width: 100%;
-      height: 4px;
-      cursor: pointer;
-      background: rgba(255,255,255,0.2);
-      border-radius: 2px;
+
+    /* Glow text effect */
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
     }
   </style>
 </head>
@@ -228,17 +233,22 @@
 
   <!-- Header with Navigation -->
   <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
-    <div class="container mx-auto px-4">
+    <div class="max-w-6xl mx-auto px-4">
       <div class="flex items-center justify-between h-16">
         <!-- Logo -->
         <div class="flex items-center space-x-3">
-          <div class="w-8 h-8 bg-gray-700 rounded-md flex items-center justify-center">
-            <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z"/>
-            </svg>
-          </div>
+          <svg class="w-8 h-8 sm:w-9 sm:h-9" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 12h20M10 20h20M10 28h12" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
           <div>
-            <h1 class="text-lg font-bold text-white">Lorem Ipsum Generator</h1>
+            <h1 class="text-base sm:text-lg font-bold text-white">Lorem Ipsum Generator</h1>
             <p class="text-gray-400 text-xs hidden sm:block">Professional Dummy Text Tool</p>
           </div>
         </div>
@@ -256,7 +266,7 @@
         </nav>
 
         <!-- Mobile Menu Button -->
-        <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-white/10 text-gray-300">
+        <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
@@ -267,11 +277,11 @@
     <!-- Mobile Menu -->
     <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
       <div class="px-4 py-4 space-y-3">
-        <a href="https://rakibalom.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2">
+        <a href="https://rakibalom.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
           Home
         </a>
-        <a href="https://rakibalom.com/tools/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2">
+        <a href="https://rakibalom.com/tools/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
           All Tools
         </a>
@@ -280,57 +290,64 @@
   </header>
 
   <!-- Banner Section -->
-  <section class="py-6 px-4 border-b border-white/5">
-    <div class="container mx-auto text-center">
-      <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
+  <section class="py-6 sm:py-8 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text px-2">
         Lorem Ipsum Generator
       </h1>
-      <p class="text-gray-400 text-sm sm:text-base">
+      <p class="text-gray-400 text-base sm:text-lg px-4">
         Online Free Dummy Text & Placeholder Content Tool
       </p>
     </div>
   </section>
 
   <!-- Main Content -->
-  <main class="flex-grow container mx-auto px-4 py-6 space-y-6">
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-16 w-full">
 
     <!-- Tool Interface -->
-    <div class="glass-panel rounded-xl p-4 sm:p-6 space-y-6">
+    <div class="glass-panel rounded-2xl p-4 sm:p-6 md:p-8 mb-6">
       
-      <!-- Controls -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <!-- Type Selection -->
-        <div class="space-y-2">
-          <label class="text-sm font-medium text-gray-300 flex items-center gap-2">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"/></svg>
-            Generate Type
-          </label>
-          <select id="generateType" class="w-full p-3 rounded-lg glass-input text-sm">
-            <option value="paragraphs">Paragraphs</option>
-            <option value="sentences">Sentences</option>
-            <option value="words">Words</option>
-            <option value="lists">Lists</option>
-          </select>
+      <!-- Type Selection Buttons -->
+      <div class="mb-6">
+        <label class="text-sm font-medium text-gray-300 mb-3 block">Generate Type</label>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <button class="type-btn active px-4 py-3 rounded-xl border border-white/10 bg-white/5 text-gray-300 flex flex-col items-center gap-2" data-type="paragraphs">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"/></svg>
+            <span class="text-sm font-medium">Paragraphs</span>
+          </button>
+          <button class="type-btn px-4 py-3 rounded-xl border border-white/10 bg-white/5 text-gray-300 flex flex-col items-center gap-2" data-type="sentences">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            <span class="text-sm font-medium">Sentences</span>
+          </button>
+          <button class="type-btn px-4 py-3 rounded-xl border border-white/10 bg-white/5 text-gray-300 flex flex-col items-center gap-2" data-type="words">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"/></svg>
+            <span class="text-sm font-medium">Words</span>
+          </button>
+          <button class="type-btn px-4 py-3 rounded-xl border border-white/10 bg-white/5 text-gray-300 flex flex-col items-center gap-2" data-type="lists">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+            <span class="text-sm font-medium">Lists</span>
+          </button>
         </div>
+      </div>
 
+      <!-- Controls Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
         <!-- Amount -->
-        <div class="space-y-2">
-          <label class="text-sm font-medium text-gray-300 flex items-center gap-2">
+        <div>
+          <label class="text-sm font-medium text-gray-300 mb-2 block flex items-center gap-2">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"/></svg>
             Amount
           </label>
-          <div class="flex items-center gap-3">
-            <input type="number" id="amount" min="1" max="100" value="5" class="w-full p-3 rounded-lg glass-input text-sm">
-          </div>
+          <input type="number" id="amount" min="1" max="100" value="5" class="w-full px-4 py-3 rounded-lg glass-input text-sm font-medium">
         </div>
 
         <!-- Format -->
-        <div class="space-y-2">
-          <label class="text-sm font-medium text-gray-300 flex items-center gap-2">
+        <div>
+          <label class="text-sm font-medium text-gray-300 mb-2 block flex items-center gap-2">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m2 16l4-16M6 9h14M4 15h14"/></svg>
             Output Format
           </label>
-          <select id="outputFormat" class="w-full p-3 rounded-lg glass-input text-sm">
+          <select id="outputFormat" class="w-full px-4 py-3 rounded-lg glass-input text-sm font-medium">
             <option value="plain">Plain Text</option>
             <option value="html">HTML</option>
             <option value="markdown">Markdown</option>
@@ -338,24 +355,22 @@
         </div>
 
         <!-- Options -->
-        <div class="space-y-2">
-          <label class="text-sm font-medium text-gray-300 flex items-center gap-2">
+        <div>
+          <label class="text-sm font-medium text-gray-300 mb-2 block flex items-center gap-2">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
             Options
           </label>
-          <div class="flex items-center gap-3 p-3 rounded-lg glass-input">
-            <label class="flex items-center gap-2 text-sm text-gray-400 cursor-pointer">
-              <input type="checkbox" id="startWithLorem" checked class="rounded bg-black/40 border-white/20 text-white focus:ring-0">
-              <span>Start with "Lorem ipsum"</span>
-            </label>
-          </div>
+          <label class="flex items-center gap-3 px-4 py-3 rounded-lg glass-input cursor-pointer hover:bg-white/5 transition-colors">
+            <input type="checkbox" id="startWithLorem" checked class="rounded bg-black/40 border-white/20 text-white focus:ring-0 focus:ring-offset-0 w-4 h-4">
+            <span class="text-sm text-gray-300">Start with "Lorem ipsum"</span>
+          </label>
         </div>
       </div>
 
       <!-- Action Buttons -->
-      <div class="flex flex-wrap gap-3">
-        <button id="generateBtn" class="flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg border border-white/10 transition-all btn-animated font-medium">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+      <div class="flex flex-wrap gap-3 mb-6">
+        <button id="generateBtn" class="flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg border border-white/10 transition-all duration-300 btn-animated font-medium">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
           Generate Text
         </button>
         <button id="copyBtn" class="flex items-center gap-2 px-6 py-3 bg-white/5 hover:bg-white/10 text-gray-300 rounded-lg border border-white/10 transition-all btn-animated font-medium">
@@ -375,135 +390,148 @@
       <!-- Output Area -->
       <div class="relative">
         <textarea id="outputText" readonly spellcheck="false"
-          class="w-full h-64 sm:h-80 p-4 rounded-lg glass-input font-mono text-sm leading-relaxed pr-24"
+          class="w-full h-64 sm:h-80 p-4 rounded-lg glass-input font-mono text-sm leading-relaxed resize-none"
           placeholder="Generated Lorem Ipsum text will appear here..."></textarea>
         
         <!-- Stats Overlay -->
-        <div class="absolute bottom-3 right-3 flex gap-4 text-xs text-gray-500 bg-black/60 px-3 py-1.5 rounded-lg backdrop-blur-sm">
+        <div class="absolute bottom-3 right-3 flex gap-4 text-xs text-gray-400 bg-black/80 px-4 py-2 rounded-lg backdrop-blur-sm border border-white/10">
           <span id="wordCount">Words: 0</span>
           <span id="charCount">Chars: 0</span>
-          <span id="paraCount">Paragraphs: 0</span>
+          <span id="paraCount">Para: 0</span>
         </div>
       </div>
 
       <!-- Quick Presets -->
-      <div class="flex flex-wrap gap-2">
-        <span class="text-sm text-gray-400 py-1">Quick Presets:</span>
-        <button class="preset-btn px-3 py-1 text-xs rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all" data-amount="1" data-type="paragraphs">1 Paragraph</button>
-        <button class="preset-btn px-3 py-1 text-xs rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all" data-amount="3" data-type="paragraphs">3 Paragraphs</button>
-        <button class="preset-btn px-3 py-1 text-xs rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all" data-amount="5" data-type="paragraphs">5 Paragraphs</button>
-        <button class="preset-btn px-3 py-1 text-xs rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all" data-amount="10" data-type="sentences">10 Sentences</button>
-        <button class="preset-btn px-3 py-1 text-xs rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all" data-amount="100" data-type="words">100 Words</button>
+      <div class="flex flex-wrap gap-2 mt-4">
+        <span class="text-sm text-gray-400 py-2">Quick Presets:</span>
+        <button class="preset-btn px-4 py-1.5 text-xs rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all" data-amount="1" data-type="paragraphs">1 Paragraph</button>
+        <button class="preset-btn px-4 py-1.5 text-xs rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all" data-amount="3" data-type="paragraphs">3 Paragraphs</button>
+        <button class="preset-btn px-4 py-1.5 text-xs rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all" data-amount="5" data-type="paragraphs">5 Paragraphs</button>
+        <button class="preset-btn px-4 py-1.5 text-xs rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all" data-amount="10" data-type="sentences">10 Sentences</button>
+        <button class="preset-btn px-4 py-1.5 text-xs rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all" data-amount="100" data-type="words">100 Words</button>
+        <button class="preset-btn px-4 py-1.5 text-xs rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all" data-amount="500" data-type="words">500 Words</button>
       </div>
     </div>
 
     <!-- Features Section -->
-    <section class="glass-panel rounded-xl p-6">
-      <h2 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
-        <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-          <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
-        </svg>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-12 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
         Why Choose Our Lorem Ipsum Generator?
       </h2>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <div class="p-4 rounded-lg bg-white/5 border border-white/5 hover:bg-white/10 transition-all">
-          <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center mb-3">
-            <svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="glass-panel rounded-xl p-6 glass-hover transition-all duration-300">
+          <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
           </div>
-          <h3 class="text-base font-semibold text-gray-200 mb-1">Lightning Fast</h3>
-          <p class="text-sm text-gray-400">Generate thousands of words instantly with our optimized algorithm. No waiting, no loading screens.</p>
+          <h3 class="text-lg font-semibold mb-2 text-white">Lightning Fast</h3>
+          <p class="text-gray-400 text-sm">Generate thousands of words instantly with our optimized algorithm. No waiting, no loading screens.</p>
         </div>
-
-        <div class="p-4 rounded-lg bg-white/5 border border-white/5 hover:bg-white/10 transition-all">
-          <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center mb-3">
-            <svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+        
+        <div class="glass-panel rounded-xl p-6 glass-hover transition-all duration-300">
+          <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
           </div>
-          <h3 class="text-base font-semibold text-gray-200 mb-1">100% Private</h3>
-          <p class="text-sm text-gray-400">All text generation happens in your browser. We never store or transmit your generated content.</p>
+          <h3 class="text-lg font-semibold mb-2 text-white">100% Private</h3>
+          <p class="text-gray-400 text-sm">All text generation happens in your browser. We never store or transmit your generated content.</p>
         </div>
-
-        <div class="p-4 rounded-lg bg-white/5 border border-white/5 hover:bg-white/10 transition-all">
-          <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center mb-3">
-            <svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>
+        
+        <div class="glass-panel rounded-xl p-6 glass-hover transition-all duration-300">
+          <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/>
+            </svg>
           </div>
-          <h3 class="text-base font-semibold text-gray-200 mb-1">Multiple Formats</h3>
-          <p class="text-sm text-gray-400">Export as plain text, HTML, or Markdown. Perfect for web developers, content creators, and designers.</p>
+          <h3 class="text-lg font-semibold mb-2 text-white">Multiple Formats</h3>
+          <p class="text-gray-400 text-sm">Export as plain text, HTML, or Markdown. Perfect for web developers, content creators, and designers.</p>
         </div>
-
-        <div class="p-4 rounded-lg bg-white/5 border border-white/5 hover:bg-white/10 transition-all">
-          <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center mb-3">
-            <svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+        
+        <div class="glass-panel rounded-xl p-6 glass-hover transition-all duration-300">
+          <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+            </svg>
           </div>
-          <h3 class="text-base font-semibold text-gray-200 mb-1">Fully Customizable</h3>
-          <p class="text-sm text-gray-400">Control paragraph count, sentence length, word count, and output format. Tailor the text to your exact needs.</p>
+          <h3 class="text-lg font-semibold mb-2 text-white">Fully Customizable</h3>
+          <p class="text-gray-400 text-sm">Control paragraph count, sentence length, word count, and output format. Tailor the text to your exact needs.</p>
         </div>
-
-        <div class="p-4 rounded-lg bg-white/5 border border-white/5 hover:bg-white/10 transition-all">
-          <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center mb-3">
-            <svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+        
+        <div class="glass-panel rounded-xl p-6 glass-hover transition-all duration-300">
+          <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+            </svg>
           </div>
-          <h3 class="text-base font-semibold text-gray-200 mb-1">Mobile Friendly</h3>
-          <p class="text-sm text-gray-400">Generate Lorem Ipsum on any device. Fully responsive design works perfectly on phones, tablets, and desktops.</p>
+          <h3 class="text-lg font-semibold mb-2 text-white">Mobile Friendly</h3>
+          <p class="text-gray-400 text-sm">Generate Lorem Ipsum on any device. Fully responsive design works perfectly on phones, tablets, and desktops.</p>
         </div>
-
-        <div class="p-4 rounded-lg bg-white/5 border border-white/5 hover:bg-white/10 transition-all">
-          <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center mb-3">
-            <svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        
+        <div class="glass-panel rounded-xl p-6 glass-hover transition-all duration-300">
+          <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
           </div>
-          <h3 class="text-base font-semibold text-gray-200 mb-1">100% Free Forever</h3>
-          <p class="text-sm text-gray-400">No registration, no limits, no watermarks. Use our Lorem Ipsum generator as much as you need, completely free.</p>
+          <h3 class="text-lg font-semibold mb-2 text-white">100% Free Forever</h3>
+          <p class="text-gray-400 text-sm">No registration, no limits, no watermarks. Use our Lorem Ipsum generator as much as you need, completely free.</p>
         </div>
       </div>
     </section>
 
     <!-- How to Use Section -->
-    <section class="glass-panel rounded-xl p-6">
-      <h2 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
-        <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
-        </svg>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-12 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
         How to Use the Lorem Ipsum Generator
       </h2>
-      
-      <div class="space-y-4">
-        <div class="flex items-start gap-4 p-4 rounded-lg bg-white/5 border border-white/5">
-          <div class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0 text-sm font-bold text-gray-300">1</div>
+      <div class="space-y-6">
+        <div class="glass-panel rounded-xl p-6 flex items-start space-x-4">
+          <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold">1</span>
+          </div>
           <div>
-            <h3 class="text-base font-semibold text-gray-200 mb-1">Select Generation Type</h3>
-            <p class="text-sm text-gray-400">Choose whether you want to generate paragraphs, sentences, words, or lists. Each type serves different purposes in your design workflow.</p>
+            <h3 class="text-lg font-semibold mb-1 text-white">Select Generation Type</h3>
+            <p class="text-gray-400 text-sm">Choose whether you want to generate paragraphs, sentences, words, or lists. Each type serves different purposes in your design workflow.</p>
           </div>
         </div>
-
-        <div class="flex items-start gap-4 p-4 rounded-lg bg-white/5 border border-white/5">
-          <div class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0 text-sm font-bold text-gray-300">2</div>
+        
+        <div class="glass-panel rounded-xl p-6 flex items-start space-x-4">
+          <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold">2</span>
+          </div>
           <div>
-            <h3 class="text-base font-semibold text-gray-200 mb-1">Set the Amount</h3>
-            <p class="text-sm text-gray-400">Enter the number of paragraphs, sentences, or words you need. You can generate anywhere from 1 to 100 units at a time.</p>
+            <h3 class="text-lg font-semibold mb-1 text-white">Set the Amount</h3>
+            <p class="text-gray-400 text-sm">Enter the number of paragraphs, sentences, or words you need. You can generate anywhere from 1 to 100 units at a time.</p>
           </div>
         </div>
-
-        <div class="flex items-start gap-4 p-4 rounded-lg bg-white/5 border border-white/5">
-          <div class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0 text-sm font-bold text-gray-300">3</div>
+        
+        <div class="glass-panel rounded-xl p-6 flex items-start space-x-4">
+          <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold">3</span>
+          </div>
           <div>
-            <h3 class="text-base font-semibold text-gray-200 mb-1">Choose Output Format</h3>
-            <p class="text-sm text-gray-400">Select plain text for general use, HTML for web projects, or Markdown for documentation and content management systems.</p>
+            <h3 class="text-lg font-semibold mb-1 text-white">Choose Output Format</h3>
+            <p class="text-gray-400 text-sm">Select plain text for general use, HTML for web projects, or Markdown for documentation and content management systems.</p>
           </div>
         </div>
-
-        <div class="flex items-start gap-4 p-4 rounded-lg bg-white/5 border border-white/5">
-          <div class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0 text-sm font-bold text-gray-300">4</div>
+        
+        <div class="glass-panel rounded-xl p-6 flex items-start space-x-4">
+          <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold">4</span>
+          </div>
           <div>
-            <h3 class="text-base font-semibold text-gray-200 mb-1">Generate and Copy</h3>
-            <p class="text-sm text-gray-400">Click "Generate Text" to create your Lorem Ipsum, then use "Copy to Clipboard" or "Download" to save the content for your project.</p>
+            <h3 class="text-lg font-semibold mb-1 text-white">Generate and Copy</h3>
+            <p class="text-gray-400 text-sm">Click "Generate Text" to create your Lorem Ipsum, then use "Copy to Clipboard" or "Download" to save the content for your project.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Article Section -->
-    <section class="glass-panel rounded-xl p-6 md:p-8">
-      <article class="article-content">
+    <section class="mb-16">
+      <article class="glass-panel rounded-2xl p-6 md:p-12 article-content">
         <h2>The Complete Guide to Lorem Ipsum: History, Usage, and Best Practices</h2>
         
         <p><strong>Lorem Ipsum</strong> has been the printing and typesetting industry's standard dummy text for over five centuries. This comprehensive guide explores everything you need to know about this ubiquitous placeholder text, from its ancient Roman origins to modern digital applications. Whether you're a web designer, graphic artist, content creator, or developer, understanding Lorem Ipsum is essential for professional design workflows.</p>
@@ -518,260 +546,239 @@
 
         <h3>Ancient Roman Origins</h3>
         
-        <p>The story of Lorem Ipsum begins with Marcus Tullius Cicero, the famous Roman statesman, orator, and philosopher. In 45 BC, Cicero wrote "De Finibus Bonorum et Malorum," a treatise on the philosophical schools of thought regarding the highest good and evil. The text that would become Lorem Ipsum comes from a passage discussing pleasure and pain:</p>
+        <p>The story of Lorem Ipsum begins with Marcus Tullius Cicero, the famous Roman statesman, orator, and philosopher. In 45 BC, Cicero wrote "De Finibus Bonorum et Malorum," a treatise on the philosophical schools of thought regarding the highest good and evil. The text that would become Lorem Ipsum comes from a passage discussing pleasure and pain in Book 1, Section 10.32 of this work.</p>
 
-        <p><em>"Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."</em></p>
-
-        <p>This translates roughly to: "Nor is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but occasionally circumstances occur in which toil and pain can procure him some great pleasure."</p>
+        <p>The original Latin passage reads: <em>"Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."</em> This translates roughly to: "Nor is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but occasionally circumstances occur in which toil and pain can procure him some great pleasure." This philosophical exploration of human nature and motivation formed the basis for what would become the most widely used placeholder text in history.</p>
 
         <h3>The Scrambled Evolution</h3>
         
-        <p>How did a serious philosophical text become the world's most famous gibberish? The transformation likely occurred in the 1500s when an unknown printer scrambled the text to create a <strong>type specimen book</strong>. By scrambling the Latin and removing meaningful structure, the printer created text that looked like readable content without actually saying anything—perfect for demonstrating fonts and layouts.</p>
+        <p>How did a serious philosophical text become the world's most famous gibberish? The transformation likely occurred in the 1500s when an unknown printer scrambled the text to create a <strong>type specimen book</strong>. By scrambling the Latin and removing meaningful structure, the printer created text that looked like readable content without actually saying anything—perfect for demonstrating fonts and layouts without the distraction of meaningful content.</p>
 
-        <p>The text gained widespread popularity in the 1960s when <strong>Letraset</strong>, a French lettering company, released dry-transfer sheets containing Lorem Ipsum passages. These sheets allowed graphic artists to rub letters onto layouts, making Lorem Ipsum the standard for <strong>advertising layouts</strong>, <strong>architectural presentations</strong>, and <strong>graphic design work</strong>.</p>
+        <p>The text gained widespread popularity in the 1960s when <strong>Letraset</strong>, a French lettering company, released dry-transfer sheets containing Lorem Ipsum passages. These sheets allowed graphic artists to rub letters onto layouts, making Lorem Ipsum the standard for <strong>advertising layouts</strong>, <strong>architectural presentations</strong>, and <strong>graphic design work</strong>. Before digital desktop publishing, designers would physically transfer these letters onto their mockups, a painstaking process that made Lorem Ipsum an essential tool in every designer's arsenal.</p>
 
         <h3>The Digital Revolution</h3>
         
-        <p>In the 1980s, <strong>Aldus Corporation</strong> (later acquired by Adobe) brought Lorem Ipsum into the digital age through their <strong>PageMaker</strong> desktop publishing software. The program included Lorem Ipsum as default placeholder text, cementing its status as the industry standard for digital design. Today, virtually every design software, from Adobe Creative Suite to web design tools, includes or supports Lorem Ipsum generation.</p>
+        <p>In the 1980s, <strong>Aldus Corporation</strong> (later acquired by Adobe) brought Lorem Ipsum into the digital age through their <strong>PageMaker</strong> desktop publishing software. The program included Lorem Ipsum as default placeholder text, cementing its status as the industry standard for digital design. Today, virtually every design software, from Adobe Creative Suite to web design tools like Figma, Sketch, and Adobe XD, includes or supports Lorem Ipsum generation. Modern web development frameworks, content management systems, and even code editors have Lorem Ipsum plugins or built-in features, demonstrating how deeply embedded this ancient text has become in contemporary digital workflows.</p>
 
         <h2>Why Use a Lorem Ipsum Generator?</h2>
 
         <h3>1. Focus on Design, Not Content</h3>
         
-        <p>When presenting design concepts to clients or stakeholders, real content can be distracting. Readers naturally focus on words and meaning rather than visual elements. <strong>Lorem Ipsum placeholder text</strong> eliminates this distraction, allowing viewers to evaluate layout, typography, color schemes, and overall design without getting caught up in reading.</p>
+        <p>When presenting design concepts to clients or stakeholders, real content can be highly distracting. Readers naturally focus on words and meaning rather than visual elements. They might critique grammar, question word choices, or get caught up in debates about messaging and tone. <strong>Lorem Ipsum placeholder text</strong> eliminates this distraction entirely, allowing viewers to evaluate layout, typography, color schemes, spacing, visual hierarchy, and overall design aesthetic without getting sidetracked by content discussions. This is particularly valuable in early-stage presentations where design direction needs approval before content is finalized.</p>
 
         <h3>2. Realistic Text Flow and Length</h3>
         
-        <p>Unlike repetitive filler text like "Content here, content here," Lorem Ipsum provides realistic word lengths, sentence structures, and paragraph flows. This authenticity helps designers accurately gauge how real content will look in their layouts, including text wrapping, hyphenation, and column balancing.</p>
+        <p>Unlike repetitive filler text like "Content here, content here" or "Text placeholder repeated," Lorem Ipsum provides realistic word lengths, sentence structures, and paragraph flows that closely mimic actual written content. The distribution of letters in Lorem Ipsum approximates the frequency distribution found in English and other Latin-based languages, making it excellent for testing typography and layout. This authenticity helps designers accurately gauge how real content will look in their layouts, including critical details like text wrapping, hyphenation, column balancing, line heights, and letter spacing. When you use Lorem Ipsum, you're seeing a realistic preview of how actual content will flow and fill your design.</p>
 
         <h3>3. Universal Recognition</h3>
         
-        <p>Lorem Ipsum is instantly recognizable to designers, developers, and content professionals worldwide. Using it signals that content is temporary and design is the focus. This universal understanding prevents confusion about whether text is final or placeholder.</p>
+        <p>Lorem Ipsum is instantly recognizable to designers, developers, content professionals, and even many clients worldwide. The moment someone sees "Lorem ipsum dolor sit amet," they immediately understand that this is placeholder text and the focus should be on visual design rather than content. This universal understanding prevents confusion about whether text is final or temporary, reduces unnecessary questions about content approval, and establishes clear expectations about the stage of the design process. The widespread recognition of Lorem Ipsum has made it a sort of visual shorthand for "work in progress" in the design world.</p>
 
         <h3>4. SEO and Content Strategy</h3>
         
-        <p>Using <strong>dummy text generators</strong> during website development prevents search engines from indexing placeholder content. This is crucial for SEO, as publishing pages with "coming soon" or repetitive filler text can negatively impact search rankings. Lorem Ipsum is recognized by search engines as placeholder content and typically ignored.</p>
+        <p>Using <strong>dummy text generators</strong> during website development prevents search engines from indexing placeholder content, which is crucial for maintaining good SEO practices. Publishing pages with "coming soon" messages, repetitive filler text, or temporary content can negatively impact search rankings and create indexing issues that persist even after the real content is added. Lorem Ipsum is universally recognized by search engines as placeholder content and is typically ignored or given zero weight in rankings. This protects your site's SEO health during development while still allowing you to build and test layouts. Additionally, using Lorem Ipsum prevents the premature creation of meta descriptions, title tags, and other SEO elements that would need to be completely rewritten once actual content is available.</p>
 
         <h3>5. Efficient Workflow</h3>
         
-        <p>Modern <strong>online Lorem Ipsum generators</strong> allow designers to quickly create exactly the amount of text needed for any project. Whether you need three paragraphs for a blog layout or fifty words for a button label, generation is instant and customizable.</p>
+        <p>Modern <strong>online Lorem Ipsum generators</strong> allow designers to quickly create exactly the amount of text needed for any project. Whether you need three paragraphs for a blog layout, fifty words for a button label, five sentences for a testimonial section, or ten list items for a features page, generation is instant and endlessly customizable. This efficiency eliminates the time-consuming task of copying and pasting text from various sources, ensures consistent placeholder text across projects, and allows rapid iteration during the design process. Many generators also offer specialized outputs like HTML-formatted text, markdown format, or even JSON structures, further streamlining modern development workflows.</p>
 
         <h2>Types of Lorem Ipsum and When to Use Them</h2>
 
         <h3>Traditional Lorem Ipsum</h3>
         
-        <p>The classic Latin-derived text remains the most popular choice for general design work. Its familiarity and professional appearance make it suitable for client presentations, portfolio pieces, and design systems. Traditional Lorem Ipsum works well for:</p>
-        <ul>
-          <li>Web design mockups and wireframes</li>
-          <li>Print layout demonstrations</li>
-          <li>Typography specimen sheets</li>
-          <li>UI/UX design prototypes</li>
-          <li>Brand identity presentations</li>
-        </ul>
+        <p>The classic Latin-derived text remains the most popular choice for general design work. Its familiarity, professional appearance, and universal recognition make it suitable for client presentations, portfolio pieces, design systems, and professional mockups. Traditional Lorem Ipsum works particularly well for corporate websites, government portals, educational institutions, financial services, healthcare platforms, legal services, and any context where professionalism and tradition are valued. It's the safe, reliable choice that won't raise eyebrows or distract from your design work.</p>
+
+        <p>Traditional Lorem Ipsum is ideal for: web design mockups and wireframes, print layout demonstrations, typography specimen sheets showing font families and weights, UI/UX design prototypes and interactive demos, brand identity presentations and style guides, app interface designs for iOS and Android, email template designs, landing page concepts, dashboard layouts, admin panel designs, and content management system themes.</p>
 
         <h3>Specialized and Humorous Variants</h3>
         
-        <p>Beyond traditional Latin, numerous specialized Lorem Ipsum variants have emerged:</p>
+        <p>Beyond traditional Latin, numerous specialized Lorem Ipsum variants have emerged to add personality or better match specific industries. While these alternatives can be entertaining and contextually relevant, they should be used thoughtfully to avoid becoming distracting themselves.</p>
         
-        <p><strong>Cupcake Ipsum:</strong> Sweet-themed placeholder text featuring dessert terminology. Perfect for bakery websites, food blogs, and culinary brands.</p>
+        <p><strong>Cupcake Ipsum</strong> features sweet-themed placeholder text with dessert terminology like "cupcake," "chocolate cake," "candy canes," and "gingerbread." It's perfect for bakery websites, food blogs, culinary school projects, recipe sites, dessert delivery services, and any sweet-focused brand. The playful nature makes it ideal for brands with a fun, whimsical personality.</p>
         
-        <p><strong>Bacon Ipsum:</strong> Meat-themed text for restaurants, food services, and carnivorous brands.</p>
+        <p><strong>Bacon Ipsum</strong> provides meat-themed text for restaurants, food services, butcher shops, BBQ joints, steakhouses, and carnivorous brands. While entertaining, it should be used carefully to avoid offending vegetarian or vegan audiences unless the brand specifically targets meat lovers.</p>
         
-        <p><strong>Hipster Ipsum:</strong> Irony-filled text with artisanal, craft-focused vocabulary. Ideal for modern lifestyle brands and creative agencies.</p>
+        <p><strong>Hipster Ipsum</strong> offers irony-filled text with artisanal, craft-focused vocabulary including terms like "organic," "sustainable," "locally-sourced," "craft beer," and "vintage." It's ideal for modern lifestyle brands, creative agencies, boutique coffee shops, craft breweries, vintage stores, and businesses targeting millennial and Gen Z audiences.</p>
         
-        <p><strong>Corporate Ipsum:</strong> Business jargon and buzzword-filled text that mimics corporate communications. Useful for B2B websites and enterprise software mockups.</p>
+        <p><strong>Corporate Ipsum</strong> fills text with business jargon and buzzword-heavy language like "synergy," "paradigm shift," "leverage," "stakeholder engagement," and "value-add propositions." It's useful for B2B websites, enterprise software mockups, consulting firm presentations, and corporate training materials, though it can border on parody.</p>
         
-        <p><strong>Zombie Ipsum:</strong> Horror-themed text for entertainment websites, games, and Halloween campaigns.</p>
+        <p><strong>Pirate Ipsum</strong> delivers nautical-themed text perfect for maritime businesses, sailing clubs, pirate-themed entertainment venues, and coastal tourism sites. Its distinctive vocabulary makes it memorable but potentially too playful for serious applications.</p>
 
         <h2>Best Practices for Using Lorem Ipsum in Design</h2>
 
         <h3>1. Replace Before Launch</h3>
         
-        <p>Never launch a website or publish a design with Lorem Ipsum still in place. This looks unprofessional and can damage credibility. Use Lorem Ipsum during the design phase only, replacing it with real content before publication.</p>
+        <p>Never, ever launch a website, publish a document, or release a design with Lorem Ipsum still in place. This is the cardinal rule of placeholder text usage. Leaving Lorem Ipsum in production looks unprofessional, damages credibility, confuses users, hurts SEO rankings, and can even have legal implications if the design is for a regulated industry. Create comprehensive checklists, implement automated checks in your deployment process, conduct thorough quality assurance reviews, and establish a culture where placeholder text in production is considered a serious error. Many development teams use automated linting tools that flag Lorem Ipsum text before code can be merged or deployed.</p>
 
         <h3>2. Match Content Length Realistically</h3>
         
-        <p>When generating Lorem Ipsum, try to match the approximate length of your final content. If a headline will be 5-7 words in production, don't use 20 words of Lorem Ipsum in your mockup. Realistic length ensures your design works with actual content.</p>
+        <p>When generating Lorem Ipsum, try to match the approximate length and structure of your final content as closely as possible. If a headline will be 5-7 words in production, don't use 20 words of Lorem Ipsum in your mockup. If body paragraphs will typically be 3-4 sentences, generate Lorem Ipsum that matches this pattern. Realistic length ensures your design actually works with the content it will eventually contain, prevents awkward spacing or overflow issues when real content is added, helps identify layout problems early in the process, and gives clients or stakeholders a more accurate preview of the final product. Content-first design approaches recommend using approximate real content lengths even when using Lorem Ipsum for maximum accuracy.</p>
 
-        <h3>3. Consider Localization</h3>
+        <h3>3. Consider Localization and Internationalization</h3>
         
-        <p>If designing for international audiences, remember that Lorem Ipsum is Latin-based and may not accurately represent text in other languages. Chinese, Arabic, and Cyrillic scripts have different character widths and line heights. Consider using placeholder text in your target language when possible.</p>
+        <p>If designing for international audiences or multilingual websites, remember that Lorem Ipsum is Latin-based and may not accurately represent text characteristics in other languages. Chinese, Japanese, Korean, Arabic, Hebrew, Thai, and Cyrillic scripts have dramatically different character widths, line heights, reading directions, and typographic requirements. German has notably longer words than English, affecting line breaks and hyphenation. Romance languages may have different average word lengths. When designing for these markets, consider using placeholder text in your target language, specialized generators for specific scripts, or at minimum, test your Lorem Ipsum layouts with actual content in the target language before finalizing designs. Some modern design tools offer multilingual Lorem Ipsum generators specifically for this purpose.</p>
 
         <h3>4. Accessibility Considerations</h3>
         
-        <p>Screen readers can struggle with Lorem Ipsum, reading it as garbled Latin. For accessibility testing, consider using real content or semantic placeholder text that makes sense when read aloud. Some modern generators offer "readable" placeholder text options.</p>
+        <p>Screen readers and other assistive technologies can struggle with Lorem Ipsum, attempting to read it as garbled Latin and creating confusion for users who rely on these tools. For accessibility testing, consider using real content, semantic placeholder text that makes sense when read aloud, or clearly labeled placeholder text with appropriate ARIA attributes. If you must use Lorem Ipsum in prototypes that will undergo accessibility testing, add aria-label attributes explaining that the text is placeholder content, use semantic HTML structure even with dummy text, and plan to replace Lorem Ipsum with real content before any user testing with people who use assistive technologies. Some accessibility experts recommend avoiding Lorem Ipsum entirely in favor of realistic placeholder content that better represents the actual user experience.</p>
 
-        <h3>5. Version Control</h3>
+        <h3>5. Version Control and Collaboration</h3>
         
-        <p>When sharing designs with clients, clearly communicate that Lorem Ipsum is placeholder text. Some clients unfamiliar with design workflows may mistake it for final copy or think you've made errors. A simple note indicating "Placeholder text - final content pending" prevents confusion.</p>
+        <p>When sharing designs with clients, team members, or stakeholders, clearly communicate that Lorem Ipsum is placeholder text to be replaced. Some collaborators unfamiliar with design workflows may mistake it for final copy, wonder if the Latin has special meaning, think you've made errors in the text, or assume content decisions have already been made. Prevent confusion by adding a note indicating "Placeholder text - final content pending," including an explanation slide in presentations, maintaining a clear content roadmap separate from design mockups, and establishing communication protocols about when and how real content will replace Lorem Ipsum. Clear documentation prevents misunderstandings and keeps projects moving smoothly.</p>
 
         <h2>Technical Implementation of Lorem Ipsum</h2>
 
         <h3>HTML and CSS Integration</h3>
         
-        <p>Modern web development often requires Lorem Ipsum in specific formats. Our <strong>HTML Lorem Ipsum generator</strong> provides properly tagged content with paragraph tags, heading structures, and list formatting. This allows developers to test CSS styles, responsive breakpoints, and typography scales with realistic markup.</p>
+        <p>Modern web development often requires Lorem Ipsum in specific formats. Our <strong>HTML Lorem Ipsum generator</strong> provides properly tagged content with paragraph tags, heading structures, list formatting, and semantic HTML5 elements. This allows developers to test CSS styles, responsive breakpoints, typography scales, grid systems, flexbox layouts, and component libraries with realistic markup. HTML-formatted Lorem Ipsum is essential for testing WordPress themes, Drupal templates, component libraries, design systems, and any web project where HTML structure matters as much as visual design.</p>
 
         <h3>Content Management Systems</h3>
         
-        <p>When building websites in WordPress, Drupal, or other CMS platforms, Lorem Ipsum helps populate templates during development. Using <strong>Markdown format Lorem Ipsum</strong> allows easy import into modern headless CMS systems and static site generators like Jekyll, Hugo, and Gatsby.</p>
+        <p>When building websites in WordPress, Drupal, Joomla, or other CMS platforms, Lorem Ipsum helps populate templates during development without creating dummy database entries for real content. Using <strong>Markdown format Lorem Ipsum</strong> allows easy import into modern headless CMS systems like Contentful, Strapi, and Sanity, static site generators like Jekyll, Hugo, Gatsby, and Next.js, and documentation platforms like ReadMe and GitBook. Markdown format preserves text structure while remaining lightweight and easily convertible to other formats.</p>
 
         <h3>Design Software Plugins</h3>
         
-        <p>Most professional design tools offer Lorem Ipsum plugins or built-in features. Adobe Photoshop, Illustrator, InDesign, Figma, and Sketch all support automatic placeholder text generation. These integrations streamline the design process by eliminating the need to copy-paste from external sources.</p>
+        <p>Most professional design tools offer Lorem Ipsum plugins or built-in features that streamline the design process. Adobe Photoshop uses the Type > Paste Lorem Ipsum menu, Illustrator offers placeholder text through Type > Fill with Placeholder Text, InDesign includes robust text threading and placeholder options, Figma has popular Lorem Ipsum plugins and the built-in Content Reel feature, Sketch offers native Lorem Ipsum and numerous community plugins, and Adobe XD provides quick Lorem Ipsum insertion tools. These integrations eliminate the need to copy-paste from external sources, allow rapid iteration and experimentation, and maintain consistency across design files.</p>
 
         <h2>The Future of Placeholder Text</h2>
 
-        <p>As artificial intelligence advances, new forms of placeholder text are emerging. <strong>AI-generated placeholder content</strong> can now create contextually relevant text that matches your industry or topic. For example, an AI might generate realistic product descriptions for an e-commerce mockup or plausible article summaries for a news site design.</p>
+        <p>As artificial intelligence and machine learning advance, new forms of placeholder text are emerging. <strong>AI-generated placeholder content</strong> can now create contextually relevant text that matches your industry, tone, or topic. For example, an AI might generate realistic product descriptions for an e-commerce mockup, plausible article summaries for a news site design, or appropriate copy for a healthcare platform. Tools like GPT-powered generators, industry-specific content generators, and context-aware Lorem Ipsum tools represent the next evolution in placeholder text technology.</p>
 
-        <p>However, traditional Lorem Ipsum remains valuable precisely because it says nothing. Its very meaninglessness is its strength—it forces focus on design rather than content. Even as AI generates better placeholder text, the original Latin-derived gibberish maintains its place in the designer's toolkit.</p>
+        <p>However, traditional Lorem Ipsum remains valuable precisely because it says nothing. Its very meaninglessness is its strength—it forces focus on design rather than content, prevents premature content decisions, and maintains a clear distinction between design and copywriting phases. Even as AI generates better placeholder text, the original Latin-derived gibberish maintains its place in the designer's toolkit for situations where complete content neutrality is essential.</p>
 
-        <p>Some designers advocate for using <strong>real content</strong> as early as possible in the design process. While this approach has merit, Lorem Ipsum remains essential for early-stage concepts, client presentations where content isn't finalized, and situations where focusing on design elements is paramount.</p>
+        <p>Some designers advocate for using <strong>real content</strong> as early as possible in the design process, a philosophy known as "content-first design." While this approach has merit—real content reveals actual constraints and requirements that Lorem Ipsum might hide—there remain valid use cases for placeholder text, particularly in early-stage concepts where content isn't available, client presentations where multiple layout options need comparison, template designs that will accommodate varied content, and situations where focusing on design elements is paramount.</p>
 
         <h2>Conclusion</h2>
 
-        <p>From ancient Roman philosophy to modern digital design, Lorem Ipsum has proven remarkably resilient. Its five-century journey from Cicero's treatise to Letraset sheets to digital generators demonstrates its fundamental utility in visual communication. Whether you're creating a website, designing a brochure, or prototyping a mobile app, <strong>professional Lorem Ipsum generation</strong> remains an essential step in the design process.</p>
+        <p>From ancient Roman philosophy to modern digital design, Lorem Ipsum has proven remarkably resilient and useful. Its five-century journey from Cicero's treatise on ethics to Letraset sheets to digital generators demonstrates its fundamental utility in visual communication. Whether you're creating a website, designing a brochure, prototyping a mobile app, building a presentation template, or mocking up any visual communication, <strong>professional Lorem Ipsum generation</strong> remains an essential step in the design process.</p>
 
-        <p>Our <strong>free online Lorem Ipsum generator</strong> provides all the tools you need to create perfect placeholder text for any project. With customizable lengths, multiple output formats, and instant generation, you can focus on what matters most—creating exceptional designs that communicate effectively and look stunning.</p>
+        <p>Our <strong>free online Lorem Ipsum generator</strong> provides all the tools you need to create perfect placeholder text for any project. With customizable lengths, multiple output formats including plain text, HTML, and Markdown, instant generation with no delays or loading times, quick preset buttons for common amounts, and the ability to generate paragraphs, sentences, words, or lists, you can focus on what matters most—creating exceptional designs that communicate effectively and look stunning. Start generating professional Lorem Ipsum placeholder text today and streamline your design workflow.</p>
       </article>
     </section>
 
     <!-- FAQ Section -->
-    <section class="glass-panel rounded-xl p-6">
-      <h2 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
-        <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
-        </svg>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-12 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
         Frequently Asked Questions
       </h2>
-      
-      <div class="space-y-3" id="faqContainer">
-        <!-- FAQ Item 1 -->
-        <div class="border border-white/10 rounded-lg overflow-hidden">
-          <button class="faq-toggle w-full p-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
-            <span class="font-medium text-gray-200">What does Lorem Ipsum actually mean?</span>
-            <svg class="faq-icon w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div class="space-y-4" id="faqContainer">
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">What does Lorem Ipsum actually mean?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
           </button>
-          <div class="faq-content px-4">
-            <p class="text-gray-400 text-sm pb-4 leading-relaxed">Lorem Ipsum is derived from a Latin text by Cicero written in 45 BC. The original passage discusses ethics and the pursuit of pleasure and pain. However, the standard Lorem Ipsum text has been scrambled and modified over centuries, so it no longer has coherent meaning. It's designed to look like readable text while actually being nonsensical, making it perfect for demonstrating typography and layout without distracting readers with meaningful content.</p>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">Lorem Ipsum is derived from a Latin text by Cicero written in 45 BC. The original passage discusses ethics and the pursuit of pleasure and pain. However, the standard Lorem Ipsum text has been scrambled and modified over centuries, so it no longer has coherent meaning. It's designed to look like readable text while actually being nonsensical, making it perfect for demonstrating typography and layout without distracting readers with meaningful content.</p>
           </div>
         </div>
 
-        <!-- FAQ Item 2 -->
-        <div class="border border-white/10 rounded-lg overflow-hidden">
-          <button class="faq-toggle w-full p-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
-            <span class="font-medium text-gray-200">Is it safe to use Lorem Ipsum on live websites?</span>
-            <svg class="faq-icon w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Is it safe to use Lorem Ipsum on live websites?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
           </button>
-          <div class="faq-content px-4">
-            <p class="text-gray-400 text-sm pb-4 leading-relaxed">No, you should never leave Lorem Ipsum on a live website. While search engines generally recognize it as placeholder text and won't penalize you severely, it looks extremely unprofessional to visitors. Always replace Lorem Ipsum with real content before launching. Additionally, some automated translation tools might attempt to translate the Latin, potentially creating confusing or inappropriate content.</p>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">No, you should never leave Lorem Ipsum on a live website. While search engines generally recognize it as placeholder text and won't penalize you severely, it looks extremely unprofessional to visitors. Always replace Lorem Ipsum with real content before launching. Additionally, some automated translation tools might attempt to translate the Latin, potentially creating confusing or inappropriate content.</p>
           </div>
         </div>
 
-        <!-- FAQ Item 3 -->
-        <div class="border border-white/10 rounded-lg overflow-hidden">
-          <button class="faq-toggle w-full p-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
-            <span class="font-medium text-gray-200">How many paragraphs of Lorem Ipsum should I generate?</span>
-            <svg class="faq-icon w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">How many paragraphs of Lorem Ipsum should I generate?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
           </button>
-          <div class="faq-content px-4">
-            <p class="text-gray-400 text-sm pb-4 leading-relaxed">The amount depends on your specific needs. For a standard web page mockup, 3-5 paragraphs usually suffice to demonstrate text flow and spacing. For blog layouts, generate enough to show pagination or "read more" functionality. For print design, match the exact word count or character count of your final content. Our generator allows you to create anywhere from 1 to 100 paragraphs, giving you flexibility for any project size.</p>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">The amount depends on your specific needs. For a standard web page mockup, 3-5 paragraphs usually suffice to demonstrate text flow and spacing. For blog layouts, generate enough to show pagination or "read more" functionality. For print design, match the exact word count or character count of your final content. Our generator allows you to create anywhere from 1 to 100 paragraphs, giving you flexibility for any project size.</p>
           </div>
         </div>
 
-        <!-- FAQ Item 4 -->
-        <div class="border border-white/10 rounded-lg overflow-hidden">
-          <button class="faq-toggle w-full p-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
-            <span class="font-medium text-gray-200">Can I use Lorem Ipsum for commercial projects?</span>
-            <svg class="faq-icon w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Can I use Lorem Ipsum for commercial projects?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
           </button>
-          <div class="faq-content px-4">
-            <p class="text-gray-400 text-sm pb-4 leading-relaxed">Yes, Lorem Ipsum is completely free to use for both personal and commercial projects. The text is so old (derived from a 2,000-year-old work) that any copyright has long expired. You can use it in client work, commercial websites, print materials, and any other project without attribution or licensing fees. However, remember to replace it with real content before finalizing any commercial project.</p>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">Yes, Lorem Ipsum is completely free to use for both personal and commercial projects. The text is so old (derived from a 2,000-year-old work) that any copyright has long expired. You can use it in client work, commercial websites, print materials, and any other project without attribution or licensing fees. However, remember to replace it with real content before finalizing any commercial project.</p>
           </div>
         </div>
 
-        <!-- FAQ Item 5 -->
-        <div class="border border-white/10 rounded-lg overflow-hidden">
-          <button class="faq-toggle w-full p-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
-            <span class="font-medium text-gray-200">What's the difference between paragraphs, sentences, and words mode?</span>
-            <svg class="faq-icon w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">What's the difference between paragraphs, sentences, and words mode?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
           </button>
-          <div class="faq-content px-4">
-            <p class="text-gray-400 text-sm pb-4 leading-relaxed">Paragraphs mode generates full paragraphs of varying lengths, ideal for testing text flow and layout spacing. Sentences mode creates individual sentences, perfect for headings, short descriptions, or bullet points. Words mode generates a specific word count, useful for character-limited fields like meta descriptions, social media posts, or button labels. Choose the mode that best matches your content needs.</p>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">Paragraphs mode generates full paragraphs of varying lengths, ideal for testing text flow and layout spacing. Sentences mode creates individual sentences, perfect for headings, short descriptions, or bullet points. Words mode generates a specific word count, useful for character-limited fields like meta descriptions, social media posts, or button labels. Choose the mode that best matches your content needs.</p>
           </div>
         </div>
 
-        <!-- FAQ Item 6 -->
-        <div class="border border-white/10 rounded-lg overflow-hidden">
-          <button class="faq-toggle w-full p-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
-            <span class="font-medium text-gray-200">Why should I use a Lorem Ipsum generator instead of copying from another site?</span>
-            <svg class="faq-icon w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Why should I use a Lorem Ipsum generator instead of copying from another site?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
           </button>
-          <div class="faq-content px-4">
-            <p class="text-gray-400 text-sm pb-4 leading-relaxed">Using a generator ensures you get fresh, randomized text every time, avoiding repetition that can occur when copying from the same source. Generators also provide exact length control, multiple output formats (HTML, Markdown), and clean formatting. Additionally, copying from other websites might accidentally include hidden HTML, links, or styling that could interfere with your design. Our generator creates clean, customizable text tailored to your specific requirements.</p>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">Using a generator ensures you get fresh, randomized text every time, avoiding repetition that can occur when copying from the same source. Generators also provide exact length control, multiple output formats (HTML, Markdown), and clean formatting. Additionally, copying from other websites might accidentally include hidden HTML, links, or styling that could interfere with your design. Our generator creates clean, customizable text tailored to your specific requirements.</p>
           </div>
         </div>
 
-        <!-- FAQ Item 7 -->
-        <div class="border border-white/10 rounded-lg overflow-hidden">
-          <button class="faq-toggle w-full p-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
-            <span class="font-medium text-gray-200">Does Lorem Ipsum work for non-Latin languages?</span>
-            <svg class="faq-icon w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Does Lorem Ipsum work for non-Latin languages?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
           </button>
-          <div class="faq-content px-4">
-            <p class="text-gray-400 text-sm pb-4 leading-relaxed">Lorem Ipsum is Latin-based and uses the Latin alphabet, making it suitable for Western languages. However, for languages using different scripts (Chinese, Japanese, Arabic, Hebrew, Cyrillic, etc.), Lorem Ipsum won't accurately represent text characteristics like character width, line height, or reading direction. For these languages, consider using placeholder text in the target language or specialized generators designed for those scripts.</p>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">Lorem Ipsum is Latin-based and uses the Latin alphabet, making it suitable for Western languages. However, for languages using different scripts (Chinese, Japanese, Arabic, Hebrew, Cyrillic, etc.), Lorem Ipsum won't accurately represent text characteristics like character width, line height, or reading direction. For these languages, consider using placeholder text in the target language or specialized generators designed for those scripts.</p>
           </div>
         </div>
 
-        <!-- FAQ Item 8 -->
-        <div class="border border-white/10 rounded-lg overflow-hidden">
-          <button class="faq-toggle w-full p-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
-            <span class="font-medium text-gray-200">Is this Lorem Ipsum generator free to use?</span>
-            <svg class="faq-icon w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Is this Lorem Ipsum generator free to use?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
           </button>
-          <div class="faq-content px-4">
-            <p class="text-gray-400 text-sm pb-4 leading-relaxed">Yes, our Lorem Ipsum generator is completely free to use with no registration required. There are no limits on how much text you can generate, no watermarks, and no hidden fees. You can use it for unlimited personal and commercial projects. We believe professional design tools should be accessible to everyone, from students and freelancers to large agencies.</p>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">Yes, our Lorem Ipsum generator is completely free to use with no registration required. There are no limits on how much text you can generate, no watermarks, and no hidden fees. You can use it for unlimited personal and commercial projects. We believe professional design tools should be accessible to everyone, from students and freelancers to large agencies.</p>
           </div>
         </div>
 
-        <!-- FAQ Item 9 -->
-        <div class="border border-white/10 rounded-lg overflow-hidden">
-          <button class="faq-toggle w-full p-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
-            <span class="font-medium text-gray-200">Can I generate Lorem Ipsum with HTML tags?</span>
-            <svg class="faq-icon w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Can I generate Lorem Ipsum with HTML tags?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
           </button>
-          <div class="faq-content px-4">
-            <p class="text-gray-400 text-sm pb-4 leading-relaxed">Yes! Our generator supports HTML output format, which wraps paragraphs in &lt;p&gt; tags and structures the content for web use. This is perfect for testing CSS styles, responsive layouts, and content management systems. Simply select "HTML" from the output format dropdown before generating. You can also choose Markdown format for documentation or plain text for general use.</p>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">Yes! Our generator supports HTML output format, which wraps paragraphs in &lt;p&gt; tags and structures the content for web use. This is perfect for testing CSS styles, responsive layouts, and content management systems. Simply select "HTML" from the output format dropdown before generating. You can also choose Markdown format for documentation or plain text for general use.</p>
           </div>
         </div>
 
-        <!-- FAQ Item 10 -->
-        <div class="border border-white/10 rounded-lg overflow-hidden">
-          <button class="faq-toggle w-full p-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
-            <span class="font-medium text-gray-200">Why does generated text sometimes look different from classic Lorem Ipsum?</span>
-            <svg class="faq-icon w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Why does generated text sometimes look different from classic Lorem Ipsum?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
           </button>
-          <div class="faq-content px-4">
-            <p class="text-gray-400 text-sm pb-4 leading-relaxed">Our generator uses a dictionary of Latin words combined with algorithmic sentence structures to create varied, natural-looking text. While it maintains the characteristic Latin appearance of traditional Lorem Ipsum, the specific words and sentences are randomized. This prevents repetitive patterns and provides fresh content for every generation. If you need the exact classic "Lorem ipsum dolor sit amet" opening, check the "Start with Lorem ipsum" option.</p>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">Our generator uses a dictionary of Latin words combined with algorithmic sentence structures to create varied, natural-looking text. While it maintains the characteristic Latin appearance of traditional Lorem Ipsum, the specific words and sentences are randomized. This prevents repetitive patterns and provides fresh content for every generation. If you need the exact classic "Lorem ipsum dolor sit amet" opening, check the "Start with Lorem ipsum" option.</p>
           </div>
         </div>
       </div>
@@ -781,17 +788,17 @@
 
   <!-- Footer -->
   <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-8">
-    <div class="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
-        <p>&copy; <span id="currentYear"></span> <a href="https://rakibalom.com/" target="_blank" class="text-gray-400 hover:text-white">RakibAlom</a>. All rights reserved.</p>
-        <div class="flex gap-6">
-             <a href="https://rakibalom.com/" target="_blank" class="hover:text-white transition-colors">Website</a>
-             <a href="https://buymeacoffee.com/rakibalom" target="_blank" class="hover:text-white transition-colors">Support</a>
-        </div>
+    <div class="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://rakibalom.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">RakibAlom</a>. All rights reserved.</p>
+      <div class="flex gap-6">
+        <a href="https://rakibalom.com/" target="_blank" class="hover:text-white transition-colors">Website</a>
+        <a href="https://buymeacoffee.com/rakibalom" target="_blank" class="hover:text-white transition-colors">Support</a>
+      </div>
     </div>
   </footer>
 
 <script>
-// Lorem Ipsum Dictionary
+// Extended Lorem Ipsum Dictionary for longer paragraphs
 const loremWords = [
   "lorem", "ipsum", "dolor", "sit", "amet", "consectetur", "adipiscing", "elit", "sed", "do",
   "eiusmod", "tempor", "incididunt", "ut", "labore", "et", "dolore", "magna", "aliqua", "enim",
@@ -803,7 +810,13 @@ const loremWords = [
   "accusantium", "doloremque", "laudantium", "totam", "rem", "aperiam", "eaque", "ipsa", "quae", "ab",
   "illo", "inventore", "veritatis", "quasi", "architecto", "beatae", "vitae", "dicta", "explicabo", "nemo",
   "ipsam", "voluptas", "aspernatur", "aut", "odit", "fugit", "consequuntur", "magni", "eos", "ratione",
-  "sequi", "nesciunt", "neque", "porro", "quisquam", "dolorem", "quia", "consectetur", "adipisci", "velit"
+  "sequi", "nesciunt", "neque", "porro", "quisquam", "dolorem", "quia", "numquam", "eius", "modi",
+  "tempora", "incidunt", "magnam", "aliquam", "quaerat", "voluptatem", "enim", "minima", "veniam",
+  "nostrum", "exercitationem", "ullam", "corporis", "suscipit", "laboriosam", "aliquid", "commodi",
+  "consequatur", "quis", "autem", "vel", "eum", "iure", "reprehenderit", "voluptate", "esse",
+  "quam", "nihil", "molestiae", "illum", "quo", "minus", "maxime", "placeat", "facere", "possimus",
+  "omnis", "assumenda", "repudiandae", "temporibus", "quibusdam", "officiis", "debitis", "rerum",
+  "necessitatibus", "saepe", "eveniet", "provident", "similique", "culpa", "officia", "deserunt"
 ];
 
 // DOM Elements
@@ -812,7 +825,6 @@ const copyBtn = document.getElementById('copyBtn');
 const downloadBtn = document.getElementById('downloadBtn');
 const clearBtn = document.getElementById('clearBtn');
 const outputText = document.getElementById('outputText');
-const generateType = document.getElementById('generateType');
 const amount = document.getElementById('amount');
 const outputFormat = document.getElementById('outputFormat');
 const startWithLorem = document.getElementById('startWithLorem');
@@ -821,20 +833,33 @@ const charCount = document.getElementById('charCount');
 const paraCount = document.getElementById('paraCount');
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const mobileMenu = document.getElementById('mobileMenu');
+const typeButtons = document.querySelectorAll('.type-btn');
+const presetButtons = document.querySelectorAll('.preset-btn');
+
+let currentType = 'paragraphs';
 
 // Set current year
 document.getElementById('currentYear').textContent = new Date().getFullYear();
 
 // Mobile Menu Toggle
 mobileMenuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
 });
 
 // Close mobile menu when clicking outside
 document.addEventListener('click', (e) => {
-    if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
-        mobileMenu.classList.remove('open');
-    }
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Type Button Handlers
+typeButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    typeButtons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentType = btn.dataset.type;
+  });
 });
 
 // Generate Random Word
@@ -842,14 +867,14 @@ function getRandomWord() {
   return loremWords[Math.floor(Math.random() * loremWords.length)];
 }
 
-// Generate Sentence
+// Generate Sentence (Longer sentences: 8-16 words)
 function generateSentence(startWithLoremIpsum = false) {
-  const length = Math.floor(Math.random() * 10) + 5; // 5-15 words
+  const length = Math.floor(Math.random() * 9) + 8; // 8-16 words
   let sentence = [];
   
   if (startWithLoremIpsum) {
-    sentence = ["Lorem", "ipsum", "dolor", "sit", "amet"];
-    for (let i = 5; i < length; i++) {
+    sentence = ["Lorem", "ipsum", "dolor", "sit", "amet", "consectetur", "adipiscing", "elit"];
+    for (let i = 8; i < length; i++) {
       sentence.push(getRandomWord());
     }
   } else {
@@ -858,14 +883,13 @@ function generateSentence(startWithLoremIpsum = false) {
     }
   }
   
-  // Capitalize first letter and add period
   sentence[0] = sentence[0].charAt(0).toUpperCase() + sentence[0].slice(1);
   return sentence.join(' ') + '.';
 }
 
-// Generate Paragraph
+// Generate Paragraph (Longer paragraphs: 6-10 sentences)
 function generateParagraph(startWithLoremIpsum = false) {
-  const numSentences = Math.floor(Math.random() * 4) + 3; // 3-6 sentences
+  const numSentences = Math.floor(Math.random() * 5) + 6; // 6-10 sentences
   let sentences = [];
   
   for (let i = 0; i < numSentences; i++) {
@@ -905,20 +929,18 @@ function generateListItems(count, startWithLoremIpsum = false) {
 
 // Format Output
 function formatOutput(content, format) {
-  const type = generateType.value;
-  
   if (format === 'html') {
-    if (type === 'paragraphs') {
+    if (currentType === 'paragraphs') {
       return content.map(p => `<p>${p}</p>`).join('\n\n');
-    } else if (type === 'lists') {
+    } else if (currentType === 'lists') {
       return `<ul>\n${content.map(item => `  <li>${item}</li>`).join('\n')}\n</ul>`;
     } else {
       return `<p>${content}</p>`;
     }
   } else if (format === 'markdown') {
-    if (type === 'paragraphs') {
+    if (currentType === 'paragraphs') {
       return content.join('\n\n');
-    } else if (type === 'lists') {
+    } else if (currentType === 'lists') {
       return content.map(item => `- ${item}`).join('\n');
     } else {
       return content;
@@ -940,19 +962,18 @@ function updateStats(text) {
   
   wordCount.textContent = `Words: ${words}`;
   charCount.textContent = `Chars: ${chars}`;
-  paraCount.textContent = `Paragraphs: ${paras}`;
+  paraCount.textContent = `Para: ${paras}`;
 }
 
 // Generate Content
 function generateContent() {
-  const type = generateType.value;
   const count = parseInt(amount.value) || 5;
   const format = outputFormat.value;
   const startLorem = startWithLorem.checked;
   
   let content;
   
-  switch(type) {
+  switch(currentType) {
     case 'paragraphs':
       content = [];
       for (let i = 0; i < count; i++) {
@@ -980,6 +1001,10 @@ function generateContent() {
   const formatted = formatOutput(content, format);
   outputText.value = formatted;
   updateStats(formatted);
+  
+  // Animate
+  outputText.classList.add('fade-in');
+  setTimeout(() => outputText.classList.remove('fade-in'), 300);
 }
 
 // Copy to Clipboard
@@ -988,11 +1013,11 @@ async function copyToClipboard() {
     await navigator.clipboard.writeText(outputText.value);
     const originalText = copyBtn.innerHTML;
     copyBtn.innerHTML = `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
-    copyBtn.classList.add('text-green-400', 'border-green-500/30', 'bg-green-500/10');
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
     
     setTimeout(() => {
       copyBtn.innerHTML = originalText;
-      copyBtn.classList.remove('text-green-400', 'border-green-500/30', 'bg-green-500/10');
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
     }, 2000);
   } catch (err) {
     console.error('Copy failed', err);
@@ -1042,21 +1067,35 @@ function toggleFaq(button) {
 }
 
 // Preset Buttons
-document.querySelectorAll('.preset-btn').forEach(btn => {
+presetButtons.forEach(btn => {
   btn.addEventListener('click', () => {
     const presetAmount = btn.dataset.amount;
     const presetType = btn.dataset.type;
     
     amount.value = presetAmount;
-    generateType.value = presetType;
+    currentType = presetType;
+    
+    // Update type button
+    typeButtons.forEach(b => {
+      if (b.dataset.type === presetType) {
+        b.classList.add('active');
+      } else {
+        b.classList.remove('active');
+      }
+    });
     
     // Visual feedback
-    document.querySelectorAll('.preset-btn').forEach(b => {
+    presetButtons.forEach(b => {
       b.classList.remove('bg-white/20', 'text-white');
       b.classList.add('bg-white/5', 'text-gray-300');
     });
     btn.classList.remove('bg-white/5', 'text-gray-300');
     btn.classList.add('bg-white/20', 'text-white');
+    
+    setTimeout(() => {
+      btn.classList.remove('bg-white/20', 'text-white');
+      btn.classList.add('bg-white/5', 'text-gray-300');
+    }, 1000);
     
     generateContent();
   });
@@ -1068,7 +1107,7 @@ copyBtn.addEventListener('click', copyToClipboard);
 downloadBtn.addEventListener('click', downloadFile);
 clearBtn.addEventListener('click', clearOutput);
 
-// Generate on Enter key in amount field
+// Generate on Enter key
 amount.addEventListener('keypress', (e) => {
   if (e.key === 'Enter') {
     generateContent();
@@ -1076,9 +1115,6 @@ amount.addEventListener('keypress', (e) => {
 });
 
 // Auto-generate when options change
-generateType.addEventListener('change', () => {
-  if (outputText.value) generateContent();
-});
 outputFormat.addEventListener('change', () => {
   if (outputText.value) generateContent();
 });
