@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PNG to WebP Converter - Free Online Image Conversion Tool</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Convert PNG images to WebP format online for free. Advanced batch conversion with quality control, transparency support, and superior compression. Optimize images for web performance instantly." />
+  <meta name="keywords" content="PNG to WebP converter, convert PNG to WebP, PNG to WebP online, free WebP converter, batch PNG converter, WebP image converter, online image conversion, convert images to WebP, PNG converter, WebP converter, image format converter, web image optimizer, reduce image size, modern image format, Google WebP format, lossy WebP conversion, lossless WebP, transparent WebP, alpha channel WebP, next-gen image format, website speed optimization, Core Web Vitals, image compression tool, bulk image converter, photo converter tool, digital image converter, high quality image conversion, fast image converter, secure image conversion, browser based converter, PNG WebP converter online, free PNG to WebP, image format conversion tool, convert PNG files, WebP conversion software, online photo converter, convert image formats, best PNG to WebP converter, quick image converter, easy PNG converter, simple WebP converter, web-based image tool, no registration converter, instant image conversion, professional image converter, quality PNG to WebP, web performance tool, image optimization tool, lightweight image format, WebP vs PNG, WebP benefits, convert screenshots to WebP, logo converter PNG WebP, raster image converter, progressive WebP encoding" />
+  <meta name="author" content="RakibAlom" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://rakibalom.com/tools/png-to-webp-converter/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rakibalom.com/tools/png-to-webp-converter/" />
+  <meta property="og:title" content="PNG to WebP Converter - Free Online Image Conversion Tool" />
+  <meta property="og:description" content="Convert PNG images to WebP format online for free. Advanced batch conversion with quality control and transparency support. Optimize for web performance." />
+  <meta property="og:image" content="https://rakibalom.com/tools/png-to-webp-converter/og-image.png" />
+  <meta property="og:site_name" content="RakibAlom Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://rakibalom.com/tools/png-to-webp-converter/" />
+  <meta name="twitter:title" content="PNG to WebP Converter - Free Online Image Conversion Tool" />
+  <meta name="twitter:description" content="Convert PNG images to WebP format online for free. Advanced batch conversion with quality control and transparency support." />
+  <meta name="twitter:image" content="https://rakibalom.com/tools/png-to-webp-converter/twitter-image.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://rakibalom.com/wp-content/uploads/2025/12/rakibalom-favicon.png" />
+  <link rel="apple-touch-icon" href="https://rakibalom.com/wp-content/uploads/2025/12/rakibalom-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .drop-zone {
+      border: 2px dashed rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+    }
+    .drop-zone:hover, .drop-zone.dragover {
+      border-color: rgba(255, 255, 255, 0.4);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .checkerboard {
+      background-image: linear-gradient(45deg, #1a1a1a 25%, transparent 25%), 
+                        linear-gradient(-45deg, #1a1a1a 25%, transparent 25%), 
+                        linear-gradient(45deg, transparent 75%, #1a1a1a 75%), 
+                        linear-gradient(-45deg, transparent 75%, #1a1a1a 75%);
+      background-size: 16px 16px;
+      background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+      background-color: #252525;
+    }
+
+    .slider {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 3px;
+      outline: none;
+    }
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.9);
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    .slider::-moz-range-thumb {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.9);
+      cursor: pointer;
+      border: none;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    .progress-bar {
+      background: linear-gradient(90deg, rgba(255,255,255,0.8), rgba(255,255,255,0.4));
+      transition: width 0.3s ease;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .fade-in {
+      animation: fadeIn 0.3s ease forwards;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .toggle-checkbox:checked {
+      right: 0;
+      border-color: #68D391;
+    }
+    .toggle-checkbox:checked + .toggle-label {
+      background-color: #68D391;
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header with Navigation -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+          <svg class="w-8 h-8 sm:w-9 sm:h-9" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 12h20M10 20h20M10 28h12" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-base sm:text-lg font-bold text-white">PNG to WebP Converter</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Next-Gen Image Optimization Tool</p>
+          </div>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-6">
+          <a href="https://rakibalom.com/" class="text-sm text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://rakibalom.com/tools/" class="text-sm text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-4 space-y-3">
+        <a href="https://rakibalom.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://rakibalom.com/tools/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner Section -->
+  <section class="py-6 sm:py-8 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text px-2">
+        PNG to WebP Converter
+      </h1>
+      <p class="text-gray-400 text-base sm:text-lg px-4">
+        Online Free Image Conversion Tool — Convert PNG to WebP with Superior Compression
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-16 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-2xl p-4 sm:p-6 md:p-8 mb-6">
+      
+      <!-- Settings Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+        <!-- Quality Control -->
+        <div>
+          <label class="text-sm font-medium text-gray-300 mb-2 block flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+            WebP Quality: <span id="qualityValue" class="text-white font-semibold">85%</span>
+          </label>
+          <div class="flex items-center gap-3 bg-black/40 rounded-lg px-4 py-3 border border-white/10">
+            <span class="text-xs text-gray-400">Low</span>
+            <input type="range" id="qualitySlider" min="1" max="100" value="85" class="slider flex-1">
+            <span class="text-xs text-gray-400">High</span>
+          </div>
+          <p class="text-xs text-gray-500 mt-2">Default: 85% (Optimal balance of quality & size)</p>
+        </div>
+
+        <!-- Compression Method -->
+        <div>
+          <label class="text-sm font-medium text-gray-300 mb-2 block flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+            Compression Type
+          </label>
+          <select id="compressionType" class="w-full px-4 py-3 rounded-lg glass-input text-sm font-medium">
+            <option value="lossy">Lossy (Smaller Size)</option>
+            <option value="lossless">Lossless (Maximum Quality)</option>
+          </select>
+        </div>
+
+        <!-- Transparency Options -->
+        <div>
+          <label class="text-sm font-medium text-gray-300 mb-2 block flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+            Transparency
+          </label>
+          <select id="transparencySelect" class="w-full px-4 py-3 rounded-lg glass-input text-sm font-medium">
+            <option value="preserve">Preserve Alpha Channel</option>
+            <option value="white">Fill with White</option>
+            <option value="black">Fill with Black</option>
+            <option value="custom">Custom Color</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Custom Color Input (Hidden by default) -->
+      <div id="customColorContainer" class="hidden mb-6">
+        <label class="text-sm font-medium text-gray-300 mb-2 block">Custom Background Color</label>
+        <div class="flex gap-3">
+          <input type="color" id="customColor" value="#ffffff" class="h-10 w-20 rounded-lg bg-transparent border border-white/20 cursor-pointer">
+          <input type="text" id="customColorText" value="#ffffff" class="flex-1 px-4 py-2 rounded-lg glass-input text-sm font-mono uppercase">
+        </div>
+      </div>
+
+      <!-- Drop Zone -->
+      <div id="dropZone" class="drop-zone rounded-xl p-8 sm:p-12 text-center cursor-pointer transition-all duration-300 mb-6">
+        <input type="file" id="fileInput" accept="image/png" multiple class="hidden">
+        <div class="flex flex-col items-center">
+          <svg class="w-12 h-12 sm:w-16 sm:h-16 text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+          </svg>
+          <p class="text-base sm:text-lg font-medium text-gray-200 mb-2">Drag & Drop PNG Images Here</p>
+          <p class="text-xs sm:text-sm text-gray-400 mb-4">or click to browse files</p>
+          <button id="browseBtn" class="px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg border border-white/10 transition-all duration-300 btn-animated font-medium flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+            Select PNG Files
+          </button>
+          <p class="text-xs text-gray-500 mt-4 text-center px-2">Max 500MB per file • Unlimited files • Instant conversion</p>
+        </div>
+      </div>
+
+      <!-- Processing Status -->
+      <div id="processingStatus" class="hidden mb-6">
+        <div class="glass-panel rounded-lg p-4 border border-white/10">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-sm font-medium text-gray-300">Converting images...</span>
+            <span id="processingCount" class="text-sm text-gray-400">0/0</span>
+          </div>
+          <div class="w-full h-2 bg-black/40 rounded-full overflow-hidden">
+            <div id="processingProgress" class="progress-bar h-full rounded-full" style="width: 0%"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results Section -->
+      <div id="resultsSection" class="hidden">
+        <!-- Summary Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-6">
+          <div class="glass-panel rounded-lg p-3 sm:p-4 text-center border border-white/10">
+            <p class="text-xl sm:text-2xl font-bold text-white" id="totalImages">0</p>
+            <p class="text-xs text-gray-400">Images</p>
+          </div>
+          <div class="glass-panel rounded-lg p-3 sm:p-4 text-center border border-white/10">
+            <p class="text-xl sm:text-2xl font-bold text-white" id="originalSize">0 KB</p>
+            <p class="text-xs text-gray-400">Original Size</p>
+          </div>
+          <div class="glass-panel rounded-lg p-3 sm:p-4 text-center border border-white/10">
+            <p class="text-xl sm:text-2xl font-bold text-emerald-400" id="convertedSize">0 KB</p>
+            <p class="text-xs text-gray-400">WebP Size</p>
+          </div>
+          <div class="glass-panel rounded-lg p-3 sm:p-4 text-center border border-white/10">
+            <p class="text-xl sm:text-2xl font-bold text-emerald-400" id="savedPercent">0%</p>
+            <p class="text-xs text-gray-400">Space Saved</p>
+          </div>
+        </div>
+
+        <!-- Bulk Actions -->
+        <div class="flex flex-wrap gap-3 mb-6">
+          <button id="downloadAllBtn" class="flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg border border-white/10 transition-all btn-animated font-medium">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            Download All (ZIP)
+          </button>
+          <button id="clearAllBtn" class="flex items-center gap-2 px-6 py-3 bg-white/5 hover:bg-white/10 text-gray-300 rounded-lg border border-white/10 transition-all btn-animated font-medium">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+            Clear All
+          </button>
+          <button id="addMoreBtn" class="flex items-center gap-2 px-6 py-3 bg-white/5 hover:bg-white/10 text-gray-300 rounded-lg border border-white/10 transition-all btn-animated font-medium ml-auto">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+            Add More
+          </button>
+        </div>
+
+        <!-- Image Grid -->
+        <div id="imageGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-h-[800px] overflow-y-auto pr-2">
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-12 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Choose Our PNG to WebP Converter?
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="glass-panel rounded-xl p-6 glass-hover transition-all duration-300">
+          <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2 text-white">Superior Compression</h3>
+          <p class="text-gray-400 text-sm">WebP provides 25-35% smaller file sizes than PNG without quality loss. Our converter uses advanced encoding to maximize compression while preserving visual fidelity.</p>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-6 glass-hover transition-all duration-300">
+          <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2 text-white">100% Secure & Private</h3>
+          <p class="text-gray-400 text-sm">All conversion happens locally in your browser. Your PNG files never leave your device, ensuring complete privacy and security for sensitive images and confidential graphics.</p>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-6 glass-hover transition-all duration-300">
+          <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2 text-white">Transparency Support</h3>
+          <p class="text-gray-400 text-sm">Unlike JPEG, WebP supports alpha channel transparency. Preserve transparent backgrounds from your PNGs or convert them to solid colors based on your needs.</p>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-6 glass-hover transition-all duration-300">
+          <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2 text-white">Batch Processing</h3>
+          <p class="text-gray-400 text-sm">Convert unlimited PNG files to WebP simultaneously. Perfect for optimizing entire image libraries, e-commerce catalogs, or website assets in one operation.</p>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-6 glass-hover transition-all duration-300">
+          <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2 text-white">Universal Compatibility</h3>
+          <p class="text-gray-400 text-sm">Works perfectly on all devices and browsers. WebP is now supported by 95%+ of modern browsers, making it the ideal choice for next-generation web optimization.</p>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-6 glass-hover transition-all duration-300">
+          <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2 text-white">100% Free Forever</h3>
+          <p class="text-gray-400 text-sm">No registration, no limits, no watermarks. Completely free to use with unlimited conversions. Optimize your entire image library without spending a penny.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section -->
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-12 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Convert PNG to WebP
+      </h2>
+      <div class="space-y-6">
+        <div class="glass-panel rounded-xl p-6 flex items-start space-x-4">
+          <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold">1</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-1 text-white">Upload Your PNG Images</h3>
+            <p class="text-gray-400 text-sm">Drag and drop your PNG files into the upload area or click to browse and select files from your device. You can upload multiple files at once for batch conversion. Our tool supports files up to 500MB each.</p>
+          </div>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-6 flex items-start space-x-4">
+          <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold">2</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-1 text-white">Configure Conversion Settings</h3>
+            <p class="text-gray-400 text-sm">Choose between lossy compression for smaller files or lossless for maximum quality. Adjust the quality slider (default 85% offers optimal balance). Select whether to preserve transparency or fill with a background color.</p>
+          </div>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-6 flex items-start space-x-4">
+          <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold">3</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-1 text-white">Download Optimized WebP Files</h3>
+            <p class="text-gray-400 text-sm">Download individual WebP files or use "Download All" to get a ZIP archive. Compare file sizes instantly—WebP typically reduces size by 25-35% compared to PNG while maintaining identical visual quality.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-16">
+      <article class="glass-panel rounded-2xl p-6 md:p-12 article-content">
+        <h2>The Complete Guide to PNG to WebP Conversion: Modern Web Optimization</h2>
+        
+        <p>In today's fast-paced digital landscape, website performance directly impacts user experience, search engine rankings, and conversion rates. Image optimization plays a crucial role in this ecosystem, and <strong>WebP</strong> has emerged as the gold standard for modern web graphics. Developed by Google in 2010, WebP represents a significant leap forward in image compression technology, offering superior file size reduction compared to traditional formats like PNG and JPEG while maintaining exceptional visual quality. Our <strong>free online PNG to WebP converter</strong> empowers developers, designers, and content creators to harness this powerful format without complex software or technical expertise.</p>
+        
+        <p>Converting PNG images to WebP format is one of the most impactful optimizations you can implement for your website. With file size reductions typically ranging from 25% to 35% compared to PNG, and even greater savings compared to JPEG, WebP enables faster page loads, reduced bandwidth consumption, and improved Core Web Vitals scores. This comprehensive guide explores everything you need to know about PNG to WebP conversion, from technical fundamentals to advanced optimization strategies that will transform your web performance.</p>
+        
+        <h2>Understanding WebP: The Next-Generation Image Format</h2>
+        
+        <p>WebP is a modern image format that provides superior lossless and lossy compression for images on the web. Using predictive coding and advanced compression algorithms derived from VP8 video codec technology, WebP achieves smaller file sizes than PNG (lossless) and JPEG (lossy) without sacrificing quality. The format supports both lossy and lossless compression, alpha channel transparency, and animation—making it a versatile replacement for PNG, JPEG, and even GIF formats.</p>
+        
+        <p>Unlike PNG, which uses DEFLATE compression (similar to ZIP files), WebP employs predictive coding that analyzes neighboring pixels to predict values, then only encodes the differences. This approach results in significantly smaller files, especially for photographic content. For lossless WebP compression, the format uses advanced techniques including entropy coding, color cache coding, and backward reference distances to achieve 26% smaller files compared to PNG.</p>
+        
+        <h3>Key Advantages of WebP Over PNG</h3>
+        
+        <p>The benefits of converting PNG to WebP extend far beyond simple file size reduction:</p>
+        
+        <ul>
+          <li><strong>Superior Compression:</strong> WebP lossless images are 26% smaller than PNGs; lossy WebP images are 25-34% smaller than JPEGs</li>
+          <li><strong>Transparency Support:</strong> Unlike JPEG, WebP supports 8-bit alpha channel transparency with only 22% additional bytes compared to non-transparent images</li>
+          <li><strong>Lossy & Lossless Options:</strong> Choose between formats based on use case—lossless for graphics requiring perfect quality, lossy for photographs</li>
+          <li><strong>Animation Support:</strong> WebP supports animated images with smaller file sizes than GIF or APNG</li>
+          <li><strong>Browser Adoption:</strong> Supported by 95%+ of modern browsers including Chrome, Firefox, Safari, and Edge</li>
+          <li><strong>SEO Benefits:</strong> Faster loading images improve Core Web Vitals and search rankings</li>
+        </ul>
+        
+        <h2>Why Convert PNG to WebP?</h2>
+        
+        <p>The decision to convert PNG images to WebP format is driven by compelling performance and business benefits that directly impact your bottom line:</p>
+        
+        <h3>1. Dramatic File Size Reduction</h3>
+        
+        <p>The primary motivation for PNG to WebP conversion is file size optimization. WebP's advanced compression algorithms consistently deliver 25-35% smaller files compared to PNG without visible quality loss. For e-commerce sites with hundreds of product images, this translates to megabytes of saved bandwidth per page load. A typical PNG banner of 500KB converts to approximately 325KB in WebP format—a 35% reduction that users will notice immediately through faster loading times.</p>
+        
+        <h3>2. Improved Website Performance Metrics</h3>
+        
+        <p>Google's Core Web Vitals have become essential ranking factors, and image optimization directly impacts these metrics. Large PNG files contribute to poor Largest Contentful Paint (LCP) scores, while cumulative layout shifts often result from images loading slowly. By converting to WebP using our <strong>web image optimizer</strong>, you can achieve sub-2.5 second LCP scores, improving both user experience and search engine visibility.</p>
+        
+        <h3>3. Reduced Bandwidth Costs</h3>
+        
+        <p>For high-traffic websites, bandwidth represents a significant operational expense. WebP's superior compression reduces data transfer by approximately 30%, directly lowering hosting costs and CDN expenses. A website serving 1 million page views monthly with 2MB of images per page could save approximately 600GB of bandwidth monthly by switching from PNG to WebP.</p>
+        
+        <h3>4. Enhanced Mobile Experience</h3>
+        
+        <p>Mobile users often face slower connections and data limitations. WebP's smaller file sizes ensure your images load quickly even on 3G connections, reducing bounce rates and improving engagement. Mobile-first indexing means Google prioritizes your mobile site's performance—making WebP conversion essential for modern SEO.</p>
+        
+        <h3>5. Future-Proofing Your Assets</h3>
+        
+        <p>As web standards evolve, WebP is positioned as the successor to legacy formats. Major platforms including WordPress, Shopify, and Cloudflare now automatically serve WebP variants. By converting your PNG library to WebP now, you ensure compatibility with emerging technologies and platforms while maintaining original PNGs as archival masters.</p>
+        
+        <h2>How PNG to WebP Conversion Works</h2>
+        
+        <p>Our <strong>online PNG to WebP converter</strong> utilizes sophisticated browser-based technology to transform your images efficiently:</p>
+        
+        <h3>The Technical Process</h3>
+        
+        <p>When you upload a PNG file, our tool performs several sophisticated operations:</p>
+        
+        <ul>
+          <li><strong>Decoding:</strong> The PNG file is decoded to raw RGBA pixel data using the browser's built-in image decoder</li>
+          <li><strong>Canvas Rendering:</strong> The image is rendered to an HTML5 canvas element for processing</li>
+          <li><strong>Format Encoding:</strong> The canvas data is encoded using WebP compression algorithms via the canvas.toBlob() API</li>
+          <li><strong>Quality Optimization:</strong> Lossy compression applies psychovisual optimization to remove imperceptible details</li>
+          <li><strong>Metadata Preservation:</strong> Essential image metadata is retained while removing unnecessary bloat</li>
+        </ul>
+        
+        <h3>Lossy vs. Lossless WebP</h3>
+        
+        <p>Understanding compression types helps you choose optimal settings:</p>
+        
+        <p><strong>Lossy WebP</strong> uses predictive coding and block quantization similar to JPEG but with superior algorithms. It achieves 25-35% better compression than JPEG and is ideal for photographs and complex images. Quality settings between 80-90% typically provide the best balance of size and visual fidelity.</p>
+        
+        <p><strong>Lossless WebP</strong> uses entropy coding and backward references to compress data without quality loss. It achieves 26% better compression than PNG and is perfect for graphics, logos, screenshots, and images requiring pixel-perfect reproduction. File sizes are larger than lossy but smaller than equivalent PNGs.</p>
+        
+        <h2>Handling Transparency in WebP Conversion</h2>
+        
+        <p>One of WebP's standout features is its efficient handling of transparency, making it superior to JPEG for graphics and UI elements:</p>
+        
+        <h3>Alpha Channel Preservation</h3>
+        
+        <p>WebP supports 8-bit alpha channel transparency, allowing for smooth gradients and partial transparency that PNG provides but JPEG cannot. When converting transparent PNGs, our tool offers several options:</p>
+        
+        <ul>
+          <li><strong>Preserve Alpha:</strong> Maintain full transparency in the WebP output—ideal for logos, icons, and overlays</li>
+          <li><strong>Fill with Color:</strong> Replace transparent areas with white, black, gray, or custom colors for use cases requiring solid backgrounds</li>
+          <li><strong>Optimize Alpha:</strong> Our converter automatically optimizes the alpha channel for maximum compression efficiency</li>
+        </ul>
+        
+        <h3>Best Practices for Transparent Images</h3>
+        
+        <p>When using our <strong>transparent PNG to WebP converter</strong>:</p>
+        
+        <ul>
+          <li>Preserve transparency for UI elements, logos, and overlays that require flexible placement</li>
+          <li>Fill with background colors for photographs where transparency isn't needed (slightly smaller files)</li>
+          <li>Test converted WebP files in target browsers to ensure alpha channel renders correctly</li>
+          <li>Consider providing PNG fallbacks for legacy browsers (though WebP support is now nearly universal)</li>
+        </ul>
+        
+        <h2>Quality Settings and Optimization Strategies</h2>
+        
+        <p>Our <strong>PNG to WebP converter tool</strong> provides granular quality control to balance file size and visual fidelity:</p>
+        
+        <h3>Recommended Quality Settings</h3>
+        
+        <ul>
+          <li><strong>90-100%:</strong> Archival quality, minimal compression artifacts, largest files—use for print preparation or master archives</li>
+          <li><strong>80-90%:</strong> Optimal web quality, virtually indistinguishable from original, excellent compression—recommended for most use cases</li>
+          <li><strong>70-80%:</strong> Good quality for web, minor artifacts visible only on close inspection, significant size reduction—ideal for thumbnails</li>
+          <li><strong>50-70%:</strong> Aggressive compression, noticeable quality loss but acceptable for previews or low-bandwidth scenarios</li>
+        </ul>
+        
+        <p>The default 85% setting provides an optimal balance, typically reducing file sizes by 30% while maintaining professional-quality visuals indistinguishable from the original PNG to the human eye.</p>
+        
+        <h2>Batch Conversion and Workflow Integration</h2>
+        
+        <p>Our <strong>bulk PNG converter</strong> supports unlimited batch processing, streamlining optimization workflows:</p>
+        
+        <h3>Efficiency at Scale</h3>
+        
+        <p>Converting images individually is impractical for large libraries. Our batch processing allows you to upload hundreds of PNG files simultaneously, converting them all with uniform settings. The ZIP download feature organizes converted files for easy integration into content management systems, static site generators, or deployment pipelines.</p>
+        
+        <h3>Consistent Optimization</h3>
+        
+        <p>Maintaining consistent quality across your image library is crucial for professional appearance. Batch conversion ensures all images use identical compression settings, preventing visual inconsistencies that can occur with manual conversion using different tools or settings.</p>
+        
+        <h2>Use Cases and Applications</h2>
+        
+        <h3>E-commerce Optimization</h3>
+        
+        <p>Online retailers use our <strong>WebP image converter</strong> to optimize product catalogs. Faster-loading product images reduce bounce rates and improve conversion rates. A study by Google found that reducing mobile site load times by just one second can increase conversions by up to 20%.</p>
+        
+        <h3>Content Management Systems</h3>
+        
+        <p>WordPress, Drupal, and Joomla sites benefit from WebP conversion through reduced server load and improved user experience. Many modern CMS platforms now automatically serve WebP variants to supporting browsers, making pre-conversion of your media library a smart preparatory step.</p>
+        
+        <h3>Progressive Web Apps (PWAs)</h3>
+        
+        <p>WebP is essential for PWAs aiming for native-app performance. Smaller image payloads enable faster initial loads and reduced data usage—critical for users on limited data plans or slow connections.</p>
+        
+        <h3>Email Marketing</h3>
+        
+        <p>While email client support for WebP is still evolving, using WebP for landing pages linked from emails ensures faster post-click experiences. Our tool helps marketers optimize their entire visual funnel.</p>
+        
+        <h2>Browser Support and Fallback Strategies</h2>
+        
+        <p>WebP enjoys excellent browser support, with compatibility in:</p>
+        
+        <ul>
+          <li>Chrome, Edge, Firefox, Safari (14+), Opera (full support)</li>
+          <li>iOS Safari 14+, Chrome for Android, Samsung Internet</li>
+          <li>95%+ global browser market share</li>
+        </ul>
+        
+        <p>For the remaining 5% (primarily older Safari versions and IE11), implement fallback strategies using the HTML5 picture element or server-side content negotiation. Our converter helps you build WebP-first assets while maintaining PNG fallbacks for complete compatibility.</p>
+        
+        <h2>Comparing Our Tool to Alternatives</h2>
+        
+        <h3>Command-Line Tools</h3>
+        
+        <p>Tools like cwebp (Google's official encoder) offer powerful compression but require technical expertise, installation, and manual scripting for batch operations. Our <strong>browser-based converter</strong> provides identical compression quality through the browser's native WebP encoder without installation or command-line complexity.</p>
+        
+        <h3>Desktop Software</h3>
+        
+        <p>Applications like Photoshop, GIMP, or Squoosh offer WebP export but require installation, licensing fees, and individual file processing. Our tool matches their quality while offering superior convenience, batch processing, and zero cost.</p>
+        
+        <h3>Other Online Converters</h3>
+        
+        <p>Many online converters impose limitations: file size restrictions (often 5-10MB), quantity limits, server-side processing (privacy concerns), watermarks, or registration requirements. Our <strong>secure image conversion</strong> eliminates all limitations with client-side processing, 500MB file support, unlimited batch conversion, and complete privacy.</p>
+        
+        <h2>Technical Specifications</h2>
+        
+        <p>Our <strong>PNG to WebP converter</strong> offers professional-grade capabilities:</p>
+        
+        <ul>
+          <li><strong>Input Format:</strong> PNG (supports all variants including transparent PNG-24 and PNG-32)</li>
+          <li><strong>Output Format:</strong> WebP (VP8 encoding)</li>
+          <li><strong>Maximum File Size:</strong> 500MB per image</li>
+          <li><strong>Batch Processing:</strong> Unlimited files simultaneously</li>
+          <li><strong>Quality Range:</strong> 1-100% for lossy, lossless option available</li>
+          <li><strong>Transparency:</strong> Full alpha channel preservation or color fill options</li>
+          <li><strong>Processing:</strong> 100% client-side (browser-based)</li>
+          <li><strong>Privacy:</strong> Images never leave your device</li>
+          <li><strong>Output Naming:</strong> Original filename with .webp extension</li>
+        </ul>
+        
+        <h2>Best Practices for Optimal Results</h2>
+        
+        <h3>1. Choose Appropriate Compression Types</h3>
+        
+        <p>Use lossless compression for graphics with text, sharp edges, or requiring pixel-perfect reproduction (logos, UI elements, screenshots). Use lossy compression for photographs and complex images where file size matters more than absolute precision.</p>
+        
+        <h3>2. Optimize Quality Settings</h3>
+        
+        <p>Start with 85% quality for general web use. If file size is critical, test 75-80%. For hero images or full-screen backgrounds, use 90-95% to prevent artifacts in large displays.</p>
+        
+        <h3>3. Preserve Originals</h3>
+        
+        <p>Always maintain your original PNG files as masters. While WebP is excellent for distribution, PNG remains the standard for editing and archival purposes due to universal software support.</p>
+        
+        <h3>4. Test Visual Quality</h3>
+        
+        <p>After conversion, visually inspect images at actual display sizes. WebP's compression is optimized for web viewing, so examining images at 100% zoom on high-DPI displays may reveal artifacts invisible at normal viewing sizes.</p>
+        
+        <h3>5. Implement Responsive Images</h3>
+        
+        <p>Combine WebP conversion with responsive image techniques (srcset, sizes attributes) to serve appropriately-sized images for each device, maximizing performance gains.</p>
+        
+        <h2>Troubleshooting Common Issues</h2>
+        
+        <h3>Converted File Is Larger Than PNG</h3>
+        
+        <p>This rare occurrence happens with already-optimized PNGs or very simple graphics (solid colors, geometric shapes). PNG compresses simple graphics efficiently; try lossless WebP mode or slightly reduce quality settings.</p>
+        
+        <h3>Colors Look Different</h3>
+        
+        <p>WebP uses different color spaces than PNG. If colors appear shifted, ensure you're using high quality settings (85%+) and check that your monitor displays wide-gamut colors correctly.</p>
+        
+        <h3>Transparency Not Working</h3>
+        
+        <p>Ensure you selected "Preserve Alpha Channel" in the transparency dropdown. Some older image viewers don't support WebP transparency—test in modern browsers or image editing software.</p>
+        
+        <h2>The Future of WebP and Beyond</h2>
+        
+        <p>WebP represents the current standard for web image optimization, but the technology continues evolving. AVIF (AV1 Image File Format) offers even better compression but has limited browser support. JPEG XL promises superior quality and features but is still in early adoption phases.</p>
+        
+        <p>For now, WebP strikes the perfect balance of compression efficiency, feature set (transparency, animation, lossy/lossless), and browser support. Converting your PNG library to WebP today prepares you for the future while delivering immediate performance benefits.</p>
+        
+        <h2>Conclusion</h2>
+        
+        <p>Converting PNG to WebP is one of the highest-impact optimizations available for modern websites. With file size reductions of 25-35%, transparency support, and near-universal browser compatibility, WebP has become the essential image format for web performance. Our <strong>free online PNG to WebP converter</strong> removes all barriers to adoption, providing professional-grade conversion without cost, registration, or software installation.</p>
+        
+        <p>Whether you're optimizing a personal blog, e-commerce platform, or enterprise application, converting your PNG images to WebP will improve load times, reduce bandwidth costs, and enhance user experience. Start converting today and join the next generation of web optimization—your users (and your server bills) will thank you.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-12 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-4" id="faqContainer">
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">What is WebP and why should I use it instead of PNG?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">WebP is a modern image format developed by Google that provides superior compression compared to PNG. WebP images are typically 25-35% smaller than PNG files while maintaining the same visual quality. Unlike JPEG, WebP supports transparency (alpha channel) like PNG, making it the ideal replacement for both formats. Smaller file sizes mean faster website loading, reduced bandwidth costs, and better search engine rankings through improved Core Web Vitals.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Will WebP images work in all browsers?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">WebP is supported by 95%+ of modern browsers including Chrome, Firefox, Safari (14+), Edge, and Opera. This covers the vast majority of web users. For the small percentage using older browsers (primarily Internet Explorer and Safari versions older than 14), you can implement fallback strategies using the HTML5 picture element to serve PNG alternatives. The performance benefits for the majority of users far outweigh the minimal overhead of providing fallbacks.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Does converting PNG to WebP reduce image quality?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">It depends on your settings. Our converter offers lossless WebP conversion that preserves 100% of the original quality with 26% smaller file sizes than PNG. If you choose lossy compression (recommended for web use), you can control the quality level. At 85% quality (our default), the visual difference is imperceptible to the human eye while achieving 30%+ file size reduction. Higher settings (90-100%) provide near-identical quality with slightly less compression.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Can WebP preserve transparency from PNG images?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">Yes! Unlike JPEG, WebP fully supports 8-bit alpha channel transparency just like PNG. Our converter allows you to preserve transparency from your PNG files, making WebP perfect for logos, icons, overlays, and any graphics requiring transparent backgrounds. You can also choose to fill transparent areas with a solid color (white, black, gray, or custom) if you don't need transparency for specific use cases.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Is this PNG to WebP converter free to use?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">Absolutely! Our PNG to WebP converter is completely free with no registration required, no watermarks, no file quantity limits, and no hidden fees. You can convert as many images as you need, as often as you need. We believe web performance optimization should be accessible to everyone, from individual bloggers to large enterprises.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Are my images safe and private?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">100% secure. All conversion processing happens directly in your web browser using JavaScript and the HTML5 Canvas API. Your PNG files are never uploaded to any server—they never leave your device. This client-side approach ensures complete privacy and security, making our tool safe for confidential business images, personal photos, or any sensitive graphics.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">What quality setting should I use for WebP conversion?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">We recommend 85% quality as the optimal default for web use—it provides the perfect balance between file size and visual quality. For critical images (hero banners, portfolios), use 90-95%. For thumbnails or previews where size matters most, 70-80% works well. Use lossless mode only when you need pixel-perfect reproduction (logos with sharp edges, graphics with text). Remember: WebP at 85% quality typically looks better than JPEG at 90% while being 30% smaller.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Can I convert multiple PNG files at once?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">Yes! Our batch conversion feature allows unlimited simultaneous uploads. Drag and drop multiple PNG files or select them all at once. The tool will convert them all with your chosen settings and provide a ZIP download option for convenience. This is perfect for optimizing entire image libraries, e-commerce product catalogs, or website asset collections in one operation.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">What is the maximum file size I can convert?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">You can convert PNG images up to 500MB each. This generous limit handles even high-resolution photographs and detailed graphics. For larger files, consider pre-compressing your PNGs or splitting extremely large images. The 500MB limit ensures smooth processing in your browser while accommodating professional-grade image assets.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Why is my WebP file larger than the original PNG?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">This occasionally happens with already-optimized PNG files or very simple graphics (solid colors, geometric shapes, text). PNG compresses simple graphics very efficiently. If this occurs, try using lossless WebP mode instead of lossy, or ensure your quality setting isn't too high (try 80%). For complex photographs, WebP will always be smaller; for simple graphics, the difference may be minimal or slightly larger depending on the specific image content.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-8">
+    <div class="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://rakibalom.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">RakibAlom</a>. All rights reserved.</p>
+      <div class="flex gap-6">
+        <a href="https://rakibalom.com/" target="_blank" class="hover:text-white transition-colors">Website</a>
+        <a href="https://buymeacoffee.com/rakibalom" target="_blank" class="hover:text-white transition-colors">Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JSZip Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  
+  <script>
+    // Global state
+    let convertedImages = [];
+    
+    // DOM Elements
+    const dropZone = document.getElementById('dropZone');
+    const fileInput = document.getElementById('fileInput');
+    const browseBtn = document.getElementById('browseBtn');
+    const qualitySlider = document.getElementById('qualitySlider');
+    const qualityValue = document.getElementById('qualityValue');
+    const compressionType = document.getElementById('compressionType');
+    const transparencySelect = document.getElementById('transparencySelect');
+    const customColorContainer = document.getElementById('customColorContainer');
+    const customColor = document.getElementById('customColor');
+    const customColorText = document.getElementById('customColorText');
+    const processingStatus = document.getElementById('processingStatus');
+    const processingProgress = document.getElementById('processingProgress');
+    const processingCount = document.getElementById('processingCount');
+    const resultsSection = document.getElementById('resultsSection');
+    const imageGrid = document.getElementById('imageGrid');
+    const downloadAllBtn = document.getElementById('downloadAllBtn');
+    const clearAllBtn = document.getElementById('clearAllBtn');
+    const addMoreBtn = document.getElementById('addMoreBtn');
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    // Stats elements
+    const totalImagesEl = document.getElementById('totalImages');
+    const originalSizeEl = document.getElementById('originalSize');
+    const convertedSizeEl = document.getElementById('convertedSize');
+    const savedPercentEl = document.getElementById('savedPercent');
+    
+    // Set current year
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    
+    // Mobile Menu Toggle
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+    });
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+        mobileMenu.classList.remove('open');
+      }
+    });
+    
+    // Quality slider update
+    qualitySlider.addEventListener('input', (e) => {
+      qualityValue.textContent = `${e.target.value}%`;
+    });
+    
+    // Compression type change - update quality slider availability
+    compressionType.addEventListener('change', (e) => {
+      if (e.target.value === 'lossless') {
+        qualitySlider.disabled = true;
+        qualitySlider.parentElement.classList.add('opacity-50');
+        qualityValue.textContent = '100% (Lossless)';
+      } else {
+        qualitySlider.disabled = false;
+        qualitySlider.parentElement.classList.remove('opacity-50');
+        qualityValue.textContent = `${qualitySlider.value}%`;
+      }
+    });
+    
+    // Transparency option change
+    transparencySelect.addEventListener('change', (e) => {
+      if (e.target.value === 'custom') {
+        customColorContainer.classList.remove('hidden');
+      } else {
+        customColorContainer.classList.add('hidden');
+      }
+    });
+    
+    // Custom color sync
+    customColor.addEventListener('input', (e) => {
+      customColorText.value = e.target.value;
+    });
+    customColorText.addEventListener('input', (e) => {
+      if (/^#[0-9A-F]{6}$/i.test(e.target.value)) {
+        customColor.value = e.target.value;
+      }
+    });
+    
+    // Event Listeners
+    dropZone.addEventListener('click', (e) => {
+      if (e.target !== browseBtn) {
+        fileInput.click();
+      }
+    });
+    
+    browseBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      fileInput.click();
+    });
+    
+    dropZone.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      dropZone.classList.add('dragover');
+    });
+    
+    dropZone.addEventListener('dragleave', () => {
+      dropZone.classList.remove('dragover');
+    });
+    
+    dropZone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      dropZone.classList.remove('dragover');
+      const files = Array.from(e.dataTransfer.files).filter(f => f.type === 'image/png');
+      if (files.length > 0) {
+        processFiles(files);
+      }
+    });
+    
+    fileInput.addEventListener('change', (e) => {
+      const files = Array.from(e.target.files).filter(f => f.type === 'image/png');
+      if (files.length > 0) {
+        processFiles(files);
+      }
+      fileInput.value = '';
+    });
+    
+    downloadAllBtn.addEventListener('click', downloadAllAsZip);
+    clearAllBtn.addEventListener('click', clearAll);
+    addMoreBtn.addEventListener('click', () => fileInput.click());
+    
+    // Process uploaded files
+    async function processFiles(files) {
+      processingStatus.classList.remove('hidden');
+      resultsSection.classList.remove('hidden');
+      
+      const isLossless = compressionType.value === 'lossless';
+      const quality = isLossless ? 1.0 : qualitySlider.value / 100;
+      let bgColor = null;
+      
+      const transparencyOption = transparencySelect.value;
+      if (transparencyOption === 'white') bgColor = '#ffffff';
+      else if (transparencyOption === 'black') bgColor = '#000000';
+      else if (transparencyOption === 'custom') bgColor = customColor.value;
+      
+      let processed = 0;
+      const total = files.length;
+      
+      for (const file of files) {
+        if (file.size > 500 * 1024 * 1024) {
+          console.warn(`Skipping ${file.name}: File too large (max 500MB)`);
+          processed++;
+          continue;
+        }
+        
+        processingCount.textContent = `${processed + 1}/${total}`;
+        processingProgress.style.width = `${(processed / total) * 100}%`;
+        
+        try {
+          const result = await convertImage(file, quality, bgColor, isLossless);
+          convertedImages.unshift(result);
+          addImageCard(result, true);
+          updateStats();
+        } catch (error) {
+          console.error(`Error converting ${file.name}:`, error);
+        }
+        
+        processed++;
+        processingProgress.style.width = `${(processed / total) * 100}%`;
+      }
+      
+      processingStatus.classList.add('hidden');
+      processingProgress.style.width = '0%';
+    }
+    
+    // Convert single PNG to WebP
+    function convertImage(file, quality, bgColor, isLossless) {
+      return new Promise((resolve, reject) => {
+        const originalName = file.name;
+        const originalSize = file.size;
+        const baseName = originalName.replace(/\.png$/i, '');
+        const newName = `${baseName}.webp`;
+        
+        const reader = new FileReader();
+        
+        reader.onload = (e) => {
+          const img = new Image();
+          
+          img.onload = () => {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            
+            canvas.width = img.width;
+            canvas.height = img.height;
+            
+            // Handle background if specified (removing transparency)
+            if (bgColor) {
+              ctx.fillStyle = bgColor;
+              ctx.fillRect(0, 0, canvas.width, canvas.height);
+            }
+            
+            // Draw image
+            ctx.drawImage(img, 0, 0);
+            
+            // Determine MIME type and quality
+            const mimeType = isLossless ? 'image/webp' : 'image/webp';
+            const actualQuality = isLossless ? 1.0 : quality;
+            
+            // Convert to WebP
+            canvas.toBlob((blob) => {
+              if (!blob) {
+                reject(new Error('WebP conversion not supported in this browser'));
+                return;
+              }
+              
+              resolve({
+                id: Date.now() + Math.random(),
+                originalFile: file,
+                originalSize: originalSize,
+                convertedBlob: blob,
+                convertedSize: blob.size,
+                originalName: originalName,
+                newName: newName,
+                preview: URL.createObjectURL(blob),
+                width: img.width,
+                height: img.height,
+                quality: isLossless ? 'Lossless' : `${Math.round(quality * 100)}%`,
+                isLossless: isLossless
+              });
+            }, mimeType, actualQuality);
+          };
+          
+          img.onerror = () => reject(new Error('Failed to load image'));
+          img.src = e.target.result;
+        };
+        
+        reader.onerror = () => reject(new Error('Failed to read file'));
+        reader.readAsDataURL(file);
+      });
+    }
+    
+    // Add image card to grid
+    function addImageCard(imageData, prepend = false) {
+      const savings = imageData.originalSize > 0 
+        ? ((1 - imageData.convertedSize / imageData.originalSize) * 100) 
+        : 0;
+      
+      const savingsDisplay = savings > 0 ? savings.toFixed(1) : '0';
+      const savingsColor = savings > 0 ? 'text-emerald-400' : 'text-gray-500';
+      const savingsSign = savings > 0 ? '-' : '+';
+      
+      const card = document.createElement('div');
+      card.className = 'glass-panel rounded-xl overflow-hidden fade-in border border-white/10';
+      card.id = `image-${imageData.id}`;
+      
+      card.innerHTML = `
+        <div class="relative aspect-video checkerboard overflow-hidden">
+          <img src="${imageData.preview}" alt="${imageData.newName}" class="w-full h-full object-contain">
+          <div class="absolute top-2 right-2 px-2 py-1 bg-emerald-500/80 rounded text-xs font-medium text-white">
+            WebP
+          </div>
+          <div class="absolute top-2 left-2 px-2 py-1 bg-white/20 rounded text-xs font-medium text-white">
+            ${imageData.quality}
+          </div>
+        </div>
+        <div class="p-4">
+          <p class="text-sm font-medium text-gray-200 truncate mb-2" title="${imageData.newName}">${imageData.newName}</p>
+          <div class="grid grid-cols-2 gap-2 text-xs mb-3">
+            <div>
+              <p class="text-gray-500">Original</p>
+              <p class="text-gray-300 font-medium">${formatFileSize(imageData.originalSize)}</p>
+            </div>
+            <div>
+              <p class="text-gray-500">WebP</p>
+              <p class="text-emerald-400 font-medium">${formatFileSize(imageData.convertedSize)}</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs text-gray-500">${imageData.width} × ${imageData.height}px</span>
+            <span class="${savingsColor} text-sm font-semibold">${savingsSign}${Math.abs(savingsDisplay)}%</span>
+          </div>
+          <div class="flex gap-2">
+            <button onclick="downloadImage('${imageData.id}')" class="flex-1 py-2 bg-white/10 hover:bg-white/20 rounded-lg text-xs font-medium transition-all duration-300 flex items-center justify-center gap-1 text-white">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+              </svg>
+              Download
+            </button>
+            <button onclick="removeImage('${imageData.id}')" class="py-2 px-3 bg-white/5 hover:bg-red-500/20 border border-white/10 hover:border-red-500/30 rounded-lg text-xs transition-all duration-300 text-gray-300 hover:text-red-400">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      `;
+      
+      if (prepend && imageGrid.firstChild) {
+        imageGrid.insertBefore(card, imageGrid.firstChild);
+      } else {
+        imageGrid.appendChild(card);
+      }
+    }
+    
+    // Update statistics
+    function updateStats() {
+      const totalOriginal = convertedImages.reduce((sum, img) => sum + img.originalSize, 0);
+      const totalConverted = convertedImages.reduce((sum, img) => sum + img.convertedSize, 0);
+      const savedPercent = totalOriginal > 0 ? ((1 - totalConverted / totalOriginal) * 100) : 0;
+      
+      totalImagesEl.textContent = convertedImages.length;
+      originalSizeEl.textContent = formatFileSize(totalOriginal);
+      convertedSizeEl.textContent = formatFileSize(totalConverted);
+      savedPercentEl.textContent = `${savedPercent > 0 ? savedPercent.toFixed(1) : '0'}%`;
+    }
+    
+    // Download single image
+    function downloadImage(id) {
+      const image = convertedImages.find(img => img.id == id);
+      if (image) {
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(image.convertedBlob);
+        link.download = image.newName;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+    }
+    
+    // Remove single image
+    function removeImage(id) {
+      const index = convertedImages.findIndex(img => img.id == id);
+      if (index > -1) {
+        URL.revokeObjectURL(convertedImages[index].preview);
+        convertedImages.splice(index, 1);
+        const card = document.getElementById(`image-${id}`);
+        if (card) card.remove();
+        updateStats();
+        
+        if (convertedImages.length === 0) {
+          resultsSection.classList.add('hidden');
+        }
+      }
+    }
+    
+    // Download all as ZIP
+    async function downloadAllAsZip() {
+      if (convertedImages.length === 0) return;
+      
+      downloadAllBtn.disabled = true;
+      downloadAllBtn.innerHTML = `
+        <svg class="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg>
+        <span>Creating ZIP...</span>
+      `;
+      
+      try {
+        const zip = new JSZip();
+        const usedNames = {};
+        
+        for (const image of convertedImages) {
+          let fileName = image.newName;
+          
+          if (usedNames[fileName]) {
+            const nameParts = fileName.split('.');
+            const ext = nameParts.pop();
+            const baseName = nameParts.join('.');
+            fileName = `${baseName}_${usedNames[fileName]}.${ext}`;
+            usedNames[image.newName]++;
+          } else {
+            usedNames[fileName] = 1;
+          }
+          
+          zip.file(fileName, image.convertedBlob);
+        }
+        
+        const content = await zip.generateAsync({ type: 'blob' });
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(content);
+        link.download = `converted_webp_images.zip`;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(link.href);
+      } catch (error) {
+        console.error('Error creating ZIP:', error);
+        alert('Failed to create ZIP file. Please try downloading images individually.');
+      }
+      
+      downloadAllBtn.disabled = false;
+      downloadAllBtn.innerHTML = `
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+        </svg>
+        <span>Download All (ZIP)</span>
+      `;
+    }
+    
+    // Clear all images
+    function clearAll() {
+      convertedImages.forEach(img => {
+        URL.revokeObjectURL(img.preview);
+      });
+      convertedImages = [];
+      imageGrid.innerHTML = '';
+      resultsSection.classList.add('hidden');
+      updateStats();
+    }
+    
+    // Format file size
+    function formatFileSize(bytes) {
+      if (bytes === 0) return '0 Bytes';
+      const k = 1024;
+      const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+      const i = Math.floor(Math.log(bytes) / Math.log(k));
+      return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+    }
+    
+    // FAQ Toggle
+    function toggleFaq(button) {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('.faq-icon');
+      
+      content.classList.toggle('open');
+      icon.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
