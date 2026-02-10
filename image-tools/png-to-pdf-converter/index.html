@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Meta Title (55–60 chars) -->
+  <title>PNG to PDF Converter – Free Online Image to PDF Tool</title>
+
+  <!-- SEO Meta (145–155 chars) -->
+  <meta name="description" content="Convert PNG to PDF online free. Batch upload, drag-reorder pages, A4/Letter, margins, DPI, background & resize—private in your browser." />
+  <meta name="keywords" content="PNG to PDF converter, convert PNG to PDF, PNG to PDF online, image to PDF converter, merge PNG into PDF, combine PNG to PDF, batch PNG to PDF, multiple PNG to PDF, A4 PNG to PDF, Letter PNG to PDF, reorder PDF pages, PNG transparency PDF, create PDF from PNG, screenshots to PDF, scan PNG to PDF, free PNG to PDF tool, secure PNG to PDF, browser based PNG to PDF, client side conversion, PDF maker from images, compress PDF from PNG, print ready PDF, online document creator" />
+  <meta name="author" content="RakibAlom" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://rakibalom.com/tools/png-to-pdf-converter/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rakibalom.com/tools/png-to-pdf-converter/" />
+  <meta property="og:title" content="PNG to PDF Converter – Free Online Image to PDF Tool" />
+  <meta property="og:description" content="Convert PNG to PDF online free. Batch upload, reorder pages, A4/Letter, margins, DPI, background & resize—private in your browser." />
+  <meta property="og:image" content="https://rakibalom.com/tools/png-to-pdf-converter/og-image.png" />
+  <meta property="og:site_name" content="RakibAlom Tools" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://rakibalom.com/tools/png-to-pdf-converter/" />
+  <meta name="twitter:title" content="PNG to PDF Converter – Free Online Image to PDF Tool" />
+  <meta name="twitter:description" content="Convert PNG to PDF online free. Batch upload, reorder pages, A4/Letter, margins, DPI, background & resize—private in your browser." />
+  <meta name="twitter:image" content="https://rakibalom.com/tools/png-to-pdf-converter/twitter-image.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://rakibalom.com/wp-content/uploads/2025/12/rakibalom-favicon.png" />
+  <link rel="apple-touch-icon" href="https://rakibalom.com/wp-content/uploads/2025/12/rakibalom-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.10)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #0a0a0a; color: #e5e5e5; }
+
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image:
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .btn-animated { transition: all 0.2s ease; }
+    .btn-animated:active { transform: scale(0.98); }
+
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: rgba(0,0,0,0.2); }
+    ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.25); }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open { max-height: 500px; opacity: 1; }
+
+    .drop-zone {
+      border: 2px dashed rgba(255, 255, 255, 0.2);
+      transition: all 0.25s ease;
+    }
+    .drop-zone:hover, .drop-zone.dragover {
+      border-color: rgba(255, 255, 255, 0.4);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .checkerboard {
+      background-image:
+        linear-gradient(45deg, #1a1a1a 25%, transparent 25%),
+        linear-gradient(-45deg, #1a1a1a 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #1a1a1a 75%),
+        linear-gradient(-45deg, transparent 75%, #1a1a1a 75%);
+      background-size: 16px 16px;
+      background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+      background-color: #252525;
+    }
+
+    .progress-bar {
+      background: linear-gradient(90deg, rgba(255,255,255,0.85), rgba(255,255,255,0.35));
+      transition: width 0.25s ease;
+    }
+
+    .fade-in { animation: fadeIn 0.22s ease forwards; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+    .glow-text { text-shadow: 0 0 30px rgba(255, 255, 255, 0.1); }
+
+    /* Settings dialog */
+    dialog#settingsDialog {
+      border: none;
+      padding: 0;
+      width: min(920px, calc(100vw - 2rem));
+      max-height: min(85vh, 860px);
+      background: transparent;
+    }
+    dialog#settingsDialog::backdrop {
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+
+    .drag-ring { outline: 2px solid rgba(255,255,255,0.18); outline-offset: -2px; }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 800;
+      margin-top: 2.4rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    .article-content h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    .article-content p { margin-bottom: 1rem; line-height: 1.85; color: #94a3b8; }
+    .article-content ul, .article-content ol { margin-bottom: 1rem; padding-left: 1.25rem; color: #94a3b8; }
+    .article-content li { margin-bottom: 0.5rem; line-height: 1.75; }
+    .article-content strong { color: #e2e8f0; }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open { max-height: 520px; opacity: 1; }
+    .faq-icon { transition: transform 0.3s ease; }
+    .faq-icon.open { transform: rotate(180deg); }
+  </style>
+</head>
+
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header / Navbar -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo + Name -->
+        <div class="flex items-center space-x-3">
+          <svg class="w-8 h-8 sm:w-9 sm:h-9" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M12 12h16M12 20h16M12 28h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-base sm:text-lg font-bold text-white">PNG to PDF Converter</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Batch, reorder, and export print‑ready PDFs</p>
+          </div>
+        </div>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center space-x-6">
+          <a href="https://rakibalom.com/" class="text-sm text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+            Home
+          </a>
+          <a href="https://rakibalom.com/tools/" class="text-sm text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+            </svg>
+            All Tools
+          </a>
+        </nav>
+
+        <!-- Mobile menu btn -->
+        <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-white/10 text-gray-300 transition-colors" aria-label="Open menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-4 space-y-3">
+        <a href="https://rakibalom.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+          </svg>
+          Home
+        </a>
+        <a href="https://rakibalom.com/tools/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+          </svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Compact Banner -->
+  <section class="py-5 sm:py-6 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text px-2">
+        PNG to PDF Converter
+      </h2>
+      <p class="text-gray-400 text-sm sm:text-base px-4">
+        Online Free Image to PDF Tool — Batch Upload, Reorder Pages, Download Instantly
+      </p>
+    </div>
+  </section>
+
+  <!-- Main -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-16 w-full">
+
+    <!-- Tool -->
+    <div class="glass-panel rounded-2xl p-4 sm:p-6 md:p-8 mb-10">
+
+      <!-- Alert -->
+      <div id="alertBox" class="hidden mb-5">
+        <div class="glass-panel rounded-xl p-4 border border-white/10">
+          <div class="flex items-start gap-3">
+            <div class="mt-0.5">
+              <svg class="w-5 h-5 text-amber-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <p class="text-sm font-semibold text-gray-200" id="alertTitle">Notice</p>
+              <p class="text-sm text-gray-400 mt-1" id="alertText"></p>
+            </div>
+            <button id="alertClose" class="p-1 rounded-md hover:bg-white/10 text-gray-300" aria-label="Close alert">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Compact Quick Bar (NO quality slider) -->
+      <div class="mb-6">
+        <div class="glass-panel rounded-xl p-3 sm:p-4 border border-white/10">
+          <div class="flex flex-col lg:flex-row lg:items-center gap-3">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 flex-1">
+              <!-- Page Size -->
+              <div class="min-w-0">
+                <label class="text-[11px] font-semibold text-gray-400 block mb-1">Page Size</label>
+                <select id="pageFormatMain" class="w-full px-3 py-2.5 rounded-lg glass-input text-sm font-medium">
+                  <option value="a4" selected>A4 (210×297mm)</option>
+                  <option value="letter">Letter (8.5×11 in)</option>
+                  <option value="original">Original Image Size (uses DPI)</option>
+                </select>
+                <p class="text-[11px] text-gray-500 mt-1">Choose a standard page or match each PNG’s size.</p>
+              </div>
+
+              <!-- Encoding -->
+              <div class="min-w-0">
+                <label class="text-[11px] font-semibold text-gray-400 block mb-1">PDF Image Encoding</label>
+                <select id="imageEncodingMain" class="w-full px-3 py-2.5 rounded-lg glass-input text-sm font-medium">
+                  <option value="png" selected>PNG (best clarity)</option>
+                  <option value="jpeg">JPEG (smaller PDF)</option>
+                </select>
+                <p class="text-[11px] text-gray-500 mt-1">JPEG uses optimized quality automatically.</p>
+              </div>
+
+              <!-- Quick hint -->
+              <div class="min-w-0">
+                <label class="text-[11px] font-semibold text-gray-400 block mb-1">Quick Tips</label>
+                <div class="px-3 py-2.5 rounded-lg bg-black/30 border border-white/10 text-sm text-gray-300">
+                  Drag cards to reorder pages.
+                </div>
+                <p class="text-[11px] text-gray-500 mt-1">All processing happens locally (no uploads).</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <button id="openSettingsBtn"
+                class="px-4 py-2.5 bg-white/10 hover:bg-white/20 text-white rounded-lg border border-white/10 transition-all btn-animated font-semibold flex items-center gap-2 whitespace-nowrap">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+                </svg>
+                Settings
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Modal -->
+      <dialog id="settingsDialog">
+        <div class="glass-panel rounded-2xl border border-white/10 overflow-hidden">
+          <div class="flex items-center justify-between px-5 py-4 border-b border-white/10 bg-black/20">
+            <div>
+              <h3 class="text-white font-extrabold text-lg">Settings</h3>
+              <p class="text-gray-400 text-xs">Compact controls for print‑ready PDFs</p>
+            </div>
+            <button id="closeSettingsBtn" class="p-2 rounded-lg hover:bg-white/10 text-gray-300 transition-colors" aria-label="Close settings">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="p-5 sm:p-6 overflow-y-auto" style="max-height: 70vh;">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+              <!-- Layout -->
+              <div class="glass-panel rounded-xl p-4 border border-white/10">
+                <h4 class="text-white font-bold mb-3">Layout</h4>
+
+                <div class="mb-3">
+                  <label class="text-sm font-medium text-gray-300 mb-2 block">Orientation</label>
+                  <select id="orientation" class="w-full px-4 py-3 rounded-lg glass-input text-sm font-medium">
+                    <option value="auto" selected>Auto (per image)</option>
+                    <option value="p">Portrait</option>
+                    <option value="l">Landscape</option>
+                  </select>
+                  <p class="text-xs text-gray-500 mt-2">Auto picks portrait/landscape based on each PNG.</p>
+                </div>
+
+                <div class="mb-3">
+                  <label class="text-sm font-medium text-gray-300 mb-2 block">Margin (mm)</label>
+                  <input id="marginMm" type="number" min="0" step="1" value="10" class="w-full px-4 py-3 rounded-lg glass-input text-sm font-medium" />
+                  <p class="text-xs text-gray-500 mt-2">Print-friendly margins (0–25mm recommended).</p>
+                </div>
+
+                <div class="mb-3">
+                  <label class="text-sm font-medium text-gray-300 mb-2 block">Image Fit</label>
+                  <select id="fitMode" class="w-full px-4 py-3 rounded-lg glass-input text-sm font-medium">
+                    <option value="contain" selected>Contain (no cropping)</option>
+                    <option value="cover">Cover (may crop edges)</option>
+                  </select>
+                  <p class="text-xs text-gray-500 mt-2">Contain is safest for documents and screenshots.</p>
+                </div>
+
+                <div>
+                  <label class="text-sm font-medium text-gray-300 mb-2 block">DPI (for Original Size)</label>
+                  <input id="dpi" type="number" min="36" max="600" step="1" value="150" class="w-full px-4 py-3 rounded-lg glass-input text-sm font-medium" />
+                  <p class="text-xs text-gray-500 mt-2">Controls physical page size when using “Original Image Size”.</p>
+                </div>
+              </div>
+
+              <!-- Output -->
+              <div class="glass-panel rounded-xl p-4 border border-white/10">
+                <h4 class="text-white font-bold mb-3">Output</h4>
+
+                <div class="mb-3">
+                  <label class="text-sm font-medium text-gray-300 mb-2 block">Background (for transparent PNG)</label>
+                  <select id="bgMode" class="w-full px-4 py-3 rounded-lg glass-input text-sm font-medium">
+                    <option value="white" selected>White background (recommended)</option>
+                    <option value="black">Black background</option>
+                    <option value="transparent">Keep transparency (PNG only)</option>
+                    <option value="custom">Custom color</option>
+                  </select>
+
+                  <div id="customBgWrap" class="hidden mt-3">
+                    <div class="flex gap-3">
+                      <input id="customBg" type="color" value="#ffffff" class="h-11 w-20 rounded-lg bg-transparent border border-white/20 cursor-pointer">
+                      <input id="customBgText" type="text" value="#ffffff" class="flex-1 px-4 py-3 rounded-lg glass-input text-sm font-mono uppercase" placeholder="#FFFFFF">
+                    </div>
+                  </div>
+
+                  <p class="text-xs text-gray-500 mt-2">If you choose JPEG encoding, transparency will be flattened (filled) automatically.</p>
+                </div>
+
+                <div>
+                  <label class="text-sm font-medium text-gray-300 mb-2 block">Max Long Edge (px)</label>
+                  <input id="maxEdge" type="number" min="0" step="100" value="0" class="w-full px-4 py-3 rounded-lg glass-input text-sm font-medium">
+                  <p class="text-xs text-gray-500 mt-2">0 = no resizing. Use 3000–6000px to reduce huge PDFs.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-5 flex flex-col sm:flex-row gap-3 sm:justify-end">
+              <button id="closeSettingsBtn2" class="px-5 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg border border-white/10 transition-all btn-animated font-semibold">
+                Done
+              </button>
+            </div>
+          </div>
+        </div>
+      </dialog>
+
+      <!-- Drop Zone -->
+      <div id="dropZone" class="drop-zone rounded-xl p-8 sm:p-12 text-center cursor-pointer transition-all duration-300 mb-6">
+        <input type="file" id="fileInput" accept="image/png" multiple class="hidden" />
+        <div class="flex flex-col items-center">
+          <svg class="w-12 h-12 sm:w-16 sm:h-16 text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+          </svg>
+          <p class="text-base sm:text-lg font-medium text-gray-200 mb-2">Drag & Drop PNG Images Here</p>
+          <p class="text-xs sm:text-sm text-gray-400 mb-4">or click to browse files</p>
+          <button id="browseBtn" class="px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg border border-white/10 transition-all duration-300 btn-animated font-semibold flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+            </svg>
+            Select PNG Files
+          </button>
+          <p class="text-xs text-gray-500 mt-4 text-center px-2">Batch supported • Drag to reorder • Download combined PDF or ZIP</p>
+        </div>
+      </div>
+
+      <!-- Processing -->
+      <div id="processingStatus" class="hidden mb-6">
+        <div class="glass-panel rounded-xl p-4 border border-white/10">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-sm font-medium text-gray-300" id="processingText">Processing...</span>
+            <span id="processingCount" class="text-sm text-gray-400">0/0</span>
+          </div>
+          <div class="w-full h-2 bg-black/40 rounded-full overflow-hidden">
+            <div id="processingProgress" class="progress-bar h-full rounded-full" style="width:0%"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <div id="resultsSection" class="hidden">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-6">
+          <div class="glass-panel rounded-xl p-3 sm:p-4 text-center border border-white/10">
+            <p class="text-xl sm:text-2xl font-bold text-white" id="totalImages">0</p>
+            <p class="text-xs text-gray-400">PNG Files</p>
+          </div>
+          <div class="glass-panel rounded-xl p-3 sm:p-4 text-center border border-white/10">
+            <p class="text-xl sm:text-2xl font-bold text-white" id="totalSize">0 KB</p>
+            <p class="text-xs text-gray-400">Total Size</p>
+          </div>
+          <div class="glass-panel rounded-xl p-3 sm:p-4 text-center border border-white/10">
+            <p class="text-xl sm:text-2xl font-bold text-white" id="pageMode">A4</p>
+            <p class="text-xs text-gray-400">Page Setup</p>
+          </div>
+          <div class="glass-panel rounded-xl p-3 sm:p-4 text-center border border-white/10">
+            <p class="text-xl sm:text-2xl font-bold text-white" id="privacyNote">Local</p>
+            <p class="text-xs text-gray-400">Processing</p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-3 mb-6">
+          <button id="downloadCombinedBtn" class="flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg border border-white/10 transition-all btn-animated font-semibold">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v12m0 0l-4-4m4 4l4-4m-8 6h8"/>
+            </svg>
+            Download Combined PDF
+          </button>
+
+          <button id="downloadZipBtn" class="flex items-center gap-2 px-6 py-3 bg-white/5 hover:bg-white/10 text-gray-200 rounded-lg border border-white/10 transition-all btn-animated font-semibold">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v3m0 0v3m0-3h3m-3 0H9m-6 8h18M5 12l1 8h12l1-8"/>
+            </svg>
+            Download Individual PDFs (ZIP)
+          </button>
+
+          <button id="clearAllBtn" class="flex items-center gap-2 px-6 py-3 bg-white/5 hover:bg-white/10 text-gray-300 rounded-lg border border-white/10 transition-all btn-animated font-semibold">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+            </svg>
+            Clear All
+          </button>
+
+          <button id="addMoreBtn" class="flex items-center gap-2 px-6 py-3 bg-white/5 hover:bg-white/10 text-gray-300 rounded-lg border border-white/10 transition-all btn-animated font-semibold ml-auto">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+            </svg>
+            Add More
+          </button>
+        </div>
+
+        <div id="imageGrid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 max-h-[820px] overflow-y-auto pr-2"></div>
+
+        <p class="text-xs text-gray-500 mt-4">
+          Tip: Drag cards to reorder pages (desktop) or use ▲ ▼ buttons.
+        </p>
+      </div>
+    </div>
+
+    <!-- Article (SEO-friendly, 2000–5000 words) -->
+    <section class="mb-14">
+      <article class="glass-panel rounded-2xl p-6 md:p-12 article-content">
+        <h2>PNG to PDF Converter: Convert PNG Images into a PDF (Free Online)</h2>
+        <p>
+          A <strong>PNG to PDF converter</strong> is one of the most practical tools you can use on the web. It takes one or many PNG image files and
+          turns them into a properly structured PDF document that is easy to share, print, upload, and archive. If you’ve ever tried emailing ten PNG
+          screenshots, submitting scanned PNG pages for an application, or sending a complete set of receipts to a client, you already know the problem:
+          multiple images are messy and inconvenient. A PDF solves that by packaging everything into a single, universal document.
+        </p>
+        <p>
+          This online tool is built to feel modern and professional: it supports <strong>batch upload</strong>, <strong>page reordering</strong>,
+          print-ready controls (A4/Letter, margins, orientation), and smart handling for transparent PNGs (background options). It also provides an
+          optional “JPEG (smaller PDF)” embedding mode, which can reduce output size for photo-like images or very large screenshots. Most importantly,
+          everything runs <strong>in your browser</strong>, which means your images are processed locally instead of being uploaded to a server.
+        </p>
+
+        <h2>What This PNG to PDF Tool Does</h2>
+        <p>
+          This tool converts PNG files into PDFs in two common formats:
+        </p>
+        <ul>
+          <li><strong>Combined PDF:</strong> All PNG images are placed into a single multi-page PDF (one image per page).</li>
+          <li><strong>Individual PDFs (ZIP):</strong> Each PNG is converted to a single-page PDF, then all PDFs are downloaded together as a ZIP file.</li>
+        </ul>
+        <p>
+          It’s a complete solution for people searching for “<strong>convert PNG to PDF online</strong>,” “<strong>merge PNG into PDF</strong>,”
+          “<strong>combine PNG images into one PDF</strong>,” or “<strong>image to PDF converter</strong>.” In addition, it includes page layout controls
+          that help you produce <strong>print-ready PDFs</strong> for work, school, forms, or documentation.
+        </p>
+
+        <h2>Why Convert PNG to PDF?</h2>
+        <p>
+          PNG is an excellent image format, especially for screenshots, UI designs, diagrams, icons, and graphics with sharp edges. But PNG images are
+          still “loose files.” When you need something that behaves like a document—complete with predictable page size, printing consistency, and an
+          easy download/send workflow—PDF is the natural choice.
+        </p>
+        <ul>
+          <li><strong>Cleaner sharing:</strong> One PDF is easier than sending multiple PNG attachments.</li>
+          <li><strong>Better printing:</strong> PDFs keep page size and layout stable across devices.</li>
+          <li><strong>Professional presentation:</strong> A multi-page PDF looks like a real document.</li>
+          <li><strong>Easy archiving:</strong> PDFs are the standard for storage and record keeping.</li>
+          <li><strong>Universal compatibility:</strong> PDF opens on almost all devices and browsers.</li>
+        </ul>
+
+        <h2>How the Converter Works (High Level)</h2>
+        <p>
+          This converter runs using modern browser capabilities and a client-side PDF engine:
+        </p>
+        <ol>
+          <li>You upload PNG files (drag-and-drop or file picker).</li>
+          <li>The tool reads each file and builds a preview list.</li>
+          <li>You reorder pages by dragging cards (or using arrow buttons).</li>
+          <li>When exporting, each PNG is rendered to a canvas (optional background fill, optional resizing).</li>
+          <li>The rendered image is embedded into a PDF page and downloaded instantly.</li>
+        </ol>
+        <p>
+          Because the conversion happens in your browser, your files are not uploaded to a remote server. This is particularly helpful for sensitive
+          images such as invoices, internal screenshots, confidential mockups, client materials, or personal documents.
+        </p>
+
+        <h2>Page Size Options: A4, Letter, and Original Image Size</h2>
+        <h3>A4 (210×297mm)</h3>
+        <p>
+          A4 is the most common paper size internationally. It’s ideal for office printing, school submissions, and professional documentation.
+          When you choose A4, each PNG is centered and scaled to fit the page based on your margin and fit settings.
+        </p>
+
+        <h3>Letter (8.5×11 inches)</h3>
+        <p>
+          Letter is widely used in the United States. If you print frequently in the US, choosing Letter reduces the chance of scaling differences
+          when printing from browsers or PDF viewers.
+        </p>
+
+        <h3>Original Image Size (DPI-based pages)</h3>
+        <p>
+          “Original Image Size” creates PDF pages based on the PNG’s pixel dimensions and a DPI (dots per inch) value. DPI converts pixels to a
+          physical page size. Higher DPI makes the physical size smaller; lower DPI makes it larger. This is useful if you want “image-true pages”
+          rather than standard paper sizes.
+        </p>
+
+        <h2>Orientation: Auto, Portrait, Landscape</h2>
+        <p>
+          Auto orientation is the most convenient option for mixed sets of PNG files because it chooses portrait or landscape automatically based on
+          each image. If you need consistent page orientation, switch to Portrait or Landscape. This is common for official submissions where you want
+          every page in the same orientation.
+        </p>
+
+        <h2>Margins and Fit Mode (Contain vs Cover)</h2>
+        <p>
+          Margins provide breathing room around your content and reduce the risk of edges being cut off during printing. For documents, a margin around
+          10mm is a safe and professional choice.
+        </p>
+        <p>
+          Fit mode controls how an image is placed on the page:
+        </p>
+        <ul>
+          <li><strong>Contain:</strong> Fits the entire PNG within the page area, with no cropping. Best for screenshots, scans, receipts, and diagrams.</li>
+          <li><strong>Cover:</strong> Fills the page area but may crop edges. Useful for full-page visuals or poster-like output.</li>
+        </ul>
+
+        <h2>Transparency and Background Handling</h2>
+        <p>
+          PNG supports transparency, but PDF viewer behavior can vary—especially when printing. To keep your output predictable, this tool lets you fill
+          transparent pixels with a chosen background color:
+        </p>
+        <ul>
+          <li><strong>White background:</strong> Most reliable for printing and common documents.</li>
+          <li><strong>Black background:</strong> Useful for dark designs or special cases.</li>
+          <li><strong>Keep transparency:</strong> Works best when embedding as PNG. If you choose JPEG mode, transparency is flattened automatically.</li>
+          <li><strong>Custom color:</strong> Choose any solid background to match your brand or layout.</li>
+        </ul>
+
+        <h2>PNG vs JPEG Embedding: File Size vs Clarity</h2>
+        <p>
+          This converter includes a PDF embedding choice:
+        </p>
+        <ul>
+          <li><strong>PNG (best clarity):</strong> Produces crisp results for UI screenshots, text, and diagrams. PDF size may be larger.</li>
+          <li><strong>JPEG (smaller PDF):</strong> Uses an optimized internal quality setting to reduce PDF size for photo-like content and huge images.</li>
+        </ul>
+        <p>
+          If your goal is maximum readability (especially for small text), PNG mode is usually the best. If your goal is smaller PDFs for easier upload
+          to email or submission platforms, JPEG mode often helps. For even better size control, use the <strong>Max Long Edge</strong> resize option.
+        </p>
+
+        <h2>Max Long Edge (px): Reduce Huge PDFs Safely</h2>
+        <p>
+          Very large PNG images can create massive PDFs and slow down conversion on low-memory devices. Max Long Edge lets you resize images before
+          embedding. For most practical use, setting it to 4000–6000 pixels gives high quality while dramatically reducing PDF size.
+          Keep it at 0 if you want no resizing.
+        </p>
+
+        <h2>Use Cases</h2>
+        <h3>School and University</h3>
+        <p>
+          Students often submit documents as PDFs. If your assignment is screenshots or scanned pages, merging PNGs into a single PDF makes submission
+          easier and more professional.
+        </p>
+
+        <h3>Business Records</h3>
+        <p>
+          Receipts, invoices, shipping labels, and proof screenshots are often stored as images. Converting them to PDF improves organization, archiving,
+          and email workflows.
+        </p>
+
+        <h3>Design and Development</h3>
+        <p>
+          Designers share PNG exports as PDFs for review. Developers combine bug reproduction screenshots into a single PDF for QA and stakeholders.
+          Reordering pages is critical for keeping the story in the correct sequence.
+        </p>
+
+        <h2>Best Practices for Best Results</h2>
+        <ul>
+          <li><strong>Use A4/Letter for printing:</strong> Standard page sizes are more predictable in print workflows.</li>
+          <li><strong>Use Contain for documents:</strong> Avoid accidental cropping of receipts, scans, and screenshots.</li>
+          <li><strong>Use White background for transparent PNGs:</strong> It’s the most print-friendly option.</li>
+          <li><strong>Use Max Long Edge if PDFs are too large:</strong> 4000–6000px is a strong starting range.</li>
+          <li><strong>Use JPEG embedding to reduce size:</strong> Especially for photo-like images or huge screenshots.</li>
+          <li><strong>Reorder before download:</strong> The page order matches your card order exactly.</li>
+        </ul>
+
+        <h2>Conclusion</h2>
+        <p>
+          This <strong>PNG to PDF converter</strong> is designed to be a premium, practical tool: batch upload, reorder pages, choose A4/Letter or
+          original-size pages, set margins and fit mode, handle transparency correctly, and optimize large PDFs with resizing or JPEG embedding.
+          It works entirely in your browser for privacy and convenience. If you need a fast way to convert PNG images into a clean PDF document, this
+          tool covers both everyday and advanced workflows.
+        </p>
+      </article>
+    </section>
+
+    <!-- FAQ -->
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-extrabold text-center mb-10 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+
+      <div class="space-y-4" id="faqContainer">
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Can I merge multiple PNG images into one PDF?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">
+              Yes. Upload multiple PNGs and click “Download Combined PDF”. Each PNG becomes a page in the final PDF.
+            </p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">How do I reorder pages before downloading?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">
+              Drag and drop the image cards (desktop) or use ▲ ▼ buttons. The combined PDF follows that exact order.
+            </p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Is this PNG to PDF converter free?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">
+              Yes. It’s free to use with batch upload and downloads.
+            </p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Are my PNG files uploaded to your server?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">
+              No. Conversion happens locally in your browser. Your images stay on your device.
+            </p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">What page size should I choose: A4 or Letter?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">
+              Choose A4 for most countries and Letter for the US. Choose “Original Image Size” if you want pages sized by the image and DPI setting.
+            </p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Why is my PDF file size too large?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">
+              Try switching “PDF Image Encoding” to JPEG and/or set Max Long Edge to resize very large images before embedding into the PDF.
+            </p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Will transparent PNG backgrounds remain transparent?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">
+              If you choose “Keep transparency” and embed as PNG, transparency can be preserved. If you use JPEG embedding, transparency is flattened automatically.
+            </p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Can I download a separate PDF for each PNG?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">
+              Yes. Each card has a “Download PDF” button for a single-page PDF, and you can download all individual PDFs as a ZIP.
+            </p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Does it work on mobile?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">
+              Yes. For very large PNGs, use JPEG embedding or Max Long Edge resizing for better performance on mobile devices.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-8">
+    <div class="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://rakibalom.com/" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition-colors">RakibAlom</a>. All rights reserved.</p>
+      <div class="flex gap-6">
+        <a href="https://rakibalom.com/" target="_blank" rel="noopener" class="hover:text-white transition-colors">Website</a>
+        <a href="https://rakibalom.com/tools/" target="_blank" rel="noopener" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+  <script>
+    // -----------------------------
+    // State
+    // -----------------------------
+    let items = []; // {id, file, name, size, previewUrl, width, height}
+    let draggingId = null;
+
+    // -----------------------------
+    // DOM
+    // -----------------------------
+    const dropZone = document.getElementById('dropZone');
+    const fileInput = document.getElementById('fileInput');
+    const browseBtn = document.getElementById('browseBtn');
+
+    const pageFormatMain = document.getElementById('pageFormatMain');
+    const imageEncodingMain = document.getElementById('imageEncodingMain');
+
+    const settingsDialog = document.getElementById('settingsDialog');
+    const openSettingsBtn = document.getElementById('openSettingsBtn');
+    const closeSettingsBtn = document.getElementById('closeSettingsBtn');
+    const closeSettingsBtn2 = document.getElementById('closeSettingsBtn2');
+
+    const orientation = document.getElementById('orientation');
+    const marginMm = document.getElementById('marginMm');
+    const fitMode = document.getElementById('fitMode');
+    const dpi = document.getElementById('dpi');
+    const bgMode = document.getElementById('bgMode');
+    const customBgWrap = document.getElementById('customBgWrap');
+    const customBg = document.getElementById('customBg');
+    const customBgText = document.getElementById('customBgText');
+    const maxEdge = document.getElementById('maxEdge');
+
+    const processingStatus = document.getElementById('processingStatus');
+    const processingProgress = document.getElementById('processingProgress');
+    const processingCount = document.getElementById('processingCount');
+    const processingText = document.getElementById('processingText');
+
+    const resultsSection = document.getElementById('resultsSection');
+    const imageGrid = document.getElementById('imageGrid');
+
+    const downloadCombinedBtn = document.getElementById('downloadCombinedBtn');
+    const downloadZipBtn = document.getElementById('downloadZipBtn');
+    const clearAllBtn = document.getElementById('clearAllBtn');
+    const addMoreBtn = document.getElementById('addMoreBtn');
+
+    const totalImagesEl = document.getElementById('totalImages');
+    const totalSizeEl = document.getElementById('totalSize');
+    const pageModeEl = document.getElementById('pageMode');
+    const privacyNoteEl = document.getElementById('privacyNote');
+
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    const alertBox = document.getElementById('alertBox');
+    const alertTitle = document.getElementById('alertTitle');
+    const alertText = document.getElementById('alertText');
+    const alertClose = document.getElementById('alertClose');
+
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // -----------------------------
+    // Helpers
+    // -----------------------------
+    function clamp(n, min, max) {
+      n = Number(n);
+      if (Number.isNaN(n)) return min;
+      return Math.min(max, Math.max(min, n));
+    }
+
+    function formatFileSize(bytes) {
+      if (!bytes || bytes <= 0) return '0 Bytes';
+      const k = 1024;
+      const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+      const i = Math.floor(Math.log(bytes) / Math.log(k));
+      return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+    }
+
+    function escapeHtml(str) {
+      return String(str || '')
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#039;');
+    }
+
+    function cryptoRandomId() {
+      if (window.crypto && crypto.getRandomValues) {
+        const a = new Uint32Array(2);
+        crypto.getRandomValues(a);
+        return `${a[0].toString(16)}${a[1].toString(16)}`;
+      }
+      return `${Date.now()}-${Math.random()}`;
+    }
+
+    function sanitizeHex(hex) {
+      const v = String(hex || '').trim();
+      return /^#[0-9A-F]{6}$/i.test(v) ? v.toUpperCase() : null;
+    }
+
+    function showAlert(title, text) {
+      alertTitle.textContent = title || 'Notice';
+      alertText.textContent = text || '';
+      alertBox.classList.remove('hidden');
+    }
+    function hideAlert() { alertBox.classList.add('hidden'); }
+    alertClose.addEventListener('click', hideAlert);
+
+    function setProcessing(visible, text = 'Processing...', current = 0, total = 0) {
+      if (visible) {
+        processingStatus.classList.remove('hidden');
+        processingText.textContent = text;
+        processingCount.textContent = `${current}/${total}`;
+        processingProgress.style.width = total ? `${(current / total) * 100}%` : '0%';
+      } else {
+        processingStatus.classList.add('hidden');
+        processingProgress.style.width = '0%';
+        processingCount.textContent = `0/0`;
+      }
+    }
+
+    function disableButtons(disabled) {
+      const btns = [downloadCombinedBtn, downloadZipBtn, clearAllBtn, addMoreBtn];
+      btns.forEach(b => b.disabled = disabled);
+      btns.forEach(b => b.classList.toggle('opacity-60', disabled));
+      btns.forEach(b => b.classList.toggle('cursor-not-allowed', disabled));
+    }
+
+    // -----------------------------
+    // Navbar mobile menu
+    // -----------------------------
+    mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+    document.addEventListener('click', (e) => {
+      if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) mobileMenu.classList.remove('open');
+    });
+
+    // -----------------------------
+    // Settings modal
+    // -----------------------------
+    function openSettings() {
+      if (settingsDialog?.showModal) settingsDialog.showModal();
+      else settingsDialog.setAttribute('open', 'open');
+    }
+    function closeSettings() {
+      if (settingsDialog?.close) settingsDialog.close();
+      else settingsDialog.removeAttribute('open');
+    }
+    openSettingsBtn.addEventListener('click', openSettings);
+    closeSettingsBtn.addEventListener('click', closeSettings);
+    closeSettingsBtn2.addEventListener('click', closeSettings);
+    settingsDialog.addEventListener('click', (e) => { if (e.target === settingsDialog) closeSettings(); });
+
+    // Background UI
+    bgMode.addEventListener('change', () => {
+      customBgWrap.classList.toggle('hidden', bgMode.value !== 'custom');
+      if (bgMode.value === 'transparent' && imageEncodingMain.value === 'jpeg') {
+        showAlert('Transparency note', 'JPEG does not support transparency. Transparent PNGs will be flattened over a background color.');
+      }
+    });
+    customBg.addEventListener('input', (e) => customBgText.value = e.target.value.toUpperCase());
+    customBgText.addEventListener('input', (e) => {
+      const clean = sanitizeHex(e.target.value);
+      if (clean) customBg.value = clean;
+    });
+
+    // Encoding warnings
+    imageEncodingMain.addEventListener('change', () => {
+      hideAlert();
+      if (imageEncodingMain.value === 'jpeg' && bgMode.value === 'transparent') {
+        showAlert('Transparency note', 'JPEG does not support transparency. Transparent PNGs will be flattened over a background color.');
+      }
+    });
+
+    // -----------------------------
+    // Upload
+    // -----------------------------
+    dropZone.addEventListener('click', (e) => { if (e.target !== browseBtn) fileInput.click(); });
+    browseBtn.addEventListener('click', (e) => { e.stopPropagation(); fileInput.click(); });
+
+    dropZone.addEventListener('dragover', (e) => { e.preventDefault(); dropZone.classList.add('dragover'); });
+    dropZone.addEventListener('dragleave', () => dropZone.classList.remove('dragover'));
+    dropZone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      dropZone.classList.remove('dragover');
+      handleFiles(Array.from(e.dataTransfer.files || []));
+    });
+
+    fileInput.addEventListener('change', (e) => {
+      handleFiles(Array.from(e.target.files || []));
+      fileInput.value = '';
+    });
+
+    addMoreBtn.addEventListener('click', () => fileInput.click());
+
+    async function handleFiles(files) {
+      hideAlert();
+      if (!files || files.length === 0) return;
+
+      const pngs = files.filter(f => f && f.type === 'image/png');
+      const nonPng = files.filter(f => f && f.type !== 'image/png');
+
+      if (nonPng.length > 0) showAlert('File type notice', 'Only PNG files are supported. Non-PNG files were skipped.');
+      if (pngs.length === 0) return;
+
+      setProcessing(true, 'Reading PNG files...', 0, pngs.length);
+
+      let i = 0;
+      for (const file of pngs) {
+        i++;
+        processingCount.textContent = `${i}/${pngs.length}`;
+        processingProgress.style.width = `${(i / pngs.length) * 100}%`;
+
+        if (file.size > 100 * 1024 * 1024) {
+          showAlert('Large file skipped', `Skipped "${file.name}" because it is larger than 100MB.`);
+          continue;
+        }
+
+        const previewUrl = URL.createObjectURL(file);
+        try {
+          const dim = await getImageDimensions(previewUrl);
+          items.push({
+            id: cryptoRandomId(),
+            file,
+            name: file.name,
+            size: file.size,
+            previewUrl,
+            width: dim.width,
+            height: dim.height
+          });
+        } catch (err) {
+          URL.revokeObjectURL(previewUrl);
+          showAlert('Failed to load image', `Could not load "${file.name}". The file might be corrupted.`);
+        }
+
+        // Yield a bit for UI responsiveness on large batches
+        if (i % 6 === 0) await new Promise(r => setTimeout(r, 0));
+      }
+
+      setProcessing(false);
+      renderGrid();
+      updateStats();
+    }
+
+    function getImageDimensions(src) {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.onload = () => resolve({ width: img.naturalWidth, height: img.naturalHeight });
+        img.onerror = reject;
+        img.src = src;
+      });
+    }
+
+    // -----------------------------
+    // Render + reorder
+    // -----------------------------
+    function renderGrid() {
+      imageGrid.innerHTML = '';
+      items.forEach((it, index) => {
+        const card = document.createElement('div');
+        card.className = 'glass-panel rounded-xl overflow-hidden fade-in border border-white/10';
+        card.id = `item-${it.id}`;
+        card.setAttribute('draggable', 'true');
+        card.dataset.id = it.id;
+
+        card.innerHTML = `
+          <div class="relative aspect-video checkerboard overflow-hidden">
+            <img src="${it.previewUrl}" alt="${escapeHtml(it.name)}" class="w-full h-full object-contain">
+            <div class="absolute top-2 left-2 px-2 py-1 bg-white/15 rounded text-xs font-semibold text-white border border-white/10">
+              Page ${index + 1}
+            </div>
+            <div class="absolute top-2 right-2 px-2 py-1 bg-emerald-500/75 rounded text-xs font-semibold text-white">
+              PNG
+            </div>
+          </div>
+
+          <div class="p-4">
+            <div class="flex items-start justify-between gap-3 mb-2">
+              <p class="text-sm font-medium text-gray-200 truncate" title="${escapeHtml(it.name)}">${escapeHtml(it.name)}</p>
+              <span class="text-[11px] text-gray-500 whitespace-nowrap">Drag</span>
+            </div>
+
+            <div class="grid grid-cols-2 gap-2 text-xs mb-3">
+              <div>
+                <p class="text-gray-500">Dimensions</p>
+                <p class="text-gray-300 font-medium">${it.width} × ${it.height}px</p>
+              </div>
+              <div>
+                <p class="text-gray-500">File Size</p>
+                <p class="text-gray-300 font-medium">${formatFileSize(it.size)}</p>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex gap-2">
+                <button class="px-3 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-xs text-gray-200 transition-all btn-animated"
+                        title="Move up" ${index === 0 ? 'disabled style="opacity:.45; cursor:not-allowed;"' : ''} data-action="up">▲</button>
+                <button class="px-3 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-xs text-gray-200 transition-all btn-animated"
+                        title="Move down" ${index === items.length - 1 ? 'disabled style="opacity:.45; cursor:not-allowed;"' : ''} data-action="down">▼</button>
+              </div>
+
+              <button class="px-3 py-2 bg-white/5 hover:bg-red-500/20 border border-white/10 hover:border-red-500/30 rounded-lg text-xs text-gray-300 hover:text-red-300 transition-all btn-animated"
+                      title="Remove" data-action="remove">Remove</button>
+            </div>
+
+            <div class="flex gap-2">
+              <button class="flex-1 py-2 bg-white/10 hover:bg-white/20 rounded-lg text-xs font-semibold transition-all duration-300 flex items-center justify-center gap-1 text-white btn-animated"
+                      data-action="downloadOne">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                </svg>
+                Download PDF
+              </button>
+              <button class="py-2 px-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-xs text-gray-200 transition-all btn-animated"
+                      data-action="info" title="Info">i</button>
+            </div>
+          </div>
+        `;
+
+        // Button actions
+        card.addEventListener('click', async (e) => {
+          const btn = e.target.closest('button');
+          if (!btn) return;
+          const action = btn.getAttribute('data-action');
+          if (!action) return;
+
+          if (action === 'remove') return removeItem(it.id);
+          if (action === 'up') return moveItem(index, index - 1);
+          if (action === 'down') return moveItem(index, index + 1);
+          if (action === 'info') return showAlert('Page info', `"${it.name}" will be exported as page ${index + 1}.`);
+          if (action === 'downloadOne') return await downloadSinglePdf(it.id);
+        });
+
+        // Drag reorder
+        card.addEventListener('dragstart', (e) => {
+          draggingId = it.id;
+          e.dataTransfer.effectAllowed = 'move';
+          try { e.dataTransfer.setData('text/plain', it.id); } catch (_) {}
+          setTimeout(() => card.classList.add('opacity-70'), 0);
+        });
+        card.addEventListener('dragend', () => {
+          draggingId = null;
+          card.classList.remove('opacity-70');
+          document.querySelectorAll('.drag-ring').forEach(el => el.classList.remove('drag-ring'));
+        });
+        card.addEventListener('dragover', (e) => { e.preventDefault(); card.classList.add('drag-ring'); });
+        card.addEventListener('dragleave', () => card.classList.remove('drag-ring'));
+        card.addEventListener('drop', (e) => {
+          e.preventDefault();
+          card.classList.remove('drag-ring');
+
+          const targetId = card.dataset.id;
+          if (!draggingId || draggingId === targetId) return;
+
+          const fromIndex = items.findIndex(x => x.id === draggingId);
+          const toIndex = items.findIndex(x => x.id === targetId);
+          if (fromIndex < 0 || toIndex < 0) return;
+
+          const [moved] = items.splice(fromIndex, 1);
+          items.splice(toIndex, 0, moved);
+
+          renderGrid();
+          updateStats();
+        });
+
+        imageGrid.appendChild(card);
+      });
+    }
+
+    function removeItem(id) {
+      const idx = items.findIndex(x => x.id === id);
+      if (idx === -1) return;
+      URL.revokeObjectURL(items[idx].previewUrl);
+      items.splice(idx, 1);
+      renderGrid();
+      updateStats();
+    }
+
+    function moveItem(from, to) {
+      if (to < 0 || to >= items.length) return;
+      const [moved] = items.splice(from, 1);
+      items.splice(to, 0, moved);
+      renderGrid();
+      updateStats();
+    }
+
+    // -----------------------------
+    // Stats
+    // -----------------------------
+    function updateStats() {
+      totalImagesEl.textContent = items.length;
+      const totalBytes = items.reduce((s, it) => s + (it.size || 0), 0);
+      totalSizeEl.textContent = formatFileSize(totalBytes);
+
+      const fmt = pageFormatMain.value === 'original'
+        ? `Original @ ${clamp(dpi.value, 36, 600)} DPI`
+        : pageFormatMain.value.toUpperCase();
+      pageModeEl.textContent = fmt;
+
+      privacyNoteEl.textContent = 'Local';
+      if (items.length > 0) resultsSection.classList.remove('hidden');
+      else resultsSection.classList.add('hidden');
+    }
+    pageFormatMain.addEventListener('change', updateStats);
+    dpi.addEventListener('input', updateStats);
+
+    // -----------------------------
+    // Clear all
+    // -----------------------------
+    clearAllBtn.addEventListener('click', () => {
+      items.forEach(it => URL.revokeObjectURL(it.previewUrl));
+      items = [];
+      imageGrid.innerHTML = '';
+      updateStats();
+      hideAlert();
+    });
+
+    // -----------------------------
+    // PDF helpers
+    // -----------------------------
+    function getBgColor() {
+      const mode = bgMode.value;
+      if (mode === 'white') return '#FFFFFF';
+      if (mode === 'black') return '#000000';
+      if (mode === 'custom') return sanitizeHex(customBg.value) || '#FFFFFF';
+      return null; // transparent
+    }
+
+    function getOrientationForImage(it) {
+      const o = orientation.value;
+      if (o === 'p' || o === 'l') return o;
+      return (it.width >= it.height) ? 'l' : 'p';
+    }
+
+    function getPageSpecForImage(it) {
+      const fmt = pageFormatMain.value;
+      const o = getOrientationForImage(it);
+
+      if (fmt === 'original') {
+        const d = clamp(dpi.value, 36, 600);
+        const wMm = (it.width / d) * 25.4;
+        const hMm = (it.height / d) * 25.4;
+
+        if (orientation.value === 'p' && wMm > hMm) return { format: [hMm, wMm], orientation: 'p' };
+        if (orientation.value === 'l' && hMm > wMm) return { format: [hMm, wMm], orientation: 'l' };
+
+        return { format: [wMm, hMm], orientation: (wMm >= hMm ? 'l' : 'p') };
+      }
+
+      return { format: fmt, orientation: o };
+    }
+
+    function computePlacement(doc, imgPxW, imgPxH) {
+      const margin = clamp(marginMm.value, 0, 50);
+      const pageW = doc.internal.pageSize.getWidth();
+      const pageH = doc.internal.pageSize.getHeight();
+
+      const d = clamp(dpi.value, 36, 600);
+      const imgMmW = (imgPxW / d) * 25.4;
+      const imgMmH = (imgPxH / d) * 25.4;
+
+      const availW = Math.max(1, pageW - margin * 2);
+      const availH = Math.max(1, pageH - margin * 2);
+
+      const scaleContain = Math.min(availW / imgMmW, availH / imgMmH);
+      const scaleCover = Math.max(availW / imgMmW, availH / imgMmH);
+      const scale = (fitMode.value === 'cover') ? scaleCover : scaleContain;
+
+      const drawW = imgMmW * scale;
+      const drawH = imgMmH * scale;
+
+      const x = (pageW - drawW) / 2;
+      const y = (pageH - drawH) / 2;
+
+      return { x, y, w: drawW, h: drawH };
+    }
+
+    function loadImage(src) {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.onload = () => resolve(img);
+        img.onerror = reject;
+        img.src = src;
+      });
+    }
+
+    // JPEG optimized quality (no UI). You can change this value if you want.
+    const JPEG_EMBED_QUALITY = 0.88;
+
+    async function renderToDataUrl(it) {
+      const enc = imageEncodingMain.value; // 'png' or 'jpeg'
+      const bg = getBgColor();
+      const maxLong = clamp(maxEdge.value, 0, 50000);
+
+      let effectiveBg = bg;
+      if (enc === 'jpeg' && !effectiveBg) effectiveBg = '#FFFFFF'; // JPEG cannot be transparent
+
+      const img = await loadImage(it.previewUrl);
+
+      let targetW = img.naturalWidth;
+      let targetH = img.naturalHeight;
+
+      if (maxLong > 0) {
+        const longEdge = Math.max(targetW, targetH);
+        if (longEdge > maxLong) {
+          const ratio = maxLong / longEdge;
+          targetW = Math.max(1, Math.round(targetW * ratio));
+          targetH = Math.max(1, Math.round(targetH * ratio));
+        }
+      }
+
+      const canvas = document.createElement('canvas');
+      canvas.width = targetW;
+      canvas.height = targetH;
+
+      const ctx = canvas.getContext('2d', { alpha: true });
+
+      if (effectiveBg) {
+        ctx.fillStyle = effectiveBg;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+      }
+
+      ctx.imageSmoothingEnabled = true;
+      ctx.imageSmoothingQuality = 'high';
+      ctx.drawImage(img, 0, 0, targetW, targetH);
+
+      const mime = (enc === 'jpeg') ? 'image/jpeg' : 'image/png';
+      const dataUrl = (enc === 'jpeg')
+        ? canvas.toDataURL(mime, JPEG_EMBED_QUALITY)
+        : canvas.toDataURL(mime);
+
+      return { dataUrl, outW: targetW, outH: targetH, type: (enc === 'jpeg') ? 'JPEG' : 'PNG' };
+    }
+
+    function downloadBlob(blob, filename) {
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(() => URL.revokeObjectURL(url), 1500);
+    }
+
+    // -----------------------------
+    // Download: Combined PDF
+    // -----------------------------
+    downloadCombinedBtn.addEventListener('click', async () => {
+      hideAlert();
+      if (items.length === 0) return;
+
+      if (imageEncodingMain.value === 'jpeg' && bgMode.value === 'transparent') {
+        showAlert('Transparency note', 'JPEG does not support transparency. Transparent PNGs will be flattened over a background color.');
+      }
+
+      try {
+        await generateCombinedPdf();
+      } catch (err) {
+        console.error(err);
+        showAlert('PDF export failed', 'Try fewer images, set Max Long Edge, or use JPEG embedding to reduce memory usage.');
+      }
+    });
+
+    async function generateCombinedPdf() {
+      const { jsPDF } = window.jspdf;
+
+      disableButtons(true);
+      setProcessing(true, 'Generating combined PDF...', 0, items.length);
+
+      let doc = null;
+
+      for (let i = 0; i < items.length; i++) {
+        const it = items[i];
+        processingCount.textContent = `${i + 1}/${items.length}`;
+        processingProgress.style.width = `${((i + 1) / items.length) * 100}%`;
+
+        const spec = getPageSpecForImage(it);
+
+        if (!doc) {
+          doc = new jsPDF({ unit: 'mm', format: spec.format, orientation: spec.orientation, compress: true });
+        } else {
+          doc.addPage(spec.format, spec.orientation);
+          doc.setPage(i + 1);
+        }
+
+        const rendered = await renderToDataUrl(it);
+        const placement = computePlacement(doc, rendered.outW, rendered.outH);
+
+        doc.addImage(rendered.dataUrl, rendered.type, placement.x, placement.y, placement.w, placement.h, undefined, 'FAST');
+
+        if ((i + 1) % 4 === 0) await new Promise(r => setTimeout(r, 0));
+      }
+
+      const stamp = new Date().toISOString().slice(0, 10);
+      doc.save(`png-to-pdf_${stamp}.pdf`);
+
+      setProcessing(false);
+      disableButtons(false);
+    }
+
+    // -----------------------------
+    // Download: Single-page PDF
+    // -----------------------------
+    async function downloadSinglePdf(id) {
+      const it = items.find(x => x.id === id);
+      if (!it) return;
+
+      hideAlert();
+
+      if (imageEncodingMain.value === 'jpeg' && bgMode.value === 'transparent') {
+        showAlert('Transparency note', 'JPEG does not support transparency. Transparent PNGs will be flattened over a background color.');
+      }
+
+      try {
+        const { jsPDF } = window.jspdf;
+
+        disableButtons(true);
+        setProcessing(true, 'Generating single-page PDF...', 0, 1);
+
+        const spec = getPageSpecForImage(it);
+        const doc = new jsPDF({ unit: 'mm', format: spec.format, orientation: spec.orientation, compress: true });
+
+        const rendered = await renderToDataUrl(it);
+        const placement = computePlacement(doc, rendered.outW, rendered.outH);
+        doc.addImage(rendered.dataUrl, rendered.type, placement.x, placement.y, placement.w, placement.h, undefined, 'FAST');
+
+        const base = it.name.replace(/\.png$/i, '') || 'image';
+        const stamp = new Date().toISOString().slice(0, 10);
+        doc.save(`${base}_${stamp}.pdf`);
+
+      } catch (err) {
+        console.error(err);
+        showAlert('PDF export failed', 'Try lowering Max Long Edge or using JPEG embedding to reduce memory usage.');
+      } finally {
+        setProcessing(false);
+        disableButtons(false);
+      }
+    }
+
+    // -----------------------------
+    // Download: ZIP of individual PDFs
+    // -----------------------------
+    downloadZipBtn.addEventListener('click', async () => {
+      hideAlert();
+      if (items.length === 0) return;
+
+      if (imageEncodingMain.value === 'jpeg' && bgMode.value === 'transparent') {
+        showAlert('Transparency note', 'JPEG does not support transparency. Transparent PNGs will be flattened over a background color.');
+      }
+
+      try {
+        await generateZipOfPdfs();
+      } catch (err) {
+        console.error(err);
+        showAlert('ZIP export failed', 'Try fewer images or set Max Long Edge to reduce memory usage.');
+      }
+    });
+
+    async function generateZipOfPdfs() {
+      const { jsPDF } = window.jspdf;
+
+      disableButtons(true);
+      setProcessing(true, 'Creating ZIP of PDFs...', 0, items.length);
+
+      const zip = new JSZip();
+      const used = new Map();
+
+      for (let i = 0; i < items.length; i++) {
+        const it = items[i];
+        processingCount.textContent = `${i + 1}/${items.length}`;
+        processingProgress.style.width = `${((i + 1) / items.length) * 100}%`;
+
+        const spec = getPageSpecForImage(it);
+        const doc = new jsPDF({ unit: 'mm', format: spec.format, orientation: spec.orientation, compress: true });
+
+        const rendered = await renderToDataUrl(it);
+        const placement = computePlacement(doc, rendered.outW, rendered.outH);
+        doc.addImage(rendered.dataUrl, rendered.type, placement.x, placement.y, placement.w, placement.h, undefined, 'FAST');
+
+        const base = (it.name.replace(/\.png$/i, '') || 'image').trim();
+        let filename = `${base}.pdf`;
+
+        if (used.has(filename)) {
+          const c = used.get(filename) + 1;
+          used.set(filename, c);
+          filename = `${base}_${c}.pdf`;
+        } else {
+          used.set(filename, 1);
+        }
+
+        zip.file(filename, doc.output('blob'));
+
+        if ((i + 1) % 4 === 0) await new Promise(r => setTimeout(r, 0));
+      }
+
+      const stamp = new Date().toISOString().slice(0, 10);
+      const zipBlob = await zip.generateAsync({ type: 'blob' });
+      downloadBlob(zipBlob, `png_to_pdf_individual_${stamp}.zip`);
+
+      setProcessing(false);
+      disableButtons(false);
+    }
+
+    // -----------------------------
+    // FAQ toggle
+    // -----------------------------
+    function toggleFaq(button) {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('.faq-icon');
+      content.classList.toggle('open');
+      icon.classList.toggle('open');
+    }
+    window.toggleFaq = toggleFaq;
+
+    // Initial stats
+    updateStats();
+  </script>
+</body>
+</html>

@@ -1,0 +1,1746 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Meta Title (55–60 chars) -->
+  <title>WebP to PDF Converter – Free Online Image to PDF Tool</title>
+
+  <!-- SEO Meta (145–155 chars) -->
+  <meta name="description" content="Convert WebP to PDF online for free. Batch upload, reorder pages, choose A4/Letter, margins, background & size options—private in browser." />
+  <meta name="keywords" content="WebP to PDF converter, convert WebP to PDF, WebP to PDF online, image to PDF converter, merge WebP to PDF, combine WebP images into PDF, batch WebP to PDF, multiple WebP to PDF, WebP transparency to PDF, WebP alpha to PDF, A4 WebP to PDF, Letter WebP to PDF, reorder PDF pages, browser based WebP to PDF, secure WebP to PDF, client side conversion, offline WebP to PDF, free WebP to PDF tool, compress WebP to PDF, reduce PDF size, print ready PDF, photo to PDF, screenshots to PDF" />
+  <meta name="author" content="RakibAlom" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://rakibalom.com/tools/webp-to-pdf-converter/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rakibalom.com/tools/webp-to-pdf-converter/" />
+  <meta property="og:title" content="WebP to PDF Converter – Free Online Image to PDF Tool" />
+  <meta property="og:description" content="Convert WebP to PDF online for free. Batch upload, reorder pages, A4/Letter, margins, background & size options—private in browser." />
+  <meta property="og:image" content="https://rakibalom.com/tools/webp-to-pdf-converter/og-image.png" />
+  <meta property="og:site_name" content="RakibAlom Tools" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://rakibalom.com/tools/webp-to-pdf-converter/" />
+  <meta name="twitter:title" content="WebP to PDF Converter – Free Online Image to PDF Tool" />
+  <meta name="twitter:description" content="Convert WebP to PDF online for free. Batch upload, reorder pages, A4/Letter, margins, background & size options—private in browser." />
+  <meta name="twitter:image" content="https://rakibalom.com/tools/webp-to-pdf-converter/twitter-image.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://rakibalom.com/wp-content/uploads/2025/12/rakibalom-favicon.png" />
+  <link rel="apple-touch-icon" href="https://rakibalom.com/wp-content/uploads/2025/12/rakibalom-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.10)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #0a0a0a; color: #e5e5e5; }
+
+    .bg-mesh{
+      background-color:#0a0a0a;
+      background-image:
+        radial-gradient(at 0% 0%, rgba(60,60,60,.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40,40,40,.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60,60,60,.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40,40,40,.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel{
+      background: rgba(20,20,20,.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,.08);
+    }
+
+    .glass-input{
+      background: rgba(0,0,0,.4);
+      border: 1px solid rgba(255,255,255,.1);
+      color:#f5f5f5;
+    }
+    .glass-input:focus{
+      background: rgba(0,0,0,.6);
+      border-color: rgba(255,255,255,.2);
+      outline:none;
+    }
+
+    .glass-hover:hover{
+      background: rgba(255,255,255,.05);
+      border-color: rgba(255,255,255,.15);
+    }
+
+    .btn-animated { transition: all .2s ease; }
+    .btn-animated:active { transform: scale(.98); }
+
+    ::-webkit-scrollbar{ width:8px; height:8px; }
+    ::-webkit-scrollbar-track{ background: rgba(0,0,0,.2); }
+    ::-webkit-scrollbar-thumb{ background: rgba(255,255,255,.15); border-radius:4px; }
+    ::-webkit-scrollbar-thumb:hover{ background: rgba(255,255,255,.25); }
+
+    #mobileMenu{
+      transition:max-height .3s ease-in-out, opacity .3s ease-in-out;
+      max-height:0; opacity:0; overflow:hidden;
+    }
+    #mobileMenu.open{ max-height:500px; opacity:1; }
+
+    .drop-zone{
+      border:2px dashed rgba(255,255,255,.2);
+      transition: all .25s ease;
+    }
+    .drop-zone:hover, .drop-zone.dragover{
+      border-color: rgba(255,255,255,.4);
+      background: rgba(255,255,255,.05);
+    }
+
+    .checkerboard {
+      background-image:
+        linear-gradient(45deg, #1a1a1a 25%, transparent 25%),
+        linear-gradient(-45deg, #1a1a1a 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #1a1a1a 75%),
+        linear-gradient(-45deg, transparent 75%, #1a1a1a 75%);
+      background-size: 16px 16px;
+      background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+      background-color: #252525;
+    }
+
+    .slider{
+      -webkit-appearance:none; appearance:none;
+      height:6px;
+      background: rgba(255,255,255,.1);
+      border-radius:999px;
+      outline:none;
+    }
+    .slider::-webkit-slider-thumb{
+      -webkit-appearance:none; appearance:none;
+      width:18px; height:18px; border-radius:50%;
+      background: rgba(255,255,255,.9);
+      cursor:pointer;
+      box-shadow: 0 0 10px rgba(0,0,0,.5);
+    }
+    .slider::-moz-range-thumb{
+      width:18px; height:18px; border-radius:50%;
+      background: rgba(255,255,255,.9);
+      cursor:pointer;
+      border:none;
+      box-shadow: 0 0 10px rgba(0,0,0,.5);
+    }
+
+    .progress-bar{
+      background: linear-gradient(90deg, rgba(255,255,255,.85), rgba(255,255,255,.35));
+      transition: width .25s ease;
+    }
+
+    .fade-in{ animation: fadeIn .22s ease forwards; }
+    @keyframes fadeIn{
+      from{ opacity:0; transform: translateY(8px); }
+      to{ opacity:1; transform: translateY(0); }
+    }
+
+    .glow-text{ text-shadow: 0 0 30px rgba(255,255,255,.1); }
+
+    /* Settings dialog */
+    dialog#settingsDialog{
+      border:none; padding:0;
+      width:min(920px, calc(100vw - 2rem));
+      max-height:min(85vh, 860px);
+      background:transparent;
+    }
+    dialog#settingsDialog::backdrop{
+      background: rgba(0,0,0,.65);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+
+    .drag-ring{ outline:2px solid rgba(255,255,255,.18); outline-offset:-2px; }
+
+    /* Article typography */
+    .article-content h2{
+      font-size:1.75rem;
+      font-weight:800;
+      margin-top:2.4rem;
+      margin-bottom:1rem;
+      color:#e2e8f0;
+    }
+    .article-content h3{
+      font-size:1.3rem;
+      font-weight:700;
+      margin-top:1.5rem;
+      margin-bottom:.75rem;
+      color:#cbd5e1;
+    }
+    .article-content p{
+      margin-bottom:1rem;
+      line-height:1.9;
+      color:#94a3b8;
+    }
+    .article-content ul, .article-content ol{
+      margin-bottom:1rem;
+      padding-left:1.25rem;
+      color:#94a3b8;
+    }
+    .article-content li{ margin-bottom:.5rem; line-height:1.8; }
+    .article-content strong{ color:#e2e8f0; }
+
+    /* FAQ */
+    .faq-content{
+      transition:max-height .3s ease, opacity .3s ease;
+      max-height:0; opacity:0; overflow:hidden;
+    }
+    .faq-content.open{ max-height:560px; opacity:1; }
+    .faq-icon{ transition: transform .3s ease; }
+    .faq-icon.open{ transform: rotate(180deg); }
+  </style>
+</head>
+
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header / Navbar -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo + Name -->
+        <div class="flex items-center space-x-3">
+          <svg class="w-8 h-8 sm:w-9 sm:h-9" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M12 12h16M12 20h16M12 28h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-base sm:text-lg font-bold text-white">WebP to PDF Converter</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Batch • Reorder • Best-quality PDF export</p>
+          </div>
+        </div>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center space-x-6">
+          <a href="https://rakibalom.com/" class="text-sm text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+            Home
+          </a>
+          <a href="https://rakibalom.com/tools/" class="text-sm text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+            </svg>
+            All Tools
+          </a>
+        </nav>
+
+        <!-- Mobile menu btn -->
+        <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-white/10 text-gray-300 transition-colors" aria-label="Open menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-4 space-y-3">
+        <a href="https://rakibalom.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+          </svg>
+          Home
+        </a>
+        <a href="https://rakibalom.com/tools/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+          </svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Compact Banner -->
+  <section class="py-5 sm:py-6 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text px-2">
+        WebP to PDF Converter
+      </h2>
+      <p class="text-gray-400 text-sm sm:text-base px-4">
+        Online Free Document Converter Tool — Batch Upload, Reorder, Export PDF
+      </p>
+    </div>
+  </section>
+
+  <!-- Main -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-16 w-full">
+
+    <!-- Tool -->
+    <div class="glass-panel rounded-2xl p-4 sm:p-6 md:p-8 mb-10">
+
+      <!-- Alert -->
+      <div id="alertBox" class="hidden mb-5">
+        <div class="glass-panel rounded-xl p-4 border border-white/10">
+          <div class="flex items-start gap-3">
+            <div class="mt-0.5">
+              <svg class="w-5 h-5 text-amber-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <p class="text-sm font-semibold text-gray-200" id="alertTitle">Notice</p>
+              <p class="text-sm text-gray-400 mt-1" id="alertText"></p>
+            </div>
+            <button id="alertClose" class="p-1 rounded-md hover:bg-white/10 text-gray-300" aria-label="Close alert">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Bar -->
+      <div class="mb-6">
+        <div class="glass-panel rounded-xl p-3 sm:p-4 border border-white/10">
+          <div class="flex flex-col lg:flex-row lg:items-center gap-3">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 flex-1">
+
+              <!-- Page Size -->
+              <div class="min-w-0">
+                <label class="text-[11px] font-semibold text-gray-400 block mb-1">Page Size</label>
+                <select id="pageFormatMain" class="w-full px-3 py-2.5 rounded-lg glass-input text-sm font-medium">
+                  <option value="a4" selected>A4 (210×297mm)</option>
+                  <option value="letter">Letter (8.5×11 in)</option>
+                  <option value="original">Original Image Size (uses DPI)</option>
+                </select>
+                <p class="text-[11px] text-gray-500 mt-1">Choose a standard page or match each WebP’s size.</p>
+              </div>
+
+              <!-- Output Mode -->
+              <div class="min-w-0">
+                <label class="text-[11px] font-semibold text-gray-400 block mb-1">PDF Output Mode</label>
+                <select id="outputMode" class="w-full px-3 py-2.5 rounded-lg glass-input text-sm font-medium">
+                  <option value="best" selected>Best Quality (PNG embed)</option>
+                  <option value="small">Smaller PDF (JPEG embed)</option>
+                </select>
+                <div id="jpegQualityWrap" class="hidden mt-2">
+                  <div class="flex items-center justify-between mb-1">
+                    <span class="text-[11px] font-semibold text-gray-400">JPEG Quality</span>
+                    <span id="jpegQualityLabel" class="text-[11px] font-bold text-gray-200">90%</span>
+                  </div>
+                  <input id="jpegQuality" type="range" min="40" max="100" value="90" class="slider w-full">
+                  <p class="text-[11px] text-gray-500 mt-1">Tip: 80–90% is usually excellent with smaller PDFs.</p>
+                </div>
+              </div>
+
+              <!-- Quick Tips -->
+              <div class="min-w-0">
+                <label class="text-[11px] font-semibold text-gray-400 block mb-1">Quick Tips</label>
+                <div class="px-3 py-2.5 rounded-lg bg-black/30 border border-white/10 text-sm text-gray-300">
+                  Drag cards to reorder pages.
+                </div>
+                <p class="text-[11px] text-gray-500 mt-1">All processing is local (no uploads).</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <button id="openSettingsBtn"
+                class="px-4 py-2.5 bg-white/10 hover:bg-white/20 text-white rounded-lg border border-white/10 transition-all btn-animated font-semibold flex items-center gap-2 whitespace-nowrap">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+                </svg>
+                Settings
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Modal -->
+      <dialog id="settingsDialog">
+        <div class="glass-panel rounded-2xl border border-white/10 overflow-hidden">
+          <div class="flex items-center justify-between px-5 py-4 border-b border-white/10 bg-black/20">
+            <div>
+              <h3 class="text-white font-extrabold text-lg">Settings</h3>
+              <p class="text-gray-400 text-xs">Print-ready layout + transparency handling</p>
+            </div>
+            <button id="closeSettingsBtn" class="p-2 rounded-lg hover:bg-white/10 text-gray-300 transition-colors" aria-label="Close settings">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="p-5 sm:p-6 overflow-y-auto" style="max-height: 70vh;">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+              <!-- Layout -->
+              <div class="glass-panel rounded-xl p-4 border border-white/10">
+                <h4 class="text-white font-bold mb-3">Layout</h4>
+
+                <div class="mb-3">
+                  <label class="text-sm font-medium text-gray-300 mb-2 block">Orientation</label>
+                  <select id="orientation" class="w-full px-4 py-3 rounded-lg glass-input text-sm font-medium">
+                    <option value="auto" selected>Auto (per image)</option>
+                    <option value="p">Portrait</option>
+                    <option value="l">Landscape</option>
+                  </select>
+                  <p class="text-xs text-gray-500 mt-2">Auto picks portrait/landscape based on each WebP.</p>
+                </div>
+
+                <div class="mb-3">
+                  <label class="text-sm font-medium text-gray-300 mb-2 block">Margin (mm)</label>
+                  <input id="marginMm" type="number" min="0" step="1" value="10" class="w-full px-4 py-3 rounded-lg glass-input text-sm font-medium" />
+                  <p class="text-xs text-gray-500 mt-2">Print-friendly margins (0–25mm recommended).</p>
+                </div>
+
+                <div class="mb-3">
+                  <label class="text-sm font-medium text-gray-300 mb-2 block">Image Fit</label>
+                  <select id="fitMode" class="w-full px-4 py-3 rounded-lg glass-input text-sm font-medium">
+                    <option value="contain" selected>Contain (no cropping)</option>
+                    <option value="cover">Cover (may crop edges)</option>
+                  </select>
+                  <p class="text-xs text-gray-500 mt-2">Contain is safest for documents and screenshots.</p>
+                </div>
+
+                <div>
+                  <label class="text-sm font-medium text-gray-300 mb-2 block">DPI (for Original Size)</label>
+                  <input id="dpi" type="number" min="36" max="600" step="1" value="150" class="w-full px-4 py-3 rounded-lg glass-input text-sm font-medium" />
+                  <p class="text-xs text-gray-500 mt-2">Controls physical page size when using “Original Image Size”.</p>
+                </div>
+              </div>
+
+              <!-- Output -->
+              <div class="glass-panel rounded-xl p-4 border border-white/10">
+                <h4 class="text-white font-bold mb-3">Output</h4>
+
+                <div class="mb-3">
+                  <label class="text-sm font-medium text-gray-300 mb-2 block">Transparency Background</label>
+                  <select id="bgMode" class="w-full px-4 py-3 rounded-lg glass-input text-sm font-medium">
+                    <option value="preserve" selected>Preserve (PNG embed only)</option>
+                    <option value="white">Fill with White</option>
+                    <option value="black">Fill with Black</option>
+                    <option value="custom">Custom Color</option>
+                  </select>
+
+                  <div id="customBgWrap" class="hidden mt-3">
+                    <div class="flex gap-3">
+                      <input id="customBg" type="color" value="#ffffff" class="h-11 w-20 rounded-lg bg-transparent border border-white/20 cursor-pointer">
+                      <input id="customBgText" type="text" value="#ffffff" class="flex-1 px-4 py-3 rounded-lg glass-input text-sm font-mono uppercase" placeholder="#FFFFFF">
+                    </div>
+                  </div>
+
+                  <p class="text-xs text-gray-500 mt-2">
+                    If you choose “Smaller PDF (JPEG)”, transparency must be flattened to a solid background.
+                  </p>
+                </div>
+
+                <div>
+                  <label class="text-sm font-medium text-gray-300 mb-2 block">Max Long Edge (px)</label>
+                  <input id="maxEdge" type="number" min="0" step="100" value="0" class="w-full px-4 py-3 rounded-lg glass-input text-sm font-medium">
+                  <p class="text-xs text-gray-500 mt-2">
+                    0 = no resizing. Use 3000–6000px to reduce huge PDFs and speed up export.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-5 flex flex-col sm:flex-row gap-3 sm:justify-end">
+              <button id="resetSettingsBtn"
+                class="px-5 py-3 bg-white/5 hover:bg-white/10 text-gray-200 rounded-lg border border-white/10 transition-all btn-animated font-semibold">
+                Reset
+              </button>
+              <button id="closeSettingsBtn2"
+                class="px-5 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg border border-white/10 transition-all btn-animated font-semibold">
+                Done
+              </button>
+            </div>
+          </div>
+        </div>
+      </dialog>
+
+      <!-- Drop Zone -->
+      <div id="dropZone" class="drop-zone rounded-xl p-8 sm:p-12 text-center cursor-pointer transition-all duration-300 mb-6">
+        <input type="file" id="fileInput" accept="image/webp" multiple class="hidden" />
+        <div class="flex flex-col items-center">
+          <svg class="w-12 h-12 sm:w-16 sm:h-16 text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+          </svg>
+          <p class="text-base sm:text-lg font-medium text-gray-200 mb-2">Drag & Drop WebP Images Here</p>
+          <p class="text-xs sm:text-sm text-gray-400 mb-4">or click to browse files</p>
+          <button id="browseBtn"
+            class="px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg border border-white/10 transition-all duration-300 btn-animated font-semibold flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+            </svg>
+            Select WebP Files
+          </button>
+          <p class="text-xs text-gray-500 mt-4 text-center px-2">Batch supported • Drag to reorder • Download combined PDF or ZIP</p>
+        </div>
+      </div>
+
+      <!-- Processing -->
+      <div id="processingStatus" class="hidden mb-6">
+        <div class="glass-panel rounded-xl p-4 border border-white/10">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-sm font-medium text-gray-300" id="processingText">Processing...</span>
+            <span id="processingCount" class="text-sm text-gray-400">0/0</span>
+          </div>
+          <div class="w-full h-2 bg-black/40 rounded-full overflow-hidden">
+            <div id="processingProgress" class="progress-bar h-full rounded-full" style="width:0%"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <div id="resultsSection" class="hidden">
+        <!-- Summary -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-6">
+          <div class="glass-panel rounded-xl p-3 sm:p-4 text-center border border-white/10">
+            <p class="text-xl sm:text-2xl font-bold text-white" id="totalImages">0</p>
+            <p class="text-xs text-gray-400">WebP Files</p>
+          </div>
+          <div class="glass-panel rounded-xl p-3 sm:p-4 text-center border border-white/10">
+            <p class="text-xl sm:text-2xl font-bold text-white" id="totalSize">0 KB</p>
+            <p class="text-xs text-gray-400">Total Size</p>
+          </div>
+          <div class="glass-panel rounded-xl p-3 sm:p-4 text-center border border-white/10">
+            <p class="text-xl sm:text-2xl font-bold text-white" id="pageMode">A4</p>
+            <p class="text-xs text-gray-400">Page Setup</p>
+          </div>
+          <div class="glass-panel rounded-xl p-3 sm:p-4 text-center border border-white/10">
+            <p class="text-xl sm:text-2xl font-bold text-white" id="privacyNote">Local</p>
+            <p class="text-xs text-gray-400">Processing</p>
+          </div>
+        </div>
+
+        <!-- Bulk Actions -->
+        <div class="flex flex-wrap gap-3 mb-6">
+          <button id="downloadCombinedBtn"
+            class="flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg border border-white/10 transition-all btn-animated font-semibold">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v12m0 0l-4-4m4 4l4-4m-8 6h8"/>
+            </svg>
+            Download Combined PDF
+          </button>
+
+          <button id="downloadZipBtn"
+            class="flex items-center gap-2 px-6 py-3 bg-white/5 hover:bg-white/10 text-gray-200 rounded-lg border border-white/10 transition-all btn-animated font-semibold">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v3m0 0v3m0-3h3m-3 0H9m-6 8h18M5 12l1 8h12l1-8"/>
+            </svg>
+            Download Individual PDFs (ZIP)
+          </button>
+
+          <button id="clearAllBtn"
+            class="flex items-center gap-2 px-6 py-3 bg-white/5 hover:bg-white/10 text-gray-300 rounded-lg border border-white/10 transition-all btn-animated font-semibold">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+            </svg>
+            Clear All
+          </button>
+
+          <button id="addMoreBtn"
+            class="flex items-center gap-2 px-6 py-3 bg-white/5 hover:bg-white/10 text-gray-300 rounded-lg border border-white/10 transition-all btn-animated font-semibold ml-auto">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+            </svg>
+            Add More
+          </button>
+        </div>
+
+        <!-- Cards -->
+        <div id="imageGrid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 max-h-[820px] overflow-y-auto pr-2"></div>
+
+        <p class="text-xs text-gray-500 mt-4">
+          Tip: Drag cards to reorder pages (desktop) or use ▲ ▼ buttons.
+        </p>
+      </div>
+    </div>
+
+    <!-- How-to -->
+    <section class="mb-12">
+      <h2 class="text-xl md:text-2xl font-extrabold text-center mb-8 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Convert WebP to PDF
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div class="glass-panel rounded-xl p-6 glass-hover transition-all duration-300">
+          <p class="text-white font-bold mb-2">1) Upload WebP images</p>
+          <p class="text-gray-400 text-sm">Drag and drop WebP files or click to select. Batch uploads are supported.</p>
+        </div>
+        <div class="glass-panel rounded-xl p-6 glass-hover transition-all duration-300">
+          <p class="text-white font-bold mb-2">2) Reorder and set layout</p>
+          <p class="text-gray-400 text-sm">Reorder pages and choose A4/Letter/original size. Adjust margins, fit, and transparency background.</p>
+        </div>
+        <div class="glass-panel rounded-xl p-6 glass-hover transition-all duration-300">
+          <p class="text-white font-bold mb-2">3) Download PDF</p>
+          <p class="text-gray-400 text-sm">Download a combined PDF or individual PDFs as a ZIP—conversion stays on your device.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article (2000–5000 words) -->
+    <section class="mb-14">
+      <article class="glass-panel rounded-2xl p-6 md:p-12 article-content">
+        <h2>WebP to PDF Converter: Convert WebP Images to PDF Online (Free)</h2>
+        <p>
+          A <strong>WebP to PDF converter</strong> helps you transform one or more WebP images into a PDF document that is easier to share, print, upload, and store.
+          WebP is a modern image format built for the web—it offers excellent compression and can support transparency (alpha). PDF, on the other hand, is the world’s most
+          widely accepted document format, used by schools, businesses, government portals, printers, and email workflows. When you combine the two—by converting WebP to PDF—
+          you get a clean, professional file that behaves like a document rather than a folder of images.
+        </p>
+        <p>
+          People commonly search for “<strong>convert WebP to PDF</strong>”, “<strong>WebP to PDF online</strong>”, “<strong>merge WebP into PDF</strong>”, and
+          “<strong>combine WebP images into one PDF</strong>” because many platforms do not accept WebP uploads. Some websites accept JPG and PNG, but reject WebP.
+          Many forms and email workflows prefer a single PDF. This tool solves that problem with a premium interface and practical settings:
+          batch upload, page reordering, A4/Letter/original sizing, margins, fit modes, transparency handling, and an optional “smaller PDF” output mode.
+        </p>
+
+        <h2>What This WebP to PDF Tool Does</h2>
+        <p>
+          This converter offers two main outputs:
+        </p>
+        <ul>
+          <li><strong>Combined multi-page PDF:</strong> All uploaded WebP images become pages in one PDF (one image per page).</li>
+          <li><strong>Individual PDFs (ZIP):</strong> Each WebP becomes a one-page PDF; all PDFs download together as a ZIP file.</li>
+        </ul>
+        <p>
+          In addition to conversion, it helps you create print-ready PDFs by letting you control page size, margins, and image placement. It also supports transparent WebP images
+          by preserving alpha when possible (PNG embedding) or flattening transparency to a chosen background when output uses JPEG.
+        </p>
+
+        <h2>Why Convert WebP to PDF?</h2>
+        <p>
+          WebP is fantastic for websites, but it isn’t always welcome in document workflows. PDF is far more universal for sharing and official submissions. Converting WebP to PDF
+          is useful when:
+        </p>
+        <ul>
+          <li><strong>A platform won’t accept WebP:</strong> Many upload forms still do not support WebP files.</li>
+          <li><strong>You need a single file:</strong> A multi-page PDF is easier than sending many images.</li>
+          <li><strong>You need printing consistency:</strong> PDFs maintain page sizes (A4/Letter) and margins reliably.</li>
+          <li><strong>You need professional presentation:</strong> A PDF looks like a document, which is ideal for clients, teachers, and business records.</li>
+          <li><strong>You want better archiving:</strong> PDFs are easy to store, label, and manage in folders.</li>
+        </ul>
+
+        <h2>How WebP to PDF Conversion Works (Simple Explanation)</h2>
+        <p>
+          Converting images to PDF means embedding each image onto a PDF page. This tool performs the process in a predictable workflow:
+        </p>
+        <ol>
+          <li>You upload WebP files via drag-and-drop or file picker.</li>
+          <li>The tool displays previews and lets you reorder pages.</li>
+          <li>When exporting, it loads each WebP image into a canvas (optional resize, optional background fill for transparency).</li>
+          <li>The resulting image is embedded into a PDF page using a client-side PDF generator.</li>
+          <li>You download the PDF immediately.</li>
+        </ol>
+        <p>
+          The tool supports “Best Quality (PNG embed)” and “Smaller PDF (JPEG embed)”. Best Quality preserves detail and transparency more reliably, especially for graphics and UI.
+          Smaller PDF is useful for photo-like images or when you need to upload under strict file size limits.
+        </p>
+
+        <h2>Privacy and Security: Conversion Happens Locally in Your Browser</h2>
+        <p>
+          A major concern with many online converters is file privacy. Server-based converters upload your files to a remote server. That can be risky if your WebP images include
+          confidential information (invoices, internal dashboards, client assets, private images, or sensitive documents).
+        </p>
+        <p>
+          This tool is designed for privacy: conversion runs <strong>locally in your browser</strong>. Your images are not uploaded to a server for processing.
+          That means better privacy, fewer upload limits, and no waiting for server queues. It also means performance depends on your device. If you convert very large WebP images,
+          you can use Max Long Edge resizing to reduce memory usage.
+        </p>
+
+        <h2>Page Size Options: A4, Letter, and Original Image Size</h2>
+        <h3>A4 (210×297mm)</h3>
+        <p>
+          A4 is the most common page size worldwide. Choose A4 for printing, school assignments, business documents, and official submission workflows. Images are scaled and centered
+          based on your margin and fit settings.
+        </p>
+        <h3>Letter (8.5×11 in)</h3>
+        <p>
+          Letter is standard in the United States. If you print in the US, Letter helps avoid page scaling inconsistencies across printers and PDF viewers.
+        </p>
+        <h3>Original Image Size (DPI-based)</h3>
+        <p>
+          “Original Image Size” creates pages that match the physical size implied by pixels and a DPI value. DPI (dots per inch) converts pixels into real-world units.
+          Higher DPI makes the page smaller; lower DPI makes it larger. This mode is useful when you want each PDF page to match each WebP’s proportions without A4/Letter constraints.
+        </p>
+
+        <h2>Orientation, Margin, and Fit Mode</h2>
+        <p>
+          Orientation can be Auto, Portrait, or Landscape. Auto picks the best orientation per image based on width/height, which is ideal for mixed batches.
+          Margins control whitespace around the image and improve print reliability. Fit mode controls cropping:
+        </p>
+        <ul>
+          <li><strong>Contain:</strong> shows the full image without cropping (best for documents and screenshots).</li>
+          <li><strong>Cover:</strong> fills the page but may crop edges (best for full-page visual layouts).</li>
+        </ul>
+
+        <h2>Transparency in WebP: Preserve or Flatten</h2>
+        <p>
+          One advantage of WebP is its ability to store transparency (alpha channel), similar to PNG. When converting to PDF, transparency can be handled in two ways:
+        </p>
+        <ul>
+          <li><strong>Preserve transparency:</strong> Works best with “Best Quality (PNG embed)”. Transparent pixels remain transparent in supporting viewers.</li>
+          <li><strong>Flatten transparency:</strong> Required for JPEG embedding. You choose the background (white, black, or custom).</li>
+        </ul>
+        <p>
+          Flattening is often recommended for printing because transparent regions may render differently in some print workflows. White background is the safest default for documents.
+        </p>
+
+        <h2>Best Quality vs Smaller PDF: Which Output Mode Should You Use?</h2>
+        <p>
+          There is no single “best” mode—each serves a different goal:
+        </p>
+        <ul>
+          <li><strong>Best Quality (PNG embed):</strong> Great for UI screenshots, text-heavy graphics, logos, and transparency. Larger PDFs.</li>
+          <li><strong>Smaller PDF (JPEG embed):</strong> Great for photographs and when you must reduce size. Adjustable JPEG quality slider.</li>
+        </ul>
+        <p>
+          If you are converting WebP files that were originally photographs, JPEG mode often produces smaller PDFs with minimal visible difference at 85–95% quality.
+          If you are converting sharp graphics or images with transparency, PNG embed is usually the safest.
+        </p>
+
+        <h2>Max Long Edge: Reduce Huge PDFs Without Guessing</h2>
+        <p>
+          High-resolution images can produce large PDFs and can slow down conversion on low-memory devices. “Max Long Edge (px)” resizes images before embedding.
+          Recommended ranges:
+        </p>
+        <ul>
+          <li><strong>0 px:</strong> No resizing (maximum detail).</li>
+          <li><strong>6000 px:</strong> High quality with reduced memory and size.</li>
+          <li><strong>4000 px:</strong> Strong balance for screen viewing and typical printing.</li>
+          <li><strong>2500–3500 px:</strong> Smaller PDFs for fast sharing and upload limits.</li>
+        </ul>
+
+        <h2>Common Use Cases for WebP to PDF</h2>
+        <h3>Submitting WebP files to platforms that don’t support WebP</h3>
+        <p>
+          Many websites still reject WebP uploads. Converting to PDF is a simple workaround that is accepted almost everywhere.
+        </p>
+        <h3>Creating a printable portfolio or report</h3>
+        <p>
+          Designers and developers often export mockups and screenshots as WebP for web performance. PDF is better for sharing, printing, and approvals.
+        </p>
+        <h3>Archiving images as documents</h3>
+        <p>
+          Turning a set of images into a PDF is a common archiving strategy. It keeps files organized and easy to store.
+        </p>
+        <h3>Customer support and QA documentation</h3>
+        <p>
+          Bug reports often require multiple screenshots. A single PDF is easier to attach to tickets and ensures page order stays consistent.
+        </p>
+
+        <h2>WebP to PDF vs Other Methods</h2>
+        <h3>Desktop apps</h3>
+        <p>
+          Desktop software can export PDFs, but it often requires installation and extra steps. A web tool is faster for quick conversion and works across platforms.
+        </p>
+        <h3>Command-line tools</h3>
+        <p>
+          CLI tools can batch convert, but they require technical setup. This converter offers batch upload and reordering in a clean interface.
+        </p>
+        <h3>Server-based online converters</h3>
+        <p>
+          Server converters may upload your images. This tool processes locally in your browser, improving privacy and reducing upload friction.
+        </p>
+
+        <h2>Tips for Best Results</h2>
+        <ul>
+          <li><strong>Use Contain for documents:</strong> Avoid accidental cropping of receipts, screenshots, or text.</li>
+          <li><strong>Use A4/Letter for printing:</strong> Standard page sizes are predictable in PDF viewers and printers.</li>
+          <li><strong>Preserve transparency only when needed:</strong> For printing, flatten to white for maximum reliability.</li>
+          <li><strong>Try JPEG mode for photo-like images:</strong> Start at 90% quality, then reduce if you need smaller PDFs.</li>
+          <li><strong>Resize huge images:</strong> Set Max Long Edge to 4000–6000px to reduce memory usage and file size.</li>
+        </ul>
+
+        <h2>Conclusion</h2>
+        <p>
+          A reliable <strong>WebP to PDF converter</strong> should be fast, private, and flexible. This tool supports batch WebP uploads, page reordering, A4/Letter/original sizing,
+          margins, fit modes, transparency handling, resizing, and both best-quality and smaller-PDF output modes. If you need to convert WebP images into a shareable, printable document,
+          this converter provides a professional workflow directly in your browser.
+        </p>
+      </article>
+    </section>
+
+    <!-- FAQ -->
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-extrabold text-center mb-10 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+
+      <div class="space-y-4" id="faqContainer">
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Can I combine multiple WebP images into one PDF?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">
+              Yes. Upload multiple WebP files, reorder them, then click “Download Combined PDF”. Each WebP becomes one page.
+            </p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">How do I reorder pages before downloading?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">
+              Drag and drop cards on desktop or use the ▲ ▼ buttons on each card. The combined PDF uses that order.
+            </p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Are my WebP files uploaded to a server?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">
+              No. Conversion runs locally in your browser, improving privacy and avoiding upload limits.
+            </p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Does WebP transparency stay transparent in the PDF?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">
+              If you use “Best Quality (PNG embed)” and select “Preserve”, transparency can be preserved. If you use “Smaller PDF (JPEG embed)”, transparency must be flattened to a background color.
+            </p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Why is my PDF file large?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">
+              Large PDFs usually come from PNG embedding and very high-resolution images. Try “Smaller PDF (JPEG embed)”, reduce JPEG quality, or set Max Long Edge to resize huge images.
+            </p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Which page size should I use: A4 or Letter?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">
+              Choose A4 for most countries and Letter for US workflows. Use “Original Image Size” when you want pages sized based on each WebP and the DPI setting.
+            </p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Can I download a separate PDF for each WebP?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">
+              Yes. Click “Download Individual PDFs (ZIP)” or download a single-page PDF from each card.
+            </p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Does this tool work on mobile devices?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">
+              Yes. If you convert very large images, consider JPEG mode or Max Long Edge resizing for better performance.
+            </p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Do animated WebP files convert correctly?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">
+              Animated WebP files are usually converted using the first frame (most browser canvas workflows behave this way). For full animation, use GIF/MP4 workflows instead.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-8">
+    <div class="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://rakibalom.com/" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition-colors">RakibAlom</a>. All rights reserved.</p>
+      <div class="flex gap-6">
+        <a href="https://rakibalom.com/" target="_blank" rel="noopener" class="hover:text-white transition-colors">Website</a>
+        <a href="https://rakibalom.com/tools/" target="_blank" rel="noopener" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+  <script>
+    // -----------------------------
+    // State
+    // -----------------------------
+    let items = [];          // {id, file, name, size, previewUrl, width, height}
+    let draggingId = null;
+
+    // -----------------------------
+    // DOM
+    // -----------------------------
+    const dropZone = document.getElementById('dropZone');
+    const fileInput = document.getElementById('fileInput');
+    const browseBtn = document.getElementById('browseBtn');
+
+    const pageFormatMain = document.getElementById('pageFormatMain');
+
+    const outputMode = document.getElementById('outputMode');
+    const jpegQualityWrap = document.getElementById('jpegQualityWrap');
+    const jpegQuality = document.getElementById('jpegQuality');
+    const jpegQualityLabel = document.getElementById('jpegQualityLabel');
+
+    const settingsDialog = document.getElementById('settingsDialog');
+    const openSettingsBtn = document.getElementById('openSettingsBtn');
+    const closeSettingsBtn = document.getElementById('closeSettingsBtn');
+    const closeSettingsBtn2 = document.getElementById('closeSettingsBtn2');
+    const resetSettingsBtn = document.getElementById('resetSettingsBtn');
+
+    const orientation = document.getElementById('orientation');
+    const marginMm = document.getElementById('marginMm');
+    const fitMode = document.getElementById('fitMode');
+    const dpi = document.getElementById('dpi');
+
+    const bgMode = document.getElementById('bgMode');
+    const customBgWrap = document.getElementById('customBgWrap');
+    const customBg = document.getElementById('customBg');
+    const customBgText = document.getElementById('customBgText');
+
+    const maxEdge = document.getElementById('maxEdge');
+
+    const processingStatus = document.getElementById('processingStatus');
+    const processingProgress = document.getElementById('processingProgress');
+    const processingCount = document.getElementById('processingCount');
+    const processingText = document.getElementById('processingText');
+
+    const resultsSection = document.getElementById('resultsSection');
+    const imageGrid = document.getElementById('imageGrid');
+
+    const downloadCombinedBtn = document.getElementById('downloadCombinedBtn');
+    const downloadZipBtn = document.getElementById('downloadZipBtn');
+    const clearAllBtn = document.getElementById('clearAllBtn');
+    const addMoreBtn = document.getElementById('addMoreBtn');
+
+    const totalImagesEl = document.getElementById('totalImages');
+    const totalSizeEl = document.getElementById('totalSize');
+    const pageModeEl = document.getElementById('pageMode');
+    const privacyNoteEl = document.getElementById('privacyNote');
+
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    const alertBox = document.getElementById('alertBox');
+    const alertTitle = document.getElementById('alertTitle');
+    const alertText = document.getElementById('alertText');
+    const alertClose = document.getElementById('alertClose');
+
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // -----------------------------
+    // Helpers
+    // -----------------------------
+    function clamp(n, min, max) {
+      n = Number(n);
+      if (Number.isNaN(n)) return min;
+      return Math.min(max, Math.max(min, n));
+    }
+
+    function formatFileSize(bytes) {
+      if (!bytes || bytes <= 0) return '0 Bytes';
+      const k = 1024;
+      const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+      const i = Math.floor(Math.log(bytes) / Math.log(k));
+      return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+    }
+
+    function escapeHtml(str) {
+      return String(str || '')
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#039;');
+    }
+
+    function cryptoRandomId() {
+      if (window.crypto && crypto.getRandomValues) {
+        const a = new Uint32Array(2);
+        crypto.getRandomValues(a);
+        return `${a[0].toString(16)}${a[1].toString(16)}`;
+      }
+      return `${Date.now()}-${Math.random()}`;
+    }
+
+    function sanitizeHex(hex) {
+      const v = String(hex || '').trim();
+      return /^#[0-9A-F]{6}$/i.test(v) ? v.toUpperCase() : null;
+    }
+
+    function showAlert(title, text) {
+      alertTitle.textContent = title || 'Notice';
+      alertText.textContent = text || '';
+      alertBox.classList.remove('hidden');
+    }
+    function hideAlert() { alertBox.classList.add('hidden'); }
+    alertClose.addEventListener('click', hideAlert);
+
+    function setProcessing(visible, text = 'Processing...', current = 0, total = 0) {
+      if (visible) {
+        processingStatus.classList.remove('hidden');
+        processingText.textContent = text;
+        processingCount.textContent = `${current}/${total}`;
+        processingProgress.style.width = total ? `${(current / total) * 100}%` : '0%';
+      } else {
+        processingStatus.classList.add('hidden');
+        processingProgress.style.width = '0%';
+        processingCount.textContent = `0/0`;
+      }
+    }
+
+    function disableButtons(disabled) {
+      const btns = [downloadCombinedBtn, downloadZipBtn, clearAllBtn, addMoreBtn];
+      btns.forEach(b => b.disabled = disabled);
+      btns.forEach(b => b.classList.toggle('opacity-60', disabled));
+      btns.forEach(b => b.classList.toggle('cursor-not-allowed', disabled));
+    }
+
+    // -----------------------------
+    // Navbar mobile menu
+    // -----------------------------
+    mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+    document.addEventListener('click', (e) => {
+      if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) mobileMenu.classList.remove('open');
+    });
+
+    // -----------------------------
+    // Output mode UI
+    // -----------------------------
+    function updateOutputModeUI() {
+      const isSmall = outputMode.value === 'small';
+      jpegQualityWrap.classList.toggle('hidden', !isSmall);
+
+      // If JPEG mode, preserve transparency is not possible -> force flatten if needed.
+      if (isSmall && bgMode.value === 'preserve') {
+        bgMode.value = 'white';
+        customBgWrap.classList.add('hidden');
+        showAlert('Transparency updated', 'JPEG output cannot preserve transparency, so background was set to White.');
+      }
+    }
+
+    function updateJpegQualityUI() {
+      const q = clamp(jpegQuality.value, 40, 100);
+      jpegQualityLabel.textContent = `${q}%`;
+    }
+
+    outputMode.addEventListener('change', () => {
+      hideAlert();
+      updateOutputModeUI();
+    });
+
+    jpegQuality.addEventListener('input', updateJpegQualityUI);
+
+    updateOutputModeUI();
+    updateJpegQualityUI();
+
+    // -----------------------------
+    // Settings modal open/close
+    // -----------------------------
+    function openSettings() {
+      if (settingsDialog?.showModal) settingsDialog.showModal();
+      else settingsDialog.setAttribute('open', 'open');
+    }
+    function closeSettings() {
+      if (settingsDialog?.close) settingsDialog.close();
+      else settingsDialog.removeAttribute('open');
+    }
+    openSettingsBtn.addEventListener('click', openSettings);
+    closeSettingsBtn.addEventListener('click', closeSettings);
+    closeSettingsBtn2.addEventListener('click', closeSettings);
+    settingsDialog.addEventListener('click', (e) => { if (e.target === settingsDialog) closeSettings(); });
+
+    resetSettingsBtn.addEventListener('click', () => {
+      orientation.value = 'auto';
+      marginMm.value = 10;
+      fitMode.value = 'contain';
+      dpi.value = 150;
+      bgMode.value = 'preserve';
+      customBg.value = '#ffffff';
+      customBgText.value = '#FFFFFF';
+      customBgWrap.classList.add('hidden');
+      maxEdge.value = 0;
+
+      showAlert('Settings reset', 'Settings were restored to recommended defaults.');
+      setTimeout(hideAlert, 2200);
+      updateOutputModeUI();
+      updateStats();
+    });
+
+    // Background UI
+    bgMode.addEventListener('change', () => {
+      const isCustom = bgMode.value === 'custom';
+      customBgWrap.classList.toggle('hidden', !isCustom);
+
+      if (outputMode.value === 'small' && bgMode.value === 'preserve') {
+        bgMode.value = 'white';
+        customBgWrap.classList.add('hidden');
+        showAlert('Transparency updated', 'JPEG output cannot preserve transparency, so background was set to White.');
+      }
+    });
+
+    customBg.addEventListener('input', (e) => customBgText.value = e.target.value.toUpperCase());
+    customBgText.addEventListener('input', (e) => {
+      const clean = sanitizeHex(e.target.value);
+      if (clean) customBg.value = clean;
+    });
+
+    // -----------------------------
+    // Upload
+    // -----------------------------
+    dropZone.addEventListener('click', (e) => {
+      if (e.target !== browseBtn) fileInput.click();
+    });
+    browseBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      fileInput.click();
+    });
+
+    dropZone.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      dropZone.classList.add('dragover');
+    });
+    dropZone.addEventListener('dragleave', () => dropZone.classList.remove('dragover'));
+    dropZone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      dropZone.classList.remove('dragover');
+      handleFiles(Array.from(e.dataTransfer.files || []));
+    });
+
+    fileInput.addEventListener('change', (e) => {
+      handleFiles(Array.from(e.target.files || []));
+      fileInput.value = '';
+    });
+
+    addMoreBtn.addEventListener('click', () => fileInput.click());
+
+    async function handleFiles(files) {
+      hideAlert();
+      if (!files || files.length === 0) return;
+
+      const webps = files.filter(f => f && (f.type === 'image/webp' || /\.webp$/i.test(f.name)));
+      const nonWebp = files.filter(f => f && !(f.type === 'image/webp' || /\.webp$/i.test(f.name)));
+
+      if (nonWebp.length > 0) showAlert('File type notice', 'Only WebP files are supported. Other files were skipped.');
+      if (webps.length === 0) return;
+
+      setProcessing(true, 'Reading WebP files...', 0, webps.length);
+
+      let i = 0;
+      for (const file of webps) {
+        i++;
+        processingCount.textContent = `${i}/${webps.length}`;
+        processingProgress.style.width = `${(i / webps.length) * 100}%`;
+
+        // Soft safety limit
+        if (file.size > 140 * 1024 * 1024) {
+          showAlert('Large file skipped', `Skipped "${file.name}" because it is larger than 140MB.`);
+          continue;
+        }
+
+        const previewUrl = URL.createObjectURL(file);
+        try {
+          const dim = await getImageDimensions(previewUrl);
+          items.push({
+            id: cryptoRandomId(),
+            file,
+            name: file.name,
+            size: file.size,
+            previewUrl,
+            width: dim.width,
+            height: dim.height
+          });
+        } catch (err) {
+          URL.revokeObjectURL(previewUrl);
+          showAlert('Failed to load image', `Could not load "${file.name}". Your browser may not support WebP decoding for this file.`);
+        }
+
+        if (i % 6 === 0) await new Promise(r => setTimeout(r, 0));
+      }
+
+      setProcessing(false);
+      renderGrid();
+      updateStats();
+    }
+
+    function getImageDimensions(src) {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.onload = () => resolve({ width: img.naturalWidth, height: img.naturalHeight });
+        img.onerror = reject;
+        img.src = src;
+      });
+    }
+
+    // -----------------------------
+    // Render cards + reorder
+    // -----------------------------
+    function renderGrid() {
+      imageGrid.innerHTML = '';
+
+      items.forEach((it, index) => {
+        const card = document.createElement('div');
+        card.className = 'glass-panel rounded-xl overflow-hidden fade-in border border-white/10';
+        card.id = `item-${it.id}`;
+        card.setAttribute('draggable', 'true');
+        card.dataset.id = it.id;
+
+        card.innerHTML = `
+          <div class="relative aspect-video checkerboard overflow-hidden">
+            <img src="${it.previewUrl}" alt="${escapeHtml(it.name)}" class="w-full h-full object-contain">
+            <div class="absolute top-2 left-2 px-2 py-1 bg-white/15 rounded text-xs font-semibold text-white border border-white/10">
+              Page ${index + 1}
+            </div>
+            <div class="absolute top-2 right-2 px-2 py-1 bg-white/15 rounded text-xs font-semibold text-white border border-white/10">
+              WebP
+            </div>
+          </div>
+
+          <div class="p-4">
+            <div class="flex items-start justify-between gap-3 mb-2">
+              <p class="text-sm font-medium text-gray-200 truncate" title="${escapeHtml(it.name)}">${escapeHtml(it.name)}</p>
+              <span class="text-[11px] text-gray-500 whitespace-nowrap">Drag</span>
+            </div>
+
+            <div class="grid grid-cols-2 gap-2 text-xs mb-3">
+              <div>
+                <p class="text-gray-500">Dimensions</p>
+                <p class="text-gray-300 font-medium">${it.width} × ${it.height}px</p>
+              </div>
+              <div>
+                <p class="text-gray-500">File Size</p>
+                <p class="text-gray-300 font-medium">${formatFileSize(it.size)}</p>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex gap-2">
+                <button class="px-3 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-xs text-gray-200 transition-all btn-animated"
+                        title="Move up" ${index === 0 ? 'disabled style="opacity:.45; cursor:not-allowed;"' : ''} data-action="up">▲</button>
+                <button class="px-3 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-xs text-gray-200 transition-all btn-animated"
+                        title="Move down" ${index === items.length - 1 ? 'disabled style="opacity:.45; cursor:not-allowed;"' : ''} data-action="down">▼</button>
+              </div>
+
+              <button class="px-3 py-2 bg-white/5 hover:bg-red-500/20 border border-white/10 hover:border-red-500/30 rounded-lg text-xs text-gray-300 hover:text-red-300 transition-all btn-animated"
+                      title="Remove" data-action="remove">Remove</button>
+            </div>
+
+            <div class="flex gap-2">
+              <button class="flex-1 py-2 bg-white/10 hover:bg-white/20 rounded-lg text-xs font-semibold transition-all duration-300 flex items-center justify-center gap-1 text-white btn-animated"
+                      data-action="downloadOne">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                </svg>
+                Download PDF
+              </button>
+              <button class="py-2 px-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-xs text-gray-200 transition-all btn-animated"
+                      data-action="info" title="Info">i</button>
+            </div>
+          </div>
+        `;
+
+        // Button actions
+        card.addEventListener('click', async (e) => {
+          const btn = e.target.closest('button');
+          if (!btn) return;
+          const action = btn.getAttribute('data-action');
+          if (!action) return;
+
+          if (action === 'remove') return removeItem(it.id);
+          if (action === 'up') return moveItem(index, index - 1);
+          if (action === 'down') return moveItem(index, index + 1);
+          if (action === 'info') return showAlert('Page info', `"${it.name}" will be exported as page ${index + 1}.`);
+          if (action === 'downloadOne') return await downloadSinglePdf(it.id);
+        });
+
+        // Drag reorder
+        card.addEventListener('dragstart', (e) => {
+          draggingId = it.id;
+          e.dataTransfer.effectAllowed = 'move';
+          try { e.dataTransfer.setData('text/plain', it.id); } catch (_) {}
+          setTimeout(() => card.classList.add('opacity-70'), 0);
+        });
+        card.addEventListener('dragend', () => {
+          draggingId = null;
+          card.classList.remove('opacity-70');
+          document.querySelectorAll('.drag-ring').forEach(el => el.classList.remove('drag-ring'));
+        });
+        card.addEventListener('dragover', (e) => {
+          e.preventDefault();
+          card.classList.add('drag-ring');
+        });
+        card.addEventListener('dragleave', () => card.classList.remove('drag-ring'));
+        card.addEventListener('drop', (e) => {
+          e.preventDefault();
+          card.classList.remove('drag-ring');
+          const targetId = card.dataset.id;
+          if (!draggingId || draggingId === targetId) return;
+
+          const fromIndex = items.findIndex(x => x.id === draggingId);
+          const toIndex = items.findIndex(x => x.id === targetId);
+          if (fromIndex < 0 || toIndex < 0) return;
+
+          const [moved] = items.splice(fromIndex, 1);
+          items.splice(toIndex, 0, moved);
+
+          renderGrid();
+          updateStats();
+        });
+
+        imageGrid.appendChild(card);
+      });
+    }
+
+    function removeItem(id) {
+      const idx = items.findIndex(x => x.id === id);
+      if (idx === -1) return;
+      URL.revokeObjectURL(items[idx].previewUrl);
+      items.splice(idx, 1);
+      renderGrid();
+      updateStats();
+    }
+
+    function moveItem(from, to) {
+      if (to < 0 || to >= items.length) return;
+      const [moved] = items.splice(from, 1);
+      items.splice(to, 0, moved);
+      renderGrid();
+      updateStats();
+    }
+
+    // -----------------------------
+    // Stats
+    // -----------------------------
+    function updateStats() {
+      totalImagesEl.textContent = items.length;
+      const totalBytes = items.reduce((s, it) => s + (it.size || 0), 0);
+      totalSizeEl.textContent = formatFileSize(totalBytes);
+
+      const fmt = pageFormatMain.value === 'original'
+        ? `Original @ ${clamp(dpi.value, 36, 600)} DPI`
+        : pageFormatMain.value.toUpperCase();
+      pageModeEl.textContent = fmt;
+
+      privacyNoteEl.textContent = 'Local';
+      if (items.length > 0) resultsSection.classList.remove('hidden');
+      else resultsSection.classList.add('hidden');
+    }
+    pageFormatMain.addEventListener('change', updateStats);
+    dpi.addEventListener('input', updateStats);
+
+    // -----------------------------
+    // Clear all
+    // -----------------------------
+    clearAllBtn.addEventListener('click', () => {
+      items.forEach(it => URL.revokeObjectURL(it.previewUrl));
+      items = [];
+      imageGrid.innerHTML = '';
+      updateStats();
+      hideAlert();
+    });
+
+    // -----------------------------
+    // PDF helpers
+    // -----------------------------
+    function getOrientationForImage(it) {
+      const o = orientation.value;
+      if (o === 'p' || o === 'l') return o;
+      return (it.width >= it.height) ? 'l' : 'p';
+    }
+
+    function getPageSpecForImage(it) {
+      const fmt = pageFormatMain.value;
+      const o = getOrientationForImage(it);
+
+      if (fmt === 'original') {
+        const d = clamp(dpi.value, 36, 600);
+        const wMm = (it.width / d) * 25.4;
+        const hMm = (it.height / d) * 25.4;
+
+        if (orientation.value === 'p' && wMm > hMm) return { format: [hMm, wMm], orientation: 'p' };
+        if (orientation.value === 'l' && hMm > wMm) return { format: [hMm, wMm], orientation: 'l' };
+
+        return { format: [wMm, hMm], orientation: (wMm >= hMm ? 'l' : 'p') };
+      }
+
+      return { format: fmt, orientation: o };
+    }
+
+    function computePlacement(doc, imgPxW, imgPxH) {
+      const margin = clamp(marginMm.value, 0, 50);
+      const pageW = doc.internal.pageSize.getWidth();
+      const pageH = doc.internal.pageSize.getHeight();
+
+      const d = clamp(dpi.value, 36, 600);
+      const imgMmW = (imgPxW / d) * 25.4;
+      const imgMmH = (imgPxH / d) * 25.4;
+
+      const availW = Math.max(1, pageW - margin * 2);
+      const availH = Math.max(1, pageH - margin * 2);
+
+      const scaleContain = Math.min(availW / imgMmW, availH / imgMmH);
+      const scaleCover = Math.max(availW / imgMmW, availH / imgMmH);
+      const scale = (fitMode.value === 'cover') ? scaleCover : scaleContain;
+
+      const drawW = imgMmW * scale;
+      const drawH = imgMmH * scale;
+
+      const x = (pageW - drawW) / 2;
+      const y = (pageH - drawH) / 2;
+
+      return { x, y, w: drawW, h: drawH };
+    }
+
+    function getBgColor() {
+      const mode = bgMode.value;
+      if (mode === 'white') return '#FFFFFF';
+      if (mode === 'black') return '#000000';
+      if (mode === 'custom') return sanitizeHex(customBg.value) || '#FFFFFF';
+      return null; // preserve
+    }
+
+    function loadImage(src) {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.onload = () => resolve(img);
+        img.onerror = reject;
+        img.src = src;
+      });
+    }
+
+    async function renderForPdf(it) {
+      const flattenBg = getBgColor(); // null = preserve, or hex color to fill
+      const maxLong = clamp(maxEdge.value, 0, 50000);
+
+      const bg = flattenBg; // if null => preserve transparency
+      const img = await loadImage(it.previewUrl);
+
+      let targetW = img.naturalWidth;
+      let targetH = img.naturalHeight;
+
+      if (maxLong > 0) {
+        const longEdge = Math.max(targetW, targetH);
+        if (longEdge > maxLong) {
+          const ratio = maxLong / longEdge;
+          targetW = Math.max(1, Math.round(targetW * ratio));
+          targetH = Math.max(1, Math.round(targetH * ratio));
+        }
+      }
+
+      const canvas = document.createElement('canvas');
+      canvas.width = targetW;
+      canvas.height = targetH;
+
+      const ctx = canvas.getContext('2d', { alpha: true });
+      ctx.imageSmoothingEnabled = true;
+      ctx.imageSmoothingQuality = 'high';
+
+      if (bg) {
+        ctx.fillStyle = bg;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+      }
+
+      ctx.drawImage(img, 0, 0, targetW, targetH);
+
+      return { dataUrl: canvas.toDataURL('image/png'), outW: targetW, outH: targetH, type: 'PNG' };
+    }
+
+      const canvas = document.createElement('canvas');
+      canvas.width = targetW;
+      canvas.height = targetH;
+
+      const ctx = canvas.getContext('2d', { alpha: true });
+      ctx.imageSmoothingEnabled = true;
+      ctx.imageSmoothingQuality = 'high';
+
+      if (bg) {
+        ctx.fillStyle = bg;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+      }
+
+      ctx.drawImage(img, 0, 0, targetW, targetH);
+
+      if (mode === 'small') {
+        const q = clamp(jpegQuality.value, 40, 100) / 100;
+        return { dataUrl: canvas.toDataURL('image/jpeg', q), outW: targetW, outH: targetH, type: 'JPEG' };
+      }
+
+      // best mode: embed PNG for best sharpness + transparency
+      return { dataUrl: canvas.toDataURL('image/png'), outW: targetW, outH: targetH, type: 'PNG' };
+    }
+
+    function downloadBlob(blob, filename) {
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(() => URL.revokeObjectURL(url), 1500);
+    }
+
+    // -----------------------------
+    // Download: Combined PDF
+    // -----------------------------
+    downloadCombinedBtn.addEventListener('click', async () => {
+      hideAlert();
+      if (items.length === 0) return;
+
+      // Guard: JPEG mode cannot preserve transparency
+      if (outputMode.value === 'small' && bgMode.value === 'preserve') {
+        bgMode.value = 'white';
+        showAlert('Transparency updated', 'JPEG output cannot preserve transparency. Background set to White.');
+      }
+
+      try {
+        await generateCombinedPdf();
+      } catch (err) {
+        console.error(err);
+        showAlert('PDF export failed', 'Try fewer images, use JPEG mode, or set Max Long Edge to reduce memory usage.');
+      }
+    });
+
+    async function generateCombinedPdf() {
+      const { jsPDF } = window.jspdf;
+
+      disableButtons(true);
+      setProcessing(true, 'Generating combined PDF...', 0, items.length);
+
+      let doc = null;
+
+      for (let i = 0; i < items.length; i++) {
+        const it = items[i];
+        processingCount.textContent = `${i + 1}/${items.length}`;
+        processingProgress.style.width = `${((i + 1) / items.length) * 100}%`;
+
+        const spec = getPageSpecForImage(it);
+
+        if (!doc) {
+          doc = new jsPDF({ unit: 'mm', format: spec.format, orientation: spec.orientation, compress: true });
+        } else {
+          doc.addPage(spec.format, spec.orientation);
+          doc.setPage(i + 1);
+        }
+
+        const rendered = await renderForPdf(it);
+        const placement = computePlacement(doc, rendered.outW, rendered.outH);
+
+        // FAST is good; PNG/JPEG quality already set by rendering stage
+        doc.addImage(rendered.dataUrl, rendered.type, placement.x, placement.y, placement.w, placement.h, undefined, 'FAST');
+
+        if ((i + 1) % 3 === 0) await new Promise(r => setTimeout(r, 0));
+      }
+
+      const stamp = new Date().toISOString().slice(0, 10);
+      doc.save(`webp-to-pdf_${stamp}.pdf`);
+
+      setProcessing(false);
+      disableButtons(false);
+    }
+
+    // -----------------------------
+    // Download: Single-page PDF
+    // -----------------------------
+    async function downloadSinglePdf(id) {
+      const it = items.find(x => x.id === id);
+      if (!it) return;
+
+      hideAlert();
+
+      if (outputMode.value === 'small' && bgMode.value === 'preserve') {
+        bgMode.value = 'white';
+        showAlert('Transparency updated', 'JPEG output cannot preserve transparency. Background set to White.');
+      }
+
+      try {
+        const { jsPDF } = window.jspdf;
+
+        disableButtons(true);
+        setProcessing(true, 'Generating single-page PDF...', 0, 1);
+
+        const spec = getPageSpecForImage(it);
+        const doc = new jsPDF({ unit: 'mm', format: spec.format, orientation: spec.orientation, compress: true });
+
+        const rendered = await renderForPdf(it);
+        const placement = computePlacement(doc, rendered.outW, rendered.outH);
+
+        doc.addImage(rendered.dataUrl, rendered.type, placement.x, placement.y, placement.w, placement.h, undefined, 'FAST');
+
+        const base = it.name.replace(/\.webp$/i, '') || 'image';
+        const stamp = new Date().toISOString().slice(0, 10);
+        doc.save(`${base}_${stamp}.pdf`);
+      } catch (err) {
+        console.error(err);
+        showAlert('PDF export failed', 'Try JPEG mode or reduce Max Long Edge for very large images.');
+      } finally {
+        setProcessing(false);
+        disableButtons(false);
+      }
+    }
+
+    // -----------------------------
+    // Download: ZIP of individual PDFs
+    // -----------------------------
+    downloadZipBtn.addEventListener('click', async () => {
+      hideAlert();
+      if (items.length === 0) return;
+
+      if (outputMode.value === 'small' && bgMode.value === 'preserve') {
+        bgMode.value = 'white';
+        showAlert('Transparency updated', 'JPEG output cannot preserve transparency. Background set to White.');
+      }
+
+      try {
+        await generateZipOfPdfs();
+      } catch (err) {
+        console.error(err);
+        showAlert('ZIP export failed', 'Try fewer images or set Max Long Edge to reduce memory usage.');
+      }
+    });
+
+    async function generateZipOfPdfs() {
+      const { jsPDF } = window.jspdf;
+
+      disableButtons(true);
+      setProcessing(true, 'Creating ZIP of PDFs...', 0, items.length);
+
+      const zip = new JSZip();
+      const used = new Map();
+
+      for (let i = 0; i < items.length; i++) {
+        const it = items[i];
+        processingCount.textContent = `${i + 1}/${items.length}`;
+        processingProgress.style.width = `${((i + 1) / items.length) * 100}%`;
+
+        const spec = getPageSpecForImage(it);
+        const doc = new jsPDF({ unit: 'mm', format: spec.format, orientation: spec.orientation, compress: true });
+
+        const rendered = await renderForPdf(it);
+        const placement = computePlacement(doc, rendered.outW, rendered.outH);
+
+        doc.addImage(rendered.dataUrl, rendered.type, placement.x, placement.y, placement.w, placement.h, undefined, 'FAST');
+
+        const base = (it.name.replace(/\.webp$/i, '') || 'image').trim();
+        let filename = `${base}.pdf`;
+
+        if (used.has(filename)) {
+          const c = used.get(filename) + 1;
+          used.set(filename, c);
+          filename = `${base}_${c}.pdf`;
+        } else {
+          used.set(filename, 1);
+        }
+
+        zip.file(filename, doc.output('blob'));
+
+        if ((i + 1) % 3 === 0) await new Promise(r => setTimeout(r, 0));
+      }
+
+      const stamp = new Date().toISOString().slice(0, 10);
+      const zipBlob = await zip.generateAsync({ type: 'blob' });
+      downloadBlob(zipBlob, `webp_to_pdf_individual_${stamp}.zip`);
+
+      setProcessing(false);
+      disableButtons(false);
+    }
+
+    // -----------------------------
+    // FAQ toggle
+    // -----------------------------
+    function toggleFaq(button) {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('.faq-icon');
+      content.classList.toggle('open');
+      icon.classList.toggle('open');
+    }
+    window.toggleFaq = toggleFaq;
+
+    // -----------------------------
+    // Init
+    // -----------------------------
+    updateStats();
+  </script>
+</body>
+</html>

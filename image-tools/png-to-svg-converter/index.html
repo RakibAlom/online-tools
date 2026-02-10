@@ -1,0 +1,2098 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Advanced PNG to SVG Converter – Precision Vectorization Tool</title>
+  <meta name="description" content="Advanced PNG to SVG converter with Potrace algorithm, multi-layer color tracing, edge detection, path optimization. High-accuracy vectorization in browser." />
+  <meta name="keywords" content="PNG to SVG converter, advanced vectorization, Potrace, accurate PNG to SVG, multi-color tracing, edge detection, path optimization, high quality SVG" />
+  <meta name="author" content="RakibAlom" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://rakibalom.com/tools/advanced-png-to-svg-converter/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rakibalom.com/tools/advanced-png-to-svg-converter/" />
+  <meta property="og:title" content="Advanced PNG to SVG Converter – Precision Vectorization" />
+  <meta property="og:description" content="High-accuracy PNG to SVG with Potrace, multi-layer tracing, edge detection & path optimization." />
+  <meta property="og:image" content="https://rakibalom.com/tools/advanced-png-to-svg-converter/og-image.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Advanced PNG to SVG Converter – Precision Vectorization" />
+  <meta name="twitter:description" content="High-accuracy PNG to SVG with Potrace, multi-layer tracing, edge detection & path optimization." />
+
+  <link rel="icon" type="image/png" href="https://rakibalom.com/wp-content/uploads/2025/12/rakibalom-favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #050508; color: #e5e5e5; }
+
+    .bg-mesh {
+      background-color: #050508;
+      background-image:
+        radial-gradient(at 20% 20%, rgba(59, 130, 246, 0.08) 0px, transparent 50%),
+        radial-gradient(at 80% 80%, rgba(139, 92, 246, 0.08) 0px, transparent 50%),
+        radial-gradient(at 40% 60%, rgba(16, 185, 129, 0.05) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(15, 15, 20, 0.8);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .glass-input {
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #f5f5f5;
+      transition: all 0.2s ease;
+    }
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.7);
+      border-color: rgba(99, 102, 241, 0.5);
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+      color: white;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
+    }
+    .btn-primary:active { transform: scale(0.98); }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #e5e5e5;
+      transition: all 0.2s ease;
+    }
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.2); }
+    ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.15); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.25); }
+
+    .drop-zone {
+      border: 2px dashed rgba(99, 102, 241, 0.4);
+      transition: all 0.3s ease;
+      background: rgba(99, 102, 241, 0.03);
+    }
+    .drop-zone:hover, .drop-zone.dragover {
+      border-color: rgba(99, 102, 241, 0.8);
+      background: rgba(99, 102, 241, 0.08);
+      box-shadow: 0 0 40px rgba(99, 102, 241, 0.1);
+    }
+
+    .checkerboard {
+      background-image:
+        linear-gradient(45deg, #1a1a1f 25%, transparent 25%),
+        linear-gradient(-45deg, #1a1a1f 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #1a1a1f 75%),
+        linear-gradient(-45deg, transparent 75%, #1a1a1f 75%);
+      background-size: 12px 12px;
+      background-position: 0 0, 0 6px, 6px -6px, -6px 0px;
+      background-color: #252530;
+    }
+
+    .slider {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 999px;
+      outline: none;
+    }
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      cursor: pointer;
+      box-shadow: 0 2px 10px rgba(99, 102, 241, 0.4);
+    }
+    .slider::-moz-range-thumb {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      cursor: pointer;
+      border: none;
+    }
+
+    .progress-bar {
+      background: linear-gradient(90deg, #6366f1, #8b5cf6, #6366f1);
+      background-size: 200% 100%;
+      animation: shimmer 1.5s linear infinite;
+    }
+    @keyframes shimmer {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+
+    .fade-in { animation: fadeIn 0.25s ease forwards; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .tab-btn {
+      transition: all 0.2s ease;
+      border-bottom: 2px solid transparent;
+    }
+    .tab-btn.active {
+      color: #818cf8;
+      border-color: #818cf8;
+      background: rgba(99, 102, 241, 0.1);
+    }
+    .tab-btn:hover:not(.active) {
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .mode-card {
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .mode-card:hover {
+      border-color: rgba(99, 102, 241, 0.5);
+      background: rgba(99, 102, 241, 0.08);
+    }
+    .mode-card.selected {
+      border-color: #6366f1;
+      background: rgba(99, 102, 241, 0.15);
+      box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
+    }
+
+    .comparison-slider {
+      position: relative;
+      overflow: hidden;
+      cursor: ew-resize;
+      touch-action: none;
+    }
+    .comparison-slider .slider-handle {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: white;
+      cursor: ew-resize;
+      z-index: 10;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    .comparison-slider .slider-handle::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 36px;
+      height: 36px;
+      background: white;
+      border-radius: 50%;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+    .comparison-slider .slider-handle::after {
+      content: '⟷';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #333;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .color-chip {
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
+      border: 2px solid rgba(255,255,255,0.2);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .color-chip:hover {
+      transform: scale(1.15);
+      border-color: white;
+    }
+
+    .tooltip {
+      position: relative;
+    }
+    .tooltip::after {
+      content: attr(data-tip);
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 6px 10px;
+      background: #1a1a1f;
+      color: #e5e5e5;
+      font-size: 11px;
+      border-radius: 6px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.2s ease;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .tooltip:hover::after {
+      opacity: 1;
+      bottom: calc(100% + 8px);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open { max-height: 500px; opacity: 1; }
+
+    .accuracy-badge {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(5, 150, 105, 0.2));
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #34d399;
+    }
+
+    .feature-glow {
+      box-shadow: 0 0 40px rgba(99, 102, 241, 0.15);
+    }
+
+    dialog {
+      border: none;
+      padding: 0;
+      background: transparent;
+      max-width: min(95vw, 600px);
+    }
+    dialog::backdrop {
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(8px);
+    }
+
+    .live-preview-container {
+      min-height: 300px;
+    }
+  </style>
+</head>
+
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-50 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <div>
+            <h1 class="text-lg font-bold text-white">Advanced PNG to SVG</h1>
+            <p class="text-xs text-gray-400 hidden sm:block">Precision Vectorization with Potrace</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <span class="accuracy-badge px-3 py-1 rounded-full text-xs font-semibold hidden sm:inline-flex items-center gap-1">
+            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            High Accuracy
+          </span>
+
+          <nav class="hidden md:flex items-center space-x-4">
+            <a href="https://rakibalom.com/" class="text-sm text-gray-300 hover:text-white transition-colors">Home</a>
+            <a href="https://rakibalom.com/tools/" class="text-sm text-gray-300 hover:text-white transition-colors">All Tools</a>
+          </nav>
+
+          <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-white/10 text-gray-300">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0f]/95">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://rakibalom.com/" class="block px-3 py-2 rounded-md text-sm text-gray-300 hover:bg-white/10">Home</a>
+        <a href="https://rakibalom.com/tools/" class="block px-3 py-2 rounded-md text-sm text-gray-300 hover:bg-white/10">All Tools</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero (reduced extra space) -->
+  <section class="py-6 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-black mb-3 bg-gradient-to-r from-white via-indigo-200 to-purple-200 bg-clip-text text-transparent">
+        Advanced PNG to SVG Converter
+      </h2>
+      <p class="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto">
+        Precision vectorization using <strong class="text-indigo-400">Potrace algorithm</strong> with multi-layer color tracing, edge detection, and path optimization
+      </p>
+      <div class="flex flex-wrap justify-center gap-3 mt-4">
+        <span class="px-3 py-1.5 rounded-full text-xs font-medium bg-white/5 border border-white/10 text-gray-300">Potrace Engine</span>
+        <span class="px-3 py-1.5 rounded-full text-xs font-medium bg-white/5 border border-white/10 text-gray-300">Multi-Layer Tracing</span>
+        <span class="px-3 py-1.5 rounded-full text-xs font-medium bg-white/5 border border-white/10 text-gray-300">Edge Enhancement</span>
+        <span class="px-3 py-1.5 rounded-full text-xs font-medium bg-white/5 border border-white/10 text-gray-300">Path Optimization</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main -->
+  <main class="flex-grow max-w-7xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Converter Tool -->
+    <div class="glass-panel rounded-2xl p-5 sm:p-8 mb-10 feature-glow">
+
+      <!-- Alert -->
+      <div id="alertBox" class="hidden mb-5">
+        <div class="glass-panel rounded-xl p-4 border-l-4 border-amber-500">
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-amber-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <div class="flex-1">
+              <p class="text-sm font-semibold text-gray-200" id="alertTitle">Notice</p>
+              <p class="text-sm text-gray-400 mt-1" id="alertText"></p>
+            </div>
+            <button id="alertClose" class="p-1 rounded hover:bg-white/10 text-gray-400">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mode Selection -->
+      <div class="mb-6">
+        <h3 class="text-sm font-semibold text-gray-300 mb-3">Vectorization Mode</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div class="mode-card glass-panel rounded-xl p-4 selected" data-mode="monochrome">
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-gray-600 to-gray-800 flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                </svg>
+              </div>
+              <div>
+                <p class="font-bold text-white text-sm">Monochrome</p>
+                <p class="text-xs text-gray-400 mt-1">Best for logos, icons, line art. Single color with threshold control.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mode-card glass-panel rounded-xl p-4" data-mode="color">
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-rose-500 via-violet-500 to-cyan-500 flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+                </svg>
+              </div>
+              <div>
+                <p class="font-bold text-white text-sm">Multi-Color</p>
+                <p class="text-xs text-gray-400 mt-1">Layer-by-layer color tracing. Great for illustrations & graphics.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mode-card glass-panel rounded-xl p-4" data-mode="detailed">
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="font-bold text-white text-sm">High Detail</p>
+                <p class="text-xs text-gray-400 mt-1">Maximum accuracy with fine-tuned curves. For complex artwork.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Tabs -->
+      <div class="mb-6">
+        <div class="flex border-b border-white/10 mb-4 overflow-x-auto">
+          <button class="tab-btn active px-4 py-3 text-sm font-medium text-gray-300 whitespace-nowrap" data-tab="basic">Basic Settings</button>
+          <button class="tab-btn px-4 py-3 text-sm font-medium text-gray-300 whitespace-nowrap" data-tab="preprocessing">Preprocessing</button>
+          <button class="tab-btn px-4 py-3 text-sm font-medium text-gray-300 whitespace-nowrap" data-tab="tracing">Tracing Options</button>
+          <button class="tab-btn px-4 py-3 text-sm font-medium text-gray-300 whitespace-nowrap" data-tab="output">Output</button>
+        </div>
+
+        <!-- Basic Settings Tab -->
+        <div id="tab-basic" class="tab-content">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Colors (for color mode) -->
+            <div id="colorCountGroup">
+              <div class="flex items-center justify-between mb-2">
+                <label class="text-sm font-medium text-gray-300">Number of Colors</label>
+                <span id="colorCountValue" class="text-sm font-bold text-indigo-400">8</span>
+              </div>
+              <input type="range" id="colorCount" min="2" max="32" value="8" class="slider w-full">
+              <p class="text-xs text-gray-500 mt-2">More colors = more detail but larger file size</p>
+            </div>
+
+            <!-- Threshold (for monochrome) -->
+            <div id="thresholdGroup">
+              <div class="flex items-center justify-between mb-2">
+                <label class="text-sm font-medium text-gray-300">Threshold</label>
+                <span id="thresholdValue" class="text-sm font-bold text-indigo-400">128</span>
+              </div>
+              <input type="range" id="threshold" min="0" max="255" value="128" class="slider w-full">
+              <p class="text-xs text-gray-500 mt-2">Controls black/white cutoff point</p>
+            </div>
+
+            <!-- Tolerance -->
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <label class="text-sm font-medium text-gray-300">Path Tolerance</label>
+                <span id="toleranceValue" class="text-sm font-bold text-indigo-400">2</span>
+              </div>
+              <input type="range" id="tolerance" min="0.1" max="10" step="0.1" value="2" class="slider w-full">
+              <p class="text-xs text-gray-500 mt-2">Lower = more accurate curves, larger file</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Preprocessing Tab -->
+        <div id="tab-preprocessing" class="tab-content hidden">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Blur -->
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <label class="text-sm font-medium text-gray-300">Noise Reduction (Blur)</label>
+                <span id="blurValue" class="text-sm font-bold text-indigo-400">0</span>
+              </div>
+              <input type="range" id="blur" min="0" max="5" step="0.5" value="0" class="slider w-full">
+              <p class="text-xs text-gray-500 mt-2">Reduce noise before tracing</p>
+            </div>
+
+            <!-- Contrast -->
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <label class="text-sm font-medium text-gray-300">Contrast</label>
+                <span id="contrastValue" class="text-sm font-bold text-indigo-400">0%</span>
+              </div>
+              <input type="range" id="contrast" min="-100" max="100" value="0" class="slider w-full">
+              <p class="text-xs text-gray-500 mt-2">Enhance edges before vectorization</p>
+            </div>
+
+            <!-- Brightness -->
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <label class="text-sm font-medium text-gray-300">Brightness</label>
+                <span id="brightnessValue" class="text-sm font-bold text-indigo-400">0%</span>
+              </div>
+              <input type="range" id="brightness" min="-100" max="100" value="0" class="slider w-full">
+              <p class="text-xs text-gray-500 mt-2">Adjust image brightness</p>
+            </div>
+
+            <!-- Sharpen -->
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <label class="text-sm font-medium text-gray-300">Edge Sharpening</label>
+                <span id="sharpenValue" class="text-sm font-bold text-indigo-400">0</span>
+              </div>
+              <input type="range" id="sharpen" min="0" max="5" step="0.5" value="0" class="slider w-full">
+              <p class="text-xs text-gray-500 mt-2">Enhance edges for cleaner vectors</p>
+            </div>
+
+            <!-- Invert -->
+            <div class="flex items-center gap-3">
+              <label class="relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" id="invert" class="sr-only peer">
+                <div class="w-11 h-6 bg-white/10 peer-focus:ring-2 peer-focus:ring-indigo-500 rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600"></div>
+              </label>
+              <span class="text-sm font-medium text-gray-300">Invert Colors</span>
+            </div>
+
+            <!-- High Contrast -->
+            <div class="flex items-center gap-3">
+              <label class="relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" id="highContrast" class="sr-only peer">
+                <div class="w-11 h-6 bg-white/10 peer-focus:ring-2 peer-focus:ring-indigo-500 rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600"></div>
+              </label>
+              <span class="text-sm font-medium text-gray-300">High Contrast Mode</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tracing Options Tab -->
+        <div id="tab-tracing" class="tab-content hidden">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Turn Policy -->
+            <div>
+              <label class="text-sm font-medium text-gray-300 block mb-2">Turn Policy</label>
+              <select id="turnPolicy" class="w-full px-4 py-3 rounded-lg glass-input text-sm font-medium">
+                <option value="minority">Minority (recommended)</option>
+                <option value="majority">Majority</option>
+                <option value="right">Right</option>
+                <option value="left">Left</option>
+                <option value="black">Black</option>
+                <option value="white">White</option>
+              </select>
+              <p class="text-xs text-gray-500 mt-2">How to resolve ambiguous turns</p>
+            </div>
+
+            <!-- Corner Threshold -->
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <label class="text-sm font-medium text-gray-300">Corner Threshold</label>
+                <span id="cornerValue" class="text-sm font-bold text-indigo-400">1</span>
+              </div>
+              <input type="range" id="cornerThreshold" min="0" max="1.34" step="0.01" value="1" class="slider w-full">
+              <p class="text-xs text-gray-500 mt-2">Controls corner smoothness (0 = rounded)</p>
+            </div>
+
+            <!-- Optimize Paths -->
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <label class="text-sm font-medium text-gray-300">Path Optimization</label>
+                <span id="optimizeValue" class="text-sm font-bold text-indigo-400">0.2</span>
+              </div>
+              <input type="range" id="optimizeTolerance" min="0" max="1" step="0.05" value="0.2" class="slider w-full">
+              <p class="text-xs text-gray-500 mt-2">Curve fitting optimization level</p>
+            </div>
+
+            <!-- Turd Size -->
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <label class="text-sm font-medium text-gray-300">Suppress Speckles</label>
+                <span id="turdValue" class="text-sm font-bold text-indigo-400">2</span>
+              </div>
+              <input type="range" id="turdSize" min="0" max="20" value="2" class="slider w-full">
+              <p class="text-xs text-gray-500 mt-2">Remove spots smaller than this (pixels²)</p>
+            </div>
+
+            <!-- Alpha Max -->
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <label class="text-sm font-medium text-gray-300">Alpha Max</label>
+                <span id="alphaMaxValue" class="text-sm font-bold text-indigo-400">1</span>
+              </div>
+              <input type="range" id="alphaMax" min="0" max="1.34" step="0.01" value="1" class="slider w-full">
+              <p class="text-xs text-gray-500 mt-2">Corner smoothness parameter</p>
+            </div>
+
+            <!-- Opt Curve -->
+            <div class="flex items-center gap-3">
+              <label class="relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" id="optCurve" checked class="sr-only peer">
+                <div class="w-11 h-6 bg-white/10 peer-focus:ring-2 peer-focus:ring-indigo-500 rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600"></div>
+              </label>
+              <span class="text-sm font-medium text-gray-300">Optimize Curves</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Output Tab -->
+        <div id="tab-output" class="tab-content hidden">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Scale -->
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <label class="text-sm font-medium text-gray-300">Output Scale</label>
+                <span id="scaleValue" class="text-sm font-bold text-indigo-400">1x</span>
+              </div>
+              <input type="range" id="scale" min="0.5" max="4" step="0.25" value="1" class="slider w-full">
+              <p class="text-xs text-gray-500 mt-2">Scale the output SVG dimensions</p>
+            </div>
+
+            <!-- Max Size -->
+            <div>
+              <label class="text-sm font-medium text-gray-300 block mb-2">Max Dimension (px)</label>
+              <input type="number" id="maxDimension" min="0" max="8000" step="100" value="0" class="w-full px-4 py-3 rounded-lg glass-input text-sm font-medium" placeholder="0 = no limit">
+              <p class="text-xs text-gray-500 mt-2">Resize before tracing (0 = original)</p>
+            </div>
+
+            <!-- Stroke Width -->
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <label class="text-sm font-medium text-gray-300">Stroke Width</label>
+                <span id="strokeValue" class="text-sm font-bold text-indigo-400">0</span>
+              </div>
+              <input type="range" id="strokeWidth" min="0" max="5" step="0.5" value="0" class="slider w-full">
+              <p class="text-xs text-gray-500 mt-2">Add stroke to paths (0 = fill only)</p>
+            </div>
+
+            <!-- Fill Color (monochrome) -->
+            <div id="fillColorGroup">
+              <label class="text-sm font-medium text-gray-300 block mb-2">Fill Color</label>
+              <div class="flex gap-3">
+                <input type="color" id="fillColor" value="#000000" class="h-11 w-20 rounded-lg bg-transparent border border-white/20 cursor-pointer">
+                <input type="text" id="fillColorText" value="#000000" class="flex-1 px-4 py-3 rounded-lg glass-input text-sm font-mono uppercase" placeholder="#000000">
+              </div>
+            </div>
+
+            <!-- Background -->
+            <div>
+              <label class="text-sm font-medium text-gray-300 block mb-2">Background Handling</label>
+              <select id="bgHandling" class="w-full px-4 py-3 rounded-lg glass-input text-sm font-medium">
+                <option value="transparent">Keep Transparent</option>
+                <option value="white">Fill White</option>
+                <option value="black">Fill Black</option>
+                <option value="custom">Custom Color</option>
+              </select>
+            </div>
+
+            <!-- Custom BG Color -->
+            <div id="customBgGroup" class="hidden">
+              <label class="text-sm font-medium text-gray-300 block mb-2">Background Color</label>
+              <div class="flex gap-3">
+                <input type="color" id="bgColor" value="#ffffff" class="h-11 w-20 rounded-lg bg-transparent border border-white/20 cursor-pointer">
+                <input type="text" id="bgColorText" value="#ffffff" class="flex-1 px-4 py-3 rounded-lg glass-input text-sm font-mono uppercase">
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4 flex flex-wrap gap-4">
+            <label class="flex items-center gap-2 cursor-pointer">
+              <input type="checkbox" id="minifySvg" checked class="accent-indigo-500 w-4 h-4">
+              <span class="text-sm text-gray-300">Minify SVG</span>
+            </label>
+            <label class="flex items-center gap-2 cursor-pointer">
+              <input type="checkbox" id="flat" class="accent-indigo-500 w-4 h-4">
+              <span class="text-sm text-gray-300">Flatten paths</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Drop Zone -->
+      <div id="dropZone" class="drop-zone rounded-xl p-10 sm:p-16 text-center cursor-pointer mb-6">
+        <input type="file" id="fileInput" multiple accept="image/png,image/jpeg,image/webp,image/gif,image/bmp" class="hidden" />
+        <div class="flex flex-col items-center">
+          <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-indigo-500/20 to-purple-500/20 flex items-center justify-center mb-5 border border-indigo-500/30">
+            <svg class="w-10 h-10 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <p class="text-lg font-semibold text-white mb-2">Drop Your Image Here</p>
+          <p class="text-sm text-gray-400 mb-5">Supports PNG, JPEG, WebP, GIF, BMP (multi-image supported)</p>
+          <button id="browseBtn" class="btn-primary px-8 py-3 rounded-lg flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+            </svg>
+            Select Image(s)
+          </button>
+          <p class="text-xs text-gray-500 mt-4">Processing happens locally in your browser</p>
+        </div>
+      </div>
+
+      <!-- Processing -->
+      <div id="processingStatus" class="hidden mb-6">
+        <div class="glass-panel rounded-xl p-5 border border-indigo-500/30">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 border-2 border-indigo-400 border-t-transparent rounded-full animate-spin"></div>
+              <span class="text-sm font-medium text-gray-200" id="processingText">Vectorizing...</span>
+            </div>
+            <span id="processingStep" class="text-sm text-indigo-400">Step 1/4</span>
+          </div>
+          <div class="w-full h-2 bg-black/40 rounded-full overflow-hidden">
+            <div id="processingProgress" class="progress-bar h-full rounded-full transition-all duration-300" style="width:0%"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Result Section -->
+      <div id="resultSection" class="hidden">
+
+        <!-- Multi Image Switcher -->
+        <div id="multiBar" class="hidden mb-4">
+          <div class="glass-panel rounded-xl p-3 flex items-center gap-3 overflow-x-auto">
+            <span class="text-xs text-gray-400 whitespace-nowrap">Images</span>
+            <div id="multiThumbs" class="flex gap-2"></div>
+          </div>
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
+          <div class="glass-panel rounded-lg p-4 text-center">
+            <p class="text-xl font-bold text-white" id="statOriginalSize">0 KB</p>
+            <p class="text-xs text-gray-400">Original Size</p>
+          </div>
+          <div class="glass-panel rounded-lg p-4 text-center">
+            <p class="text-xl font-bold text-white" id="statSvgSize">0 KB</p>
+            <p class="text-xs text-gray-400">SVG Size</p>
+          </div>
+          <div class="glass-panel rounded-lg p-4 text-center">
+            <p class="text-xl font-bold text-white" id="statPaths">0</p>
+            <p class="text-xs text-gray-400">Paths</p>
+          </div>
+          <div class="glass-panel rounded-lg p-4 text-center">
+            <p class="text-xl font-bold text-white" id="statColors">0</p>
+            <p class="text-xs text-gray-400">Colors</p>
+          </div>
+        </div>
+
+        <!-- Preview Tabs (smaller buttons) -->
+        <div class="flex gap-2 mb-4">
+          <button id="viewSideBySide" class="px-3 py-1.5 text-xs font-medium rounded-md bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Side by Side</button>
+          <button id="viewComparison" class="px-3 py-1.5 text-xs font-medium rounded-md bg-white/5 text-gray-400 border border-white/10 hover:bg-white/10">Comparison</button>
+          <button id="viewSvgOnly" class="px-3 py-1.5 text-xs font-medium rounded-md bg-white/5 text-gray-400 border border-white/10 hover:bg-white/10">SVG Only</button>
+        </div>
+
+        <!-- Preview Container -->
+        <div id="previewContainer" class="live-preview-container mb-5">
+          <!-- Side by Side View -->
+          <div id="sideBySideView" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="glass-panel rounded-xl overflow-hidden">
+              <div class="px-4 py-2 border-b border-white/10 bg-black/30">
+                <span class="text-xs font-medium text-gray-400">Original Image</span>
+              </div>
+              <div id="originalPreview" class="checkerboard aspect-video flex items-center justify-center overflow-hidden">
+                <p class="text-gray-500 text-sm">No image loaded</p>
+              </div>
+            </div>
+            <div class="glass-panel rounded-xl overflow-hidden">
+              <div class="px-4 py-2 border-b border-white/10 bg-black/30">
+                <span class="text-xs font-medium text-gray-400">Vectorized SVG</span>
+              </div>
+              <div id="svgPreview" class="checkerboard aspect-video flex items-center justify-center overflow-hidden">
+                <p class="text-gray-500 text-sm">No SVG generated</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Comparison View -->
+          <div id="comparisonView" class="hidden glass-panel rounded-xl overflow-hidden">
+            <div class="comparison-slider aspect-video relative" id="comparisonSlider">
+              <div id="comparisonOriginal" class="absolute inset-0 checkerboard flex items-center justify-center"></div>
+              <div id="comparisonSvg" class="absolute inset-0 checkerboard flex items-center justify-center overflow-hidden" style="clip-path: inset(0 50% 0 0)"></div>
+              <div class="slider-handle" id="sliderHandle" style="left: 50%"></div>
+            </div>
+          </div>
+
+          <!-- SVG Only View -->
+          <div id="svgOnlyView" class="hidden glass-panel rounded-xl overflow-hidden">
+            <div id="svgOnlyPreview" class="checkerboard min-h-[400px] flex items-center justify-center p-8"></div>
+          </div>
+        </div>
+
+        <!-- Detected Colors (for color mode) -->
+        <div id="detectedColors" class="hidden mb-5">
+          <div class="glass-panel rounded-xl p-4">
+            <div class="flex items-center justify-between mb-3">
+              <h4 class="text-sm font-semibold text-gray-300">Detected Colors</h4>
+              <button id="editColorsBtn" class="text-xs text-indigo-400 hover:text-indigo-300 font-medium">Edit Palette</button>
+            </div>
+            <div id="colorPalette" class="flex flex-wrap gap-2"></div>
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="flex flex-wrap gap-3">
+          <button id="downloadSvgBtn" class="btn-primary px-6 py-3 rounded-lg flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+            Download SVG
+          </button>
+
+          <button id="copySvgBtn" class="btn-secondary px-6 py-3 rounded-lg flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+            </svg>
+            Copy SVG Code
+          </button>
+
+          <button id="downloadPngBtn" class="btn-secondary px-6 py-3 rounded-lg flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+            Export as PNG
+          </button>
+
+          <button id="retraceBtn" class="btn-secondary px-6 py-3 rounded-lg flex items-center gap-2 ml-auto">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+            </svg>
+            Re-trace with Settings
+          </button>
+
+          <button id="newImageBtn" class="btn-secondary px-6 py-3 rounded-lg flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+            </svg>
+            New Image
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Grid -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-center mb-8 text-white">Why This Converter is More Accurate</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="glass-panel rounded-xl p-6 hover:border-indigo-500/30 transition-all">
+          <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-indigo-500/20 to-purple-500/20 flex items-center justify-center mb-4 border border-indigo-500/30">
+            <svg class="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Potrace Algorithm</h3>
+          <p class="text-sm text-gray-400">The same algorithm used by Inkscape and Adobe Illustrator for professional-grade vectorization with smooth curves.</p>
+        </div>
+
+        <div class="glass-panel rounded-xl p-6 hover:border-indigo-500/30 transition-all">
+          <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-rose-500/20 to-orange-500/20 flex items-center justify-center mb-4 border border-rose-500/30">
+            <svg class="w-6 h-6 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Multi-Layer Color Tracing</h3>
+          <p class="text-sm text-gray-400">Advanced color quantization with K-means clustering, then traces each color layer separately for precise results.</p>
+        </div>
+
+        <div class="glass-panel rounded-xl p-6 hover:border-indigo-500/30 transition-all">
+          <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-emerald-500/20 to-teal-500/20 flex items-center justify-center mb-4 border border-emerald-500/30">
+            <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Image Preprocessing</h3>
+          <p class="text-sm text-gray-400">Built-in contrast, brightness, blur, and sharpening filters to prepare images for optimal tracing results.</p>
+        </div>
+
+        <div class="glass-panel rounded-xl p-6 hover:border-indigo-500/30 transition-all">
+          <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center mb-4 border border-cyan-500/30">
+            <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Fine-Tuned Parameters</h3>
+          <p class="text-sm text-gray-400">Full control over corner threshold, turn policy, alpha max, tolerance, and optimization for perfect output.</p>
+        </div>
+
+        <div class="glass-panel rounded-xl p-6 hover:border-indigo-500/30 transition-all">
+          <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-amber-500/20 to-yellow-500/20 flex items-center justify-center mb-4 border border-amber-500/30">
+            <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Live Comparison</h3>
+          <p class="text-sm text-gray-400">Side-by-side preview with interactive comparison slider to verify accuracy before downloading.</p>
+        </div>
+
+        <div class="glass-panel rounded-xl p-6 hover:border-indigo-500/30 transition-all">
+          <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-pink-500/20 to-fuchsia-500/20 flex items-center justify-center mb-4 border border-pink-500/30">
+            <svg class="w-6 h-6 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">100% Private</h3>
+          <p class="text-sm text-gray-400">All processing happens in your browser. Your images never leave your device—perfect for confidential designs.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-center mb-8 text-white">How Advanced Vectorization Works</h2>
+      <div class="glass-panel rounded-2xl p-6 md:p-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div class="text-center">
+            <div class="w-14 h-14 rounded-full bg-gradient-to-br from-indigo-500/30 to-purple-500/30 flex items-center justify-center mx-auto mb-4 border-2 border-indigo-500/50 text-xl font-bold text-indigo-300">1</div>
+            <h3 class="font-bold text-white mb-2">Preprocessing</h3>
+            <p class="text-sm text-gray-400">Apply contrast, blur, sharpening to clean and prepare the image for tracing</p>
+          </div>
+          <div class="text-center">
+            <div class="w-14 h-14 rounded-full bg-gradient-to-br from-indigo-500/30 to-purple-500/30 flex items-center justify-center mx-auto mb-4 border-2 border-indigo-500/50 text-xl font-bold text-indigo-300">2</div>
+            <h3 class="font-bold text-white mb-2">Color Quantization</h3>
+            <p class="text-sm text-gray-400">K-means algorithm reduces colors to distinct layers for multi-color tracing</p>
+          </div>
+          <div class="text-center">
+            <div class="w-14 h-14 rounded-full bg-gradient-to-br from-indigo-500/30 to-purple-500/30 flex items-center justify-center mx-auto mb-4 border-2 border-indigo-500/50 text-xl font-bold text-indigo-300">3</div>
+            <h3 class="font-bold text-white mb-2">Potrace Tracing</h3>
+            <p class="text-sm text-gray-400">Each color layer is traced using Potrace with Bézier curve fitting</p>
+          </div>
+          <div class="text-center">
+            <div class="w-14 h-14 rounded-full bg-gradient-to-br from-indigo-500/30 to-purple-500/30 flex items-center justify-center mx-auto mb-4 border-2 border-indigo-500/50 text-xl font-bold text-indigo-300">4</div>
+            <h3 class="font-bold text-white mb-2">Path Optimization</h3>
+            <p class="text-sm text-gray-400">Curves are optimized for accuracy and file size, then combined into final SVG</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-center mb-8 text-white">Frequently Asked Questions</h2>
+      <div class="space-y-3" id="faqContainer">
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors">
+            <span class="font-medium text-gray-200 pr-4">Why is Potrace more accurate than ImageTracer?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content hidden px-5 pb-5">
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Potrace uses an advanced polygon-based tracing algorithm with optimal Bézier curve fitting. It's the same engine used by Inkscape, Adobe Illustrator, and other professional tools. It produces smoother curves, handles corners better, and generates more compact SVG files.
+            </p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors">
+            <span class="font-medium text-gray-200 pr-4">What's the difference between monochrome and multi-color modes?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content hidden px-5 pb-5">
+            <p class="text-gray-400 text-sm leading-relaxed">
+              <strong>Monochrome</strong> converts the image to black/white using a threshold, then traces the result as a single path. Best for logos, icons, and line art.<br><br>
+              <strong>Multi-color</strong> uses K-means color quantization to separate the image into distinct color layers, then traces each layer independently. This preserves color information and is ideal for illustrations, graphics with gradients, or any multi-colored artwork.
+            </p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors">
+            <span class="font-medium text-gray-200 pr-4">How do I get the best results for my logo?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content hidden px-5 pb-5">
+            <p class="text-gray-400 text-sm leading-relaxed">
+              For logos: 1) Use Monochrome mode if your logo is single-color, or Multi-color for colored logos. 2) Increase contrast in preprocessing to make edges sharper. 3) Lower the tolerance value (0.5-2) for more accurate curves. 4) Set corner threshold around 1.0 to preserve sharp corners. 5) Increase "Suppress Speckles" to remove any noise.
+            </p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors">
+            <span class="font-medium text-gray-200 pr-4">What does "Turn Policy" mean?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content hidden px-5 pb-5">
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Turn policy determines how Potrace resolves ambiguous pixel patterns when tracing. "Minority" (default) produces cleaner results for most images. "Black" and "White" favor connections of that specific color. Try different policies if you see artifacts in specific areas of your SVG.
+            </p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors">
+            <span class="font-medium text-gray-200 pr-4">Why is my SVG file larger than the original PNG?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content hidden px-5 pb-5">
+            <p class="text-gray-400 text-sm leading-relaxed">
+              This can happen with complex images that require many paths. To reduce SVG size: 1) Lower the number of colors in multi-color mode. 2) Increase path tolerance to reduce curve complexity. 3) Increase "Suppress Speckles" to eliminate tiny paths. 4) Enable "Minify SVG" in output settings. For photos, the SVG will often be larger—SVG is best suited for graphics, not photographs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/50 backdrop-blur-lg">
+    <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://rakibalom.com/" class="text-gray-400 hover:text-white transition-colors">RakibAlom</a>. All rights reserved.</p>
+      <div class="flex gap-6">
+        <a href="https://rakibalom.com/" class="hover:text-white transition-colors">Website</a>
+        <a href="https://rakibalom.com/tools/" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Potrace Library -->
+  <script src="https://cdn.jsdelivr.net/npm/potrace@2.1.8/dist/potrace.min.js"></script>
+
+  <script>
+    // =============================================
+    // POTRACE-BASED ADVANCED PNG TO SVG CONVERTER
+    // (UPDATED: fixes retrace, adds multi-image, better SVG rendering,
+    // makes "Tolerance" + "Corner Threshold" actually affect output)
+    // =============================================
+
+    // State
+    let currentImage = null;
+    let currentImageData = null;
+    let currentSvg = null;
+    let currentMode = 'monochrome';
+    let originalFileName = 'image';
+
+    // Multi-image state
+    let lastFiles = [];
+    let results = [];
+    let activeIndex = 0;
+    let objectUrlsToRevoke = [];
+
+    // DOM Elements
+    const dropZone = document.getElementById('dropZone');
+    const fileInput = document.getElementById('fileInput');
+    const browseBtn = document.getElementById('browseBtn');
+    const processingStatus = document.getElementById('processingStatus');
+    const processingProgress = document.getElementById('processingProgress');
+    const processingText = document.getElementById('processingText');
+    const processingStep = document.getElementById('processingStep');
+    const resultSection = document.getElementById('resultSection');
+
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    const alertBox = document.getElementById('alertBox');
+    const alertTitle = document.getElementById('alertTitle');
+    const alertText = document.getElementById('alertText');
+    const alertClose = document.getElementById('alertClose');
+
+    const multiBar = document.getElementById('multiBar');
+    const multiThumbs = document.getElementById('multiThumbs');
+
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // Helpers
+    function formatSize(bytes) {
+      if (bytes < 1024) return bytes + ' B';
+      if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+      return (bytes / (1024 * 1024)).toFixed(2) + ' MB';
+    }
+
+    function showAlert(title, text, type = 'warning') {
+      alertTitle.textContent = title;
+      alertText.textContent = text;
+
+      const panel = alertBox.querySelector('.glass-panel');
+      panel.classList.remove('border-amber-500', 'border-emerald-500', 'border-rose-500');
+      if (type === 'success') panel.classList.add('border-emerald-500');
+      else if (type === 'error') panel.classList.add('border-rose-500');
+      else panel.classList.add('border-amber-500');
+
+      alertBox.classList.remove('hidden');
+    }
+
+    function hideAlert() {
+      alertBox.classList.add('hidden');
+    }
+
+    function setProgress(percent, text, step) {
+      processingProgress.style.width = percent + '%';
+      if (text) processingText.textContent = text;
+      if (step) processingStep.textContent = step;
+    }
+
+    function nextFrame() {
+      return new Promise(r => requestAnimationFrame(() => r()));
+    }
+
+    function safeRevokeAllObjectUrls() {
+      for (const u of objectUrlsToRevoke) {
+        try { URL.revokeObjectURL(u); } catch {}
+      }
+      objectUrlsToRevoke = [];
+    }
+
+    function isPotraceReady() {
+      return typeof Potrace !== 'undefined';
+    }
+
+    function clamp(v, min, max) {
+      return Math.max(min, Math.min(max, v));
+    }
+
+    // Mobile menu
+    mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+    alertClose.addEventListener('click', hideAlert);
+
+    // Mode selection
+    document.querySelectorAll('.mode-card').forEach(card => {
+      card.addEventListener('click', () => {
+        document.querySelectorAll('.mode-card').forEach(c => c.classList.remove('selected'));
+        card.classList.add('selected');
+        currentMode = card.dataset.mode;
+        updateUIForMode();
+      });
+    });
+
+    function updateUIForMode() {
+      const colorCountGroup = document.getElementById('colorCountGroup');
+      const thresholdGroup = document.getElementById('thresholdGroup');
+      const fillColorGroup = document.getElementById('fillColorGroup');
+
+      if (currentMode === 'monochrome') {
+        colorCountGroup.classList.add('hidden');
+        thresholdGroup.classList.remove('hidden');
+        fillColorGroup.classList.remove('hidden');
+      } else {
+        colorCountGroup.classList.remove('hidden');
+        thresholdGroup.classList.add('hidden');
+        fillColorGroup.classList.add('hidden');
+      }
+    }
+
+    // Tab switching
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const tab = btn.dataset.tab;
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.add('hidden'));
+        document.getElementById('tab-' + tab).classList.remove('hidden');
+      });
+    });
+
+    // View switching
+    document.getElementById('viewSideBySide').addEventListener('click', () => switchView('sideBySide'));
+    document.getElementById('viewComparison').addEventListener('click', () => switchView('comparison'));
+    document.getElementById('viewSvgOnly').addEventListener('click', () => switchView('svgOnly'));
+
+    function switchView(view) {
+      const activeBtnId = 'view' + view.charAt(0).toUpperCase() + view.slice(1);
+
+      ['viewSideBySide', 'viewComparison', 'viewSvgOnly'].forEach(id => {
+        const btn = document.getElementById(id);
+        const isActive = (id === activeBtnId);
+
+        btn.classList.toggle('bg-indigo-500/20', isActive);
+        btn.classList.toggle('text-indigo-300', isActive);
+        btn.classList.toggle('border-indigo-500/30', isActive);
+
+        btn.classList.toggle('bg-white/5', !isActive);
+        btn.classList.toggle('text-gray-400', !isActive);
+        btn.classList.toggle('border-white/10', !isActive);
+      });
+
+      document.getElementById('sideBySideView').classList.toggle('hidden', view !== 'sideBySide');
+      document.getElementById('comparisonView').classList.toggle('hidden', view !== 'comparison');
+      document.getElementById('svgOnlyView').classList.toggle('hidden', view !== 'svgOnly');
+    }
+
+    // Slider UI updates
+    const sliders = [
+      { id: 'colorCount', labelId: 'colorCountValue', format: v => v },
+      { id: 'threshold', labelId: 'thresholdValue', format: v => v },
+      { id: 'tolerance', labelId: 'toleranceValue', format: v => v },
+      { id: 'blur', labelId: 'blurValue', format: v => v },
+      { id: 'contrast', labelId: 'contrastValue', format: v => v + '%' },
+      { id: 'brightness', labelId: 'brightnessValue', format: v => v + '%' },
+      { id: 'sharpen', labelId: 'sharpenValue', format: v => v },
+      { id: 'cornerThreshold', labelId: 'cornerValue', format: v => v },
+      { id: 'optimizeTolerance', labelId: 'optimizeValue', format: v => v },
+      { id: 'turdSize', labelId: 'turdValue', format: v => v },
+      { id: 'alphaMax', labelId: 'alphaMaxValue', format: v => v },
+      { id: 'scale', labelId: 'scaleValue', format: v => v + 'x' },
+      { id: 'strokeWidth', labelId: 'strokeValue', format: v => v }
+    ];
+
+    sliders.forEach(s => {
+      const el = document.getElementById(s.id);
+      const label = document.getElementById(s.labelId);
+      if (el && label) {
+        el.addEventListener('input', () => {
+          label.textContent = s.format(el.value);
+        });
+      }
+    });
+
+    // Color inputs sync
+    const fillColor = document.getElementById('fillColor');
+    const fillColorText = document.getElementById('fillColorText');
+    fillColor.addEventListener('input', () => fillColorText.value = fillColor.value.toUpperCase());
+    fillColorText.addEventListener('input', () => {
+      if (/^#[0-9A-Fa-f]{6}$/.test(fillColorText.value)) fillColor.value = fillColorText.value;
+    });
+
+    const bgColor = document.getElementById('bgColor');
+    const bgColorText = document.getElementById('bgColorText');
+    bgColor.addEventListener('input', () => bgColorText.value = bgColor.value.toUpperCase());
+    bgColorText.addEventListener('input', () => {
+      if (/^#[0-9A-Fa-f]{6}$/.test(bgColorText.value)) bgColor.value = bgColorText.value;
+    });
+
+    // Background handling
+    document.getElementById('bgHandling').addEventListener('change', (e) => {
+      document.getElementById('customBgGroup').classList.toggle('hidden', e.target.value !== 'custom');
+    });
+
+    // Drop zone handlers
+    dropZone.addEventListener('click', () => fileInput.click());
+    browseBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      fileInput.click();
+    });
+
+    dropZone.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      dropZone.classList.add('dragover');
+    });
+
+    dropZone.addEventListener('dragleave', () => {
+      dropZone.classList.remove('dragover');
+    });
+
+    dropZone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      dropZone.classList.remove('dragover');
+      if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+        handleFiles(Array.from(e.dataTransfer.files));
+      }
+    });
+
+    fileInput.addEventListener('change', (e) => {
+      if (e.target.files && e.target.files.length > 0) {
+        handleFiles(Array.from(e.target.files));
+      }
+    });
+
+    // Keep compatibility with older calls
+    async function handleFile(file) {
+      return handleFiles([file]);
+    }
+
+    async function handleFiles(files) {
+      hideAlert();
+
+      const validTypes = ['image/png', 'image/jpeg', 'image/webp', 'image/gif', 'image/bmp'];
+      const filtered = files.filter(f => validTypes.includes(f.type));
+
+      if (filtered.length === 0) {
+        showAlert('Invalid File Type', 'Please upload PNG, JPEG, WebP, GIF, or BMP images.', 'warning');
+        return;
+      }
+
+      if (filtered.length > 20) {
+        showAlert('Too Many Images', 'Please convert up to 20 images at a time.', 'warning');
+        return;
+      }
+
+      safeRevokeAllObjectUrls();
+      results = [];
+      lastFiles = filtered;
+      activeIndex = 0;
+
+      processingStatus.classList.remove('hidden');
+      resultSection.classList.add('hidden');
+      document.getElementById('detectedColors').classList.add('hidden');
+
+      if (multiBar) multiBar.classList.add('hidden');
+      if (multiThumbs) multiThumbs.innerHTML = '';
+
+      try {
+        for (let i = 0; i < filtered.length; i++) {
+          const file = filtered[i];
+          const res = await processSingleFile(file, i, filtered.length);
+          results.push(res);
+          updateMultiThumbs();
+        }
+
+        setActiveResult(0);
+
+        setProgress(100, 'Complete!', 'Done');
+        setTimeout(() => {
+          processingStatus.classList.add('hidden');
+          resultSection.classList.remove('hidden');
+        }, 250);
+
+      } catch (error) {
+        console.error('Conversion error:', error);
+        processingStatus.classList.add('hidden');
+        showAlert('Conversion Failed', 'An error occurred while processing the image(s). Please try different settings or another image.', 'error');
+      }
+    }
+
+    async function processSingleFile(file, index, total) {
+      if (file.size > 50 * 1024 * 1024) {
+        throw new Error('File too large: ' + file.name);
+      }
+
+      const originalSize = file.size;
+      const nameNoExt = file.name.replace(/\.[^/.]+$/, '') || 'image';
+      const prefix = total > 1 ? `[${index + 1}/${total}] ` : '';
+
+      // Make URL (and keep for later previews)
+      const imgUrl = URL.createObjectURL(file);
+      objectUrlsToRevoke.push(imgUrl);
+
+      // Show processing
+      setProgress(5, `${prefix}Loading image...`, 'Step 1/4');
+      await nextFrame();
+
+      const img = await loadImageFromUrl(imgUrl);
+      currentImage = img;
+      originalFileName = nameNoExt;
+
+      setProgress(15, `${prefix}Preprocessing...`, 'Step 2/4');
+      await nextFrame();
+
+      const processedCanvas = preprocessImage(img);
+      currentImageData = processedCanvas.getContext('2d').getImageData(0, 0, processedCanvas.width, processedCanvas.height);
+
+      setProgress(35, `${prefix}Tracing paths...`, 'Step 3/4');
+      await nextFrame();
+
+      let svgString;
+      let paletteHex = null;
+
+      if (currentMode === 'monochrome') {
+        svgString = await traceMonochrome(processedCanvas);
+      } else {
+        const multi = await traceMultiColor(processedCanvas);
+        svgString = multi.svg;
+        paletteHex = multi.paletteHex;
+      }
+
+      setProgress(85, `${prefix}Optimizing SVG...`, 'Step 4/4');
+      await nextFrame();
+
+      const finalSvg = postProcessSvg(svgString, processedCanvas.width, processedCanvas.height);
+
+      return { file, name: nameNoExt, size: originalSize, imgUrl, svg: finalSvg, paletteHex };
+    }
+
+    function loadImageFromUrl(url) {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.onload = () => resolve(img);
+        img.onerror = reject;
+        img.src = url;
+      });
+    }
+
+    function preprocessImage(img) {
+      const maxDim = parseInt(document.getElementById('maxDimension').value) || 0;
+      let w = img.naturalWidth;
+      let h = img.naturalHeight;
+
+      if (maxDim > 0 && (w > maxDim || h > maxDim)) {
+        const ratio = Math.min(maxDim / w, maxDim / h);
+        w = Math.round(w * ratio);
+        h = Math.round(h * ratio);
+      }
+
+      const canvas = document.createElement('canvas');
+      canvas.width = w;
+      canvas.height = h;
+      const ctx = canvas.getContext('2d', { willReadFrequently: true });
+
+      // Background handling
+      const bgHandling = document.getElementById('bgHandling').value;
+      if (bgHandling === 'white') {
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(0, 0, w, h);
+      } else if (bgHandling === 'black') {
+        ctx.fillStyle = '#000000';
+        ctx.fillRect(0, 0, w, h);
+      } else if (bgHandling === 'custom') {
+        ctx.fillStyle = document.getElementById('bgColor').value;
+        ctx.fillRect(0, 0, w, h);
+      }
+
+      ctx.drawImage(img, 0, 0, w, h);
+
+      let imageData = ctx.getImageData(0, 0, w, h);
+      const data = imageData.data;
+
+      // Brightness & Contrast
+      const brightness = parseInt(document.getElementById('brightness').value);
+      const contrast = parseInt(document.getElementById('contrast').value);
+
+      if (brightness !== 0 || contrast !== 0) {
+        const factor = (259 * (contrast + 255)) / (255 * (259 - contrast));
+        const b = brightness * 2.55;
+        for (let i = 0; i < data.length; i += 4) {
+          for (let c = 0; c < 3; c++) {
+            let val = data[i + c];
+            val += b;
+            val = factor * (val - 128) + 128;
+            data[i + c] = Math.max(0, Math.min(255, val));
+          }
+        }
+      }
+
+      // Invert
+      if (document.getElementById('invert').checked) {
+        for (let i = 0; i < data.length; i += 4) {
+          data[i] = 255 - data[i];
+          data[i + 1] = 255 - data[i + 1];
+          data[i + 2] = 255 - data[i + 2];
+        }
+      }
+
+      // High contrast
+      if (document.getElementById('highContrast').checked) {
+        for (let i = 0; i < data.length; i += 4) {
+          const gray = (data[i] + data[i + 1] + data[i + 2]) / 3;
+          const val = gray > 128 ? 255 : 0;
+          data[i] = data[i + 1] = data[i + 2] = val;
+        }
+      }
+
+      ctx.putImageData(imageData, 0, 0);
+
+      // Blur + Sharpen pass
+      const blur = parseFloat(document.getElementById('blur').value);
+      const sharpen = parseFloat(document.getElementById('sharpen').value);
+
+      if (blur > 0 || sharpen > 0) {
+        const tmp = document.createElement('canvas');
+        tmp.width = w;
+        tmp.height = h;
+        const tctx = tmp.getContext('2d');
+
+        if (blur > 0) {
+          tctx.filter = `blur(${blur}px)`;
+          tctx.drawImage(canvas, 0, 0);
+          tctx.filter = 'none';
+          ctx.clearRect(0, 0, w, h);
+          ctx.drawImage(tmp, 0, 0);
+          tctx.clearRect(0, 0, w, h);
+        }
+
+        if (sharpen > 0) {
+          tctx.filter = `contrast(${100 + sharpen * 15}%)`;
+          tctx.drawImage(canvas, 0, 0);
+          tctx.filter = 'none';
+          ctx.clearRect(0, 0, w, h);
+          ctx.drawImage(tmp, 0, 0);
+        }
+      }
+
+      return canvas;
+    }
+
+    // Potrace helpers
+    function potraceLoad(dataUrl, params) {
+      return new Promise((resolve, reject) => {
+        try {
+          const potrace = new Potrace();
+          potrace.setParameters(params);
+          potrace.loadImage(dataUrl, function(err) {
+            if (err) reject(err);
+            else resolve(potrace);
+          });
+        } catch (e) {
+          reject(e);
+        }
+      });
+    }
+
+    function potraceExtractInnerPaths(potraceInstance) {
+      // Prefer getPathTag if present
+      try {
+        if (typeof potraceInstance.getPathTag === 'function') {
+          const tag = potraceInstance.getPathTag();
+          if (typeof tag === 'string' && tag.includes('<path')) return tag;
+        }
+      } catch {}
+
+      // Fallback: strip outer SVG wrapper from getSVG()
+      const full = potraceInstance.getSVG();
+      return full
+        .replace(/^[\s\S]*?<svg[^>]*>/i, '')
+        .replace(/<\/svg>\s*$/i, '');
+    }
+
+    function getEffectivePotraceParams() {
+      // Make BOTH sliders affect output (your "settings not working" issue)
+      const tolerance = parseFloat(document.getElementById('tolerance').value);          // 0.1..10 (UI)
+      const optimizeTolerance = parseFloat(document.getElementById('optimizeTolerance').value); // 0..1 (UI)
+
+      // Map tolerance to 0..1.5 and blend with optimizeTolerance
+      const tolMapped = clamp(tolerance / 6, 0, 1.5);
+      const effectiveOptTolerance = clamp((tolMapped + optimizeTolerance) / 2, 0, 1.5);
+
+      const cornerThreshold = parseFloat(document.getElementById('cornerThreshold').value); // 0..1.34
+      const alphaMax = parseFloat(document.getElementById('alphaMax').value);               // 0..1.34
+      const effectiveAlphaMax = clamp(alphaMax * (0.75 + cornerThreshold / 2), 0, 1.34);    // now "Corner Threshold" works
+
+      let turdSize = parseInt(document.getElementById('turdSize').value);
+
+      // Mode presets (keeps UI, improves "High Detail")
+      if (currentMode === 'detailed') {
+        turdSize = Math.max(0, Math.round(turdSize * 0.6));
+      }
+
+      return {
+        turdSize,
+        effectiveAlphaMax,
+        effectiveOptTolerance
+      };
+    }
+
+    // Potrace-based monochrome tracing
+    async function traceMonochrome(canvas) {
+      const threshold = parseInt(document.getElementById('threshold').value);
+      const turnPolicy = document.getElementById('turnPolicy').value;
+      const optCurve = document.getElementById('optCurve').checked;
+      const fill = document.getElementById('fillColor').value;
+
+      const { turdSize, effectiveAlphaMax, effectiveOptTolerance } = getEffectivePotraceParams();
+
+      if (isPotraceReady()) {
+        const potrace = await potraceLoad(canvas.toDataURL(), {
+          threshold,
+          turdSize,
+          alphaMax: effectiveAlphaMax,
+          optCurve,
+          optTolerance: effectiveOptTolerance,
+          turnPolicy,
+          color: fill,
+          background: 'transparent'
+        });
+        return potrace.getSVG();
+      }
+
+      // Fallback (rare)
+      return `<svg xmlns="http://www.w3.org/2000/svg" width="${canvas.width}" height="${canvas.height}" viewBox="0 0 ${canvas.width} ${canvas.height}"></svg>`;
+    }
+
+    // Multi-color tracing with K-means
+    async function traceMultiColor(canvas) {
+      if (!isPotraceReady()) throw new Error('Potrace not loaded for multi-color tracing.');
+
+      let colorCount = parseInt(document.getElementById('colorCount').value);
+      if (currentMode === 'detailed') colorCount = Math.min(32, Math.round(colorCount * 1.4));
+
+      const ctx = canvas.getContext('2d', { willReadFrequently: true });
+      const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+
+      const { colors, counts } = kMeansQuantize(imageData.data, colorCount);
+
+      // Sort by cluster size (big -> small)
+      const order = colors
+        .map((c, i) => ({ c, i, n: counts[i] || 0 }))
+        .sort((a, b) => b.n - a.n);
+
+      const sortedColors = order.map(o => o.c);
+      const paletteHex = sortedColors.map(c => rgbToHex(c[0], c[1], c[2]));
+
+      // Show detected colors
+      const palette = document.getElementById('colorPalette');
+      palette.innerHTML = '';
+      sortedColors.forEach(c => {
+        const chip = document.createElement('div');
+        chip.className = 'color-chip';
+        chip.style.backgroundColor = `rgb(${c[0]}, ${c[1]}, ${c[2]})`;
+        chip.title = rgbToHex(c[0], c[1], c[2]);
+        palette.appendChild(chip);
+      });
+      document.getElementById('detectedColors').classList.remove('hidden');
+
+      const quantized = quantizeImage(imageData.data, sortedColors);
+
+      const { turdSize, effectiveAlphaMax, effectiveOptTolerance } = getEffectivePotraceParams();
+      const optCurve = document.getElementById('optCurve').checked;
+
+      let svgPaths = '';
+
+      for (let ci = 0; ci < sortedColors.length; ci++) {
+        const color = sortedColors[ci];
+        const hex = rgbToHex(color[0], color[1], color[2]);
+
+        const layerCanvas = document.createElement('canvas');
+        layerCanvas.width = canvas.width;
+        layerCanvas.height = canvas.height;
+
+        const layerCtx = layerCanvas.getContext('2d', { willReadFrequently: true });
+        const layerData = layerCtx.createImageData(canvas.width, canvas.height);
+
+        for (let p = 0; p < quantized.length; p++) {
+          const a = imageData.data[p * 4 + 3];
+          const transparent = a <= 8;
+          const on = (!transparent && quantized[p] === ci);
+          const o = p * 4;
+
+          if (on) {
+            layerData.data[o] = 0;
+            layerData.data[o + 1] = 0;
+            layerData.data[o + 2] = 0;
+            layerData.data[o + 3] = 255;
+          } else {
+            layerData.data[o] = 255;
+            layerData.data[o + 1] = 255;
+            layerData.data[o + 2] = 255;
+            layerData.data[o + 3] = 255;
+          }
+        }
+
+        layerCtx.putImageData(layerData, 0, 0);
+
+        const potrace = await potraceLoad(layerCanvas.toDataURL(), {
+          threshold: 128,
+          turdSize,
+          alphaMax: effectiveAlphaMax,
+          optCurve,
+          optTolerance: effectiveOptTolerance,
+          color: hex,
+          background: 'transparent'
+        });
+
+        svgPaths += potraceExtractInnerPaths(potrace);
+
+        setProgress(35 + (ci / Math.max(1, sortedColors.length)) * 50, `Tracing color ${ci + 1}/${sortedColors.length}...`, 'Step 3/4');
+        await nextFrame();
+      }
+
+      const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${canvas.width}" height="${canvas.height}" viewBox="0 0 ${canvas.width} ${canvas.height}">${svgPaths}</svg>`;
+      return { svg, paletteHex };
+    }
+
+    // K-means color quantization (sampled for speed)
+    function kMeansQuantize(data, k, maxIterations = 18) {
+      let pixels = [];
+      for (let i = 0; i < data.length; i += 4) {
+        if (data[i + 3] > 16) pixels.push([data[i], data[i + 1], data[i + 2]]);
+      }
+      if (pixels.length === 0) return { colors: [[0, 0, 0]], counts: [0] };
+
+      const MAX_SAMPLES = 60000;
+      if (pixels.length > MAX_SAMPLES) {
+        const sampled = new Array(MAX_SAMPLES);
+        for (let i = 0; i < MAX_SAMPLES; i++) sampled[i] = pixels[(Math.random() * pixels.length) | 0];
+        pixels = sampled;
+      }
+
+      k = Math.max(2, Math.min(k, 32, pixels.length));
+
+      const centroids = [];
+      const step = Math.max(1, Math.floor(pixels.length / k));
+      for (let i = 0; i < k; i++) {
+        centroids.push([...pixels[Math.min(i * step, pixels.length - 1)]]);
+      }
+
+      let counts = new Array(k).fill(0);
+
+      for (let iter = 0; iter < maxIterations; iter++) {
+        const sums = Array.from({ length: k }, () => [0, 0, 0]);
+        counts = new Array(k).fill(0);
+
+        for (const px of pixels) {
+          let best = 0, bestD = Infinity;
+          for (let ci = 0; ci < k; ci++) {
+            const d = colorDistanceSq(px, centroids[ci]);
+            if (d < bestD) { bestD = d; best = ci; }
+          }
+          sums[best][0] += px[0];
+          sums[best][1] += px[1];
+          sums[best][2] += px[2];
+          counts[best]++;
+        }
+
+        let converged = true;
+        for (let ci = 0; ci < k; ci++) {
+          if (counts[ci] === 0) continue;
+          const nc = [
+            Math.round(sums[ci][0] / counts[ci]),
+            Math.round(sums[ci][1] / counts[ci]),
+            Math.round(sums[ci][2] / counts[ci])
+          ];
+          if (colorDistanceSq(nc, centroids[ci]) > 4) converged = false;
+          centroids[ci] = nc;
+        }
+        if (converged) break;
+      }
+
+      const outColors = [];
+      const outCounts = [];
+      for (let i = 0; i < centroids.length; i++) {
+        if ((counts[i] || 0) > 0) {
+          outColors.push(centroids[i]);
+          outCounts.push(counts[i]);
+        }
+      }
+      return { colors: outColors, counts: outCounts };
+    }
+
+    function colorDistanceSq(c1, c2) {
+      const dr = c1[0] - c2[0];
+      const dg = c1[1] - c2[1];
+      const db = c1[2] - c2[2];
+      return dr * dr + dg * dg + db * db;
+    }
+
+    function quantizeImage(data, colors) {
+      const result = new Array(data.length / 4);
+      for (let i = 0, p = 0; i < data.length; i += 4, p++) {
+        const a = data[i + 3];
+        if (a <= 8) { result[p] = -1; continue; }
+        const pixel = [data[i], data[i + 1], data[i + 2]];
+        let minDist = Infinity, minIdx = 0;
+        for (let c = 0; c < colors.length; c++) {
+          const dist = colorDistanceSq(pixel, colors[c]);
+          if (dist < minDist) { minDist = dist; minIdx = c; }
+        }
+        result[p] = minIdx;
+      }
+      return result;
+    }
+
+    function rgbToHex(r, g, b) {
+      return '#' + [r, g, b].map(x => x.toString(16).padStart(2, '0')).join('');
+    }
+
+    function postProcessSvg(svg, widthHint, heightHint) {
+      const scale = parseFloat(document.getElementById('scale').value) || 1;
+      const strokeWidth = parseFloat(document.getElementById('strokeWidth').value) || 0;
+      const minify = document.getElementById('minifySvg').checked;
+      const flatten = document.getElementById('flat').checked;
+
+      try {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(svg, 'image/svg+xml');
+        const svgEl = doc.documentElement;
+        if (!svgEl || svgEl.nodeName.toLowerCase() !== 'svg') return svg;
+
+        let viewBox = svgEl.getAttribute('viewBox');
+        if (!viewBox) {
+          const w = parseFloat((svgEl.getAttribute('width') || '').replace(/[a-z%]+/gi, '')) || widthHint;
+          const h = parseFloat((svgEl.getAttribute('height') || '').replace(/[a-z%]+/gi, '')) || heightHint;
+          svgEl.setAttribute('viewBox', `0 0 ${w} ${h}`);
+          viewBox = svgEl.getAttribute('viewBox');
+        }
+
+        const vb = viewBox.split(/[\s,]+/).map(Number);
+        const vbW = (vb[2] || widthHint || 0);
+        const vbH = (vb[3] || heightHint || 0);
+        const outW = Math.max(1, Math.round(vbW * scale));
+        const outH = Math.max(1, Math.round(vbH * scale));
+
+        svgEl.setAttribute('width', String(outW));
+        svgEl.setAttribute('height', String(outH));
+        svgEl.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+        svgEl.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+
+        if (strokeWidth > 0) {
+          svgEl.querySelectorAll('path').forEach(p => {
+            if (!p.getAttribute('stroke')) p.setAttribute('stroke', '#000');
+            p.setAttribute('stroke-width', String(strokeWidth));
+            p.setAttribute('vector-effect', 'non-scaling-stroke');
+          });
+        }
+
+        if (flatten) {
+          svgEl.querySelectorAll('g').forEach(g => {
+            if (g.childNodes.length === 0) g.remove();
+          });
+        }
+
+        let out = new XMLSerializer().serializeToString(svgEl);
+
+        if (minify) {
+          out = out
+            .replace(/\s+/g, ' ')
+            .replace(/>\s+</g, '><')
+            .replace(/\s+\/>/g, '/>')
+            .trim();
+        }
+
+        return out;
+
+      } catch (e) {
+        console.warn('postProcessSvg failed, returning raw SVG', e);
+        return svg;
+      }
+    }
+
+    function injectImage(container, url) {
+      container.innerHTML = '';
+      const im = document.createElement('img');
+      im.src = url;
+      im.className = 'max-w-full max-h-full object-contain';
+      container.appendChild(im);
+    }
+
+    function injectSvg(container, svgString) {
+      container.innerHTML = svgString;
+      const svgEl = container.querySelector('svg');
+      if (svgEl) {
+        svgEl.setAttribute('width', '100%');
+        svgEl.setAttribute('height', '100%');
+        svgEl.setAttribute('preserveAspectRatio', svgEl.getAttribute('preserveAspectRatio') || 'xMidYMid meet');
+        svgEl.style.display = 'block';
+        svgEl.style.maxWidth = '100%';
+        svgEl.style.maxHeight = '100%';
+      }
+    }
+
+    function updatePreviews(imgUrl, svg) {
+      injectImage(document.getElementById('originalPreview'), imgUrl);
+      injectSvg(document.getElementById('svgPreview'), svg);
+
+      injectImage(document.getElementById('comparisonOriginal'), imgUrl);
+      injectSvg(document.getElementById('comparisonSvg'), svg);
+
+      injectSvg(document.getElementById('svgOnlyPreview'), svg);
+
+      setupComparisonSliderOnce();
+    }
+
+    function setupComparisonSliderOnce() {
+      const slider = document.getElementById('comparisonSlider');
+      const handle = document.getElementById('sliderHandle');
+      const svgLayer = document.getElementById('comparisonSvg');
+      if (!slider || !handle || !svgLayer) return;
+      if (slider.dataset.ready === '1') return;
+      slider.dataset.ready = '1';
+
+      let dragging = false;
+
+      const update = (clientX) => {
+        const rect = slider.getBoundingClientRect();
+        let x = clientX - rect.left;
+        x = Math.max(0, Math.min(x, rect.width));
+        const percent = (x / rect.width) * 100;
+        handle.style.left = percent + '%';
+        svgLayer.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
+      };
+
+      slider.addEventListener('pointerdown', (e) => {
+        dragging = true;
+        slider.setPointerCapture(e.pointerId);
+        update(e.clientX);
+      });
+
+      slider.addEventListener('pointermove', (e) => {
+        if (!dragging) return;
+        update(e.clientX);
+      });
+
+      slider.addEventListener('pointerup', () => dragging = false);
+      slider.addEventListener('pointercancel', () => dragging = false);
+
+      requestAnimationFrame(() => {
+        const r = slider.getBoundingClientRect();
+        update(r.left + r.width / 2);
+      });
+    }
+
+    function updateStats(originalSize, svg) {
+      const svgBlob = new Blob([svg], { type: 'image/svg+xml' });
+
+      document.getElementById('statOriginalSize').textContent = formatSize(originalSize);
+      document.getElementById('statSvgSize').textContent = formatSize(svgBlob.size);
+
+      const pathCount = (svg.match(/<path\b/gi) || []).length;
+      document.getElementById('statPaths').textContent = pathCount;
+
+      const fills = (svg.match(/fill="([^"]+)"/gi) || []).map(s => s.toLowerCase());
+      const set = new Set(fills);
+      document.getElementById('statColors').textContent = Math.max(1, set.size);
+    }
+
+    function updateMultiThumbs() {
+      if (!multiBar || !multiThumbs) return;
+
+      if (results.length <= 1) {
+        multiBar.classList.add('hidden');
+        multiThumbs.innerHTML = '';
+        return;
+      }
+
+      multiBar.classList.remove('hidden');
+      multiThumbs.innerHTML = '';
+
+      results.forEach((r, idx) => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = `shrink-0 rounded-lg border px-2 py-2 text-xs flex items-center gap-2 ${
+          idx === activeIndex
+            ? 'bg-indigo-500/20 text-indigo-200 border-indigo-500/30'
+            : 'bg-white/5 text-gray-300 border-white/10 hover:bg-white/10'
+        }`;
+
+        const thumb = document.createElement('img');
+        thumb.src = r.imgUrl;
+        thumb.alt = r.name;
+        thumb.className = 'w-8 h-8 rounded object-cover';
+
+        const label = document.createElement('span');
+        label.className = 'whitespace-nowrap';
+        label.textContent = r.name.length > 14 ? r.name.slice(0, 14) + '…' : r.name;
+
+        btn.appendChild(thumb);
+        btn.appendChild(label);
+
+        btn.addEventListener('click', () => setActiveResult(idx));
+        multiThumbs.appendChild(btn);
+      });
+    }
+
+    function setActiveResult(idx) {
+      activeIndex = idx;
+      const r = results[idx];
+      if (!r) return;
+
+      currentSvg = r.svg;
+      originalFileName = r.name;
+
+      updatePreviews(r.imgUrl, r.svg);
+      updateStats(r.size, r.svg);
+
+      if (currentMode === 'monochrome') {
+        document.getElementById('detectedColors').classList.add('hidden');
+      } else {
+        document.getElementById('detectedColors').classList.toggle('hidden', !r.paletteHex || r.paletteHex.length === 0);
+      }
+
+      updateMultiThumbs();
+    }
+
+    // Download handlers
+    document.getElementById('downloadSvgBtn').addEventListener('click', () => {
+      if (!currentSvg) return;
+      const blob = new Blob([currentSvg], { type: 'image/svg+xml' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = originalFileName + '.svg';
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+
+    document.getElementById('copySvgBtn').addEventListener('click', async () => {
+      if (!currentSvg) return;
+      try {
+        await navigator.clipboard.writeText(currentSvg);
+        showAlert('Copied!', 'SVG code copied to clipboard.', 'success');
+        setTimeout(hideAlert, 1600);
+      } catch {
+        showAlert('Copy Failed', 'Could not copy to clipboard.', 'error');
+      }
+    });
+
+    document.getElementById('downloadPngBtn').addEventListener('click', () => {
+      if (!currentSvg) return;
+
+      const svgBlob = new Blob([currentSvg], { type: 'image/svg+xml' });
+      const url = URL.createObjectURL(svgBlob);
+      const img = new Image();
+
+      img.onload = () => {
+        const canvas = document.createElement('canvas');
+        const scaleOut = 2;
+        canvas.width = Math.max(1, Math.round(img.width * scaleOut));
+        canvas.height = Math.max(1, Math.round(img.height * scaleOut));
+        const ctx = canvas.getContext('2d');
+        ctx.scale(scaleOut, scaleOut);
+        ctx.drawImage(img, 0, 0);
+
+        canvas.toBlob((blob) => {
+          if (!blob) return;
+          const a = document.createElement('a');
+          a.href = URL.createObjectURL(blob);
+          a.download = originalFileName + '_vector.png';
+          a.click();
+        }, 'image/png');
+
+        URL.revokeObjectURL(url);
+      };
+
+      img.onerror = () => {
+        URL.revokeObjectURL(url);
+        showAlert('Export Failed', 'Could not render SVG to PNG in this browser.', 'error');
+      };
+
+      img.src = url;
+    });
+
+    // FIXED: retrace now uses original File, not Image element
+    document.getElementById('retraceBtn').addEventListener('click', async () => {
+      if (!lastFiles.length) return;
+
+      const file = lastFiles[activeIndex] || lastFiles[0];
+      if (!file) return;
+
+      hideAlert();
+      processingStatus.classList.remove('hidden');
+      resultSection.classList.add('hidden');
+
+      try {
+        const updated = await processSingleFile(file, activeIndex, lastFiles.length);
+        results[activeIndex] = updated;
+
+        setActiveResult(activeIndex);
+
+        processingStatus.classList.add('hidden');
+        resultSection.classList.remove('hidden');
+        showAlert('Re-traced', 'SVG updated with new settings.', 'success');
+        setTimeout(hideAlert, 1400);
+
+      } catch (e) {
+        console.error(e);
+        processingStatus.classList.add('hidden');
+        showAlert('Re-trace Failed', 'Could not retrace this image. Try different settings.', 'error');
+      }
+    });
+
+    document.getElementById('newImageBtn').addEventListener('click', () => {
+      currentImage = null;
+      currentSvg = null;
+      results = [];
+      lastFiles = [];
+      activeIndex = 0;
+
+      safeRevokeAllObjectUrls();
+
+      resultSection.classList.add('hidden');
+      document.getElementById('detectedColors').classList.add('hidden');
+      if (multiBar) multiBar.classList.add('hidden');
+      if (multiThumbs) multiThumbs.innerHTML = '';
+      fileInput.value = '';
+      hideAlert();
+    });
+
+    // Edit palette button (kept, simple message so it "does something")
+    document.getElementById('editColorsBtn').addEventListener('click', () => {
+      showAlert('Palette Editor', 'Palette editing can be added next (manual color replace & re-trace per color).', 'warning');
+      setTimeout(hideAlert, 2500);
+    });
+
+    // FAQ toggle
+    document.querySelectorAll('.faq-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const content = btn.nextElementSibling;
+        const icon = btn.querySelector('.faq-icon');
+        content.classList.toggle('hidden');
+        icon.style.transform = content.classList.contains('hidden') ? '' : 'rotate(180deg)';
+      });
+    });
+
+    // Initialize
+    updateUIForMode();
+  </script>
+</body>
+</html>
