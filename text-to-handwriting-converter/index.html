@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Text to Handwriting Converter - Advanced Handwritten Text Generator | EasyPro Tools</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Advanced free online text to handwriting converter with TinyMCE editor, 60+ fonts, 50+ paper backgrounds, custom uploads, and true PDF export. Create realistic handwritten notes with A4/Letter page sizes." />
+  <meta name="keywords" content="free online text to handwriting converter, text to handwriting converter online free, free handwriting text generator online, online text to handwriting tool free, free online handwritten text creator, online handwriting converter for text free, free text to handwriting generator, online handwriting font converter free, free online text handwriting maker, online handwriting text creator free, text to free handwriting style converter, free online handwriting script generator, online handwriting converter tool free, free text to handwritten style online, online handwriting generator free, free handwriting text converter without login, online handwritten text converter free, free online text to handwriting image, online text to handwriting generator no watermark, free online handwriting font tool, online free handwriting text converter for students, free online text to cursive handwriting tool, online handwriting converter for letters free, free online text to handwriting PNG, free online handwriting converter for social media, advanced handwriting generator, custom background handwriting, rich text handwriting converter, TinyMCE handwriting, A4 letter handwriting PDF" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/text-to-handwriting-converter/" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/text-to-handwriting-converter/" />
+  <meta property="og:title" content="Text to Handwriting Converter - Advanced Handwritten Text Generator" />
+  <meta property="og:description" content="Advanced handwriting converter with TinyMCE editor, 60+ fonts, 50+ paper backgrounds & true PDF export. Create realistic handwritten notes." />
+  <meta property="og:image" content="https://easyprotools.com/assets/img/easypro-tools.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Text to Handwriting Converter - Advanced Handwritten Text Generator" />
+  <meta name="twitter:description" content="Advanced handwriting converter with TinyMCE editor, 60+ fonts, 50+ paper backgrounds & true PDF export." />
+  <meta name="twitter:image" content="https://easyprotools.com/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Allura&family=Amatic+SC:wght@400;700&family=Architects+Daughter&family=Bad+Script&family=Berkshire+Swash&family=Bilbo&family=Bilbo+Swash+Caps&family=Birthstone&family=Birthstone+Bounce&family=Borel&family=Caveat:wght@400;500;600;700&family=Caveat+Brush&family=Cedarville+Cursive&family=Clicker+Script&family=Coming+Soon&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Corinthia:wght@400;700&family=Covered+By+Your+Grace&family=Dancing+Script:wght@400;500;600;700&family=Delius&family=Devonshire&family=Dr+Sugiyama&family=Gochi+Hand&family=Grape+Nuts&family=Great+Vibes&family=Grechen+Fuemen&family=Handlee&family=Herr+Von+Muellerhoff&family=Homemade+Apple&family=Indie+Flower&family=Italianno&family=Julee&family=Just+Another+Hand&family=Kalam:wght@300;400;700&family=Kaushan+Script&family=Kristi&family=La+Belle+Aurore&family=League+Script&family=Liu+Jian+Mao+Cao&family=Lobster&family=Long+Cang&family=Lovers+Quarrel&family=Marck+Script&family=Meddon&family=Meow+Script&family=Merienda:wght@300;400;500;600;700;800;900&family=Miss+Fajardose&family=Monsieur+La+Doulaise&family=Montez&family=Mr+Dafoe&family=Mrs+Saint+Delafield&family=Neucha&family=Niconne&family=Nothing+You+Could+Do&family=Pacifico&family=Parisienne&family=Patrick+Hand&family=Patrick+Hand+SC&family=Permanent+Marker&family=Pinyon+Script&family=Qwitcher+Grypen:wght@400;700&family=Reenie+Beanie&family=Rock+Salt&family=Sacramento&family=Satisfy&family=Schoolbell&family=Shadows+Into+Light&family=Shadows+Into+Light+Two&family=Short+Stack&family=Sofia&family=Stalemate&family=Style+Script&family=Swanky+and+Moo+Moo&family=Tangerine:wght@400;700&family=The+Girl+Next+Door&family=Unkempt:wght@400;700&family=Waiting+for+the+Sunrise&family=Water+Brush&family=Yellowtail&family=Yesteryear&family=Zeyada&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- TinyMCE -->
+  <script src="https://cdn.tiny.cloud/1/g88nxjrd8p0dpyevogbpw02bpdj5qoxb9z8ake7csizppz36/tinymce/8/tinymce.min.js" referrerpolicy="origin" crossorigin="anonymous"></script>
+
+  
+  <!-- html2canvas & jsPDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            glass: { 100: 'rgba(255,255,255,0.03)', 200: 'rgba(255,255,255,0.06)', 300: 'rgba(255,255,255,0.1)', border: 'rgba(255,255,255,0.08)' }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #0a0a0a; color: #e5e5e5; }
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: radial-gradient(at 0% 0%, rgba(60,60,60,0.15) 0px, transparent 50%), radial-gradient(at 100% 0%, rgba(40,40,40,0.15) 0px, transparent 50%), radial-gradient(at 100% 100%, rgba(60,60,60,0.15) 0px, transparent 50%), radial-gradient(at 0% 100%, rgba(40,40,40,0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+    .glass-panel { background: rgba(20,20,20,0.6); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.08); }
+    .glass-input { background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.1); color: #f5f5f5; }
+    .glass-input:focus { background: rgba(0,0,0,0.6); border-color: rgba(255,255,255,0.2); outline: none; }
+    .glass-hover:hover { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.15); }
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: rgba(0,0,0,0.2); }
+    ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.25); }
+    .btn-animated { transition: all 0.2s ease; }
+    .btn-animated:active { transform: scale(0.98); }
+    #mobileMenu { transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out; max-height: 0; opacity: 0; overflow: hidden; }
+    #mobileMenu.open { max-height: 500px; opacity: 1; }
+    
+    /* TinyMCE Customization */
+    .tox-tinymce { border-radius: 0 0 8px 8px !important; border: 1px solid rgba(255,255,255,0.1) !important; border-top: none !important; }
+    .tox-editor-container { background: rgba(0,0,0,0.4) !important; }
+    .tox-edit-area__iframe { background: rgba(0,0,0,0.4) !important; }
+    
+    /* Preview Container - Page Sizes */
+    .preview-page {
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+    }
+    
+    /* A4: 210mm x 297mm at 96 DPI = 794 x 1123 px */
+    .preview-page.a4 { width: 794px; min-height: 1123px; }
+    /* Letter: 8.5 x 11 inches at 96 DPI = 816 x 1056 px */
+    .preview-page.letter { width: 816px; min-height: 1056px; }
+    /* Legal: 8.5 x 14 inches at 96 DPI = 816 x 1344 px */
+    .preview-page.legal { width: 816px; min-height: 1344px; }
+    /* A5: 148mm x 210mm at 96 DPI = 559 x 794 px */
+    .preview-page.a5 { width: 559px; min-height: 794px; }
+    
+    /* Font Grid */
+    .font-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 8px; max-height: 400px; overflow-y: auto; padding-right: 8px; }
+    .font-item { padding: 12px 8px; background: rgba(255,255,255,0.05); border: 2px solid transparent; border-radius: 8px; cursor: pointer; text-align: center; transition: all 0.2s; }
+    .font-item:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); }
+    .font-item.active { background: rgba(99,102,241,0.2); border-color: #6366f1; }
+    .font-item .preview { font-size: 24px; line-height: 1.2; margin-bottom: 4px; color: #e5e5e5; }
+    .font-item .name { font-size: 10px; color: #9ca3af; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    
+    /* Background Grid */
+    .bg-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); gap: 8px; max-height: 300px; overflow-y: auto; padding-right: 8px; }
+    .bg-option { aspect-ratio: 1; border-radius: 8px; cursor: pointer; border: 2px solid transparent; transition: all 0.2s; background-size: cover; background-position: center; position: relative; overflow: hidden; }
+    .bg-option:hover { transform: scale(1.05); border-color: rgba(255,255,255,0.3); }
+    .bg-option.active { border-color: #6366f1; box-shadow: 0 0 0 3px rgba(99,102,241,0.3); }
+    .bg-option .label { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.7); padding: 2px; font-size: 9px; text-align: center; color: white; }
+    
+    /* Color Picker */
+    .color-picker-wrapper { position: relative; display: inline-flex; align-items: center; gap: 8px; }
+    input[type="color"] { -webkit-appearance: none; border: none; width: 48px; height: 48px; border-radius: 50%; overflow: hidden; cursor: pointer; padding: 0; background: none; }
+    input[type="color"]::-webkit-color-swatch-wrapper { padding: 0; }
+    input[type="color"]::-webkit-color-swatch { border: 3px solid rgba(255,255,255,0.3); border-radius: 50%; }
+    
+    /* Loading Overlay */
+    .loading-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.9); display: flex; align-items: center; justify-content: center; z-index: 100; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+    .loading-overlay.active { opacity: 1; pointer-events: all; }
+    
+    /* Print Styles */
+    @media print {
+      @page { margin: 0; size: auto; }
+      body * { visibility: hidden; }
+      #printContainer, #printContainer * { visibility: visible; }
+      #printContainer { position: absolute; left: 0; top: 0; width: 100%; }
+    }
+    
+    /* Article Styling */
+    .article-content h2 { font-size: 1.75rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: #e2e8f0; }
+    .article-content h3 { font-size: 1.35rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #cbd5e1; }
+    .article-content p { margin-bottom: 1rem; line-height: 1.8; color: #94a3b8; }
+    .article-content ul, .article-content ol { margin-bottom: 1rem; padding-left: 1.5rem; color: #94a3b8; }
+    .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-content strong { color: #e2e8f0; }
+    
+    /* FAQ Accordion */
+    .faq-content { transition: max-height 0.3s ease, opacity 0.3s ease; max-height: 0; opacity: 0; overflow: hidden; }
+    .faq-content.open { max-height: 500px; opacity: 1; }
+    .faq-icon { transition: transform 0.3s ease; }
+    .faq-icon.open { transform: rotate(180deg); }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Loading Overlay -->
+  <div id="loadingOverlay" class="loading-overlay">
+    <div class="text-center">
+      <div class="w-16 h-16 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+      <p class="text-white font-medium">Generating Document...</p>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-[1600px] mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center space-x-3">
+          <svg class="w-8 h-8 sm:w-9 sm:h-9" viewBox="0 0 40 40" fill="none">
+            <rect width="40" height="40" rx="10" fill="url(#lg)"/>
+            <path d="M10 12h20M10 20h20M10 28h12" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs><linearGradient id="lg" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs>
+          </svg>
+          <div>
+            <h1 class="text-base sm:text-lg font-bold text-white">Text to Handwriting</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Advanced Handwritten Text Generator</p>
+          </div>
+        </div>
+        <nav class="hidden md:flex items-center space-x-6">
+          <a href="https://easyprotools.com/" class="text-sm text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-sm text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+        <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-4 space-y-3">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 sm:py-6 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
+        Text to Handwriting Converter
+      </h1>
+      <p class="text-gray-400 text-sm sm:text-base">Advanced Online Handwritten Text Generator with TinyMCE Editor & 50+ Paper Backgrounds</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-[1600px] mx-auto px-4 pb-16 w-full">
+    
+    <!-- Two Column Layout -->
+    <div class="grid grid-cols-1 xl:grid-cols-12 gap-6">
+      
+      <!-- Left Column: Editor (7 cols) -->
+      <div class="xl:col-span-7 space-y-4">
+        
+        <!-- TinyMCE Editor -->
+        <div class="glass-panel rounded-2xl p-4">
+          <div class="flex items-center justify-between mb-3">
+            <label class="text-sm font-medium text-gray-300 flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Rich Text Editor
+            </label>
+            <div class="flex gap-2">
+              <button id="sampleBtn" class="text-xs px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-gray-300 transition-colors">Load Sample</button>
+              <button id="clearBtn" class="text-xs px-3 py-1.5 rounded-lg bg-red-500/10 hover:bg-red-500/20 text-red-400 transition-colors">Clear</button>
+            </div>
+          </div>
+          <textarea id="tinyEditor"></textarea>
+          <div class="flex justify-between text-xs text-gray-500 mt-2">
+            <span id="charCount">0 characters</span>
+            <span>Max 10000 characters</span>
+          </div>
+        </div>
+
+        <!-- Large Preview -->
+        <div class="glass-panel rounded-2xl p-4">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-sm font-semibold text-white flex items-center gap-2">
+              <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              Preview
+            </h3>
+            <div class="flex items-center gap-2">
+              <select id="pageSize" class="text-xs bg-black/40 border border-white/10 rounded px-2 py-1 text-gray-300">
+                <option value="a4">A4 (210×297mm)</option>
+                <option value="letter">Letter (8.5×11")</option>
+                <option value="legal">Legal (8.5×14")</option>
+                <option value="a5">A5 (148×210mm)</option>
+              </select>
+              <button id="refreshBtn" class="text-xs px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-gray-300 transition-colors">Refresh</button>
+            </div>
+          </div>
+          
+          <!-- Preview Container with Page -->
+          <div class="overflow-x-auto pb-4">
+            <div id="previewWrapper" class="inline-block min-w-full">
+              <div id="previewPage" class="preview-page a4 p-12" style="background: #ffffff;">
+                <div id="previewContent" style="font-family: 'Caveat', cursive; font-size: 24px; line-height: 1.6; color: #1e293b; min-height: 100%;">
+                  Your handwritten text will appear here...
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Controls (5 cols) -->
+      <div class="xl:col-span-5 space-y-4">
+        
+        <!-- Handwriting Style -->
+        <div class="glass-panel rounded-2xl p-4">
+          <h3 class="text-sm font-semibold text-white mb-3 flex items-center gap-2">
+            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"/></svg>
+            Handwriting Style (60+ Fonts)
+          </h3>
+          <div class="font-grid" id="fontGrid"></div>
+        </div>
+
+        <!-- Ink Color -->
+        <div class="glass-panel rounded-2xl p-4">
+          <h3 class="text-sm font-semibold text-white mb-3 flex items-center gap-2">
+            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+            Ink Color
+          </h3>
+          <div class="flex items-center gap-3 flex-wrap mb-3">
+            <button class="color-btn active w-10 h-10 rounded-full border-2 border-white relative" data-color="#1e293b" style="background: #1e293b;"></button>
+            <button class="color-btn w-10 h-10 rounded-full border-2 border-transparent hover:border-white/50 relative" data-color="#2563eb" style="background: #2563eb;"></button>
+            <button class="color-btn w-10 h-10 rounded-full border-2 border-transparent hover:border-white/50 relative" data-color="#dc2626" style="background: #dc2626;"></button>
+            <button class="color-btn w-10 h-10 rounded-full border-2 border-transparent hover:border-white/50 relative" data-color="#16a34a" style="background: #16a34a;"></button>
+            <button class="color-btn w-10 h-10 rounded-full border-2 border-transparent hover:border-white/50 relative" data-color="#9333ea" style="background: #9333ea;"></button>
+            <button class="color-btn w-10 h-10 rounded-full border-2 border-transparent hover:border-white/50 relative" data-color="#ea580c" style="background: #ea580c;"></button>
+            <button class="color-btn w-10 h-10 rounded-full border-2 border-transparent hover:border-white/50 relative" data-color="#0891b2" style="background: #0891b2;"></button>
+            <button class="color-btn w-10 h-10 rounded-full border-2 border-transparent hover:border-white/50 relative" data-color="#be123c" style="background: #be123c;"></button>
+          </div>
+          <div class="flex items-center gap-3 p-3 bg-white/5 rounded-lg">
+            <input type="color" id="customColor" value="#1e293b">
+            <div>
+              <div class="text-sm text-gray-300">Custom Color</div>
+              <div class="text-xs text-gray-500">Click to select any color</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Typography Controls -->
+        <div class="glass-panel rounded-2xl p-4">
+          <h3 class="text-sm font-semibold text-white mb-3">Typography Settings</h3>
+          <div class="space-y-3">
+            <div>
+              <div class="flex justify-between text-xs text-gray-400 mb-1">
+                <span>Font Size</span>
+                <span id="fontSizeVal">24px</span>
+              </div>
+              <input type="range" id="fontSize" min="12" max="72" value="24" class="w-full">
+            </div>
+            <div>
+              <div class="flex justify-between text-xs text-gray-400 mb-1">
+                <span>Line Height</span>
+                <span id="lineHeightVal">1.6</span>
+              </div>
+              <input type="range" id="lineHeight" min="1" max="3" step="0.1" value="1.6" class="w-full">
+            </div>
+            <div>
+              <div class="flex justify-between text-xs text-gray-400 mb-1">
+                <span>Letter Spacing</span>
+                <span id="letterSpacingVal">0px</span>
+              </div>
+              <input type="range" id="letterSpacing" min="-2" max="10" step="0.5" value="0" class="w-full">
+            </div>
+            <div>
+              <div class="flex justify-between text-xs text-gray-400 mb-1">
+                <span>Rotation</span>
+                <span id="rotationVal">0°</span>
+              </div>
+              <input type="range" id="rotation" min="-5" max="5" step="0.5" value="0" class="w-full">
+            </div>
+          </div>
+        </div>
+
+        <!-- Paper Background -->
+        <div class="glass-panel rounded-2xl p-4">
+          <h3 class="text-sm font-semibold text-white mb-3 flex items-center gap-2">
+            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            Paper Background (60+ Options)
+          </h3>
+          <div class="bg-grid" id="bgGrid"></div>
+          
+          <!-- Custom Background -->
+          <div class="border-t border-white/10 mt-4 pt-4">
+            <label class="text-xs text-gray-400 mb-2 block">Custom Background Image</label>
+            <div class="flex gap-2">
+              <input type="file" id="customBgInput" accept="image/*" class="hidden">
+              <button id="uploadBgBtn" class="flex-1 px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-xs text-gray-300 transition-colors flex items-center justify-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                Upload Image
+              </button>
+              <button id="removeBgBtn" class="px-3 py-2 rounded-lg bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-xs text-red-400 transition-colors">Remove</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Export Options -->
+        <div class="glass-panel rounded-2xl p-4">
+          <h3 class="text-sm font-semibold text-white mb-3">Export Options</h3>
+          <div class="space-y-2">
+            <button id="downloadPngBtn" class="w-full flex items-center justify-center gap-2 px-4 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg border border-white/10 transition-all btn-animated font-medium text-sm">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              Download as PNG
+            </button>
+            <button id="downloadPdfBtn" class="w-full flex items-center justify-center gap-2 px-4 py-3 bg-indigo-500/20 hover:bg-indigo-500/30 text-indigo-300 rounded-lg border border-indigo-500/30 transition-all btn-animated font-medium text-sm">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+              Download as PDF
+            </button>
+            <button id="printBtn" class="w-full flex items-center justify-center gap-2 px-4 py-3 bg-white/5 hover:bg-white/10 text-gray-300 rounded-lg border border-white/10 transition-all btn-animated font-medium text-sm">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+              Print / Save as PDF
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="mt-16 mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-12 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Advanced Features for Professional Results
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="glass-panel rounded-xl p-6 glass-hover transition-all duration-300">
+          <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2 text-white">TinyMCE Rich Editor</h3>
+          <p class="text-gray-400 text-sm">Professional WYSIWYG editor with formatting, lists, alignment, and styling options. Edit your text with the same power as Microsoft Word or Google Docs.</p>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-6 glass-hover transition-all duration-300">
+          <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2 text-white">60+ Paper Backgrounds</h3>
+          <p class="text-gray-400 text-sm">Choose from ruled, grid, dot, parchment, legal pad, blueprint, kraft paper, and more. Upload custom backgrounds for branded stationery or personal letterheads.</p>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-6 glass-hover transition-all duration-300">
+          <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2 text-white">A4, Letter & Legal Sizes</h3>
+          <p class="text-gray-400 text-sm">Select standard page sizes including A4, US Letter, Legal, and A5. PDF exports maintain exact page dimensions for professional printing.</p>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-6 glass-hover transition-all duration-300">
+          <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2 text-white">True PDF Export</h3>
+          <p class="text-gray-400 text-sm">Download PDFs with embedded paper backgrounds and exact page sizing. Unlike other tools, our PDFs include the full visual design, not just plain text.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use -->
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-12 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use the Advanced Handwriting Converter
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="glass-panel rounded-xl p-6 flex items-start space-x-4">
+          <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold">1</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-1 text-white">Write with TinyMCE Editor</h3>
+            <p class="text-gray-400 text-sm">Use the professional rich text editor to compose your content. Apply bold, italic, lists, and alignment. The editor supports up to 10,000 characters with full formatting capabilities.</p>
+          </div>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-6 flex items-start space-x-4">
+          <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold">2</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-1 text-white">Select Handwriting & Colors</h3>
+            <p class="text-gray-400 text-sm">Choose from 60+ handwriting fonts organized by style. Select ink colors from presets or use the custom color picker. Adjust font size, spacing, and rotation for natural variation.</p>
+          </div>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-6 flex items-start space-x-4">
+          <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold">3</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-1 text-white">Choose Paper & Page Size</h3>
+            <p class="text-gray-400 text-sm">Select from 60+ paper backgrounds including ruled, grid, parchment, and specialty papers. Choose page size (A4, Letter, Legal, A5) and upload custom backgrounds if needed.</p>
+          </div>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-6 flex items-start space-x-4">
+          <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold">4</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-1 text-white">Export with Paper Layout</h3>
+            <p class="text-gray-400 text-sm">Download as PNG for images, PDF for documents with embedded backgrounds and exact page sizes, or print directly. The PDF export preserves your paper style perfectly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article -->
+    <section class="mb-16">
+      <article class="glass-panel rounded-2xl p-6 md:p-12 article-content">
+        <h2>The Complete Guide to Advanced Text to Handwriting Conversion: Professional Digital Handwriting Solutions</h2>
+        
+        <p><strong>Text to handwriting conversion</strong> technology has revolutionized how we create authentic handwritten documents in the digital age. This comprehensive guide explores advanced handwriting generation techniques, professional applications, and how to leverage our <strong>free online text to handwriting converter</strong> with TinyMCE editor, 60+ fonts, and 60+ paper backgrounds for maximum impact.</p>
+
+        <h2>Understanding Advanced Handwriting Generation</h2>
+        
+        <p>Modern <strong>handwriting converters</strong> have evolved far beyond simple font substitution. Today's advanced tools combine professional rich text editing, contextual font selection, and sophisticated page layout systems to create documents virtually indistinguishable from genuine handwriting. Our tool represents the cutting edge of this technology, offering features previously available only in expensive desktop publishing software.</p>
+
+        <p>The key to authentic handwriting lies in variation and context. Real handwriting isn't uniform—it varies in pressure, spacing, and flow. Our <strong>advanced text to handwriting converter</strong> addresses this through 60+ carefully selected fonts with contextual alternates, adjustable rotation settings for natural imperfection, and granular spacing controls that mimic the organic quality of hand-drawn text.</p>
+
+        <h2>TinyMCE Integration: Professional Text Editing</h2>
+
+        <p>Unlike basic converters that only accept plain text, our integration of <strong>TinyMCE rich text editor</strong> provides professional-grade formatting capabilities. Users can apply bold and italic emphasis, create ordered and unordered lists, align text left/center/right, and structure content hierarchically. This is essential for creating realistic documents—handwritten essays need headings, letters need address blocks, and notes require bullet points.</p>
+
+        <p>The TinyMCE editor supports up to 10,000 characters, accommodating lengthy essays, detailed letters, or comprehensive notes. Content is preserved with formatting intact when converted to handwriting, ensuring your bold headings remain bold and your lists maintain structure. This WYSIWYG (What You See Is What You Get) approach eliminates guesswork and ensures the final handwritten output matches your intentions.</p>
+
+        <h2>Comprehensive Paper Background Library</h2>
+
+        <p>Paper selection dramatically affects document authenticity and purpose. Our library includes over 60 background options across multiple categories:</p>
+
+        <p><strong>Standard Office Papers:</strong> Plain white, cream, and off-white backgrounds for business correspondence. Ruled paper with various line spacing (college rule, wide rule) for educational content. Grid paper in multiple densities (5mm, 7mm) for technical notes and diagrams.</p>
+
+        <p><strong>Specialty Papers:</strong> Parchment and aged paper for historical documents, certificates, or vintage correspondence. Legal pad yellow for professional notes and memos. Blueprint paper for technical drawings and engineering sketches. Kraft paper for organic, eco-friendly presentations.</p>
+
+        <p><strong>Creative Backgrounds:</strong> Watercolor textures for artistic projects. Linen and canvas textures for elegant invitations. Newsprint for authentic media clippings. Dark backgrounds for light-colored ink options.</p>
+
+        <p>The <strong>custom background upload</strong> feature extends these options infinitely—upload institutional letterheads, personal stationery designs, branded templates, or photographed paper textures.</p>
+
+        <h2>Page Size Standards and PDF Export</h2>
+
+        <p>Professional document creation requires adherence to standard page sizes. Our tool supports:</p>
+
+        <p><strong>A4 (210×297mm):</strong> The international standard used by 99% of countries worldwide. Essential for academic submissions, international business correspondence, and official documents.</p>
+
+        <p><strong>US Letter (8.5×11"):</strong> The North American standard required by US and Canadian institutions. Critical for domestic academic papers, business letters, and legal documents.</p>
+
+        <p><strong>Legal (8.5×14"):</strong> Extended length for contracts, agreements, and detailed reports that require additional vertical space.</p>
+
+        <p><strong>A5 (148×210mm):</strong> Half-letter size perfect for booklets, flyers, invitations, and portable notes.</p>
+
+        <p>Our <strong>true PDF export</strong> technology captures the complete visual appearance—including paper backgrounds, colors, fonts, and layout—and embeds it into a properly sized PDF document. Unlike competitors who generate text-only PDFs, our output includes the full paper texture and design elements, creating documents ready for professional printing or digital distribution.</p>
+
+        <h2>SEO and Digital Marketing Applications</h2>
+
+        <p>For digital marketers, <strong>handwritten text generators</strong> offer unique SEO and engagement benefits. Handwritten content in images and PDFs creates diverse content formats that search engines index differently than standard text. Social media posts with handwritten quotes achieve higher engagement rates than typed text. Email marketing with handwritten-style PDF attachments increases open rates and click-through rates.</p>
+
+        <p>The <strong>free online handwriting converter</strong> keyword space is highly competitive, with users seeking tools that offer professional results without cost. Our tool dominates this space by providing premium features—TinyMCE editing, 60+ fonts, 60+ backgrounds, custom uploads, and true PDF export—completely free, with no registration or watermarks.</p>
+
+        <h2>Educational and Academic Use Cases</h2>
+
+        <p>Students and educators represent a primary user base for <strong>text to handwriting converters</strong>. Common applications include:</p>
+
+        <p><strong>Assignment Submission:</strong> Converting typed drafts to required handwritten format while maintaining spell-check and editing convenience. The rotation and spacing controls add natural variation that prevents documents from appearing computer-generated.</p>
+
+        <p><strong>Note Taking:</strong> Creating study materials with consistent, legible handwriting. The ruled paper backgrounds guide writing lines, while font selection matches personal handwriting style for authenticity.</p>
+
+        <p><strong>Exam Preparation:</strong> Practicing timed writing with consistent output. Creating formula sheets and reference materials that match handwriting requirements.</p>
+
+        <p><strong>Accessibility:</strong> Students with dysgraphia or physical disabilities can compose using keyboard assistance, then convert to required handwritten format for submission.</p>
+
+        <h2>Professional Business Applications</h2>
+
+        <p>Business professionals leverage handwriting conversion for:</p>
+
+        <p><strong>Direct Mail Marketing:</strong> Handwritten envelopes and letters achieve 300% higher open rates than printed materials. Our tool enables mass creation of personalized correspondence with consistent quality.</p>
+
+        <p><strong>Client Communication:</strong> Thank-you notes, holiday cards, and follow-up letters that convey personal attention. Custom backgrounds enable branded stationery that maintains corporate identity.</p>
+
+        <p><strong>Documentation:</strong> Meeting notes, brainstorming sessions, and project planning documents that benefit from the organic feel of handwriting while maintaining digital editing capabilities.</p>
+
+        <h2>Creative and Design Applications</h2>
+
+        <p>Designers and creatives use handwriting conversion for:</p>
+
+        <p><strong>Social Media Content:</strong> Quote graphics, announcement posts, and story content with authentic handwritten aesthetics. The PNG export provides transparent-background options for overlay on images.</p>
+
+        <p><strong>Wedding and Event Materials:</strong> Invitations, save-the-dates, menus, and place cards with elegant calligraphy fonts and parchment backgrounds.</p>
+
+        <p><strong>Book and Publishing Design:</strong> Creating realistic diary entries, letters, and notes within fiction layouts. The variety of fonts enables different character handwriting styles.</p>
+
+        <h2>Technical Implementation and Privacy</h2>
+
+        <p>Our tool employs client-side processing exclusively. TinyMCE runs locally in your browser, html2canvas captures the preview without server transmission, and jsPDF generates documents on your device. This architecture ensures complete privacy—sensitive documents never leave your computer. Custom backgrounds load via FileReader API and exist only in memory.</p>
+
+        <p>The technical stack represents modern web development best practices: Tailwind CSS for responsive styling, Google Fonts for typography, TinyMCE for editing, and established libraries for document generation. No account creation, no data collection, no usage tracking.</p>
+
+        <h2>Best Practices for Authentic Results</h2>
+
+        <p>To maximize authenticity with our <strong>advanced handwriting generator</strong>:</p>
+
+        <p>1. <strong>Vary Content Structure:</strong> Real handwriting has inconsistent line lengths and occasional short lines. Avoid perfectly uniform paragraphs.</p>
+
+        <p>2. <strong>Use Appropriate Rotation:</strong> Apply 0.5-2° rotation for natural hand movement simulation. Perfectly straight text appears computer-generated.</p>
+
+        <p>3. <strong>Match Font to Context:</strong> Cursive fonts (Dancing Script, Great Vibes) for personal correspondence; print fonts (Kalam, Patrick Hand) for notes; decorative fonts (Pacifico, Lobster) for headings.</p>
+
+        <p>4. <strong>Select Appropriate Paper:</strong> Ruled paper for educational content, parchment for formal letters, plain for business correspondence, creative textures for artistic projects.</p>
+
+        <p>5. <strong>Optimize Spacing:</strong> Real handwriting typically has tighter letter spacing than typing. Experiment with negative letter spacing for authentic density.</p>
+
+        <h2>Future of Handwriting Technology</h2>
+
+        <p>Emerging technologies promise even more sophisticated handwriting generation. AI-powered variable fonts will enable infinite style variations from single font files. Neural network style transfer may soon allow personalized handwriting generation from small sample sets. Augmented reality could enable real-time handwriting overlay on physical documents.</p>
+
+        <p>Despite these advances, the fundamental value proposition remains: bridging digital efficiency with handwritten authenticity. Our <strong>free online text to handwriting converter</strong> provides professional-grade capabilities today, completely free, entirely private, and accessible to anyone with a web browser.</p>
+
+        <h2>Conclusion</h2>
+
+        <p>Whether you're a student meeting assignment requirements, a marketer creating high-engagement content, a professional maintaining client relationships, or a creative exploring new aesthetics, our advanced handwriting converter delivers the tools you need. With TinyMCE editing, 60+ fonts, 60+ paper backgrounds, custom uploads, and true PDF export, we offer capabilities that rival expensive desktop software—completely free and entirely in your browser.</p>
+
+        <p>Experience the future of digital handwriting today. Create your first handwritten document and discover why thousands of users trust our tool for their most important communications.</p>
+      </article>
+    </section>
+
+    <!-- FAQ -->
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-12 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-4" id="faqContainer">
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Why is TinyMCE better than a simple text area?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">TinyMCE is a professional WYSIWYG editor used by millions of websites and applications. Unlike basic text areas, it provides true rich text formatting—you can apply bold, italic, underline, create bullet and numbered lists, align text, and see exactly how your content will look. This is essential for creating realistic handwritten documents that need structure: essays with headings, letters with formatted addresses, notes with organized lists. The formatting is preserved when converted to handwriting, ensuring your bold text stays bold and your lists maintain indentation. For professional results, rich text editing is non-negotiable.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">How does the PDF export include paper backgrounds?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">Our advanced PDF generation uses html2canvas to capture a pixel-perfect screenshot of your preview—including the paper background, text styling, colors, and layout. This image is then embedded into a properly sized PDF document using jsPDF. The result is a PDF that looks exactly like the preview, with your selected paper texture (ruled lines, parchment, etc.) preserved. Most competing tools only export text, resulting in plain white PDFs. Our method ensures you get the complete visual design, making the PDF suitable for professional printing or submission.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Can I use custom paper backgrounds?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">Absolutely! Click the "Upload Image" button in the Paper Background section to use any image as your writing surface. This works perfectly for institutional letterheads, branded stationery, personal watercolor textures, or photographed paper. For best results, use images at least 1200x1600 pixels. The image will be scaled to cover the entire page while maintaining aspect ratio. You can combine custom backgrounds with any of our 60+ fonts and ink colors. This feature is completely free and private—the image never leaves your browser.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">What are the differences between page sizes?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed"><strong>A4 (210×297mm)</strong> is the international standard used by most countries worldwide—essential for academic submissions outside North America. <strong>US Letter (8.5×11")</strong> is the North American standard required by US and Canadian schools and businesses. <strong>Legal (8.5×14")</strong> provides extra length for contracts and detailed reports. <strong>A5 (148×210mm)</strong> is half-letter size perfect for booklets and invitations. The PDF export maintains these exact dimensions, ensuring your documents print correctly on standard paper. Choose based on your submission requirements or regional standards.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Why does the print function look different from the preview?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">Browsers handle printing differently than screen display. Our print function uses CSS @media print rules to optimize the output for paper, hiding UI elements and ensuring the handwriting fills the page appropriately. For best results, use "Save as PDF" in the print dialog rather than sending directly to a printer—this preserves colors and backgrounds more accurately. Alternatively, use our dedicated "Download as PDF" button which generates a properly formatted PDF file with guaranteed visual fidelity. If printing physically, ensure your printer settings allow background colors/images to print.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">How do I make the handwriting look more natural?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">Achieve natural-looking handwriting with these techniques: (1) Use the rotation slider at ±0.5-2°—perfectly straight lines look computer-generated. (2) Vary your content structure in the editor; real handwriting has inconsistent paragraph lengths. (3) Select appropriate fonts—cursive for personal letters, print for notes. (4) Use ruled or grid paper backgrounds; they provide visual context that makes handwriting appear authentic. (5) Adjust letter spacing to -0.5 or -1px; real handwriting is tighter than typed text. (6) Choose appropriate ink colors—blue or black for formal documents, colors for creative projects.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Is there a limit to how much text I can convert?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">The TinyMCE editor supports up to 10,000 characters (approximately 1,500-2,000 words), which accommodates most single-page documents. For longer content like multi-page essays or reports, break your text into logical sections and convert each page separately. You can then combine PDFs using free online tools. This approach actually improves quality—you can optimize font size and spacing for each page rather than forcing everything into one layout. The character counter below the editor shows your current usage in real-time.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Can I use this for commercial projects?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">Yes, all output from our tool is yours to use commercially without attribution or fees. The fonts are all Google Fonts with open licenses permitting commercial use. You can use generated handwriting in marketing materials, client work, products for sale, or any commercial application. The only restriction is on the tool itself—you cannot resell access to our converter or claim you created the software. Your generated content (documents, images, PDFs) belongs entirely to you. This makes our tool suitable for professional designers, marketers, and businesses.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">How is my privacy protected?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">Our tool uses 100% client-side processing. TinyMCE runs in your browser, text is stored only in memory, html2canvas captures the preview locally, and jsPDF generates the PDF on your device. Your content never transmits to our servers, is never stored in databases, and is never analyzed. Custom backgrounds load via FileReader API and exist only in your browser's memory until you close the page. This architecture ensures complete privacy—you can convert sensitive documents, personal letters, or confidential business content with absolute confidence. No account required, no tracking, no data collection.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Can I edit text after downloading?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">Once downloaded as PNG or PDF, the handwriting becomes a static image and cannot be edited as text. However, our tool makes regeneration simple—your content remains in the TinyMCE editor, so you can make changes and regenerate instantly. We recommend keeping important text saved separately (in a document or note app) so you can modify and reconvert as needed. For PDFs that need editing, use PDF annotation tools, or regenerate with our tool. The editor's content persists until you clear it or close the browser.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-8">
+    <div class="max-w-[1600px] mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-6">
+        <a href="https://easyprotools.com/" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Print Container (Hidden) -->
+  <div id="printContainer" style="position: fixed; left: -9999px; top: 0;"></div>
+
+<script>
+// Font Database - 60 Handwriting Fonts
+const fonts = [
+  {name:'Caveat',family:'"Caveat",cursive',cat:'Casual'},{name:'Dancing Script',family:'"Dancing Script",cursive',cat:'Elegant'},
+  {name:'Kalam',family:'"Kalam",cursive',cat:'Casual'},{name:'Satisfy',family:'"Satisfy",cursive',cat:'Elegant'},
+  {name:'Shadows Into Light',family:'"Shadows Into Light",cursive',cat:'Casual'},{name:'Great Vibes',family:'"Great Vibes",cursive',cat:'Calligraphy'},
+  {name:'Allura',family:'"Allura",cursive',cat:'Calligraphy'},{name:'Pacifico',family:'"Pacifico",cursive',cat:'Playful'},
+  {name:'Permanent Marker',family:'"Permanent Marker",cursive',cat:'Bold'},{name:'Amatic SC',family:'"Amatic SC",cursive',cat:'Thin'},
+  {name:'Architects Daughter',family:'"Architects Daughter",cursive',cat:'Print'},{name:'Bad Script',family:'"Bad Script",cursive',cat:'Casual'},
+  {name:'Berkshire Swash',family:'"Berkshire Swash",cursive',cat:'Decorative'},{name:'Bilbo',family:'"Bilbo",cursive',cat:'Elegant'},
+  {name:'Birthstone',family:'"Birthstone",cursive',cat:'Calligraphy'},{name:'Caveat Brush',family:'"Caveat Brush",cursive',cat:'Brush'},
+  {name:'Cedarville Cursive',family:'"Cedarville Cursive",cursive',cat:'Casual'},{name:'Clicker Script',family:'"Clicker Script",cursive',cat:'Elegant'},
+  {name:'Coming Soon',family:'"Coming Soon",cursive',cat:'Print'},{name:'Comic Neue',family:'"Comic Neue",cursive',cat:'Comic'},
+  {name:'Corinthia',family:'"Corinthia",cursive',cat:'Calligraphy'},{name:'Covered By Your Grace',family:'"Covered By Your Grace",cursive',cat:'Casual'},
+  {name:'Delius',family:'"Delius",cursive',cat:'Print'},{name:'Devonshire',family:'"Devonshire",cursive',cat:'Calligraphy'},
+  {name:'Gochi Hand',family:'"Gochi Hand",cursive',cat:'Casual'},{name:'Grape Nuts',family:'"Grape Nuts",cursive',cat:'Thin'},
+  {name:'Grechen Fuemen',family:'"Grechen Fuemen",cursive',cat:'Calligraphy'},{name:'Handlee',family:'"Handlee",cursive',cat:'Casual'},
+  {name:'Herr Von Muellerhoff',family:'"Herr Von Muellerhoff",cursive',cat:'Calligraphy'},{name:'Homemade Apple',family:'"Homemade Apple",cursive',cat:'Casual'},
+  {name:'Indie Flower',family:'"Indie Flower",cursive',cat:'Casual'},{name:'Italianno',family:'"Italianno",cursive',cat:'Calligraphy'},
+  {name:'Julee',family:'"Julee",cursive',cat:'Print'},{name:'Just Another Hand',family:'"Just Another Hand",cursive',cat:'Thin'},
+  {name:'Kaushan Script',family:'"Kaushan Script",cursive',cat:'Brush'},{name:'Kristi',family:'"Kristi",cursive',cat:'Calligraphy'},
+  {name:'La Belle Aurore',family:'"La Belle Aurore",cursive',cat:'Casual'},{name:'League Script',family:'"League Script",cursive',cat:'Elegant'},
+  {name:'Liu Jian Mao Cao',family:'"Liu Jian Mao Cao",cursive',cat:'Brush'},{name:'Lobster',family:'"Lobster",cursive',cat:'Bold'},
+  {name:'Long Cang',family:'"Long Cang",cursive',cat:'Brush'},{name:'Lovers Quarrel',family:'"Lovers Quarrel",cursive',cat:'Calligraphy'},
+  {name:'Marck Script',family:'"Marck Script",cursive',cat:'Casual'},{name:'Meddon',family:'"Meddon",cursive',cat:'Calligraphy'},
+  {name:'Meow Script',family:'"Meow Script",cursive',cat:'Playful'},{name:'Merienda',family:'"Merienda",cursive',cat:'Casual'},
+  {name:'Miss Fajardose',family:'"Miss Fajardose",cursive',cat:'Calligraphy'},{name:'Monsieur La Doulaise',family:'"Monsieur La Doulaise",cursive',cat:'Calligraphy'},
+  {name:'Montez',family:'"Montez",cursive',cat:'Elegant'},{name:'Mr Dafoe',family:'"Mr Dafoe",cursive',cat:'Calligraphy'},
+  {name:'Mrs Saint Delafield',family:'"Mrs Saint Delafield",cursive',cat:'Calligraphy'},{name:'Neucha',family:'"Neucha",cursive',cat:'Print'},
+  {name:'Niconne',family:'"Niconne",cursive',cat:'Elegant'},{name:'Nothing You Could Do',family:'"Nothing You Could Do",cursive',cat:'Thin'},
+  {name:'Parisienne',family:'"Parisienne",cursive',cat:'Calligraphy'},{name:'Patrick Hand',family:'"Patrick Hand",cursive',cat:'Print'},
+  {name:'Pinyon Script',family:'"Pinyon Script",cursive',cat:'Calligraphy'},{name:'Qwitcher Grypen',family:'"Qwitcher Grypen",cursive',cat:'Brush'},
+  {name:'Reenie Beanie',family:'"Reenie Beanie",cursive',cat:'Thin'},{name:'Rock Salt',family:'"Rock Salt",cursive',cat:'Bold'},
+  {name:'Sacramento',family:'"Sacramento",cursive',cat:'Elegant'},{name:'Schoolbell',family:'"Schoolbell",cursive',cat:'Print'},
+  {name:'Shadows Into Light Two',family:'"Shadows Into Light Two",cursive',cat:'Casual'},{name:'Short Stack',family:'"Short Stack",cursive',cat:'Print'},
+  {name:'Sofia',family:'"Sofia",cursive',cat:'Elegant'},{name:'Stalemate',family:'"Stalemate",cursive',cat:'Calligraphy'},
+  {name:'Style Script',family:'"Style Script",cursive',cat:'Elegant'},{name:'Swanky and Moo Moo',family:'"Swanky and Moo Moo",cursive',cat:'Casual'},
+  {name:'Tangerine',family:'"Tangerine",cursive',cat:'Elegant'},{name:'The Girl Next Door',family:'"The Girl Next Door",cursive',cat:'Casual'},
+  {name:'Unkempt',family:'"Unkempt",cursive',cat:'Playful'},{name:'Waiting for the Sunrise',family:'"Waiting for the Sunrise",cursive',cat:'Thin'},
+  {name:'Water Brush',family:'"Water Brush",cursive',cat:'Brush'},{name:'Yellowtail',family:'"Yellowtail",cursive',cat:'Brush'},
+  {name:'Yesteryear',family:'"Yesteryear",cursive',cat:'Retro'},{name:'Zeyada',family:'"Zeyada",cursive',cat:'Casual'}
+];
+
+// SVG Background Generator Functions
+function generateRuledPaper() {
+  return `data:image/svg+xml,%3Csvg width='100' height='32' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='100' height='32' fill='%23ffffff'/%3E%3Cline x1='0' y1='31' x2='100' y2='31' stroke='%23e5e7eb' stroke-width='1'/%3E%3C/svg%3E`;
+}
+
+function generateGridPaper() {
+  return `data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='20' height='20' fill='%23ffffff'/%3E%3Cpath d='M 20 0 L 0 0 0 20' fill='none' stroke='%23e5e7eb' stroke-width='1'/%3E%3C/svg%3E`;
+}
+
+function generateDotPaper() {
+  return `data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='20' height='20' fill='%23ffffff'/%3E%3Ccircle cx='1' cy='1' r='1' fill='%23d1d5db'/%3E%3C/svg%3E`;
+}
+
+function generateCrumpledPaper() {
+  return `data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='crumple'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.03' numOctaves='5' result='noise'/%3E%3CfeDisplacementMap in='SourceGraphic' in2='noise' scale='3'/%3E%3C/filter%3E%3Crect width='200' height='200' fill='%23f9fafb' filter='url(%23crumple)'/%3E%3C/svg%3E`;
+}
+
+function generateWatermarkPaper() {
+  return `data:image/svg+xml,%3Csvg width='400' height='400' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='400' height='400' fill='%23ffffff'/%3E%3Ctext x='50%25' y='50%25' font-family='serif' font-size='80' fill='%23f3f4f6' opacity='0.3' text-anchor='middle' dominant-baseline='middle' transform='rotate(-45 200 200)'%3EDRAFT%3C/text%3E%3C/svg%3E`;
+}
+
+function generateOldPaper() {
+  return `data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3CfeColorMatrix values='0 0 0 0 0.95, 0 0 0 0 0.92, 0 0 0 0 0.82, 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='200' height='200' fill='%23f5f5dc'/%3E%3Crect width='200' height='200' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E`;
+}
+
+// Expanded Paper Backgrounds - 60+ Options with SVG patterns
+const paperBackgrounds = [
+  // Basic Colors
+  {id:'plain',name:'Plain White',style:'background:#ffffff'},
+  {id:'cream',name:'Cream',style:'background:#fefce8'},
+  {id:'ivory',name:'Ivory',style:'background:#fffff0'},
+  {id:'beige',name:'Beige',style:'background:#f5f5dc'},
+  
+  // Ruled/Lined Papers (SVG)
+  {id:'ruled',name:'Ruled Lines',style:'svg-ruled'},
+  {id:'ruled-blue',name:'Blue Ruled',style:'svg-ruled-blue'},
+  {id:'ruled-college',name:'College Ruled',style:'svg-ruled-narrow'},
+  {id:'ruled-wide',name:'Wide Ruled',style:'svg-ruled-wide'},
+  
+  // Grid Papers (SVG)
+  {id:'grid',name:'Grid 5mm',style:'svg-grid'},
+  {id:'grid-large',name:'Grid 10mm',style:'svg-grid-large'},
+  {id:'dot',name:'Dot Grid',style:'svg-dot'},
+  {id:'graph',name:'Graph Paper',style:'svg-graph'},
+  
+  // Textured Papers (SVG)
+  {id:'crumpled',name:'Crumpled',style:'svg-crumpled'},
+  {id:'old-paper',name:'Old Paper',style:'svg-old'},
+  {id:'watermark',name:'Watermark',style:'svg-watermark'},
+  {id:'parchment',name:'Parchment',style:'background:#f5f5dc'},
+  
+  // Professional
+  {id:'legal-pad',name:'Legal Pad',style:'background:#fef9c3'},
+  {id:'kraft',name:'Kraft Paper',style:'background:#d4a574'},
+  {id:'linen',name:'Linen',style:'background:#fafafa'},
+  {id:'newsprint',name:'Newsprint',style:'background:#f5f5dc'},
+  
+  // Colored Papers
+  {id:'mint',name:'Mint',style:'background:#f0fdf4'},
+  {id:'lavender',name:'Lavender',style:'background:#faf5ff'},
+  {id:'rose',name:'Rose',style:'background:#fff1f2'},
+  {id:'peach',name:'Peach',style:'background:#fff7ed'},
+  {id:'lemon',name:'Lemon',style:'background:#fefce8'},
+  {id:'sky',name:'Sky Blue',style:'background:#f0f9ff'},
+  {id:'sand',name:'Sand',style:'background:#e6ddc5'},
+  {id:'stone',name:'Stone',style:'background:#e7e5e4'},
+  {id:'cloud',name:'Cloud',style:'background:#f8fafc'},
+  {id:'watercolor',name:'Watercolor',style:'background:#f0f9ff'},
+  {id:'vintage',name:'Vintage',style:'background:#e8dcc4'},
+  
+  // Specialty Papers
+  {id:'blueprint',name:'Blueprint',style:'background:#1e3a8a'},
+  {id:'chalkboard',name:'Chalkboard',style:'background:#1f2937'},
+  {id:'black-paper',name:'Black Paper',style:'background:#000000'},
+  {id:'dark',name:'Dark Gray',style:'background:#374151'},
+  {id:'charcoal',name:'Charcoal',style:'background:#374151'},
+  {id:'slate',name:'Slate',style:'background:#475569'},
+  {id:'navy',name:'Navy Blue',style:'background:#1e3a8a'},
+  {id:'burgundy',name:'Burgundy',style:'background:#7f1d1d'},
+  {id:'forest',name:'Forest Green',style:'background:#14532d'},
+  
+  // Certificate/Premium
+  {id:'scroll',name:'Scroll',style:'background:#fffbeb'},
+  {id:'certificate',name:'Certificate',style:'background:#fffbeb'},
+  {id:'diploma',name:'Diploma',style:'background:#fef3c7'},
+  {id:'marble',name:'Marble',style:'background:#f8fafc'},
+  {id:'wood',name:'Light Wood',style:'background:#fef3c7'},
+  {id:'cork',name:'Cork Board',style:'background:#d4a574'},
+  
+  // Aged/Vintage
+  {id:'coffee',name:'Coffee Stain',style:'background:#e8dcc4'},
+  {id:'aged',name:'Aged Paper',style:'background:#ece6d8'},
+  {id:'stained',name:'Tea Stained',style:'background:#f5ead6'},
+  {id:'antique',name:'Antique',style:'background:#f0e8d8'},
+  
+  // Additional Color Variations
+  {id:'salmon',name:'Salmon',style:'background:#fff5f5'},
+  {id:'lilac',name:'Lilac',style:'background:#f5f3ff'},
+  {id:'seafoam',name:'Seafoam',style:'background:#f0fdfa'},
+  {id:'butter',name:'Butter',style:'background:#fefcf3'},
+  {id:'blush',name:'Blush',style:'background:#fff7f8'},
+  {id:'powder',name:'Powder Blue',style:'background:#eff6ff'},
+  {id:'sage',name:'Sage',style:'background:#f6f7f4'},
+  {id:'wheat',name:'Wheat',style:'background:#fef7e5'},
+  {id:'ash',name:'Ash',style:'background:#f5f5f5'},
+  {id:'pearl',name:'Pearl',style:'background:#fefefe'}
+];
+
+// State
+let currentFont = fonts[0];
+let currentColor = '#1e293b';
+let currentPaper = 'plain';
+let currentPageSize = 'a4';
+let customBackgroundImage = null;
+let tinymceEditor = null;
+
+// DOM Elements
+const fontGrid = document.getElementById('fontGrid');
+const bgGrid = document.getElementById('bgGrid');
+const previewPage = document.getElementById('previewPage');
+const previewContent = document.getElementById('previewContent');
+const charCount = document.getElementById('charCount');
+const loadingOverlay = document.getElementById('loadingOverlay');
+const customColor = document.getElementById('customColor');
+
+// Initialize
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Initialize TinyMCE
+tinymce.init({
+  selector: '#tinyEditor',
+  height: 300,
+  menubar: false,
+  plugins: 'lists link autolink',
+  toolbar: 'undo redo | formatselect | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist | removeformat',
+  content_style: 'body { font-family:Inter,sans-serif; font-size:14px; color:#e5e5e5; background:rgba(0,0,0,0.4); padding:12px; }',
+  setup: function(editor) {
+    editor.on('init', function() {
+      tinymceEditor = editor;
+      updatePreview();
+    });
+    editor.on('input keyup change', function() {
+      updatePreview();
+      charCount.textContent = editor.getContent({format:'text'}).length + ' characters';
+    });
+  }
+});
+
+// Initialize Font Grid
+function initFontGrid() {
+  fontGrid.innerHTML = fonts.map((f,i)=>`
+    <div class="font-item ${i===0?'active':''}" data-index="${i}" title="${f.name} - ${f.cat}">
+      <div class="preview" style="font-family:${f.family.replace(/"/g,"'")};">Aa</div>
+      <div class="name">${f.name}</div>
+    </div>
+  `).join('');
+  
+  fontGrid.querySelectorAll('.font-item').forEach(item=>{
+    item.addEventListener('click',()=>{
+      fontGrid.querySelectorAll('.font-item').forEach(i=>i.classList.remove('active'));
+      item.classList.add('active');
+      currentFont = fonts[item.dataset.index];
+      updatePreview();
+    });
+  });
+}
+
+// Initialize Background Grid with SVG previews
+function initBgGrid() {
+  bgGrid.innerHTML = paperBackgrounds.map(bg=>{
+    let previewStyle = '';
+    
+    if(bg.style.startsWith('background:')) {
+      previewStyle = bg.style;
+    } else if(bg.style === 'svg-ruled') {
+      previewStyle = `background-image:url("${generateRuledPaper()}");background-repeat:repeat-y;background-size:100% 32px;background-color:#fff;`;
+    } else if(bg.style === 'svg-grid') {
+      previewStyle = `background-image:url("${generateGridPaper()}");background-color:#fff;`;
+    } else if(bg.style === 'svg-dot') {
+      previewStyle = `background-image:url("${generateDotPaper()}");background-color:#fff;`;
+    } else if(bg.style === 'svg-crumpled') {
+      previewStyle = `background-image:url("${generateCrumpledPaper()}");background-size:cover;`;
+    } else if(bg.style === 'svg-old') {
+      previewStyle = `background-image:url("${generateOldPaper()}");background-size:cover;`;
+    } else if(bg.style === 'svg-watermark') {
+      previewStyle = `background-image:url("${generateWatermarkPaper()}");background-size:400px;`;
+    } else {
+      previewStyle = 'background:#fff;';
+    }
+    
+    return `<div class="bg-option ${bg.id===currentPaper?'active':''}" data-bg="${bg.id}" style="${previewStyle}"><span class="label">${bg.name}</span></div>`;
+  }).join('');
+  
+  bgGrid.querySelectorAll('.bg-option').forEach(opt=>{
+    opt.addEventListener('click',()=>{
+      bgGrid.querySelectorAll('.bg-option').forEach(o=>o.classList.remove('active'));
+      opt.classList.add('active');
+      currentPaper = opt.dataset.bg;
+      customBackgroundImage = null;
+      updatePreview();
+    });
+  });
+}
+
+// Update Preview with proper background application
+function updatePreview() {
+  if(!tinymceEditor) return;
+  
+  const content = tinymceEditor.getContent();
+  previewContent.innerHTML = content || '<p style="color:#9ca3af;">Your handwritten text will appear here...</p>';
+  
+  // Apply text styles
+  previewContent.style.fontFamily = currentFont.family;
+  previewContent.style.color = currentColor;
+  previewContent.style.fontSize = document.getElementById('fontSize').value + 'px';
+  previewContent.style.lineHeight = document.getElementById('lineHeight').value;
+  previewContent.style.letterSpacing = document.getElementById('letterSpacing').value + 'px';
+  previewContent.style.transform = `rotate(${document.getElementById('rotation').value}deg)`;
+  
+  // Reset page
+  previewPage.className = `preview-page ${currentPageSize} p-12`;
+  previewPage.style.background = '';
+  previewPage.style.backgroundImage = '';
+  previewPage.style.backgroundRepeat = '';
+  previewPage.style.backgroundSize = '';
+  previewPage.style.backgroundPosition = '';
+  previewPage.style.backgroundAttachment = '';
+  
+  // Apply paper background
+  const bg = paperBackgrounds.find(b=>b.id===currentPaper);
+  
+  if(customBackgroundImage) {
+    // Custom uploaded image
+    previewPage.style.backgroundImage = `url(${customBackgroundImage})`;
+    previewPage.style.backgroundSize = 'cover';
+    previewPage.style.backgroundPosition = 'center';
+  } else if(bg) {
+    if(bg.style.startsWith('background:')) {
+      // Simple solid color
+      previewPage.style.background = bg.style.replace('background:','');
+    } else if(bg.style === 'svg-ruled') {
+      previewPage.style.backgroundColor = '#ffffff';
+      previewPage.style.backgroundImage = `url("${generateRuledPaper()}")`;
+      previewPage.style.backgroundRepeat = 'repeat-y';
+      previewPage.style.backgroundSize = '100% 32px';
+    } else if(bg.style === 'svg-ruled-blue') {
+      previewPage.style.backgroundColor = '#ffffff';
+      previewPage.style.backgroundImage = `url("data:image/svg+xml,%3Csvg width='100' height='32' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='100' height='32' fill='%23ffffff'/%3E%3Cline x1='0' y1='31' x2='100' y2='31' stroke='%236b7280' stroke-width='1'/%3E%3C/svg%3E")`;
+      previewPage.style.backgroundRepeat = 'repeat-y';
+      previewPage.style.backgroundSize = '100% 32px';
+    } else if(bg.style === 'svg-ruled-narrow') {
+      previewPage.style.backgroundColor = '#ffffff';
+      previewPage.style.backgroundImage = `url("data:image/svg+xml,%3Csvg width='100' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='100' height='24' fill='%23ffffff'/%3E%3Cline x1='0' y1='23' x2='100' y2='23' stroke='%23e5e7eb' stroke-width='1'/%3E%3C/svg%3E")`;
+      previewPage.style.backgroundRepeat = 'repeat-y';
+      previewPage.style.backgroundSize = '100% 24px';
+    } else if(bg.style === 'svg-ruled-wide') {
+      previewPage.style.backgroundColor = '#ffffff';
+      previewPage.style.backgroundImage = `url("data:image/svg+xml,%3Csvg width='100' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='100' height='40' fill='%23ffffff'/%3E%3Cline x1='0' y1='39' x2='100' y2='39' stroke='%23e5e7eb' stroke-width='1'/%3E%3C/svg%3E")`;
+      previewPage.style.backgroundRepeat = 'repeat-y';
+      previewPage.style.backgroundSize = '100% 40px';
+    } else if(bg.style === 'svg-grid') {
+      previewPage.style.backgroundColor = '#ffffff';
+      previewPage.style.backgroundImage = `url("${generateGridPaper()}")`;
+      previewPage.style.backgroundRepeat = 'repeat';
+    } else if(bg.style === 'svg-grid-large') {
+      previewPage.style.backgroundColor = '#ffffff';
+      previewPage.style.backgroundImage = `url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='40' height='40' fill='%23ffffff'/%3E%3Cpath d='M 40 0 L 0 0 0 40' fill='none' stroke='%23e5e7eb' stroke-width='1'/%3E%3C/svg%3E")`;
+      previewPage.style.backgroundRepeat = 'repeat';
+    } else if(bg.style === 'svg-graph') {
+      previewPage.style.backgroundColor = '#ffffff';
+      previewPage.style.backgroundImage = `url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='20' height='20' fill='%23ffffff'/%3E%3Cpath d='M 20 0 L 0 0 0 20' fill='none' stroke='%23d1d5db' stroke-width='1'/%3E%3Cpath d='M 0 10 L 20 10 M 10 0 L 10 20' fill='none' stroke='%23e5e7eb' stroke-width='0.5'/%3E%3C/svg%3E")`;
+      previewPage.style.backgroundRepeat = 'repeat';
+    } else if(bg.style === 'svg-dot') {
+      previewPage.style.backgroundColor = '#ffffff';
+      previewPage.style.backgroundImage = `url("${generateDotPaper()}")`;
+      previewPage.style.backgroundRepeat = 'repeat';
+    } else if(bg.style === 'svg-crumpled') {
+      previewPage.style.backgroundImage = `url("${generateCrumpledPaper()}")`;
+      previewPage.style.backgroundSize = 'cover';
+    } else if(bg.style === 'svg-old') {
+      previewPage.style.backgroundImage = `url("${generateOldPaper()}")`;
+      previewPage.style.backgroundSize = 'cover';
+    } else if(bg.style === 'svg-watermark') {
+      previewPage.style.backgroundColor = '#ffffff';
+      previewPage.style.backgroundImage = `url("${generateWatermarkPaper()}")`;
+      previewPage.style.backgroundSize = '400px 400px';
+      previewPage.style.backgroundRepeat = 'repeat';
+    } else {
+      // Fallback
+      previewPage.style.background = '#ffffff';
+    }
+  } else {
+    // Default white
+    previewPage.style.background = '#ffffff';
+  }
+}
+
+// Event Listeners
+document.getElementById('fontSize').addEventListener('input',(e)=>{
+  document.getElementById('fontSizeVal').textContent = e.target.value + 'px';
+  updatePreview();
+});
+document.getElementById('lineHeight').addEventListener('input',(e)=>{
+  document.getElementById('lineHeightVal').textContent = e.target.value;
+  updatePreview();
+});
+document.getElementById('letterSpacing').addEventListener('input',(e)=>{
+  document.getElementById('letterSpacingVal').textContent = e.target.value + 'px';
+  updatePreview();
+});
+document.getElementById('rotation').addEventListener('input',(e)=>{
+  document.getElementById('rotationVal').textContent = e.target.value + '°';
+  updatePreview();
+});
+
+// Page Size
+document.getElementById('pageSize').addEventListener('change',(e)=>{
+  currentPageSize = e.target.value;
+  updatePreview();
+});
+
+// Color Selection
+document.querySelectorAll('.color-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.color-btn').forEach(b=>{
+      b.classList.remove('active','border-white');
+      b.classList.add('border-transparent');
+    });
+    btn.classList.remove('border-transparent');
+    btn.classList.add('active','border-white');
+    currentColor = btn.dataset.color;
+    customColor.value = currentColor;
+    updatePreview();
+  });
+});
+
+customColor.addEventListener('input',(e)=>{
+  currentColor = e.target.value;
+  document.querySelectorAll('.color-btn').forEach(b=>b.classList.remove('active','border-white'));
+  updatePreview();
+});
+
+// Custom Background
+document.getElementById('uploadBgBtn').addEventListener('click',()=>{
+  document.getElementById('customBgInput').click();
+});
+
+document.getElementById('customBgInput').addEventListener('change',(e)=>{
+  const file = e.target.files[0];
+  if(file){
+    const reader = new FileReader();
+    reader.onload = (ev)=>{
+      customBackgroundImage = ev.target.result;
+      bgGrid.querySelectorAll('.bg-option').forEach(o=>o.classList.remove('active'));
+      updatePreview();
+    };
+    reader.readAsDataURL(file);
+  }
+});
+
+document.getElementById('removeBgBtn').addEventListener('click',()=>{
+  customBackgroundImage = null;
+  currentPaper = 'plain';
+  bgGrid.querySelectorAll('.bg-option').forEach(o=>o.classList.remove('active'));
+  document.querySelector('[data-bg="plain"]').classList.add('active');
+  updatePreview();
+});
+
+// Sample & Clear
+document.getElementById('sampleBtn').addEventListener('click',()=>{
+  if(tinymceEditor){
+    tinymceEditor.setContent(`<p><strong>Dear Friend,</strong></p><p>I hope this letter finds you well. I've been thinking about our conversation last week and wanted to put my thoughts into writing.</p><p>There's something <em>magical</em> about receiving a handwritten note in today's digital age. It shows that someone took the time to sit down, gather their thoughts, and carefully craft a message just for you.</p><ul><li>Personal touch</li><li>Lasting impression</li><li>Meaningful connection</li></ul><p>Looking forward to seeing you soon!</p><p>Warm regards,<br><strong>Your Name</strong></p>`);
+    updatePreview();
+  }
+});
+
+document.getElementById('clearBtn').addEventListener('click',()=>{
+  if(tinymceEditor){
+    tinymceEditor.setContent('');
+    updatePreview();
+  }
+});
+
+document.getElementById('refreshBtn').addEventListener('click',updatePreview);
+
+// Download PNG
+document.getElementById('downloadPngBtn').addEventListener('click',async ()=>{
+  loadingOverlay.classList.add('active');
+  try{
+    const canvas = await html2canvas(previewPage,{
+      scale:2,
+      useCORS:true,
+      allowTaint:true,
+      backgroundColor:null,
+      logging:false
+    });
+    const link = document.createElement('a');
+    link.download = `handwriting-${Date.now()}.png`;
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+  }catch(err){
+    console.error(err);
+    alert('Failed to generate PNG');
+  }finally{
+    loadingOverlay.classList.remove('active');
+  }
+});
+
+// Download PDF with proper page size
+document.getElementById('downloadPdfBtn').addEventListener('click',async ()=>{
+  loadingOverlay.classList.add('active');
+  try{
+    const {jsPDF} = window.jspdf;
+    
+    // Capture preview
+    const canvas = await html2canvas(previewPage,{
+      scale:2,
+      useCORS:true,
+      allowTaint:true,
+      backgroundColor:null
+    });
+    
+    const imgData = canvas.toDataURL('image/png');
+    
+    // Determine page dimensions based on selection
+    let pageWidth, pageHeight, format;
+    switch(currentPageSize){
+      case 'letter': format='letter'; pageWidth=216; pageHeight=279; break;
+      case 'a4': format='a4'; pageWidth=210; pageHeight=297; break;
+      case 'legal': format=[216,356]; pageWidth=216; pageHeight=356; break;
+      case 'a5': format=[148,210]; pageWidth=148; pageHeight=210; break;
+      default: format='a4'; pageWidth=210; pageHeight=297;
+    }
+    
+    const pdf = new jsPDF({
+      orientation:'portrait',
+      unit:'mm',
+      format:format
+    });
+    
+    // Calculate image dimensions to fit page
+    const imgWidth = pageWidth;
+    const imgHeight = (canvas.height * imgWidth) / canvas.width;
+    
+    // If image is taller than page, scale to fit height
+    if(imgHeight > pageHeight){
+      const scale = pageHeight / imgHeight;
+      const finalWidth = imgWidth * scale;
+      const xOffset = (pageWidth - finalWidth) / 2;
+      pdf.addImage(imgData,'PNG',xOffset,0,finalWidth,pageHeight);
+    }else{
+      const yOffset = (pageHeight - imgHeight) / 2;
+      pdf.addImage(imgData,'PNG',0,yOffset,imgWidth,imgHeight);
+    }
+    
+    pdf.save(`handwriting-${Date.now()}.pdf`);
+  }catch(err){
+    console.error(err);
+    alert('Failed to generate PDF');
+  }finally{
+    loadingOverlay.classList.remove('active');
+  }
+});
+
+// Print function with proper styling
+document.getElementById('printBtn').addEventListener('click',()=>{
+  const printContainer = document.getElementById('printContainer');
+  const clone = previewPage.cloneNode(true);
+  
+  // Apply print styles
+  clone.style.position = 'static';
+  clone.style.margin = '0';
+  clone.style.boxShadow = 'none';
+  
+  printContainer.innerHTML = '';
+  printContainer.appendChild(clone);
+  
+  // Wait for fonts to load then print
+  setTimeout(()=>{
+    window.print();
+  },500);
+});
+
+// FAQ Toggle
+function toggleFaq(button){
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Mobile Menu
+document.getElementById('mobileMenuBtn').addEventListener('click',()=>{
+  document.getElementById('mobileMenu').classList.toggle('open');
+});
+
+// Initialize
+initFontGrid();
+initBgGrid();
+</script>
+</body>
+</html>

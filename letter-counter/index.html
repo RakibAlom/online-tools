@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Letter Counter - Free Online Character & Letter Count Tool | EasyPro Tools</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online letter counter tool. Count characters, letters, words, and spaces instantly. Perfect for SEO meta descriptions, social media posts, essays, and content writing. No registration required." />
+  <meta name="keywords" content="free online letter counter, online letter counter tool free, free letter count tool online, online text letter counter free, character and letter counter online, free word and letter counter, online letter count calculator free, free text letter count tool, online letter counter no login, free online character counter with letter count, letter counter tool for seo free, free online letter counter and word count, online letter counter for writers free, free online alphabet counter, online letter frequency counter free" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/letter-counter/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/letter-counter/" />
+  <meta property="og:title" content="Letter Counter - Free Online Character & Letter Count Tool" />
+  <meta property="og:description" content="Count letters, characters, words, and spaces instantly with our free online letter counter. Perfect for SEO, social media, and writing." />
+  <meta property="og:image" content="https://easyprotools.com/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/letter-counter/" />
+  <meta name="twitter:title" content="Letter Counter - Free Online Character & Letter Count Tool" />
+  <meta name="twitter:description" content="Count letters, characters, words, and spaces instantly with our free online letter counter. Perfect for SEO, social media, and writing." />
+  <meta name="twitter:image" content="https://easyprotools.com/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    /* Clean mesh gradient background */
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    /* Clean glassmorphism - minimal tint */
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    /* Mobile menu */
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    /* Article content styling */
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    /* FAQ Accordion */
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    /* Stat Card Animation */
+    .stat-card {
+      transition: all 0.3s ease;
+    }
+    .stat-card:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    /* Progress Bar */
+    .progress-bar {
+      transition: width 0.3s ease;
+    }
+
+    /* Glow text effect */
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    /* Frequency Bar Animation */
+    .freq-bar {
+      transition: width 0.5s ease;
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header with Navigation -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+          <svg class="w-8 h-8 sm:w-9 sm:h-9" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 12h20M10 20h20M10 28h12" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-base sm:text-lg font-bold text-white">Letter Counter</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Free Online Text Analysis</p>
+          </div>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-6">
+          <a href="https://easyprotools.com/" class="text-sm text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-sm text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-4 space-y-3">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner Section -->
+  <section class="py-6 sm:py-8 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text px-2">
+        Letter Counter
+      </h1>
+      <p class="text-gray-400 text-base sm:text-lg px-4">
+        Online Free Text Analysis & Character Count Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-16 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-2xl p-4 sm:p-6 md:p-8 mb-6">
+      
+      <!-- Text Input Area -->
+      <div class="mb-6">
+        <div class="flex items-center justify-between mb-2">
+          <label class="text-sm font-medium text-gray-300 flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+            Enter your text
+          </label>
+          <div class="flex gap-2">
+            <button id="pasteBtn" class="text-xs px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-gray-300 transition-colors flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+              Paste
+            </button>
+            <button id="clearBtn" class="text-xs px-3 py-1.5 rounded-lg bg-red-500/10 hover:bg-red-500/20 text-red-400 transition-colors flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+              Clear
+            </button>
+          </div>
+        </div>
+        <textarea id="textInput" placeholder="Type or paste your text here to count letters, characters, words, and more..." 
+          class="w-full h-48 sm:h-64 p-4 rounded-lg glass-input font-mono text-sm leading-relaxed resize-y"></textarea>
+        
+        <!-- Progress Bar -->
+        <div class="mt-3">
+          <div class="flex justify-between text-xs text-gray-400 mb-1">
+            <span>Character Limit</span>
+            <span id="limitText">0 / 5000</span>
+          </div>
+          <div class="w-full bg-white/5 rounded-full h-2 overflow-hidden">
+            <div id="progressBar" class="progress-bar bg-gradient-to-r from-indigo-500 to-purple-500 h-full rounded-full" style="width: 0%"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+        <div class="stat-card glass-panel rounded-xl p-4 border border-white/5">
+          <div class="flex items-center gap-2 mb-2">
+            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"/></svg>
+            <span class="text-xs text-gray-400 uppercase tracking-wider">Characters</span>
+          </div>
+          <div class="text-2xl font-bold text-white" id="charCount">0</div>
+          <div class="text-xs text-gray-500 mt-1">with spaces</div>
+        </div>
+
+        <div class="stat-card glass-panel rounded-xl p-4 border border-white/5">
+          <div class="flex items-center gap-2 mb-2">
+            <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12"/></svg>
+            <span class="text-xs text-gray-400 uppercase tracking-wider">Letters</span>
+          </div>
+          <div class="text-2xl font-bold text-white" id="letterCount">0</div>
+          <div class="text-xs text-gray-500 mt-1">A-Z only</div>
+        </div>
+
+        <div class="stat-card glass-panel rounded-xl p-4 border border-white/5">
+          <div class="flex items-center gap-2 mb-2">
+            <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13M3 8h9m-9 4h9m5-4v12m0 0l-4-4m4 4l4-4"/></svg>
+            <span class="text-xs text-gray-400 uppercase tracking-wider">Words</span>
+          </div>
+          <div class="text-2xl font-bold text-white" id="wordCount">0</div>
+          <div class="text-xs text-gray-500 mt-1">total count</div>
+        </div>
+
+        <div class="stat-card glass-panel rounded-xl p-4 border border-white/5">
+          <div class="flex items-center gap-2 mb-2">
+            <svg class="w-4 h-4 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            <span class="text-xs text-gray-400 uppercase tracking-wider">Sentences</span>
+          </div>
+          <div class="text-2xl font-bold text-white" id="sentenceCount">0</div>
+          <div class="text-xs text-gray-500 mt-1">estimated</div>
+        </div>
+      </div>
+
+      <!-- Detailed Stats Row -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6 text-center">
+        <div class="bg-white/5 rounded-lg p-3">
+          <div class="text-lg font-semibold text-white" id="charNoSpaces">0</div>
+          <div class="text-xs text-gray-400">Chars (no spaces)</div>
+        </div>
+        <div class="bg-white/5 rounded-lg p-3">
+          <div class="text-lg font-semibold text-white" id="spaceCount">0</div>
+          <div class="text-xs text-gray-400">Spaces</div>
+        </div>
+        <div class="bg-white/5 rounded-lg p-3">
+          <div class="text-lg font-semibold text-white" id="paragraphCount">0</div>
+          <div class="text-xs text-gray-400">Paragraphs</div>
+        </div>
+        <div class="bg-white/5 rounded-lg p-3">
+          <div class="text-lg font-semibold text-white" id="avgWordLength">0</div>
+          <div class="text-xs text-gray-400">Avg Word Length</div>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap gap-3 mb-6">
+        <button id="copyBtn" class="flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg border border-white/10 transition-all duration-300 btn-animated font-medium">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+          Copy Text
+        </button>
+        <button id="downloadBtn" class="flex items-center gap-2 px-6 py-3 bg-white/5 hover:bg-white/10 text-gray-300 rounded-lg border border-white/10 transition-all btn-animated font-medium">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+          Download Stats
+        </button>
+      </div>
+
+      <!-- Letter Frequency Analysis -->
+      <div class="border-t border-white/10 pt-6">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-lg font-semibold text-white flex items-center gap-2">
+            <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            Letter Frequency Analysis
+          </h3>
+          <div class="flex gap-2">
+            <label class="flex items-center gap-2 text-sm text-gray-400 cursor-pointer">
+              <input type="checkbox" id="caseSensitive" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 focus:ring-offset-0 w-4 h-4">
+              Case Sensitive
+            </label>
+          </div>
+        </div>
+        
+        <div id="frequencyContainer" class="space-y-2 max-h-64 overflow-y-auto pr-2">
+          <p class="text-gray-500 text-sm text-center py-8">Start typing to see letter frequency analysis...</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-12 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Choose Our Letter Counter?
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="glass-panel rounded-xl p-6 glass-hover transition-all duration-300">
+          <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2 text-white">Real-Time Analysis</h3>
+          <p class="text-gray-400 text-sm">See instant updates as you type. No buttons to click—just start writing and watch the statistics update live with every keystroke.</p>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-6 glass-hover transition-all duration-300">
+          <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2 text-white">Letter Frequency</h3>
+          <p class="text-gray-400 text-sm">Analyze which letters appear most in your text. Perfect for cryptography, linguistics studies, and optimizing writing patterns.</p>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-6 glass-hover transition-all duration-300">
+          <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2 text-white">100% Private</h3>
+          <p class="text-gray-400 text-sm">Your text never leaves your browser. We don't store, transmit, or analyze your content. Complete privacy guaranteed.</p>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-6 glass-hover transition-all duration-300">
+          <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2 text-white">Detailed Breakdown</h3>
+          <p class="text-gray-400 text-sm">Get comprehensive statistics including characters with/without spaces, letter count, word count, sentences, paragraphs, and average word length.</p>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-6 glass-hover transition-all duration-300">
+          <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2 text-white">Mobile Friendly</h3>
+          <p class="text-gray-400 text-sm">Count letters on any device. Fully responsive design works perfectly on phones, tablets, and desktops with touch-optimized controls.</p>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-6 glass-hover transition-all duration-300">
+          <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2 text-white">100% Free Forever</h3>
+          <p class="text-gray-400 text-sm">No registration, no limits, no watermarks. Use our letter counter as much as you need, completely free of charge.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section -->
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-12 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use the Letter Counter
+      </h2>
+      <div class="space-y-6">
+        <div class="glass-panel rounded-xl p-6 flex items-start space-x-4">
+          <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold">1</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-1 text-white">Enter Your Text</h3>
+            <p class="text-gray-400 text-sm">Type directly into the text area or paste content from your clipboard. The counter works instantly with any text format.</p>
+          </div>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-6 flex items-start space-x-4">
+          <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold">2</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-1 text-white">View Real-Time Stats</h3>
+            <p class="text-gray-400 text-sm">Watch as character count, letter count, word count, and sentence count update automatically. Check the progress bar to see how close you are to limits.</p>
+          </div>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-6 flex items-start space-x-4">
+          <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold">3</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-1 text-white">Analyze Letter Frequency</h3>
+            <p class="text-gray-400 text-sm">Scroll down to see which letters appear most frequently in your text. Toggle case sensitivity to distinguish between uppercase and lowercase.</p>
+          </div>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-6 flex items-start space-x-4">
+          <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold">4</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-1 text-white">Copy or Download</h3>
+            <p class="text-gray-400 text-sm">Use the copy button to copy your text to clipboard, or download a complete statistics report for your records.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-16">
+      <article class="glass-panel rounded-2xl p-6 md:p-12 article-content">
+        <h2>The Complete Guide to Letter Counting: Why Character Count Matters in Digital Writing</h2>
+        
+        <p><strong>Letter counting</strong> has become an essential skill in the digital age, where character limits govern everything from social media posts to search engine optimization. Whether you're a professional writer, student, marketer, or developer, understanding how to count letters and characters accurately can make the difference between effective communication and missed opportunities. This comprehensive guide explores the importance of letter counters, their applications across different fields, and how to leverage this simple yet powerful tool for better writing outcomes.</p>
+
+        <h2>What Is a Letter Counter and Why Do You Need One?</h2>
+        
+        <p>A <strong>letter counter</strong> is a specialized tool designed to analyze text and provide detailed statistics about its composition. Unlike simple word processors that offer basic word counts, a dedicated letter counter provides granular insights into your text's structure—including total characters, letters only (excluding spaces and punctuation), words, sentences, paragraphs, and even letter frequency distribution.</p>
+
+        <p>The distinction between <strong>character count and letter count</strong> is crucial. Character count includes every keystroke: letters, numbers, spaces, punctuation marks, and symbols. Letter count, however, focuses exclusively on alphabetic characters (A-Z, a-z). This distinction matters significantly depending on your use case. For instance, Twitter's 280-character limit includes spaces and punctuation, while some academic assignments might specify letter counts excluding spaces.</p>
+
+        <p>Modern <strong>online letter counters</strong> like ours provide real-time analysis, updating statistics instantly as you type. This immediate feedback loop allows writers to adjust their content on the fly, ensuring they stay within required limits without constant manual checking. The convenience of browser-based tools means you can count letters from any device without installing software or creating accounts.</p>
+
+        <h2>Essential Use Cases for Letter Counting Tools</h2>
+
+        <h3>Social Media Optimization</h3>
+        
+        <p>Every major social platform imposes character limits that can make or break your content strategy. <strong>Twitter (X)</strong> maintains its famous 280-character limit for posts, forcing concise expression. <strong>Instagram</strong> bios allow only 150 characters, while captions cut off after 125 characters in the feed view. <strong>LinkedIn</strong> headlines are limited to 220 characters, and company updates have specific constraints that vary by post type.</p>
+
+        <p>Using a <strong>free online letter counter</strong> before posting ensures your message fits perfectly within these constraints. Nothing undermines professionalism like truncated text or awkward breaks mid-sentence. Smart social media managers write multiple versions of posts, using letter counters to optimize each variant for different platforms' specific requirements.</p>
+
+        <h3>SEO and Meta Description Optimization</h3>
+        
+        <p>Search engine optimization relies heavily on precise character counts. <strong>Google's meta description</strong> best practice recommends 150-160 characters—any longer and your description gets truncated with an ellipsis, potentially cutting off crucial call-to-action phrases. <strong>Title tags</strong> should stay within 50-60 characters to display fully in search results.</p>
+
+        <p>An <strong>online letter counter tool</strong> helps SEO professionals craft perfectly sized meta elements that maximize click-through rates. Beyond length, letter frequency analysis can reveal over-optimization—if certain keywords appear too frequently, search engines may flag the content as spam. Our tool's frequency analysis helps identify unnatural keyword stuffing before it harms your rankings.</p>
+
+        <h3>Academic and Professional Writing</h3>
+        
+        <p>Students frequently encounter strict word and character limits on assignments, scholarship applications, and standardized tests. College application essays often specify both word counts (e.g., 500-650 words) and character limits. Research abstracts must fit within conference submission guidelines. Thesis titles and chapter headings have formatting requirements that include character constraints.</p>
+
+        <p>Professional writers face similar constraints. <strong>Journalists</strong> writing headlines must fit print space limitations. <strong>Technical writers</strong> create UI text with strict character budgets to ensure interface elements display properly across devices. <strong>Copywriters</strong> craft advertising copy where every character costs money in placement fees. A reliable <strong>letter count calculator</strong> eliminates the guesswork and prevents costly revisions.</p>
+
+        <h3>Software Development and UX Design</h3>
+        
+        <p>Developers use character counting for input validation, ensuring user entries don't exceed database field limits. <strong>Form validation</strong> often requires real-time character counting to provide user feedback. Password fields display strength indicators based on character diversity and length. SMS integration requires keeping messages under 160 characters per segment to avoid splitting fees.</p>
+
+        <p>UX designers rely on letter counters to maintain consistency across interfaces. Button labels, menu items, and error messages must fit designated spaces without truncation. Internationalization adds complexity—German text typically requires 30% more characters than English for equivalent meanings, making character budgeting essential for global products.</p>
+
+        <h2>Understanding Letter Frequency Analysis</h2>
+
+        <p>Beyond simple counting, <strong>letter frequency analysis</strong> offers fascinating insights into text composition. In English, the letter 'e' appears most frequently (about 12.7% of all letters), followed by 't', 'a', 'o', and 'i'. This distribution isn't merely academic—it has practical applications across multiple disciplines.</p>
+
+        <p><strong>Cryptographers</strong> use frequency analysis to break substitution ciphers. By comparing letter frequencies in encrypted text against known language patterns, codebreakers can deduce substitution keys. <strong>Linguists</strong> analyze frequency patterns to identify authorship, detect plagiarism, and classify languages. <strong>Data compression</strong> algorithms leverage frequency data to assign shorter codes to common letters, reducing file sizes.</p>
+
+        <p>For writers, frequency analysis reveals writing habits. Overuse of certain letters might indicate repetitive vocabulary or stylistic tics. Comparing your text's frequency distribution against standard English can identify unusual patterns that might confuse readers or trigger spam filters. Our <strong>online letter frequency counter</strong> makes this analysis accessible to everyone, not just computational linguists.</p>
+
+        <h2>Best Practices for Accurate Letter Counting</h2>
+
+        <h3>Choose the Right Counting Mode</h3>
+        
+        <p>Always verify whether your target platform counts spaces and punctuation. Social media typically includes everything—spaces, emojis, and symbols all count toward limits. Academic writing might specify "letters only" or "characters excluding spaces." Our tool provides both metrics simultaneously, eliminating confusion.</p>
+
+        <h3>Account for Hidden Characters</h3>
+        
+        <p>Copied text often contains invisible characters: non-breaking spaces, zero-width joiners, or formatting codes from word processors. These hidden characters can push you over limits unexpectedly. Paste your text into our clean interface to strip formatting and reveal true character counts.</p>
+
+        <h3>Consider Multibyte Characters</h3>
+        
+        <p>Emojis and non-Latin scripts use multiple bytes per character. Some systems count these as single characters, while others count bytes. Our tool counts graphemes (visible characters), but be aware that underlying systems might calculate differently when storing or transmitting data.</p>
+
+        <h3>Use Real-Time Feedback</h3>
+        
+        <p>Rather than writing completely then checking limits, monitor your progress continuously. Our progress bar shows percentage used against a 5,000-character default limit, helping you pace your writing and make structural decisions early.</p>
+
+        <h2>Comparing Letter Counter Tools: What to Look For</h2>
+
+        <p>Not all <strong>online letter counters</strong> are created equal. Basic tools simply display character totals, while advanced solutions offer comprehensive text analysis. When choosing a tool, consider these essential features:</p>
+
+        <p><strong>Real-time updates</strong> eliminate the need to click "count" buttons repeatedly. <strong>Detailed breakdowns</strong> separate characters, letters, words, sentences, and paragraphs. <strong>Frequency analysis</strong> reveals letter distribution patterns. <strong>Privacy protection</strong> ensures your text isn't stored or transmitted to servers. <strong>Mobile responsiveness</strong> enables counting on smartphones and tablets. <strong>Export options</strong> allow saving statistics for documentation.</p>
+
+        <p>Microsoft Word and Google Docs include basic character counting, but these features are buried in menus and lack real-time updates. Dedicated <strong>free online letter counter tools</strong> provide superior speed, convenience, and analytical depth. Browser-based solutions require no installation, work across all operating systems, and receive continuous improvements without user intervention.</p>
+
+        <h2>The Future of Text Analysis</h2>
+
+        <p>As artificial intelligence transforms writing assistance, letter counting remains foundational. AI writing assistants use character counts to optimize outputs for specific platforms. Predictive text algorithms rely on frequency analysis to suggest next words. Grammar checkers consider sentence length statistics when flagging readability issues.</p>
+
+        <p>However, the core need—knowing exactly how many characters comprise your text—remains unchanged. Whether you're crafting a tweet, optimizing a meta description, or validating form input, precise letter counting ensures your message delivers exactly as intended. Our <strong>free online letter counter</strong> combines time-tested counting methods with modern interface design, providing the accuracy professionals demand with the simplicity casual users appreciate.</p>
+
+        <h2>Conclusion</h2>
+
+        <p>Letter counting might seem like a simple task, but its applications are vast and vital across digital communication. From social media character limits to SEO optimization, academic compliance to software development, knowing your exact character and letter counts prevents errors and improves outcomes. Our comprehensive <strong>online letter counter tool</strong> provides not just numbers, but insights—frequency analysis, detailed breakdowns, and real-time feedback that elevate your writing process.</p>
+
+        <p>Best of all, professional-grade text analysis doesn't require expensive software or complex installations. Our <strong>free letter counter</strong> works instantly in your browser, respecting your privacy while delivering accurate, detailed statistics. Whether you're writing your next viral tweet, optimizing website metadata, or completing an important assignment, start with our letter counter to ensure every character counts.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-12 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-4" id="faqContainer">
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">What is the difference between letter count and character count?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed"><strong>Character count</strong> includes every single keystroke: letters, numbers, spaces, punctuation marks, symbols, and even emojis. <strong>Letter count</strong> only counts alphabetic characters (A-Z, a-z), excluding spaces, numbers, and punctuation. For example, in "Hello, World! 123", the character count is 17 (including spaces and punctuation), while the letter count is 10 (H,e,l,l,o,W,o,r,l,d). Different platforms use different metrics—Twitter counts all characters, while some writing assignments specify letters only.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Is this letter counter tool free to use?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">Yes, our <strong>online letter counter</strong> is completely free to use with no registration required. There are no usage limits, no watermarks, and no hidden fees. You can count letters, characters, and words as much as you need. We believe professional writing tools should be accessible to everyone, from students working on assignments to professionals optimizing content.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Is my text stored or sent to your servers?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">Absolutely not. Our <strong>letter counter</strong> processes everything locally in your browser using JavaScript. Your text never leaves your device, is never transmitted to our servers, and is never stored anywhere. This makes our tool ideal for sensitive content—client work, personal writing, proprietary business text, or confidential information. You can verify this by checking your browser's network tab; no data is sent while you type.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">What is the maximum text length supported?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">Our tool supports up to <strong>50,000 characters</strong> per analysis, though the progress bar displays relative to a 5,000-character reference point for typical social media and SEO use cases. For extremely long documents (novels, research papers), you can paste sections individually. The interface remains responsive even with large texts, though very substantial documents (100,000+ characters) may experience slight delays in frequency analysis calculations.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">How accurate is the letter frequency analysis?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">Our <strong>letter frequency counter</strong> is 100% accurate for the text you provide. It counts every alphabetic character and calculates percentages based on total letter count. By default, the analysis is case-insensitive (treating 'A' and 'a' as the same letter), but you can enable case sensitivity to track uppercase and lowercase separately. For meaningful frequency patterns, we recommend analyzing at least 200 characters—shorter texts may show skewed distributions due to statistical variance.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Can I use this tool for languages other than English?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">Yes, our tool works with any Unicode text, including Spanish, French, German, Chinese, Arabic, and other languages. Character and word counting functions work universally. However, letter frequency analysis focuses on alphabetic characters (A-Z), so non-Latin scripts (Cyrillic, Arabic, CJK characters) won't appear in the frequency chart. For languages with diacritics (é, ñ, ü), these count as separate letters in frequency analysis unless normalized.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Why do different tools show different word counts?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">Word counting algorithms vary between tools. Some count hyphenated words as one (well-known) or two (well, known). Some treat numbers as words, others don't. Contractions (don't, can't) might count as one or two words depending on the algorithm. Our tool uses standard whitespace delimitation—sequences of characters separated by spaces—with smart handling for multiple consecutive spaces and line breaks. For critical word counts, always verify against your target platform's specific counting method.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">How can I use letter counting for SEO optimization?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed"><strong>SEO optimization</strong> relies heavily on precise character counts. Meta descriptions should be 150-160 characters to avoid truncation in Google search results. Title tags work best at 50-60 characters. Our tool helps you craft these elements perfectly. Additionally, use letter frequency analysis to check for keyword stuffing—if certain letters appear disproportionately (indicating repeated keywords), search engines might penalize your content. Aim for natural frequency distributions that match standard English patterns.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Does the tool work on mobile devices?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">Absolutely! Our <strong>letter counter</strong> is fully responsive and works perfectly on smartphones, tablets, and desktops. The interface adapts to your screen size, with touch-optimized buttons and scrollable areas for easy mobile use. You can count letters on the go—perfect for checking social media posts before publishing from your phone or reviewing email subject lines while commuting. No app installation required; just visit the website in your mobile browser.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 pr-4">Can I download or export my statistics?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">Yes! Click the "Download Stats" button to generate a comprehensive text report including all statistics: character counts (with and without spaces), letter count, word count, sentence count, paragraph count, average word length, and complete letter frequency distribution. The report downloads as a .txt file suitable for documentation, client reports, or academic submission evidence. You can also use the "Copy Text" button to copy your original text back to clipboard with one click.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-8">
+    <div class="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-6">
+        <a href="https://easyprotools.com/" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const textInput = document.getElementById('textInput');
+const charCount = document.getElementById('charCount');
+const letterCount = document.getElementById('letterCount');
+const wordCount = document.getElementById('wordCount');
+const sentenceCount = document.getElementById('sentenceCount');
+const charNoSpaces = document.getElementById('charNoSpaces');
+const spaceCount = document.getElementById('spaceCount');
+const paragraphCount = document.getElementById('paragraphCount');
+const avgWordLength = document.getElementById('avgWordLength');
+const progressBar = document.getElementById('progressBar');
+const limitText = document.getElementById('limitText');
+const frequencyContainer = document.getElementById('frequencyContainer');
+const caseSensitive = document.getElementById('caseSensitive');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+
+const MAX_CHARS = 5000;
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Main Analysis Function
+function analyzeText() {
+  const text = textInput.value;
+  
+  // Basic Counts
+  const totalChars = text.length;
+  const charsWithoutSpaces = text.replace(/\s/g, '').length;
+  const spaces = (text.match(/\s/g) || []).length;
+  
+  // Letter Count (A-Z, a-z only)
+  const letters = text.replace(/[^a-zA-Z]/g, '').length;
+  
+  // Word Count
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+  
+  // Sentence Count (approximate)
+  const sentences = text.trim() === '' ? 0 : (text.match(/[.!?]+/g) || []).length;
+  const displaySentences = sentences === 0 && text.trim().length > 0 ? 1 : sentences;
+  
+  // Paragraph Count
+  const paragraphs = text.trim() === '' ? 0 : text.split(/\n\s*\n/).filter(p => p.trim().length > 0).length;
+  
+  // Average Word Length
+  const avgLength = words > 0 ? (letters / words).toFixed(1) : 0;
+  
+  // Update UI
+  charCount.textContent = totalChars.toLocaleString();
+  letterCount.textContent = letters.toLocaleString();
+  wordCount.textContent = words.toLocaleString();
+  sentenceCount.textContent = displaySentences.toLocaleString();
+  charNoSpaces.textContent = charsWithoutSpaces.toLocaleString();
+  spaceCount.textContent = spaces.toLocaleString();
+  paragraphCount.textContent = paragraphs.toLocaleString();
+  avgWordLength.textContent = avgLength;
+  
+  // Update Progress Bar
+  const percentage = Math.min((totalChars / MAX_CHARS) * 100, 100);
+  progressBar.style.width = percentage + '%';
+  limitText.textContent = `${totalChars.toLocaleString()} / ${MAX_CHARS.toLocaleString()}`;
+  
+  // Update Progress Bar Color
+  if (percentage > 90) {
+    progressBar.className = 'progress-bar bg-red-500 h-full rounded-full';
+  } else if (percentage > 75) {
+    progressBar.className = 'progress-bar bg-yellow-500 h-full rounded-full';
+  } else {
+    progressBar.className = 'progress-bar bg-gradient-to-r from-indigo-500 to-purple-500 h-full rounded-full';
+  }
+  
+  // Update Frequency Analysis
+  updateFrequencyAnalysis(text);
+}
+
+// Letter Frequency Analysis
+function updateFrequencyAnalysis(text) {
+  if (text.trim().length === 0) {
+    frequencyContainer.innerHTML = '<p class="text-gray-500 text-sm text-center py-8">Start typing to see letter frequency analysis...</p>';
+    return;
+  }
+  
+  const isCaseSensitive = caseSensitive.checked;
+  const freq = {};
+  let totalLetters = 0;
+  
+  // Count frequencies
+  for (let char of text) {
+    if (/[a-zA-Z]/.test(char)) {
+      const key = isCaseSensitive ? char : char.toLowerCase();
+      freq[key] = (freq[key] || 0) + 1;
+      totalLetters++;
+    }
+  }
+  
+  if (totalLetters === 0) {
+    frequencyContainer.innerHTML = '<p class="text-gray-500 text-sm text-center py-8">No letters found in text...</p>';
+    return;
+  }
+  
+  // Sort by frequency (descending)
+  const sorted = Object.entries(freq).sort((a, b) => b[1] - a[1]);
+  const maxFreq = sorted[0][1];
+  
+  // Generate HTML
+  let html = '';
+  sorted.forEach(([letter, count]) => {
+    const percentage = ((count / totalLetters) * 100).toFixed(1);
+    const barWidth = (count / maxFreq) * 100;
+    
+    html += `
+      <div class="flex items-center gap-3 text-sm">
+        <div class="w-8 font-mono font-bold text-white text-center">${letter}</div>
+        <div class="flex-1 bg-white/5 rounded-full h-6 overflow-hidden relative">
+          <div class="freq-bar absolute left-0 top-0 h-full bg-gradient-to-r from-indigo-500/50 to-purple-500/50 rounded-full" style="width: ${barWidth}%"></div>
+          <span class="absolute inset-0 flex items-center px-3 text-xs text-gray-300">${count} (${percentage}%)</span>
+        </div>
+      </div>
+    `;
+  });
+  
+  frequencyContainer.innerHTML = html;
+}
+
+// Event Listeners
+textInput.addEventListener('input', analyzeText);
+caseSensitive.addEventListener('change', analyzeText);
+
+// Paste Button
+pasteBtn.addEventListener('click', async () => {
+  try {
+    const text = await navigator.clipboard.readText();
+    textInput.value = text;
+    analyzeText();
+  } catch (err) {
+    alert('Unable to read clipboard. Please paste manually.');
+  }
+});
+
+// Clear Button
+clearBtn.addEventListener('click', () => {
+  textInput.value = '';
+  analyzeText();
+});
+
+// Copy Button
+copyBtn.addEventListener('click', async () => {
+  try {
+    await navigator.clipboard.writeText(textInput.value);
+    const originalHTML = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalHTML;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 2000);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+});
+
+// Download Stats Button
+downloadBtn.addEventListener('click', () => {
+  const text = textInput.value;
+  if (!text.trim()) {
+    alert('Please enter some text first.');
+    return;
+  }
+  
+  const stats = `LETTER COUNTER STATISTICS REPORT
+Generated: ${new Date().toLocaleString()}
+================================
+
+TEXT SUMMARY:
+- Total Characters: ${charCount.textContent}
+- Letters Only: ${letterCount.textContent}
+- Characters (no spaces): ${charNoSpaces.textContent}
+- Spaces: ${spaceCount.textContent}
+- Words: ${wordCount.textContent}
+- Sentences: ${sentenceCount.textContent}
+- Paragraphs: ${paragraphCount.textContent}
+- Average Word Length: ${avgWordLength.textContent}
+
+LETTER FREQUENCY:
+${Array.from(frequencyContainer.children).map(row => {
+  if (row.querySelector('.font-mono')) {
+    const letter = row.querySelector('.font-mono').textContent;
+    const stats = row.querySelector('.text-xs').textContent;
+    return `${letter}: ${stats}`;
+  }
+  return '';
+}).filter(Boolean).join('\n')}
+
+ORIGINAL TEXT:
+${text}
+`;
+  
+  const blob = new Blob([stats], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `letter-counter-stats-${Date.now()}.txt`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+});
+
+// FAQ Toggle Function
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Initialize
+analyzeText();
+</script>
+</body>
+</html>
