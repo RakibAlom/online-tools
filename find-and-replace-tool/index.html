@@ -3,30 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Line Counter - Free Online Line Count & Text Analysis Tool</title>
+  <title>Find and Replace Tool - Free Online Text Search & Replace</title>
 
   <!-- SEO Meta -->
-  <meta name="description" content="Free online line counter tool. Count lines, words, characters instantly. Perfect for developers, writers, and data analysis. Supports multiple files with drag-and-drop. No registration required." />
-  <meta name="keywords" content="line counter, line counter online, free line counter, online line counter, count lines online, line count tool, line count checker online, text line counter, number of lines in text online, free online line counter tool, line counter for text, text line analyzer online, line count calculator online, bulk line counter online, online text line counter free, free online text line counting tool, line counting utility online, count text lines free, line statistics tool online, line counter for writers free, free online text line tracker, online line count checker, text metrics line counter, free line counter for coding, online line counter for documents, line counting tool for seo, free online line count analyzer, online text line measurement tool, line counter with spaces online" />
+  <meta name="description" content="Free online find and replace tool. Search and replace text instantly with advanced options. Perfect for writers, developers, and SEO professionals. No registration required." />
+  <meta name="keywords" content="find and replace tool, find and replace online, free find and replace tool, online find and replace, text find and replace online, free online find and replace, find replace text tool, replace text online free, find and replace words online, find and replace sentences online, text replace tool online, bulk find and replace online, online text replace tool free, free find and replace utility, find and replace text editor online, free online text find and replace, online find and replace content, find and replace phrases online, free online word replace tool, find and replace characters online, find and replace tool for writers free, online find and replace document, free online find replace tool for seo, find and replace text tool for coding, free online text correction tool" />
   <meta name="author" content="EasyPro Tools" />
   <meta name="robots" content="index, follow" />
   <meta name="googlebot" content="index, follow" />
   <meta name="bingbot" content="index, follow" />
-  <link rel="canonical" href="https://easyprotools.com/line-counter/" />
+  <link rel="canonical" href="https://easyprotools.com/find-and-replace-tool/" />
 
   <!-- Open Graph Tags -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://easyprotools.com/line-counter/" />
-  <meta property="og:title" content="Line Counter - Free Online Line Count & Text Analysis Tool" />
-  <meta property="og:description" content="Count lines, words, characters instantly with our free online line counter. Perfect for developers, writers, and data analysis. Supports multiple files." />
+  <meta property="og:url" content="https://easyprotools.com/find-and-replace-tool/" />
+  <meta property="og:title" content="Find and Replace Tool - Free Online Text Search & Replace" />
+  <meta property="og:description" content="Search and replace text instantly with advanced options. Perfect for writers, developers, and SEO professionals. Supports regex and multiple files." />
   <meta property="og:image" content="https://easyprotools.com/assets/img/easypro-tools.jpg" />
   <meta property="og:site_name" content="EasyPro Tools" />
 
   <!-- Twitter Card Tags -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://easyprotools.com/line-counter/" />
-  <meta name="twitter:title" content="Line Counter - Free Online Line Count & Text Analysis Tool" />
-  <meta name="twitter:description" content="Count lines, words, characters instantly with our free online line counter. Perfect for developers, writers, and data analysis. Supports multiple files." />
+  <meta name="twitter:url" content="https://easyprotools.com/find-and-replace-tool/" />
+  <meta name="twitter:title" content="Find and Replace Tool - Free Online Text Search & Replace" />
+  <meta name="twitter:description" content="Search and replace text instantly with advanced options. Perfect for writers, developers, and SEO professionals. Supports regex and multiple files." />
   <meta name="twitter:image" content="https://easyprotools.com/assets/img/easypro-tools.jpg" />
 
   <!-- Favicon -->
@@ -221,10 +221,6 @@
       background: rgba(255, 255, 255, 0.08);
     }
 
-    .progress-bar {
-      transition: width 0.3s ease;
-    }
-
     .glow-text {
       text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
     }
@@ -234,6 +230,12 @@
       background: rgba(99, 102, 241, 0.1) !important;
     }
 
+    .highlight-match {
+      background: rgba(99, 102, 241, 0.3);
+      border-radius: 2px;
+      padding: 0 2px;
+    }
+
     .file-item {
       transition: all 0.2s ease;
     }
@@ -241,9 +243,8 @@
       background: rgba(255, 255, 255, 0.05);
     }
 
-    .line-number {
+    .match-counter {
       font-variant-numeric: tabular-nums;
-      color: #6366f1;
     }
   </style>
 </head>
@@ -256,7 +257,7 @@
         <div class="flex items-center space-x-3">
           <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
-            <path d="M10 12h20M10 20h20M10 28h20" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M21 10l9 10-9 10M11 10l9 10-9 10" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
             <defs>
               <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
                 <stop stop-color="#6366f1"/>
@@ -265,8 +266,8 @@
             </defs>
           </svg>
           <div>
-            <h1 class="text-sm font-bold text-white">Line Counter</h1>
-            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Analysis</p>
+            <h1 class="text-sm font-bold text-white">Find and Replace</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Editor</p>
           </div>
         </div>
 
@@ -307,10 +308,10 @@
   <section class="py-4 sm:py-6 px-4">
     <div class="max-w-4xl mx-auto text-center">
       <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
-        Line Counter
+        Find and Replace Tool
       </h1>
       <p class="text-gray-400 text-sm sm:text-base">
-        Online Free Line Count & Text Analysis Tool
+        Online Free Text Search & Replace Tool
       </p>
     </div>
   </section>
@@ -321,12 +322,12 @@
     <!-- Tool Interface -->
     <div class="glass-panel rounded-2xl p-4 sm:p-6 mb-6">
       
-      <!-- Input Area -->
+      <!-- Input Text Area -->
       <div class="mb-4">
         <div class="flex items-center justify-between mb-2">
           <label class="text-xs font-medium text-gray-300 flex items-center gap-2">
-            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-            Enter text or drop files
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            Input Text
           </label>
           <div class="flex gap-2">
             <button id="pasteBtn" class="btn-small rounded-lg bg-white/5 hover:bg-white/10 text-gray-300 transition-colors btn-animated">
@@ -337,132 +338,120 @@
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
               Clear
             </button>
+            <button id="loadFileBtn" class="btn-small rounded-lg bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-300 border border-indigo-500/20 transition-colors btn-animated">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              Load File
+            </button>
+            <input type="file" id="fileInput" accept=".txt,.md,.csv,.json,.js,.html,.css,.xml,.py,.java,.cpp,.c,.php" class="hidden">
           </div>
         </div>
         
         <div id="dropZone" class="relative">
-          <textarea id="textInput" placeholder="Type or paste your text here to count lines, or drag and drop multiple files..." 
-            class="w-full h-40 sm:h-52 p-3 rounded-lg glass-input font-mono text-xs sm:text-sm leading-relaxed resize-y"></textarea>
+          <textarea id="inputText" placeholder="Enter or paste your text here, or drag and drop a file..." 
+            class="w-full h-32 sm:h-40 p-3 rounded-lg glass-input font-mono text-xs sm:text-sm leading-relaxed resize-y"></textarea>
           <div id="dropOverlay" class="absolute inset-0 rounded-lg border-2 border-dashed border-indigo-500/50 bg-indigo-500/10 hidden flex flex-col items-center justify-center gap-2">
             <svg class="w-8 h-8 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
-            <span class="text-indigo-300 font-medium text-sm">Drop files here</span>
+            <span class="text-indigo-300 font-medium text-sm">Drop file here</span>
           </div>
         </div>
         
         <div class="mt-2 flex items-center justify-between text-xs text-gray-400">
-          <span id="statusText">Ready</span>
-          <span id="fileCount">0 files</span>
+          <span id="inputStats">0 chars | 0 words | 0 lines</span>
+          <span id="fileName"></span>
         </div>
       </div>
 
-      <!-- Primary Stats -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
-        <div class="stat-card glass-panel rounded-lg p-3 border border-white/5">
-          <div class="flex items-center gap-1.5 mb-1">
-            <svg class="w-3.5 h-3.5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-            <span class="text-xs text-gray-400 uppercase tracking-wider">Total Lines</span>
+      <!-- Find and Replace Controls -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-1.5 block">Find</label>
+          <div class="relative">
+            <input type="text" id="findInput" placeholder="Text to find..." 
+              class="w-full p-2.5 rounded-lg glass-input text-sm pr-20">
+            <span id="matchCount" class="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-gray-500 match-counter hidden">0 matches</span>
           </div>
-          <div class="text-xl font-bold text-white" id="totalLines">0</div>
-          <div class="text-xs text-gray-500 mt-0.5">all lines</div>
         </div>
-
-        <div class="stat-card glass-panel rounded-lg p-3 border border-white/5">
-          <div class="flex items-center gap-1.5 mb-1">
-            <svg class="w-3.5 h-3.5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            <span class="text-xs text-gray-400 uppercase tracking-wider">Non-Empty</span>
-          </div>
-          <div class="text-xl font-bold text-white" id="nonEmptyLines">0</div>
-          <div class="text-xs text-gray-500 mt-0.5">with content</div>
-        </div>
-
-        <div class="stat-card glass-panel rounded-lg p-3 border border-white/5">
-          <div class="flex items-center gap-1.5 mb-1">
-            <svg class="w-3.5 h-3.5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13M3 8h9m-9 4h9m5-4v12m0 0l-4-4m4 4l4-4"/></svg>
-            <span class="text-xs text-gray-400 uppercase tracking-wider">Words</span>
-          </div>
-          <div class="text-xl font-bold text-white" id="wordCount">0</div>
-          <div class="text-xs text-gray-500 mt-0.5">total count</div>
-        </div>
-
-        <div class="stat-card glass-panel rounded-lg p-3 border border-white/5">
-          <div class="flex items-center gap-1.5 mb-1">
-            <svg class="w-3.5 h-3.5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"/></svg>
-            <span class="text-xs text-gray-400 uppercase tracking-wider">Characters</span>
-          </div>
-          <div class="text-xl font-bold text-white" id="charCount">0</div>
-          <div class="text-xs text-gray-500 mt-0.5">with spaces</div>
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-1.5 block">Replace With</label>
+          <input type="text" id="replaceInput" placeholder="Replacement text..." 
+            class="w-full p-2.5 rounded-lg glass-input text-sm">
         </div>
       </div>
 
-      <!-- Secondary Stats -->
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
-        <div class="bg-white/5 rounded-lg p-2 text-center">
-          <div class="text-base font-semibold text-white" id="emptyLines">0</div>
-          <div class="text-xs text-gray-400">Empty Lines</div>
-        </div>
-        <div class="bg-white/5 rounded-lg p-2 text-center">
-          <div class="text-base font-semibold text-white" id="avgLineLength">0</div>
-          <div class="text-xs text-gray-400">Avg Line Len</div>
-        </div>
-        <div class="bg-white/5 rounded-lg p-2 text-center">
-          <div class="text-base font-semibold text-white" id="longestLine">0</div>
-          <div class="text-xs text-gray-400">Longest Line</div>
-        </div>
-        <div class="bg-white/5 rounded-lg p-2 text-center">
-          <div class="text-base font-semibold text-white" id="totalBytes">0</div>
-          <div class="text-xs text-gray-400">Bytes</div>
-        </div>
+      <!-- Options -->
+      <div class="flex flex-wrap gap-3 mb-4">
+        <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer hover:text-gray-300 transition-colors">
+          <input type="checkbox" id="caseSensitive" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 focus:ring-offset-0 w-3.5 h-3.5">
+          Case Sensitive
+        </label>
+        <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer hover:text-gray-300 transition-colors">
+          <input type="checkbox" id="wholeWord" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 focus:ring-offset-0 w-3.5 h-3.5">
+          Whole Word Only
+        </label>
+        <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer hover:text-gray-300 transition-colors">
+          <input type="checkbox" id="useRegex" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 focus:ring-offset-0 w-3.5 h-3.5">
+          Use Regular Expressions
+        </label>
+        <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer hover:text-gray-300 transition-colors">
+          <input type="checkbox" id="preserveCase" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 focus:ring-offset-0 w-3.5 h-3.5">
+          Preserve Case
+        </label>
       </div>
 
       <!-- Action Buttons -->
       <div class="flex flex-wrap gap-2 mb-4">
-        <button id="copyBtn" class="btn-small rounded-lg bg-white/10 hover:bg-white/20 text-white border border-white/10 transition-all btn-animated">
-          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
-          Copy
+        <button id="findBtn" class="btn-small rounded-lg bg-indigo-500/20 hover:bg-indigo-500/30 text-indigo-300 border border-indigo-500/30 transition-all btn-animated">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          Find All
         </button>
-        <button id="downloadBtn" class="btn-small rounded-lg bg-white/5 hover:bg-white/10 text-gray-300 border border-white/10 transition-all btn-animated">
-          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-          Download Stats
+        <button id="replaceBtn" class="btn-small rounded-lg bg-white/10 hover:bg-white/20 text-white border border-white/10 transition-all btn-animated">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
+          Replace All
         </button>
-        <button id="fileInputBtn" class="btn-small rounded-lg bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-300 border border-indigo-500/20 transition-all btn-animated">
-          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-          Add Files
+        <button id="replaceOneBtn" class="btn-small rounded-lg bg-white/5 hover:bg-white/10 text-gray-300 border border-white/10 transition-all btn-animated">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"/></svg>
+          Replace One
         </button>
-        <input type="file" id="fileInput" accept=".txt,.md,.csv,.json,.js,.html,.css,.xml,.py,.java,.cpp,.c,.php,.rb" multiple class="hidden">
-        <button id="downloadAllBtn" class="btn-small rounded-lg bg-green-500/10 hover:bg-green-500/20 text-green-400 border border-green-500/20 transition-all btn-animated hidden">
-          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-          Download All
+        <button id="undoBtn" class="btn-small rounded-lg bg-yellow-500/10 hover:bg-yellow-500/20 text-yellow-400 border border-yellow-500/20 transition-all btn-animated hidden">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6"/></svg>
+          Undo
         </button>
       </div>
 
-      <!-- File List -->
-      <div id="fileListContainer" class="border-t border-white/10 pt-4 hidden">
-        <h3 class="text-sm font-semibold text-white mb-3 flex items-center gap-2">
-          <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-          Uploaded Files
-        </h3>
-        <div id="fileList" class="space-y-2 max-h-48 overflow-y-auto pr-2">
-          <!-- File items will be inserted here -->
-        </div>
-      </div>
-
-      <!-- Line Details -->
-      <div class="border-t border-white/10 pt-4 mt-4">
-        <div class="flex items-center justify-between mb-3">
-          <h3 class="text-sm font-semibold text-white flex items-center gap-2">
-            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
-            Line Details
-          </h3>
-          <div class="flex gap-2 text-xs">
-            <label class="flex items-center gap-1.5 text-gray-400 cursor-pointer">
-              <input type="checkbox" id="showLineNumbers" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 focus:ring-offset-0 w-3.5 h-3.5">
-              Show Preview
-            </label>
+      <!-- Output Text Area -->
+      <div class="mb-4">
+        <div class="flex items-center justify-between mb-2">
+          <label class="text-xs font-medium text-gray-300 flex items-center gap-2">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+            Result
+          </label>
+          <div class="flex gap-2">
+            <button id="copyResultBtn" class="btn-small rounded-lg bg-white/5 hover:bg-white/10 text-gray-300 transition-colors btn-animated">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+              Copy
+            </button>
+            <button id="downloadResultBtn" class="btn-small rounded-lg bg-white/5 hover:bg-white/10 text-gray-300 transition-colors btn-animated">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              Download
+            </button>
           </div>
         </div>
-        
-        <div id="lineDetailsContainer" class="space-y-1.5 max-h-48 overflow-y-auto pr-2">
-          <p class="text-gray-500 text-xs text-center py-6">Enter text or upload files to see line details...</p>
+        <textarea id="outputText" readonly placeholder="Results will appear here..." 
+          class="w-full h-32 sm:h-40 p-3 rounded-lg glass-input font-mono text-xs sm:text-sm leading-relaxed resize-y bg-white/5"></textarea>
+        <div class="mt-2 flex items-center justify-between text-xs text-gray-400">
+          <span id="outputStats">0 chars | 0 words | 0 lines</span>
+          <span id="replaceStatus"></span>
+        </div>
+      </div>
+
+      <!-- Match Preview -->
+      <div id="matchPreviewContainer" class="border-t border-white/10 pt-4 hidden">
+        <h3 class="text-sm font-semibold text-white mb-3 flex items-center gap-2">
+          <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+          Match Preview
+        </h3>
+        <div id="matchPreview" class="space-y-1.5 max-h-40 overflow-y-auto pr-2 text-xs font-mono">
+          <!-- Matches will appear here -->
         </div>
       </div>
     </div>
@@ -470,39 +459,39 @@
     <!-- Features Section -->
     <section class="mb-12">
       <h2 class="text-xl md:text-2xl font-bold text-center mb-8 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-        Why Use Our Line Counter?
+        Why Use Our Find and Replace Tool?
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <div class="glass-panel rounded-xl p-5 glass-hover transition-all duration-300">
           <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center mb-3">
-            <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/></svg>
+            <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
           </div>
-          <h3 class="text-base font-semibold mb-1.5 text-white">Multiple File Support</h3>
-          <p class="text-gray-400 text-xs leading-relaxed">Upload and analyze multiple files simultaneously. Drag and drop entire folders or select multiple files. Get individual and combined statistics.</p>
+          <h3 class="text-base font-semibold mb-1.5 text-white">Advanced Search Options</h3>
+          <p class="text-gray-400 text-xs leading-relaxed">Case sensitive matching, whole word only, and regular expression support for complex pattern matching and text manipulation.</p>
         </div>
         
         <div class="glass-panel rounded-xl p-5 glass-hover transition-all duration-300">
           <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center mb-3">
             <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
           </div>
-          <h3 class="text-base font-semibold mb-1.5 text-white">Real-Time Analysis</h3>
-          <p class="text-gray-400 text-xs leading-relaxed">Watch line counts update instantly as you type or paste text. No delays or button clicks needed—just immediate, accurate metrics.</p>
+          <h3 class="text-base font-semibold mb-1.5 text-white">Real-Time Preview</h3>
+          <p class="text-gray-400 text-xs leading-relaxed">See all matches highlighted instantly before replacing. Preview changes and match count updates as you type your search query.</p>
         </div>
         
         <div class="glass-panel rounded-xl p-5 glass-hover transition-all duration-300">
           <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center mb-3">
-            <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
           </div>
-          <h3 class="text-base font-semibold mb-1.5 text-white">Detailed Metrics</h3>
-          <p class="text-gray-400 text-xs leading-relaxed">Get comprehensive statistics including total lines, empty lines, non-empty lines, average line length, longest line, and byte count.</p>
+          <h3 class="text-base font-semibold mb-1.5 text-white">Undo Support</h3>
+          <p class="text-gray-400 text-xs leading-relaxed">Made a mistake? Use the undo button to revert changes instantly. Compare before and after states with ease.</p>
         </div>
         
         <div class="glass-panel rounded-xl p-5 glass-hover transition-all duration-300">
           <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center mb-3">
-            <svg class="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
           </div>
-          <h3 class="text-base font-semibold mb-1.5 text-white">Code-Friendly</h3>
-          <p class="text-gray-400 text-xs leading-relaxed">Perfect for developers counting lines of code (LOC). Supports all major programming languages and provides accurate code metrics.</p>
+          <h3 class="text-base font-semibold mb-1.5 text-white">File Support</h3>
+          <p class="text-gray-400 text-xs leading-relaxed">Load text files directly or drag and drop. Supports code files, documents, CSV, JSON, and all text formats.</p>
         </div>
         
         <div class="glass-panel rounded-xl p-5 glass-hover transition-all duration-300">
@@ -510,7 +499,7 @@
             <svg class="w-5 h-5 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
           </div>
           <h3 class="text-base font-semibold mb-1.5 text-white">100% Private</h3>
-          <p class="text-gray-400 text-xs leading-relaxed">Your files and text never leave your browser. We don't store, transmit, or analyze your content. Complete privacy guaranteed.</p>
+          <p class="text-gray-400 text-xs leading-relaxed">Your text never leaves your browser. All processing happens locally. Perfect for sensitive documents and code.</p>
         </div>
         
         <div class="glass-panel rounded-xl p-5 glass-hover transition-all duration-300">
@@ -518,7 +507,7 @@
             <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
           </div>
           <h3 class="text-base font-semibold mb-1.5 text-white">Mobile Ready</h3>
-          <p class="text-gray-400 text-xs leading-relaxed">Fully responsive design works perfectly on phones and tablets. Count lines on the go, anywhere, anytime, without installing apps.</p>
+          <p class="text-gray-400 text-xs leading-relaxed">Fully responsive design works on all devices. Edit and replace text on the go from your phone or tablet.</p>
         </div>
       </div>
     </section>
@@ -526,7 +515,7 @@
     <!-- How to Use Section -->
     <section class="mb-12">
       <h2 class="text-xl md:text-2xl font-bold text-center mb-8 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-        How to Use the Line Counter
+        How to Use the Find and Replace Tool
       </h2>
       <div class="space-y-4">
         <div class="glass-panel rounded-xl p-4 flex items-start space-x-3">
@@ -534,8 +523,8 @@
             <span class="text-white font-bold text-sm">1</span>
           </div>
           <div>
-            <h3 class="text-base font-semibold mb-1 text-white">Enter Text or Upload Files</h3>
-            <p class="text-gray-400 text-xs leading-relaxed">Type directly into the text area, paste from clipboard, or drag and drop multiple files. Supports batch processing of entire folders.</p>
+            <h3 class="text-base font-semibold mb-1 text-white">Enter Your Text</h3>
+            <p class="text-gray-400 text-xs leading-relaxed">Type or paste your text into the input area, or load a file using the Load File button or drag-and-drop. The tool accepts any text format.</p>
           </div>
         </div>
         
@@ -544,8 +533,8 @@
             <span class="text-white font-bold text-sm">2</span>
           </div>
           <div>
-            <h3 class="text-base font-semibold mb-1 text-white">View Line Statistics</h3>
-            <p class="text-gray-400 text-xs leading-relaxed">Watch total lines, empty lines, non-empty lines, and other metrics update in real-time. Toggle line number preview for detailed analysis.</p>
+            <h3 class="text-base font-semibold mb-1 text-white">Set Search Options</h3>
+            <p class="text-gray-400 text-xs leading-relaxed">Enter the text to find and what to replace it with. Toggle options like case sensitivity, whole word matching, or regular expressions as needed.</p>
           </div>
         </div>
         
@@ -554,8 +543,8 @@
             <span class="text-white font-bold text-sm">3</span>
           </div>
           <div>
-            <h3 class="text-base font-semibold mb-1 text-white">Manage Multiple Files</h3>
-            <p class="text-gray-400 text-xs leading-relaxed">When working with multiple files, view individual file statistics in the file list. Remove files or download individual reports as needed.</p>
+            <h3 class="text-base font-semibold mb-1 text-white">Preview and Replace</h3>
+            <p class="text-gray-400 text-xs leading-relaxed">Click "Find All" to see all matches highlighted, then use "Replace All" or "Replace One" to make changes. Review the results in the output area.</p>
           </div>
         </div>
         
@@ -565,7 +554,7 @@
           </div>
           <div>
             <h3 class="text-base font-semibold mb-1 text-white">Export Results</h3>
-            <p class="text-gray-400 text-xs leading-relaxed">Copy your text or download comprehensive statistics reports. For multiple files, download individual reports or a combined summary.</p>
+            <p class="text-gray-400 text-xs leading-relaxed">Copy the result to clipboard or download as a file. Use the undo button if you need to revert changes and try different replacements.</p>
           </div>
         </div>
       </div>
@@ -574,137 +563,105 @@
     <!-- Article Section -->
     <section class="mb-12">
       <article class="glass-panel rounded-2xl p-5 md:p-8 article-content">
-        <h2>The Complete Guide to Line Counting: Essential Metrics for Developers, Writers, and Data Professionals</h2>
+        <h2>The Complete Guide to Find and Replace: Mastering Text Manipulation for Efficiency and Accuracy</h2>
         
-        <p><strong>Line counting</strong> serves as a fundamental metric across numerous professional disciplines, from software development and technical writing to data analysis and academic research. Understanding the number of lines in a document, code file, or dataset provides crucial insights into complexity, scope, and resource requirements. This comprehensive guide explores the importance of <strong>online line counters</strong>, their diverse applications, and how to leverage these tools to enhance productivity and achieve precise documentation standards.</p>
+        <p><strong>Find and replace</strong> functionality represents one of the most fundamental yet powerful tools in digital text manipulation. From simple typo corrections to complex pattern-based transformations, the ability to search and replace text efficiently saves countless hours across writing, coding, data processing, and content management workflows. This comprehensive guide explores the capabilities of modern <strong>online find and replace</strong> tools, their applications across diverse professional fields, and advanced techniques for maximizing productivity.</p>
 
-        <h2>Understanding Line Count Metrics: Beyond Simple Enumeration</h2>
+        <h2>Understanding Find and Replace: Beyond Basic Text Substitution</h2>
         
-        <p>When we discuss <strong>line counter</strong> tools, we're referring to sophisticated analyzers that provide multiple dimensions of text structure analysis. While the primary metric—<strong>total line count</strong>—represents the raw number of lines including all content, modern <strong>line count tool</strong> solutions offer far more nuanced insights that help professionals assess document structure and complexity.</p>
+        <p>At its core, <strong>find and replace</strong> involves locating specific text patterns within a document and substituting them with alternative content. However, modern <strong>find and replace tool</strong> implementations offer sophisticated capabilities that extend far beyond simple literal string substitution. Understanding these advanced features unlocks new levels of efficiency in text processing workflows.</p>
 
-        <p><strong>Non-empty line count</strong> (also called significant lines or SLOC—Source Lines of Code in programming contexts) excludes blank lines and provides a more accurate measure of actual content. <strong>Empty line count</strong> helps assess document formatting and readability—appropriate whitespace improves comprehension but excessive blank lines may indicate poor structure. <strong>Average line length</strong> offers insights into writing style or code complexity, while <strong>longest line identification</strong> helps identify potential formatting issues or readability problems.</p>
+        <p><strong>Case sensitivity control</strong> determines whether searches distinguish between uppercase and lowercase letters. Searching for "The" with case sensitivity enabled will not match "the" or "THE," while disabled case sensitivity treats all variations as equivalent. This distinction proves crucial when working with proper nouns, programming languages with case-sensitive syntax, or documents requiring precise capitalization standards.</p>
 
-        <p>For technical documentation and coding projects, understanding the distinction between total lines and meaningful lines is crucial. A file with 1,000 total lines might contain only 600 lines of actual code or content, with the remainder being whitespace, comments, or formatting. Our <strong>free line counter</strong> provides all these metrics simultaneously, enabling comprehensive document analysis.</p>
+        <p><strong>Whole word matching</strong> ensures that searches only match complete words, not partial occurrences within larger words. Searching for "cat" with whole word enabled will match "cat" but not "category" or "concatenate." This precision prevents unintended replacements that could corrupt document meaning or code functionality. Professional <strong>text find and replace online</strong> tools provide visual indicators showing exactly what will be matched before replacement occurs.</p>
 
-        <h2>The Critical Role of Line Counting in Software Development</h2>
+        <p><strong>Regular expression (regex) support</strong> transforms find and replace from a simple utility into a powerful pattern-matching engine. Regular expressions allow searches for complex patterns like email addresses, phone numbers, dates, or custom data formats. Advanced users leverage regex to perform transformations impossible with literal text matching, such as reformatting dates, extracting data, or normalizing inconsistent formatting.</p>
 
-        <h3>Code Metrics and Project Estimation</h3>
+        <h2>Professional Applications of Find and Replace</h2>
+
+        <h3>Content Editing and Publishing</h3>
         
-        <p>Software developers rely heavily on line counting for project estimation, complexity assessment, and productivity measurement. <strong>Lines of Code (LOC)</strong> or <strong>Source Lines of Code (SLOC)</strong> remains one of the most widely used metrics in software engineering, despite debates about its limitations. Industry benchmarks suggest that average developers write 10-20 lines of production code per day when accounting for testing, debugging, and documentation.</p>
+        <p>Professional editors and writers rely heavily on <strong>find and replace words online</strong> capabilities during the editing process. Manuscript preparation often involves systematic changes—updating character names across an entire novel, converting between British and American spellings, or standardizing terminology throughout technical documentation. Manual implementation of these changes would require hours of tedious work and introduce high error risk.</p>
 
-        <p>Project managers use <strong>line count calculator online</strong> tools to estimate development timelines and resource allocation. A feature requiring 1,000 lines of code might take approximately 50-100 developer days, depending on complexity and language. Legacy system analysis often involves counting millions of lines across thousands of files to assess maintenance requirements and technical debt.</p>
+        <p>Style guide compliance represents another critical application. Publications often require specific formatting conventions: serial commas, number formatting, citation styles, or capitalization rules. A comprehensive <strong>find and replace text editor online</strong> enables editors to enforce these standards consistently across entire documents or document collections. Batch processing capabilities allow simultaneous updates to multiple files, ensuring uniformity across publications.</p>
 
-        <p>Code quality initiatives frequently target line count reduction. Refactoring efforts aim to decrease lines while maintaining functionality, as shorter, more expressive code typically contains fewer bugs and is easier to maintain. Professional developers use <strong>text line analyzer online</strong> tools before and after refactoring to measure improvement quantitatively.</p>
+        <p>SEO content optimization benefits significantly from systematic text replacement. Updating meta descriptions across hundreds of pages, standardizing internal link anchor text, or refreshing outdated product names requires efficient bulk replacement tools. <strong>Find and replace tool for SEO</strong> applications help content managers maintain consistency and relevance without manually editing each page individually.</p>
 
-        <h3>Programming Language Considerations</h3>
+        <h3>Software Development and Code Maintenance</h3>
         
-        <p>Different programming languages yield dramatically different line counts for equivalent functionality. Python and Ruby typically require fewer lines than Java or C++ for the same feature. A Python script might accomplish in 50 lines what requires 200 lines of Java code. This variation makes cross-language line count comparisons challenging but still valuable for intra-project trend analysis.</p>
+        <p>Programmers utilize <strong>find and replace text tool for coding</strong> daily for refactoring, updating dependencies, and maintaining codebases. Variable renaming across multiple files, updating API calls after library upgrades, or migrating from deprecated functions to modern alternatives all require sophisticated search and replace capabilities. Modern development environments integrate these tools deeply, but browser-based <strong>free find and replace utility</strong> solutions offer accessibility for quick edits without IDE overhead.</p>
 
-        <p>Modern development practices affect line counting methodologies. Minified JavaScript or CSS condenses code into fewer lines but sacrifices readability. Transpiled languages like TypeScript generate additional lines when compiled to JavaScript. Container configuration files and infrastructure-as-code (Terraform, CloudFormation) represent executable lines that must be counted for DevOps project scoping. Professional <strong>line counter for coding</strong> tools account for these variations by providing language-specific analysis options.</p>
+        <p>Code refactoring often involves pattern-based transformations that regular expressions handle elegantly. Converting callback functions to async/await syntax, updating import statements during module restructuring, or standardizing error handling patterns across a codebase—these operations require more than literal string matching. Regex-capable <strong>online find and replace</strong> tools enable developers to express complex transformation rules succinctly.</p>
 
-        <h2>Technical Writing and Documentation Standards</h2>
+        <p>Configuration file management across environments presents unique challenges. Development, staging, and production environments require different database connections, API endpoints, or feature flags. Automated deployment pipelines use find and replace operations to customize configuration files for each environment, ensuring correct settings without maintaining separate file versions.</p>
 
-        <h3>Documentation Complexity Assessment</h3>
+        <h3>Data Processing and Cleaning</h3>
         
-        <p>Technical writers use line counting to assess documentation complexity and estimate translation costs. API documentation might range from hundreds to thousands of lines depending on endpoint complexity. User manuals for enterprise software often exceed 10,000 lines across multiple files and formats.</p>
+        <p>Data scientists and analysts frequently encounter datasets requiring standardization before analysis. Inconsistent formatting, varying date representations, mixed units of measurement, or non-standardized categorical values all require systematic correction. <strong>Bulk find and replace online</strong> capabilities enable rapid data cleaning, transforming messy real-world data into analysis-ready formats.</p>
 
-        <p>Style guides frequently specify line-length limits to ensure readability. Technical documentation typically recommends 80-100 characters per line for optimal comprehension. Lines exceeding these limits require horizontal scrolling or awkward wrapping, degrading user experience. <strong>Online line counter</strong> tools with line length analysis help writers identify and correct formatting violations.</p>
+        <p>CSV and tabular data processing particularly benefit from pattern-based replacement. Phone number standardization, address formatting, name capitalization corrections, or currency symbol normalization—these repetitive tasks yield easily to automated replacement rules. Data migration projects between systems with different formatting requirements rely heavily on transformation rules implemented through find and replace operations.</p>
 
-        <h3>Translation and Localization Workflows</h3>
+        <p>Log file analysis and monitoring systems use find and replace for pattern extraction and alerting. Security logs might require IP address anonymization for privacy compliance. Application logs benefit from sensitive data redaction before sharing with support teams. These privacy-preserving transformations protect confidential information while maintaining log utility for troubleshooting.</p>
+
+        <h2>Advanced Find and Replace Techniques</h2>
+
+        <h3>Regular Expression Mastery</h3>
         
-        <p>Professional translators often price services based on line count rather than word count for technical documentation, as lines more accurately reflect formatting complexity and layout constraints. A document with short lines (bullet points, headers) requires different handling than one with long paragraphs, even if word counts are identical.</p>
+        <p>Regular expressions elevate <strong>find and replace</strong> from simple substitution to powerful text processing. Understanding regex syntax opens possibilities for complex pattern matching: character classes ([a-z], \d, \w), quantifiers (*, +, ?, {n,m}), anchors (^, $, \b), and capture groups enable sophisticated text manipulation.</p>
 
-        <p>Localization engineers use <strong>bulk line counter online</strong> tools to analyze entire documentation suites before translation projects. Understanding line distribution across files helps allocate resources effectively—files with thousands of lines might require multiple translators, while smaller files can be handled individually. Line count also impacts desktop publishing (DTP) costs, as page layout complexity correlates with line structure.</p>
+        <p>Capture groups particularly enhance replacement capabilities. By enclosing pattern portions in parentheses, users can reference matched content in replacement strings. Converting dates from MM/DD/YYYY to YYYY-MM-DD format becomes straightforward: search for (\d{2})/(\d{2})/(\d{4}) and replace with $3-$1-$2. This technique proves invaluable for data format conversions, code generation, and template processing.</p>
 
-        <h2>Data Processing and Analysis Applications</h2>
-
-        <h3>Dataset Structure Assessment</h3>
-        
-        <p>Data scientists and analysts frequently work with text-based data formats where line count indicates dataset size. CSV files, log files, JSONL (JSON Lines), and other structured text formats use lines as records. A CSV file with 100,000 lines contains 100,000 data rows (plus potentially one header line).</p>
-
-        <p>Log file analysis relies heavily on line counting for capacity planning and anomaly detection. A web server generating 10,000 log lines per minute creates 14.4 million lines daily—storage and processing requirements must account for this volume. <strong>Line counting utility online</strong> tools help system administrators validate log rotation strategies and estimate storage growth.</p>
-
-        <p>Data validation workflows use line counts as sanity checks. If an import process expects 50,000 records but encounters only 45,000 lines, data corruption or truncation may have occurred. ETL (Extract, Transform, Load) pipelines frequently include line count verification steps to ensure data integrity.</p>
-
-        <h3>Academic and Research Applications</h3>
-        
-        <p>Researchers in computational linguistics, digital humanities, and social sciences analyze text corpora where line count represents document structure. Poetry analysis might examine line lengths and distribution patterns. Legal document analysis uses line counting to compare contract versions or assess document completeness.</p>
-
-        <p>Survey data often arrives in line-based formats requiring validation. A survey with 1,000 respondents should generate 1,000 data lines (excluding headers). Discrepancies between expected and actual line counts indicate missing responses or data collection errors. Researchers use <strong>free online line counter tool</strong> solutions to quickly verify dataset completeness before analysis.</p>
-
-        <h2>Best Practices for Accurate Line Counting</h2>
-
-        <h3>Understanding Line Termination</h3>
-        
-        <p>Line counting algorithms must handle different line ending conventions: Unix/Linux uses LF (Line Feed, \n), Windows uses CRLF (Carriage Return + Line Feed, \r\n), and classic Mac OS used CR (\r). Modern <strong>online text line counter free</strong> tools normalize these variations, counting logical lines regardless of platform-specific endings.</p>
-
-        <p>However, discrepancies can occur when files mix line ending styles or contain unusual Unicode line separators. When precise line counts matter (such as for competitive programming or strict documentation standards), verify that your counting tool handles all line ending variants correctly. Our tool normalizes all common line ending formats to ensure consistent counts across platforms.</p>
-
-        <h3>Handling Whitespace and Empty Lines</h3>
-        
-        <p>Not all empty lines are truly empty—some contain whitespace characters (spaces, tabs) that are invisible but affect line counting. Professional <strong>line count checker online</strong> tools distinguish between completely empty lines and whitespace-only lines. This distinction matters for code quality assessments, as whitespace-only lines often indicate formatting errors.</p>
-
-        <p>Trailing whitespace at line endings presents similar challenges. Many style guides prohibit trailing spaces, but they don't affect line count. Leading whitespace (indentation) is significant for code structure but doesn't change line enumeration. Understanding these nuances helps interpret line count metrics accurately.</p>
+        <p>Lookahead and lookbehind assertions enable context-dependent matching without including the context in the replacement. Replacing "price" with "cost" only when preceded by "total" (but not replacing "total" itself) requires lookbehind: (?<=total\s)price. These advanced assertions support nuanced transformations impossible with simple pattern matching.</p>
 
         <h3>Multi-File and Batch Processing</h3>
         
-        <p>Real-world projects rarely involve single files. A typical web application might comprise hundreds of files across multiple directories. <strong>Bulk line counter online</strong> capabilities enable analysis of entire projects, providing aggregate statistics alongside individual file metrics.</p>
+        <p>Real-world projects rarely involve single files. Website updates span hundreds of HTML files. Code refactoring affects dozens of source files. Documentation revisions propagate across multiple chapters or volumes. <strong>Online text replace tool free</strong> solutions with multi-file support enable efficient bulk operations while maintaining safety through preview capabilities.</p>
 
-        <p>When processing multiple files, consider directory structure and file organization. A well-organized project might distribute lines evenly across modules, while a poorly structured one might concentrate complexity in a few massive files. Line count distribution across files serves as a code organization quality indicator.</p>
+        <p>Batch processing requires careful consideration of scope and backup strategies. Professional tools offer dry-run modes showing what would change without actually modifying files. Version control integration ensures changes can be reviewed and reverted if necessary. These safeguards prevent catastrophic unintended replacements across critical file collections.</p>
 
-        <h2>Industry-Specific Line Counting Applications</h2>
-
-        <h3>Legal and Compliance Documentation</h3>
+        <h3>Preserving Formatting and Structure</h3>
         
-        <p>Legal professionals operate under strict formatting requirements where line count affects document validity. Court filings often specify exact line spacing and count requirements. Contracts might reference "page 5, line 23" for specific clauses, making accurate line enumeration legally significant.</p>
+        <p>Effective <strong>find and replace sentences online</strong> operations maintain document structure and formatting. Simple text replacement might disrupt Markdown syntax, HTML tags, or code indentation. Advanced tools recognize document structure, offering options to preserve formatting, maintain indentation levels, or respect syntax boundaries.</p>
 
-        <p>Regulatory submissions (FDA, SEC, EU regulatory bodies) frequently impose line and page limits. Pharmaceutical companies must fit drug descriptions into specified line counts for packaging inserts. Financial disclosures must balance comprehensiveness with regulatory length constraints. Legal teams use <strong>line counter for documents</strong> tools to verify compliance before submission.</p>
+        <p>Case preservation during replacement presents another formatting consideration. When replacing "javascript" with "JavaScript," instances at sentence beginnings require capitalization while mid-sentence occurrences remain lowercase. Sophisticated <strong>free online text find and replace</strong> tools offer intelligent case handling, matching the capitalization pattern of found text in the replacement.</p>
 
-        <h3>Publishing and Typesetting</h3>
+        <h2>Best Practices for Effective Find and Replace</h2>
+
+        <h3>Validation and Testing</h3>
         
-        <p>Traditional publishing workflows relied heavily on line counts for page estimation. A standard manuscript page contains approximately 25 lines; a 300-page book comprises roughly 7,500 lines of text. Modern digital publishing maintains these conventions for print-on-demand and traditional printing processes.</p>
+        <p>Before executing replacements, especially across multiple files, thorough validation prevents costly errors. Preview functionality showing exactly what will be matched and replaced enables confidence in operations. Testing replacement rules on sample data or copies of production files identifies edge cases and unintended matches before committing changes.</p>
 
-        <p>Poetry and verse forms use line count as a structural element. Sonnets require 14 lines, haiku follows a 3-line structure with specific syllable counts. Literary analysis often examines line length variation and distribution patterns. Digital humanities scholars use <strong>text metrics line counter</strong> tools to analyze large poetry corpora quantitatively.</p>
+        <p>Regular expression testing deserves particular attention. Complex patterns might match unexpected strings or fail to match intended targets. Online regex testers help validate patterns against sample inputs, explaining match behavior and highlighting potential issues. Investing time in pattern validation saves significant debugging effort later.</p>
 
-        <h3>Subtitle and Caption Creation</h3>
+        <h3>Incremental Replacement Strategy</h3>
         
-        <p>Video localization professionals work with strict line constraints for subtitles and captions. Most platforms limit subtitles to 2 lines of 32-42 characters each. Exceeding these limits requires text condensation or line splitting. Professional subtitle editors use line counting alongside character counting to ensure compliance.</p>
+        <p>For critical documents or large-scale operations, incremental replacement reduces risk. Replace one occurrence, verify correctness, then proceed with remaining instances. This cautious approach catches pattern errors early before they propagate throughout entire documents. Many <strong>find and replace phrases online</strong> tools offer single-replacement modes alongside bulk replacement for this purpose.</p>
 
-        <p>Closed captioning for accessibility follows similar constraints while adding timing requirements. A 30-minute video might contain 400-600 caption lines, depending on dialogue density. <strong>Free online text line tracker</strong> tools help captioners estimate project scope and meet delivery deadlines.</p>
+        <p>Version control integration supports incremental strategies. Committing changes after each logical replacement group creates restore points. If later replacements introduce errors, reverting to previous commits recovers valid states. This workflow combines the efficiency of automated replacement with the safety of versioned backups.</p>
 
-        <h2>Comparing Line Counter Tools and Methodologies</h2>
-
-        <p>The market offers numerous <strong>online line counter</strong> solutions with varying capabilities. When selecting a tool, evaluate these essential features:</p>
-
-        <p><strong>Multi-file support</strong> enables batch processing of entire projects rather than individual files. <strong>Real-time analysis</strong> provides immediate feedback as you type or paste text. <strong>Detailed metrics</strong> beyond simple line count (empty lines, average length, longest line) offer deeper insights. <strong>Privacy protection</strong> ensures sensitive code or documents aren't transmitted to remote servers. <strong>Export capabilities</strong> support documentation and reporting requirements.</p>
-
-        <p>Command-line tools like wc (word count) in Unix/Linux provide basic line counting but lack user-friendly interfaces and real-time feedback. IDE plugins offer integrated line counting but are limited to specific development environments. Browser-based <strong>count text lines free</strong> tools provide the best balance of accessibility, features, and ease of use for most applications.</p>
-
-        <h2>Advanced Line Counting Techniques</h2>
-
-        <h3>Semantic Line Counting</h3>
+        <h3>Documentation and Reproducibility</h3>
         
-        <p>Beyond physical lines, semantic line counting groups related content. In code, this might mean counting logical statements rather than physical lines—a single logical statement split across five physical lines counts as one semantic unit. Natural language processing enables similar analysis for text documents, identifying sentence and paragraph boundaries regardless of line breaks.</p>
+        <p>Complex replacement operations, particularly those using regular expressions, should be documented for reproducibility. Recording the exact search pattern, replacement string, and options enables repeating the operation on future documents or sharing procedures with team members. Some advanced tools save replacement recipes for reuse, standardizing common transformations across organizations.</p>
 
-        <h3>Diff and Change Analysis</h3>
-        
-        <p>Version control systems use line-based differencing to track changes between file versions. Understanding which lines changed, were added, or were removed provides insights into development velocity and code churn. Advanced <strong>line statistics tool online</strong> solutions integrate with version control to provide historical line count trends.</p>
+        <h2>Comparing Find and Replace Tools</h2>
 
-        <h3>Visualization and Reporting</h3>
-        
-        <p>Line count data becomes more valuable when visualized. Heat maps showing line density across files highlight complexity concentration. Trend graphs track line count growth over project lifecycles. Distribution charts reveal whether line lengths follow normal patterns or contain anomalies. Professional reporting tools transform raw line counts into actionable intelligence.</p>
+        <p>The market offers numerous <strong>find and replace online</strong> solutions with varying capabilities. When selecting tools, evaluate these essential features:</p>
 
-        <h2>The Future of Line Counting and Text Metrics</h2>
+        <p><strong>Real-time preview</strong> shows matches and replacements before execution, preventing errors. <strong>Undo functionality</strong> enables quick reversion of unintended changes. <strong>Multi-file support</strong> extends utility beyond single-document editing. <strong>Regular expression support</strong> unlocks advanced pattern matching. <strong>Privacy protection</strong> ensures sensitive content isn't transmitted to remote servers. <strong>Export capabilities</strong> support integration with external workflows.</p>
 
-        <p>As artificial intelligence transforms content creation and analysis, line counting evolves from simple enumeration to sophisticated structural analysis. AI writing assistants use line and paragraph structure to optimize readability. Automated code review tools analyze line complexity and suggest refactoring. Machine learning models trained on line patterns can identify authorship, detect plagiarism, and classify document types.</p>
+        <p>Desktop applications like Microsoft Word or Sublime Text offer integrated find and replace, but browser-based <strong>free online find and replace</strong> tools provide accessibility advantages. No installation required, platform independence, and immediate availability make web-based solutions ideal for quick edits, shared computers, or restricted environments where software installation isn't permitted.</p>
 
-        <p>However, the fundamental need to know how many lines comprise a document remains unchanged. Whether you're estimating a development project, validating a dataset, formatting a legal document, or analyzing literature, precise line counting ensures accuracy and professionalism. Our <strong>online line count measurement tool</strong> combines time-tested counting accuracy with modern interface design and advanced analytics.</p>
+        <h2>The Future of Text Manipulation</h2>
+
+        <p>Artificial intelligence is transforming text manipulation capabilities. AI-powered find and replace tools understand semantic meaning, not just character patterns. Replacing "happy" with synonyms contextually appropriate for each occurrence, maintaining tone and register, represents the next evolution beyond literal replacement.</p>
+
+        <p>However, the fundamental need for precise, controllable text replacement remains unchanged. Whether correcting typos, refactoring code, cleaning data, or standardizing terminology, professionals require reliable <strong>replace text online free</strong> tools that execute exactly what they specify. Our tool combines time-tested replacement accuracy with modern interface design and advanced options like regex support and case preservation.</p>
 
         <h2>Conclusion</h2>
 
-        <p>Line counting represents far more than a simple numerical exercise—it's an essential analytical practice across software development, technical writing, data science, legal work, and academic research. Understanding document structure through line metrics enables better project estimation, quality assessment, and compliance verification. Our comprehensive <strong>free online line count analyzer</strong> provides the detailed metrics professionals need while maintaining complete privacy and ease of use.</p>
+        <p>Find and replace functionality, despite its apparent simplicity, underlies countless professional workflows across writing, programming, data analysis, and content management. Mastering both basic and advanced replacement techniques significantly enhances productivity and accuracy. From simple typo corrections to complex regex-powered transformations, the ability to manipulate text efficiently distinguishes proficient digital workers from those struggling with manual editing.</p>
 
-        <p>The best line counting tools combine accuracy, speed, and usability with features that support real-world workflows. Our <strong>online text line counter free</strong> solution handles single files or bulk uploads, provides real-time analysis, and exports comprehensive reports. Whether you're a developer measuring code complexity, a writer structuring documentation, a researcher validating datasets, or a legal professional ensuring compliance, our line counter delivers the precise metrics you need to succeed.</p>
+        <p>Our <strong>free find and replace tool</strong> provides professional-grade capabilities in an accessible, privacy-respecting web interface. Whether you're a writer standardizing terminology, a developer refactoring code, an analyst cleaning data, or an editor enforcing style guides, our tool delivers the precise control and advanced features necessary for efficient text manipulation. The combination of real-time preview, undo support, regex compatibility, and complete browser-based privacy makes it an essential utility for modern text processing workflows.</p>
       </article>
     </section>
 
@@ -716,85 +673,97 @@
       <div class="space-y-3" id="faqContainer">
         <div class="glass-panel rounded-xl overflow-hidden">
           <button class="faq-toggle w-full p-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
-            <span class="font-medium text-gray-200 text-sm pr-4">What is the difference between total lines and non-empty lines?</span>
+            <span class="font-medium text-gray-200 text-sm pr-4">What is the difference between "Replace All" and "Replace One"?</span>
             <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
           </button>
           <div class="faq-content px-4">
-            <p class="text-gray-400 text-xs pb-4 leading-relaxed"><strong>Total lines</strong> counts every line in your text, including blank lines, whitespace-only lines, and lines with content. <strong>Non-empty lines</strong> (also called significant lines) counts only lines that contain visible characters, excluding blank lines and lines with only spaces or tabs. For code analysis, non-empty lines often correlate with actual statements (SLOC—Source Lines of Code), while total lines includes formatting whitespace. Both metrics are valuable: total lines indicates file size and structure, while non-empty lines measures actual content density.</p>
+            <p class="text-gray-400 text-xs pb-4 leading-relaxed"><strong>Replace All</strong> finds and replaces every occurrence of your search text throughout the entire document in a single operation. This is efficient for bulk changes when you're confident all matches should be replaced. <strong>Replace One</strong> replaces only the first occurrence found, allowing you to review and approve each change individually. This cautious approach is recommended when working with important documents or complex patterns where some matches might need different treatment. Use Replace One to verify the replacement works correctly before committing to Replace All.</p>
           </div>
         </div>
 
         <div class="glass-panel rounded-xl overflow-hidden">
           <button class="faq-toggle w-full p-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
-            <span class="font-medium text-gray-200 text-sm pr-4">Is this line counter tool free to use?</span>
+            <span class="font-medium text-gray-200 text-sm pr-4">How do regular expressions work in this tool?</span>
             <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
           </button>
           <div class="faq-content px-4">
-            <p class="text-gray-400 text-xs pb-4 leading-relaxed">Yes, our <strong>online line counter</strong> is completely free to use with no registration required. There are no usage limits, no watermarks, and no hidden fees. You can count lines in single files or process multiple files simultaneously. We believe professional text analysis tools should be accessible to everyone, from developers analyzing codebases to writers structuring documents. The tool is supported by unobtrusive advertising that doesn't interfere with your workflow.</p>
+            <p class="text-gray-400 text-xs pb-4 leading-relaxed">Regular expressions (regex) are powerful pattern-matching syntax that allow searching for complex text patterns beyond literal strings. Enable "Use Regular Expressions" to access this feature. Common patterns include: <code>\d</code> for any digit, <code>\w</code> for word characters, <code>.</code> for any character, <code>*</code> for zero or more occurrences, <code>+</code> for one or more, and <code>[]</code> for character classes. For example, searching for <code>\d{3}-\d{4}</code> finds phone number patterns like "123-4567". Use parentheses for capture groups: <code>(\w+)@(\w+)\.com</code> finds email addresses and lets you reference matched parts in replacements with $1, $2, etc.</p>
           </div>
         </div>
 
         <div class="glass-panel rounded-xl overflow-hidden">
           <button class="faq-toggle w-full p-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
-            <span class="font-medium text-gray-200 text-sm pr-4">Is my text and files stored or sent to your servers?</span>
+            <span class="font-medium text-gray-200 text-sm pr-4">Is this find and replace tool free to use?</span>
             <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
           </button>
           <div class="faq-content px-4">
-            <p class="text-gray-400 text-xs pb-4 leading-relaxed">Absolutely not. Our <strong>line counter</strong> processes everything locally in your browser using JavaScript. Your text and files never leave your device, are never transmitted to our servers, and are never stored anywhere. This makes our tool ideal for sensitive codebases, confidential documents, proprietary business files, and personal writing. You can verify this by checking your browser's network tab—no data is sent while you analyze text or upload files. Your privacy is 100% guaranteed.</p>
+            <p class="text-gray-400 text-xs pb-4 leading-relaxed">Yes, our <strong>online find and replace</strong> tool is completely free to use with no registration required. All features—including regular expressions, case sensitivity options, whole word matching, and file upload—are available without cost. There are no usage limits, watermarks, or hidden fees. We believe professional text editing tools should be accessible to everyone, from students working on essays to developers refactoring code. The tool is supported by unobtrusive advertising that doesn't interfere with your workflow or privacy.</p>
           </div>
         </div>
 
         <div class="glass-panel rounded-xl overflow-hidden">
           <button class="faq-toggle w-full p-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
-            <span class="font-medium text-gray-200 text-sm pr-4">How many files can I upload at once?</span>
+            <span class="font-medium text-gray-200 text-sm pr-4">Is my text stored or sent to your servers?</span>
             <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
           </button>
           <div class="faq-content px-4">
-            <p class="text-gray-400 text-xs pb-4 leading-relaxed">Our tool supports uploading and analyzing multiple files simultaneously—there's no strict limit on the number of files. You can select multiple files through the file picker or drag and drop entire selections. However, practical limits depend on your device's memory and browser capabilities. For best performance, we recommend processing batches of 50-100 files at a time for very large projects. Each file is analyzed individually, and you get both per-file statistics and combined totals. The maximum file size per individual file is approximately 10MB.</p>
+            <p class="text-gray-400 text-xs pb-4 leading-relaxed">Absolutely not. Our <strong>find and replace tool</strong> processes everything locally in your browser using JavaScript. Your text, files, and search patterns never leave your device, are never transmitted to our servers, and are never stored anywhere. This makes our tool ideal for sensitive content—confidential business documents, proprietary code, personal information, or client work. You can verify this by checking your browser's network tab; no data is sent during find and replace operations. Your privacy and data security are 100% guaranteed.</p>
           </div>
         </div>
 
         <div class="glass-panel rounded-xl overflow-hidden">
           <button class="faq-toggle w-full p-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
-            <span class="font-medium text-gray-200 text-sm pr-4">What file types are supported?</span>
+            <span class="font-medium text-gray-200 text-sm pr-4">What does "Preserve Case" option do?</span>
             <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
           </button>
           <div class="faq-content px-4">
-            <p class="text-gray-400 text-xs pb-4 leading-relaxed">Our <strong>line counter</strong> supports all text-based file formats including .txt (plain text), .md (Markdown), .csv (CSV data), .json (JSON files), .xml (XML data), and all major programming language files: .js (JavaScript), .html/.htm (HTML), .css (CSS), .py (Python), .java (Java), .cpp/.c/.h (C/C++), .php (PHP), .rb (Ruby), .go (Go), .rs (Rust), .ts (TypeScript), and many more. Essentially, any file that can be opened in a text editor can be analyzed. Binary files (images, executables, compiled code) cannot be meaningfully analyzed as they don't contain readable lines.</p>
+            <p class="text-gray-400 text-xs pb-4 leading-relaxed">The <strong>Preserve Case</strong> option intelligently matches the capitalization of your replacement text to the found text. For example, if you're replacing "javascript" with "python" and Preserve Case is enabled: "Javascript" becomes "Python" (sentence case), "JAVASCRIPT" becomes "PYTHON" (uppercase), and "javascript" becomes "python" (lowercase). This is extremely useful when standardizing terminology across documents where words appear in various capitalizations—at sentence beginnings, in headings, or in all-caps contexts. Without this option, all instances would be replaced with exactly what you type in the replacement field.</p>
           </div>
         </div>
 
         <div class="glass-panel rounded-xl overflow-hidden">
           <button class="faq-toggle w-full p-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
-            <span class="font-medium text-gray-200 text-sm pr-4">How does the tool handle different line endings?</span>
+            <span class="font-medium text-gray-200 text-sm pr-4">What file types are supported for upload?</span>
             <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
           </button>
           <div class="faq-content px-4">
-            <p class="text-gray-400 text-xs pb-4 leading-relaxed">Our tool automatically handles all common line ending formats: Unix/Linux LF (Line Feed, \n), Windows CRLF (Carriage Return + Line Feed, \r\n), and classic Mac CR (\r). We normalize these variations internally to ensure consistent counting regardless of the file's origin. A file created on Windows will show the same line count as one created on Mac or Linux, even though the underlying bytes differ. This normalization is essential for teams working across different operating systems and ensures accurate comparisons between files.</p>
+            <p class="text-gray-400 text-xs pb-4 leading-relaxed">Our tool supports all text-based file formats including .txt (plain text), .md (Markdown), .csv (CSV data), .json (JSON files), .xml (XML data), .html/.htm (HTML), .css (CSS stylesheets), and all major programming language files: .js (JavaScript), .py (Python), .java (Java), .cpp/.c/.h (C/C++), .php (PHP), .rb (Ruby), .go (Go), .rs (Rust), .ts (TypeScript), and more. Essentially, any file that can be opened in a text editor is supported. Binary files (images, videos, executables, compiled programs) cannot be meaningfully edited as they don't contain readable text. The maximum file size is 10MB per file.</p>
           </div>
         </div>
 
         <div class="glass-panel rounded-xl overflow-hidden">
           <button class="faq-toggle w-full p-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
-            <span class="font-medium text-gray-200 text-sm pr-4">Can I use this for counting lines of code (LOC)?</span>
+            <span class="font-medium text-gray-200 text-sm pr-4">Can I undo changes after replacing?</span>
             <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
           </button>
           <div class="faq-content px-4">
-            <p class="text-gray-400 text-xs pb-4 leading-relaxed">Absolutely! Our tool is excellent for counting lines of code (LOC) and source lines of code (SLOC). We provide both total line count and non-empty line count, which approximates SLOC by excluding blank lines. You can upload entire codebases, view individual file statistics, and get combined totals. The tool supports all major programming languages. However, for advanced code metrics like counting only executable statements (excluding comments), you might need specialized code analysis tools. Our tool focuses on physical line counting, which is the standard metric for project estimation and complexity assessment.</p>
+            <p class="text-gray-400 text-xs pb-4 leading-relaxed">Yes! Our tool includes an <strong>Undo</strong> button that appears after you perform a replacement operation. Clicking Undo restores your text to its state before the last replacement. This safety feature allows you to experiment with different replacements without fear of permanent changes. Note that undo only stores the last replacement operation—if you perform multiple replacements in sequence, undo will revert only the most recent one. For important documents, we recommend copying your original text before making changes, or using Replace One to verify changes incrementally before using Replace All.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 text-sm pr-4">How do I use this tool for code refactoring?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-4">
+            <p class="text-gray-400 text-xs pb-4 leading-relaxed">Our tool is excellent for code refactoring tasks. Load your code file using the file picker or drag-and-drop. Use <strong>Find All</strong> first to see all occurrences of the code you want to change. Enable <strong>Whole Word Only</strong> to avoid replacing partial matches (e.g., replacing "var" but not "variable"). Enable <strong>Case Sensitive</strong> for languages where case matters (JavaScript, Python, etc.). For complex refactoring, enable <strong>Regular Expressions</strong> to match patterns like function definitions or specific syntax structures. After replacement, copy the result and paste it back into your code editor, or download the modified file directly. Always test your code after refactoring to ensure functionality remains intact.</p>
           </div>
         </div>
 
@@ -806,31 +775,19 @@
             </svg>
           </button>
           <div class="faq-content px-4">
-            <p class="text-gray-400 text-xs pb-4 leading-relaxed">Yes! Our <strong>line counter</strong> is fully responsive and works perfectly on smartphones, tablets, and desktops. The interface adapts to your screen size with touch-optimized buttons and scrollable areas for easy mobile use. You can count lines on the go—perfect for quick checks of documents, code reviews on mobile devices, or analyzing text files stored on your phone. No app installation required; just visit the website in your mobile browser. The tool supports both portrait and landscape orientations and works offline once loaded.</p>
+            <p class="text-gray-400 text-xs pb-4 leading-relaxed">Yes! Our <strong>find and replace tool</strong> is fully responsive and works perfectly on smartphones, tablets, and desktops. The interface adapts to your screen size with touch-optimized buttons and scrollable text areas for easy mobile editing. You can search and replace text on the go—perfect for quick edits to documents, correcting emails before sending, or making urgent text changes when away from your computer. No app installation required; just visit the website in your mobile browser. The tool supports both portrait and landscape orientations and works offline once loaded.</p>
           </div>
         </div>
 
         <div class="glass-panel rounded-xl overflow-hidden">
           <button class="faq-toggle w-full p-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
-            <span class="font-medium text-gray-200 text-sm pr-4">How do I download statistics for multiple files?</span>
+            <span class="font-medium text-gray-200 text-sm pr-4">Why can't I see any matches when I know the text exists?</span>
             <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
           </button>
           <div class="faq-content px-4">
-            <p class="text-gray-400 text-xs pb-4 leading-relaxed">When working with multiple files, you have two download options. The "Download Stats" button generates a report for the currently displayed text (either typed/pasted content or a single selected file). The "Download All" button (visible when multiple files are uploaded) creates a comprehensive report including statistics for every uploaded file plus combined totals. Each report includes: total lines, non-empty lines, empty lines, words, characters, average line length, longest line, and byte count. Reports download as .txt files with timestamps for easy documentation and record-keeping.</p>
-          </div>
-        </div>
-
-        <div class="glass-panel rounded-xl overflow-hidden">
-          <button class="faq-toggle w-full p-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
-            <span class="font-medium text-gray-200 text-sm pr-4">What is the maximum file size supported?</span>
-            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-            </svg>
-          </button>
-          <div class="faq-content px-4">
-            <p class="text-gray-400 text-xs pb-4 leading-relaxed">Our tool supports individual files up to approximately <strong>10MB</strong> (around 10 million characters), depending on your device's memory and browser capabilities. For text files, this typically translates to several hundred thousand lines. When processing multiple files, the total combined size should stay under 50MB for optimal performance. Extremely large files (novels, massive log files, extensive databases) may experience slight delays in analysis but will process correctly. If you encounter performance issues with very large files, consider splitting them into smaller chunks or analyzing sections individually.</p>
+            <p class="text-gray-400 text-xs pb-4 leading-relaxed">If matches aren't appearing when you expect them, check these common causes: 1) <strong>Case Sensitivity</strong> is enabled but your search case doesn't match (searching for "The" won't find "the"). 2) <strong>Whole Word Only</strong> is enabled but your search term is part of larger words. 3) <strong>Regular Expressions</strong> is enabled but your search contains regex special characters (. * + ? ^ $ etc.) that need escaping with backslashes. 4) Hidden characters like non-breaking spaces or special Unicode characters might be present—try copying the exact text from your input. 5) The text might be in the output area rather than input—make sure you're searching in the correct field. Use the "Find All" button to refresh the match count and preview.</p>
           </div>
         </div>
       </div>
@@ -851,36 +808,39 @@
 
 <script>
 // DOM Elements
-const textInput = document.getElementById('textInput');
-const dropZone = document.getElementById('dropZone');
-const dropOverlay = document.getElementById('dropOverlay');
-const totalLines = document.getElementById('totalLines');
-const nonEmptyLines = document.getElementById('nonEmptyLines');
-const wordCount = document.getElementById('wordCount');
-const charCount = document.getElementById('charCount');
-const emptyLines = document.getElementById('emptyLines');
-const avgLineLength = document.getElementById('avgLineLength');
-const longestLine = document.getElementById('longestLine');
-const totalBytes = document.getElementById('totalBytes');
-const statusText = document.getElementById('statusText');
-const fileCount = document.getElementById('fileCount');
-const fileListContainer = document.getElementById('fileListContainer');
-const fileList = document.getElementById('fileList');
-const lineDetailsContainer = document.getElementById('lineDetailsContainer');
-const showLineNumbers = document.getElementById('showLineNumbers');
+const inputText = document.getElementById('inputText');
+const outputText = document.getElementById('outputText');
+const findInput = document.getElementById('findInput');
+const replaceInput = document.getElementById('replaceInput');
+const caseSensitive = document.getElementById('caseSensitive');
+const wholeWord = document.getElementById('wholeWord');
+const useRegex = document.getElementById('useRegex');
+const preserveCase = document.getElementById('preserveCase');
+const matchCount = document.getElementById('matchCount');
+const inputStats = document.getElementById('inputStats');
+const outputStats = document.getElementById('outputStats');
+const fileName = document.getElementById('fileName');
+const replaceStatus = document.getElementById('replaceStatus');
+const matchPreviewContainer = document.getElementById('matchPreviewContainer');
+const matchPreview = document.getElementById('matchPreview');
+const undoBtn = document.getElementById('undoBtn');
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const mobileMenu = document.getElementById('mobileMenu');
 const pasteBtn = document.getElementById('pasteBtn');
 const clearBtn = document.getElementById('clearBtn');
-const copyBtn = document.getElementById('copyBtn');
-const downloadBtn = document.getElementById('downloadBtn');
-const downloadAllBtn = document.getElementById('downloadAllBtn');
-const fileInputBtn = document.getElementById('fileInputBtn');
+const loadFileBtn = document.getElementById('loadFileBtn');
 const fileInput = document.getElementById('fileInput');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const findBtn = document.getElementById('findBtn');
+const replaceBtn = document.getElementById('replaceBtn');
+const replaceOneBtn = document.getElementById('replaceOneBtn');
+const copyResultBtn = document.getElementById('copyResultBtn');
+const downloadResultBtn = document.getElementById('downloadResultBtn');
 
 // State
-let uploadedFiles = [];
-let currentText = '';
+let lastOperation = null;
+let currentMatches = [];
 
 // Set current year
 document.getElementById('currentYear').textContent = new Date().getFullYear();
@@ -896,191 +856,226 @@ document.addEventListener('click', (e) => {
   }
 });
 
-// Main Analysis Function
-function analyzeText(text = textInput.value, isFile = false) {
-  currentText = text;
-  
-  if (!text && !isFile) {
-    resetStats();
-    return;
-  }
-  
-  const lines = text.split('\n');
-  const totalLineCount = lines.length;
-  const emptyLineCount = lines.filter(line => line.trim() === '').length;
-  const nonEmptyLineCount = totalLineCount - emptyLineCount;
-  
-  // Character and word counts
-  const totalChars = text.length;
+// Update Statistics
+function updateStats(text, element) {
+  const chars = text.length;
   const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+  const lines = text === '' ? 0 : text.split('\n').length;
+  element.textContent = `${chars.toLocaleString()} chars | ${words.toLocaleString()} words | ${lines.toLocaleString()} lines`;
+}
+
+// Find Matches
+function findMatches() {
+  const text = inputText.value;
+  const search = findInput.value;
   
-  // Line length stats
-  const lineLengths = lines.map(line => line.length);
-  const maxLineLength = Math.max(...lineLengths, 0);
-  const avgLineLen = totalLineCount > 0 ? (lineLengths.reduce((a, b) => a + b, 0) / totalLineCount).toFixed(0) : 0;
-  
-  // Byte count
-  const bytes = new Blob([text]).size;
-  
-  // Update UI
-  totalLines.textContent = totalLineCount.toLocaleString();
-  nonEmptyLines.textContent = nonEmptyLineCount.toLocaleString();
-  wordCount.textContent = words.toLocaleString();
-  charCount.textContent = totalChars.toLocaleString();
-  emptyLines.textContent = emptyLineCount.toLocaleString();
-  avgLineLength.textContent = avgLineLen;
-  longestLine.textContent = maxLineLength.toLocaleString();
-  totalBytes.textContent = bytes.toLocaleString();
-  
-  // Update status
-  if (!isFile) {
-    statusText.textContent = totalLineCount > 0 ? `${totalLineCount.toLocaleString()} lines analyzed` : 'Ready';
+  if (!text || !search) {
+    matchCount.classList.add('hidden');
+    matchPreviewContainer.classList.add('hidden');
+    return [];
   }
   
-  // Update line details
-  updateLineDetails(lines);
-}
-
-function resetStats() {
-  totalLines.textContent = '0';
-  nonEmptyLines.textContent = '0';
-  wordCount.textContent = '0';
-  charCount.textContent = '0';
-  emptyLines.textContent = '0';
-  avgLineLength.textContent = '0';
-  longestLine.textContent = '0';
-  totalBytes.textContent = '0';
-  lineDetailsContainer.innerHTML = '<p class="text-gray-500 text-xs text-center py-6">Enter text or upload files to see line details...</p>';
-  statusText.textContent = 'Ready';
-}
-
-// Update Line Details
-function updateLineDetails(lines) {
-  if (lines.length === 0 || !showLineNumbers.checked) {
-    if (!showLineNumbers.checked) {
-      lineDetailsContainer.innerHTML = '<p class="text-gray-500 text-xs text-center py-6">Enable "Show Preview" to see line details...</p>';
+  let regex;
+  const flags = caseSensitive.checked ? 'g' : 'gi';
+  
+  try {
+    if (useRegex.checked) {
+      regex = new RegExp(search, flags);
+    } else {
+      const escaped = search.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const pattern = wholeWord.checked ? `\\b${escaped}\\b` : escaped;
+      regex = new RegExp(pattern, flags);
     }
+  } catch (e) {
+    matchCount.textContent = 'Invalid regex';
+    matchCount.classList.remove('hidden');
+    return [];
+  }
+  
+  const matches = [];
+  let match;
+  while ((match = regex.exec(text)) !== null) {
+    matches.push({
+      index: match.index,
+      text: match[0],
+      length: match[0].length
+    });
+    if (!regex.global) break;
+  }
+  
+  // Update match count
+  matchCount.textContent = `${matches.length} match${matches.length !== 1 ? 'es' : ''}`;
+  matchCount.classList.remove('hidden');
+  
+  // Update preview
+  updateMatchPreview(matches, text);
+  
+  return matches;
+}
+
+// Update Match Preview
+function updateMatchPreview(matches, text) {
+  if (matches.length === 0) {
+    matchPreviewContainer.classList.add('hidden');
     return;
   }
   
-  const displayLines = lines.slice(0, 100); // Show first 100 lines
+  matchPreviewContainer.classList.remove('hidden');
   
+  const previewCount = Math.min(matches.length, 10);
   let html = '';
-  displayLines.forEach((line, index) => {
-    const isEmpty = line.trim() === '';
-    const displayLine = line.substring(0, 60) + (line.length > 60 ? '...' : '');
-    const lineNum = (index + 1).toString().padStart(3, ' ');
+  
+  for (let i = 0; i < previewCount; i++) {
+    const match = matches[i];
+    const contextStart = Math.max(0, match.index - 20);
+    const contextEnd = Math.min(text.length, match.index + match.length + 20);
+    const before = text.substring(contextStart, match.index);
+    const after = text.substring(match.index + match.length, contextEnd);
     
     html += `
-      <div class="flex items-center gap-2 text-xs font-mono ${isEmpty ? 'opacity-50' : ''}">
-        <span class="line-number w-8 text-right">${lineNum}</span>
-        <span class="text-gray-300 truncate flex-1">${displayLine || '(empty)'}</span>
-        <span class="text-gray-500 w-12 text-right">${line.length}ch</span>
+      <div class="flex items-center gap-2 p-1.5 rounded bg-white/5">
+        <span class="text-gray-500 w-6">${i + 1}.</span>
+        <span class="text-gray-400 truncate">
+          ${escapeHtml(before)}<span class="bg-indigo-500/30 text-indigo-200 px-1 rounded">${escapeHtml(match.text)}</span>${escapeHtml(after)}
+        </span>
       </div>
     `;
-  });
-  
-  if (lines.length > 100) {
-    html += `<p class="text-gray-500 text-xs text-center py-2">... and ${lines.length - 100} more lines</p>`;
   }
   
-  lineDetailsContainer.innerHTML = html;
-}
-
-// File Management
-function addFile(name, content, size) {
-  const fileId = Date.now() + Math.random();
-  const fileData = { id: fileId, name, content, size };
-  uploadedFiles.push(fileData);
-  
-  updateFileList();
-  updateFileCount();
-  
-  // If this is the first file, analyze it
-  if (uploadedFiles.length === 1) {
-    analyzeText(content, true);
-    statusText.textContent = `Analyzing: ${name}`;
+  if (matches.length > 10) {
+    html += `<p class="text-gray-500 text-xs text-center py-1">... and ${matches.length - 10} more matches</p>`;
   }
   
-  // Show download all button
-  downloadAllBtn.classList.remove('hidden');
+  matchPreview.innerHTML = html;
 }
 
-function removeFile(fileId) {
-  uploadedFiles = uploadedFiles.filter(f => f.id !== fileId);
-  updateFileList();
-  updateFileCount();
+function escapeHtml(text) {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
+}
+
+// Perform Replacement
+function performReplace(replaceAll = true) {
+  const text = inputText.value;
+  const search = findInput.value;
+  const replacement = replaceInput.value;
   
-  if (uploadedFiles.length === 0) {
-    downloadAllBtn.classList.add('hidden');
-    fileListContainer.classList.add('hidden');
-    textInput.value = '';
-    resetStats();
-    statusText.textContent = 'Ready';
-  } else {
-    // Analyze the first remaining file
-    analyzeText(uploadedFiles[0].content, true);
-    statusText.textContent = `Analyzing: ${uploadedFiles[0].name}`;
-  }
-}
-
-function selectFile(fileId) {
-  const file = uploadedFiles.find(f => f.id === fileId);
-  if (file) {
-    textInput.value = file.content.substring(0, 1000) + (file.content.length > 1000 ? '\n\n... (file truncated in preview)' : '');
-    analyzeText(file.content, true);
-    statusText.textContent = `Analyzing: ${file.name}`;
-  }
-}
-
-function updateFileList() {
-  if (uploadedFiles.length === 0) {
-    fileListContainer.classList.add('hidden');
+  if (!text || !search) {
+    replaceStatus.textContent = 'Nothing to replace';
     return;
   }
   
-  fileListContainer.classList.remove('hidden');
+  // Save for undo
+  lastOperation = {
+    input: text,
+    output: outputText.value
+  };
+  undoBtn.classList.remove('hidden');
   
-  fileList.innerHTML = uploadedFiles.map(file => {
-    const lines = file.content.split('\n').length;
-    return `
-      <div class="file-item flex items-center justify-between p-2 rounded-lg bg-white/5 cursor-pointer" onclick="window.selectFile(${file.id})">
-        <div class="flex items-center gap-2 flex-1 min-w-0">
-          <svg class="w-4 h-4 text-indigo-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-          <span class="text-xs text-gray-300 truncate">${file.name}</span>
-          <span class="text-xs text-gray-500 flex-shrink-0">${lines.toLocaleString()} lines</span>
-        </div>
-        <button onclick="event.stopPropagation(); window.removeFile(${file.id})" class="p-1 hover:bg-red-500/20 rounded text-gray-400 hover:text-red-400 transition-colors">
-          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-        </button>
-      </div>
-    `;
-  }).join('');
+  let regex;
+  const flags = caseSensitive.checked ? 'g' : 'gi';
+  
+  try {
+    if (useRegex.checked) {
+      regex = new RegExp(search, flags);
+    } else {
+      const escaped = search.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const pattern = wholeWord.checked ? `\\b${escaped}\\b` : escaped;
+      regex = new RegExp(pattern, flags);
+    }
+  } catch (e) {
+    replaceStatus.textContent = 'Invalid search pattern';
+    return;
+  }
+  
+  let result;
+  let count = 0;
+  
+  if (preserveCase.checked && !useRegex.checked) {
+    // Manual replacement for case preservation
+    result = text.replace(regex, (match) => {
+      count++;
+      if (replaceAll || count === 1) {
+        return preserveCaseReplace(match, replacement);
+      }
+      return match;
+    });
+  } else {
+    // Standard replacement
+    if (replaceAll) {
+      result = text.replace(regex, replacement);
+      count = (text.match(regex) || []).length;
+    } else {
+      // Replace only first occurrence
+      result = text.replace(regex, replacement);
+      count = 1;
+    }
+  }
+  
+  outputText.value = result;
+  updateStats(result, outputStats);
+  replaceStatus.textContent = `Replaced ${count} occurrence${count !== 1 ? 's' : ''}`;
+  replaceStatus.classList.add('text-green-400');
+  setTimeout(() => replaceStatus.classList.remove('text-green-400'), 2000);
 }
 
-function updateFileCount() {
-  fileCount.textContent = `${uploadedFiles.length} file${uploadedFiles.length !== 1 ? 's' : ''}`;
+function preserveCaseReplace(original, replacement) {
+  if (original === original.toUpperCase()) {
+    return replacement.toUpperCase();
+  } else if (original === original.toLowerCase()) {
+    return replacement.toLowerCase();
+  } else if (original[0] === original[0].toUpperCase()) {
+    return replacement.charAt(0).toUpperCase() + replacement.slice(1).toLowerCase();
+  }
+  return replacement;
 }
 
 // Event Listeners
-textInput.addEventListener('input', () => {
-  uploadedFiles = []; // Clear files when typing
-  fileListContainer.classList.add('hidden');
-  downloadAllBtn.classList.add('hidden');
-  analyzeText();
+inputText.addEventListener('input', () => {
+  updateStats(inputText.value, inputStats);
+  findMatches();
 });
-showLineNumbers.addEventListener('change', () => analyzeText());
+
+findInput.addEventListener('input', findMatches);
+caseSensitive.addEventListener('change', findMatches);
+wholeWord.addEventListener('change', findMatches);
+useRegex.addEventListener('change', findMatches);
+
+// Button Actions
+findBtn.addEventListener('click', () => {
+  currentMatches = findMatches();
+  if (currentMatches.length > 0) {
+    replaceStatus.textContent = `Found ${currentMatches.length} matches`;
+  } else {
+    replaceStatus.textContent = 'No matches found';
+  }
+});
+
+replaceBtn.addEventListener('click', () => performReplace(true));
+replaceOneBtn.addEventListener('click', () => performReplace(false));
+
+undoBtn.addEventListener('click', () => {
+  if (lastOperation) {
+    inputText.value = lastOperation.input;
+    outputText.value = lastOperation.output;
+    updateStats(inputText.value, inputStats);
+    updateStats(outputText.value, outputStats);
+    findMatches();
+    replaceStatus.textContent = 'Undo successful';
+    undoBtn.classList.add('hidden');
+    lastOperation = null;
+  }
+});
 
 // Paste Button
 pasteBtn.addEventListener('click', async () => {
   try {
     const text = await navigator.clipboard.readText();
-    textInput.value = text;
-    uploadedFiles = [];
-    fileListContainer.classList.add('hidden');
-    downloadAllBtn.classList.add('hidden');
-    analyzeText();
-    statusText.textContent = 'Text pasted from clipboard';
+    inputText.value = text;
+    updateStats(text, inputStats);
+    findMatches();
+    replaceStatus.textContent = 'Text pasted';
   } catch (err) {
     alert('Unable to read clipboard. Please paste manually.');
   }
@@ -1088,131 +1083,62 @@ pasteBtn.addEventListener('click', async () => {
 
 // Clear Button
 clearBtn.addEventListener('click', () => {
-  textInput.value = '';
-  uploadedFiles = [];
-  fileListContainer.classList.add('hidden');
-  downloadAllBtn.classList.add('hidden');
-  resetStats();
-  statusText.textContent = 'Cleared';
+  inputText.value = '';
+  outputText.value = '';
+  findInput.value = '';
+  replaceInput.value = '';
+  updateStats('', inputStats);
+  updateStats('', outputStats);
+  matchCount.classList.add('hidden');
+  matchPreviewContainer.classList.add('hidden');
+  replaceStatus.textContent = 'Cleared';
+  undoBtn.classList.add('hidden');
+  fileName.textContent = '';
 });
 
-// Copy Button
-copyBtn.addEventListener('click', async () => {
+// Copy Result
+copyResultBtn.addEventListener('click', async () => {
   try {
-    await navigator.clipboard.writeText(textInput.value);
-    const originalHTML = copyBtn.innerHTML;
-    copyBtn.innerHTML = `<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
-    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    await navigator.clipboard.writeText(outputText.value);
+    const originalHTML = copyResultBtn.innerHTML;
+    copyResultBtn.innerHTML = `<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyResultBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
     
     setTimeout(() => {
-      copyBtn.innerHTML = originalHTML;
-      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+      copyResultBtn.innerHTML = originalHTML;
+      copyResultBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
     }, 2000);
   } catch (err) {
     console.error('Copy failed', err);
   }
 });
 
-// Download Stats Button
-downloadBtn.addEventListener('click', () => {
-  const text = currentText || textInput.value;
-  if (!text.trim() && uploadedFiles.length === 0) {
-    alert('Please enter some text or upload files first.');
+// Download Result
+downloadResultBtn.addEventListener('click', () => {
+  const text = outputText.value;
+  if (!text.trim()) {
+    alert('No result to download');
     return;
   }
   
-  const stats = `LINE COUNTER STATISTICS REPORT
-Generated: ${new Date().toLocaleString()}
-================================
-
-LINE METRICS:
-- Total Lines: ${totalLines.textContent}
-- Non-Empty Lines: ${nonEmptyLines.textContent}
-- Empty Lines: ${emptyLines.textContent}
-- Words: ${wordCount.textContent}
-- Characters: ${charCount.textContent}
-- Average Line Length: ${avgLineLength.textContent}
-- Longest Line: ${longestLine.textContent}
-- Total Bytes: ${totalBytes.textContent}
-
-${uploadedFiles.length > 0 ? `FILES ANALYZED: ${uploadedFiles.length}` : ''}
-
-CONTENT:
-${text.substring(0, 5000)}${text.length > 5000 ? '\n\n... (truncated)' : ''}
-`;
-  
-  const blob = new Blob([stats], { type: 'text/plain' });
+  const blob = new Blob([text], { type: 'text/plain' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = `line-count-stats-${Date.now()}.txt`;
+  a.download = `replaced-text-${Date.now()}.txt`;
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
-  statusText.textContent = 'Statistics downloaded';
-});
-
-// Download All Button
-downloadAllBtn.addEventListener('click', () => {
-  if (uploadedFiles.length === 0) return;
-  
-  let report = `LINE COUNTER - MULTI-FILE REPORT
-Generated: ${new Date().toLocaleString()}
-================================
-
-SUMMARY:
-- Total Files: ${uploadedFiles.length}
-`;
-
-  let grandTotalLines = 0;
-  let grandTotalNonEmpty = 0;
-  let grandTotalWords = 0;
-  
-  uploadedFiles.forEach((file, index) => {
-    const lines = file.content.split('\n');
-    const totalLineCount = lines.length;
-    const nonEmptyCount = lines.filter(l => l.trim() !== '').length;
-    const words = file.content.trim() === '' ? 0 : file.content.trim().split(/\s+/).length;
-    
-    grandTotalLines += totalLineCount;
-    grandTotalNonEmpty += nonEmptyCount;
-    grandTotalWords += words;
-    
-    report += `
-FILE ${index + 1}: ${file.name}
-- Lines: ${totalLineCount.toLocaleString()}
-- Non-Empty: ${nonEmptyCount.toLocaleString()}
-- Words: ${words.toLocaleString()}
-`;
-  });
-  
-  report += `
-================================
-GRAND TOTALS:
-- Total Lines: ${grandTotalLines.toLocaleString()}
-- Total Non-Empty: ${grandTotalNonEmpty.toLocaleString()}
-- Total Words: ${grandTotalWords.toLocaleString()}
-`;
-  
-  const blob = new Blob([report], { type: 'text/plain' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = `line-count-multi-file-${Date.now()}.txt`;
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-  URL.revokeObjectURL(url);
-  statusText.textContent = 'Multi-file report downloaded';
+  replaceStatus.textContent = 'Downloaded';
 });
 
 // File Input
-fileInputBtn.addEventListener('click', () => fileInput.click());
+loadFileBtn.addEventListener('click', () => fileInput.click());
 
 fileInput.addEventListener('change', (e) => {
-  const files = Array.from(e.target.files);
-  files.forEach(file => readFile(file));
+  const file = e.target.files[0];
+  if (file) readFile(file);
 });
 
 // Drag and Drop
@@ -1233,35 +1159,41 @@ dropZone.addEventListener('drop', (e) => {
   dropOverlay.classList.add('hidden');
   dropZone.classList.remove('drag-active');
   
-  const files = Array.from(e.dataTransfer.files);
-  files.forEach(file => readFile(file));
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    const file = files[0];
+    if (file.type.startsWith('text/') || file.name.match(/\.(txt|md|csv|json|js|html|css|xml|py|java|cpp|c|php)$/i)) {
+      readFile(file);
+    } else {
+      alert('Please drop a text file');
+    }
+  }
 });
 
 function readFile(file) {
   if (file.size > 10 * 1024 * 1024) {
-    alert(`File ${file.name} is too large (max 10MB)`);
+    alert('File too large (max 10MB)');
     return;
   }
   
   const reader = new FileReader();
-  statusText.textContent = `Loading ${file.name}...`;
+  replaceStatus.textContent = `Loading ${file.name}...`;
   
   reader.onload = (e) => {
-    addFile(file.name, e.target.result, file.size);
-    statusText.textContent = `Loaded ${file.name}`;
+    inputText.value = e.target.result;
+    fileName.textContent = file.name;
+    updateStats(inputText.value, inputStats);
+    findMatches();
+    replaceStatus.textContent = `Loaded ${file.name}`;
   };
   
   reader.onerror = () => {
-    alert(`Error reading ${file.name}`);
-    statusText.textContent = 'Error loading file';
+    alert('Error reading file');
+    replaceStatus.textContent = 'Error loading file';
   };
   
   reader.readAsText(file);
 }
-
-// Expose functions to window for onclick handlers
-window.selectFile = selectFile;
-window.removeFile = removeFile;
 
 // FAQ Toggle Function
 function toggleFaq(button) {
@@ -1273,7 +1205,8 @@ function toggleFaq(button) {
 }
 
 // Initialize
-resetStats();
+updateStats('', inputStats);
+updateStats('', outputStats);
 </script>
 </body>
 </html>
