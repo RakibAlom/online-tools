@@ -3,30 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Text Splitter - Free Online Text Splitting Tool | EasyPro Tools</title>
+  <title>Text Splitter - Free Online Text Separation Tool | EasyPro Tools</title>
 
   <!-- SEO Meta -->
-  <meta name="description" content="Free online text splitter tool. Automatically split text by delimiter, character, length, words, lines, or custom separators. Real-time processing with no registration required." />
+  <meta name="description" content="Free online Text Splitter tool. Split text by delimiter, character, word count, or line breaks instantly. Perfect for data processing, CSV separation, and text segmentation. No registration required." />
   <meta name="keywords" content="text splitter, text splitter online, free text splitter, online text splitter, split text online, split text tool, text split tool, split text by delimiter, split text by character, split text by length, split text into lines, split text into paragraphs, split text by words, split text by comma, split text by space, split text generator, text separator tool, text divider online, break text online, chunk text online, text segmentation tool, text line splitter, split long text online, free online text splitter tool, bulk text splitter, text split utility, split string online, string splitter online, split text formatter, text processing tool online" />
   <meta name="author" content="EasyPro Tools" />
   <meta name="robots" content="index, follow" />
-  <meta name="googlebot" content="index, follow" />
-  <meta name="bingbot" content="index, follow" />
-  <link rel="canonical" href="https://easyprotools.com/text-splitter/ " />
+  <link rel="canonical" href="https://easyprotools.com/text-splitter/" />
 
   <!-- Open Graph Tags -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://easyprotools.com/text-splitter/ " />
-  <meta property="og:title" content="Text Splitter - Free Online Text Splitting Tool" />
-  <meta property="og:description" content="Automatically split text by delimiter, character, length, words, or custom separators. Real-time processing with no registration required." />
+  <meta property="og:url" content="https://easyprotools.com/text-splitter/" />
+  <meta property="og:title" content="Text Splitter - Free Online Text Separation Tool" />
+  <meta property="og:description" content="Split text by delimiter, character count, words, or lines instantly. Free, private, and no registration required." />
   <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
   <meta property="og:site_name" content="EasyPro Tools" />
 
   <!-- Twitter Card Tags -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://easyprotools.com/text-splitter/ " />
-  <meta name="twitter:title" content="Text Splitter - Free Online Text Splitting Tool" />
-  <meta name="twitter:description" content="Automatically split text by delimiter, character, length, words, or custom separators. Real-time processing with no registration required." />
+  <meta name="twitter:url" content="https://easyprotools.com/text-splitter/" />
+  <meta name="twitter:title" content="Text Splitter - Free Online Text Separation Tool" />
+  <meta name="twitter:description" content="Split text by delimiter, character count, words, or lines instantly. Free, private, and no registration required." />
   <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
 
   <!-- Favicon -->
@@ -34,11 +32,11 @@
   <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
 
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com ">
-  <link rel="preconnect" href="https://fonts.gstatic.com " crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300 ;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <script src="https://cdn.tailwindcss.com "></script>
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -46,14 +44,6 @@
         extend: {
           fontFamily: {
             sans: ['Inter', 'sans-serif'],
-          },
-          colors: {
-            glass: {
-              100: 'rgba(255, 255, 255, 0.03)',
-              200: 'rgba(255, 255, 255, 0.06)',
-              300: 'rgba(255, 255, 255, 0.1)',
-              border: 'rgba(255, 255, 255, 0.08)',
-            }
           }
         }
       }
@@ -63,66 +53,188 @@
   <style>
     body {
       font-family: 'Inter', sans-serif;
-      background: #0a0a0a;
+      background: #000000;
       color: #e5e5e5;
     }
     
-    .bg-mesh {
-      background-color: #0a0a0a;
-      background-image: 
-        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
-        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
-        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
-        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
-      background-attachment: fixed;
+    /* Pure black background */
+    .bg-pure-black {
+      background: #000000;
     }
 
+    /* Glassmorphism panels - dark transparent */
     .glass-panel {
-      background: rgba(20, 20, 20, 0.6);
+      background: rgba(20, 20, 20, 0.8);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
     }
     
     .glass-input {
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(10, 10, 10, 0.9);
       border: 1px solid rgba(255, 255, 255, 0.1);
       color: #f5f5f5;
+      transition: all 0.2s ease;
     }
     
     .glass-input:focus {
-      background: rgba(0, 0, 0, 0.6);
-      border-color: rgba(255, 255, 255, 0.2);
+      background: rgba(5, 5, 5, 0.95);
+      border-color: rgba(255, 255, 255, 0.3);
+      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.05);
       outline: none;
     }
 
-    .glass-hover:hover {
-      background: rgba(255, 255, 255, 0.05);
-      border-color: rgba(255, 255, 255, 0.15);
-    }
-
+    /* Scrollbar */
     ::-webkit-scrollbar {
-      width: 6px;
-      height: 6px;
+      width: 8px;
+      height: 8px;
     }
     ::-webkit-scrollbar-track {
-      background: rgba(0,0,0,0.2); 
+      background: rgba(0,0,0,0.5); 
     }
     ::-webkit-scrollbar-thumb {
       background: rgba(255,255,255,0.15); 
-      border-radius: 3px;
+      border-radius: 4px;
     }
     ::-webkit-scrollbar-thumb:hover {
       background: rgba(255,255,255,0.25); 
     }
 
-    .btn-animated {
-      transition: all 0.2s ease;
+    /* Method pills - neutral dark */
+    .method-pill {
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      white-space: nowrap;
     }
-    .btn-animated:active {
-      transform: scale(0.98);
+    
+    .method-pill:hover {
+      transform: translateY(-1px);
+      border-color: rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .method-pill.active {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 255, 255, 0.4);
+      color: #ffffff;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
     }
 
+    /* Custom inputs */
+    .custom-input {
+      background: rgba(10, 10, 10, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #ffffff;
+      transition: all 0.2s ease;
+    }
+    
+    .custom-input:focus {
+      border-color: rgba(255, 255, 255, 0.4);
+      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.05);
+      outline: none;
+    }
+
+    /* Toggle switches */
+    .toggle-switch {
+      position: relative;
+      width: 36px;
+      height: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    
+    .toggle-switch.active {
+      background: rgba(255, 255, 255, 0.3);
+    }
+    
+    .toggle-switch::after {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 16px;
+      height: 16px;
+      background: white;
+      border-radius: 50%;
+      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    .toggle-switch.active::after {
+      transform: translateX(16px);
+    }
+
+    /* Desktop 2-column layout */
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+      }
+      
+      .input-col, .output-col {
+        min-height: 500px;
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .text-area-wrapper {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .text-area-wrapper textarea {
+        flex: 1;
+        min-height: 0;
+      }
+    }
+
+    /* Mobile layout */
+    @media (max-width: 1023px) {
+      .tool-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+
+    /* Stats badge - neutral */
+    .stat-badge {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #aaaaaa;
+    }
+
+    /* Action buttons */
+    .action-btn {
+      transition: all 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .action-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .action-btn-primary {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+    }
+    
+    .action-btn-primary:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    /* Mobile menu */
     #mobileMenu {
       transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
       max-height: 0;
@@ -134,12 +246,13 @@
       opacity: 1;
     }
 
+    /* Article content */
     .article-content h2 {
       font-size: 1.75rem;
       font-weight: 700;
       margin-top: 2.5rem;
       margin-bottom: 1rem;
-      color: #e2e8f0;
+      color: #ffffff;
     }
     
     .article-content h3 {
@@ -147,30 +260,27 @@
       font-weight: 600;
       margin-top: 1.5rem;
       margin-bottom: 0.75rem;
-      color: #cbd5e1;
+      color: #cccccc;
     }
     
     .article-content p {
       margin-bottom: 1rem;
       line-height: 1.8;
-      color: #94a3b8;
+      color: #999999;
     }
     
     .article-content ul, .article-content ol {
       margin-bottom: 1rem;
       padding-left: 1.5rem;
-      color: #94a3b8;
+      color: #999999;
     }
     
     .article-content li {
       margin-bottom: 0.5rem;
       line-height: 1.7;
     }
-    
-    .article-content strong {
-      color: #e2e8f0;
-    }
 
+    /* FAQ */
     .faq-content {
       transition: max-height 0.3s ease, opacity 0.3s ease;
       max-height: 0;
@@ -188,122 +298,87 @@
       transform: rotate(180deg);
     }
 
+    /* Glow text - white */
     .glow-text {
-      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+      text-shadow: 0 0 40px rgba(255, 255, 255, 0.15);
     }
 
-    .method-btn {
-      padding: 0.5rem 0.75rem;
-      font-size: 0.75rem;
+    /* Progress bar */
+    .progress-bar {
+      background: rgba(255, 255, 255, 0.1);
+      height: 4px;
+      border-radius: 2px;
+      overflow: hidden;
     }
     
-    .method-btn.active {
-      background: rgba(99, 102, 241, 0.2);
-      border-color: rgba(99, 102, 241, 0.5);
-      color: #818cf8;
+    .progress-fill {
+      background: rgba(255, 255, 255, 0.5);
+      height: 100%;
+      transition: width 0.3s ease;
     }
 
-    .compact-btn {
-      padding: 0.375rem 0.75rem;
-      font-size: 0.75rem;
+    /* Separator line */
+    .separator {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: #666;
+      font-size: 0.875rem;
     }
-
-    .drag-active {
-      border-color: rgba(99, 102, 241, 0.8) !important;
-      background: rgba(99, 102, 241, 0.1) !important;
+    .separator::before, .separator::after {
+      content: '';
+      flex: 1;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
     }
-
-    @media (min-width: 1024px) {
-      .tool-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-      }
-      
-      .tool-left-col {
-        display: flex;
-        flex-direction: column;
-      }
-      
-      .tool-right-col {
-        display: flex;
-        flex-direction: column;
-      }
-      
-      .full-width-section {
-        grid-column: 1 / -1;
-      }
+    .separator::before {
+      margin-right: .5em;
     }
-
-    .split-preview-item {
-      border-left: 2px solid rgba(99, 102, 241, 0.5);
-      transition: all 0.2s ease;
-    }
-    
-    .split-preview-item:hover {
-      border-left-color: rgba(99, 102, 241, 1);
-      background: rgba(255, 255, 255, 0.03);
-    }
-
-    .auto-processing-indicator {
-      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-    }
-    
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: .5; }
+    .separator::after {
+      margin-left: .5em;
     }
   </style>
 </head>
-<body class="bg-mesh min-h-screen flex flex-col">
+<body class="bg-pure-black min-h-screen flex flex-col">
 
   <!-- Header -->
   <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
     <div class="max-w-6xl mx-auto px-4">
-      <div class="flex items-center justify-between h-14">
-        <div class="flex items-center space-x-2">
-          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg ">
-            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
-            <path d="M10 12h8M10 20h20M10 28h14" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
-            <defs>
-              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#6366f1"/>
-                <stop offset="1" stop-color="#8b5cf6"/>
-              </linearGradient>
-            </defs>
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center space-x-3">
+          <svg class="w-8 h-8 sm:w-9 sm:h-9" viewBox="0 0 40 40" fill="none">
+            <rect width="40" height="40" rx="10" fill="rgba(255,255,255,0.1)"/>
+            <path d="M12 20h16M12 14h10M12 26h6" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
           </svg>
           <div>
-            <h1 class="text-sm font-bold text-white">Text Splitter</h1>
-            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+            <h1 class="text-base sm:text-lg font-bold text-white">Text Splitter</h1>
+            <p class="text-gray-500 text-xs hidden sm:block">Free Online Text Separation Tool</p>
           </div>
         </div>
 
-        <nav class="hidden md:flex items-center space-x-4">
-          <a href="https://easyprotools.com/ " class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
-            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+        <nav class="hidden md:flex items-center space-x-6">
+          <a href="https://easyprotools.com/" class="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-1.5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
             Home
           </a>
-          <a href="https://easyprotools.com/ " class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
-            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          <a href="https://easyprotools.com/" class="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-1.5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
             All Tools
           </a>
         </nav>
 
-        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
+        <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-white/10 text-gray-400 transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
         </button>
       </div>
     </div>
 
-    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
-      <div class="px-4 py-3 space-y-2">
-        <a href="https://easyprotools.com/ " class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-black/95 backdrop-blur-xl">
+      <div class="px-4 py-4 space-y-3">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
           Home
         </a>
-        <a href="https://easyprotools.com/ " class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
           All Tools
         </a>
@@ -312,564 +387,368 @@
   </header>
 
   <!-- Banner -->
-  <section class="py-4 px-4">
-    <div class="max-w-4xl mx-auto text-center">
-      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+  <section class="py-6 sm:py-8 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 text-white glow-text">
         Text Splitter
       </h1>
-      <p class="text-gray-400 text-sm px-4">
-        Online Free Text Processing Tool
+      <p class="text-gray-500 text-base sm:text-lg">
+        Online Free Text Separation & Division Tool
       </p>
     </div>
   </section>
 
   <!-- Main Content -->
-  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-16 w-full">
 
     <!-- Tool Interface -->
-    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+    <div class="glass-panel rounded-2xl p-4 sm:p-6 mb-6">
       
-      <!-- Auto-processing indicator -->
-      <div class="flex items-center justify-between mb-2">
-        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
-          <span class="relative flex h-1.5 w-1.5">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
-          </span>
-          <span>Auto-splitting enabled</span>
-        </div>
-        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
-          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
-          Reset
-        </button>
-      </div>
-
-      <!-- Two Column Layout -->
-      <div class="tool-grid">
-        <!-- Left Column - Input -->
-        <div class="tool-left-col space-y-3">
-          <div class="flex items-center justify-between">
-            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
-              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
-              Input Text
-            </label>
-            <div class="flex gap-1">
-              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
-                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
-                Paste
-              </button>
-              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
-                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
-                Clear
-              </button>
-            </div>
-          </div>
-          
-          <!-- Drag & Drop Zone -->
-          <div id="dropZone" class="relative group flex-grow">
-            <textarea id="inputText" spellcheck="false"
-              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
-              placeholder="Type or paste text here... Or drag & drop a file"></textarea>
-            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
-              <div class="text-center">
-                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
-                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
-              </div>
-            </div>
-          </div>
-          
-          <input type="file" id="fileInput" accept=".txt,.csv,.md,.json,.xml,.html,.js,.css,.py,.java,.cpp,.c,.php,.rb,.go,.rs,.swift,.kt,.sql,.log" class="hidden">
-          
-          <div class="flex justify-between items-center text-xs text-gray-500">
-            <span id="inputStats">Chars: 0 | Words: 0 | Lines: 0</span>
-            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
-              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
-              Select file
-            </button>
-          </div>
-        </div>
-
-        <!-- Right Column - Output -->
-        <div class="tool-right-col space-y-3">
-          <div class="flex items-center justify-between">
-            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
-              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              Result <span id="partsCount" class="text-gray-500 font-normal ml-1 hidden">(0 parts)</span>
-            </label>
-            <div class="flex gap-1">
-              <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
-                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
-                Copy
-              </button>
-              <button id="downloadBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
-                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-                Download
-              </button>
-              <button id="downloadPartsBtn" class="hidden compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
-                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
-                All Parts
-              </button>
-            </div>
-          </div>
-          
-          <textarea id="outputText" readonly spellcheck="false"
-            class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
-            placeholder="Split results appear here automatically..."></textarea>
-          
-          <div class="flex justify-between items-center text-xs text-gray-500">
-            <span id="outputStats">Parts: 0 | Chars: 0</span>
-            <span id="processingTime" class="text-gray-600"></span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Settings Section - Full Width -->
-      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-3">
+      <!-- Settings Bar -->
+      <div class="mb-4 flex flex-wrap items-center gap-3 bg-black/40 rounded-xl p-3 border border-white/5">
         
-        <!-- Split Method -->
-        <div>
-          <label class="text-xs font-medium text-gray-300 mb-2 block">Split Method</label>
-          <div class="flex flex-wrap gap-1">
-            <button class="method-btn active rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="delimiter">Delimiter</button>
-            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="length">Length</button>
-            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="words">Words</button>
-            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="lines">Lines</button>
-            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="character">Character</button>
-            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="regex">Regex</button>
+        <!-- Split Method Tabs -->
+        <div class="flex bg-black/50 rounded-lg p-1 shrink-0">
+          <button class="method-pill active px-3 py-1.5 rounded-md border border-white/10 bg-white/5 text-xs font-medium text-gray-300 flex items-center gap-1.5 transition-all" data-method="delimiter">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+            Delimiter
+          </button>
+          <button class="method-pill px-3 py-1.5 rounded-md border border-white/10 bg-white/5 text-xs font-medium text-gray-300 flex items-center gap-1.5 transition-all" data-method="length">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"/></svg>
+            Length
+          </button>
+          <button class="method-pill px-3 py-1.5 rounded-md border border-white/10 bg-white/5 text-xs font-medium text-gray-300 flex items-center gap-1.5 transition-all" data-method="regex">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+            Regex
+          </button>
+        </div>
+
+        <div class="h-6 w-px bg-white/10 hidden sm:block"></div>
+
+        <!-- Delimiter Options -->
+        <div id="delimiterOptions" class="flex flex-wrap gap-1.5 items-center flex-1 min-w-0">
+          <span class="text-xs text-gray-600 mr-1 shrink-0">Split by:</span>
+          <button class="method-pill active px-2.5 py-1 rounded-md border border-white/10 bg-white/5 text-xs text-gray-300" data-delimiter="newline">New Line</button>
+          <button class="method-pill px-2.5 py-1 rounded-md border border-white/10 bg-white/5 text-xs text-gray-300" data-delimiter="comma">Comma</button>
+          <button class="method-pill px-2.5 py-1 rounded-md border border-white/10 bg-white/5 text-xs text-gray-300" data-delimiter="space">Space</button>
+          <button class="method-pill px-2.5 py-1 rounded-md border border-white/10 bg-white/5 text-xs text-gray-300" data-delimiter="pipe">|</button>
+          <button class="method-pill px-2.5 py-1 rounded-md border border-white/10 bg-white/5 text-xs text-gray-300" data-delimiter="tab">Tab</button>
+          <button class="method-pill px-2.5 py-1 rounded-md border border-white/10 bg-white/5 text-xs text-gray-300" data-delimiter="custom">Custom</button>
+          
+          <input type="text" id="customDelimiter" placeholder="..." class="custom-input px-2 py-1 rounded-md text-xs w-20 hidden" maxlength="10">
+        </div>
+
+        <!-- Length Options (Hidden by default) -->
+        <div id="lengthOptions" class="hidden flex flex-wrap gap-1.5 items-center flex-1 min-w-0">
+          <span class="text-xs text-gray-600 mr-1 shrink-0">Chunk size:</span>
+          <input type="number" id="chunkSize" value="100" min="1" max="10000" class="custom-input px-2 py-1 rounded-md text-xs w-20">
+          <span class="text-xs text-gray-600">chars</span>
+          <div class="flex items-center gap-1.5 ml-2">
+            <span class="text-xs text-gray-600">Overlap:</span>
+            <input type="number" id="chunkOverlap" value="0" min="0" max="100" class="custom-input px-2 py-1 rounded-md text-xs w-16">
           </div>
         </div>
 
-        <!-- Method Options -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
-          <!-- Delimiter Options -->
-          <div id="delimiterOptions" class="method-panel space-y-2">
-            <div>
-              <label class="text-xs text-gray-400 mb-1 block">Delimiter</label>
-              <select id="delimiterSelect" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
-                <option value=",">Comma (,)</option>
-                <option value=" ">Space ( )</option>
-                <option value="\n">New Line</option>
-                <option value="\t">Tab</option>
-                <option value=";">Semicolon (;)</option>
-                <option value="|">Pipe (|)</option>
-                <option value="-">Hyphen (-)</option>
-                <option value="_">Underscore (_)</option>
-                <option value="custom">Custom...</option>
-              </select>
-            </div>
-            <div id="customDelimiterContainer" class="hidden">
-              <input type="text" id="customDelimiter" placeholder="Enter delimiter..." class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
-            </div>
-          </div>
-
-          <!-- Length Options -->
-          <div id="lengthOptions" class="method-panel hidden space-y-2">
-            <div class="flex gap-2">
-              <div class="flex-1">
-                <label class="text-xs text-gray-400 mb-1 block">Chunk Size</label>
-                <input type="number" id="chunkLength" min="1" value="100" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
-              </div>
-              <div class="flex-1">
-                <label class="text-xs text-gray-400 mb-1 block">Unit</label>
-                <select id="lengthUnit" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
-                  <option value="chars">Chars</option>
-                  <option value="words">Words</option>
-                </select>
-              </div>
-            </div>
-          </div>
-
-          <!-- Words Options -->
-          <div id="wordsOptions" class="method-panel hidden">
-            <label class="text-xs text-gray-400 mb-1 block">Words Per Part</label>
-            <input type="number" id="wordsPerPart" min="1" value="10" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
-          </div>
-
-          <!-- Lines Options -->
-          <div id="linesOptions" class="method-panel hidden">
-            <label class="text-xs text-gray-400 mb-1 block">Lines Per Part</label>
-            <input type="number" id="linesPerPart" min="1" value="5" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
-          </div>
-
-          <!-- Character Options -->
-          <div id="characterOptions" class="method-panel hidden space-y-2">
-            <div>
-              <label class="text-xs text-gray-400 mb-1 block">Split Character</label>
-              <input type="text" id="splitCharacter" maxlength="1" placeholder="e.g. ;" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
-            </div>
-            <label class="flex items-center gap-1.5 text-xs text-gray-400">
-              <input type="checkbox" id="removeEmptyParts" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
-              Remove empty parts
-            </label>
-          </div>
-
-          <!-- Regex Options -->
-          <div id="regexOptions" class="method-panel hidden">
-            <label class="text-xs text-gray-400 mb-1 block">Regex Pattern</label>
-            <input type="text" id="regexPattern" placeholder="e.g. \\s+ or [,.;]" class="w-full px-2 py-1.5 rounded-md glass-input text-xs font-mono">
-          </div>
-
-          <!-- Output Join Options -->
-          <div class="">
-            <label class="text-xs text-gray-400 mb-1 block">Join With</label>
-            <select id="joinSelect" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
-              <option value="\n">New Line</option>
-              <option value=", ">, (comma)</option>
-              <option value=" | ">| (pipe)</option>
-              <option value=" - ">- (dash)</option>
-              <option value="\n\n">Double Line</option>
-              <option value=" ">Space</option>
-              <option value="">Nothing</option>
-            </select>
-          </div>
+        <!-- Regex Options (Hidden by default) -->
+        <div id="regexOptions" class="hidden flex flex-wrap gap-1.5 items-center flex-1 min-w-0">
+          <span class="text-xs text-gray-600 mr-1 shrink-0">Pattern:</span>
+          <input type="text" id="regexPattern" placeholder="\n\s*\n" value="\n\s*\n" class="custom-input px-2 py-1 rounded-md text-xs w-32 font-mono">
+          <span class="text-xs text-gray-600 ml-1">(e.g. \n\n for paragraphs)</span>
         </div>
 
-        <!-- Parts Preview -->
-        <div id="partsPreview" class="hidden">
+        <div class="h-6 w-px bg-white/10 hidden md:block"></div>
+
+        <!-- Toggles & Clear -->
+        <div class="flex items-center gap-3 shrink-0">
+          <div class="flex items-center gap-1.5" title="Remove empty results">
+            <span class="text-xs text-gray-600">Skip empty</span>
+            <div class="toggle-switch active" id="removeEmptyToggle"></div>
+          </div>
+          
+          <div class="flex items-center gap-1.5" title="Trim whitespace">
+            <span class="text-xs text-gray-600">Trim</span>
+            <div class="toggle-switch active" id="trimToggle"></div>
+          </div>
+
+          <button id="clearBtn" class="action-btn p-1.5 rounded-md bg-white/5 hover:bg-white/10 text-gray-400 border border-white/10 transition-all" title="Clear all">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- 2-Column Layout -->
+      <div class="tool-grid">
+        <!-- Input Column -->
+        <div class="input-col">
           <div class="flex items-center justify-between mb-2">
-            <label class="text-xs font-medium text-gray-300">Individual Parts <span class="text-gray-500 font-normal">(click to copy)</span></label>
+            <div class="flex items-center gap-2">
+              <div class="w-7 h-7 rounded-lg bg-white/10 flex items-center justify-center">
+                <svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+              </div>
+              <span class="text-xs font-medium text-gray-300">Input Text</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span id="inputStats" class="stat-badge px-2 py-0.5 rounded text-xs font-medium">0 chars</span>
+              <button id="loadSampleBtn" class="text-xs text-gray-400 hover:text-white transition-colors flex items-center gap-1">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                Sample
+              </button>
+            </div>
           </div>
-          <div id="partsList" class="max-h-32 overflow-y-auto space-y-1 pr-1">
-            <!-- Parts will be inserted here -->
+          
+          <div class="text-area-wrapper">
+            <textarea id="inputText" class="w-full h-64 lg:h-auto p-3 rounded-xl glass-input text-sm leading-relaxed resize-none font-mono" placeholder="Paste or type your text here to split...&#10;Example: apple,banana,cherry (for comma split)&#10;Or long text for length-based chunking"></textarea>
+          </div>
+
+          <!-- File Upload -->
+          <div class="mt-2">
+            <div id="dropZone" class="border-2 border-dashed border-white/10 rounded-xl p-3 text-center hover:border-white/30 hover:bg-white/5 transition-all cursor-pointer flex flex-col items-center justify-center group">
+              <input type="file" id="fileInput" accept=".txt,.csv,.md,.log,.json" class="hidden">
+              <div class="flex items-center gap-2 text-gray-500 group-hover:text-gray-400">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <span class="text-xs">Drop file or click to upload (TXT, CSV, MD, JSON)</span>
+              </div>
+            </div>
           </div>
         </div>
+
+        <!-- Output Column -->
+        <div class="output-col">
+          <div class="flex items-center justify-between mb-2">
+            <div class="flex items-center gap-2">
+              <div class="w-7 h-7 rounded-lg bg-white/10 flex items-center justify-center">
+                <svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>
+              </div>
+              <span class="text-xs font-medium text-gray-300">Split Result</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span id="outputStats" class="stat-badge px-2 py-0.5 rounded text-xs font-medium">0 parts</span>
+            </div>
+          </div>
+          
+          <div class="text-area-wrapper relative">
+            <textarea id="outputText" readonly class="w-full h-64 lg:h-auto p-3 rounded-xl glass-input text-sm leading-relaxed resize-none font-mono bg-black/60" placeholder="Split results will appear here..."></textarea>
+            
+            <!-- Floating Action Buttons -->
+            <div class="absolute bottom-3 right-3 flex gap-2">
+              <button id="copyBtn" class="action-btn p-2 rounded-lg bg-white/5 hover:bg-white/10 text-gray-400 border border-white/10 transition-all" title="Copy to clipboard">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+              </button>
+              <button id="downloadBtn" class="action-btn p-2 rounded-lg bg-white/5 hover:bg-white/10 text-gray-400 border border-white/10 transition-all" title="Download as file">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Progress Bar -->
+          <div id="progressContainer" class="hidden mt-2">
+            <div class="progress-bar">
+              <div id="progressFill" class="progress-fill" style="width: 0%"></div>
+            </div>
+            <p id="progressText" class="text-xs text-gray-600 mt-1 text-center">Processing...</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Bar -->
+      <div class="mt-4 flex flex-wrap gap-2 justify-center">
+        <button id="splitBtn" class="action-btn action-btn-primary px-8 py-2.5 rounded-lg font-medium text-sm flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
+          Split Text
+        </button>
       </div>
     </div>
 
-    <!-- Features Section - Compact -->
-    <section class="mb-8">
-      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-        Why Use Our Text Splitter?
+    <!-- Features Section -->
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10 text-white glow-text">
+        Powerful Text Splitting Features
       </h2>
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
-          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
-            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-            </svg>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div class="glass-panel rounded-xl p-6 hover:border-white/20 transition-all duration-300 group">
+          <div class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mb-4 group-hover:bg-white/10 transition-colors">
+            <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
           </div>
-          <h3 class="text-sm font-semibold mb-1 text-white">Auto-Split</h3>
-          <p class="text-gray-400 text-xs">Real-time processing as you type</p>
+          <h3 class="text-lg font-semibold mb-2 text-white">Multiple Split Methods</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Split by delimiters (comma, space, newline, custom), fixed character length with optional overlap, or advanced regex patterns. Choose the method that fits your data structure perfectly.</p>
         </div>
         
-        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
-          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
-            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
-            </svg>
+        <div class="glass-panel rounded-xl p-6 hover:border-white/20 transition-all duration-300 group">
+          <div class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mb-4 group-hover:bg-white/10 transition-colors">
+            <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/></svg>
           </div>
-          <h3 class="text-sm font-semibold mb-1 text-white">6 Methods</h3>
-          <p class="text-gray-400 text-xs">Delimiter, length, words & more</p>
+          <h3 class="text-lg font-semibold mb-2 text-white">Bulk File Processing</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Upload TXT, CSV, MD, LOG, or JSON files up to 5MB. Process multiple files simultaneously and download results instantly. Perfect for large datasets.</p>
         </div>
         
-        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
-          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
-            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
-            </svg>
+        <div class="glass-panel rounded-xl p-6 hover:border-white/20 transition-all duration-300 group">
+          <div class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mb-4 group-hover:bg-white/10 transition-colors">
+            <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
           </div>
-          <h3 class="text-sm font-semibold mb-1 text-white">Drag & Drop</h3>
-          <p class="text-gray-400 text-xs">Upload text files instantly</p>
-        </div>
-        
-        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
-          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
-            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
-            </svg>
-          </div>
-          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
-          <p class="text-gray-400 text-xs">Browser-based, no uploads</p>
-        </div>
-        
-        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
-          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
-            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
-            </svg>
-          </div>
-          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
-          <p class="text-gray-400 text-xs">Copy or download results</p>
-        </div>
-        
-        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
-          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
-            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
-          </div>
-          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
-          <p class="text-gray-400 text-xs">No registration required</p>
+          <h3 class="text-lg font-semibold mb-2 text-white">100% Private & Secure</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">All text processing happens entirely in your browser. Your data never leaves your device, ensuring complete privacy for sensitive information and confidential documents.</p>
         </div>
       </div>
     </section>
 
-    <!-- How to Use Section - Compact -->
-    <section class="mb-8">
-      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-        How to Use
+    <!-- How to Use -->
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10 text-white glow-text">
+        How It Works
       </h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-        <div class="glass-panel rounded-lg p-3">
-          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
-            <span class="text-white text-xs font-bold">1</span>
-          </div>
-          <h3 class="text-sm font-semibold mb-1 text-white">Input Text</h3>
-          <p class="text-gray-400 text-xs">Type, paste, or drop a file. Splitting happens automatically.</p>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div class="glass-panel rounded-xl p-5 text-center relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-white/20 text-white text-xs font-bold flex items-center justify-center border border-white/20">1</div>
+          <p class="text-gray-400 text-sm mt-2">Choose your split method: Delimiter, Length, or Regex pattern</p>
         </div>
-        
-        <div class="glass-panel rounded-lg p-3">
-          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
-            <span class="text-white text-xs font-bold">2</span>
-          </div>
-          <h3 class="text-sm font-semibold mb-1 text-white">Choose Method</h3>
-          <p class="text-gray-400 text-xs">Select delimiter, length, words, lines, character, or regex.</p>
+        <div class="glass-panel rounded-xl p-5 text-center relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-white/20 text-white text-xs font-bold flex items-center justify-center border border-white/20">2</div>
+          <p class="text-gray-400 text-sm mt-2">Enter or paste your text, or upload a file for processing</p>
         </div>
-        
-        <div class="glass-panel rounded-lg p-3">
-          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
-            <span class="text-white text-xs font-bold">3</span>
-          </div>
-          <h3 class="text-sm font-semibold mb-1 text-white">Configure</h3>
-          <p class="text-gray-400 text-xs">Set your delimiter, chunk size, or pattern. Changes apply instantly.</p>
+        <div class="glass-panel rounded-xl p-5 text-center relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-white/20 text-white text-xs font-bold flex items-center justify-center border border-white/20">3</div>
+          <p class="text-gray-400 text-sm mt-2">Configure options like skip empty results and trim whitespace</p>
         </div>
-        
-        <div class="glass-panel rounded-lg p-3">
-          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
-            <span class="text-white text-xs font-bold">4</span>
-          </div>
-          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
-          <p class="text-gray-400 text-xs">Copy result or download as file. Click any part to copy individually.</p>
+        <div class="glass-panel rounded-xl p-5 text-center relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-white/20 text-white text-xs font-bold flex items-center justify-center border border-white/20">4</div>
+          <p class="text-gray-400 text-sm mt-2">Click Split Text and copy or download your results instantly</p>
         </div>
       </div>
     </section>
 
     <!-- Article Section -->
-    <section class="mb-8">
-      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
-        <h2>The Complete Guide to Text Splitting: Mastering Text Segmentation for Modern Workflows</h2>
+    <section class="mb-16">
+      <article class="glass-panel rounded-2xl p-6 md:p-10 article-content">
+        <h2>The Complete Guide to Text Splitting: Master Text Separation for Data Processing</h2>
         
-        <p><strong>Text splitting</strong> is one of the most fundamental yet powerful operations in text processing, serving as the cornerstone of data manipulation, content management, and automation workflows. Whether you're a developer parsing CSV data, a content creator organizing articles, a data analyst segmenting information, or a marketer preparing email lists, understanding how to effectively split text by delimiter, character, length, or pattern is essential for modern digital productivity. Our <strong>text splitter online</strong> solution provides everything you need for professional text segmentation without any cost or registration barriers.</p>
+        <p><strong>Text splitting</strong> is a fundamental operation in data processing, content management, and software development. Whether you need to <strong>split text by delimiter</strong> for CSV processing, <strong>split text by character</strong> count for chunking large documents, or use advanced patterns to <strong>break text online</strong> into meaningful segments, understanding text splitting techniques is essential for modern digital workflows.</p>
 
-        <h2>What Is Text Splitting and Why Does It Matter?</h2>
+        <h2>What is Text Splitting and Why Does It Matter?</h2>
         
-        <p><strong>Text splitting</strong> refers to the process of dividing a continuous string of text into smaller, manageable segments or parts based on specific criteria. This seemingly simple operation underlies countless business processes, programming functions, and content management tasks. At its core, text splitting transforms unstructured or semi-structured text into organized, actionable data that can be processed, analyzed, stored, or transmitted more effectively. When you <strong>split text online</strong>, you're performing one of the most common data preparation tasks used across industries.</p>
+        <p><strong>Text splitting</strong>, also known as text segmentation or string splitting, is the process of dividing a continuous block of text into smaller, discrete parts based on specific criteria. At its core, a <strong>text splitter</strong> identifies boundaries within text—whether those boundaries are characters like commas and spaces, fixed lengths, or complex patterns—and separates the content at those points.</p>
 
-        <p>The importance of reliable <strong>online text splitter</strong> tools cannot be overstated in our data-driven world. Consider the daily challenges professionals face: a marketer needs to <strong>split text by comma</strong> to separate a CSV email list into individual addresses; a developer must <strong>split text into lines</strong> to parse a configuration file; a writer wants to <strong>split long text online</strong> to break a long article into social media-sized chunks; a data scientist needs to <strong>split text into paragraphs</strong> for sentiment analysis. Without efficient <strong>text split tool</strong> capabilities, these tasks become time-consuming manual processes prone to human error.</p>
-
-        <h2>Understanding Text Splitting Methods and Techniques</h2>
+        <h2>Understanding Different Text Splitting Methods</h2>
 
         <h3>Delimiter-Based Splitting</h3>
-        
-        <p>The most common <strong>split text online</strong> method uses delimiters—specific characters or strings that mark boundaries between segments. Delimiters act as virtual scissors, cutting text at predetermined points. Common delimiters include commas for CSV data, spaces for word separation, newlines for paragraph division, tabs for table columns, and custom characters like pipes or semicolons for specialized formats. When you <strong>split text by delimiter</strong>, you're using the most intuitive approach to data separation.</p>
+        <p>The most common approach uses <strong>delimiters</strong>—specific characters that mark where text should be divided. When you <strong>split text by comma</strong>, you're using the comma as a delimiter to separate values, which is the foundation of CSV processing. Similarly, you can <strong>split text by space</strong> to separate words, <strong>split text by pipe</strong> for database exports, or use tabs for TSV files.</p>
 
-        <p>Advanced <strong>free text splitter</strong> tools handle complex delimiter scenarios that simple split functions cannot manage. Multiple consecutive delimiters often indicate empty fields that should be preserved or skipped. Delimiters within quoted strings typically should not trigger splits. Escape characters preceding delimiters prevent splitting when the delimiter is meant literally. Our <strong>free online text splitter tool</strong> provides options to handle these edge cases, making it suitable for professional data processing tasks. Whether you need to <strong>split text by space</strong> for word tokenization or <strong>split text by comma</strong> for CSV processing, our <strong>text separator tool</strong> handles it seamlessly.</p>
+        <h3>Length-Based Chunking</h3>
+        <p>Another essential method divides text based on character count. When you <strong>split text by length</strong> or <strong>split text by character</strong> count, you create chunks of approximately equal size. This is crucial for processing large documents that exceed AI model token limits or creating SMS-friendly message segments.</p>
 
-        <h3>Length-Based and Character-Based Splitting</h3>
-        
-        <p>Sometimes text must be divided by size rather than content. <strong>Split text by length</strong> operations are crucial when dealing with character limits: SMS messages capped at 160 characters, Twitter posts limited to 280 characters, database fields with fixed widths, or file naming conventions restricting length. This method ensures compliance with technical constraints while maintaining as much content integrity as possible. Our <strong>text split utility</strong> makes it easy to <strong>chunk text online</strong> into precise sizes.</p>
+        <h3>Regex Pattern Splitting</h3>
+        <p>For complex requirements, regular expressions provide unmatched power. A <strong>text segmentation tool</strong> with regex capabilities can <strong>split text into paragraphs</strong> by matching double newlines, separate content by semantic boundaries, or extract specific patterns.</p>
 
-        <p><strong>Split text by character</strong> methods target specific symbols or patterns. You might <strong>split text by character</strong> at every period to separate sentences, at every semicolon to break down complex lists, or at specific Unicode characters for multilingual processing. Unlike delimiter splitting which removes the delimiter itself, character-based splitting can preserve or remove the target character based on requirements. This flexibility makes our <strong>string splitter online</strong> solution perfect for linguistic processing and code parsing tasks.</p>
+        <h2>Practical Applications</h2>
 
-        <h3>Semantic and Structural Splitting</h3>
-        
-        <p>Beyond mechanical splitting, semantic methods divide text by meaning and structure. <strong>Split text by words</strong> creates chunks of specified word counts, useful for creating reading sections or processing natural language. <strong>Split text into lines</strong> respects natural line breaks while offering control over how many lines per segment. <strong>Split text into paragraphs</strong> maintains document structure, recognizing that paragraphs represent complete thoughts that shouldn't be arbitrarily divided. Our <strong>text line splitter</strong> functionality ensures you can break down content while preserving its logical flow.</p>
+        <h3>Data Processing and CSV Manipulation</h3>
+        <p>Data professionals constantly need to <strong>split text by delimiter</strong> when working with structured data. CSV files often use various separators including commas, semicolons, tabs, or pipes. A versatile <strong>text separator tool</strong> can handle all these variations.</p>
 
-        <p>Regular expression (regex) splitting represents the pinnacle of text segmentation flexibility. <strong>String splitter online</strong> tools with regex capabilities can match complex patterns: split at every third comma, divide at sentence endings, separate by multiple newlines indicating paragraph breaks, or use lookahead/lookbehind assertions for zero-width matches. While regex requires learning curve investment, it enables splitting scenarios impossible with simple delimiter methods. This makes our tool the ultimate <strong>text segmentation tool</strong> for advanced users.</p>
+        <h3>Content Management</h3>
+        <p>Content creators use <strong>split text online</strong> tools for various publishing workflows. Breaking long-form articles into social media posts, segmenting newsletter content by topic, or preparing book manuscripts by chapter—all require reliable text splitting.</p>
 
-        <h2>Professional Applications of Text Splitting</h2>
+        <h3>AI and Machine Learning</h3>
+        <p>Modern AI applications require careful text segmentation. When documents exceed model context windows, you must <strong>split text by length</strong> with intelligent overlap to maintain semantic continuity. This process is fundamental to Retrieval-Augmented Generation (RAG) architectures.</p>
 
-        <h3>Data Processing and ETL Workflows</h3>
-        
-        <p>Extract, Transform, Load (ETL) processes rely heavily on <strong>text separation tool</strong> functionality. Raw data arrives in various formats requiring normalization: log files with space-separated values, legacy systems exporting fixed-width records, APIs returning JSON or XML that must be parsed into database fields. Data engineers use <strong>text splitting</strong> as the first step in cleaning pipelines, converting messy inputs into structured formats suitable for analysis. Our <strong>bulk text splitter</strong> capabilities handle large datasets with ease.</p>
+        <h2>Best Practices</h2>
+        <ul>
+          <li>Choose appropriate delimiters that don't appear within your actual data content</li>
+          <li>Handle edge cases by enabling "Skip empty" and "Trim" options</li>
+          <li>Preserve context with overlap when using length-based splitting for AI applications</li>
+          <li>Validate output structure to ensure logical coherence</li>
+          <li>Test with sample data before processing large datasets</li>
+        </ul>
 
-        <p>CSV processing exemplifies delimiter-based splitting importance. Despite its name (Comma-Separated Values), CSV files often use semicolons in European locales (where commas serve as decimal points), tabs for TSV formats, or custom delimiters for specialized exports. A robust <strong>text split tool</strong> must handle these variations while properly managing quoted fields that contain delimiter characters within values. When you <strong>split text by comma</strong> or other delimiters using our tool, you get clean, predictable results every time.</p>
+        <h2>Privacy and Security</h2>
+        <p>When splitting sensitive text, privacy is paramount. Browser-based <strong>free text splitter</strong> tools that process data client-side offer complete privacy. Your text never leaves your device, eliminating data breach risks.</p>
 
-        <h3>Content Management and Publishing</h3>
-        
-        <p>Content creators and publishers use <strong>online text splitter</strong> tools to repurpose content across platforms. A long-form blog post might be <strong>split text by length</strong> into: Twitter threads of 280-character segments, Instagram captions with specific line break patterns, email newsletter sections with personalized introductions, or podcast episode descriptions with character limits. Rather than manually counting characters and cutting text, automated splitting ensures consistent formatting and maximum content retention. Our <strong>split text generator</strong> features make content repurposing effortless.</p>
-
-        <h3>Programming and Software Development</h3>
-        
-        <p>Developers constantly interact with <strong>text splitting</strong>, both in code and through tooling. Configuration files (INI, YAML, TOML) require parsing by section delimiters. Log analysis involves <strong>split text into lines</strong> by timestamps or severity levels. URL parsing separates protocol, domain, path, and parameters. Command-line argument processing <strong>split text by space</strong> while respecting quoted strings. A reliable <strong>text split utility</strong> becomes essential for maintaining these automation workflows. Our <strong>split string online</strong> tool helps developers debug and test their parsing logic quickly.</p>
-
-        <h3>Marketing and Communication</h3>
-        
-        <p>Marketing professionals manage extensive contact lists requiring constant segmentation. <strong>Split text by comma</strong> operations separate bulk email imports into individual addresses. Phone number lists <strong>split text by delimiter</strong> for SMS campaigns. Customer names <strong>split text by space</strong> into first and last for personalized messaging. Geographic data <strong>split text by delimiter</strong> using pipes or tabs for regional targeting. Without efficient <strong>text divider online</strong> capabilities, these segmentation tasks become bottlenecks in campaign execution. Our <strong>break text online</strong> features ensure marketing workflows remain efficient.</p>
-
-        <h2>Advanced Text Splitting Techniques and Strategies</h2>
-
-        <h3>Handling Multi-Character Delimiters and Patterns</h3>
-        
-        <p>Simple single-character splitting cannot address all real-world scenarios. Multi-character delimiters like "\r\n" (Windows line endings), "\n\n" (paragraph breaks), or custom sequences like "|||" require pattern-based recognition. <strong>Text segmentation tool</strong> implementations must support variable-length delimiter matching while maintaining performance with large inputs. Our <strong>text processing tool online</strong> handles these complex scenarios with ease.</p>
-
-        <h3>Preserving or Removing Delimiters</h3>
-        
-        <p>An important consideration in <strong>text splitting</strong> is whether to keep or discard the delimiter characters. When you <strong>split text by comma</strong> in a CSV line, you typically want to remove the commas, keeping only the values. However, when <strong>split text by character</strong> to divide a document into chapters by "Chapter X:" headers, you likely want to preserve those headers as part of each segment. Advanced <strong>text divider online</strong> tools offer this choice, with options to include or exclude delimiter characters from output parts.</p>
-
-        <h3>Empty Field and Whitespace Handling</h3>
-        
-        <p>Real data contains imperfections that splitting algorithms must handle gracefully. Consecutive delimiters often indicate empty fields that should be preserved as empty strings (for data structure consistency) or filtered out (for compactness). Leading and trailing whitespace around split parts typically should be trimmed. Our <strong>break text online</strong> tool provides configurable options for these scenarios, ensuring clean output regardless of input quality. When you <strong>split text by space</strong> or other methods, you control exactly how the results are formatted.</p>
-
-        <h2>Best Practices for Effective Text Splitting</h2>
-
-        <h3>Pre-processing and Normalization</h3>
-        
-        <p>Before splitting, prepare your text to ensure consistent results. Normalize line endings (convert \r\n to \n), standardize encoding (UTF-8), remove or replace problematic characters, and validate structure. A <strong>text processing tool online</strong> that combines splitting with pre-processing options streamlines these preparation steps. Our <strong>split text formatter</strong> capabilities ensure your data is clean before segmentation begins.</p>
-
-        <h3>Choosing the Right Split Strategy</h3>
-        
-        <p>Match your splitting method to your data structure and goals: Use delimiter splitting for structured data with clear separators. Prefer length-based splitting for character-limited outputs. Apply regex splitting for complex pattern matching. Choose semantic splitting (words, lines, paragraphs) when meaning matters more than structure. Consider hybrid approaches—pre-split by paragraphs, then length-split each paragraph—for sophisticated requirements. Our versatile <strong>text splitter</strong> supports all these strategies in one interface.</p>
-
-        <h3>Validation and Error Handling</h3>
-        
-        <p>Always validate split results, especially with irregular data. Check that the number of parts matches expectations. Verify that no parts exceed length limits if further processing has constraints. Handle edge cases: empty input, missing delimiters, extremely long segments, or special characters. Professional <strong>bulk text splitter</strong> workflows include validation steps to catch anomalies before they propagate through systems. Our tool provides real-time feedback to help you validate your splits instantly.</p>
-
-        <h2>Comparing Text Splitting Approaches</h2>
-
-        <h3>Manual Splitting vs. Automated Tools</h3>
-        
-        <p>Manual splitting using text editors involves find-and-replace operations, cursor positioning, and copy-pasting. While feasible for small, one-time tasks, it becomes impractical for: large files (thousands of lines), repetitive operations (weekly reports), precise requirements (exactly 100 characters), or complex patterns (split at every third comma). Automated <strong>text line splitter</strong> tools eliminate human error, ensure consistency, and complete in seconds what might take hours manually. Our <strong>free text splitter</strong> makes automation accessible to everyone.</p>
-
-        <h3>Spreadsheet Software vs. Dedicated Tools</h3>
-        
-        <p>Excel and Google Sheets offer "Text to Columns" features for basic delimiter splitting. However, they struggle with: irregular delimiters, regex patterns, length-based splitting, large files (row limits), automation needs, and programmatic integration. Dedicated <strong>split long text online</strong> tools provide greater flexibility, handle larger inputs, support more methods, and integrate into automated workflows through APIs or command-line interfaces. Our <strong>online text splitter</strong> bridges the gap between simplicity and power.</p>
-
-        <h2>The Future of Text Manipulation Technology</h2>
-
-        <p>Artificial intelligence is beginning to influence <strong>text splitting</strong>, moving beyond mechanical division toward intelligent segmentation. AI-powered tools can: split text at semantic boundaries (preserving sentence meaning), identify logical sections without explicit delimiters, adapt splitting strategies based on content type, and suggest optimal split points for readability. These capabilities will transform <strong>text splitter</strong> tools from dumb scissors into intelligent assistants that understand content. Our platform evolves continuously to incorporate these innovations while maintaining the simplicity you expect from a <strong>free online text splitter tool</strong>.</p>
-
-        <h2>Conclusion: Master Your Text with Professional Splitting</h2>
-
-        <p><strong>Text splitting</strong> remains one of the most essential yet underappreciated operations in digital work. From simple comma separation to complex regex-based segmentation, the ability to divide text intelligently empowers professionals across every industry. Whether you're preparing data for analysis, formatting content for publication, parsing configuration files, or managing marketing lists, mastering <strong>text splitting</strong> techniques will dramatically improve your productivity and output quality.</p>
-
-        <p>Our <strong>free online text splitter</strong> provides all the capabilities you need to handle any splitting scenario. With automatic real-time splitting as you type, support for six different methods (delimiter, length, words, lines, character, and regex), plus flexible output options, this tool serves everyone from casual users to data professionals. The browser-based architecture ensures privacy and accessibility, while the intuitive interface requires no learning curve. Whether you need to <strong>split text by delimiter</strong>, <strong>split text by character</strong>, <strong>split text by length</strong>, <strong>split text into lines</strong>, <strong>split text into paragraphs</strong>, or <strong>split text by words</strong>, our <strong>text split utility</strong> delivers professional results instantly. Stop struggling with manual text manipulation—start using our professional <strong>text splitter online</strong> today and experience the efficiency of automated text segmentation.</p>
+        <h2>Conclusion</h2>
+        <p>Whether you need to <strong>split text by comma</strong> for spreadsheet data, <strong>split text by space</strong> for word analysis, or <strong>split text by character</strong> count for AI processing, modern tools make it effortless. Our Text Splitter combines all these capabilities in an elegant, real-time interface that respects your privacy.</p>
       </article>
     </section>
 
-    <!-- FAQ Section - Compact -->
-    <section class="mb-8">
-      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+    <!-- FAQ Section -->
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10 text-white glow-text">
         Frequently Asked Questions
       </h2>
-      <div class="space-y-2" id="faqContainer">
-        <div class="glass-panel rounded-lg overflow-hidden">
-          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
-            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool split text automatically as I type?</span>
-            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-            </svg>
+      <div class="space-y-3" id="faqContainer">
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-300">What is the difference between delimiter and length-based splitting?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </button>
-          <div class="faq-content px-3">
-            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>text splitter online</strong> features <strong>automatic real-time splitting</strong>. As you type or paste text, the tool instantly processes your input and displays the results in the right column. We use intelligent debouncing to ensure smooth performance without lag. The "Auto-splitting enabled" indicator at the top confirms the feature is active. Changes to split methods or options also apply instantly, making this the most responsive <strong>free text splitter</strong> available.</p>
+          <div class="faq-content px-5">
+            <p class="text-gray-500 text-sm pb-5 leading-relaxed"><strong>Delimiter splitting</strong> divides text at specific characters (like commas, spaces), ideal for structured data. <strong>Length-based splitting</strong> creates chunks of equal character count, essential for AI processing or character-limited platforms.</p>
           </div>
         </div>
 
-        <div class="glass-panel rounded-lg overflow-hidden">
-          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
-            <span class="text-sm font-medium text-gray-200 pr-4">What is the difference between delimiter and character splitting?</span>
-            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-            </svg>
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-300">How does chunk overlap work?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </button>
-          <div class="faq-content px-3">
-            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Delimiter splitting</strong> divides text at separator characters (commas, spaces, newlines) and removes them from output. <strong>Character splitting</strong> divides at specific characters but can preserve them. Use delimiters for CSV-style data, characters for sentence parsing (periods) or when you need to keep separators. Our <strong>online text splitter</strong> supports both methods with customizable options.</p>
+          <div class="faq-content px-5">
+            <p class="text-gray-500 text-sm pb-5 leading-relaxed">Overlap ensures consecutive text segments share content, maintaining context. With 500-character chunks and 50-character overlap, chunks share 50 characters. This is crucial for AI applications where context improves accuracy.</p>
           </div>
         </div>
 
-        <div class="glass-panel rounded-lg overflow-hidden">
-          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
-            <span class="text-sm font-medium text-gray-200 pr-4">Can I split by multiple delimiters at once?</span>
-            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-            </svg>
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-300">Can I use regular expressions?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </button>
-          <div class="faq-content px-3">
-            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Use the <strong>Regex</strong> method with patterns like <code>[,;|]</code> for multiple delimiters, or <code>\s+</code> for any whitespace. The regex engine supports full JavaScript syntax including alternation, character classes, and lookahead/lookbehind assertions for sophisticated <strong>text splitting</strong> logic. This makes our tool the most flexible <strong>string splitter online</strong> solution available.</p>
+          <div class="faq-content px-5">
+            <p class="text-gray-500 text-sm pb-5 leading-relaxed">Yes, our tool supports regex patterns. Use <code>\n\n</code> for paragraphs, <code>\s+</code> for any whitespace, or custom patterns like HTML tags for advanced segmentation.</p>
           </div>
         </div>
 
-        <div class="glass-panel rounded-lg overflow-hidden">
-          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
-            <span class="text-sm font-medium text-gray-200 pr-4">How do I create Twitter/X threads?</span>
-            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-            </svg>
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-300">What file formats are supported?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </button>
-          <div class="faq-content px-3">
-            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Select <strong>Length</strong> method, set chunk size to 280 (Twitter's limit), choose "Chars" as unit. Your text automatically <strong>split text by length</strong> into tweet-sized parts. Use 270 to leave room for thread numbering (1/5, 2/5, etc.). The preview shows exactly how each tweet will look. This is the easiest way to <strong>split long text online</strong> for social media.</p>
+          <div class="faq-content px-5">
+            <p class="text-gray-500 text-sm pb-5 leading-relaxed">We support TXT, CSV, MD, LOG, and JSON files up to 5MB each. Upload multiple files simultaneously and process them together.</p>
           </div>
         </div>
 
-        <div class="glass-panel rounded-lg overflow-hidden">
-          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
-            <span class="text-sm font-medium text-gray-200 pr-4">Can I download split parts separately?</span>
-            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-            </svg>
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-300">Is my data secure?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </button>
-          <div class="faq-content px-3">
-            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Click <strong>"All Parts"</strong> button (appears with multiple parts) to download a file with all parts labeled. Or click any individual part in the preview section to copy it to clipboard. Perfect for batch processing or organizing chapters/sections. Our <strong>bulk text splitter</strong> export features make managing large datasets simple.</p>
+          <div class="faq-content px-5">
+            <p class="text-gray-500 text-sm pb-5 leading-relaxed">Absolutely. All processing happens in your browser using JavaScript. Your text never leaves your device or is transmitted to servers, ensuring complete privacy.</p>
           </div>
         </div>
 
-        <div class="glass-panel rounded-lg overflow-hidden">
-          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
-            <span class="text-sm font-medium text-gray-200 pr-4">What file types are supported?</span>
-            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-            </svg>
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-300">Is there a text size limit?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </button>
-          <div class="faq-content px-3">
-            <p class="text-gray-400 text-xs pb-3 leading-relaxed">All text-based files: TXT, CSV, JSON, XML, HTML, Markdown, and code files (JS, CSS, Python, Java, C/C++, PHP, Ruby, Go, Rust, Swift, Kotlin, SQL, LOG). Files are read as plain text, so any text file works regardless of extension. Our <strong>text split utility</strong> handles them all.</p>
+          <div class="faq-content px-5">
+            <p class="text-gray-500 text-sm pb-5 leading-relaxed">No artificial limits for direct input—process millions of characters. Browser memory constraints apply (typically ~50MB). File uploads limited to 5MB per file, but multiple files allowed.</p>
           </div>
         </div>
 
-        <div class="glass-panel rounded-lg overflow-hidden">
-          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
-            <span class="text-sm font-medium text-gray-200 pr-4">Is there a file size limit?</span>
-            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-            </svg>
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-300">How do I split by custom delimiters?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </button>
-          <div class="faq-content px-3">
-            <p class="text-gray-400 text-xs pb-3 leading-relaxed">The tool handles files up to 10-20MB (several million characters), roughly 3,000-5,000 pages. Limits vary by browser—Chrome/Edge handle larger files than Safari/mobile. For 100MB+ files, use command-line tools like `split` or process in chunks. Our <strong>free online text splitter tool</strong> is optimized for typical daily use cases.</p>
+          <div class="faq-content px-5">
+            <p class="text-gray-500 text-sm pb-5 leading-relaxed">Select "Delimiter" method, click "Custom", and enter any character or string (up to 10 characters). Perfect for specialized separators like " | " or "###".</p>
           </div>
         </div>
 
-        <div class="glass-panel rounded-lg overflow-hidden">
-          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
-            <span class="text-sm font-medium text-gray-200 pr-4">Is my data secure?</span>
-            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-            </svg>
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-300">Is this tool free?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </button>
-          <div class="faq-content px-3">
-            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely. All processing happens <strong>locally in your browser</strong>—text never uploads to servers or leaves your device. You can verify this with browser DevTools (Network tab shows no external data transfer). Works offline after loading. Ideal for confidential documents, code, or sensitive data. Privacy is built into our <strong>text splitter online</strong> architecture.</p>
-          </div>
-        </div>
-
-        <div class="glass-panel rounded-lg overflow-hidden">
-          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
-            <span class="text-sm font-medium text-gray-200 pr-4">Why is there a small delay when typing?</span>
-            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-            </svg>
-          </button>
-          <div class="faq-content px-3">
-            <p class="text-gray-400 text-xs pb-3 leading-relaxed">We use <strong>debouncing</strong> for performance. Without it, every keystroke would trigger <strong>text splitting</strong>, causing lag with large texts. The brief wait after you stop typing ensures smooth performance. The delay is short enough to feel instantaneous while optimizing browser workload.</p>
-          </div>
-        </div>
-
-        <div class="glass-panel rounded-lg overflow-hidden">
-          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
-            <span class="text-sm font-medium text-gray-200 pr-4">Is this tool free?</span>
-            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-            </svg>
-          </button>
-          <div class="faq-content px-3">
-            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, completely <strong>free</strong> with no registration, usage limits, watermarks, or hidden fees. Use for personal or commercial projects without attribution. This is truly a <strong>free text splitter</strong> for everyone. Supported by unobtrusive advertising and voluntary user support.</p>
+          <div class="faq-content px-5">
+            <p class="text-gray-500 text-sm pb-5 leading-relaxed">Yes, completely free. No registration, no usage limits, no watermarks. Use it for personal or commercial projects without restrictions.</p>
           </div>
         </div>
       </div>
@@ -878,12 +757,12 @@
   </main>
 
   <!-- Footer -->
-  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
-      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/ " target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
-      <div class="flex gap-4">
-        <a href="https://easyprotools.com/ " target="_blank" class="hover:text-white transition-colors">Home</a>
-        <a href="https://easyprotools.com/ " target="_blank" class="hover:text-white transition-colors">All Tools</a>
+  <footer class="border-t border-white/10 bg-black/60 backdrop-blur-lg mt-8">
+    <div class="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-600">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" class="text-gray-500 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-6">
+        <a href="https://easyprotools.com/" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" class="hover:text-white transition-colors">All Tools</a>
       </div>
     </div>
   </footer>
@@ -894,38 +773,41 @@ const inputText = document.getElementById('inputText');
 const outputText = document.getElementById('outputText');
 const inputStats = document.getElementById('inputStats');
 const outputStats = document.getElementById('outputStats');
-const partsCount = document.getElementById('partsCount');
-const processingTime = document.getElementById('processingTime');
-const partsPreview = document.getElementById('partsPreview');
-const partsList = document.getElementById('partsList');
-const dropZone = document.getElementById('dropZone');
-const dropOverlay = document.getElementById('dropOverlay');
-const fileInput = document.getElementById('fileInput');
-
-// Buttons
-const pasteBtn = document.getElementById('pasteBtn');
+const splitBtn = document.getElementById('splitBtn');
 const clearBtn = document.getElementById('clearBtn');
 const copyBtn = document.getElementById('copyBtn');
 const downloadBtn = document.getElementById('downloadBtn');
-const downloadPartsBtn = document.getElementById('downloadPartsBtn');
-const resetBtn = document.getElementById('resetBtn');
-const fileSelectBtn = document.getElementById('fileSelectBtn');
+const loadSampleBtn = document.getElementById('loadSampleBtn');
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const mobileMenu = document.getElementById('mobileMenu');
+const dropZone = document.getElementById('dropZone');
+const fileInput = document.getElementById('fileInput');
+const progressContainer = document.getElementById('progressContainer');
+const progressFill = document.getElementById('progressFill');
+const progressText = document.getElementById('progressText');
 
-// Method buttons and panels
-const methodBtns = document.querySelectorAll('.method-btn');
-const methodPanels = document.querySelectorAll('.method-panel');
+// Method and delimiter elements
+const methodPills = document.querySelectorAll('.method-pill[data-method]');
+const delimiterOptions = document.getElementById('delimiterOptions');
+const lengthOptions = document.getElementById('lengthOptions');
+const regexOptions = document.getElementById('regexOptions');
+const delimiterPills = document.querySelectorAll('.method-pill[data-delimiter]');
+const customDelimiter = document.getElementById('customDelimiter');
+const chunkSize = document.getElementById('chunkSize');
+const chunkOverlap = document.getElementById('chunkOverlap');
+const regexPattern = document.getElementById('regexPattern');
+const removeEmptyToggle = document.getElementById('removeEmptyToggle');
+const trimToggle = document.getElementById('trimToggle');
+
 let currentMethod = 'delimiter';
-let currentJoin = '\n';
-
-// Split parts storage
-let splitParts = [];
+let currentDelimiter = '\n';
+let removeEmpty = true;
+let trimWhitespace = true;
 
 // Set current year
 document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-// Mobile Menu Toggle
+// Mobile Menu
 mobileMenuBtn.addEventListener('click', () => {
   mobileMenu.classList.toggle('open');
 });
@@ -936,394 +818,303 @@ document.addEventListener('click', (e) => {
   }
 });
 
-// Update input stats
-function updateInputStats() {
-  const text = inputText.value;
-  const chars = text.length;
-  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
-  const lines = text === '' ? 0 : text.split('\n').length;
-  inputStats.textContent = `Chars: ${chars} | Words: ${words} | Lines: ${lines}`;
-}
-
-// Debounce function for performance
-function debounce(func, wait) {
-  let timeout;
-  return function executedFunction(...args) {
-    const later = () => {
-      clearTimeout(timeout);
-      func(...args);
-    };
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-  };
-}
-
-// Method selection
-methodBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    methodBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    currentMethod = btn.dataset.method;
+// Method switching
+methodPills.forEach(pill => {
+  pill.addEventListener('click', () => {
+    methodPills.forEach(p => p.classList.remove('active'));
+    pill.classList.add('active');
     
-    methodPanels.forEach(panel => panel.classList.add('hidden'));
-    document.getElementById(currentMethod + 'Options').classList.remove('hidden');
+    currentMethod = pill.dataset.method;
     
-    // Auto-split when method changes
-    splitText();
+    // Show/hide appropriate options
+    delimiterOptions.classList.add('hidden');
+    lengthOptions.classList.add('hidden');
+    regexOptions.classList.add('hidden');
+    
+    if (currentMethod === 'delimiter') {
+      delimiterOptions.classList.remove('hidden');
+    } else if (currentMethod === 'length') {
+      lengthOptions.classList.remove('hidden');
+    } else if (currentMethod === 'regex') {
+      regexOptions.classList.remove('hidden');
+    }
   });
 });
 
-// Join selection
-document.getElementById('joinSelect').addEventListener('change', (e) => {
-  currentJoin = e.target.value;
-  splitText();
-});
-
-// Custom delimiter toggle
-document.getElementById('delimiterSelect').addEventListener('change', (e) => {
-  const container = document.getElementById('customDelimiterContainer');
-  if (e.target.value === 'custom') {
-    container.classList.remove('hidden');
-  } else {
-    container.classList.add('hidden');
-  }
-  splitText();
-});
-
-document.getElementById('customDelimiter').addEventListener('input', () => {
-  splitText();
-});
-
-// Auto-split on option changes - immediate for better responsiveness
-['chunkLength', 'lengthUnit', 'wordsPerPart', 'linesPerPart', 'splitCharacter', 'removeEmptyParts', 'regexPattern'].forEach(id => {
-  const el = document.getElementById(id);
-  if (el) {
-    el.addEventListener('input', splitText);
-    el.addEventListener('change', splitText);
-  }
-});
-
-// Split function - updates output text and stats immediately
-function splitText() {
-  const startTime = performance.now();
-  const text = inputText.value;
-  
-  if (!text.trim()) {
-    outputText.value = '';
-    outputStats.textContent = 'Parts: 0 | Chars: 0';
-    partsCount.textContent = '(0 parts)';
-    partsCount.classList.add('hidden');
-    partsPreview.classList.add('hidden');
-    downloadPartsBtn.classList.add('hidden');
-    processingTime.textContent = '';
-    splitParts = [];
-    return;
-  }
-  
-  let parts = [];
-  
-  try {
-    switch(currentMethod) {
-      case 'delimiter':
-        const delimiterSelect = document.getElementById('delimiterSelect').value;
-        let delimiter = delimiterSelect === 'custom' 
-          ? document.getElementById('customDelimiter').value 
-          : delimiterSelect;
-        
-        delimiter = delimiter.replace(/\\n/g, '\n').replace(/\\t/g, '\t');
-        parts = text.split(delimiter);
-        break;
-        
-      case 'length':
-        const chunkLength = parseInt(document.getElementById('chunkLength').value) || 100;
-        const lengthUnit = document.getElementById('lengthUnit').value;
-        
-        if (lengthUnit === 'chars') {
-          for (let i = 0; i < text.length; i += chunkLength) {
-            parts.push(text.slice(i, i + chunkLength));
-          }
-        } else {
-          const words = text.split(/\s+/);
-          for (let i = 0; i < words.length; i += chunkLength) {
-            parts.push(words.slice(i, i + chunkLength).join(' '));
-          }
-        }
-        break;
-        
-      case 'words':
-        const wordsPerPart = parseInt(document.getElementById('wordsPerPart').value) || 10;
-        const allWords = text.split(/\s+/).filter(w => w.length > 0);
-        for (let i = 0; i < allWords.length; i += wordsPerPart) {
-          parts.push(allWords.slice(i, i + wordsPerPart).join(' '));
-        }
-        break;
-        
-      case 'lines':
-        const linesPerPart = parseInt(document.getElementById('linesPerPart').value) || 5;
-        const allLines = text.split('\n');
-        for (let i = 0; i < allLines.length; i += linesPerPart) {
-          parts.push(allLines.slice(i, i + linesPerPart).join('\n'));
-        }
-        break;
-        
-      case 'character':
-        const splitChar = document.getElementById('splitCharacter').value;
-        const removeEmpty = document.getElementById('removeEmptyParts').checked;
-        
-        if (splitChar) {
-          parts = text.split(splitChar);
-          if (removeEmpty) {
-            parts = parts.filter(p => p.trim().length > 0);
-          }
-        }
-        break;
-        
-      case 'regex':
-        const pattern = document.getElementById('regexPattern').value;
-        if (pattern) {
-          const regex = new RegExp(pattern, 'g');
-          parts = text.split(regex).filter(p => p.length > 0);
-        }
-        break;
-    }
+// Delimiter selection
+delimiterPills.forEach(pill => {
+  pill.addEventListener('click', () => {
+    delimiterPills.forEach(p => p.classList.remove('active'));
+    pill.classList.add('active');
     
-    const endTime = performance.now();
-    splitParts = parts;
+    const delimType = pill.dataset.delimiter;
     
-    // Update output text and stats
-    const joinedResult = parts.join(currentJoin.replace(/\\n/g, '\n'));
-    outputText.value = joinedResult;
-    
-    // Update stats only
-    const totalChars = parts.reduce((sum, part) => sum + part.length, 0);
-    outputStats.textContent = `Parts: ${parts.length} | Chars: ${totalChars}`;
-    partsCount.textContent = `(${parts.length} parts)`;
-    partsCount.classList.remove('hidden');
-    processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
-    
-    // Update parts preview
-    displayPartsPreview(parts);
-    
-    // Show download parts button if multiple parts
-    if (parts.length > 1) {
-      downloadPartsBtn.classList.remove('hidden');
+    if (delimType === 'custom') {
+      customDelimiter.classList.remove('hidden');
+      currentDelimiter = customDelimiter.value || '';
+      customDelimiter.focus();
     } else {
-      downloadPartsBtn.classList.add('hidden');
+      customDelimiter.classList.add('hidden');
+      
+      switch(delimType) {
+        case 'newline': currentDelimiter = '\n'; break;
+        case 'comma': currentDelimiter = ','; break;
+        case 'space': currentDelimiter = ' '; break;
+        case 'pipe': currentDelimiter = '|'; break;
+        case 'tab': currentDelimiter = '\t'; break;
+      }
     }
-    
-  } catch (error) {
-    // Silent fail - don't disrupt user experience
-    console.error('Split error:', error);
-  }
-}
-
-// Debounced version for typing (instant delay)
-const debouncedSplit = debounce(splitText, 00);
-
-// Display parts preview
-function displayPartsPreview(parts) {
-  if (parts.length === 0 || parts.length === 1) {
-    partsPreview.classList.add('hidden');
-    return;
-  }
-  
-  partsPreview.classList.remove('hidden');
-  partsList.innerHTML = '';
-  
-  parts.slice(0, 50).forEach((part, index) => { // Limit to 50 for performance
-    const partDiv = document.createElement('div');
-    partDiv.className = 'split-preview-item p-2 rounded bg-white/5 cursor-pointer text-xs';
-    partDiv.innerHTML = `
-      <div class="flex items-center justify-between mb-0.5">
-        <span class="text-xs font-medium text-indigo-400">Part ${index + 1}</span>
-        <span class="text-xs text-gray-500">${part.length}c</span>
-      </div>
-      <div class="text-gray-300 truncate">${part.substring(0, 60)}${part.length > 60 ? '...' : ''}</div>
-    `;
-    
-    partDiv.addEventListener('click', () => {
-      navigator.clipboard.writeText(part);
-      partDiv.style.background = 'rgba(34, 197, 94, 0.2)';
-      setTimeout(() => {
-        partDiv.style.background = '';
-      }, 200);
-    });
-    
-    partsList.appendChild(partDiv);
   });
-  
-  if (parts.length > 50) {
-    const moreDiv = document.createElement('div');
-    moreDiv.className = 'text-xs text-gray-500 text-center py-1';
-    moreDiv.textContent = `... and ${parts.length - 50} more parts`;
-    partsList.appendChild(moreDiv);
-  }
-}
+});
 
-// Drag and drop handlers - REMOVED click handler from dropZone
+// Custom delimiter input
+customDelimiter.addEventListener('input', () => {
+  if (document.querySelector('.method-pill[data-delimiter].active')?.dataset.delimiter === 'custom') {
+    currentDelimiter = customDelimiter.value;
+  }
+});
+
+// Toggle switches
+removeEmptyToggle.addEventListener('click', () => {
+  removeEmptyToggle.classList.toggle('active');
+  removeEmpty = removeEmptyToggle.classList.contains('active');
+});
+
+trimToggle.addEventListener('click', () => {
+  trimToggle.classList.toggle('active');
+  trimWhitespace = trimToggle.classList.contains('active');
+});
+
+// Input stats update
+inputText.addEventListener('input', () => {
+  const text = inputText.value;
+  inputStats.textContent = `${text.length.toLocaleString()} char${text.length !== 1 ? 's' : ''}`;
+});
+
+// Load sample text
+loadSampleBtn.addEventListener('click', () => {
+  const samples = {
+    delimiter: `apple,banana,cherry,date,elderberry,fig,grape`,
+    length: `This is a sample text that demonstrates length-based splitting. When you split by character count, the text is divided into chunks of approximately equal size. This is particularly useful for processing large documents that exceed AI model token limits, creating SMS-friendly message segments, or preparing content for platforms with character restrictions. The overlap feature ensures that context isn't lost between chunks, which is crucial for maintaining semantic continuity in AI applications.`,
+    regex: `Paragraph one. This is the first section of text.
+
+Paragraph two. This is the second section with different content.
+
+Paragraph three. This is the third section demonstrating paragraph splitting.`
+  };
+  
+  inputText.value = samples[currentMethod] || samples.delimiter;
+  inputStats.textContent = `${inputText.value.length.toLocaleString()} chars`;
+});
+
+// File handling
+dropZone.addEventListener('click', () => fileInput.click());
+
 dropZone.addEventListener('dragover', (e) => {
   e.preventDefault();
-  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
-  dropZone.querySelector('textarea').classList.add('drag-active');
+  dropZone.classList.add('border-white/30', 'bg-white/5');
 });
 
-dropZone.addEventListener('dragleave', (e) => {
-  e.preventDefault();
-  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
-  dropZone.querySelector('textarea').classList.remove('drag-active');
+dropZone.addEventListener('dragleave', () => {
+  dropZone.classList.remove('border-white/30', 'bg-white/5');
 });
 
 dropZone.addEventListener('drop', (e) => {
   e.preventDefault();
-  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
-  dropZone.querySelector('textarea').classList.remove('drag-active');
-  
-  const files = e.dataTransfer.files;
-  if (files.length > 0) {
-    handleFile(files[0]);
-  }
-});
-
-// REMOVED: dropZone click event that was triggering file input
-// Now only fileSelectBtn triggers file input
-fileSelectBtn.addEventListener('click', (e) => {
-  e.stopPropagation();
-  fileInput.click();
+  dropZone.classList.remove('border-white/30', 'bg-white/5');
+  handleFiles(Array.from(e.dataTransfer.files));
 });
 
 fileInput.addEventListener('change', (e) => {
-  if (e.target.files.length > 0) {
-    handleFile(e.target.files[0]);
-  }
+  handleFiles(Array.from(e.target.files));
 });
 
-function handleFile(file) {
-  if (!file.type.match('text.*') && !file.name.match(/\.(txt|csv|json|xml|html?|md|js|css|py|java|cpp|c|php|rb|go|rs|swift|kt|sql|log)$/i)) {
-    alert('Please upload a text file');
+function handleFiles(files) {
+  const validFiles = files.filter(f => 
+    f.size <= 5 * 1024 * 1024 && 
+    /\.(txt|csv|md|log|json)$/i.test(f.name)
+  );
+  
+  if (validFiles.length === 0) {
+    alert('Please upload valid files (TXT, CSV, MD, LOG, JSON) under 5MB');
     return;
   }
   
-  const reader = new FileReader();
-  reader.onload = (e) => {
-    inputText.value = e.target.result;
-    updateInputStats();
-    splitText(); // Immediate split on file load
-  };
-  reader.readAsText(file);
+  showProgress(0, 'Reading files...');
+  
+  Promise.all(validFiles.map((file, index) => {
+    return new Promise((resolve) => {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        showProgress(((index + 1) / validFiles.length) * 50, `Reading ${file.name}...`);
+        resolve(e.target.result);
+      };
+      reader.readAsText(file);
+    });
+  })).then(contents => {
+    showProgress(75, 'Processing...');
+    inputText.value = contents.join('\n\n');
+    inputStats.textContent = `${inputText.value.length.toLocaleString()} chars`;
+    hideProgress();
+    performSplit();
+  });
 }
 
-// Paste from clipboard
-async function pasteFromClipboard() {
+function showProgress(percent, text) {
+  progressContainer.classList.remove('hidden');
+  progressFill.style.width = `${percent}%`;
+  progressText.textContent = text;
+}
+
+function hideProgress() {
+  setTimeout(() => {
+    progressContainer.classList.add('hidden');
+  }, 500);
+}
+
+// Main split function
+function performSplit() {
+  const text = inputText.value;
+  if (!text.trim()) {
+    outputText.value = '';
+    outputStats.textContent = '0 parts';
+    return;
+  }
+  
+  showProgress(30, 'Splitting text...');
+  
+  setTimeout(() => {
+    try {
+      let results = [];
+      
+      if (currentMethod === 'delimiter') {
+        results = splitByDelimiter(text, currentDelimiter);
+      } else if (currentMethod === 'length') {
+        const size = parseInt(chunkSize.value) || 100;
+        const overlap = parseInt(chunkOverlap.value) || 0;
+        results = splitByLength(text, size, overlap);
+      } else if (currentMethod === 'regex') {
+        const pattern = regexPattern.value || '\\n\\s*\\n';
+        results = splitByRegex(text, pattern);
+      }
+      
+      showProgress(80, 'Processing results...');
+      
+      // Apply filters
+      if (trimWhitespace) {
+        results = results.map(r => r.trim());
+      }
+      
+      if (removeEmpty) {
+        results = results.filter(r => r.length > 0);
+      }
+      
+      // Display results in textarea with separators
+      const separator = '\n\n' + '='.repeat(40) + '\n\n';
+      outputText.value = results.join(separator);
+      outputStats.textContent = `${results.length} part${results.length !== 1 ? 's' : ''}`;
+      
+      showProgress(100, 'Complete!');
+      hideProgress();
+      
+    } catch (error) {
+      hideProgress();
+      alert('Error splitting text: ' + error.message);
+    }
+  }, 100);
+}
+
+function splitByDelimiter(text, delimiter) {
+  if (!delimiter) return [text];
+  
+  // Escape special regex characters for literal splitting
+  const escaped = delimiter.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const regex = new RegExp(escaped, 'g');
+  return text.split(regex);
+}
+
+function splitByLength(text, length, overlap) {
+  if (length <= 0) return [text];
+  
+  const results = [];
+  let start = 0;
+  
+  while (start < text.length) {
+    const end = Math.min(start + length, text.length);
+    results.push(text.slice(start, end));
+    start += length - overlap;
+    
+    if (start >= end) break;
+  }
+  
+  return results;
+}
+
+function splitByRegex(text, pattern) {
   try {
-    const text = await navigator.clipboard.readText();
-    inputText.value = text;
-    updateInputStats();
-    splitText(); // Immediate split on paste
-  } catch (err) {
-    alert('Unable to access clipboard');
+    const regex = new RegExp(pattern, 'g');
+    return text.split(regex);
+  } catch (e) {
+    throw new Error('Invalid regex pattern: ' + e.message);
   }
 }
 
-// Clear input
-function clearInput() {
-  inputText.value = '';
-  updateInputStats();
-  splitText(); // Clear output too
-  inputText.focus();
-}
-
 // Copy output
-async function copyOutput() {
-  if (!outputText.value) return;
+copyBtn.addEventListener('click', async () => {
+  const text = outputText.value;
+  if (!text) return;
   
   try {
-    await navigator.clipboard.writeText(outputText.value);
-    const originalText = copyBtn.innerHTML;
-    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
-    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
-    
+    await navigator.clipboard.writeText(text);
+    const originalHTML = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>`;
     setTimeout(() => {
-      copyBtn.innerHTML = originalText;
-      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+      copyBtn.innerHTML = originalHTML;
     }, 1500);
   } catch (err) {
     console.error('Copy failed', err);
   }
-}
+});
 
 // Download output
-function downloadOutput() {
+downloadBtn.addEventListener('click', () => {
   const text = outputText.value;
-  if (!text.trim()) return;
+  if (!text) return;
   
   const blob = new Blob([text], { type: 'text/plain' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = 'split-text.txt';
+  a.download = 'split-results.txt';
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
-}
-
-// Download all parts
-async function downloadAllParts() {
-  if (splitParts.length === 0) return;
-  
-  let content = '';
-  splitParts.forEach((part, index) => {
-    content += `=== PART ${index + 1} ===\n${part}\n\n`;
-  });
-  
-  const blob = new Blob([content], { type: 'text/plain' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'split-parts.txt';
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-  URL.revokeObjectURL(url);
-}
-
-// Reset all
-function resetAll() {
-  inputText.value = '';
-  outputText.value = '';
-  updateInputStats();
-  outputStats.textContent = 'Parts: 0 | Chars: 0';
-  partsCount.classList.add('hidden');
-  partsPreview.classList.add('hidden');
-  downloadPartsBtn.classList.add('hidden');
-  processingTime.textContent = '';
-  splitParts = [];
-}
-
-// FAQ Toggle
-function toggleFaq(button) {
-  const content = button.nextElementSibling;
-  const icon = button.querySelector('.faq-icon');
-  
-  content.classList.toggle('open');
-  icon.classList.toggle('open');
-}
-
-// Event listeners - Auto-split on input with debounce
-inputText.addEventListener('input', () => {
-  updateInputStats();
-  debouncedSplit();
 });
 
-pasteBtn.addEventListener('click', pasteFromClipboard);
-clearBtn.addEventListener('click', clearInput);
-copyBtn.addEventListener('click', copyOutput);
-downloadBtn.addEventListener('click', downloadOutput);
-downloadPartsBtn.addEventListener('click', downloadAllParts);
-resetBtn.addEventListener('click', resetAll);
+// Split button
+splitBtn.addEventListener('click', performSplit);
+
+// Clear button
+clearBtn.addEventListener('click', () => {
+  inputText.value = '';
+  outputText.value = '';
+  inputStats.textContent = '0 chars';
+  outputStats.textContent = '0 parts';
+  fileInput.value = '';
+});
+
+// FAQ Toggle
+window.toggleFaq = function(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+};
 
 // Initialize
-updateInputStats();
+inputStats.textContent = '0 chars';
+outputStats.textContent = '0 parts';
 </script>
 </body>
 </html>

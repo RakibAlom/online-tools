@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Word Counter - Free Online Word Count & Text Analysis Tool</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online word counter tool. Count words, characters, sentences, and paragraphs instantly. Perfect for writers, students, and SEO professionals. No registration required." />
+  <meta name="keywords" content="word counter, word counter online, free word counter, online word counter, count words online, word count tool, word count checker online, word count calculator, text word counter online, word and character counter, word count online free, free online word counter tool, count words in text online, word count analyzer online, word count checker free, online word statistics tool, word counting tool online, word count utility online, bulk word counter online, text analysis word counter, free text word counter online, word counter for seo online, word count for writing online, online word count tracker free, word count measurement tool online" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/word-counter/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/word-counter/" />
+  <meta property="og:title" content="Word Counter - Free Online Word Count & Text Analysis Tool" />
+  <meta property="og:description" content="Count words, characters, sentences, and paragraphs instantly with our free online word counter. Perfect for writers, students, and SEO optimization." />
+  <meta property="og:image" content="https://easyprotools.com/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/word-counter/" />
+  <meta name="twitter:title" content="Word Counter - Free Online Word Count & Text Analysis Tool" />
+  <meta name="twitter:description" content="Count words, characters, sentences, and paragraphs instantly with our free online word counter. Perfect for writers, students, and SEO optimization." />
+  <meta name="twitter:image" content="https://easyprotools.com/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+  
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0f;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0f;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.08) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(139, 92, 246, 0.08) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(99, 102, 241, 0.05) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(139, 92, 246, 0.05) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 28, 0.7);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(10, 10, 15, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(10, 10, 15, 0.8);
+      border-color: rgba(99, 102, 241, 0.5);
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-small {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+      height: 2rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.375rem;
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .stat-card {
+      transition: all 0.3s ease;
+    }
+    .stat-card:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .progress-bar {
+      transition: width 0.3s ease;
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.5) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    .limit-warning {
+      color: #fbbf24;
+    }
+    .limit-danger {
+      color: #f87171;
+    }
+
+    .reading-time {
+      font-variant-numeric: tabular-nums;
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-3">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 14h20M10 20h16M10 26h12" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Word Counter</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Analysis</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-6">
+          <a href="https://easyprotools.com/" class="text-sm text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-sm text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0f]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 sm:py-6 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Word Counter
+      </h1>
+      <p class="text-gray-400 text-sm sm:text-base">
+        Online Free Word Count & Text Analysis Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-2xl p-4 sm:p-6 mb-6">
+      
+      <!-- Input Area -->
+      <div class="mb-4">
+        <div class="flex items-center justify-between mb-2">
+          <label class="text-xs font-medium text-gray-300 flex items-center gap-2">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            Enter or paste text
+          </label>
+          <div class="flex gap-2">
+            <button id="pasteBtn" class="btn-small rounded-lg bg-white/5 hover:bg-white/10 text-gray-300 transition-colors btn-animated">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+              Paste
+            </button>
+            <button id="clearBtn" class="btn-small rounded-lg bg-red-500/10 hover:bg-red-500/20 text-red-400 transition-colors btn-animated">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+              Clear
+            </button>
+          </div>
+        </div>
+        
+        <div id="dropZone" class="relative">
+          <textarea id="textInput" placeholder="Type or paste your text here to count words, characters, sentences, and more..." 
+            class="w-full h-40 sm:h-52 p-3 rounded-lg glass-input font-mono text-xs sm:text-sm leading-relaxed resize-y"></textarea>
+          <div id="dropOverlay" class="absolute inset-0 rounded-lg border-2 border-dashed border-indigo-500/50 bg-indigo-500/10 hidden flex items-center justify-center">
+            <span class="text-indigo-300 font-medium text-sm">Drop text file here</span>
+          </div>
+        </div>
+        
+        <div class="mt-2 flex items-center justify-between text-xs text-gray-400">
+          <span id="statusText">Ready</span>
+          <span id="readingTime" class="reading-time">0 min read</span>
+        </div>
+      </div>
+
+      <!-- Primary Stats -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
+        <div class="stat-card glass-panel rounded-lg p-3 border border-white/5">
+          <div class="flex items-center gap-1.5 mb-1">
+            <svg class="w-3.5 h-3.5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13M3 8h9m-9 4h9m5-4v12m0 0l-4-4m4 4l4-4"/></svg>
+            <span class="text-xs text-gray-400 uppercase tracking-wider">Words</span>
+          </div>
+          <div class="text-xl font-bold text-white" id="wordCount">0</div>
+          <div class="text-xs text-gray-500 mt-0.5">total count</div>
+        </div>
+
+        <div class="stat-card glass-panel rounded-lg p-3 border border-white/5">
+          <div class="flex items-center gap-1.5 mb-1">
+            <svg class="w-3.5 h-3.5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"/></svg>
+            <span class="text-xs text-gray-400 uppercase tracking-wider">Characters</span>
+          </div>
+          <div class="text-xl font-bold text-white" id="charCount">0</div>
+          <div class="text-xs text-gray-500 mt-0.5">with spaces</div>
+        </div>
+
+        <div class="stat-card glass-panel rounded-lg p-3 border border-white/5">
+          <div class="flex items-center gap-1.5 mb-1">
+            <svg class="w-3.5 h-3.5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
+            <span class="text-xs text-gray-400 uppercase tracking-wider">Sentences</span>
+          </div>
+          <div class="text-xl font-bold text-white" id="sentenceCount">0</div>
+          <div class="text-xs text-gray-500 mt-0.5">estimated</div>
+        </div>
+
+        <div class="stat-card glass-panel rounded-lg p-3 border border-white/5">
+          <div class="flex items-center gap-1.5 mb-1">
+            <svg class="w-3.5 h-3.5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            <span class="text-xs text-gray-400 uppercase tracking-wider">Paragraphs</span>
+          </div>
+          <div class="text-xl font-bold text-white" id="paragraphCount">0</div>
+          <div class="text-xs text-gray-500 mt-0.5">non-empty</div>
+        </div>
+      </div>
+
+      <!-- Secondary Stats -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
+        <div class="bg-white/5 rounded-lg p-2 text-center">
+          <div class="text-base font-semibold text-white" id="charNoSpaces">0</div>
+          <div class="text-xs text-gray-400">No spaces</div>
+        </div>
+        <div class="bg-white/5 rounded-lg p-2 text-center">
+          <div class="text-base font-semibold text-white" id="spaceCount">0</div>
+          <div class="text-xs text-gray-400">Spaces</div>
+        </div>
+        <div class="bg-white/5 rounded-lg p-2 text-center">
+          <div class="text-base font-semibold text-white" id="avgSentenceLength">0</div>
+          <div class="text-xs text-gray-400">Avg Sentence</div>
+        </div>
+        <div class="bg-white/5 rounded-lg p-2 text-center">
+          <div class="text-base font-semibold text-white" id="avgWordLength">0</div>
+          <div class="text-xs text-gray-400">Avg Word</div>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap gap-2 mb-4">
+        <button id="copyBtn" class="btn-small rounded-lg bg-white/10 hover:bg-white/20 text-white border border-white/10 transition-all btn-animated">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+          Copy
+        </button>
+        <button id="downloadBtn" class="btn-small rounded-lg bg-white/5 hover:bg-white/10 text-gray-300 border border-white/10 transition-all btn-animated">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+          Download Stats
+        </button>
+        <button id="fileInputBtn" class="btn-small rounded-lg bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-300 border border-indigo-500/20 transition-all btn-animated">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          Load File
+        </button>
+        <input type="file" id="fileInput" accept=".txt,.md,.csv,.json,.js,.html,.css,.xml,.docx,.pdf" class="hidden">
+      </div>
+
+      <!-- Keyword Density -->
+      <div class="border-t border-white/10 pt-4">
+        <div class="flex items-center justify-between mb-3">
+          <h3 class="text-sm font-semibold text-white flex items-center gap-2">
+            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
+            Top Keywords
+          </h3>
+          <div class="flex gap-2 text-xs">
+            <label class="flex items-center gap-1.5 text-gray-400 cursor-pointer">
+              <input type="checkbox" id="excludeCommon" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 focus:ring-offset-0 w-3.5 h-3.5" checked>
+              Exclude Common Words
+            </label>
+          </div>
+        </div>
+        
+        <div id="keywordsContainer" class="space-y-1.5 max-h-48 overflow-y-auto pr-2">
+          <p class="text-gray-500 text-xs text-center py-6">Start typing to see keyword density analysis...</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="mb-12">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-8 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Word Counter?
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="glass-panel rounded-xl p-5 glass-hover transition-all duration-300">
+          <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h3 class="text-base font-semibold mb-1.5 text-white">Real-Time Counting</h3>
+          <p class="text-gray-400 text-xs leading-relaxed">Watch word count and character statistics update instantly as you type. No delays or button clicks needed—just immediate, accurate metrics.</p>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-5 glass-hover transition-all duration-300">
+          <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="text-base font-semibold mb-1.5 text-white">Reading Time</h3>
+          <p class="text-gray-400 text-xs leading-relaxed">Automatically calculates estimated reading time based on word count. Perfect for blog posts, articles, and content planning.</p>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-5 glass-hover transition-all duration-300">
+          <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          </div>
+          <h3 class="text-base font-semibold mb-1.5 text-white">Keyword Analysis</h3>
+          <p class="text-gray-400 text-xs leading-relaxed">Discover the most frequently used words in your text. Essential for SEO optimization and identifying overused terms in your writing.</p>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-5 glass-hover transition-all duration-300">
+          <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          </div>
+          <h3 class="text-base font-semibold mb-1.5 text-white">File Support</h3>
+          <p class="text-gray-400 text-xs leading-relaxed">Upload and analyze text files directly. Drag and drop or browse for files—no copy-paste needed for large documents.</p>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-5 glass-hover transition-all duration-300">
+          <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+          </div>
+          <h3 class="text-base font-semibold mb-1.5 text-white">100% Private</h3>
+          <p class="text-gray-400 text-xs leading-relaxed">Your text never leaves your browser. We don't store, transmit, or analyze your content. Complete privacy guaranteed.</p>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-5 glass-hover transition-all duration-300">
+          <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+          </div>
+          <h3 class="text-base font-semibold mb-1.5 text-white">Mobile Friendly</h3>
+          <p class="text-gray-400 text-xs leading-relaxed">Fully responsive design works perfectly on phones and tablets. Count words on the go, anywhere, anytime.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section -->
+    <section class="mb-12">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-8 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use the Word Counter
+      </h2>
+      <div class="space-y-4">
+        <div class="glass-panel rounded-xl p-4 flex items-start space-x-3">
+          <div class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold text-sm">1</span>
+          </div>
+          <div>
+            <h3 class="text-base font-semibold mb-1 text-white">Enter Your Text</h3>
+            <p class="text-gray-400 text-xs leading-relaxed">Type directly into the text area, paste from clipboard, or drag and drop a file. The counter accepts any text format instantly.</p>
+          </div>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-4 flex items-start space-x-3">
+          <div class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold text-sm">2</span>
+          </div>
+          <div>
+            <h3 class="text-base font-semibold mb-1 text-white">View Live Statistics</h3>
+            <p class="text-gray-400 text-xs leading-relaxed">Watch word count, character count, sentence count, and reading time update in real-time as you write or edit.</p>
+          </div>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-4 flex items-start space-x-3">
+          <div class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold text-sm">3</span>
+          </div>
+          <div>
+            <h3 class="text-base font-semibold mb-1 text-white">Analyze Keywords</h3>
+            <p class="text-gray-400 text-xs leading-relaxed">Review the top keywords section to see which words appear most frequently. Toggle common words filter for better insights.</p>
+          </div>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-4 flex items-start space-x-3">
+          <div class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold text-sm">4</span>
+          </div>
+          <div>
+            <h3 class="text-base font-semibold mb-1 text-white">Export Results</h3>
+            <p class="text-gray-400 text-xs leading-relaxed">Copy your text or download a complete statistics report including all metrics and keyword analysis for your records.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-12">
+      <article class="glass-panel rounded-2xl p-5 md:p-8 article-content">
+        <h2>The Complete Guide to Word Counting: Essential Metrics for Writers, Students, and Professionals</h2>
+        
+        <p><strong>Word counting</strong> has become an indispensable practice in the digital age, serving as the foundation for content creation across countless industries. Whether you're a novelist tracking daily writing progress, a student meeting essay requirements, a marketer optimizing blog posts for SEO, or a professional preparing reports, understanding word metrics is crucial for success. This comprehensive guide explores the importance of <strong>online word counters</strong>, their diverse applications, and how to leverage these tools to enhance your writing workflow and achieve your content goals.</p>
+
+        <h2>Understanding Word Count Metrics: More Than Just Numbers</h2>
+        
+        <p>When we discuss <strong>word counter</strong> tools, we're referring to sophisticated analyzers that provide multiple dimensions of text measurement. While the primary metric—<strong>word count</strong>—represents the total number of words in your text, modern <strong>word count tool</strong> solutions offer far more comprehensive insights that help writers refine their craft and meet specific requirements.</p>
+
+        <p><strong>Character count</strong> provides essential data for platforms with strict character limits, such as social media posts, meta descriptions, and SMS messages. Understanding the relationship between words and characters helps writers optimize content density and readability. <strong>Sentence count</strong> and <strong>paragraph count</strong> offer structural insights that impact readability scores and audience engagement. Advanced metrics like average word length and sentence length help identify writing complexity and target audience appropriateness.</p>
+
+        <p>For content creators focused on engagement, <strong>reading time estimation</strong> has become invaluable. Based on average adult reading speeds (approximately 200-250 words per minute), this metric helps writers understand how long their audience will spend consuming content. Our <strong>free word counter</strong> provides all these metrics simultaneously, eliminating the need for multiple tools and streamlining your editing process.</p>
+
+        <h2>The Critical Importance of Word Count in Modern Writing</h2>
+
+        <h3>Academic Writing and Educational Requirements</h3>
+        
+        <p>Students at every educational level encounter strict word count requirements that significantly impact their grades and academic success. High school essays typically range from 500-1,000 words, while college-level assignments often require 1,500-3,000 words. Graduate-level papers, theses, and dissertations demand substantially longer formats, sometimes exceeding 10,000 or even 50,000 words.</p>
+
+        <p>Standardized testing also relies heavily on word metrics. The SAT essay section recommends approximately 500-750 words, while GRE analytical writing tasks suggest 400-600 words per essay. College application essays, particularly the Common Application personal statement, strictly enforce a 650-word maximum. Using a reliable <strong>word count checker online</strong> ensures students meet these requirements precisely, avoiding penalties for insufficient or excessive length.</p>
+
+        <p>Beyond compliance, word counting helps students develop discipline in their writing. Learning to express complex ideas within specific constraints builds conciseness skills and improves overall communication effectiveness. Teachers and professors use <strong>word count calculator</strong> tools to verify assignment compliance quickly and fairly.</p>
+
+        <h3>Professional and Business Writing Standards</h3>
+        
+        <p>The business world operates on precise communication standards where word count directly impacts effectiveness. Executive summaries typically range from 100-250 words, forcing professionals to distill complex information into actionable insights. Business proposals vary by industry but often specify 1,000-2,500 words to ensure comprehensive yet focused presentations.</p>
+
+        <p>Marketing professionals rely on <strong>text word counter online</strong> tools extensively. Email subject lines perform best at 6-10 words (approximately 40-60 characters). Landing page copy typically ranges from 500-2,000 words depending on product complexity. White papers and case studies usually require 1,500-5,000 words to establish authority and provide value. Press releases follow strict format guidelines, typically 300-800 words, with the most critical information in the first 100 words.</p>
+
+        <p>Technical writers face unique challenges where word count affects usability. User interface text must fit within design constraints while remaining clear. Help documentation requires sufficient detail without overwhelming users. API documentation balances comprehensiveness with scannability. A professional <strong>word and character counter</strong> helps technical writers navigate these competing demands.</p>
+
+        <h3>Creative Writing and Publishing Industry Standards</h3>
+        
+        <p>Creative writers live and die by word count metrics. Flash fiction typically limits stories to 300-1,000 words, requiring extreme precision in storytelling. Short stories generally range from 1,000-7,500 words, with specific markets having exact requirements. Novellas occupy the 17,500-40,000 word range, while novels typically start at 50,000 words, with genre-specific expectations: romance novels often 50,000-90,000 words, science fiction and fantasy 90,000-120,000 words, and literary fiction 80,000-100,000 words.</p>
+
+        <p>Professional authors use daily word count goals to maintain productivity. Stephen King famously recommends 2,000 words per day, while many successful authors target 500-1,500 words during drafting phases. National Novel Writing Month (NaNoWriMo) challenges participants to write 50,000 words in 30 days, requiring approximately 1,667 words daily. A reliable <strong>online word counter</strong> becomes an essential accountability tool for these writing sprints.</p>
+
+        <h2>Digital Content Optimization and SEO</h2>
+
+        <h3>Search Engine Optimization Requirements</h3>
+        
+        <p>SEO professionals understand that word count significantly impacts search rankings. Comprehensive studies consistently show that longer content tends to rank higher in Google search results. The average first-page result contains approximately 1,447 words, with top-ranking pages often exceeding 2,000 words. However, this doesn't mean longer is always better—content must match search intent and provide genuine value.</p>
+
+        <p>Different content types have optimal word ranges for SEO performance. Blog posts perform best at 1,500-2,500 words, providing sufficient depth to demonstrate expertise. Pillar pages and comprehensive guides often exceed 3,000 words, establishing topical authority. Product descriptions should be 300-500 words to balance detail with scannability. Category pages typically need 200-300 words of unique content above product listings.</p>
+
+        <p>Beyond total word count, <strong>word count analyzer online</strong> tools help SEO professionals optimize keyword density. While modern search engines use sophisticated semantic analysis, keyword frequency still matters. Most SEO experts recommend keyword density between 1-2%, meaning a 1,000-word article should include the target keyword 10-20 times naturally. Our keyword analysis feature helps writers identify over-optimization or under-utilization of important terms.</p>
+
+        <h3>Social Media and Platform-Specific Optimization</h3>
+        
+        <p>Each social media platform enforces unique constraints that content creators must navigate. Twitter (X) allows 280 characters per tweet, approximately 40-50 words. Instagram captions truncate after 125 characters in feed view, though allowing up to 2,200 characters total. LinkedIn posts perform best at 100-150 words for maximum engagement. Facebook allows lengthy posts, but optimal engagement occurs at 40-80 words.</p>
+
+        <p>Using a <strong>word count online free</strong> tool before posting ensures content fits platform constraints while maximizing impact. Social media managers often create multiple versions of content optimized for different platforms' specific requirements. Understanding how word count affects engagement metrics helps professionals refine their content strategies and improve ROI.</p>
+
+        <h2>Technical Applications of Word Counting</h2>
+
+        <h3>Translation and Localization Projects</h3>
+        
+        <p>Professional translators rely heavily on word count metrics for project estimation and pricing. Most translation services charge per word, with rates varying by language pair, subject matter, and turnaround time. A typical professional translation rate ranges from $0.08-$0.25 per word, making accurate counting essential for quotes and invoicing.</p>
+
+        <p>Localization projects present unique word counting challenges. Some languages expand significantly compared to English—German text typically requires 30% more space, while Finnish might need 40% more characters. Conversely, Chinese and Japanese often require less space than English equivalents. Professional <strong>word counting tool online</strong> solutions help project managers estimate scope and resource requirements accurately across multilingual projects.</p>
+
+        <h3>Legal and Compliance Documentation</h3>
+        
+        <p>Legal professionals operate within strict documentation standards where word count affects validity and enforceability. Court filings often specify exact formatting requirements including word limits. Patent applications must balance comprehensiveness with clarity, typically ranging from 5,000-15,000 words. Contracts and legal agreements vary widely but require precise language where every word carries potential liability.</p>
+
+        <p>Regulatory compliance documentation also demands careful word management. SEC filings, FDA submissions, and GDPR privacy policies must meet specific length requirements while remaining comprehensible to intended audiences. Legal teams use <strong>word count utility online</strong> tools to verify compliance before submission, preventing costly rejections or required revisions that delay critical processes.</p>
+
+        <h2>Best Practices for Effective Word Counting</h2>
+
+        <h3>Understanding Counting Methodologies</h3>
+        
+        <p>Different tools and platforms count words differently, leading to potential discrepancies. Most modern word counters define a word as any sequence of characters separated by whitespace. However, treatment of hyphenated words (well-known vs. well known), contractions (don't, can't), numbers, email addresses, URLs, and special characters varies by implementation.</p>
+
+        <p>Microsoft Word and Google Docs, the most commonly used writing platforms, sometimes produce different word counts for identical text due to their underlying algorithms. Academic platforms like Turnitin use proprietary counting methods that may differ from standard tools. When precise word count matters for compliance, always verify against the specific platform's counting methodology using their native tools alongside our <strong>free online word counter tool</strong>.</p>
+
+        <h3>Optimizing Content Within Constraints</h3>
+        
+        <p>Writing within word limits requires different strategies than open-ended composition. When facing maximum word constraints, focus on eliminating redundancy, using active voice, and removing filler words. Tools like our keyword analysis help identify repetitive language that consumes valuable word budget without adding meaning.</p>
+
+        <p>When meeting minimum word requirements, resist the temptation to add fluff. Instead, expand on examples, provide additional evidence, explore counterarguments, or add relevant context that strengthens your position. Quality should never be sacrificed for quantity—readers and evaluators can easily identify padding.</p>
+
+        <p>For SEO content, use word count as a guideline rather than a strict target. Comprehensive coverage of a topic naturally produces appropriate length. If you find yourself struggling to reach recommended word counts, reconsider whether you're addressing the topic sufficiently or targeting the right keyword intent.</p>
+
+        <h3>Leveraging Advanced Metrics for Better Writing</h3>
+        
+        <p>Beyond basic word and character counts, advanced metrics provide insights that improve writing quality. Average sentence length helps assess readability—shorter sentences generally improve comprehension, especially for complex topics. The recommended range is 15-20 words per sentence for general audiences, though technical writing may require longer constructions.</p>
+
+        <p>Paragraph length affects visual scannability and reader engagement. Online content performs best with paragraphs of 2-4 sentences (approximately 40-100 words). Long paragraphs intimidate readers and reduce engagement, while excessive fragmentation disrupts flow. Our paragraph counting feature helps writers structure content for maximum readability.</p>
+
+        <p>Reading time estimation helps content creators respect their audience's attention spans. Blog posts requiring more than 7-10 minutes to read often see higher abandonment rates unless the content is exceptionally compelling. Breaking longer content into series or providing clear navigation helps maintain engagement for comprehensive topics.</p>
+
+        <h2>Comparing Word Counter Tools and Solutions</h2>
+
+        <p>The market offers numerous <strong>word counter online</strong> solutions, ranging from simple browser-based tools to sophisticated writing software integrations. When evaluating options, consider these essential features:</p>
+
+        <p><strong>Real-time updates</strong> eliminate workflow friction, allowing writers to monitor progress continuously without interrupting creative flow. <strong>Comprehensive metrics</strong> beyond basic word count provide deeper insights into writing structure and quality. <strong>Privacy protection</strong> ensures sensitive content isn't transmitted to or stored on remote servers. <strong>File upload capabilities</strong> enable analysis of existing documents without copy-paste operations. <strong>Export functionality</strong> supports documentation requirements and client reporting.</p>
+
+        <p>Microsoft Word and Google Docs include built-in word counting features, but these require navigating menus and don't provide real-time updates as you type. Browser-based <strong>count words online</strong> tools offer superior convenience, working across all platforms without installation and providing immediate feedback. Dedicated online word counters typically offer more detailed analytics than general-purpose word processors.</p>
+
+        <h2>The Future of Word Counting and Text Analytics</h2>
+
+        <p>As artificial intelligence transforms content creation, word counting evolves from simple metrics to sophisticated analytics. AI writing assistants use word count data to optimize outputs for specific platforms and purposes. Predictive algorithms suggest optimal content lengths based on historical performance data and competitive analysis.</p>
+
+        <p>Natural language processing enables deeper insights beyond counting—sentiment analysis, readability scoring, and semantic density measurement provide holistic content assessment. However, the fundamental need to know exactly how many words comprise your text remains unchanged. Whether you're crafting a tweet, writing a novel, preparing a legal brief, or optimizing website content, precise word counting ensures your message delivers exactly as intended.</p>
+
+        <p>Our <strong>word count measurement tool online</strong> combines time-tested counting accuracy with modern interface design and advanced analytics. The tool respects your privacy while providing detailed statistics including word count, character count, sentence count, paragraph count, reading time estimation, and keyword density analysis—all essential metrics for modern content creation.</p>
+
+        <h2>Conclusion</h2>
+
+        <p>Word counting represents far more than a simple numerical exercise—it's an essential component of effective communication across virtually every professional and creative discipline. From academic compliance to SEO optimization, social media strategy to novel writing, understanding your text's precise metrics prevents errors and improves outcomes. Our comprehensive <strong>online word statistics tool</strong> provides not just numbers, but actionable insights that elevate your writing process.</p>
+
+        <p>The best word counting tools combine accuracy, speed, privacy, and usability with advanced features that help writers improve their craft. Our <strong>free word counter</strong> works instantly in your browser, respecting your privacy while delivering detailed, accurate statistics and keyword analysis. Whether you're meeting a strict essay deadline, optimizing a blog post for search engines, tracking your novel's progress, or preparing professional documentation, start with our word counter to ensure every word counts toward your goals.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="mb-12">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-8 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-3" id="faqContainer">
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 text-sm pr-4">How does this word counter calculate reading time?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-4">
+            <p class="text-gray-400 text-xs pb-4 leading-relaxed">Our <strong>word counter</strong> calculates reading time based on the average adult reading speed of approximately 200-250 words per minute for comprehensive reading. For quick scanning or skimming, readers typically process 300-400 words per minute. The calculation divides your total word count by 225 (the average) to provide an estimated reading time in minutes. This metric helps content creators understand how much time their audience will invest in reading and allows readers to plan their consumption accordingly.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 text-sm pr-4">Is this word counter tool free to use?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-4">
+            <p class="text-gray-400 text-xs pb-4 leading-relaxed">Yes, our <strong>online word counter</strong> is completely free to use with no registration required. There are no usage limits, no watermarks, and no hidden fees. You can count words, characters, sentences, and analyze keyword density as much as you need. We believe professional writing tools should be accessible to everyone, from students working on essays to professional writers tracking novel progress. The tool is supported by unobtrusive advertising that doesn't interfere with your workflow.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 text-sm pr-4">Is my text stored or sent to your servers?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-4">
+            <p class="text-gray-400 text-xs pb-4 leading-relaxed">Absolutely not. Our <strong>word counter</strong> processes everything locally in your browser using JavaScript. Your text never leaves your device, is never transmitted to our servers, and is never stored anywhere. This makes our tool ideal for sensitive content—unpublished manuscripts, confidential business documents, proprietary code, personal writing, or client work. You can verify this by checking your browser's network tab; no data is sent while you type or analyze text. Your privacy is 100% guaranteed.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 text-sm pr-4">What file types can I upload for word counting?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-4">
+            <p class="text-gray-400 text-xs pb-4 leading-relaxed">Our tool supports uploading text files including .txt (plain text), .md (Markdown), .csv (Comma Separated Values), .json (JSON data), and common code files like .js, .html, .css, and .xml. You can also drag and drop files directly onto the text area. For file types not listed (such as .docx or .pdf), we recommend opening the file in its native application, copying the text content, and pasting it into our tool. The maximum recommended file size is 1MB (approximately 200,000 words) for optimal browser performance.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 text-sm pr-4">Why does your word count differ from Microsoft Word?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-4">
+            <p class="text-gray-400 text-xs pb-4 leading-relaxed">Word counting algorithms vary between platforms due to different definitions of what constitutes a "word." Microsoft Word counts hyphenated words as single words (well-known = 1 word) and includes text boxes, headers, and footers in its count. Google Docs may count them differently. Our <strong>word count checker online</strong> uses standard whitespace delimitation—sequences of non-whitespace characters separated by spaces. For academic or professional submissions where exact word count matters, always verify using the platform's native tool (such as Word's Review tab) and use our counter as a convenient real-time estimate during writing.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 text-sm pr-4">How accurate is the keyword density analysis?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-4">
+            <p class="text-gray-400 text-xs pb-4 leading-relaxed">Our keyword analysis identifies the most frequently occurring words in your text, excluding common stop words (the, and, is, of, etc.) when the filter is enabled. The accuracy is 100% for the text you provide—it counts every word instance precisely. However, SEO professionals should note that search engines use sophisticated semantic analysis beyond simple keyword density. Modern SEO focuses on topical relevance and natural language rather than keyword stuffing. Use our analysis to identify overused terms or ensure important keywords appear naturally, but avoid artificially inflating keyword counts as this can trigger spam filters.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 text-sm pr-4">What is the maximum word count supported?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-4">
+            <p class="text-gray-400 text-xs pb-4 leading-relaxed">Our tool supports up to approximately <strong>200,000 words</strong> (around 1 million characters) per analysis, depending on your device's memory and browser capabilities. For extremely large documents (full-length novels, comprehensive reports, academic dissertations), we recommend analyzing chapters or sections individually for best performance. The interface remains responsive with large texts, though very substantial documents may experience slight delays in keyword analysis calculations. For most use cases—essays, blog posts, articles, and reports—our tool handles content instantly without any performance issues.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 text-sm pr-4">Can I use this tool for programming code analysis?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-4">
+            <p class="text-gray-400 text-xs pb-4 leading-relaxed">Absolutely! Our tool works excellently for analyzing code comments, documentation, and string literals. You can paste code directly or upload code files (.js, .html, .css, .json, .xml). The word counter provides line count, character count, and word statistics useful for code documentation reviews. The keyword analysis can help identify frequently used variable names or function calls. However, note that code syntax (brackets, operators, semicolons) affects word counting differently than natural language. For code metrics like lines of code (LOC) or cyclomatic complexity, dedicated code analysis tools would be more appropriate.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 text-sm pr-4">Does the tool work on mobile devices?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-4">
+            <p class="text-gray-400 text-xs pb-4 leading-relaxed">Yes! Our <strong>word counter</strong> is fully responsive and works perfectly on smartphones, tablets, and desktops. The interface adapts to your screen size with touch-optimized buttons and scrollable areas for easy mobile use. You can count words on the go—perfect for checking essay length before submitting from your phone, reviewing blog posts while commuting, or analyzing text messages and social media posts. No app installation required; just visit the website in your mobile browser. The tool supports both portrait and landscape orientations and works offline once loaded.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-200 text-sm pr-4">How do I download or export the statistics?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-4">
+            <p class="text-gray-400 text-xs pb-4 leading-relaxed">Click the "Download Stats" button to generate a comprehensive text report including all metrics: word count, character count (with and without spaces), sentence count, paragraph count, average word length, average sentence length, estimated reading time, and top keywords analysis. The report also includes a timestamp and your original text content. The file downloads as a .txt format suitable for documentation, client reports, academic submission evidence, progress tracking, or archival purposes. You can also use the "Copy" button to copy your text back to clipboard with one click, or manually select and copy specific statistics from the display for quick sharing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const textInput = document.getElementById('textInput');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const wordCount = document.getElementById('wordCount');
+const charCount = document.getElementById('charCount');
+const sentenceCount = document.getElementById('sentenceCount');
+const paragraphCount = document.getElementById('paragraphCount');
+const charNoSpaces = document.getElementById('charNoSpaces');
+const spaceCount = document.getElementById('spaceCount');
+const avgSentenceLength = document.getElementById('avgSentenceLength');
+const avgWordLength = document.getElementById('avgWordLength');
+const readingTime = document.getElementById('readingTime');
+const statusText = document.getElementById('statusText');
+const keywordsContainer = document.getElementById('keywordsContainer');
+const excludeCommon = document.getElementById('excludeCommon');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const fileInputBtn = document.getElementById('fileInputBtn');
+const fileInput = document.getElementById('fileInput');
+
+// Common words to exclude
+const commonWords = new Set(['the', 'be', 'to', 'of', 'and', 'a', 'in', 'that', 'have', 'i', 'it', 'for', 'not', 'on', 'with', 'he', 'as', 'you', 'do', 'at', 'this', 'but', 'his', 'by', 'from', 'they', 'we', 'say', 'her', 'she', 'or', 'an', 'will', 'my', 'one', 'all', 'would', 'there', 'their', 'what', 'so', 'up', 'out', 'if', 'about', 'who', 'get', 'which', 'go', 'me', 'when', 'make', 'can', 'like', 'time', 'no', 'just', 'him', 'know', 'take', 'people', 'into', 'year', 'your', 'good', 'some', 'could', 'them', 'see', 'other', 'than', 'then', 'now', 'look', 'only', 'come', 'its', 'over', 'think', 'also', 'back', 'after', 'use', 'two', 'how', 'our', 'work', 'first', 'well', 'way', 'even', 'new', 'want', 'because', 'any', 'these', 'give', 'day', 'most', 'us', 'is', 'was', 'are', 'were', 'been', 'has', 'had', 'did', 'does', 'doing']);
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Main Analysis Function
+function analyzeText() {
+  const text = textInput.value;
+  
+  // Word Count
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+  
+  // Character Counts
+  const totalChars = text.length;
+  const charsWithoutSpaces = text.replace(/\s/g, '').length;
+  const spaces = totalChars - charsWithoutSpaces;
+  
+  // Sentence Count (approximate)
+  const sentences = text.trim() === '' ? 0 : (text.match(/[.!?]+/g) || []).length;
+  const displaySentences = sentences === 0 && text.trim().length > 0 ? 1 : sentences;
+  
+  // Paragraph Count
+  const paragraphs = text.trim() === '' ? 0 : text.split(/\n\s*\n/).filter(p => p.trim().length > 0).length;
+  
+  // Averages
+  const avgWordLen = words > 0 ? (charsWithoutSpaces / words).toFixed(1) : 0;
+  const avgSentLen = displaySentences > 0 ? (words / displaySentences).toFixed(1) : 0;
+  
+  // Reading Time (average 225 wpm)
+  const minutes = Math.ceil(words / 225);
+  const readingTimeText = words === 0 ? '0 min read' : minutes < 1 ? '< 1 min read' : `${minutes} min read`;
+  
+  // Update UI
+  wordCount.textContent = words.toLocaleString();
+  charCount.textContent = totalChars.toLocaleString();
+  sentenceCount.textContent = displaySentences.toLocaleString();
+  paragraphCount.textContent = paragraphs.toLocaleString();
+  charNoSpaces.textContent = charsWithoutSpaces.toLocaleString();
+  spaceCount.textContent = spaces.toLocaleString();
+  avgSentenceLength.textContent = avgSentLen;
+  avgWordLength.textContent = avgWordLen;
+  readingTime.textContent = readingTimeText;
+  
+  // Update Keywords
+  updateKeywords(text);
+  
+  // Update Status
+  statusText.textContent = words > 0 ? `${words.toLocaleString()} words analyzed` : 'Ready';
+}
+
+// Keyword Analysis
+function updateKeywords(text) {
+  if (text.trim().length === 0) {
+    keywordsContainer.innerHTML = '<p class="text-gray-500 text-xs text-center py-6">Start typing to see keyword analysis...</p>';
+    return;
+  }
+  
+  const excludeCommonWords = excludeCommon.checked;
+  const words = text.toLowerCase().match(/\b[a-z]+\b/g) || [];
+  
+  const freq = {};
+  words.forEach(word => {
+    if (word.length < 2) return;
+    if (excludeCommonWords && commonWords.has(word)) return;
+    freq[word] = (freq[word] || 0) + 1;
+  });
+  
+  const sorted = Object.entries(freq).sort((a, b) => b[1] - a[1]).slice(0, 10);
+  
+  if (sorted.length === 0) {
+    keywordsContainer.innerHTML = '<p class="text-gray-500 text-xs text-center py-6">No significant keywords found...</p>';
+    return;
+  }
+  
+  const maxFreq = sorted[0][1];
+  const totalWords = words.length;
+  
+  let html = '';
+  sorted.forEach(([word, count]) => {
+    const percentage = ((count / totalWords) * 100).toFixed(1);
+    const barWidth = (count / maxFreq) * 100;
+    
+    html += `
+      <div class="flex items-center gap-2 text-xs">
+        <div class="w-24 text-gray-300 truncate">${word}</div>
+        <div class="flex-1 bg-white/5 rounded-full h-5 overflow-hidden relative">
+          <div class="absolute left-0 top-0 h-full bg-gradient-to-r from-indigo-500/50 to-purple-500/50 rounded-full transition-all duration-300" style="width: ${barWidth}%"></div>
+          <span class="absolute inset-0 flex items-center px-2 text-xs text-gray-300">${count} (${percentage}%)</span>
+        </div>
+      </div>
+    `;
+  });
+  
+  keywordsContainer.innerHTML = html;
+}
+
+// Event Listeners
+textInput.addEventListener('input', analyzeText);
+excludeCommon.addEventListener('change', () => analyzeText());
+
+// Paste Button
+pasteBtn.addEventListener('click', async () => {
+  try {
+    const text = await navigator.clipboard.readText();
+    textInput.value = text;
+    analyzeText();
+    statusText.textContent = 'Text pasted from clipboard';
+  } catch (err) {
+    alert('Unable to read clipboard. Please paste manually.');
+  }
+});
+
+// Clear Button
+clearBtn.addEventListener('click', () => {
+  textInput.value = '';
+  analyzeText();
+  statusText.textContent = 'Cleared';
+});
+
+// Copy Button
+copyBtn.addEventListener('click', async () => {
+  try {
+    await navigator.clipboard.writeText(textInput.value);
+    const originalHTML = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalHTML;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 2000);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+});
+
+// Download Stats Button
+downloadBtn.addEventListener('click', () => {
+  const text = textInput.value;
+  if (!text.trim()) {
+    alert('Please enter some text first.');
+    return;
+  }
+  
+  const stats = `WORD COUNTER STATISTICS REPORT
+Generated: ${new Date().toLocaleString()}
+================================
+
+WORD METRICS:
+- Total Words: ${wordCount.textContent}
+- Characters (with spaces): ${charCount.textContent}
+- Characters (no spaces): ${charNoSpaces.textContent}
+- Spaces: ${spaceCount.textContent}
+- Sentences: ${sentenceCount.textContent}
+- Paragraphs: ${paragraphCount.textContent}
+- Average Word Length: ${avgWordLength.textContent}
+- Average Sentence Length: ${avgSentenceLength.textContent}
+- Reading Time: ${readingTime.textContent}
+
+TOP KEYWORDS:
+${Array.from(keywordsContainer.children).map(row => {
+  if (row.querySelector('.truncate')) {
+    const word = row.querySelector('.truncate').textContent;
+    const stats = row.querySelector('.text-xs').textContent;
+    return `${word}: ${stats}`;
+  }
+  return '';
+}).filter(Boolean).join('\n')}
+
+ORIGINAL TEXT:
+${text}
+`;
+  
+  const blob = new Blob([stats], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `word-count-stats-${Date.now()}.txt`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  statusText.textContent = 'Statistics downloaded';
+});
+
+// File Input
+fileInputBtn.addEventListener('click', () => fileInput.click());
+
+fileInput.addEventListener('change', (e) => {
+  const file = e.target.files[0];
+  if (file) readFile(file);
+});
+
+// Drag and Drop
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('hidden');
+  dropZone.classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('hidden');
+  dropZone.classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('hidden');
+  dropZone.classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    const file = files[0];
+    if (file.type.startsWith('text/') || file.name.match(/\.(txt|md|csv|json|js|html|css|xml)$/i)) {
+      readFile(file);
+    } else {
+      alert('Please drop a text file. Supported formats: .txt, .md, .csv, .json, .js, .html, .css, .xml');
+    }
+  }
+});
+
+function readFile(file) {
+  const reader = new FileReader();
+  statusText.textContent = `Loading ${file.name}...`;
+  
+  reader.onload = (e) => {
+    textInput.value = e.target.result;
+    analyzeText();
+    statusText.textContent = `Loaded ${file.name}`;
+  };
+  
+  reader.onerror = () => {
+    alert('Error reading file');
+    statusText.textContent = 'Error loading file';
+  };
+  
+  reader.readAsText(file);
+}
+
+// FAQ Toggle Function
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Initialize
+analyzeText();
+</script>
+</body>
+</html>

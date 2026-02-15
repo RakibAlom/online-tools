@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Text Trimmer - Free Online Whitespace Removal & Text Cleanup Tool | EasyPro Tools</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online Text Trimmer tool. Remove leading and trailing spaces, trim whitespace, clean text formatting instantly. Bulk text processing with real-time results. No registration required." />
+  <meta name="keywords" content="text trimmer, text trimmer online, free text trimmer, online text trimmer, trim text online, trim text tool, text trim tool, trim whitespace online, trim spaces online, remove leading and trailing spaces online, text cleaner online, text formatting tool online, strip whitespace online, text strip tool, text cleanup online, trim text by characters, trim text by length, cut text online, shorten text online, text reducer online, free online text trimmer tool, bulk text trimmer, text processing tool online, text formatter trimmer, trim string online, string trim tool online, free online text cleanup tool, remove extra text online, text edit tool online" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/text-trimmer/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/text-trimmer/" />
+  <meta property="og:title" content="Text Trimmer - Free Online Whitespace Removal & Text Cleanup Tool" />
+  <meta property="og:description" content="Remove leading and trailing spaces, trim whitespace, clean text formatting instantly with real-time processing. Free and private." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/text-trimmer/" />
+  <meta name="twitter:title" content="Text Trimmer - Free Online Whitespace Removal & Text Cleanup Tool" />
+  <meta name="twitter:description" content="Remove leading and trailing spaces, trim whitespace, clean text formatting instantly with real-time processing. Free and private." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #000000;
+      color: #e5e5e5;
+    }
+    
+    /* Pure black background */
+    .bg-pure-black {
+      background: #000000;
+    }
+
+    /* Glassmorphism panels - dark transparent */
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.8);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+    }
+    
+    .glass-input {
+      background: rgba(10, 10, 10, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+      transition: all 0.2s ease;
+    }
+    
+    .glass-input:focus {
+      background: rgba(5, 5, 5, 0.95);
+      border-color: rgba(255, 255, 255, 0.3);
+      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.05);
+      outline: none;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.5); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    /* Toggle switches */
+    .toggle-switch {
+      position: relative;
+      width: 36px;
+      height: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    
+    .toggle-switch.active {
+      background: rgba(255, 255, 255, 0.3);
+    }
+    
+    .toggle-switch::after {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 16px;
+      height: 16px;
+      background: white;
+      border-radius: 50%;
+      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    .toggle-switch.active::after {
+      transform: translateX(16px);
+    }
+
+    /* Desktop 2-column layout */
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+      }
+      
+      .input-col, .output-col {
+        min-height: 500px;
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .text-area-wrapper {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .text-area-wrapper textarea {
+        flex: 1;
+        min-height: 0;
+      }
+    }
+
+    /* Mobile layout */
+    @media (max-width: 1023px) {
+      .tool-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+
+    /* Stats badge - neutral */
+    .stat-badge {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #aaaaaa;
+    }
+
+    /* Action buttons */
+    .action-btn {
+      transition: all 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .action-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Mobile menu */
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    /* Article content */
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #ffffff;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cccccc;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #999999;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #999999;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+
+    /* FAQ */
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    /* Glow text - white */
+    .glow-text {
+      text-shadow: 0 0 40px rgba(255, 255, 255, 0.15);
+    }
+
+    /* Option pills */
+    .option-pill {
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    
+    .option-pill:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+    
+    .option-pill.active {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 255, 255, 0.4);
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body class="bg-pure-black min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center space-x-3">
+          <svg class="w-8 h-8 sm:w-9 sm:h-9" viewBox="0 0 40 40" fill="none">
+            <rect width="40" height="40" rx="10" fill="rgba(255,255,255,0.1)"/>
+            <path d="M12 20h16M12 14h10M12 26h6" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <div>
+            <h1 class="text-base sm:text-lg font-bold text-white">Text Trimmer</h1>
+            <p class="text-gray-500 text-xs hidden sm:block">Free Online Text Cleanup Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-6">
+          <a href="https://easyprotools.com/" class="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-1.5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-1.5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-white/10 text-gray-400 transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-black/95 backdrop-blur-xl">
+      <div class="px-4 py-4 space-y-3">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-6 sm:py-8 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 text-white glow-text">
+        Text Trimmer
+      </h1>
+      <p class="text-gray-500 text-base sm:text-lg">
+        Online Free Whitespace Removal & Text Cleanup Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-16 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-2xl p-4 sm:p-6 mb-6">
+      
+      <!-- Settings Bar -->
+      <div class="mb-4 flex flex-wrap items-center gap-3 bg-black/40 rounded-xl p-3 border border-white/5">
+        
+        <!-- Trim Options -->
+        <div class="flex flex-wrap gap-2 items-center flex-1 min-w-0">
+          <span class="text-xs text-gray-600 mr-1 shrink-0">Options:</span>
+          <button class="option-pill active px-3 py-1.5 rounded-md border border-white/10 bg-white/5 text-xs font-medium text-gray-300" data-option="both">
+            Both Ends
+          </button>
+          <button class="option-pill px-3 py-1.5 rounded-md border border-white/10 bg-white/5 text-xs font-medium text-gray-300" data-option="left">
+            Left Only
+          </button>
+          <button class="option-pill px-3 py-1.5 rounded-md border border-white/10 bg-white/5 text-xs font-medium text-gray-300" data-option="right">
+            Right Only
+          </button>
+          <button class="option-pill px-3 py-1.5 rounded-md border border-white/10 bg-white/5 text-xs font-medium text-gray-300" data-option="all">
+            All Whitespace
+          </button>
+        </div>
+
+        <div class="h-6 w-px bg-white/10 hidden sm:block"></div>
+
+        <!-- Additional Toggles -->
+        <div class="flex items-center gap-3 shrink-0">
+          <div class="flex items-center gap-1.5" title="Remove extra spaces between words">
+            <span class="text-xs text-gray-600">Normalize spaces</span>
+            <div class="toggle-switch" id="normalizeToggle"></div>
+          </div>
+          
+          <div class="flex items-center gap-1.5" title="Remove empty lines">
+            <span class="text-xs text-gray-600">Remove empty lines</span>
+            <div class="toggle-switch" id="removeEmptyToggle"></div>
+          </div>
+
+          <button id="clearBtn" class="action-btn p-1.5 rounded-md bg-white/5 hover:bg-white/10 text-gray-400 border border-white/10 transition-all" title="Clear all">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- 2-Column Layout -->
+      <div class="tool-grid">
+        <!-- Input Column -->
+        <div class="input-col">
+          <div class="flex items-center justify-between mb-2">
+            <div class="flex items-center gap-2">
+              <div class="w-7 h-7 rounded-lg bg-white/10 flex items-center justify-center">
+                <svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+              </div>
+              <span class="text-xs font-medium text-gray-300">Original Text</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span id="inputStats" class="stat-badge px-2 py-0.5 rounded text-xs font-medium">0 chars</span>
+              <button id="loadSampleBtn" class="text-xs text-gray-400 hover:text-white transition-colors flex items-center gap-1">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                Sample
+              </button>
+            </div>
+          </div>
+          
+          <div class="text-area-wrapper">
+            <textarea id="inputText" class="w-full h-64 lg:h-auto p-3 rounded-xl glass-input text-sm leading-relaxed resize-none font-mono" placeholder="Type or paste text with extra spaces here...
+            
+   This tool removes leading and trailing whitespace automatically as you type.   "></textarea>
+          </div>
+
+          <!-- File Upload -->
+          <div class="mt-2">
+            <div id="dropZone" class="border-2 border-dashed border-white/10 rounded-xl p-3 text-center hover:border-white/30 hover:bg-white/5 transition-all cursor-pointer flex flex-col items-center justify-center group">
+              <input type="file" id="fileInput" accept=".txt,.csv,.md,.log" class="hidden">
+              <div class="flex items-center gap-2 text-gray-500 group-hover:text-gray-400">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <span class="text-xs">Drop file or click to upload (TXT, CSV, MD, LOG)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Output Column -->
+        <div class="output-col">
+          <div class="flex items-center justify-between mb-2">
+            <div class="flex items-center gap-2">
+              <div class="w-7 h-7 rounded-lg bg-white/10 flex items-center justify-center">
+                <svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <span class="text-xs font-medium text-gray-300">Trimmed Result</span>
+              <span class="text-xs text-green-500/70 hidden" id="savedIndicator">(spaces removed)</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span id="outputStats" class="stat-badge px-2 py-0.5 rounded text-xs font-medium">0 chars</span>
+            </div>
+          </div>
+          
+          <div class="text-area-wrapper relative">
+            <textarea id="outputText" readonly class="w-full h-64 lg:h-auto p-3 rounded-xl glass-input text-sm leading-relaxed resize-none font-mono bg-black/60" placeholder="Cleaned text appears here in real-time as you type..."></textarea>
+            
+            <!-- Floating Action Buttons -->
+            <div class="absolute bottom-3 right-3 flex gap-2">
+              <button id="copyBtn" class="action-btn p-2 rounded-lg bg-white/5 hover:bg-white/10 text-gray-400 border border-white/10 transition-all" title="Copy to clipboard">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+              </button>
+              <button id="downloadBtn" class="action-btn p-2 rounded-lg bg-white/5 hover:bg-white/10 text-gray-400 border border-white/10 transition-all" title="Download as file">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10 text-white glow-text">
+        Why Use Our Text Trimmer?
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div class="glass-panel rounded-xl p-6 hover:border-white/20 transition-all duration-300 group">
+          <div class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mb-4 group-hover:bg-white/10 transition-colors">
+            <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2 text-white">Real-Time Processing</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">See results instantly as you type. No buttons to click, no waiting. Our <strong>online text trimmer</strong> updates the cleaned output character by character, showing you exactly how much whitespace is being removed.</p>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-6 hover:border-white/20 transition-all duration-300 group">
+          <div class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mb-4 group-hover:bg-white/10 transition-colors">
+            <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2 text-white">Multiple Trim Options</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Choose to <strong>trim whitespace online</strong> from both ends, left side only, right side only, or remove all whitespace entirely. Additional options to normalize multiple spaces and remove empty lines give you complete control.</p>
+        </div>
+        
+        <div class="glass-panel rounded-xl p-6 hover:border-white/20 transition-all duration-300 group">
+          <div class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mb-4 group-hover:bg-white/10 transition-colors">
+            <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2 text-white">100% Private & Free</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">All processing happens in your browser. This <strong>free text trimmer</strong> never sends your data to servers, ensuring complete privacy for sensitive documents, code, or personal information.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use -->
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10 text-white glow-text">
+        How to Trim Text Online
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div class="glass-panel rounded-xl p-5 text-center relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-white/20 text-white text-xs font-bold flex items-center justify-center border border-white/20">1</div>
+          <p class="text-gray-400 text-sm mt-2">Paste or type your text in the left panel - trimming happens automatically</p>
+        </div>
+        <div class="glass-panel rounded-xl p-5 text-center relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-white/20 text-white text-xs font-bold flex items-center justify-center border border-white/20">2</div>
+          <p class="text-gray-400 text-sm mt-2">Select trim option: Both ends, Left only, Right only, or All whitespace</p>
+        </div>
+        <div class="glass-panel rounded-xl p-5 text-center relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-white/20 text-white text-xs font-bold flex items-center justify-center border border-white/20">3</div>
+          <p class="text-gray-400 text-sm mt-2">Toggle additional options like Normalize spaces or Remove empty lines</p>
+        </div>
+        <div class="glass-panel rounded-xl p-5 text-center relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-white/20 text-white text-xs font-bold flex items-center justify-center border border-white/20">4</div>
+          <p class="text-gray-400 text-sm mt-2">Copy cleaned text or download the result instantly</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-16">
+      <article class="glass-panel rounded-2xl p-6 md:p-10 article-content">
+        <h2>The Ultimate Guide to Text Trimming: Clean, Format, and Optimize Your Content</h2>
+        
+        <p>In the digital age, clean text is essential. Whether you're a developer cleaning up user input, a writer formatting content, or a data analyst preparing datasets, knowing how to effectively <strong>trim text online</strong> is a fundamental skill. This comprehensive guide explores everything you need to know about <strong>text trimmer</strong> tools, from basic whitespace removal to advanced text formatting techniques that will transform your workflow.</p>
+
+        <h2>What is Text Trimming and Why Does It Matter?</h2>
+        
+        <p><strong>Text trimming</strong> is the process of removing unwanted whitespace characters from the beginning, end, or throughout a text string. Whitespace includes spaces, tabs, newlines, and other invisible characters that can cause formatting issues, data processing errors, or simply make content look unprofessional. A reliable <strong>text trimmer online</strong> tool handles this automatically, saving you from manually deleting spaces character by character.</p>
+
+        <p>The importance of text trimming cannot be overstated. In web development, leading or trailing spaces in form inputs can cause validation failures or database inconsistencies. In data processing, extra whitespace can break CSV imports, mess up sorting algorithms, or create duplicate entries that appear different but are actually the same. For content creators, poorly formatted text with irregular spacing looks unprofessional and reduces readability. Using a <strong>free text trimmer</strong> eliminates these issues instantly, ensuring your text is clean, consistent, and ready for use.</p>
+
+        <h2>Understanding Whitespace: The Hidden Challenge</h2>
+
+        <p>Before diving into trimming techniques, it's important to understand what whitespace actually includes. Most people think only of the space character (the one created by pressing the spacebar), but whitespace encompasses several invisible characters:</p>
+
+        <ul>
+          <li><strong>Space ( )</strong>: The standard space character</li>
+          <li><strong>Tab (\t)</strong>: Horizontal tabulation, often used for indentation</li>
+          <li><strong>Newline (\n)</strong>: Line feed, moves to the next line</li>
+          <li><strong>Carriage Return (\r)</strong>: Returns to the beginning of the line (common in Windows files)</li>
+          <li><strong>Non-breaking Space</strong>: A special space that prevents line breaks</li>
+          <li><strong>Zero-width Spaces</strong>: Invisible characters used in formatting</li>
+        </ul>
+
+        <p>A professional <strong>online text trimmer</strong> handles all these variations, ensuring comprehensive cleaning regardless of where your text originated. Whether you're pasting from a PDF, copying from a website, or importing from a legacy system, a good <strong>text trim tool</strong> removes all unwanted whitespace systematically.</p>
+
+        <h2>Types of Text Trimming: Choosing the Right Approach</h2>
+
+        <h3>Trim Both Ends (Standard Trimming)</h3>
+        <p>The most common trimming operation removes whitespace from both the beginning (leading) and end (trailing) of a text string while preserving spaces within the content. When you <strong>trim whitespace online</strong> using this method, "   Hello World   " becomes "Hello World". This is the default behavior in most programming languages and <strong>text formatting tool online</strong> utilities because it addresses the most common formatting issues without altering the actual content.</p>
+
+        <h3>Left Trim (Leading Whitespace Removal)</h3>
+        <p>Left trimming specifically targets whitespace at the beginning of text. This is particularly useful when dealing with indented content, such as code blocks or quoted text, where you want to remove extra spacing at the start while preserving intentional spacing at the end. A specialized <strong>text strip tool</strong> that offers left-only trimming helps clean up pasted content from emails or documents that add unwanted left padding.</p>
+
+        <h3>Right Trim (Trailing Whitespace Removal)</h3>
+        <p>Right trimming removes whitespace from the end of text strings. This is crucial for programming, where trailing spaces can cause syntax errors or unexpected behavior in string comparisons. When you <strong>trim string online</strong> using right-only mode, you maintain the original left alignment while ensuring no invisible characters hang off the end of your content.</p>
+
+        <h3>All Whitespace Removal</h3>
+        <p>For specialized use cases, you might need to <strong>strip whitespace online</strong> entirely, removing all spaces, tabs, and newlines from the text. This creates a continuous block of characters useful for certain types of data processing, hash generation, or when preparing text for specific algorithms. However, use this option carefully as it destroys the readable structure of your content.</p>
+
+        <h2>Advanced Text Cleaning Features</h2>
+
+        <h3>Space Normalization</h3>
+        <p>Beyond basic trimming, advanced <strong>text cleaner online</strong> tools offer space normalization—replacing multiple consecutive spaces with a single space. This addresses the common issue of double or triple spaces within text, which often occur when copying from PDFs, converting between document formats, or cleaning up poorly formatted content. Normalization ensures consistent spacing throughout your document without affecting the overall structure.</p>
+
+        <h3>Empty Line Removal</h3>
+        <p>When processing multi-line text, you often encounter unnecessary blank lines that create excessive vertical spacing. A comprehensive <strong>text cleanup online</strong> tool can detect and remove these empty lines, condensing your content while preserving paragraph breaks. This is especially valuable when preparing text for web publishing, where extra line breaks can disrupt layout and styling.</p>
+
+        <h3>Character-Based Trimming</h3>
+        <p>Some advanced use cases require <strong>trim text by characters</strong> or <strong>trim text by length</strong> rather than by whitespace. This allows you to <strong>cut text online</strong> to specific character limits, useful for creating excerpts, preparing content for character-restricted fields (like Twitter posts or SMS messages), or ensuring database field compatibility. When you need to <strong>shorten text online</strong> or use a <strong>text reducer online</strong>, character-based trimming provides precise control over content length.</p>
+
+        <h2>Real-World Applications of Text Trimming</h2>
+
+        <h3>Web Development and Form Processing</h3>
+        <p>Developers constantly use <strong>trim text online</strong> tools when processing user input. Form fields for names, emails, addresses, and search queries often contain accidental spaces that users don't realize they've typed. Before validating or storing this data, developers <strong>remove leading and trailing spaces online</strong> to ensure consistency. This prevents issues like "john@email.com " (with trailing space) failing email validation or creating duplicate database entries.</p>
+
+        <p>API development also relies heavily on text trimming. When receiving data from external sources, you can't control the formatting, so sanitizing all string inputs is essential. A <strong>free online text trimmer tool</strong> helps developers quickly prototype cleaning logic before implementing it in production code.</p>
+
+        <h3>Data Cleaning and Migration</h3>
+        <p>Data analysts and database administrators regularly face messy datasets with inconsistent formatting. When importing CSV files, migrating legacy data, or consolidating information from multiple sources, <strong>bulk text trimmer</strong> operations are essential. Leading spaces in ID fields, trailing spaces in name columns, or irregular spacing in address fields can all cause matching and aggregation errors.</p>
+
+        <p>Using a <strong>text processing tool online</strong> for preliminary data cleaning saves hours of manual work. Instead of writing complex scripts or using spreadsheet formulas, you can paste columns of data, apply trimming operations, and receive clean results ready for import.</p>
+
+        <h3>Content Creation and Publishing</h3>
+        <p>Writers, editors, and content managers need clean text for professional publishing. When copying content from Microsoft Word, Google Docs, or PDFs, invisible formatting characters and irregular spacing often come along for the ride. Pasting into a <strong>text formatter trimmer</strong> before publishing to WordPress, Medium, or other platforms ensures your content displays correctly without unwanted indentation or spacing issues.</p>
+
+        <p>SEO professionals use <strong>text edit tool online</strong> utilities to clean up meta descriptions, title tags, and alt text before publishing. Extra spaces in these critical fields can waste valuable character limits and reduce search engine optimization effectiveness.</p>
+
+        <h3>Programming and Code Cleaning</h3>
+        <p>Programmers frequently need to <strong>trim spaces online</strong> when working with code. Configuration files, log extracts, and data dumps often contain inconsistent indentation or trailing whitespace that violates style guidelines or causes parsing errors. Before committing code to version control, developers often run their files through cleaning tools to ensure no trailing spaces remain (which can cause unnecessary diff changes).</p>
+
+        <h3>Email Marketing and List Management</h3>
+        <p>Email marketers know that clean data is essential for deliverability. When importing subscriber lists, extra spaces in email addresses cause hard bounces and damage sender reputation. Using a <strong>string trim tool online</strong> to clean email lists before uploading to Mailchimp, SendGrid, or other platforms improves delivery rates and campaign performance. Similarly, cleaning name fields ensures personalized emails look professional rather than displaying awkward spacing.</p>
+
+        <h2>Best Practices for Effective Text Trimming</h2>
+
+        <p>To get the most from your <strong>free online text cleanup tool</strong>, follow these professional best practices:</p>
+
+        <ul>
+          <li><strong>Always trim before validation</strong>: Remove whitespace before checking email formats, phone numbers, or other structured data to prevent false validation failures.</li>
+          <li><strong>Preserve intentional formatting</strong>: Be cautious with "Remove All Whitespace" options when working with code, poetry, or formatted lists where spaces carry meaning.</li>
+          <li><strong>Check for non-breaking spaces</strong>: Some copied content contains special Unicode spaces that standard trimming might miss. Use a comprehensive <strong>text strip tool</strong> that handles all Unicode whitespace variants.</li>
+          <li><strong>Normalize before comparing</strong>: When checking for duplicates or matching records, always normalize spacing first to ensure "John Smith" and "John  Smith" (double space) are recognized as the same.</li>
+          <li><strong>Handle multiline content carefully</strong>: When processing paragraphs, consider whether you want to preserve line breaks or condense everything to a single line.</li>
+          <li><strong>Test with sample data</strong>: Before processing large datasets, test your trimming strategy on a small sample to verify the output meets your expectations.</li>
+          <li><strong>Keep original data</strong>: When cleaning critical data, always keep a backup of the original untrimmed version in case you need to reference exact spacing later.</li>
+        </ul>
+
+        <h2>Comparing Text Trimming Methods: Manual vs. Automated</h2>
+
+        <p>Manual text trimming using text editors is tedious and error-prone. Finding and replacing spaces in Notepad or TextEdit works for small snippets but becomes impractical for large documents or batch processing. Spreadsheet applications like Excel offer TRIM functions, but they require formula knowledge and don't handle all whitespace types consistently.</p>
+
+        <p>Automated <strong>online text trimmer</strong> tools offer significant advantages: speed (processing thousands of lines instantly), consistency (applying the same rules uniformly), flexibility (switching between trim types with a click), and reliability (eliminating human error). Browser-based tools add accessibility—work from any device without software installation—and privacy when processing happens client-side.</p>
+
+        <h2>Privacy and Security Considerations</h2>
+
+        <p>When cleaning sensitive text—proprietary business data, personal information, confidential communications—privacy is paramount. Browser-based <strong>free online text trimmer tool</strong> options that process data client-side (using JavaScript in your browser rather than sending data to servers) offer complete privacy. Your text never leaves your device, eliminating data breach risks and compliance concerns.</p>
+
+        <p>This architecture is particularly important for healthcare data (HIPAA compliance), financial records (PCI DSS, GDPR), legal documents (attorney-client privilege), and proprietary business information. Always verify that your <strong>text trimmer</strong> tool processes data locally when working with sensitive content.</p>
+
+        <h2>Advanced Techniques: Beyond Basic Trimming</h2>
+
+        <p>Professional text workflows often combine trimming with other operations. After removing leading and trailing spaces, you might need to convert case (uppercase/lowercase), remove special characters, or standardize formatting. Some <strong>bulk text trimmer</strong> platforms offer these operations as part of an integrated pipeline, streamlining complex data preparation tasks.</p>
+
+        <p>For example, cleaning a customer database might involve: (1) <strong>trim text online</strong> to remove extra spaces, (2) normalize multiple spaces to single spaces, (3) convert email addresses to lowercase, (4) standardize phone number formats, and (5) remove empty lines. Integrated tools that handle this entire workflow save significant time compared to performing each step manually or writing custom scripts.</p>
+
+        <h2>Text Trimming for Specific Industries</h2>
+
+        <h3>E-commerce and Product Data</h3>
+        <p>Online retailers use <strong>text cleanup online</strong> tools to standardize product descriptions, SKUs, and category names. Consistent formatting across thousands of products improves search functionality, filtering accuracy, and professional appearance. Trimming ensures that "T-Shirt" and " T-Shirt " (with spaces) are treated as the same category, preventing inventory confusion.</p>
+
+        <h3>Academic Research and Data Analysis</h3>
+        <p>Researchers cleaning survey responses, interview transcripts, or experimental data rely on <strong>text processing tool online</strong> utilities to ensure consistency. When analyzing text data programmatically, extra spaces can throw off word counts, frequency analyses, and natural language processing algorithms. Clean data is essential for valid research outcomes.</p>
+
+        <h3>Legal and Compliance Documentation</h3>
+        <p>Legal professionals use <strong>remove extra text online</strong> tools when preparing contracts, briefs, and compliance documentation. Precise formatting is crucial in legal contexts, where inconsistent spacing can create ambiguity or appear unprofessional. Trimming ensures that generated documents meet strict formatting standards.</p>
+
+        <h2>Conclusion: Embrace Clean Text Workflows</h2>
+
+        <p>Text trimming, while seemingly simple, is a foundational operation that impacts data quality, professional appearance, and processing accuracy across countless applications. The right <strong>online text trimmer</strong> tool transforms this routine operation from a tedious chore into an instantaneous, automated process that happens in real-time as you work.</p>
+
+        <p>Whether you need to <strong>trim whitespace online</strong> for form validation, <strong>strip whitespace online</strong> for data processing, <strong>remove leading and trailing spaces online</strong> for content publishing, or use advanced options like space normalization and empty line removal, modern tools make it effortless. Our Text Trimmer combines all these capabilities—<strong>trim text online</strong>, <strong>trim spaces online</strong>, and <strong>text cleaner online</strong> functionality—in an elegant, real-time interface that respects your privacy.</p>
+
+        <p>From developers sanitizing user input to marketers cleaning email lists, data analysts preparing datasets to writers formatting content, everyone benefits from efficient text manipulation. Don't let messy whitespace undermine your work—embrace the power of automated <strong>text trimmer</strong> technology and ensure your text is always clean, professional, and ready for use. Try our comprehensive <strong>free online text trimmer tool</strong> today and experience the difference that professional-grade text cleaning makes in your daily workflow.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10 text-white glow-text">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-3" id="faqContainer">
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-300">How does the real-time text trimming work?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-500 text-sm pb-5 leading-relaxed">As you type or paste text in the input area, our <strong>text trimmer online</strong> instantly processes each character and updates the output textarea with your cleaned result. There's no "Trim" button needed—the cleaning happens automatically with a slight debounce to ensure smooth performance. Your text is processed locally in your browser, making the response nearly instantaneous.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-300">What's the difference between "Both Ends" and "All Whitespace"?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-500 text-sm pb-5 leading-relaxed"><strong>Both Ends</strong> (standard trim) removes whitespace only from the beginning and end of your text while preserving spaces between words. <strong>All Whitespace</strong> removes every space, tab, and newline character, creating one continuous block of text. Use "Both Ends" for general cleaning and "All Whitespace" only for specific data processing needs where spaces aren't needed.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-300">What does "Normalize spaces" do?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-500 text-sm pb-5 leading-relaxed">The "Normalize spaces" option finds multiple consecutive spaces (double spaces, triple spaces, etc.) and replaces them with a single space. This is useful when copying text from PDFs or formatted documents that often have irregular spacing. It runs after trimming, so your text is first cleaned of leading/trailing spaces, then internal spacing is standardized.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-300">Can I trim text from files?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-500 text-sm pb-5 leading-relaxed">Yes, you can upload TXT, CSV, MD, or LOG files up to 5MB. The file content is automatically loaded into the input area and trimmed in real-time. After processing, download the cleaned version using the download button. This <strong>bulk text trimmer</strong> feature is perfect for cleaning large documents or datasets without manual copy-pasting.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-300">Is there a limit to how much text I can trim?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-500 text-sm pb-5 leading-relaxed">There's no artificial limit on text volume. The tool can handle millions of characters instantly. However, browser memory constraints apply for extremely large inputs (typically texts up to 50MB work fine). For most practical purposes—cleaning documents, processing form data, formatting content—the <strong>free text trimmer</strong> performs excellently without limits.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-300">Does this tool remove tabs and newlines?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-500 text-sm pb-5 leading-relaxed">Standard trimming (Both Ends, Left, Right) removes tabs and newlines only from the edges of your text, preserving them within the content. The "All Whitespace" option removes every tab and newline. If you want to remove empty lines while preserving paragraph structure, use the "Remove empty lines" toggle instead.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-300">Is my data secure and private?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-500 text-sm pb-5 leading-relaxed">Absolutely. All text processing occurs entirely within your browser using JavaScript. Your text is never transmitted to our servers, stored in databases, or accessed by third parties. This client-side architecture ensures maximum privacy, making the tool safe for sensitive data like proprietary code, confidential documents, or personal information. You can verify this by checking your browser's Network tab—no data is sent externally.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-300">Can I trim text by character count or length?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-500 text-sm pb-5 leading-relaxed">While this tool focuses on whitespace removal, you can use our Text Splitter tool to <strong>trim text by length</strong> or <strong>cut text online</strong> to specific character limits. For <strong>shorten text online</strong> or <strong>text reducer online</strong> needs, the Splitter offers length-based chunking. This Trimmer specializes in cleaning whitespace while preserving your content's meaning.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-300">Does this work on mobile devices?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-500 text-sm pb-5 leading-relaxed">Yes, the <strong>online text trimmer</strong> is fully responsive and works perfectly on smartphones and tablets. The interface adapts to smaller screens with a stacked layout. All features—including file upload, trim options, and real-time processing—function seamlessly on mobile devices. Clean text on-the-go from any device with a web browser.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="font-medium text-gray-300">Is this tool really free?</span>
+            <svg class="faq-icon w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content px-5">
+            <p class="text-gray-500 text-sm pb-5 leading-relaxed">Yes, completely free. No registration required, no usage limits, no watermarks, and no hidden fees. We believe essential productivity tools should be accessible to everyone. Use this <strong>free online text cleanup tool</strong> for personal projects, commercial work, academic research, or anything in between—no restrictions apply.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/60 backdrop-blur-lg mt-8">
+    <div class="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-600">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" class="text-gray-500 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-6">
+        <a href="https://easyprotools.com/" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const outputText = document.getElementById('outputText');
+const inputStats = document.getElementById('inputStats');
+const outputStats = document.getElementById('outputStats');
+const savedIndicator = document.getElementById('savedIndicator');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const loadSampleBtn = document.getElementById('loadSampleBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const dropZone = document.getElementById('dropZone');
+const fileInput = document.getElementById('fileInput');
+
+// Options
+const optionPills = document.querySelectorAll('.option-pill');
+const normalizeToggle = document.getElementById('normalizeToggle');
+const removeEmptyToggle = document.getElementById('removeEmptyToggle');
+
+let trimOption = 'both';
+let normalizeSpaces = false;
+let removeEmptyLines = false;
+let debounceTimer;
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Option selection
+optionPills.forEach(pill => {
+  pill.addEventListener('click', () => {
+    optionPills.forEach(p => p.classList.remove('active'));
+    pill.classList.add('active');
+    trimOption = pill.dataset.option;
+    performTrim();
+  });
+});
+
+// Toggles
+normalizeToggle.addEventListener('click', () => {
+  normalizeToggle.classList.toggle('active');
+  normalizeSpaces = normalizeToggle.classList.contains('active');
+  performTrim();
+});
+
+removeEmptyToggle.addEventListener('click', () => {
+  removeEmptyToggle.classList.toggle('active');
+  removeEmptyLines = removeEmptyToggle.classList.contains('active');
+  performTrim();
+});
+
+// Real-time trimming with debounce
+inputText.addEventListener('input', () => {
+  updateInputStats();
+  clearTimeout(debounceTimer);
+  debounceTimer = setTimeout(() => {
+    performTrim();
+  }, 50); // Fast debounce for responsive feel
+});
+
+function updateInputStats() {
+  const text = inputText.value;
+  inputStats.textContent = `${text.length.toLocaleString()} char${text.length !== 1 ? 's' : ''}`;
+}
+
+// Main trim function
+function performTrim() {
+  let text = inputText.value;
+  
+  if (!text) {
+    outputText.value = '';
+    outputStats.textContent = '0 chars';
+    savedIndicator.classList.add('hidden');
+    return;
+  }
+  
+  // Apply trimming based on option
+  if (trimOption === 'both') {
+    text = text.trim();
+  } else if (trimOption === 'left') {
+    text = text.trimStart();
+  } else if (trimOption === 'right') {
+    text = text.trimEnd();
+  } else if (trimOption === 'all') {
+    text = text.replace(/\s/g, '');
+  }
+  
+  // Normalize spaces (replace multiple spaces with single)
+  if (normalizeSpaces && trimOption !== 'all') {
+    text = text.replace(/ +/g, ' ');
+  }
+  
+  // Remove empty lines
+  if (removeEmptyLines && trimOption !== 'all') {
+    text = text.split('\n').filter(line => line.trim().length > 0).join('\n');
+  }
+  
+  outputText.value = text;
+  outputStats.textContent = `${text.length.toLocaleString()} char${text.length !== 1 ? 's' : ''}`;
+  
+  // Show saved indicator if characters were removed
+  const charsRemoved = inputText.value.length - text.length;
+  if (charsRemoved > 0) {
+    savedIndicator.textContent = `(${charsRemoved} spaces removed)`;
+    savedIndicator.classList.remove('hidden');
+  } else {
+    savedIndicator.classList.add('hidden');
+  }
+}
+
+// Load sample
+loadSampleBtn.addEventListener('click', () => {
+  inputText.value = `   This text has leading spaces.
+This line is fine.
+    This has both leading and trailing spaces    
+This line has    multiple    spaces    between    words.
+   
+
+This paragraph has empty lines above.
+
+   `;
+  updateInputStats();
+  performTrim();
+});
+
+// File handling
+dropZone.addEventListener('click', () => fileInput.click());
+
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropZone.classList.add('border-white/30', 'bg-white/5');
+});
+
+dropZone.addEventListener('dragleave', () => {
+  dropZone.classList.remove('border-white/30', 'bg-white/5');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropZone.classList.remove('border-white/30', 'bg-white/5');
+  handleFiles(Array.from(e.dataTransfer.files));
+});
+
+fileInput.addEventListener('change', (e) => {
+  handleFiles(Array.from(e.target.files));
+});
+
+function handleFiles(files) {
+  const validFiles = files.filter(f => 
+    f.size <= 5 * 1024 * 1024 && 
+    /\.(txt|csv|md|log)$/i.test(f.name)
+  );
+  
+  if (validFiles.length === 0) return;
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    updateInputStats();
+    performTrim();
+  };
+  reader.readAsText(validFiles[0]);
+}
+
+// Copy output
+copyBtn.addEventListener('click', async () => {
+  const text = outputText.value;
+  if (!text) return;
+  
+  try {
+    await navigator.clipboard.writeText(text);
+    const originalHTML = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>`;
+    setTimeout(() => {
+      copyBtn.innerHTML = originalHTML;
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+});
+
+// Download output
+downloadBtn.addEventListener('click', () => {
+  const text = outputText.value;
+  if (!text) return;
+  
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'trimmed-text.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+});
+
+// Clear
+clearBtn.addEventListener('click', () => {
+  inputText.value = '';
+  outputText.value = '';
+  updateInputStats();
+  outputStats.textContent = '0 chars';
+  savedIndicator.classList.add('hidden');
+  fileInput.value = '';
+});
+
+// FAQ Toggle
+window.toggleFaq = function(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+};
+
+// Initialize
+updateInputStats();
+outputStats.textContent = '0 chars';
+</script>
+</body>
+</html>
