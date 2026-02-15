@@ -116,11 +116,12 @@
       background: rgba(255,255,255,0.25); 
     }
 
-    /* Delimiter pills */
+    /* Compact delimiter pills */
     .delimiter-pill {
       transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
       position: relative;
       overflow: hidden;
+      white-space: nowrap;
     }
     
     .delimiter-pill::before {
@@ -161,13 +162,13 @@
       box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
     }
 
-    /* Toggle switches */
+    /* Compact toggle switches */
     .toggle-switch {
       position: relative;
-      width: 40px;
-      height: 22px;
+      width: 36px;
+      height: 20px;
       background: rgba(255, 255, 255, 0.1);
-      border-radius: 11px;
+      border-radius: 10px;
       cursor: pointer;
       transition: background 0.2s ease;
     }
@@ -181,8 +182,8 @@
       position: absolute;
       top: 2px;
       left: 2px;
-      width: 18px;
-      height: 18px;
+      width: 16px;
+      height: 16px;
       background: white;
       border-radius: 50%;
       transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -190,7 +191,7 @@
     }
     
     .toggle-switch.active::after {
-      transform: translateX(18px);
+      transform: translateX(16px);
     }
 
     /* Desktop 2-column layout */
@@ -230,10 +231,6 @@
     /* Output textarea - smooth updates only */
     #outputText {
       transition: none;
-    }
-    
-    #outputText.updating {
-      opacity: 0.7;
     }
 
     /* Stats badge */
@@ -357,6 +354,21 @@
       from { opacity: 0; transform: translateX(-10px); }
       to { opacity: 1; transform: translateX(0); }
     }
+
+    /* Settings grid compact layout */
+    .settings-grid {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    @media (max-width: 768px) {
+      .settings-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+      }
+    }
   </style>
 </head>
 <body class="bg-animated min-h-screen flex flex-col">
@@ -431,62 +443,54 @@
     <!-- Tool Interface -->
     <div class="glass-panel rounded-2xl p-4 sm:p-6 mb-6">
       
-      <!-- Settings Bar -->
-      <div class="mb-6 space-y-4">
+      <!-- Compact Settings Bar -->
+      <div class="mb-4 flex flex-wrap items-center gap-3 bg-black/20 rounded-xl p-3 border border-white/5">
         
-        <!-- Top Row: Input Method & Delimiters -->
-        <div class="flex flex-wrap items-center gap-4">
-          <!-- Input Tabs -->
-          <div class="flex bg-black/30 rounded-lg p-1">
-            <button class="tab-btn active px-4 py-2 rounded-md text-sm font-medium text-gray-300 flex items-center gap-2 transition-all" data-tab="text">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
-              Text
-            </button>
-            <button class="tab-btn px-4 py-2 rounded-md text-sm font-medium text-gray-300 flex items-center gap-2 transition-all" data-tab="file">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
-              File
-            </button>
-          </div>
-
-          <div class="h-8 w-px bg-white/10 hidden sm:block"></div>
-
-          <!-- Delimiter Pills -->
-          <div class="flex flex-wrap gap-2 flex-1">
-            <span class="text-sm text-gray-400 self-center mr-2">Join with:</span>
-            <button class="delimiter-pill active px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-sm text-gray-300" data-delimiter="newline">New Line</button>
-            <button class="delimiter-pill px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-sm text-gray-300" data-delimiter="space">Space</button>
-            <button class="delimiter-pill px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-sm text-gray-300" data-delimiter="comma">Comma</button>
-            <button class="delimiter-pill px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-sm text-gray-300" data-delimiter="comma-space">, + Space</button>
-            <button class="delimiter-pill px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-sm text-gray-300" data-delimiter="pipe">|</button>
-            <button class="delimiter-pill px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-sm text-gray-300" data-delimiter="custom">Custom</button>
-          </div>
+        <!-- Input Method Tabs -->
+        <div class="flex bg-black/30 rounded-lg p-1 shrink-0">
+          <button class="tab-btn active px-3 py-1.5 rounded-md text-xs font-medium text-gray-300 flex items-center gap-1.5 transition-all" data-tab="text">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+            Text
+          </button>
+          <button class="tab-btn px-3 py-1.5 rounded-md text-xs font-medium text-gray-300 flex items-center gap-1.5 transition-all" data-tab="file">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+            File
+          </button>
         </div>
 
-        <!-- Second Row: Custom Input & Options -->
-        <div class="flex flex-wrap items-center gap-4 justify-between">
-          <div id="customDelimiterContainer" class="hidden items-center gap-3">
-            <span class="text-sm text-gray-400">Custom:</span>
-            <input type="text" id="customDelimiter" placeholder="Enter delimiter..." class="custom-input px-3 py-1.5 rounded-lg text-sm w-32 text-white" maxlength="10">
+        <div class="h-6 w-px bg-white/10 hidden sm:block"></div>
+
+        <!-- Delimiter Pills - Compact -->
+        <div class="flex flex-wrap gap-1.5 items-center flex-1 min-w-0">
+          <span class="text-xs text-gray-500 mr-1 shrink-0">Join:</span>
+          <button class="delimiter-pill active px-2.5 py-1 rounded-md border border-white/10 bg-white/5 text-xs text-gray-300" data-delimiter="newline">New Line</button>
+          <button class="delimiter-pill px-2.5 py-1 rounded-md border border-white/10 bg-white/5 text-xs text-gray-300" data-delimiter="space">Space</button>
+          <button class="delimiter-pill px-2.5 py-1 rounded-md border border-white/10 bg-white/5 text-xs text-gray-300" data-delimiter="comma">Comma</button>
+          <button class="delimiter-pill px-2.5 py-1 rounded-md border border-white/10 bg-white/5 text-xs text-gray-300" data-delimiter="comma-space">, + Space</button>
+          <button class="delimiter-pill px-2.5 py-1 rounded-md border border-white/10 bg-white/5 text-xs text-gray-300" data-delimiter="pipe">|</button>
+          <button class="delimiter-pill px-2.5 py-1 rounded-md border border-white/10 bg-white/5 text-xs text-gray-300" data-delimiter="custom">Custom</button>
+          
+          <!-- Custom Input Inline -->
+          <input type="text" id="customDelimiter" placeholder="..." class="custom-input px-2 py-1 rounded-md text-xs w-20 text-white hidden" maxlength="10">
+        </div>
+
+        <div class="h-6 w-px bg-white/10 hidden md:block"></div>
+
+        <!-- Toggles & Clear - Compact Group -->
+        <div class="flex items-center gap-3 shrink-0">
+          <div class="flex items-center gap-1.5" title="Skip empty lines">
+            <span class="text-xs text-gray-500">Skip empty</span>
+            <div class="toggle-switch active" id="removeEmptyToggle"></div>
+          </div>
+          
+          <div class="flex items-center gap-1.5" title="Trim whitespace">
+            <span class="text-xs text-gray-500">Trim</span>
+            <div class="toggle-switch active" id="trimToggle"></div>
           </div>
 
-          <div class="flex items-center gap-6 ml-auto">
-            <!-- Toggle: Remove Empty -->
-            <div class="flex items-center gap-3">
-              <span class="text-sm text-gray-400">Skip empty</span>
-              <div class="toggle-switch active" id="removeEmptyToggle"></div>
-            </div>
-
-            <!-- Toggle: Trim -->
-            <div class="flex items-center gap-3">
-              <span class="text-sm text-gray-400">Trim spaces</span>
-              <div class="toggle-switch active" id="trimToggle"></div>
-            </div>
-
-            <button id="clearBtn" class="action-btn flex items-center gap-2 px-4 py-2 rounded-lg bg-red-500/10 hover:bg-red-500/20 text-red-400 border border-red-500/20 text-sm font-medium transition-all">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
-              Clear
-            </button>
-          </div>
+          <button id="clearBtn" class="action-btn p-1.5 rounded-md bg-red-500/10 hover:bg-red-500/20 text-red-400 border border-red-500/20 transition-all" title="Clear all">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+          </button>
         </div>
       </div>
 
@@ -494,69 +498,69 @@
       <div class="tool-grid">
         <!-- Input Column -->
         <div class="input-col">
-          <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center justify-between mb-2">
             <div class="flex items-center gap-2">
-              <div class="w-8 h-8 rounded-lg bg-indigo-500/20 flex items-center justify-center">
-                <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+              <div class="w-7 h-7 rounded-lg bg-indigo-500/20 flex items-center justify-center">
+                <svg class="w-3.5 h-3.5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
               </div>
-              <span class="text-sm font-medium text-gray-200">Input Lines</span>
+              <span class="text-xs font-medium text-gray-200">Input Lines</span>
             </div>
-            <span id="inputStats" class="stat-badge px-2 py-1 rounded text-xs font-medium">0 lines</span>
+            <span id="inputStats" class="stat-badge px-2 py-0.5 rounded text-xs font-medium">0 lines</span>
           </div>
           
           <!-- Text Input -->
           <div id="textInputSection" class="text-area-wrapper">
-            <textarea id="inputText" class="w-full h-64 lg:h-auto p-4 rounded-xl glass-input text-sm leading-relaxed resize-none font-mono" placeholder="Type or paste your text here...&#10;Each line will be joined automatically&#10;As you type"></textarea>
+            <textarea id="inputText" class="w-full h-64 lg:h-auto p-3 rounded-xl glass-input text-sm leading-relaxed resize-none font-mono" placeholder="Type or paste your text here...&#10;Each line will be joined automatically"></textarea>
           </div>
 
           <!-- File Input -->
           <div id="fileInputSection" class="hidden text-area-wrapper">
-            <div id="dropZone" class="border-2 border-dashed border-white/10 rounded-xl p-8 text-center hover:border-indigo-500/50 hover:bg-indigo-500/5 transition-all cursor-pointer h-64 lg:h-full flex flex-col items-center justify-center group">
+            <div id="dropZone" class="border-2 border-dashed border-white/10 rounded-xl p-6 text-center hover:border-indigo-500/50 hover:bg-indigo-500/5 transition-all cursor-pointer h-64 lg:h-full flex flex-col items-center justify-center group">
               <input type="file" id="fileInput" accept=".txt,.csv,.md,.log" class="hidden" multiple>
-              <div class="w-16 h-16 rounded-full bg-indigo-500/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <svg class="w-8 h-8 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div class="w-12 h-12 rounded-full bg-indigo-500/10 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                <svg class="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
                 </svg>
               </div>
-              <p class="text-gray-300 font-medium mb-1">Drop files here</p>
-              <p class="text-gray-500 text-sm">or click to browse</p>
-              <p class="text-gray-600 text-xs mt-2">TXT, CSV, MD, LOG (max 5MB)</p>
+              <p class="text-gray-300 text-sm font-medium mb-1">Drop files here</p>
+              <p class="text-gray-500 text-xs">or click to browse</p>
+              <p class="text-gray-600 text-xs mt-1">TXT, CSV, MD, LOG (max 5MB)</p>
             </div>
-            <div id="fileList" class="hidden mt-3 space-y-2"></div>
+            <div id="fileList" class="hidden mt-2 space-y-1.5"></div>
           </div>
 
-          <div class="flex justify-between items-center mt-3">
-            <button id="sampleTextBtn" class="text-sm text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          <div class="flex justify-between items-center mt-2">
+            <button id="sampleTextBtn" class="text-xs text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
               Load sample
             </button>
-            <span class="text-xs text-gray-500">Auto-joins as you type</span>
+            <span class="text-xs text-gray-600">Auto-joins as you type</span>
           </div>
         </div>
 
         <!-- Output Column -->
         <div class="output-col">
-          <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center justify-between mb-2">
             <div class="flex items-center gap-2">
-              <div class="w-8 h-8 rounded-lg bg-green-500/20 flex items-center justify-center">
-                <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <div class="w-7 h-7 rounded-lg bg-green-500/20 flex items-center justify-center">
+                <svg class="w-3.5 h-3.5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
               </div>
-              <span class="text-sm font-medium text-gray-200">Joined Result</span>
+              <span class="text-xs font-medium text-gray-200">Joined Result</span>
             </div>
-            <div class="flex items-center gap-3">
-              <span id="outputStats" class="stat-badge px-2 py-1 rounded text-xs font-medium">0 chars</span>
+            <div class="flex items-center gap-2">
+              <span id="outputStats" class="stat-badge px-2 py-0.5 rounded text-xs font-medium">0 chars</span>
             </div>
           </div>
           
           <div class="text-area-wrapper relative">
-            <textarea id="outputText" readonly class="w-full h-64 lg:h-auto p-4 rounded-xl glass-input text-sm leading-relaxed resize-none font-mono bg-black/40" placeholder="Joined text appears here..."></textarea>
+            <textarea id="outputText" readonly class="w-full h-64 lg:h-auto p-3 rounded-xl glass-input text-sm leading-relaxed resize-none font-mono bg-black/40" placeholder="Joined text appears here..."></textarea>
             
             <!-- Floating Action Buttons -->
-            <div class="absolute top-3 right-3 flex gap-2">
-              <button id="copyBtn" class="action-btn p-2 rounded-lg bg-white/5 hover:bg-white/10 text-gray-300 border border-white/10 transition-all" title="Copy to clipboard">
+            <div class="absolute bottom-2 right-2 flex gap-1.5">
+              <button id="copyBtn" class="action-btn p-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-gray-300 border border-white/10 transition-all" title="Copy to clipboard">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
               </button>
-              <button id="downloadBtn" class="action-btn p-2 rounded-lg bg-white/5 hover:bg-white/10 text-gray-300 border border-white/10 transition-all" title="Download as file">
+              <button id="downloadBtn" class="action-btn p-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-gray-300 border border-white/10 transition-all" title="Download as file">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
               </button>
             </div>
@@ -625,59 +629,105 @@
     <!-- Article Section -->
     <section class="mb-16">
       <article class="glass-panel rounded-2xl p-6 md:p-10 article-content">
-        <h2>The Ultimate Guide to Text Joining: Master the Art of Combining Text</h2>
+        <h2>The Ultimate Guide to Text Joining: Master the Art of Combining Text Online</h2>
         
         <p><strong>Text joining</strong> is a fundamental operation that transforms how we work with data, code, and content. Whether you're a developer merging configuration lines, a marketer combining email lists, or a writer consolidating research notes, understanding how to efficiently <strong>join text online</strong> can save hours of manual work. This comprehensive guide explores the power of modern <strong>text joiner</strong> tools and how they streamline digital workflows.</p>
 
-        <h2>Understanding Text Joining</h2>
+        <h2>Understanding Text Joining and Text Concatenation</h2>
         
-        <p>At its core, text joining (or string concatenation) combines multiple text segments into a unified string using a specified delimiter. The delimiter acts as glue—commonly a comma, space, new line, or custom character—that separates while connecting individual elements. A professional <strong>free text joiner</strong> makes this process instantaneous, handling thousands of lines with a single operation.</p>
+        <p>At its core, <strong>text joining</strong> (or <strong>string concatenation</strong>) combines multiple text segments into a unified string using a specified delimiter. The delimiter acts as glue—commonly a comma, space, new line, or custom character—that separates while connecting individual elements. A professional <strong>free text joiner</strong> makes this process instantaneous, handling thousands of lines with a single operation.</p>
 
-        <p>The evolution from manual copy-pasting to automated <strong>online text joiner</strong> tools represents a significant productivity leap. Consider preparing a mailing list: manually adding commas between 500 email addresses might take 30 minutes of tedious, error-prone work. An automated tool accomplishes this in milliseconds with perfect accuracy, allowing you to focus on strategy rather than formatting.</p>
+        <p>The evolution from manual copy-pasting to automated <strong>online text joiner</strong> tools represents a significant productivity leap. Consider preparing a mailing list: manually adding commas between 500 email addresses might take 30 minutes of tedious, error-prone work. An automated <strong>join text online</strong> solution accomplishes this in milliseconds with perfect accuracy, allowing you to focus on strategy rather than formatting.</p>
 
-        <h2>Delimiter Deep Dive</h2>
+        <h2>Why Use a Free Online Text Joiner Tool?</h2>
 
-        <h3>Choosing the Right Separator</h3>
+        <p>In today's fast-paced digital environment, efficiency is paramount. A <strong>free online text joiner tool</strong> eliminates the need for complex software installations or expensive subscriptions. With just a browser, you can access powerful <strong>text processing tool online</strong> capabilities that rival desktop applications. These browser-based solutions offer the convenience of accessibility from any device, whether you're working from a desktop computer, laptop, tablet, or smartphone.</p>
+
+        <p>The beauty of a <strong>text combiner online free</strong> solution lies in its simplicity. You don't need technical expertise or programming knowledge to <strong>merge text online</strong>. The intuitive interface guides you through the process, making it accessible to beginners while still offering the advanced features that professionals demand. From students working on research papers to data scientists processing massive datasets, everyone benefits from streamlined text manipulation.</p>
+
+        <h2>Delimiter Deep Dive: Choosing the Right Separator</h2>
+
+        <h3>Standard Delimiters for Common Tasks</h3>
         
-        <p>The delimiter you select fundamentally shapes your output's usability. When you <strong>join text with comma</strong>, you create CSV-compatible data ready for spreadsheet import. <strong>Join text with space</strong> produces flowing prose from fragmented notes. Pipes (|) work excellently when your content naturally contains commas, preventing delimiter conflicts.</p>
+        <p>The delimiter you select fundamentally shapes your output's usability. When you <strong>join text with comma</strong>, you create CSV-compatible data ready for spreadsheet import. This is essential when preparing data for Excel, Google Sheets, or database imports. <strong>Join text with space</strong> produces flowing prose from fragmented notes, perfect for converting bullet points into readable paragraphs.</p>
 
-        <p>Modern <strong>combine text online</strong> platforms offer visual delimiter switching, letting you experiment with formats instantly. This flexibility proves invaluable when preparing data for different systems—your email marketing platform might want comma separation, while your database import expects pipes. Rather than reformatting manually, you simply click a different option.</p>
+        <p>Pipes (|) work excellently when your content naturally contains commas, preventing delimiter conflicts. New lines help create structured lists, while custom delimiters allow for specialized formatting. Modern <strong>combine text online</strong> platforms offer visual delimiter switching, letting you experiment with formats instantly. This flexibility proves invaluable when preparing data for different systems—your email marketing platform might want comma separation, while your database import expects pipes.</p>
 
         <h3>Custom Delimiters for Specialized Needs</h3>
         
-        <p>Beyond standard options, advanced <strong>text concatenation tool</strong> utilities support custom delimiters. Need to join code lines with semicolons? Preparing HTML with &lt;br&gt; tags? Creating markdown bullet points? Custom delimiters handle these specialized scenarios, making the tool adaptable to virtually any formatting requirement.</p>
+        <p>Beyond standard options, advanced <strong>text concatenation tool</strong> utilities support custom delimiters. Need to <strong>join text with separator</strong> like semicolons for code? Preparing HTML with &lt;br&gt; tags? Creating markdown bullet points? Custom delimiters handle these specialized scenarios, making the tool adaptable to virtually any formatting requirement. When you <strong>join text with delimiter</strong> of your choice, you gain complete control over the output format.</p>
 
-        <h2>Practical Applications</h2>
+        <h2>Practical Applications: When to Use a Text Merge Tool</h2>
 
         <h3>Data Processing and Analysis</h3>
         
-        <p>Data professionals constantly <strong>merge text online</strong> when cleaning datasets. Converting vertical lists to horizontal formats, preparing SQL IN clauses, or creating concatenated keys for lookups—all require reliable joining capabilities. The best <strong>text merge tool</strong> options include intelligent filtering, automatically removing empty lines and trimming whitespace to ensure clean output.</p>
+        <p>Data professionals constantly <strong>merge text online</strong> when cleaning datasets. Converting vertical lists to horizontal formats, preparing SQL IN clauses, or creating concatenated keys for lookups—all require reliable joining capabilities. The best <strong>text merge tool</strong> options include intelligent filtering, automatically removing empty lines and trimming whitespace to ensure clean output. A robust <strong>text merge utility online</strong> becomes an indispensable part of any data analyst's toolkit.</p>
 
-        <h3>Software Development</h3>
+        <p>When working with large datasets, a <strong>bulk text joiner</strong> proves invaluable. Instead of processing files line by line, you can upload entire documents and transform them instantly. This capability saves hours when preparing reports, consolidating survey responses, or formatting export data from multiple sources.</p>
+
+        <h3>Software Development and Programming</h3>
         
-        <p>Developers use <strong>join multiple text lines</strong> functionality for countless tasks: building array literals, constructing API queries, formatting log entries, and generating configuration files. When debugging, they might extract error lines from logs and <strong>merge lines online</strong> to create searchable patterns or shareable summaries.</p>
+        <p>Developers use <strong>join multiple text lines</strong> functionality for countless tasks: building array literals, constructing API queries, formatting log entries, and generating configuration files. When debugging, they might extract error lines from logs and <strong>merge lines online</strong> to create searchable patterns or shareable summaries. A <strong>string joiner online</strong> helps format code snippets for documentation or prepare data for testing.</p>
 
-        <h3>Content Creation</h3>
+        <p>Programmers often need to <strong>join lines of text online</strong> when working with JSON, XML, or other structured formats. The ability to quickly switch between delimiters means you can format the same data for different programming languages or frameworks without manual retyping.</p>
+
+        <h3>Content Creation and Writing</h3>
         
-        <p>Writers and editors benefit from <strong>join words online</strong> capabilities when consolidating research. Interview transcripts, scattered notes, and reference materials transform into cohesive drafts through strategic joining. The ability to <strong>join paragraphs online</strong> with appropriate spacing maintains narrative flow while organizing fragmented thoughts.</p>
+        <p>Writers and editors benefit from <strong>join words online</strong> capabilities when consolidating research. Interview transcripts, scattered notes, and reference materials transform into cohesive drafts through strategic joining. The ability to <strong>join paragraphs online</strong> with appropriate spacing maintains narrative flow while organizing fragmented thoughts. Journalists can quickly combine interview quotes, while bloggers merge research points into flowing articles.</p>
 
-        <h2>Advanced Features</h2>
+        <p>Content marketers use <strong>join text formatter</strong> tools to prepare social media posts, combining hashtags or mentions efficiently. SEO specialists merge keyword lists, and email marketers combine recipient lists with proper formatting. The applications are virtually limitless across creative professions.</p>
 
-        <h3>Intelligent Filtering</h3>
+        <h2>Advanced Features of Modern Text Joiner Tools</h2>
+
+        <h3>Intelligent Filtering and Cleaning</h3>
         
-        <p>Raw text often contains inconsistencies—extra spaces, blank lines, formatting artifacts. Premium <strong>join text tool</strong> implementations include preprocessing options. "Skip empty" removes blank lines that would otherwise create double delimiters. "Trim" eliminates leading and trailing whitespace from each element. These automated cleanups ensure professional output without manual scrubbing.</p>
+        <p>Raw text often contains inconsistencies—extra spaces, blank lines, formatting artifacts. Premium <strong>join text tool</strong> implementations include preprocessing options. "Skip empty" removes blank lines that would otherwise create double delimiters. "Trim" eliminates leading and trailing whitespace from each element. These automated cleanups ensure professional output without manual scrubbing, making your <strong>text processing tool online</strong> experience seamless.</p>
 
-        <h3>Multi-File Processing</h3>
+        <p>When you <strong>combine text online</strong>, these intelligent filters work behind the scenes to ensure your output is clean and professional. No more worrying about accidental double spaces or empty entries cluttering your results.</p>
+
+        <h3>Multi-File Processing Capabilities</h3>
         
-        <p>Enterprise workflows frequently require consolidating content from multiple sources. Sophisticated <strong>bulk text joiner</strong> platforms support uploading numerous files simultaneously, extracting and combining their contents automatically. This capability proves essential for monthly reporting, log aggregation, and document compilation tasks.</p>
+        <p>Enterprise workflows frequently require consolidating content from multiple sources. Sophisticated <strong>bulk text joiner</strong> platforms support uploading numerous files simultaneously, extracting and combining their contents automatically. This capability proves essential for monthly reporting, log aggregation, and document compilation tasks. Imagine combining twenty monthly reports into a single master document—instantly.</p>
 
-        <h2>Privacy and Security</h2>
+        <h3>Real-Time Processing and Instant Results</h3>
+
+        <p>The best <strong>online text joiner</strong> tools process your input in real-time. As you type or paste content, the output updates immediately. This instant feedback allows you to experiment with different delimiters and settings without waiting, making the workflow intuitive and efficient. You can see exactly how your data will look before you download or copy it.</p>
+
+        <h2>Privacy and Security in Online Text Processing</h2>
 
         <p>When working with sensitive data—email addresses, customer information, proprietary code—privacy matters. Browser-based <strong>free online text joiner tool</strong> options that process client-side (without server transmission) keep your data secure. This architecture ensures that confidential information never leaves your device, addressing compliance requirements for healthcare, finance, and legal industries.</p>
 
-        <h2>Conclusion</h2>
+        <p>Unlike cloud-based services that store your data on remote servers, a client-side <strong>text joiner online</strong> ensures complete privacy. Your proprietary information, customer lists, or confidential notes remain on your computer throughout the entire process.</p>
 
-        <p>Text joining, while conceptually simple, underpins countless professional workflows. The right <strong>online string concatenator free</strong> tool transforms this routine operation from a time-consuming chore into an instantaneous, automated process. By understanding delimiter selection, filtering options, and privacy considerations, you can leverage text joining to dramatically accelerate your productivity. Our Text Joiner combines all these capabilities in an elegant, real-time interface—try it and experience the difference.</p>
+        <h2>Comparing Text Joining Methods</h2>
+
+        <h3>Manual vs. Automated Joining</h3>
+
+        <p>Manual joining using text editors or spreadsheets is time-consuming and error-prone. A dedicated <strong>online string concatenator free</strong> tool eliminates these issues. While Excel can combine cells, it requires formula knowledge and doesn't handle large datasets efficiently. Notepad requires find-and-replace gymnastics. A specialized tool offers one-click solutions with perfect accuracy.</p>
+
+        <h3>Desktop Software vs. Browser-Based Tools</h3>
+
+        <p>Desktop applications require installation, updates, and often licensing fees. A <strong>free text joiner</strong> in the browser offers immediate access without system requirements. Cross-platform compatibility means you can use the same tool on Windows, Mac, Linux, ChromeOS, or mobile devices without compatibility concerns.</p>
+
+        <h2>Best Practices for Text Joining</h2>
+
+        <p>To get the most from your <strong>text joiner online</strong> experience, consider these best practices:</p>
+
+        <ul>
+          <li>Always preview your output before copying to ensure the delimiter choice matches your needs</li>
+          <li>Use "Trim" when working with copied content from websites to remove hidden formatting spaces</li>
+          <li>Enable "Skip empty" to prevent unwanted gaps in your joined text</li>
+          <li>Save custom delimiters you use frequently to maintain consistency across projects</li>
+          <li>When working with CSV data, verify that your content doesn't contain the delimiter character to avoid formatting issues</li>
+        </ul>
+
+        <h2>Conclusion: Embrace Efficient Text Processing</h2>
+
+        <p><strong>Text joining</strong>, while conceptually simple, underpins countless professional workflows. The right <strong>online string concatenator free</strong> tool transforms this routine operation from a time-consuming chore into an instantaneous, automated process. By understanding delimiter selection, filtering options, and privacy considerations, you can leverage text joining to dramatically accelerate your productivity.</p>
+
+        <p>Whether you need to <strong>join text with comma</strong> for spreadsheets, <strong>join text with space</strong> for prose, or use custom delimiters for specialized formats, modern tools make it effortless. Our Text Joiner combines all these capabilities—<strong>merge text online</strong>, <strong>combine text online</strong>, and <strong>concatenate text online</strong>—in an elegant, real-time interface. Try it today and experience the difference that professional <strong>text processing tool online</strong> capabilities can make in your daily workflow.</p>
+
+        <p>From developers to marketers, writers to data analysts, everyone benefits from efficient text manipulation. Don't let manual formatting slow you down—embrace the power of automated <strong>text joiner</strong> technology and reclaim your time for more important tasks.</p>
       </article>
     </section>
 
@@ -739,11 +789,11 @@
 
         <div class="glass-panel rounded-xl overflow-hidden">
           <button class="faq-toggle w-full p-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
-            <span class="font-medium text-gray-200">What do "Skip empty" and "Trim spaces" do?</span>
+            <span class="font-medium text-gray-200">What do "Skip empty" and "Trim" do?</span>
             <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </button>
           <div class="faq-content px-5">
-            <p class="text-gray-400 text-sm pb-5 leading-relaxed">"Skip empty" removes blank lines from your input before joining, preventing double delimiters or empty elements in your output. "Trim spaces" removes leading and trailing whitespace from each line, ensuring clean formatting. Both are enabled by default and update the output in real-time when toggled.</p>
+            <p class="text-gray-400 text-sm pb-5 leading-relaxed">"Skip empty" removes blank lines from your input before joining, preventing double delimiters or empty elements in your output. "Trim" removes leading and trailing whitespace from each line, ensuring clean formatting. Both are enabled by default and update the output in real-time when toggled.</p>
           </div>
         </div>
 
@@ -801,7 +851,6 @@ const dropZone = document.getElementById('dropZone');
 const fileInput = document.getElementById('fileInput');
 const fileList = document.getElementById('fileList');
 const delimiterPills = document.querySelectorAll('.delimiter-pill');
-const customDelimiterContainer = document.getElementById('customDelimiterContainer');
 const customDelimiter = document.getElementById('customDelimiter');
 const removeEmptyToggle = document.getElementById('removeEmptyToggle');
 const trimToggle = document.getElementById('trimToggle');
@@ -851,13 +900,11 @@ delimiterPills.forEach(pill => {
     const delimType = pill.dataset.delimiter;
     
     if (delimType === 'custom') {
-      customDelimiterContainer.classList.remove('hidden');
-      customDelimiterContainer.classList.add('flex');
+      customDelimiter.classList.remove('hidden');
       currentDelimiter = customDelimiter.value || '';
       customDelimiter.focus();
     } else {
-      customDelimiterContainer.classList.add('hidden');
-      customDelimiterContainer.classList.remove('flex');
+      customDelimiter.classList.add('hidden');
       
       switch(delimType) {
         case 'newline': currentDelimiter = '\n'; break;
