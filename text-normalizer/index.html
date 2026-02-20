@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Text Normalizer - Free Online Text Normalization Tool</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online text normalizer tool. Standardize, clean, and normalize text instantly. Fix spacing, convert case, remove special characters, normalize Unicode, and more. No registration required." />
+  <meta name="keywords" content="text normalizer, text normalizer online, free text normalizer, online text normalizer, normalize text online, text normalization tool online, text standardizer online free, text normalization utility, clean and normalize text online, free online text normalizer tool, text formatting normalizer online, normalize case text online, normalize spacing in text online, text normalizer for coding online free, bulk text normalizer online, text standardization tool online, normalize text content online free, free online text normalization tool, text normalizer and cleaner online, online text normalizer without login, normalize messy text online free, text normalization editor online, text normalizer for documents online free, text normalizer for seo online, online text standardizer free" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/text-normalizer/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/text-normalizer/" />
+  <meta property="og:title" content="Text Normalizer - Free Online Text Normalization Tool" />
+  <meta property="og:description" content="Standardize, clean, and normalize text instantly. Fix spacing, convert case, remove special characters, normalize Unicode, and more. No registration required." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/text-normalizer/" />
+  <meta name="twitter:title" content="Text Normalizer - Free Online Text Normalization Tool" />
+  <meta name="twitter:description" content="Standardize, clean, and normalize text instantly. Fix spacing, convert case, remove special characters, normalize Unicode, and more. No registration required." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .norm-btn {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    .norm-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+
+    .preset-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.7rem;
+    }
+
+    .checkbox-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+    }
+    
+    .checkbox-wrapper input[type="checkbox"] {
+      width: 0.875rem;
+      height: 0.875rem;
+      accent-color: #6366f1;
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 12h8M10 20h20M10 28h14" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Text Normalizer</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Text Normalizer
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Text Processing Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Live normalization enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Input Text
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Type or paste text here... Or drag & drop a file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.csv,.md,.json,.xml,.html,.js,.css,.py,.java,.cpp,.c,.php,.rb,.go,.rs,.swift,.kt,.sql,.log" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Chars: 0 | Words: 0 | Lines: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Output -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Normalized Result
+            </label>
+            <div class="flex gap-1">
+              <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                Copy
+              </button>
+              <button id="downloadBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Download
+              </button>
+            </div>
+          </div>
+          
+          <textarea id="outputText" readonly spellcheck="false"
+            class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+            placeholder="Normalized text appears here automatically..."></textarea>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="outputStats">Chars: 0 | Words: 0 | Lines: 0</span>
+            <span id="processingTime" class="text-gray-600"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-4">
+        
+        <!-- Preset Profiles -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Quick Presets</label>
+          <div class="flex flex-wrap gap-1">
+            <button class="preset-btn rounded-md border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 transition-all" data-preset="seo">SEO Clean</button>
+            <button class="preset-btn rounded-md border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 transition-all" data-preset="code">Code Clean</button>
+            <button class="preset-btn rounded-md border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 transition-all" data-preset="data">Data Standardize</button>
+            <button class="preset-btn rounded-md border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 transition-all" data-preset="nlp">NLP Prepare</button>
+            <button class="preset-btn rounded-md border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 transition-all" data-preset="url">URL/Slug</button>
+            <button class="preset-btn rounded-md border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 transition-all" data-preset="full">Full Normalize</button>
+          </div>
+        </div>
+
+        <!-- Normalization Options Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          
+          <!-- Case & Spacing -->
+          <div class="space-y-2">
+            <label class="text-xs font-medium text-gray-300 block">Case & Spacing</label>
+            <div class="space-y-1.5">
+              <label class="checkbox-wrapper text-xs text-gray-400">
+                <input type="checkbox" id="lowercase" checked>
+                <span>Convert to lowercase</span>
+              </label>
+              <label class="checkbox-wrapper text-xs text-gray-400">
+                <input type="checkbox" id="trimLines" checked>
+                <span>Trim leading/trailing spaces</span>
+              </label>
+              <label class="checkbox-wrapper text-xs text-gray-400">
+                <input type="checkbox" id="removeExtraSpaces" checked>
+                <span>Remove extra spaces</span>
+              </label>
+              <label class="checkbox-wrapper text-xs text-gray-400">
+                <input type="checkbox" id="normalizeLineBreaks">
+                <span>Normalize line breaks (LF)</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Clean & Remove -->
+          <div class="space-y-2">
+            <label class="text-xs font-medium text-gray-300 block">Clean & Remove</label>
+            <div class="space-y-1.5">
+              <label class="checkbox-wrapper text-xs text-gray-400">
+                <input type="checkbox" id="removeEmptyLines" checked>
+                <span>Remove empty lines</span>
+              </label>
+              <label class="checkbox-wrapper text-xs text-gray-400">
+                <input type="checkbox" id="removePunctuation">
+                <span>Remove punctuation</span>
+              </label>
+              <label class="checkbox-wrapper text-xs text-gray-400">
+                <input type="checkbox" id="removeNumbers">
+                <span>Remove numbers</span>
+              </label>
+              <label class="checkbox-wrapper text-xs text-gray-400">
+                <input type="checkbox" id="removeAccents">
+                <span>Remove accents (é→e)</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Advanced -->
+          <div class="space-y-2">
+            <label class="text-xs font-medium text-gray-300 block">Advanced</label>
+            <div class="space-y-1.5">
+              <label class="checkbox-wrapper text-xs text-gray-400">
+                <input type="checkbox" id="normalizeUnicode" checked>
+                <span>Normalize Unicode (NFC)</span>
+              </label>
+              <label class="checkbox-wrapper text-xs text-gray-400">
+                <input type="checkbox" id="removeControlChars" checked>
+                <span>Remove control characters</span>
+              </label>
+              <label class="checkbox-wrapper text-xs text-gray-400">
+                <input type="checkbox" id="removeEmojis">
+                <span>Remove emojis & symbols</span>
+              </label>
+              <label class="checkbox-wrapper text-xs text-gray-400">
+                <input type="checkbox" id="removeUrls">
+                <span>Remove URLs</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Find & Replace -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-2 border-t border-white/10">
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Find (Regex supported)</label>
+            <input type="text" id="findText" placeholder="Pattern to find..." class="w-full px-2 py-1.5 rounded-md glass-input text-xs font-mono">
+          </div>
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Replace with</label>
+            <div class="flex gap-1">
+              <input type="text" id="replaceText" placeholder="Replacement..." class="flex-1 px-2 py-1.5 rounded-md glass-input text-xs font-mono">
+              <button id="findReplaceBtn" class="compact-btn rounded-md bg-indigo-500/20 hover:bg-indigo-500/30 border border-indigo-500/30 text-indigo-300 transition-all btn-animated">
+                Apply
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-wrap gap-2 pt-2 border-t border-white/10">
+          <button id="normalizeBtn" class="compact-btn rounded-md bg-green-500/20 hover:bg-green-500/30 border border-green-500/30 text-green-400 transition-all btn-animated flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Normalize Now
+          </button>
+          <button id="undoBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6"/></svg>
+            Undo
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Text Normalizer?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Instant Normalize</h3>
+          <p class="text-gray-400 text-xs">Real-time processing as you type</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Smart Presets</h3>
+          <p class="text-gray-400 text-xs">SEO, Code, Data & NLP modes</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Drag & Drop</h3>
+          <p class="text-gray-400 text-xs">Upload text files instantly</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based, no uploads</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy or download results</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration required</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Input Text</h3>
+          <p class="text-gray-400 text-xs">Type, paste, or drop a file. The original text loads instantly.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Choose Preset</h3>
+          <p class="text-gray-400 text-xs">Select SEO, Code, Data, NLP, or custom normalization options.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Customize</h3>
+          <p class="text-gray-400 text-xs">Toggle specific options or use Find & Replace for precise control.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy normalized text or download as a .txt file instantly.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Text Normalization: Mastering Text Standardization for Modern Digital Workflows</h2>
+        
+        <p><strong>Text normalization</strong> is the foundational process of transforming unstructured, inconsistent, or messy text into a standardized, clean format that ensures consistency, readability, and compatibility across systems and applications. Whether you're preparing content for search engine optimization, cleaning data for machine learning models, standardizing code repositories, or formatting documents for professional presentation, understanding how to effectively <strong>normalize text</strong> is essential for modern digital productivity. Our <strong>text normalizer online</strong> solution provides comprehensive normalization capabilities that transform chaotic text into structured, professional content instantly, without any cost or registration barriers.</p>
+
+        <h2>What Is Text Normalization and Why Does It Matter?</h2>
+        
+        <p><strong>Text normalization</strong> refers to the systematic process of cleaning and standardizing text data to eliminate inconsistencies, remove unwanted characters, and establish uniform formatting patterns. This critical preprocessing step addresses the fundamental reality that raw text from various sources—websites, documents, databases, user inputs, and automated systems—contains irregularities that impede processing, analysis, and presentation. When you <strong>normalize text online</strong>, you're performing essential data hygiene that improves quality, reduces errors, and enhances compatibility across platforms.</p>
+
+        <p>The importance of reliable <strong>online text normalizer</strong> tools cannot be overstated in our data-centric world. Consider the daily challenges professionals encounter: an SEO specialist needs to <strong>normalize case text online</strong> to ensure consistent keyword usage; a data scientist must <strong>clean and normalize text online</strong> for training machine learning models; a developer has to <strong>normalize spacing in text online</strong> to fix formatting issues in code; a content manager wants to <strong>normalize messy text online free</strong> to standardize imported content. Without efficient <strong>text normalization tool online</strong> capabilities, these tasks become time-consuming manual processes prone to human error and inconsistency.</p>
+
+        <h2>Understanding Text Normalization Techniques and Methods</h2>
+
+        <h3>Case Standardization: Establishing Consistent Capitalization</h3>
+        
+        <p>Case inconsistency is one of the most common text quality issues. <strong>Normalize case text online</strong> operations typically convert all text to lowercase, ensuring that "Product", "PRODUCT", and "product" are treated as identical tokens. This standardization is crucial for search functionality, data matching, and text analysis where case variations should not create artificial distinctions. Our <strong>free text normalizer</strong> provides intelligent case conversion that preserves necessary capitalization when required while offering comprehensive lowercase normalization for standardization purposes.</p>
+
+        <p>While lowercase conversion is the most common approach, understanding when to preserve case is equally important. Proper nouns, acronyms, and brand names often require maintained capitalization for accuracy. Advanced <strong>text standardizer online free</strong> implementations allow selective case preservation while normalizing general content, ensuring that "iPhone" doesn't become "iphone" in contexts where brand identity matters.</p>
+
+        <h3>Whitespace Normalization: Controlling Spacing and Structure</h3>
+        
+        <p>Whitespace issues plague text from virtually every source. Multiple consecutive spaces, mixed tab and space usage, trailing spaces at line ends, and inconsistent line break formats (Windows CRLF vs Unix LF) create formatting chaos. Our <strong>text normalization utility</strong> provides comprehensive whitespace management through several operations: <strong>trim lines</strong> removes leading and trailing spaces from each line; <strong>remove extra spaces</strong> collapses multiple consecutive spaces into single spaces; <strong>normalize line breaks</strong> converts all line ending formats to standard LF.</p>
+
+        <p>These <strong>normalize spacing in text online</strong> operations are particularly crucial when preparing text for systems that are sensitive to whitespace variations. Database imports, CSV processing, code compilation, and web rendering all behave unpredictably when whitespace isn't standardized. The <strong>text formatting normalizer online</strong> ensures your spacing is consistent and predictable.</p>
+
+        <h3>Character Cleaning: Removing Unwanted Elements</h3>
+        
+        <p>Raw text contains numerous character types that often need removal for specific use cases. <strong>Remove punctuation</strong> eliminates commas, periods, semicolons, and other punctuation marks, essential for certain types of text analysis and tokenization. <strong>Remove numbers</strong> strips numeric digits when they're irrelevant to the analysis. <strong>Remove accents</strong> converts characters like "é", "ñ", and "ü" to their ASCII equivalents "e", "n", and "u", ensuring compatibility with systems that don't support extended character sets.</p>
+
+        <p>Advanced <strong>text normalizer and cleaner online</strong> capabilities extend to removing control characters (invisible formatting codes), emojis and symbols (for formal documents), and URLs (when links aren't needed). These cleaning operations transform messy real-world text into clean, predictable formats suitable for professional use.</p>
+
+        <h3>Unicode Normalization: Handling International Characters</h3>
+        
+        <p>Unicode, the global standard for text encoding, allows the same character to be represented in multiple ways. For example, the character "é" can be represented as a single code point (U+00E9) or as "e" followed by a combining acute accent (U+0065 U+0301). While visually identical, these representations cause matching and processing failures. <strong>Normalize Unicode (NFC)</strong> converts all characters to their canonical composed form, ensuring that visually identical characters are also digitally identical.</p>
+
+        <p>This <strong>text normalization editor online</strong> feature is essential when working with international content, user-generated data from diverse sources, or text that will be processed by multiple systems. Without Unicode normalization, searches fail to match equivalent characters, databases create duplicate entries for the same semantic content, and text processing yields inconsistent results.</p>
+
+        <h2>Professional Applications of Text Normalization</h2>
+
+        <h3>Search Engine Optimization (SEO)</h3>
+        
+        <p>SEO professionals rely heavily on <strong>text normalizer for SEO online</strong> tools to prepare content for optimal search performance. Normalized text ensures consistent keyword usage, proper heading structure, clean meta descriptions, and standardized URL slugs. Invisible characters and inconsistent spacing in meta tags can cause search engines to truncate or misinterpret content, directly impacting click-through rates. Our <strong>text normalizer for SEO online</strong> removes these invisible obstacles to search performance.</p>
+
+        <p>URL slug creation particularly benefits from normalization. Converting to lowercase, removing accents, replacing spaces with hyphens, and stripping special characters creates clean, readable URLs that both users and search engines prefer. The <strong>online text standardizer free</strong> automates this process, ensuring every URL follows best practices.</p>
+
+        <h3>Machine Learning and Natural Language Processing</h3>
+        
+        <p>Data scientists and ML engineers use <strong>text normalizer for coding online free</strong> and NLP preparation tools to clean training data. Models trained on inconsistent text learn patterns that don't generalize well. Normalization ensures that "Don't", "don't", and "DON'T" are treated as the same token, that punctuation doesn't create artificial word boundaries, and that special characters don't confuse tokenization algorithms.</p>
+
+        <p>The <strong>NLP Prepare</strong> preset in our tool applies the specific normalization chain recommended for natural language processing: lowercase conversion, punctuation removal, accent normalization, and whitespace cleaning. This <strong>text standardization tool online</strong> ensures your text data is ready for vectorization, embedding generation, and model training.</p>
+
+        <h3>Software Development and Code Maintenance</h3>
+        
+        <p>Developers constantly encounter <strong>text normalization</strong> needs when working with code and configuration files. Inconsistent indentation, mixed line endings, trailing whitespace, and hidden characters cause version control conflicts, compilation errors, and deployment failures. The <strong>Code Clean</strong> preset specifically addresses these issues, normalizing line endings to LF, removing trailing whitespace, and eliminating control characters that interfere with code execution.</p>
+
+        <p>Beyond code files, developers use <strong>bulk text normalizer online</strong> tools to clean log files, standardize configuration data, prepare test datasets, and format documentation. The <strong>text normalizer for coding online free</strong> ensures that text processing in development workflows is consistent and reliable.</p>
+
+        <h3>Data Standardization and Integration</h3>
+        
+        <p>Enterprise data integration projects require <strong>text standardization</strong> to merge information from disparate sources. Customer names, addresses, product descriptions, and categorical data arrive in inconsistent formats that prevent proper matching and analysis. Normalization creates the consistent foundation necessary for deduplication, master data management, and business intelligence reporting.</p>
+
+        <p>The <strong>Data Standardize</strong> preset applies business-friendly normalization: preserving case for proper nouns while cleaning whitespace, removing control characters, and standardizing punctuation. This <strong>free online text normalization tool</strong> ensures that customer "John Smith" isn't duplicated as "john smith", "JOHN SMITH", and "John  Smith" due to formatting variations.</p>
+
+        <h2>Text Normalization Presets and Workflows</h2>
+
+        <h3>SEO Clean Preset</h3>
+        
+        <p>The SEO Clean preset applies the normalization chain specifically optimized for search engine content: convert to lowercase, trim all whitespace, remove extra spaces, normalize line breaks, remove control characters, and normalize Unicode. This creates clean, indexable content that search engines can process efficiently. The <strong>text normalizer for SEO online</strong> ensures your content isn't penalized for technical formatting issues.</p>
+
+        <h3>Code Clean Preset</h3>
+        
+        <p>The Code Clean preset focuses on developer needs: normalize line breaks to LF, trim trailing whitespace, remove control characters, and normalize Unicode. This preset preserves case and punctuation (crucial for code syntax) while eliminating the invisible characters that cause version control noise and compilation issues. The <strong>text normalizer for coding online free</strong> keeps repositories clean.</p>
+
+        <h3>Data Standardize Preset</h3>
+        
+        <p>The Data Standardize preset prepares text for database import and analysis: trim whitespace, remove extra spaces, remove empty lines, normalize Unicode, and remove control characters. This preset maintains original case (important for proper nouns) while ensuring structural consistency. The <strong>text standardization tool online</strong> makes data integration projects smoother.</p>
+
+        <h3>NLP Prepare Preset</h3>
+        
+        <p>The NLP Prepare preset applies academic and industry-standard text preprocessing: convert to lowercase, remove punctuation, remove numbers, remove accents, trim whitespace, and normalize Unicode. This creates the clean token streams required by most natural language processing algorithms. The <strong>text normalization editor online</strong> prepares your text for machine learning pipelines.</p>
+
+        <h3>Full Normalize Preset</h3>
+        
+        <p>The Full Normalize preset applies comprehensive cleaning for maximum standardization: all previous options plus removal of emojis, URLs, and special symbols. This creates the most standardized text possible, suitable for analysis tasks where only core textual content matters. The <strong>all in one text formatter online free</strong> approach ensures thorough cleaning.</p>
+
+        <h2>Best Practices for Effective Text Normalization</h2>
+
+        <h3>Understand Your Target System Requirements</h3>
+        
+        <p>Different systems have different text requirements. Database fields may have length limits and character set restrictions. Web forms might strip certain characters for security. Analytics tools tokenize text differently based on punctuation. Understanding your target system's requirements helps you select the appropriate normalization options. Our <strong>online text normalizer without login</strong> provides the flexibility to match any system's needs.</p>
+
+        <h3>Preserve Semantic Meaning</h3>
+        
+        <p>While aggressive normalization creates consistency, it can also destroy meaning. Removing all punctuation eliminates sentence boundaries that carry semantic weight. Converting everything to lowercase loses proper noun distinctions. Stripping numbers removes quantitative information. Apply <strong>text normalization</strong> thoughtfully, preserving the elements essential to your use case while cleaning the noise.</p>
+
+        <h3>Test with Sample Data</h3>
+        
+        <p>Before normalizing large datasets, test with representative samples to ensure the results meet your expectations. Check that important information isn't being stripped, that formatting remains readable, and that the output works correctly in your target system. The <strong>text normalization utility</strong> provides instant preview, making testing efficient.</p>
+
+        <h3>Document Your Normalization Choices</h3>
+        
+        <p>In professional workflows, document which normalization options were applied and why. This ensures reproducibility, helps debug issues, and allows team members to understand how text was processed. When using our <strong>free online text normalizer tool</strong>, note which preset or combination of options produced your results.</p>
+
+        <h2>Comparing Text Normalization Approaches</h2>
+
+        <h3>Manual Cleaning vs. Automated Normalization</h3>
+        
+        <p>Manual text cleaning using find-and-replace in text editors is feasible for small, one-time tasks. However, it becomes impractical for large datasets, recurring processes, or complex normalization chains involving multiple steps. Automated <strong>text normalizer online</strong> tools eliminate human error, ensure consistency across large volumes, and complete in seconds what might take hours manually.</p>
+
+        <h3>Programming Scripts vs. Dedicated Tools</h3>
+        
+        <p>Developers often write custom scripts for text normalization using Python, JavaScript, or command-line tools. While powerful, these require programming knowledge, debugging time, and maintenance effort. Dedicated <strong>online text normalizer</strong> tools provide immediate, reliable normalization without coding, making text standardization accessible to everyone regardless of technical background.</p>
+
+        <h2>Advanced Text Normalization Techniques</h2>
+
+        <h3>Regular Expression Find and Replace</h3>
+        
+        <p>Beyond preset options, regular expressions enable custom normalization patterns. Replace specific character sequences, remove patterns matching certain criteria, or standardize formatting conventions unique to your data. Our <strong>text normalization editor online</strong> includes regex support for advanced users who need custom processing logic.</p>
+
+        <h3>Stacking Normalization Operations</h3>
+        
+        <p>Professional <strong>text normalization</strong> often requires applying multiple operations in sequence. For example: first remove URLs, then normalize whitespace, then convert to lowercase, then remove punctuation. The tool supports unlimited operation stacking with full undo capability, enabling complex normalization workflows.</p>
+
+        <h2>The Future of Text Normalization Technology</h2>
+
+        <p>Artificial intelligence is beginning to influence <strong>text normalization</strong>, moving beyond rule-based cleaning toward intelligent content understanding. AI-powered normalizers can: detect content type and apply appropriate normalization automatically, identify and preserve semantically important elements while cleaning noise, suggest optimal normalization chains based on the target use case, and learn from user corrections to improve over time. These capabilities will transform <strong>text normalizer</strong> tools from simple utilities into intelligent assistants.</p>
+
+        <h2>Conclusion: Master Your Text with Professional Normalization</h2>
+
+        <p><strong>Text normalization</strong> remains one of the most critical yet underappreciated processes in digital work. From simple case conversion to complex multi-step cleaning workflows, the ability to standardize text efficiently empowers professionals across every industry. Whether you're optimizing content for search engines, preparing data for machine learning, cleaning code for deployment, or standardizing information for analysis, mastering <strong>text normalization</strong> techniques will dramatically improve your productivity and output quality.</p>
+
+        <p>Our <strong>free online text normalizer</strong> provides all the capabilities you need to handle any normalization scenario. With intelligent presets for SEO, code, data, and NLP use cases, plus granular control over every aspect of text cleaning, this tool serves everyone from casual users to data professionals. The browser-based architecture ensures privacy and accessibility, while the intuitive interface requires no learning curve. Whether you need to <strong>normalize case text online</strong>, <strong>normalize spacing in text online</strong>, <strong>clean and normalize text online</strong>, or perform comprehensive <strong>text standardization</strong>, our <strong>text normalization utility</strong> delivers professional results instantly. Stop struggling with messy text—start using our professional <strong>text normalizer online</strong> today and experience the efficiency of automated text standardization.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What is text normalization and why do I need it?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Text normalization</strong> is the process of cleaning and standardizing text to ensure consistency. You need it because raw text from different sources contains inconsistencies—mixed case, extra spaces, special characters, different line endings—that cause processing errors, search failures, and formatting issues. Our <strong>text normalizer online</strong> fixes these problems instantly, making your text compatible with databases, search engines, code editors, and analysis tools.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool work automatically as I type?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>online text normalizer</strong> features <strong>live normalization</strong>. As you type or paste text, the tool displays real-time statistics. Click "Normalize Now" or any preset button to see results instantly in the output area. The "Live normalization enabled" indicator confirms the feature is active. This makes our <strong>free text normalizer</strong> the fastest way to clean text.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What's the difference between the SEO, Code, and Data presets?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>SEO Clean</strong> converts to lowercase and removes invisible characters that hurt search rankings. <strong>Code Clean</strong> preserves case and punctuation (essential for syntax) while fixing line endings and trailing whitespace. <strong>Data Standardize</strong> maintains original case for proper nouns while cleaning structural issues. Each <strong>text standardizer online free</strong> preset is optimized for specific professional use cases.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I normalize text for machine learning/NLP?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely! Use the <strong>NLP Prepare</strong> preset, which applies standard academic preprocessing: lowercase, punctuation removal, number removal, accent removal, and Unicode normalization. This creates the clean token streams required by most NLP algorithms. Our <strong>text normalizer for coding online free</strong> and ML preparation ensures your training data follows best practices for vectorization and model training.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What is Unicode normalization and why does it matter?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Unicode allows the same character to be encoded multiple ways (e.g., "é" as one code point or "e" + combining accent). While visually identical, these fail to match in searches and databases. <strong>Normalize Unicode (NFC)</strong> converts all characters to a standard form. This <strong>text normalization utility</strong> feature is essential for international content and ensures that searches find all instances regardless of encoding variations.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I undo normalization if I make a mistake?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Click the <strong>Undo</strong> button to revert to your original text. The tool maintains a history of your input text, allowing you to step back if the normalization results aren't what you expected. This safety feature makes our <strong>online text normalizer without login</strong> safe to experiment with—you can always return to your starting point.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What file types are supported for upload?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">All text-based files: TXT, CSV, JSON, XML, HTML, Markdown, and code files (JS, CSS, Python, Java, C/C++, PHP, Ruby, Go, Rust, Swift, Kotlin, SQL, LOG). Files are read as plain text, so any text file works regardless of extension. Drag and drop or use the file picker to upload. Our <strong>bulk text normalizer online</strong> handles large files efficiently.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my data secure?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely. All processing happens <strong>locally in your browser</strong>—text never uploads to servers or leaves your device. You can verify this with browser DevTools (Network tab shows no external data transfer). Works offline after loading. Ideal for confidential documents, code, or sensitive data. Privacy is built into our <strong>text normalizer online</strong> architecture.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this tool free?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, completely <strong>free</strong> with no registration, usage limits, watermarks, or hidden fees. Use for personal or commercial projects without attribution. This is truly a <strong>free text normalizer</strong> for everyone. Supported by unobtrusive advertising and voluntary user support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const outputText = document.getElementById('outputText');
+const inputStats = document.getElementById('inputStats');
+const outputStats = document.getElementById('outputStats');
+const processingTime = document.getElementById('processingTime');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+
+// Buttons
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const resetBtn = document.getElementById('resetBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const normalizeBtn = document.getElementById('normalizeBtn');
+const undoBtn = document.getElementById('undoBtn');
+const findReplaceBtn = document.getElementById('findReplaceBtn');
+
+// Checkboxes
+const checkboxes = {
+  lowercase: document.getElementById('lowercase'),
+  trimLines: document.getElementById('trimLines'),
+  removeExtraSpaces: document.getElementById('removeExtraSpaces'),
+  normalizeLineBreaks: document.getElementById('normalizeLineBreaks'),
+  removeEmptyLines: document.getElementById('removeEmptyLines'),
+  removePunctuation: document.getElementById('removePunctuation'),
+  removeNumbers: document.getElementById('removeNumbers'),
+  removeAccents: document.getElementById('removeAccents'),
+  normalizeUnicode: document.getElementById('normalizeUnicode'),
+  removeControlChars: document.getElementById('removeControlChars'),
+  removeEmojis: document.getElementById('removeEmojis'),
+  removeUrls: document.getElementById('removeUrls')
+};
+
+// Preset buttons
+const presetBtns = document.querySelectorAll('.preset-btn');
+
+// History for undo
+let history = [];
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Update stats
+function updateStats(textarea, statsElement) {
+  const text = textarea.value;
+  const chars = text.length;
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+  const lines = text === '' ? 0 : text.split('\n').length;
+  statsElement.textContent = `Chars: ${chars} | Words: ${words} | Lines: ${lines}`;
+}
+
+function updateInputStats() {
+  updateStats(inputText, inputStats);
+}
+
+function updateOutputStats() {
+  updateStats(outputText, outputStats);
+}
+
+// Save to history
+function saveToHistory() {
+  if (history.length > 10) history.shift();
+  history.push(inputText.value);
+}
+
+// Undo function
+function undo() {
+  if (history.length > 0) {
+    inputText.value = history.pop();
+    updateInputStats();
+    normalizeText();
+  }
+}
+
+// Preset configurations
+const presets = {
+  seo: {
+    lowercase: true,
+    trimLines: true,
+    removeExtraSpaces: true,
+    normalizeLineBreaks: true,
+    removeEmptyLines: true,
+    removePunctuation: false,
+    removeNumbers: false,
+    removeAccents: false,
+    normalizeUnicode: true,
+    removeControlChars: true,
+    removeEmojis: true,
+    removeUrls: false
+  },
+  code: {
+    lowercase: false,
+    trimLines: true,
+    removeExtraSpaces: false,
+    normalizeLineBreaks: true,
+    removeEmptyLines: false,
+    removePunctuation: false,
+    removeNumbers: false,
+    removeAccents: false,
+    normalizeUnicode: true,
+    removeControlChars: true,
+    removeEmojis: false,
+    removeUrls: false
+  },
+  data: {
+    lowercase: false,
+    trimLines: true,
+    removeExtraSpaces: true,
+    normalizeLineBreaks: false,
+    removeEmptyLines: true,
+    removePunctuation: false,
+    removeNumbers: false,
+    removeAccents: false,
+    normalizeUnicode: true,
+    removeControlChars: true,
+    removeEmojis: false,
+    removeUrls: false
+  },
+  nlp: {
+    lowercase: true,
+    trimLines: true,
+    removeExtraSpaces: true,
+    normalizeLineBreaks: false,
+    removeEmptyLines: true,
+    removePunctuation: true,
+    removeNumbers: true,
+    removeAccents: true,
+    normalizeUnicode: true,
+    removeControlChars: true,
+    removeEmojis: true,
+    removeUrls: true
+  },
+  url: {
+    lowercase: true,
+    trimLines: true,
+    removeExtraSpaces: true,
+    normalizeLineBreaks: false,
+    removeEmptyLines: true,
+    removePunctuation: true,
+    removeNumbers: false,
+    removeAccents: true,
+    normalizeUnicode: true,
+    removeControlChars: true,
+    removeEmojis: true,
+    removeUrls: false
+  },
+  full: {
+    lowercase: true,
+    trimLines: true,
+    removeExtraSpaces: true,
+    normalizeLineBreaks: true,
+    removeEmptyLines: true,
+    removePunctuation: true,
+    removeNumbers: true,
+    removeAccents: true,
+    normalizeUnicode: true,
+    removeControlChars: true,
+    removeEmojis: true,
+    removeUrls: true
+  }
+};
+
+// Apply preset
+function applyPreset(presetName) {
+  const config = presets[presetName];
+  if (!config) return;
+  
+  Object.keys(config).forEach(key => {
+    if (checkboxes[key]) {
+      checkboxes[key].checked = config[key];
+    }
+  });
+  
+  // Visual feedback
+  presetBtns.forEach(btn => {
+    if (btn.dataset.preset === presetName) {
+      btn.classList.add('bg-indigo-500/20', 'text-indigo-300', 'border-indigo-500/30');
+    } else {
+      btn.classList.remove('bg-indigo-500/20', 'text-indigo-300', 'border-indigo-500/30');
+    }
+  });
+  
+  normalizeText();
+}
+
+// Normalization functions
+function removeAccents(text) {
+  return text.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
+function removeEmojis(text) {
+  return text.replace(/[\u{1F600}-\u{1F64F}]|[\u{1F300}-\u{1F5FF}]|[\u{1F680}-\u{1F6FF}]|[\u{1F1E0}-\u{1F1FF}]|[\u{2600}-\u{26FF}]|[\u{2700}-\u{27BF}]/gu, '');
+}
+
+function removeUrls(text) {
+  return text.replace(/https?:\/\/\S+|www\.\S+/gi, '');
+}
+
+function removePunctuation(text) {
+  return text.replace(/[^\w\s]/g, '');
+}
+
+function removeNumbers(text) {
+  return text.replace(/\d/g, '');
+}
+
+function removeControlChars(text) {
+  return text.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/g, '');
+}
+
+function normalizeLineBreaks(text) {
+  return text.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+}
+
+function trimLines(text) {
+  return text.split('\n').map(line => line.trim()).join('\n');
+}
+
+function removeExtraSpaces(text) {
+  return text.replace(/\s+/g, ' ');
+}
+
+function removeEmptyLines(text) {
+  return text.split('\n').filter(line => line.trim() !== '').join('\n');
+}
+
+// Main normalize function
+function normalizeText() {
+  const startTime = performance.now();
+  let text = inputText.value;
+  
+  if (!text) {
+    outputText.value = '';
+    updateOutputStats();
+    processingTime.textContent = '';
+    return;
+  }
+  
+  // Apply normalizations in order
+  if (checkboxes.normalizeUnicode.checked) {
+    text = text.normalize('NFC');
+  }
+  
+  if (checkboxes.removeControlChars.checked) {
+    text = removeControlChars(text);
+  }
+  
+  if (checkboxes.normalizeLineBreaks.checked) {
+    text = normalizeLineBreaks(text);
+  }
+  
+  if (checkboxes.removeUrls.checked) {
+    text = removeUrls(text);
+  }
+  
+  if (checkboxes.removeEmojis.checked) {
+    text = removeEmojis(text);
+  }
+  
+  if (checkboxes.removeAccents.checked) {
+    text = removeAccents(text);
+  }
+  
+  if (checkboxes.removePunctuation.checked) {
+    text = removePunctuation(text);
+  }
+  
+  if (checkboxes.removeNumbers.checked) {
+    text = removeNumbers(text);
+  }
+  
+  if (checkboxes.lowercase.checked) {
+    text = text.toLowerCase();
+  }
+  
+  if (checkboxes.trimLines.checked) {
+    text = trimLines(text);
+  }
+  
+  if (checkboxes.removeExtraSpaces.checked) {
+    text = removeExtraSpaces(text);
+  }
+  
+  if (checkboxes.removeEmptyLines.checked) {
+    text = removeEmptyLines(text);
+  }
+  
+  // Final trim
+  text = text.trim();
+  
+  const endTime = performance.now();
+  
+  outputText.value = text;
+  updateOutputStats();
+  processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+}
+
+// Find and replace
+function findReplace() {
+  const find = document.getElementById('findText').value;
+  const replace = document.getElementById('replaceText').value;
+  
+  if (!find || !inputText.value) return;
+  
+  saveToHistory();
+  
+  try {
+    // Try regex first
+    const regex = new RegExp(find, 'g');
+    inputText.value = inputText.value.replace(regex, replace);
+  } catch (e) {
+    // Fallback to literal string
+    inputText.value = inputText.value.split(find).join(replace);
+  }
+  
+  updateInputStats();
+  normalizeText();
+}
+
+// Preset button click handlers
+presetBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    applyPreset(btn.dataset.preset);
+  });
+});
+
+// Checkbox change handlers
+Object.values(checkboxes).forEach(checkbox => {
+  checkbox.addEventListener('change', normalizeText);
+});
+
+// Drag and drop handlers
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  if (!file.type.match('text.*') && !file.name.match(/\.(txt|csv|json|xml|html?|md|js|css|py|java|cpp|c|php|rb|go|rs|swift|kt|sql|log)$/i)) {
+    alert('Please upload a text file');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    updateInputStats();
+    normalizeText();
+  };
+  reader.readAsText(file);
+}
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    updateInputStats();
+    normalizeText();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  updateInputStats();
+  normalizeText();
+  inputText.focus();
+}
+
+// Copy output
+async function copyOutput() {
+  if (!outputText.value) return;
+  
+  try {
+    await navigator.clipboard.writeText(outputText.value);
+    const originalText = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalText;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+}
+
+// Download output
+function downloadOutput() {
+  const text = outputText.value;
+  if (!text.trim()) return;
+  
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'normalized-text.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Reset all
+function resetAll() {
+  inputText.value = '';
+  outputText.value = '';
+  history = [];
+  updateInputStats();
+  updateOutputStats();
+  processingTime.textContent = '';
+  
+  // Reset checkboxes to default
+  checkboxes.lowercase.checked = true;
+  checkboxes.trimLines.checked = true;
+  checkboxes.removeExtraSpaces.checked = true;
+  checkboxes.normalizeLineBreaks.checked = false;
+  checkboxes.removeEmptyLines.checked = true;
+  checkboxes.removePunctuation.checked = false;
+  checkboxes.removeNumbers.checked = false;
+  checkboxes.removeAccents.checked = false;
+  checkboxes.normalizeUnicode.checked = true;
+  checkboxes.removeControlChars.checked = true;
+  checkboxes.removeEmojis.checked = false;
+  checkboxes.removeUrls.checked = false;
+  
+  // Reset preset buttons
+  presetBtns.forEach(btn => {
+    btn.classList.remove('bg-indigo-500/20', 'text-indigo-300', 'border-indigo-500/30');
+  });
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Event listeners
+inputText.addEventListener('input', () => {
+  updateInputStats();
+});
+
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+copyBtn.addEventListener('click', copyOutput);
+downloadBtn.addEventListener('click', downloadOutput);
+resetBtn.addEventListener('click', resetAll);
+normalizeBtn.addEventListener('click', () => {
+  saveToHistory();
+  normalizeText();
+});
+undoBtn.addEventListener('click', undo);
+findReplaceBtn.addEventListener('click', findReplace);
+
+// Initialize
+updateInputStats();
+</script>
+</body>
+</html>

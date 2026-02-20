@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Text Alignment Tool - Free Online Text Aligner</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online text alignment tool. Align text left, right, center, or justify instantly. Format text to custom widths for clean, professional layouts. No registration required." />
+  <meta name="keywords" content="text alignment tool, text alignment online, free text alignment tool, online text alignment, align text online, text align tool, text aligner online free, left align text online, right align text online, center align text online, justify text online, text formatting alignment tool, text layout tool online, text formatter alignment online, align text to width online, fixed width text aligner online, text alignment utility online, free online text aligner tool, bulk text alignment online, text alignment editor online, align paragraphs online free, text spacing and alignment online, text justify tool online free, online text alignment for coding, text alignment formatter online, text alignment without login online, online text layout alignment free" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/text-alignment-tool/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/text-alignment-tool/" />
+  <meta property="og:title" content="Text Alignment Tool - Free Online Text Aligner" />
+  <meta property="og:description" content="Align text left, right, center, or justify instantly. Format text to custom widths for clean, professional layouts with no registration." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/text-alignment-tool/" />
+  <meta name="twitter:title" content="Text Alignment Tool - Free Online Text Aligner" />
+  <meta name="twitter:description" content="Align text left, right, center, or justify instantly. Format text to custom widths for clean, professional layouts with no registration." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .align-btn {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    .align-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+
+    .align-left { text-align: left; }
+    .align-center { text-align: center; }
+    .align-right { text-align: right; }
+    .align-justify { text-align: justify; }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 14h20M10 20h15M10 26h20" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Text Alignment Tool</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Text Alignment Tool
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Text Formatting Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-alignment enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Input Text
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Type or paste text here... Or drag & drop a file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.csv,.md,.json,.xml,.html,.js,.css,.py,.java,.cpp,.c,.php,.rb,.go,.rs,.swift,.kt,.sql,.log" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Chars: 0 | Words: 0 | Lines: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Output -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Aligned Result
+            </label>
+            <div class="flex gap-1">
+              <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                Copy
+              </button>
+              <button id="downloadBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Download
+              </button>
+            </div>
+          </div>
+          
+          <textarea id="outputText" readonly spellcheck="false"
+            class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+            placeholder="Aligned text appears here automatically..."></textarea>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="outputStats">Chars: 0 | Lines: 0</span>
+            <span id="processingTime" class="text-gray-600"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-3">
+        
+        <!-- Alignment Type -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Alignment Type</label>
+          <div class="flex flex-wrap gap-1">
+            <button class="align-btn active rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all flex items-center gap-1" data-align="left">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h10M4 18h16"/></svg>
+              Left
+            </button>
+            <button class="align-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all flex items-center gap-1" data-align="center">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M7 12h10M4 18h16"/></svg>
+              Center
+            </button>
+            <button class="align-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all flex items-center gap-1" data-align="right">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M10 12h10M4 18h16"/></svg>
+              Right
+            </button>
+            <button class="align-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all flex items-center gap-1" data-align="justify">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+              Justify
+            </button>
+          </div>
+        </div>
+
+        <!-- Width Settings -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Line Width (characters)</label>
+            <input type="number" id="lineWidth" min="10" max="500" value="80" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+          </div>
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Indent First Line</label>
+            <input type="number" id="firstLineIndent" min="0" max="20" value="0" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+          </div>
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Line Spacing</label>
+            <select id="lineSpacing" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="1">Single</option>
+              <option value="1.5">1.5 Lines</option>
+              <option value="2">Double</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Options -->
+        <div class="flex flex-wrap gap-4">
+          <label class="flex items-center gap-1.5 text-xs text-gray-400">
+            <input type="checkbox" id="preserveParagraphs" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Preserve paragraph breaks
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400">
+            <input type="checkbox" id="trimLines" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Trim whitespace
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400">
+            <input type="checkbox" id="removeExtraSpaces" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Remove extra spaces
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400">
+            <input type="checkbox" id="addLineNumbers" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Add line numbers
+          </label>
+        </div>
+
+        <!-- Preset Widths -->
+        <div>
+          <label class="text-xs text-gray-400 mb-2 block">Quick Presets</label>
+          <div class="flex flex-wrap gap-1">
+            <button class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all" onclick="setWidth(40)">Twitter (40)</button>
+            <button class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all" onclick="setWidth(80)">Standard (80)</button>
+            <button class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all" onclick="setWidth(120)">Wide (120)</button>
+            <button class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all" onclick="setWidth(160)">SMS (160)</button>
+            <button class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all" onclick="setWidth(280)">Tweet (280)</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Text Alignment Tool?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Instant</h3>
+          <p class="text-gray-400 text-xs">Real-time alignment as you type</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">4 Alignments</h3>
+          <p class="text-gray-400 text-xs">Left, right, center, justify</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Custom Width</h3>
+          <p class="text-gray-400 text-xs">Set any line width you need</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based, no uploads</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy or download results</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration required</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Input Text</h3>
+          <p class="text-gray-400 text-xs">Type, paste, or drop a file. Alignment happens automatically.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Choose Alignment</h3>
+          <p class="text-gray-400 text-xs">Select left, right, center, or justify alignment.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Set Width</h3>
+          <p class="text-gray-400 text-xs">Configure line width, spacing, and formatting options.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy aligned text or download as file instantly.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Text Alignment: Mastering Professional Text Formatting for Every Application</h2>
+        
+        <p><strong>Text alignment</strong> is one of the most fundamental yet impactful aspects of visual communication and document formatting. Whether you're preparing code documentation, formatting academic papers, creating marketing materials, or simply organizing notes, proper <strong>text alignment</strong> transforms chaotic content into professional, readable documents. Our <strong>free text alignment tool</strong> provides instant access to professional-grade alignment capabilities—left, right, center, and justify—with customizable widths and advanced formatting options, all without requiring registration or software installation.</p>
+
+        <p>In the digital age, where content is consumed across countless devices and platforms, understanding how to effectively <strong>align text online</strong> has become an essential skill. From ensuring your code comments fit within standard 80-character widths to formatting social media posts for maximum impact, <strong>text alignment</strong> serves practical purposes across every domain. This comprehensive guide explores the principles, applications, and best practices of text formatting to help you maximize the value of our <strong>online text alignment</strong> solution.</p>
+
+        <h2>Understanding Text Alignment: Principles and Purposes</h2>
+
+        <h3>What Is Text Alignment?</h3>
+        
+        <p><strong>Text alignment</strong> refers to the arrangement of text relative to margins or container boundaries. The four primary alignment types—left, right, center, and justify—each serve distinct purposes and create different visual effects. When you <strong>left align text online</strong>, text begins at the left margin with a ragged right edge. <strong>Right alignment</strong> creates the opposite effect, with text ending at the right margin. <strong>Center alignment</strong> positions text equidistant from both margins, while <strong>justify text online</strong> creates even margins on both sides by adjusting word spacing.</p>
+
+        <p>Beyond basic alignment, modern <strong>text formatting alignment tool</strong> capabilities include controlling line width (wrapping text at specific character counts), managing indentation, adjusting line spacing, and handling paragraph breaks. These features transform simple alignment into sophisticated document formatting. Our <strong>text layout tool online</strong> integrates all these capabilities, providing complete control over text presentation.</p>
+
+        <h3>The Visual Impact of Alignment Choices</h3>
+        
+        <p>Alignment isn't merely aesthetic—it fundamentally affects readability and comprehension. Research in typography and cognitive psychology demonstrates that <strong>left align text online</strong> produces the most readable body text for left-to-right languages because readers' eyes can easily find the next line. <strong>Justify text online</strong> creates formal, polished appearances ideal for publications but can reduce readability if word spacing becomes too irregular. <strong>Center alignment</strong> draws attention and creates symmetry but becomes difficult to read in long passages. <strong>Right alignment</strong> serves specific purposes like displaying numerical data or creating stylistic effects.</p>
+
+        <p>Professional designers and typographers carefully select alignment based on content type, medium, and audience. Newspapers and books traditionally use justified text. Websites and digital documents typically use left alignment. Poetry and creative works might employ center alignment for emphasis. Data tables and financial reports use right alignment for numbers. Understanding these conventions helps you use our <strong>text aligner online free</strong> tool effectively for any project.</p>
+
+        <h2>Types of Text Alignment and Their Applications</h2>
+
+        <h3>Left Alignment: The Standard for Readability</h3>
+        
+        <p><strong>Left align text online</strong> is the default choice for most text content, and for good reason. In left-to-right reading languages, left-aligned text creates a consistent starting point for each line, allowing readers' eyes to move naturally from line to line. The ragged right edge, while visually irregular, actually aids reading by helping readers maintain their place. When you use our <strong>text alignment tool</strong> for left alignment, you're choosing the most readable format for extended content.</p>
+
+        <p>Left alignment serves countless applications: website body copy, email messages, reports, essays, code comments, and most digital documents. The <strong>text alignment utility online</strong> ensures your left-aligned text maintains consistent line lengths (when specified) while preserving natural word breaks. For coding specifically, left alignment with custom widths (typically 80 or 120 characters) ensures code displays correctly across different editors and terminals. Our <strong>online text alignment for coding</strong> features support these technical requirements.</p>
+
+        <h3>Right Alignment: Purposeful and Distinctive</h3>
+        
+        <p>While less common for body text, <strong>right align text online</strong> serves important specialized purposes. Financial documents align numbers to the right so decimal points align vertically, making comparisons easier. Forms and labels often use right alignment to position elements near input fields. Poetry and creative writing might use right alignment for stylistic effect or to create visual tension. Timelines and chronological content sometimes flow rightward to indicate progression.</p>
+
+        <p>Our <strong>fixed width text aligner online</strong> capabilities ensure that right-aligned text maintains precise positioning regardless of content length. This precision matters for professional documents where alignment affects comprehension. When preparing financial statements, data reports, or structured forms, the <strong>text alignment editor online</strong> provides the exact control needed for polished results.</p>
+
+        <h3>Center Alignment: Attention and Emphasis</h3>
+        
+        <p><strong>Center align text online</strong> creates visual symmetry that naturally draws the eye. Headlines, titles, invitations, and announcements traditionally use center alignment to command attention. Poetry often employs center alignment to create visual rhythm and emphasize line breaks. Short promotional messages, quotes, and call-to-action text benefit from centering's focus-creating properties.</p>
+
+        <p>However, center alignment requires careful application. Extended center-aligned text becomes difficult to read because readers must search for each line's starting point. Our <strong>text alignment online</strong> tool helps you evaluate center alignment by showing real-time previews, ensuring you use this powerful formatting option appropriately. For invitations, posters, and headlines, center alignment creates impact; for body text, consider left or justified alignment instead.</p>
+
+        <h3>Justified Alignment: Polished and Formal</h3>
+        
+        <p><strong>Justify text online</strong> creates the clean, rectangular text blocks associated with published books, newspapers, and formal documents. By adjusting word spacing to align both left and right margins, justification produces visually cohesive paragraphs that many readers associate with professionalism and authority. Academic papers, legal documents, and published articles frequently employ justified text.</p>
+
+        <p>The challenge with justification is managing word spacing. Poor justification creates "rivers" of white space flowing through text or "ladders" of aligned spaces that distract readers. Quality <strong>text justify tool online free</strong> solutions like ours implement algorithms that minimize these issues, producing clean justification even with narrow column widths. Our <strong>text formatter alignment online</strong> includes options to control spacing and hyphenation for optimal results.</p>
+
+        <h2>Practical Applications of Text Alignment Tools</h2>
+
+        <h3>Software Development and Technical Documentation</h3>
+        
+        <p>Programmers and technical writers constantly need to <strong>align text online</strong> for code comments, documentation, and configuration files. Standard practice dictates that code lines should not exceed 80 characters (some teams prefer 100 or 120) to ensure readability across different displays and editors. When writing inline comments, docstrings, or README files, developers use <strong>text alignment tool</strong> capabilities to wrap text cleanly at these boundaries.</p>
+
+        <p>Beyond line length, code documentation often requires specific alignment for parameters, return values, and descriptions. API documentation might align parameter names, types, and descriptions in columns. Configuration examples need consistent indentation and alignment. Our <strong>online text alignment for coding</strong> features support these technical requirements with precise character-width control and monospace-friendly formatting.</p>
+
+        <h3>Academic and Professional Writing</h3>
+        
+        <p>Students and researchers rely on <strong>text alignment online</strong> tools to meet formatting requirements for papers, theses, and publications. Academic style guides (APA, MLA, Chicago) specify alignment, margins, and line spacing. Dissertations often require justified text with specific line widths. Journal submissions must follow strict formatting guidelines. Rather than wrestling with word processor settings, researchers can use our <strong>free text alignment tool</strong> to quickly format text to exact specifications.</p>
+
+        <p>Professional writers and editors use alignment tools for manuscript preparation, proposal formatting, and document standardization. When converting content between formats—from web to print, or from one publication's style to another—<strong>bulk text alignment online</strong> capabilities save hours of manual reformatting. The <strong>text alignment without login online</strong> accessibility means writers can format content anywhere, on any device.</p>
+
+        <h3>Social Media and Digital Marketing</h3>
+        
+        <p>Social media managers use <strong>text align tool</strong> capabilities to optimize content for different platforms. Twitter's 280-character limit requires careful line breaking. Instagram captions benefit from centered formatting for visual appeal. LinkedIn posts might use specific widths for professional appearance. Marketing copy for ads, landing pages, and email campaigns requires consistent alignment to maintain brand standards.</p>
+
+        <p>The <strong>align text to width online</strong> functionality proves particularly valuable for creating platform-optimized content. By setting exact character widths, marketers ensure their text displays consistently across devices and platforms. Center-aligned Instagram bios, left-aligned Twitter threads, and justified Facebook posts each serve strategic purposes. Our <strong>text layout tool online</strong> enables quick iteration across these different formats.</p>
+
+        <h3>Data Presentation and Reporting</h3>
+        
+        <p>Data analysts and business intelligence professionals use text alignment to present information clearly. Tables require consistent column alignment—typically left for text, right for numbers, center for headers. Reports benefit from justified body text with aligned headings. Dashboard descriptions and annotations need precise positioning. The <strong>text alignment utility online</strong> supports these data presentation needs with exact character-level control.</p>
+
+        <p>When preparing text for import into spreadsheets, databases, or reporting tools, alignment ensures data parses correctly. Fixed-width data formats (common in legacy systems and mainframe exports) require specific character positions for each field. Our <strong>fixed width text aligner online</strong> capabilities help data professionals prepare and clean these specialized formats without complex programming.</p>
+
+        <h2>Advanced Text Alignment Techniques</h2>
+
+        <h3>Custom Width and Line Breaking</h3>
+        
+        <p>Modern <strong>text alignment tool</strong> capabilities extend beyond simple left/right/center/justify to include sophisticated line breaking. When you specify a line width, the tool must decide where to break lines—at word boundaries, at specific characters, or at syllable breaks (hyphenation). Different applications require different strategies: code typically breaks only at whitespace, prose benefits from hyphenation, and poetry might require specific line breaks regardless of width.</p>
+
+        <p>Our <strong>text alignment online</strong> implementation uses intelligent word-wrap algorithms that respect language boundaries while achieving target widths. For narrow widths, it prioritizes breaking at natural word boundaries. For very narrow constraints, it may need to break mid-word. Users can control these behaviors through options like "preserve paragraphs" and "trim whitespace," ensuring the <strong>text aligner online free</strong> produces exactly the formatting they need.</p>
+
+        <h3>Indentation and Paragraph Formatting</h3>
+        
+        <p>Professional document formatting requires controlling not just alignment but also indentation. First-line indents (traditional in novels and academic papers) signal new paragraphs. Hanging indents (used in bibliographies and reference lists) align subsequent lines differently from first lines. Block quotes use left and right indentation to distinguish quoted material. Our <strong>text alignment editor online</strong> includes indentation controls for these sophisticated formatting needs.</p>
+
+        <p>Paragraph spacing—whether to add blank lines between paragraphs or use indentation alone—varies by style guide and medium. Digital documents often use blank lines for clarity, while print documents might use indents to save space. The <strong>text spacing and alignment online</strong> features let you control these aspects, producing documents that match your target style precisely.</p>
+
+        <h3>Handling Special Content Types</h3>
+        
+        <p>Different content types present unique alignment challenges. Poetry requires preserving line breaks regardless of width. Code must maintain indentation levels for readability. Tables and tabular data need columnar alignment. Lists require consistent hanging indents for markers. URLs and long strings might need special breaking rules. Professional <strong>text alignment formatter online</strong> tools handle these variations through content-type detection and specialized formatting rules.</p>
+
+        <p>Our tool provides options like "preserve paragraphs" and "remove extra spaces" that adapt alignment behavior to content type. When processing poetry or code, preserving existing structure matters more than achieving exact widths. When preparing prose for publication, clean justification and consistent spacing take priority. These options make the <strong>free online text aligner tool</strong> versatile across applications.</p>
+
+        <h2>Best Practices for Text Alignment</h2>
+
+        <h3>Choosing the Right Alignment for Your Content</h3>
+        
+        <p>Match alignment to your content and context: Use left alignment for most body text, especially long passages. Choose right alignment for numerical data, form labels, or stylistic effect. Apply center alignment sparingly—for headlines, short announcements, and visual emphasis. Select justified alignment for formal publications, books, and documents where a polished appearance matters. Consider your medium—digital screens favor left alignment, while print often uses justification. Our <strong>text alignment tool</strong> makes experimenting with these options instant and effortless.</p>
+
+        <h3>Optimizing Line Width for Readability</h3>
+        
+        <p>Line width significantly impacts readability. Lines that are too long make it difficult for readers' eyes to track to the next line. Lines that are too short break text into choppy fragments that disrupt reading flow. Research suggests optimal line lengths of 50-75 characters (including spaces) for body text. Code traditionally uses 80 characters to fit standard terminal widths. Social media has platform-specific limits. When you <strong>align text to width online</strong>, consider these guidelines for your specific application.</p>
+
+        <p>Our <strong>text alignment online</strong> tool includes preset widths for common applications—Twitter (40 characters for handles), SMS (160 characters), standard code width (80 characters), and wider code standards (120 characters). These presets save time while ensuring your text meets platform requirements.</p>
+
+        <h3>Managing Whitespace and Spacing</h3>
+        
+        <p>Whitespace management separates amateur formatting from professional results. Extra spaces at line beginnings create ragged alignment. Multiple consecutive spaces disrupt justification. Inconsistent paragraph spacing looks unprofessional. Quality <strong>text formatter alignment online</strong> tools include whitespace normalization options that clean these issues automatically.</p>
+
+        <p>Our tool provides options to trim whitespace, remove extra spaces, and control line spacing. These features ensure that your aligned text looks polished regardless of input quality. Whether you're pasting content from web pages, PDFs, or other sources with irregular spacing, the <strong>text alignment utility online</strong> produces clean, consistent output.</p>
+
+        <h2>Comparing Text Alignment Approaches</h2>
+
+        <h3>Manual Alignment vs. Automated Tools</h3>
+        
+        <p>Manual text alignment—using space bars to position text—is tedious, error-prone, and non-portable. Different fonts and displays render spaces differently, breaking manual alignment. Copy-pasting manually aligned text often destroys the formatting. For any non-trivial alignment task, automated <strong>text alignment tool</strong> solutions are essential.</p>
+
+        <p>Word processors and text editors offer alignment features, but they require software installation, file management, and format conversion. Our <strong>online text alignment</strong> tool provides immediate access without these overheads. For quick formatting tasks, content preparation, or working across different devices, browser-based alignment proves more efficient than traditional software.</p>
+
+        <h3>Programming Solutions vs. Web Tools</h3>
+        
+        <p>Developers can implement text alignment using programming languages: Python's `textwrap` module, JavaScript string manipulation, or command-line tools like `fmt` and `fold`. However, writing scripts for simple alignment is overkill for one-time needs, and maintaining alignment utilities requires ongoing effort. Web-based <strong>text alignment without login online</strong> tools provide immediate, maintenance-free access to professional alignment capabilities.</p>
+
+        <p>Our browser-based <strong>text alignment online</strong> solution bridges the gap between power and accessibility. It offers the precision developers need while remaining intuitive for non-technical users. The real-time preview, instant formatting, and export options make it suitable for both quick tasks and professional workflows.</p>
+
+        <h2>The Future of Text Formatting Technology</h2>
+
+        <p>Artificial intelligence is beginning to influence text alignment and formatting. AI-powered tools can: automatically determine optimal line widths based on content type and font, intelligently hyphenate words for better justification, adapt alignment for different screen sizes and reading contexts, and even suggest alignment changes based on content semantics. These innovations will make <strong>text alignment tool</strong> solutions smarter and more context-aware.</p>
+
+        <p>Our platform evolves to incorporate these advances while maintaining the simplicity users expect. Whether you need basic <strong>left align text online</strong> functionality or sophisticated <strong>bulk text alignment online</strong> capabilities, we ensure the tool remains accessible, fast, and reliable.</p>
+
+        <h2>Conclusion: Master Text Alignment with Professional Tools</h2>
+
+        <p><strong>Text alignment</strong> is far more than a cosmetic consideration—it fundamentally affects readability, professionalism, and communication effectiveness. Whether you're preparing code documentation, formatting academic papers, creating marketing content, or simply organizing notes, proper alignment transforms raw text into polished, professional documents. Understanding when to <strong>left align text online</strong>, when to <strong>center align text online</strong>, when to <strong>right align text online</strong>, and when to <strong>justify text online</strong> elevates your content quality across all applications.</p>
+
+        <p>Our <strong>free text alignment tool</strong> provides everything you need for professional text formatting: instant browser-based processing, four alignment types (left, right, center, justify), customizable line widths, indentation controls, and flexible export options. The intuitive interface requires no learning curve, while the advanced features satisfy professional requirements. Whether you're a developer formatting code comments, a student preparing papers, a marketer optimizing social content, or a data professional cleaning datasets, this <strong>text alignment online</strong> solution delivers professional results instantly. Stop struggling with manual formatting or complex software—start using our <strong>online text aligner free</strong> tool today and experience the efficiency of automated text alignment.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool align text automatically as I type?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>text alignment tool</strong> features <strong>automatic real-time alignment</strong>. As you type or paste text, the tool instantly formats it according to your selected alignment (left, right, center, or justify) and width settings. We use intelligent debouncing to ensure smooth performance. The "Auto-alignment enabled" indicator confirms the feature is active. Changes to alignment type, width, or options apply instantly.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What's the difference between the four alignment types?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Left alignment</strong> aligns text to the left margin (most readable for body text). <strong>Right alignment</strong> aligns to the right margin (good for numbers and labels). <strong>Center alignment</strong> centers text between margins (best for headlines and short text). <strong>Justify</strong> aligns to both margins by adjusting word spacing (creates clean, formal blocks). Our <strong>online text alignment</strong> tool lets you switch between these instantly to compare results.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What is the best line width for my content?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">For most body text, 50-75 characters per line is optimal for readability. Code traditionally uses 80 characters. Social media has specific limits: Twitter displays ~40-50 characters before truncating, SMS is 160 characters. Our <strong>text alignment online</strong> tool includes quick presets for common widths (Twitter 40, Standard 80, Wide 120, SMS 160, Tweet 280). You can also enter any custom width between 10-500 characters.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I align text from a file?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>text align tool</strong> supports drag-and-drop file upload and file selection. Simply drop a .txt, .csv, .json, .md, code file, or any text file onto the input area, or click "Select file" to browse. The file content loads instantly and alignment happens automatically. You can then copy or download the formatted result. This <strong>bulk text alignment online</strong> feature handles files of any text format.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does the tool preserve my paragraph breaks?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, by default the "Preserve paragraph breaks" option is enabled. This means blank lines in your input will be maintained in the output, with each paragraph aligned independently. This is essential for formatting essays, articles, and documents with multiple paragraphs. You can disable this option if you want the entire text treated as a single block. Our <strong>text alignment editor online</strong> gives you full control over paragraph handling.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I add line numbers to the output?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Check the "Add line numbers" option to prepend line numbers to each line of output. This is particularly useful for code documentation, legal documents, poetry analysis, and any situation where referencing specific lines matters. The line numbers are right-aligned within a fixed-width column for clean presentation. This <strong>text alignment utility online</strong> feature makes the tool valuable for technical writing.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is there a limit to how much text I can align?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">The tool handles very large texts—up to several million characters or roughly 10-20MB files. Browser memory is the primary limiting factor. Chrome and Edge handle larger files better than mobile browsers. For extremely large documents (novels, massive datasets), consider processing in sections. Our <strong>free text alignment tool</strong> is optimized for typical daily use including full documents, code files, and lengthy content.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my data secure and private?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely. All processing happens <strong>locally in your browser</strong>—your text never uploads to our servers or leaves your device. You can verify this by checking the Network tab in browser DevTools (no data transfer occurs). The tool works offline after initial loading. This makes our <strong>text alignment without login online</strong> tool ideal for sensitive documents, confidential code, or private messages. Your data privacy is guaranteed.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What is first-line indent and when should I use it?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">First-line indent adds spaces to the beginning of the first line of each paragraph. This is a traditional typographic convention used in books, novels, and academic papers to signal paragraph breaks without adding blank lines. Typical indent is 2-4 spaces (or one tab). Use it for formal documents, fiction, and academic writing. For digital content like web pages and emails, blank lines between paragraphs are often preferred. Our <strong>text alignment online</strong> tool lets you set any indent value from 0-20 spaces.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this tool free to use?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, completely <strong>free</strong> with no registration, usage limits, watermarks, or hidden fees. Use it for personal projects, commercial work, education, or any purpose without attribution. This is truly a <strong>free online text aligner tool</strong> for everyone. The service is supported by unobtrusive advertising. All features are available immediately without creating an account.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const outputText = document.getElementById('outputText');
+const inputStats = document.getElementById('inputStats');
+const outputStats = document.getElementById('outputStats');
+const processingTime = document.getElementById('processingTime');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+
+// Buttons
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const resetBtn = document.getElementById('resetBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+// Alignment buttons
+const alignBtns = document.querySelectorAll('.align-btn');
+let currentAlignment = 'left';
+
+// Options
+const lineWidthInput = document.getElementById('lineWidth');
+const firstLineIndentInput = document.getElementById('firstLineIndent');
+const lineSpacingSelect = document.getElementById('lineSpacing');
+const preserveParagraphs = document.getElementById('preserveParagraphs');
+const trimLines = document.getElementById('trimLines');
+const removeExtraSpaces = document.getElementById('removeExtraSpaces');
+const addLineNumbers = document.getElementById('addLineNumbers');
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Update input stats
+function updateInputStats() {
+  const text = inputText.value;
+  const chars = text.length;
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+  const lines = text === '' ? 0 : text.split('\n').length;
+  inputStats.textContent = `Chars: ${chars} | Words: ${words} | Lines: ${lines}`;
+}
+
+// Debounce function for performance
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Alignment selection
+alignBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    alignBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentAlignment = btn.dataset.align;
+    alignText();
+  });
+});
+
+// Set width preset function
+function setWidth(width) {
+  lineWidthInput.value = width;
+  alignText();
+}
+
+// Word wrap function
+function wordWrap(text, width) {
+  const words = text.split(' ');
+  const lines = [];
+  let currentLine = '';
+  
+  words.forEach(word => {
+    if ((currentLine + word).length > width) {
+      if (currentLine) lines.push(currentLine.trim());
+      currentLine = word + ' ';
+    } else {
+      currentLine += word + ' ';
+    }
+  });
+  
+  if (currentLine) lines.push(currentLine.trim());
+  return lines;
+}
+
+// Justify text function
+function justifyLine(line, width) {
+  if (line.length >= width) return line;
+  
+  const words = line.trim().split(/\s+/);
+  if (words.length === 1) return line;
+  
+  const totalSpaces = width - words.reduce((sum, word) => sum + word.length, 0);
+  const gaps = words.length - 1;
+  const spacePerGap = Math.floor(totalSpaces / gaps);
+  const extraSpaces = totalSpaces % gaps;
+  
+  let result = '';
+  words.forEach((word, index) => {
+    result += word;
+    if (index < gaps) {
+      result += ' '.repeat(spacePerGap + (index < extraSpaces ? 1 : 0));
+    }
+  });
+  
+  return result;
+}
+
+// Main align function
+function alignText() {
+  const startTime = performance.now();
+  let text = inputText.value;
+  
+  if (!text.trim()) {
+    outputText.value = '';
+    outputStats.textContent = 'Chars: 0 | Lines: 0';
+    processingTime.textContent = '';
+    return;
+  }
+  
+  const width = parseInt(lineWidthInput.value) || 80;
+  const indent = parseInt(firstLineIndentInput.value) || 0;
+  const lineSpacing = parseFloat(lineSpacingSelect.value) || 1;
+  
+  // Preprocess
+  if (trimLines.checked) {
+    text = text.split('\n').map(line => line.trim()).join('\n');
+  }
+  if (removeExtraSpaces.checked) {
+    text = text.replace(/\s+/g, ' ');
+  }
+  
+  let paragraphs = preserveParagraphs.checked ? text.split(/\n\s*\n/) : [text];
+  let allLines = [];
+  
+  paragraphs.forEach((paragraph, pIndex) => {
+    if (pIndex > 0) {
+      // Add paragraph separator
+      const spacerLines = lineSpacing === 2 ? 2 : 1;
+      for (let i = 0; i < spacerLines; i++) {
+        allLines.push('');
+      }
+    }
+    
+    // Word wrap paragraph
+    const lines = wordWrap(paragraph.trim(), width - indent);
+    
+    lines.forEach((line, lineIndex) => {
+      let processedLine = line;
+      
+      // Apply alignment
+      switch(currentAlignment) {
+        case 'left':
+          processedLine = ' '.repeat(lineIndex === 0 ? indent : 0) + processedLine;
+          break;
+        case 'center':
+          const leftPad = Math.floor((width - processedLine.length) / 2);
+          processedLine = ' '.repeat(leftPad) + processedLine;
+          break;
+        case 'right':
+          const rightPad = width - processedLine.length;
+          processedLine = ' '.repeat(rightPad) + processedLine;
+          break;
+        case 'justify':
+          if (lineIndex < lines.length - 1 && processedLine.length < width) {
+            processedLine = justifyLine(processedLine, width);
+          }
+          if (lineIndex === 0) {
+            processedLine = ' '.repeat(indent) + processedLine;
+          }
+          break;
+      }
+      
+      allLines.push(processedLine);
+    });
+  });
+  
+  // Add line numbers if requested
+  if (addLineNumbers.checked) {
+    const lineNumWidth = String(allLines.length).length;
+    allLines = allLines.map((line, index) => {
+      const num = String(index + 1).padStart(lineNumWidth, ' ');
+      return `${num} | ${line}`;
+    });
+  }
+  
+  // Apply line spacing
+  if (lineSpacing === 1.5 || lineSpacing === 2) {
+    const spacedLines = [];
+    allLines.forEach((line, index) => {
+      spacedLines.push(line);
+      if (index < allLines.length - 1 && line !== '') {
+        spacedLines.push('');
+        if (lineSpacing === 2) spacedLines.push('');
+      }
+    });
+    allLines = spacedLines;
+  }
+  
+  const result = allLines.join('\n');
+  const endTime = performance.now();
+  
+  outputText.value = result;
+  
+  // Update stats
+  const outChars = result.length;
+  const outLines = allLines.length;
+  outputStats.textContent = `Chars: ${outChars} | Lines: ${outLines}`;
+  processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+}
+
+// Debounced align for typing
+const debouncedAlign = debounce(alignText, 0);
+
+// Drag and drop handlers
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  if (!file.type.match('text.*') && !file.name.match(/\.(txt|csv|json|xml|html?|md|js|css|py|java|cpp|c|php|rb|go|rs|swift|kt|sql|log)$/i)) {
+    alert('Please upload a text file');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    updateInputStats();
+    alignText();
+  };
+  reader.readAsText(file);
+}
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    updateInputStats();
+    alignText();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  updateInputStats();
+  alignText();
+  inputText.focus();
+}
+
+// Copy output
+async function copyOutput() {
+  if (!outputText.value) return;
+  
+  try {
+    await navigator.clipboard.writeText(outputText.value);
+    const originalText = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalText;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+}
+
+// Download output
+function downloadOutput() {
+  const text = outputText.value;
+  if (!text.trim()) return;
+  
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'aligned-text.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Reset all
+function resetAll() {
+  inputText.value = '';
+  outputText.value = '';
+  updateInputStats();
+  outputStats.textContent = 'Chars: 0 | Lines: 0';
+  processingTime.textContent = '';
+  lineWidthInput.value = 80;
+  firstLineIndentInput.value = 0;
+  currentAlignment = 'left';
+  alignBtns.forEach(b => b.classList.remove('active'));
+  alignBtns[0].classList.add('active');
+  inputText.focus();
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Event listeners
+inputText.addEventListener('input', () => {
+  updateInputStats();
+  debouncedAlign();
+});
+
+[lineWidthInput, firstLineIndentInput, lineSpacingSelect].forEach(el => {
+  el.addEventListener('input', alignText);
+  el.addEventListener('change', alignText);
+});
+
+[preserveParagraphs, trimLines, removeExtraSpaces, addLineNumbers].forEach(el => {
+  el.addEventListener('change', alignText);
+});
+
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+copyBtn.addEventListener('click', copyOutput);
+downloadBtn.addEventListener('click', downloadOutput);
+resetBtn.addEventListener('click', resetAll);
+
+// Initialize
+updateInputStats();
+</script>
+</body>
+</html>

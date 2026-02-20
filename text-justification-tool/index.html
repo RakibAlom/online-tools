@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Text Justification Tool - Free Online Text Aligner</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online text justification tool. Justify text to specific width with full alignment, left/right/center options, and smart word spacing. No registration required." />
+  <meta name="keywords" content="text justification tool, text justification online, free text justification tool, online text justification, justify text online, text justify tool, justify paragraphs online, text formatter justify online, text alignment justify tool, full justify text online, justify text to width online, text layout justify online, paragraph justification tool online, text formatting justify tool, justify lines of text online, text justify formatter online, free online text justify tool, bulk text justification online, text justification utility online, justify text editor online, text justification for documents online free, text justification for coding online free, justify text spacing online, online paragraph justify tool free, text justification without login online, text alignment and justify online" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/text-justification-tool/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/text-justification-tool/" />
+  <meta property="og:title" content="Text Justification Tool - Free Online Text Aligner" />
+  <meta property="og:description" content="Justify text to specific width with full alignment, left/right/center options, and smart word spacing. No registration required." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/text-justification-tool/" />
+  <meta name="twitter:title" content="Text Justification Tool - Free Online Text Aligner" />
+  <meta name="twitter:description" content="Justify text to specific width with full alignment, left/right/center options, and smart word spacing. No registration required." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+
+    .option-card {
+      transition: all 0.2s ease;
+    }
+    
+    .option-card:hover {
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .option-card.active {
+      background: rgba(99, 102, 241, 0.15);
+      border-color: rgba(99, 102, 241, 0.4);
+    }
+
+    .align-btn {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    .align-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      opacity: 1;
+    }
+
+    .preview-line {
+      font-family: 'Courier New', monospace;
+      white-space: pre;
+      border-left: 2px solid rgba(99, 102, 241, 0.5);
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 12h20M10 20h20M10 28h20" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Text Justification Tool</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Text Justification Tool
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Paragraph Alignment & Formatting Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-justification enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Input Text
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Type or paste text here to justify... Or drag & drop a text file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.csv,.md,.json,.xml,.html,.js,.css,.py,.java,.cpp,.c,.php,.rb,.go,.rs,.swift,.kt,.sql,.log" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Chars: 0 | Words: 0 | Lines: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Output -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Justified Result
+            </label>
+            <div class="flex gap-1">
+              <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                Copy
+              </button>
+              <button id="downloadBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Download
+              </button>
+            </div>
+          </div>
+          
+          <textarea id="outputText" readonly spellcheck="false"
+            class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+            placeholder="Justified text will appear here automatically..."></textarea>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="outputStats">Lines: 0 | Width: 0 | Total Chars: 0</span>
+            <span id="processingTime" class="text-gray-600"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-4">
+        
+        <!-- Alignment Mode Selection -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Alignment Mode</label>
+          <div class="flex flex-wrap gap-1">
+            <button class="align-btn active rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-align="justify">Full Justify</button>
+            <button class="align-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-align="left">Left Align</button>
+            <button class="align-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-align="right">Right Align</button>
+            <button class="align-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-align="center">Center</button>
+          </div>
+        </div>
+
+        <!-- Justification Settings -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          <div>
+            <label class="text-xs font-medium text-gray-300 mb-1.5 block flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/></svg>
+              Line Width
+            </label>
+            <input type="number" id="lineWidth" min="10" max="200" value="80" 
+              class="w-full px-3 py-2 rounded-md glass-input text-sm font-medium">
+          </div>
+
+          <div>
+            <label class="text-xs font-medium text-gray-300 mb-1.5 block flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+              Width Mode
+            </label>
+            <select id="widthMode" class="w-full px-3 py-2 rounded-md glass-input text-sm">
+              <option value="fixed">Fixed Width</option>
+              <option value="longest">Match Longest Line</option>
+              <option value="auto">Auto (80 chars)</option>
+            </select>
+          </div>
+
+          <div class="flex items-end">
+            <label class="flex items-center gap-2 cursor-pointer glass-panel rounded-lg p-2.5 border border-white/5 w-full">
+              <input type="checkbox" id="justifyLastLine" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-4 h-4">
+              <span class="text-xs font-medium text-gray-300">Justify Last Line</span>
+            </label>
+          </div>
+
+          <div class="flex items-end">
+            <label class="flex items-center gap-2 cursor-pointer glass-panel rounded-lg p-2.5 border border-white/5 w-full">
+              <input type="checkbox" id="preserveParagraphs" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-4 h-4">
+              <span class="text-xs font-medium text-gray-300">Preserve Paragraphs</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Quick Presets -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Quick Presets</label>
+          <div class="flex flex-wrap gap-2">
+            <button class="preset-btn compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated" data-width="40" data-align="justify">Narrow (40)</button>
+            <button class="preset-btn compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated" data-width="60" data-align="justify">Medium (60)</button>
+            <button class="preset-btn compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated" data-width="80" data-align="justify">Standard (80)</button>
+            <button class="preset-btn compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated" data-width="120" data-align="justify">Wide (120)</button>
+            <button class="preset-btn compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated" data-width="80" data-align="left">Left Only</button>
+            <button class="preset-btn compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated" data-width="80" data-align="center">Centered</button>
+          </div>
+        </div>
+
+        <!-- Live Preview -->
+        <div id="livePreview" class="hidden">
+          <label class="text-xs font-medium text-gray-300 mb-2 block flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            Visual Preview <span class="text-gray-500 font-normal">(first 5 lines, monospace font)</span>
+          </label>
+          <div id="previewContent" class="glass-panel rounded-lg p-3 text-xs overflow-x-auto font-mono">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Text Justification Tool?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Smart Algorithm</h3>
+          <p class="text-gray-400 text-xs">Even word distribution</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">4 Alignments</h3>
+          <p class="text-gray-400 text-xs">Full, left, right, center</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Drag & Drop</h3>
+          <p class="text-gray-400 text-xs">Upload text files easily</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based processing</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy or download results</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration needed</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Enter Text</h3>
+          <p class="text-gray-400 text-xs">Type, paste, or upload your text file. Justification applies automatically.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Choose Alignment</h3>
+          <p class="text-gray-400 text-xs">Select full justify, left, right, or center alignment mode.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Set Width</h3>
+          <p class="text-gray-400 text-xs">Set line width, width mode, and paragraph options. Changes apply instantly.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy justified result or download as file. Use in your documents.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Text Justification: Mastering Paragraph Alignment and Typesetting for Professional Documents</h2>
+        
+        <p><strong>Text justification</strong> is a sophisticated typographic practice that transforms ragged, uneven text into clean, aligned paragraphs with straight edges on both left and right margins. Whether you're preparing academic papers, formatting legal documents, designing print publications, or creating professional reports, understanding how to properly <strong>justify text online</strong> is essential for achieving polished, publication-ready results. Our <strong>text justification online</strong> solution provides everything you need for professional paragraph formatting without any cost or registration barriers.</p>
+
+        <h2>What Is Text Justification and Why Does It Matter?</h2>
+        
+        <p><strong>Text justification</strong> refers to the process of adjusting word spacing and line breaks so that text aligns evenly along both left and right margins, creating a clean rectangular block of text. Unlike left-aligned text (ragged right) or right-aligned text (ragged left), justified text distributes space between words to achieve equal line lengths throughout the paragraph. When you <strong>justify paragraphs online</strong>, you're applying a professional typesetting technique that has been used in print publishing for centuries.</p>
+
+        <p>The importance of proper <strong>online text justification</strong> extends beyond mere aesthetics. In academic and professional contexts, justified text conveys formality, attention to detail, and adherence to publishing standards. Legal documents, research papers, books, and formal reports traditionally use full justification to create a dense, authoritative appearance. The even margins guide the reader's eye smoothly across lines and down the page, potentially improving reading rhythm for extended texts. However, improper justification—especially without hyphenation—can create "rivers" of white space that disrupt reading, making quality <strong>text justification tool</strong> implementation crucial.</p>
+
+        <h2>Understanding Justification Methods and Algorithms</h2>
+
+        <h3>Full Justification (Flush Left and Right)</h3>
+        
+        <p><strong>Full justify text online</strong> represents the classic justification approach where both margins are aligned. The algorithm calculates the difference between the natural line length and the target width, then distributes extra spaces between words to fill the gap. When the required spaces don't divide evenly between word gaps, professional <strong>text formatter justify online</strong> implementations add extra spaces to leftmost gaps first, creating subtle variation that avoids obvious patterns.</p>
+
+        <p>The complexity of full justification lies in line-breaking decisions. A greedy algorithm packs as many words as possible into each line before justifying, while more sophisticated approaches might consider multiple lines to optimize overall spacing. Our <strong>paragraph justification tool online</strong> uses an optimized greedy approach that balances computational efficiency with quality results, making it suitable for real-time processing of large documents.</p>
+
+        <h3>Partial Justification Alternatives</h3>
+        
+        <p>While full justification is the standard for formal documents, <strong>text alignment justify tool</strong> capabilities should include alternatives for different contexts. <strong>Left alignment</strong> maintains a straight left margin with ragged right edges, optimal for web content and casual reading. <strong>Right alignment</strong> creates straight right margins, useful for special layouts like poetry or decorative text. <strong>Center alignment</strong> positions text symmetrically, appropriate for titles, headers, and short blocks of emphasized content.</p>
+
+        <p>Modern <strong>text layout justify online</strong> tools recognize that different content types require different approaches. Web content typically uses left alignment for readability across devices, while print publications often prefer full justification for its formal appearance. Technical documentation might use monospace fonts with specific alignment for code examples. A versatile <strong>text formatting justify tool</strong> accommodates all these scenarios.</p>
+
+        <h3>Line Width and Measure Considerations</h3>
+        
+        <p>The "measure" or line width significantly impacts justification quality. Narrow columns (40-60 characters) make justification difficult because fewer word gaps must absorb more space variation, potentially creating distracting gaps. Wide lines (100+ characters) reduce these issues but may strain readability as eyes travel long distances between line breaks. The traditional optimal measure of 66 characters (2.5 alphabets) balances these concerns.</p>
+
+        <p>When you <strong>justify text to width online</strong>, consider your output medium. Fixed-width formats like plain text emails or terminal displays require precise character counts. Responsive web layouts adjust to viewport size, making fixed-width justification challenging. Print documents have absolute measurements in points or picas. Our <strong>text justification utility online</strong> provides flexible width options including fixed character counts, automatic longest-line matching, and preset standard widths.</p>
+
+        <h2>Professional Applications of Text Justification</h2>
+
+        <h3>Academic and Scientific Publishing</h3>
+        
+        <p>Researchers and academics rely on <strong>text justification for documents online free</strong> tools for manuscript preparation. Journal submission guidelines often specify exact formatting requirements including justification, line spacing, and margins. Conference proceedings, thesis documents, and dissertations typically require full justification following institutional style guides. Bibliographic formatting sometimes involves justified entries with hanging indents.</p>
+
+        <p>LaTeX and other academic typesetting systems handle justification automatically, but researchers working in plain text, Markdown, or word processors need external tools. Converting between formats—exporting from a web editor to a submission system, for example—often requires re-justification. The <strong>free text justification tool</strong> bridges these workflow gaps, ensuring consistent formatting regardless of source application.</p>
+
+        <h3>Legal and Business Documentation</h3>
+        
+        <p>Legal professionals use <strong>justify text editor online</strong> capabilities for contract preparation, brief formatting, and court document submission. Legal documents traditionally use full justification to create dense, authoritative text blocks that convey seriousness and completeness. Pleadings, motions, and memoranda often have strict formatting rules including specific line widths and justification requirements.</p>
+
+        <p>Business reports, white papers, and formal correspondence similarly benefit from professional justification. Executive summaries, policy documents, and official communications project professionalism through careful typography. The <strong>bulk text justification online</strong> capabilities enable rapid formatting of lengthy reports while maintaining consistency throughout multi-section documents.</p>
+
+        <h3>Print and Digital Publishing</h3>
+        
+        <p>Publishers and designers apply <strong>text justify spacing online</strong> techniques for books, magazines, newsletters, and marketing materials. Multi-column layouts particularly benefit from justification, as uneven margins in narrow columns appear especially ragged. Newspaper columns, traditionally narrow, have long used justified text to maximize content density while maintaining clean visual structure.</p>
+
+        <p>Digital publishing presents unique challenges. E-books must reflow across different device sizes, making fixed justification problematic. PDF documents preserve exact formatting including justification, making them suitable for fixed-layout publications. Web typography has historically avoided full justification due to poor browser implementations, but modern CSS and JavaScript enable quality <strong>online paragraph justify tool free</strong> approaches for web content.</p>
+
+        <h3>Programming and Technical Documentation</h3>
+        
+        <p>Developers use <strong>text justification for coding online free</strong> tools for specific technical applications. ASCII art and diagrams require precise character alignment that justification can help achieve. Comment block formatting in source code sometimes uses justification for professional appearance. Documentation generators and literate programming tools may apply justification to prose sections.</p>
+
+        <p>Fixed-width file formats, common in data exchange and legacy systems, often require specific line lengths with justification. Configuration file comments, log file headers, and data file metadata sometimes use justified formatting for readability. The <strong>text justification without login online</strong> approach ensures developers can quickly format these specialized text blocks without disrupting their workflow.</p>
+
+        <h2>Advanced Justification Techniques and Considerations</h2>
+
+        <h3>Hyphenation and Word Breaking</h3>
+        
+        <p>Quality justification requires hyphenation support to prevent excessive word spacing. Without hyphenation, narrow columns force large gaps between words to achieve line alignment. Professional typesetting systems use hyphenation dictionaries and algorithms to break words at appropriate syllable boundaries, significantly improving justification quality.</p>
+
+        <p>Our <strong>text justification tool</strong> currently focuses on non-hyphenated justification, suitable for moderate line widths where word spacing variation remains acceptable. For very narrow columns, consider using wider line widths or accepting left-aligned ragged margins. Future enhancements may include basic hyphenation support for challenging layouts.</p>
+
+        <h3>Paragraph and Line Handling</h3>
+        
+        <p>Professional <strong>online text justification</strong> must handle paragraph boundaries correctly. The last line of each paragraph typically receives different treatment—either left-aligned (standard) or fully justified (optional). Blank lines between paragraphs should be preserved to maintain document structure. Indented paragraphs (first-line indent) versus block paragraphs (space between) require different spacing calculations.</p>
+
+        <p>The "Preserve Paragraphs" option in our <strong>text justification online</strong> tool maintains your original paragraph structure while justifying each paragraph's content. This ensures that logical document organization remains intact while achieving visual alignment within paragraphs.</p>
+
+        <h3>Character Encoding and Special Content</h3>
+        
+        <p>Modern documents contain diverse content beyond plain ASCII text. Unicode characters, emoji, mathematical symbols, and combining characters complicate width calculations. CJK (Chinese, Japanese, Korean) characters occupy different display widths than Latin characters. Right-to-left languages (Arabic, Hebrew) require bidirectional text handling.</p>
+
+        <p>Our <strong>text justification utility online</strong> handles standard Unicode content correctly, calculating widths based on character codes. For specialized international typography or complex scripts, dedicated typesetting systems may be more appropriate than general-purpose online tools.</p>
+
+        <h2>Comparing Justification Approaches</h2>
+
+        <h3>Manual Formatting vs. Automated Tools</h3>
+        
+        <p>Manual justification using spacebar or manual line breaks is impractical for all but the shortest texts. Counting characters, calculating word gaps, and distributing spaces evenly requires computational precision that humans cannot easily achieve. Automated <strong>justify text online</strong> tools provide consistent, error-free results in milliseconds, freeing writers to focus on content rather than formatting.</p>
+
+        <h3>Word Processors vs. Online Tools</h3>
+        
+        <p>Microsoft Word, Google Docs, and similar applications offer built-in justification, but they require document creation within those systems. Online justification tools provide flexibility for plain text, code, markdown, and content from diverse sources. They enable quick formatting without document conversion, support automation through bookmarklets or browser extensions, and work across all platforms without software installation. The <strong>free online text justify tool</strong> complements rather than replaces word processor capabilities.</p>
+
+        <h2>Best Practices for Effective Justification</h2>
+
+        <h3>Appropriate Line Width Selection</h3>
+        
+        <p>Choose line widths appropriate for your content and medium. For monospace fonts in terminal or code contexts, 80 characters remains the traditional standard. For prose text in variable-width fonts, 60-80 characters provides comfortable reading. Narrow columns (40-50 characters) work for sidebars, captions, and multi-column layouts but may show noticeable spacing variation. Always preview justified output to verify acceptable word spacing.</p>
+
+        <h3>Content Suitability Assessment</h3>
+        
+        <p>Not all content benefits from justification. Technical documentation, web content, and casual communications often read better with left alignment. Narrow columns, text with many long words, and content with frequent line breaks may produce poor justification results. Consider your audience—readers with dyslexia or visual processing difficulties may find justified text harder to track. Use <strong>text alignment and justify online</strong> tools thoughtfully, matching formatting to content purpose.</p>
+
+        <h3>Quality Verification and Iteration</h3>
+        
+        <p>Always review justified output before finalizing documents. Check for "rivers"—vertical patterns of white space that distract the eye. Verify that word spacing remains relatively even; gaps wider than three standard spaces indicate problematic lines. Ensure that paragraph boundaries, indentation, and special formatting (lists, block quotes) survived the justification process intact. Professional <strong>text justify formatter online</strong> workflows include this verification step.</p>
+
+        <h2>The Future of Text Formatting Technology</h2>
+
+        <p>Artificial intelligence and machine learning are beginning to influence typography and text formatting. "Optical margin alignment" uses AI to slightly extend certain characters (like T, A, V) beyond the margin for visually straighter edges. Variable fonts enable responsive typography that adjusts weight, width, and spacing dynamically. Advanced justification algorithms consider entire paragraphs rather than individual lines to optimize overall spacing.</p>
+
+        <p>Despite these advances, fundamental <strong>text justification</strong> remains essential. The core challenge—distributing words evenly across lines while maintaining readability—transcends specific technologies. Our platform evolves to incorporate beneficial innovations while maintaining the reliable, accessible <strong>text justification without login online</strong> experience that users depend on for daily productivity.</p>
+
+        <h2>Conclusion: Master Your Documents with Professional Justification</h2>
+
+        <p><strong>Text justification</strong> represents a fundamental skill in document preparation and professional communication. From academic papers to business reports, legal documents to published books, proper justification transforms raw text into polished, publication-ready content. Understanding when and how to apply full justification, left alignment, or other formatting approaches distinguishes professional documents from amateur efforts.</p>
+
+        <p>Our <strong>free online text justification tool</strong> provides all the capabilities you need to handle any justification scenario. With automatic real-time processing, support for four alignment modes (full justify, left, right, center), flexible line width options, and paragraph-aware formatting, this tool serves everyone from casual users to professional publishers. The browser-based architecture ensures privacy and accessibility, while the intuitive interface requires no learning curve. Whether you need to <strong>justify text online</strong>, <strong>justify paragraphs online</strong>, <strong>bulk text justification online</strong>, or perform specialized <strong>text layout justify online</strong> operations, our <strong>text justification utility online</strong> delivers professional results instantly. Stop struggling with manual formatting—start using our professional <strong>text justification online</strong> tool today and experience the efficiency of automated paragraph alignment.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool justify text automatically as I type?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>text justification online</strong> features <strong>automatic real-time justification</strong>. As you type or paste text, the tool instantly applies your selected alignment and width settings. The "Auto-justification enabled" indicator confirms the feature is active. Changes to alignment mode, line width, or other options apply instantly, making this the most responsive <strong>free text justification tool</strong> available.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What's the difference between Full Justify and Left/Right/Center alignment?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Full Justify</strong> aligns text to both left and right margins by adjusting space between words, creating even edges on both sides. <strong>Left Align</strong> keeps a straight left margin with ragged right edge (best for web). <strong>Right Align</strong> creates straight right margin with ragged left. <strong>Center</strong> positions text symmetrically. Full justify is traditional for print documents; left align is standard for digital content.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What line width should I use for my document?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">For monospace fonts (code, terminal), 80 characters is standard. For prose text, 60-80 characters provides comfortable reading. Use 40-50 for narrow columns or sidebars. The "Match Longest Line" option automatically sets width to your longest input line. Use the presets (Narrow 40, Medium 60, Standard 80, Wide 120) for quick selection. Narrower widths make justification more challenging—consider left alignment for very narrow columns.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Why do some lines have large gaps between words?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Large gaps occur when a line has few words but must fill the full width—common with narrow columns or long words. Our tool distributes extra spaces as evenly as possible, prioritizing leftmost gaps when division isn't perfect. To minimize gaps: use wider line widths, enable "Justify Last Line" for short final lines, or consider left alignment for problematic text. Professional typesetting uses hyphenation to help, which requires language-specific dictionaries.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I justify text while preserving my paragraphs?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Enable the <strong>"Preserve Paragraphs"</strong> option (checked by default) to maintain your paragraph structure. The tool treats each paragraph separately, justifying the content within while keeping paragraph boundaries intact. Blank lines between paragraphs are preserved. The last line of each paragraph is handled according to the "Justify Last Line" setting—typically left-aligned for readability, or fully justified if you prefer uniform edges throughout.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is there a file size limit for uploads?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">The tool handles text files up to 5-10MB (roughly 1-2 million characters). This accommodates novels, large reports, codebases, and data files. Supported formats include TXT, CSV, JSON, XML, HTML, Markdown, and all common programming languages. Files are processed locally in your browser for privacy and security. For extremely large documents, consider processing in sections to maintain browser responsiveness.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my text secure when using this tool?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">100% secure. All processing happens <strong>locally in your browser</strong>—your text never uploads to any server or leaves your device. You can verify this by checking your browser's Network tab (no data transfer occurs). The tool works offline after loading. This makes it safe for processing confidential documents, proprietary code, personal writing, or sensitive business content. Privacy is built into our <strong>text justification without login online</strong> architecture.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I use this for code formatting?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">This tool is designed for prose text, not code indentation. For code, use our dedicated <strong>Text Indentation Tool</strong> instead, which properly handles programming language syntax, nested structures, and indentation-sensitive languages like Python. However, this justification tool works well for code comments, documentation blocks, ASCII art, and text files where you want paragraph-style formatting rather than structural indentation.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Why does the output look different in my word processor?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Different fonts have different character widths. Our tool uses monospace calculations (each character same width), while word processors typically use proportional fonts (letters like 'i' are narrower than 'W'). For best results, paste our output into a monospace font (Consolas, Courier, Monaco) or use a fixed-width document format. If using in a word processor, you may need to re-justify using the processor's built-in justification for proportional fonts.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this tool completely free to use?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, completely <strong>free</strong> with no registration, usage limits, watermarks, or hidden fees. Use it for personal projects, commercial work, academic papers, or any purpose without attribution. This is truly a <strong>free online text justify tool</strong> for everyone. Supported by unobtrusive advertising and voluntary user support, allowing us to keep it free and accessible to writers, developers, and professionals worldwide.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const outputText = document.getElementById('outputText');
+const inputStats = document.getElementById('inputStats');
+const outputStats = document.getElementById('outputStats');
+const processingTime = document.getElementById('processingTime');
+const livePreview = document.getElementById('livePreview');
+const previewContent = document.getElementById('previewContent');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+
+// Settings Elements
+const lineWidth = document.getElementById('lineWidth');
+const widthMode = document.getElementById('widthMode');
+const justifyLastLine = document.getElementById('justifyLastLine');
+const preserveParagraphs = document.getElementById('preserveParagraphs');
+
+// Buttons
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const resetBtn = document.getElementById('resetBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const alignBtns = document.querySelectorAll('.align-btn');
+const presetBtns = document.querySelectorAll('.preset-btn');
+
+let currentAlign = 'justify';
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Update input stats
+function updateInputStats() {
+  const text = inputText.value;
+  const chars = text.length;
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+  const lines = text === '' ? 0 : text.split('\n').length;
+  inputStats.textContent = `Chars: ${chars} | Words: ${words} | Lines: ${lines}`;
+}
+
+// Get target width
+function getTargetWidth(text) {
+  const mode = widthMode.value;
+  if (mode === 'auto') return 80;
+  if (mode === 'fixed') return parseInt(lineWidth.value) || 80;
+  
+  // Match longest line
+  const lines = text.split('\n');
+  let maxLen = 0;
+  lines.forEach(line => {
+    const trimmed = line.trim();
+    if (trimmed.length > maxLen) maxLen = trimmed.length;
+  });
+  return Math.min(maxLen, 200);
+}
+
+// Justify text function
+function justifyText(text, width, align) {
+  const words = text.trim().split(/\s+/).filter(w => w.length > 0);
+  if (words.length === 0) return '';
+  
+  if (align === 'left') {
+    return text.trim();
+  } else if (align === 'right') {
+    const trimmed = text.trim();
+    const padding = width - trimmed.length;
+    return padding > 0 ? ' '.repeat(padding) + trimmed : trimmed;
+  } else if (align === 'center') {
+    const trimmed = text.trim();
+    const padding = width - trimmed.length;
+    if (padding <= 0) return trimmed;
+    const leftPad = Math.floor(padding / 2);
+    const rightPad = Math.ceil(padding / 2);
+    return ' '.repeat(leftPad) + trimmed + ' '.repeat(rightPad);
+  }
+  
+  // Full justify
+  if (words.length === 1) {
+    return words[0] + ' '.repeat(width - words[0].length);
+  }
+  
+  const totalChars = words.reduce((sum, w) => sum + w.length, 0);
+  const totalSpaces = width - totalChars;
+  const gaps = words.length - 1;
+  const baseSpaces = Math.floor(totalSpaces / gaps);
+  const extraSpaces = totalSpaces % gaps;
+  
+  let result = '';
+  words.forEach((word, idx) => {
+    result += word;
+    if (idx < gaps) {
+      const spaces = baseSpaces + (idx < extraSpaces ? 1 : 0);
+      result += ' '.repeat(spaces);
+    }
+  });
+  
+  return result;
+}
+
+// Process justification
+function processJustification() {
+  const startTime = performance.now();
+  const text = inputText.value;
+  
+  if (!text.trim()) {
+    outputText.value = '';
+    outputStats.textContent = 'Lines: 0 | Width: 0 | Total Chars: 0';
+    processingTime.textContent = '';
+    livePreview.classList.add('hidden');
+    return;
+  }
+  
+  try {
+    const width = getTargetWidth(text);
+    const preserve = preserveParagraphs.checked;
+    const justifyLast = justifyLastLine.checked;
+    
+    let paragraphs = preserve ? text.split(/\n\s*\n/) : [text];
+    let resultLines = [];
+    
+    paragraphs.forEach((para, pIdx) => {
+      const lines = para.split('\n').filter(l => l.trim().length > 0);
+      
+      lines.forEach((line, lIdx) => {
+        const isLastLine = (lIdx === lines.length - 1) && (pIdx === paragraphs.length - 1 || !preserve);
+        const isLastInPara = (lIdx === lines.length - 1);
+        
+        let aligned;
+        if (currentAlign === 'justify' && (isLastLine || (isLastInPara && !justifyLast))) {
+          // Last line left-aligned unless justify last is enabled
+          aligned = line.trim();
+        } else {
+          aligned = justifyText(line, width, currentAlign);
+        }
+        
+        resultLines.push(aligned);
+      });
+      
+      // Add blank line between paragraphs if preserving
+      if (preserve && pIdx < paragraphs.length - 1) {
+        resultLines.push('');
+      }
+    });
+    
+    const output = resultLines.join('\n');
+    const endTime = performance.now();
+    
+    outputText.value = output;
+    outputStats.textContent = `Lines: ${resultLines.length} | Width: ${width} | Total Chars: ${output.length}`;
+    processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+    
+    updatePreview(resultLines, width);
+    
+  } catch (error) {
+    console.error('Justification error:', error);
+  }
+}
+
+// Update live preview
+function updatePreview(lines, width) {
+  if (lines.length === 0) {
+    livePreview.classList.add('hidden');
+    return;
+  }
+  
+  livePreview.classList.remove('hidden');
+  const previewLines = lines.slice(0, 5);
+  
+  previewContent.innerHTML = previewLines.map((line, idx) => {
+    if (line === '') return '<div class="preview-line py-1 border-b border-white/5 last:border-0 text-gray-600">(blank line)</div>';
+    
+    // Show spaces as dots for visibility
+    const visible = line.replace(/ /g, '·');
+    const isJustified = line.length >= width - 5 && currentAlign === 'justify';
+    const color = isJustified ? 'text-green-400' : 'text-gray-300';
+    
+    return `<div class="preview-line py-1 border-b border-white/5 last:border-0 ${color}">${visible}</div>`;
+  }).join('');
+  
+  if (lines.length > 5) {
+    previewContent.innerHTML += `<div class="text-xs text-gray-500 text-center py-2">... and ${lines.length - 5} more lines</div>`;
+  }
+}
+
+// Alignment buttons
+alignBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    alignBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentAlign = btn.dataset.align;
+    processJustification();
+  });
+});
+
+// Settings change handlers
+lineWidth.addEventListener('input', processJustification);
+widthMode.addEventListener('change', () => {
+  if (widthMode.value === 'fixed') {
+    lineWidth.disabled = false;
+  } else {
+    lineWidth.disabled = true;
+  }
+  processJustification();
+});
+justifyLastLine.addEventListener('change', processJustification);
+preserveParagraphs.addEventListener('change', processJustification);
+
+// Preset buttons
+presetBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    lineWidth.value = btn.dataset.width;
+    widthMode.value = 'fixed';
+    lineWidth.disabled = false;
+    
+    currentAlign = btn.dataset.align;
+    alignBtns.forEach(b => {
+      b.classList.toggle('active', b.dataset.align === currentAlign);
+    });
+    
+    processJustification();
+  });
+});
+
+// Input handling
+inputText.addEventListener('input', () => {
+  updateInputStats();
+  processJustification();
+});
+
+// Drag and drop handlers
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  if (!file.type.match('text.*') && !file.name.match(/\.(txt|csv|json|xml|html?|md|js|css|py|java|cpp|c|php|rb|go|rs|swift|kt|sql|log)$/i)) {
+    alert('Please upload a text file');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    updateInputStats();
+    processJustification();
+  };
+  reader.readAsText(file);
+}
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    updateInputStats();
+    processJustification();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  updateInputStats();
+  outputText.value = '';
+  outputStats.textContent = 'Lines: 0 | Width: 0 | Total Chars: 0';
+  processingTime.textContent = '';
+  livePreview.classList.add('hidden');
+  inputText.focus();
+}
+
+// Copy output
+async function copyOutput() {
+  if (!outputText.value) return;
+  
+  try {
+    await navigator.clipboard.writeText(outputText.value);
+    const originalText = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalText;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+}
+
+// Download output
+function downloadOutput() {
+  const text = outputText.value;
+  if (!text.trim()) return;
+  
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'justified-text.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Reset all
+function resetAll() {
+  inputText.value = '';
+  outputText.value = '';
+  lineWidth.value = 80;
+  widthMode.value = 'fixed';
+  lineWidth.disabled = false;
+  justifyLastLine.checked = false;
+  preserveParagraphs.checked = true;
+  currentAlign = 'justify';
+  
+  alignBtns.forEach(b => b.classList.remove('active'));
+  document.querySelector('[data-align="justify"]').classList.add('active');
+  
+  updateInputStats();
+  outputStats.textContent = 'Lines: 0 | Width: 0 | Total Chars: 0';
+  processingTime.textContent = '';
+  livePreview.classList.add('hidden');
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Button event listeners
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+copyBtn.addEventListener('click', copyOutput);
+downloadBtn.addEventListener('click', downloadOutput);
+resetBtn.addEventListener('click', resetAll);
+
+// Initialize
+updateInputStats();
+</script>
+</body>
+</html>

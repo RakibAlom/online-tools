@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Text Cleaner - Free Online Text Cleanup Tool</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online text cleaner tool. Remove extra spaces, special characters, and unwanted formatting. Clean and sanitize text instantly. No registration required, 100% private." />
+  <meta name="keywords" content="text cleaner, text cleaner online, free text cleaner, online text cleaner, clean text online, text cleanup tool online, remove unwanted characters from text online, free online text cleaner tool, text sanitizer online, text cleanup utility online, text formatting cleaner online, clean messy text online, text purifier online free, bulk text cleaner online, online text cleanup tool free, remove extra spaces from text online, remove special characters from text online free, text cleaner for coding online, free online text cleanup tool, text cleaner and formatter online, online text cleaner without login, clean text for documents online free, text cleanup editor online, text cleaning utility online free" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/text-cleaner/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/text-cleaner/" />
+  <meta property="og:title" content="Text Cleaner - Free Online Text Cleanup Tool" />
+  <meta property="og:description" content="Instantly clean text by removing extra spaces, special characters, and unwanted formatting. Free browser-based tool for professional text sanitization." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/text-cleaner/" />
+  <meta name="twitter:title" content="Text Cleaner - Free Online Text Cleanup Tool" />
+  <meta name="twitter:description" content="Instantly clean text by removing extra spaces, special characters, and unwanted formatting. Free browser-based tool for professional text sanitization." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+
+    .stat-card {
+      transition: all 0.3s ease;
+    }
+    .stat-card:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .preview-line {
+      border-left: 2px solid rgba(99, 102, 241, 0.3);
+      transition: all 0.2s ease;
+    }
+    .preview-line:hover {
+      border-left-color: rgba(99, 102, 241, 0.8);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .preset-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 12h20M10 20h15M10 28h20" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="32" cy="20" r="3" stroke="white" stroke-width="2"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Text Cleaner</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Text Cleaner
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Text Cleanup & Sanitization Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-cleaning enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Dirty Input <span class="text-gray-500 font-normal">(messy text)</span>
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Paste messy text here to clean...&#10;&#10;Example:&#10;This   has   extra   spaces&#10;And   tabs&#10;&#10;Or drag & drop a file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.csv,.md,.json,.xml,.html,.js,.css,.py,.java,.cpp,.c,.php,.rb,.go,.rs,.swift,.kt,.sql,.log" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Chars: 0 | Words: 0 | Lines: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Output -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Clean Output <span class="text-gray-500 font-normal">(sanitized text)</span>
+            </label>
+            <div class="flex gap-1">
+              <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                Copy
+              </button>
+              <button id="downloadBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Download
+              </button>
+            </div>
+          </div>
+          
+          <textarea id="outputText" readonly spellcheck="false"
+            class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+            placeholder="Clean text appears here automatically..."></textarea>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="outputStats">Chars: 0 | Removed: 0 | Reduction: 0%</span>
+            <span id="processingTime" class="text-gray-600"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-3">
+        
+        <!-- Presets -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Quick Presets</label>
+          <div class="flex flex-wrap gap-1">
+            <button class="preset-btn compact-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-preset="all">Clean All</button>
+            <button class="preset-btn compact-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-preset="spaces">Fix Spaces</button>
+            <button class="preset-btn compact-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-preset="lines">Fix Line Breaks</button>
+            <button class="preset-btn compact-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-preset="code">Code Clean</button>
+            <button class="preset-btn compact-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-preset="html">HTML Clean</button>
+            <button class="preset-btn compact-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-preset="custom">Custom</button>
+          </div>
+        </div>
+
+        <!-- Options Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          
+          <!-- Whitespace Options -->
+          <div class="space-y-2">
+            <label class="text-xs font-medium text-gray-300 block">Whitespace</label>
+            <div class="space-y-1.5">
+              <label class="flex items-center gap-2 text-xs text-gray-400 cursor-pointer hover:text-gray-300">
+                <input type="checkbox" id="trimLines" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3.5 h-3.5">
+                Trim line spaces
+              </label>
+              <label class="flex items-center gap-2 text-xs text-gray-400 cursor-pointer hover:text-gray-300">
+                <input type="checkbox" id="removeExtraSpaces" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3.5 h-3.5">
+                Remove extra spaces
+              </label>
+              <label class="flex items-center gap-2 text-xs text-gray-400 cursor-pointer hover:text-gray-300">
+                <input type="checkbox" id="removeExtraLines" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3.5 h-3.5">
+                Remove extra line breaks
+              </label>
+              <label class="flex items-center gap-2 text-xs text-gray-400 cursor-pointer hover:text-gray-300">
+                <input type="checkbox" id="tabsToSpaces" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3.5 h-3.5">
+                Tabs to spaces (4)
+              </label>
+            </div>
+          </div>
+
+          <!-- Character Options -->
+          <div class="space-y-2">
+            <label class="text-xs font-medium text-gray-300 block">Characters</label>
+            <div class="space-y-1.5">
+              <label class="flex items-center gap-2 text-xs text-gray-400 cursor-pointer hover:text-gray-300">
+                <input type="checkbox" id="removeSpecial" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3.5 h-3.5">
+                Remove special chars
+              </label>
+              <label class="flex items-center gap-2 text-xs text-gray-400 cursor-pointer hover:text-gray-300">
+                <input type="checkbox" id="removeNonAscii" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3.5 h-3.5">
+                Remove non-ASCII
+              </label>
+              <label class="flex items-center gap-2 text-xs text-gray-400 cursor-pointer hover:text-gray-300">
+                <input type="checkbox" id="removeEmojis" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3.5 h-3.5">
+                Remove emojis
+              </label>
+              <label class="flex items-center gap-2 text-xs text-gray-400 cursor-pointer hover:text-gray-300">
+                <input type="checkbox" id="normalizeUnicode" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3.5 h-3.5">
+                Normalize Unicode
+              </label>
+            </div>
+          </div>
+
+          <!-- Format Options -->
+          <div class="space-y-2">
+            <label class="text-xs font-medium text-gray-300 block">Formatting</label>
+            <div class="space-y-1.5">
+              <label class="flex items-center gap-2 text-xs text-gray-400 cursor-pointer hover:text-gray-300">
+                <input type="checkbox" id="normalizeQuotes" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3.5 h-3.5">
+                Smart quotes to straight
+              </label>
+              <label class="flex items-center gap-2 text-xs text-gray-400 cursor-pointer hover:text-gray-300">
+                <input type="checkbox" id="normalizeDashes" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3.5 h-3.5">
+                Normalize dashes
+              </label>
+              <label class="flex items-center gap-2 text-xs text-gray-400 cursor-pointer hover:text-gray-300">
+                <input type="checkbox" id="removeHtmlTags" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3.5 h-3.5">
+                Remove HTML tags
+              </label>
+              <label class="flex items-center gap-2 text-xs text-gray-400 cursor-pointer hover:text-gray-300">
+                <input type="checkbox" id="fixLineEndings" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3.5 h-3.5">
+                Fix line endings (LF)
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Advanced Options -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+          <div class="space-y-2">
+            <label class="text-xs font-medium text-gray-300 block">Custom Remove</label>
+            <input type="text" id="customRemove" placeholder="Enter characters to remove..." class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+          </div>
+          <div class="space-y-2">
+            <label class="text-xs font-medium text-gray-300 block">Find & Replace</label>
+            <div class="flex gap-2">
+              <input type="text" id="findText" placeholder="Find..." class="flex-1 px-2 py-1.5 rounded-md glass-input text-xs">
+              <input type="text" id="replaceText" placeholder="Replace..." class="flex-1 px-2 py-1.5 rounded-md glass-input text-xs">
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-2">
+          <div class="stat-card glass-panel rounded-lg p-2 text-center">
+            <div class="text-lg font-bold text-white" id="statOriginalChars">0</div>
+            <div class="text-xs text-gray-400">Original Chars</div>
+          </div>
+          <div class="stat-card glass-panel rounded-lg p-2 text-center">
+            <div class="text-lg font-bold text-green-400" id="statCleanChars">0</div>
+            <div class="text-xs text-gray-400">Clean Chars</div>
+          </div>
+          <div class="stat-card glass-panel rounded-lg p-2 text-center">
+            <div class="text-lg font-bold text-red-400" id="statRemoved">0</div>
+            <div class="text-xs text-gray-400">Chars Removed</div>
+          </div>
+          <div class="stat-card glass-panel rounded-lg p-2 text-center">
+            <div class="text-lg font-bold text-blue-400" id="statPercent">0%</div>
+            <div class="text-xs text-gray-400">Reduction</div>
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="flex flex-wrap gap-2 pt-2">
+          <button id="sampleBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated">
+            Load Sample
+          </button>
+          <button id="undoBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated opacity-50 cursor-not-allowed" disabled>
+            Undo
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Text Cleaner?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Instant Clean</h3>
+          <p class="text-gray-400 text-xs">Real-time processing as you type</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">15+ Options</h3>
+          <p class="text-gray-400 text-xs">Comprehensive cleaning rules</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Drag & Drop</h3>
+          <p class="text-gray-400 text-xs">Upload text files instantly</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based, no uploads</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy or download results</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration required</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Input Text</h3>
+          <p class="text-gray-400 text-xs">Type, paste, or drop messy text.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Choose Preset</h3>
+          <p class="text-gray-400 text-xs">Select a preset or customize options.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Review Stats</h3>
+          <p class="text-gray-400 text-xs">See how much was cleaned instantly.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy clean text or download file.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Text Cleaning: Professional Text Sanitization for the Modern Digital Workflow</h2>
+        
+        <p><strong>Text cleaning</strong> is one of the most fundamental yet critical operations in modern digital work. Whether you're preparing data for analysis, cleaning up copied content, sanitizing user input, or standardizing documents for professional use, knowing how to effectively <strong>clean text online</strong> can dramatically improve productivity and output quality. Our <strong>free text cleaner</strong> tool provides an all-in-one solution that handles everything from simple whitespace removal to complex character normalization, making it the essential utility for anyone who works with digital text.</p>
+
+        <p>Modern text comes from countless sources—web pages, PDFs, word processors, emails, chat applications, code editors, databases—and each source introduces its own formatting quirks, hidden characters, and inconsistencies. Copying text from a website might include non-breaking spaces, soft hyphens, and zero-width characters. Pasting from Microsoft Word brings smart quotes, em-dashes, and proprietary formatting. Extracting from PDFs often produces broken lines, hyphenation artifacts, and encoding issues. Data exports include delimiter inconsistencies, encoding mismatches, and structural irregularities. Without proper <strong>text cleanup tool online</strong> capabilities, these issues propagate through your workflow, causing errors, formatting problems, and professional embarrassment.</p>
+
+        <h2>Understanding Text Cleaning and Sanitization</h2>
+
+        <h3>What Is Text Cleaning?</h3>
+        
+        <p><strong>Text cleaning</strong> is the process of removing unwanted characters, normalizing formatting, and standardizing structure in textual data. It transforms messy, inconsistent input into clean, predictable output suitable for further processing, display, or storage. Unlike simple find-and-replace operations, professional <strong>text cleaner online</strong> tools understand context—they distinguish between meaningful punctuation and artifacts, preserve intentional formatting while removing clutter, and handle edge cases that break simple regex patterns.</p>
+
+        <p>The scope of text cleaning varies by use case. For data scientists, cleaning might mean removing non-ASCII characters, normalizing whitespace, and standardizing delimiters. For web developers, it involves stripping HTML tags, converting entities, and ensuring valid UTF-8 encoding. For content creators, it means fixing quotes, normalizing dashes, and removing hidden formatting. For system administrators, it's about sanitizing logs, cleaning configuration files, and preparing data for import. Our <strong>online text cleaner</strong> addresses all these scenarios with configurable options that adapt to your specific needs.</p>
+
+        <h3>Common Text Problems and Their Impact</h3>
+        
+        <p>Understanding what makes text "dirty" helps appreciate why <strong>text sanitizer online</strong> tools are essential. Whitespace issues are the most common—multiple consecutive spaces, tabs mixed with spaces, trailing spaces at line ends, and inconsistent indentation. These cause formatting problems in code, alignment issues in data, and parsing errors in structured formats. Special characters present another challenge—emojis, zero-width spaces, non-breaking hyphens, and control characters that break scripts, databases, and display systems.</p>
+
+        <p>Encoding problems plague text processing. Files saved in Windows-1252, Mac Roman, or other legacy encodings display incorrectly when interpreted as UTF-8. BOM (Byte Order Mark) characters at file starts confuse parsers. Combining characters in Unicode create visually identical but programmatically different strings. Smart quotes ("curly" quotes) break code, JSON parsers, and command-line tools that expect straight quotes. Line ending variations—CR (classic Mac), LF (Unix), CRLF (Windows)—cause "file modified" warnings in version control and processing errors in Unix tools. Our <strong>text purifier online free</strong> handles all these issues systematically.</p>
+
+        <h2>Core Text Cleaning Operations</h2>
+
+        <h3>Whitespace Normalization</h3>
+        
+        <p>Whitespace cleaning is the foundation of <strong>text cleanup utility online</strong> functionality. Leading and trailing spaces on lines are almost always unwanted—they create ragged margins in displayed text, break code indentation, and cause string comparison failures. Multiple consecutive spaces within lines (beyond single spaces between words) are typically accidental, created by conversion processes or manual editing errors. Tabs mixed with spaces create alignment chaos, especially when tab width settings vary between applications.</p>
+
+        <p>Line break normalization is equally important. Files with mixed line endings (common when combining sources from different operating systems) confuse tools expecting consistent formats. Excessive blank lines—double, triple, or more consecutive empty lines—reduce readability and waste space. Missing line breaks where paragraphs should be separated create walls of text that are hard to read. Our <strong>remove extra spaces from text online</strong> options handle all these scenarios, with configurable settings for how aggressive the cleaning should be.</p>
+
+        <h3>Character Sanitization</h3>
+        
+        <p>Beyond whitespace, professional <strong>text formatting cleaner online</strong> tools handle diverse character issues. Non-printable control characters (ASCII 0-31, except tab, LF, CR) often creep into text through copy-paste operations or file conversions—these can break terminals, corrupt databases, and cause mysterious processing errors. Non-ASCII characters in supposedly ASCII files indicate encoding issues that need resolution. Emoji and Unicode symbols, while valid in modern systems, might not be supported in legacy databases or specific applications.</p>
+
+        <p>Smart punctuation—curly quotes, em-dashes, en-dashes, ellipses—looks professional in documents but breaks code, configuration files, and data formats. Our <strong>text cleaner and formatter online</strong> can normalize these to their ASCII equivalents: curly quotes to straight quotes, em-dashes to double hyphens or single hyphens, ellipses to three periods. This ensures compatibility across systems while preserving readability. For international text, Unicode normalization (NFC, NFD, NFKC, NFKD) resolves canonical equivalence issues where different byte sequences represent the same visual character.</p>
+
+        <h3>HTML and Markup Cleaning</h3>
+        
+        <p>Text copied from web pages inevitably contains HTML tags, entities, and inline styles. While sometimes you want to preserve the HTML, often you need plain text extraction. Stripping HTML tags is straightforward, but handling the resulting whitespace requires care—block elements (div, p, section) should insert line breaks, inline elements (span, em, strong) should preserve flow. HTML entities (&amp;, &lt;, &gt;, &nbsp;) need decoding to their character equivalents. CSS inline styles and class attributes add noise that plain text doesn't need.</p>
+
+        <p>Our <strong>clean messy text online</strong> tool handles HTML intelligently, with options to remove tags entirely or convert them to appropriate whitespace. This is essential for content migration—moving blog posts between platforms, extracting article text for newsletters, or preparing web content for print. The tool preserves semantic structure (paragraph breaks, list items) while removing presentation markup, ensuring the cleaned text maintains its meaning and readability.</p>
+
+        <h2>Professional Applications of Text Cleaning</h2>
+
+        <h3>Data Science and Machine Learning</h3>
+        
+        <p>Data scientists spend an estimated 60-80% of their time on data preparation, with text cleaning consuming a significant portion. Raw text data from surveys, social media, web scraping, and document processing is invariably messy. <strong>Bulk text cleaner online</strong> operations are essential before feeding text into machine learning models—inconsistent spacing, special characters, and encoding issues can break tokenizers, create out-of-vocabulary errors, and reduce model accuracy.</p>
+
+        <p>Natural language processing (NLP) pipelines particularly benefit from standardized text. Tokenization assumes consistent whitespace. Named entity recognition struggles with encoding artifacts. Sentiment analysis is confused by repeated punctuation ("!!!" vs "!"). Text classification models treat "don't" and "don't" (with different quote characters) as different features. Using a reliable <strong>text cleaner for coding online</strong> or data preparation ensures that models train on meaningful content rather than formatting artifacts, improving accuracy and reducing training time.</p>
+
+        <h3>Software Development and DevOps</h3>
+        
+        <p>Developers constantly need to <strong>remove unwanted characters from text online</strong> when working with code, configuration files, and logs. Code copied from documentation often includes line numbers, smart quotes, or incorrect indentation. Configuration files pasted from emails might contain em-dashes instead of hyphens, breaking parsers. Log files aggregated from multiple sources have mixed line endings and encoding issues that complicate grep operations and monitoring queries.</p>
+
+        <p>API integration requires clean text—JSON doesn't allow certain control characters, XML has strict encoding requirements, and URL parameters need proper percent-encoding. Database imports fail on NULL bytes, BOM characters, and invalid UTF-8 sequences. Shell scripts break on Windows line endings and non-ASCII characters in shebang lines. Our <strong>free online text cleaner tool</strong> provides the preprocessing necessary to ensure text data flows cleanly through development pipelines without breaking builds, deployments, or runtime systems.</p>
+
+        <h3>Content Management and Publishing</h3>
+        
+        <p>Content creators and publishers rely on <strong>online text cleanup tool free</strong> solutions to prepare material for different platforms. A blog post drafted in Google Docs contains smart quotes, em-dashes, and proprietary formatting that doesn't translate to WordPress or Markdown. An e-book manuscript prepared in Scrivener needs cleaning for Kindle Direct Publishing's specific requirements. Newsletter content copied from multiple sources has inconsistent formatting that looks unprofessional in email clients.</p>
+
+        <p>Multi-platform publishing amplifies these needs. The same content might need to work on a website (HTML), in a mobile app (JSON), in a print PDF (LaTeX), and in an email newsletter (plaintext with limited formatting). Each format has different requirements for quotes, dashes, spaces, and special characters. A professional <strong>text cleanup editor online</strong> that can normalize text to platform-agnostic cleanliness before format-specific conversion saves enormous time and prevents errors.</p>
+
+        <h3>System Administration and Security</h3>
+        
+        <p>System administrators use <strong>text cleaning utility online free</strong> tools for log analysis, configuration management, and security operations. Log files from diverse sources—Linux systems, Windows servers, network devices, applications—have different formats, encodings, and line ending conventions. Cleaning and normalizing these before analysis ensures that grep, awk, and specialized log analysis tools work correctly. Security teams sanitizing user input need to remove or escape control characters, normalize Unicode, and detect encoding attacks.</p>
+
+        <p>Configuration file management benefits from text cleaning when merging changes from different environments. A nginx.conf edited on Windows might have CRLF line endings that break the Linux server. A JSON configuration copied from a web interface might include BOM characters that cause parser errors. Database migration scripts with smart quotes fail when executed. Proactive cleaning as part of deployment pipelines prevents these production issues.</p>
+
+        <h2>Advanced Text Cleaning Techniques</h2>
+
+        <h3>Unicode Normalization</h3>
+        
+        <p>Unicode is complex—many characters can be represented in multiple ways. The letter "é" can be a single code point (U+00E9, Latin Small Letter E with Acute) or two code points (U+0065 Latin Small Letter E + U+0301 Combining Acute Accent). Visually identical, but programmatically different, causing string comparison failures and database lookup misses. Unicode normalization forms (NFC, NFD, NFKC, NFKD) resolve these equivalences, ensuring consistent representation.</p>
+
+        <p>Our <strong>text cleaner online</strong> implements NFC (Canonical Decomposition followed by Canonical Composition), the W3C recommended form for web content. This ensures that composed characters are used where possible, maximizing compatibility with legacy systems while preserving semantic meaning. For security-sensitive applications, NFKC (Compatibility Decomposition followed by Canonical Composition) goes further, normalizing compatibility characters like full-width Latin letters and circled numbers to their standard equivalents, preventing spoofing attacks.</p>
+
+        <h3>Encoding Detection and Conversion</h3>
+        
+        <p>One of the hardest problems in text processing is determining the encoding of an unknown file. Is this Windows-1252? UTF-8? Latin-1? The answer affects how bytes are interpreted as characters. While our browser-based tool works with JavaScript's native UTF-16 strings, understanding encoding issues helps users clean text effectively. Files that display as "garbage" characters usually have encoding mismatches—the bytes are valid, but interpreted with the wrong encoding.</p>
+
+        <p>For <strong>clean text for documents online free</strong> workflows, we recommend: (1) When copying from web pages, let the browser handle encoding—the clipboard usually provides correct Unicode. (2) When uploading files, save them as UTF-8 first if possible—most modern editors have "Save with Encoding" options. (3) For mystery files, look for BOM markers or try common encodings sequentially. Our tool handles valid Unicode cleanly; for files with encoding damage, manual repair in a capable editor might be necessary before cleaning.</p>
+
+        <h3>Context-Aware Cleaning</h3>
+        
+        <p>The most sophisticated <strong>text sanitizer online</strong> implementations understand context. Cleaning code differs from cleaning prose differs from cleaning data. Code needs preserved indentation, specific punctuation (semicolons, brackets), and case sensitivity. Prose benefits from normalized quotes and dashes, preserved paragraph structure, and maintained capitalization. Data requires consistent delimiters, protected numeric formats, and validated structure.</p>
+
+        <p>Our tool addresses this through presets—"Code Clean" preserves indentation while removing trailing spaces and normalizing line endings; "HTML Clean" removes tags while preserving structure; "Fix Spaces" is aggressive on whitespace but gentle on content. Users can also build custom configurations, selecting exactly which operations apply. This flexibility ensures that <strong>online text cleaner without login</strong> operations produce appropriate results for diverse professional needs.</p>
+
+        <h2>Best Practices for Text Cleaning Workflows</h2>
+
+        <h3>Pre-Cleaning Assessment</h3>
+        
+        <p>Before applying any <strong>text cleaner</strong> operations, assess your text's condition. Check the source—web copy, Word document, PDF extraction, database export, or user input each have typical issues. Look at the structure—does it have headers, lists, code blocks, or tables that need special handling? Identify the destination—code repository, database, web CMS, print layout, or data pipeline each have different cleanliness requirements.</p>
+
+        <p>Always work on copies of important data. While our tool includes undo functionality (within the session), maintaining backups of original files is essential. For batch processing of many files, test on a single representative file first, verify the output meets expectations, then process the batch. Document your cleaning settings if you'll need to repeat the process—our preset system helps with this, or simply note which checkboxes were enabled.</p>
+
+        <h3>Selective vs. Aggressive Cleaning</h3>
+        
+        <p>Not all text needs aggressive cleaning. Sometimes you want to preserve specific formatting—poetry needs intentional line breaks, code needs specific indentation, Markdown needs certain punctuation. Start with minimal cleaning (trim lines, fix line endings) and add operations incrementally. Review the statistics our tool provides—if you're removing 50% of characters, verify that's intentional and not destroying meaningful content.</p>
+
+        <p>For mixed content, consider cleaning in sections. Clean the prose portions aggressively, the code portions minimally, and the data portions according to schema requirements. Our tool's instant preview makes this iterative approach practical—you see results immediately and can adjust settings before committing to the full clean.</p>
+
+        <h2>Comparing Text Cleaning Approaches</h2>
+
+        <h3>Manual Editing vs. Automated Tools</h3>
+        
+        <p>Manual text cleaning using editor find-and-replace is feasible for small, one-off tasks. But it becomes impractical for: large files (thousands of lines), multiple files (batch processing), complex patterns (Unicode normalization, HTML parsing), or repeated workflows (daily data imports). Manual cleaning also introduces human error—inconsistent application, missed instances, accidental deletions.</p>
+
+        <p>Automated <strong>text cleaner online</strong> tools provide consistency, speed, and reliability. They apply the same rules to every character, handle edge cases correctly, and complete in seconds what might take hours manually. They also provide audit trails—our tool shows exactly how many characters were removed and what percentage reduction was achieved, useful for data quality reporting.</p>
+
+        <h3>Command-Line Tools vs. Browser-Based Solutions</h3>
+        
+        <p>Command-line tools like `sed`, `tr`, `iconv`, and `perl` provide powerful text processing for technical users. They can handle massive files, integrate into scripts, and run on servers without GUIs. However, they require learning curve investment, aren't accessible to non-technical users, and don't provide visual feedback or previews.</p>
+
+        <p>Browser-based <strong>free text cleaner</strong> tools bridge this gap, offering professional-grade cleaning through intuitive interfaces. They're available on any device, require no installation, and show results instantly. Privacy concerns are addressed through client-side processing—your text never leaves your computer. For occasional users, travelers, or those working on restricted systems, browser tools provide unmatched convenience without sacrificing capability.</p>
+
+        <h2>The Future of Text Cleaning Technology</h2>
+
+        <p>Artificial intelligence is beginning to influence text processing, with potential applications for intelligent cleaning. Future tools might automatically detect text type (code, prose, data) and suggest appropriate cleaning profiles. They could learn from user corrections, improving their default suggestions. They might identify and preserve semantic structure (headings, lists, code blocks) while removing only presentation artifacts. They could even suggest when text is "clean enough" versus when further processing is needed.</p>
+
+        <p>However, the core need for reliable, deterministic text cleaning remains. When you paste text into a <strong>text cleaner online</strong> tool, you want predictable results—same input produces same output every time. Our tool focuses on this reliability, providing proven cleaning operations with clear controls and immediate feedback. Whether you're a data scientist preparing training data, a developer cleaning configuration files, a content creator formatting articles, or an administrator sanitizing logs, our <strong>free online text cleanup tool</strong> delivers the professional results you need.</p>
+
+        <h2>Conclusion: Master Text Cleaning for Professional Results</h2>
+
+        <p><strong>Text cleaning</strong> is an essential skill in modern digital work, transforming messy, inconsistent input into clean, professional output suitable for any purpose. From simple whitespace removal to complex Unicode normalization, understanding text cleaning techniques and having reliable tools at your disposal dramatically improves productivity and output quality.</p>
+
+        <p>Our <strong>free text cleaner</strong> provides everything needed for professional text sanitization: comprehensive cleaning options covering whitespace, characters, encoding, and formatting; instant processing with visual feedback; privacy-preserving browser-based operation; and flexible presets for common scenarios. Whether you need to <strong>clean text online</strong>, <strong>remove unwanted characters from text online</strong>, <strong>remove extra spaces from text online</strong>, or perform any other text cleaning operation, our tool delivers professional results instantly.</p>
+
+        <p>Stop struggling with messy text, encoding issues, and formatting artifacts. Start using our <strong>online text cleaner</strong> solution today and experience the efficiency of automated, intelligent text cleaning. From one-off cleaning tasks to daily data preparation workflows, our tool provides the reliability, flexibility, and ease-of-use that modern professionals demand.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool clean text automatically as I type?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>text cleaner online</strong> tool features <strong>automatic real-time cleaning</strong>. As you type or paste text, the tool instantly applies your selected cleaning options and displays the results. The "Auto-cleaning enabled" indicator confirms the feature is active. You can see live statistics showing how many characters were removed and the percentage reduction.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What do the Quick Presets do?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Presets configure multiple options at once: <strong>Clean All</strong> enables all cleaning options for maximum sanitization. <strong>Fix Spaces</strong> focuses on whitespace—extra spaces, tabs, line breaks. <strong>Fix Line Breaks</strong> normalizes line endings and removes extra blank lines. <strong>Code Clean</strong> preserves indentation while removing trailing spaces and normalizing line endings. <strong>HTML Clean</strong> removes tags and decodes entities. <strong>Custom</strong> lets you choose individual options.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What's the difference between "Remove special chars" and "Remove non-ASCII"?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Remove special chars</strong> removes punctuation and symbols (!@#$%^&*()_+-=[]{}|;':",./<>?) while keeping letters, numbers, and whitespace. <strong>Remove non-ASCII</strong> removes any character outside the basic ASCII range (0-127), including accented letters (é, ñ), emojis, and Unicode symbols. Use "Remove special chars" for alphanumeric cleaning. Use "Remove non-ASCII" when you need pure ASCII text for legacy systems.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Will this tool break my code or structured data?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Use the "Code Clean" preset which is designed to be code-safe—it removes trailing spaces and normalizes line endings but preserves indentation, special characters needed for syntax (brackets, semicolons, quotes), and line structure. Avoid "Remove special chars" for code. Always review the preview and statistics—if you see 90% character reduction, you may be removing too much. Use the Undo button if needed.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I remove specific custom characters?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Use the "Custom Remove" field to enter specific characters you want removed. For example, enter "$" to remove all dollar signs, or "[]" to remove all square brackets. Each character you type in this field will be removed from the text. This is useful for removing specific formatting characters, currency symbols, or brackets that aren't covered by the preset options.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this work with large files?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">The tool handles files up to 10-20MB (several million characters), roughly 3,000-5,000 pages. For very large files (100MB+), consider using command-line tools or splitting the file. The browser-based processing is optimized for typical daily use—code files, documents, data exports, and log files. Large file handling may vary by browser—Chrome/Edge typically handle larger files than Safari or mobile browsers.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I undo changes if I make a mistake?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Click the "Undo" button to restore your original text instantly. This works as long as you haven't closed or refreshed the page. For important files, we recommend downloading a backup before aggressive cleaning. The undo feature is perfect for experimenting—try "Clean All", see if you like it, then undo and try a gentler preset if too much was removed.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my data secure and private?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely. All processing happens <strong>locally in your browser</strong>—text never uploads to servers or leaves your device. You can verify this by opening browser DevTools (Network tab) and seeing no data transfer, or by disconnecting from the internet after loading the page—the tool continues working. This makes our <strong>online text cleaner without login</strong> tool ideal for confidential documents, proprietary code, or sensitive data.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What file types are supported?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">All text-based files: TXT, CSV, JSON, XML, HTML, Markdown (MD), and code files (JS, CSS, PY, JAVA, CPP, C, PHP, RB, GO, RS, SWIFT, KT, SQL, LOG). Files are read as plain text, so any text file works regardless of extension. For binary files, Word documents (DOCX), or PDFs, copy the text content and paste it into the input area rather than uploading.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this tool completely free?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, completely <strong>free</strong> with no registration, usage limits, watermarks, or hidden fees. Use for personal or commercial projects without attribution. This is truly a <strong>free online text cleaner tool</strong> for everyone. Supported by unobtrusive advertising. All features including all cleaning options, presets, file upload, and custom remove/replace are available immediately—no premium tiers or paid upgrades.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const outputText = document.getElementById('outputText');
+const inputStats = document.getElementById('inputStats');
+const outputStats = document.getElementById('outputStats');
+const processingTime = document.getElementById('processingTime');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+
+// Buttons
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const resetBtn = document.getElementById('resetBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const sampleBtn = document.getElementById('sampleBtn');
+const undoBtn = document.getElementById('undoBtn');
+
+// Preset buttons
+const presetBtns = document.querySelectorAll('.preset-btn');
+
+// Options
+const trimLines = document.getElementById('trimLines');
+const removeExtraSpaces = document.getElementById('removeExtraSpaces');
+const removeExtraLines = document.getElementById('removeExtraLines');
+const tabsToSpaces = document.getElementById('tabsToSpaces');
+const removeSpecial = document.getElementById('removeSpecial');
+const removeNonAscii = document.getElementById('removeNonAscii');
+const removeEmojis = document.getElementById('removeEmojis');
+const normalizeUnicode = document.getElementById('normalizeUnicode');
+const normalizeQuotes = document.getElementById('normalizeQuotes');
+const normalizeDashes = document.getElementById('normalizeDashes');
+const removeHtmlTags = document.getElementById('removeHtmlTags');
+const fixLineEndings = document.getElementById('fixLineEndings');
+const customRemove = document.getElementById('customRemove');
+const findText = document.getElementById('findText');
+const replaceText = document.getElementById('replaceText');
+
+// Stats
+const statOriginalChars = document.getElementById('statOriginalChars');
+const statCleanChars = document.getElementById('statCleanChars');
+const statRemoved = document.getElementById('statRemoved');
+const statPercent = document.getElementById('statPercent');
+
+// State
+let originalText = '';
+let hasProcessed = false;
+let currentPreset = 'custom';
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Update input stats
+function updateInputStats() {
+  const text = inputText.value;
+  const chars = text.length;
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+  const lines = text === '' ? 0 : text.split('\n').length;
+  inputStats.textContent = `Chars: ${chars} | Words: ${words} | Lines: ${lines}`;
+}
+
+// Debounce function
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Preset configurations
+const presets = {
+  'all': {
+    trimLines: true,
+    removeExtraSpaces: true,
+    removeExtraLines: true,
+    tabsToSpaces: true,
+    removeSpecial: true,
+    removeNonAscii: false,
+    removeEmojis: true,
+    normalizeUnicode: true,
+    normalizeQuotes: true,
+    normalizeDashes: true,
+    removeHtmlTags: true,
+    fixLineEndings: true
+  },
+  'spaces': {
+    trimLines: true,
+    removeExtraSpaces: true,
+    removeExtraLines: false,
+    tabsToSpaces: true,
+    removeSpecial: false,
+    removeNonAscii: false,
+    removeEmojis: false,
+    normalizeUnicode: false,
+    normalizeQuotes: false,
+    normalizeDashes: false,
+    removeHtmlTags: false,
+    fixLineEndings: false
+  },
+  'lines': {
+    trimLines: true,
+    removeExtraSpaces: false,
+    removeExtraLines: true,
+    tabsToSpaces: false,
+    removeSpecial: false,
+    removeNonAscii: false,
+    removeEmojis: false,
+    normalizeUnicode: false,
+    normalizeQuotes: false,
+    normalizeDashes: false,
+    removeHtmlTags: false,
+    fixLineEndings: true
+  },
+  'code': {
+    trimLines: true,
+    removeExtraSpaces: false,
+    removeExtraLines: true,
+    tabsToSpaces: false,
+    removeSpecial: false,
+    removeNonAscii: false,
+    removeEmojis: false,
+    normalizeUnicode: false,
+    normalizeQuotes: false,
+    normalizeDashes: false,
+    removeHtmlTags: false,
+    fixLineEndings: true
+  },
+  'html': {
+    trimLines: true,
+    removeExtraSpaces: true,
+    removeExtraLines: true,
+    tabsToSpaces: false,
+    removeSpecial: false,
+    removeNonAscii: false,
+    removeEmojis: false,
+    normalizeUnicode: false,
+    normalizeQuotes: true,
+    normalizeDashes: false,
+    removeHtmlTags: true,
+    fixLineEndings: true
+  },
+  'custom': {}
+};
+
+// Apply preset
+function applyPreset(presetName) {
+  currentPreset = presetName;
+  const config = presets[presetName];
+  
+  if (presetName === 'custom') return;
+  
+  // Update checkboxes
+  trimLines.checked = config.trimLines;
+  removeExtraSpaces.checked = config.removeExtraSpaces;
+  removeExtraLines.checked = config.removeExtraLines;
+  tabsToSpaces.checked = config.tabsToSpaces;
+  removeSpecial.checked = config.removeSpecial;
+  removeNonAscii.checked = config.removeNonAscii;
+  removeEmojis.checked = config.removeEmojis;
+  normalizeUnicode.checked = config.normalizeUnicode;
+  normalizeQuotes.checked = config.normalizeQuotes;
+  normalizeDashes.checked = config.normalizeDashes;
+  removeHtmlTags.checked = config.removeHtmlTags;
+  fixLineEndings.checked = config.fixLineEndings;
+  
+  // Update UI
+  presetBtns.forEach(btn => {
+    btn.classList.remove('active');
+    if (btn.dataset.preset === presetName) {
+      btn.classList.add('active');
+    }
+  });
+  
+  processText();
+}
+
+// Preset button click handlers
+presetBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    applyPreset(btn.dataset.preset);
+  });
+});
+
+// Process text
+function processText() {
+  const startTime = performance.now();
+  const text = inputText.value;
+  
+  if (!text) {
+    outputText.value = '';
+    outputStats.textContent = 'Chars: 0 | Removed: 0 | Reduction: 0%';
+    processingTime.textContent = '';
+    updateStats(0, 0, 0, 0);
+    return;
+  }
+
+  // Store original for undo
+  if (!hasProcessed) {
+    originalText = text;
+    hasProcessed = true;
+    undoBtn.disabled = false;
+    undoBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+  }
+
+  const options = {
+    trimLines: trimLines.checked,
+    removeExtraSpaces: removeExtraSpaces.checked,
+    removeExtraLines: removeExtraLines.checked,
+    tabsToSpaces: tabsToSpaces.checked,
+    removeSpecial: removeSpecial.checked,
+    removeNonAscii: removeNonAscii.checked,
+    removeEmojis: removeEmojis.checked,
+    normalizeUnicode: normalizeUnicode.checked,
+    normalizeQuotes: normalizeQuotes.checked,
+    normalizeDashes: normalizeDashes.checked,
+    removeHtmlTags: removeHtmlTags.checked,
+    fixLineEndings: fixLineEndings.checked,
+    customRemove: customRemove.value,
+    findText: findText.value,
+    replaceText: replaceText.value
+  };
+
+  const result = cleanText(text, options);
+  const endTime = performance.now();
+
+  outputText.value = result.text;
+  
+  const removed = result.originalLength - result.cleanLength;
+  const percent = result.originalLength > 0 ? ((removed / result.originalLength) * 100).toFixed(1) : 0;
+  
+  outputStats.textContent = `Chars: ${result.cleanLength} | Removed: ${removed} | Reduction: ${percent}%`;
+  processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+  
+  updateStats(result.originalLength, result.cleanLength, removed, percent);
+}
+
+function cleanText(text, options) {
+  let cleaned = text;
+  const originalLength = text.length;
+
+  // Fix line endings first
+  if (options.fixLineEndings) {
+    cleaned = cleaned.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+  }
+
+  // Remove HTML tags
+  if (options.removeHtmlTags) {
+    cleaned = cleaned.replace(/<[^>]+>/g, '');
+  }
+
+  // Normalize Unicode
+  if (options.normalizeUnicode && cleaned.normalize) {
+    cleaned = cleaned.normalize('NFC');
+  }
+
+  // Replace tabs with spaces
+  if (options.tabsToSpaces) {
+    cleaned = cleaned.replace(/\t/g, '    ');
+  }
+
+  // Remove extra spaces
+  if (options.removeExtraSpaces) {
+    cleaned = cleaned.replace(/[ \t]+/g, ' ');
+  }
+
+  // Process lines
+  let lines = cleaned.split('\n');
+  
+  if (options.trimLines) {
+    lines = lines.map(line => line.trim());
+  }
+
+  // Remove extra line breaks
+  if (options.removeExtraLines) {
+    const cleanedLines = [];
+    let emptyCount = 0;
+    
+    for (const line of lines) {
+      if (line === '' || (options.trimLines && line.trim() === '')) {
+        emptyCount++;
+        if (emptyCount <= 1) {
+          cleanedLines.push(line);
+        }
+      } else {
+        emptyCount = 0;
+        cleanedLines.push(line);
+      }
+    }
+    
+    // Remove trailing empty lines
+    while (cleanedLines.length > 0 && cleanedLines[cleanedLines.length - 1] === '') {
+      cleanedLines.pop();
+    }
+    
+    lines = cleanedLines;
+  }
+
+  cleaned = lines.join('\n');
+
+  // Normalize quotes
+  if (options.normalizeQuotes) {
+    cleaned = cleaned
+      .replace(/[\u2018\u2019]/g, "'")
+      .replace(/[\u201C\u201D]/g, '"')
+      .replace(/[\u201A\u201E]/g, '"')
+      .replace(/[\u2039\u203A]/g, "'");
+  }
+
+  // Normalize dashes
+  if (options.normalizeDashes) {
+    cleaned = cleaned
+      .replace(/\u2013/g, '-')  // en-dash
+      .replace(/\u2014/g, '--') // em-dash
+      .replace(/\u2015/g, '--') // horizontal bar
+      .replace(/[–—]/g, '-');
+  }
+
+  // Remove emojis
+  if (options.removeEmojis) {
+    cleaned = cleaned.replace(/[\u{1F600}-\u{1F64F}]|[\u{1F300}-\u{1F5FF}]|[\u{1F680}-\u{1F6FF}]|[\u{1F1E0}-\u{1F1FF}]|[\u{2600}-\u{26FF}]|[\u{2700}-\u{27BF}]|[\u{FE00}-\u{FE0F}]|[\u{1F900}-\u{1F9FF}]|[\u{1F018}-\u{1F270}]|[\u{238C}]|[\u{2B06}]|[\u{2B07}]|[\u{2B05}]|[\u{27A1}]|[\u{2194}-\u{2199}]|[\u{21AA}]|[\u{21A9}]|[\u{2934}]|[\u{2935}]|[\u{25AA}]|[\u{25AB}]|[\u{25FE}]|[\u{25FD}]|[\u{25FB}]|[\u{25FC}]|[\u{25B6}]|[\u{25C0}]|[\u{1F200}-\u{1F251}]/gu, '');
+  }
+
+  // Remove special characters
+  if (options.removeSpecial) {
+    cleaned = cleaned.replace(/[^\w\s]/g, '');
+  }
+
+  // Remove non-ASCII
+  if (options.removeNonAscii) {
+    cleaned = cleaned.replace(/[^\x00-\x7F]/g, '');
+  }
+
+  // Custom remove
+  if (options.customRemove) {
+    const charsToRemove = options.customRemove.split('').map(c => {
+      return c.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }).join('|');
+    if (charsToRemove) {
+      const regex = new RegExp(`[${charsToRemove}]`, 'g');
+      cleaned = cleaned.replace(regex, '');
+    }
+  }
+
+  // Find and replace
+  if (options.findText) {
+    const findRegex = new RegExp(escapeRegex(options.findText), 'g');
+    cleaned = cleaned.replace(findRegex, options.replaceText);
+  }
+
+  const cleanLength = cleaned.length;
+
+  return {
+    text: cleaned,
+    originalLength,
+    cleanLength
+  };
+}
+
+function escapeRegex(string) {
+  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function updateStats(original, clean, removed, percent) {
+  statOriginalChars.textContent = original.toLocaleString();
+  statCleanChars.textContent = clean.toLocaleString();
+  statRemoved.textContent = removed.toLocaleString();
+  statPercent.textContent = percent + '%';
+}
+
+// Debounced process
+const debouncedProcess = debounce(processText, 0);
+
+// Event listeners for options
+[trimLines, removeExtraSpaces, removeExtraLines, tabsToSpaces, removeSpecial, removeNonAscii, removeEmojis, normalizeUnicode, normalizeQuotes, normalizeDashes, removeHtmlTags, fixLineEndings, customRemove, findText, replaceText].forEach(el => {
+  el.addEventListener('input', () => {
+    // Switch to custom preset when options change
+    if (currentPreset !== 'custom') {
+      currentPreset = 'custom';
+      presetBtns.forEach(btn => btn.classList.remove('active'));
+      document.querySelector('[data-preset="custom"]').classList.add('active');
+    }
+    processText();
+  });
+});
+
+// Drag and drop handlers
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  if (!file.type.match('text.*') && !file.name.match(/\.(txt|csv|json|xml|html?|md|js|css|py|java|cpp|c|php|rb|go|rs|swift|kt|sql|log)$/i)) {
+    alert('Please upload a text file');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    hasProcessed = false;
+    updateInputStats();
+    processText();
+  };
+  reader.readAsText(file);
+}
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    hasProcessed = false;
+    updateInputStats();
+    processText();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  outputText.value = '';
+  hasProcessed = false;
+  originalText = '';
+  undoBtn.disabled = true;
+  undoBtn.classList.add('opacity-50', 'cursor-not-allowed');
+  updateInputStats();
+  processText();
+  inputText.focus();
+}
+
+// Copy output
+async function copyOutput() {
+  if (!outputText.value) return;
+  
+  try {
+    await navigator.clipboard.writeText(outputText.value);
+    const originalText = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalText;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+}
+
+// Download output
+function downloadOutput() {
+  const text = outputText.value;
+  if (!text.trim()) return;
+  
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'cleaned-text.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Reset all
+function resetAll() {
+  inputText.value = '';
+  outputText.value = '';
+  hasProcessed = false;
+  originalText = '';
+  undoBtn.disabled = true;
+  undoBtn.classList.add('opacity-50', 'cursor-not-allowed');
+  
+  // Reset all options
+  trimLines.checked = true;
+  removeExtraSpaces.checked = true;
+  removeExtraLines.checked = true;
+  tabsToSpaces.checked = false;
+  removeSpecial.checked = false;
+  removeNonAscii.checked = false;
+  removeEmojis.checked = false;
+  normalizeUnicode.checked = false;
+  normalizeQuotes.checked = false;
+  normalizeDashes.checked = false;
+  removeHtmlTags.checked = false;
+  fixLineEndings.checked = true;
+  customRemove.value = '';
+  findText.value = '';
+  replaceText.value = '';
+  
+  applyPreset('custom');
+  updateInputStats();
+  processText();
+}
+
+// Load sample
+function loadSample() {
+  const sample = `This   text   has   extra   spaces   everywhere!!!
+And    weird     tabs	and	line	breaks
+
+
+
+Multiple blank lines above...
+
+Smart quotes: "Hello" and 'World'
+Em-dash: test—text
+En-dash: 2020–2021
+Emoji: Hello 👋 World 🌍
+
+HTML: <p>This is a paragraph</p> with <b>bold</b> text.
+Special chars: @#$%^&*()_+
+
+Trailing spaces below:   
+`;
+  inputText.value = sample;
+  hasProcessed = false;
+  updateInputStats();
+  processText();
+}
+
+// Undo
+function undoChanges() {
+  if (originalText) {
+    inputText.value = originalText;
+    hasProcessed = false;
+    undoBtn.disabled = true;
+    undoBtn.classList.add('opacity-50', 'cursor-not-allowed');
+    updateInputStats();
+    processText();
+  }
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Event listeners
+inputText.addEventListener('input', () => {
+  updateInputStats();
+  debouncedProcess();
+});
+
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+copyBtn.addEventListener('click', copyOutput);
+downloadBtn.addEventListener('click', downloadOutput);
+resetBtn.addEventListener('click', resetAll);
+sampleBtn.addEventListener('click', loadSample);
+undoBtn.addEventListener('click', undoChanges);
+
+// Initialize
+updateInputStats();
+applyPreset('custom');
+</script>
+</body>
+</html>

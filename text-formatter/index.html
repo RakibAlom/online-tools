@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Text Formatter - Free Online Text Formatting Tool</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online text formatter tool. Clean, beautify, and format text instantly. Remove extra spaces, fix line breaks, convert case, trim lines, sort, remove duplicates, and more. No registration required." />
+  <meta name="keywords" content="text formatter, text formatter online, free text formatter, online text formatter, format text online, text formatting tool online, text format tool, free online text formatter tool, text formatting utility online, text beautifier online free, text cleaner and formatter online, text styling tool online, text layout formatter online, text formatting editor online, text format converter online free, text processing formatter online, bulk text formatter online, advanced text formatter online free, text format adjuster online, text formatting for documents online free, text formatting for coding online free, text formatting generator online, online text formatting without login, text format optimizer online free, all in one text formatter online free" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/text-formatter/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/text-formatter/" />
+  <meta property="og:title" content="Text Formatter - Free Online Text Formatting Tool" />
+  <meta property="og:description" content="Clean, beautify, and format text instantly. Remove extra spaces, fix line breaks, convert case, trim lines, sort, remove duplicates, and more. No registration required." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/text-formatter/" />
+  <meta name="twitter:title" content="Text Formatter - Free Online Text Formatting Tool" />
+  <meta name="twitter:description" content="Clean, beautify, and format text instantly. Remove extra spaces, fix line breaks, convert case, trim lines, sort, remove duplicates, and more. No registration required." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .format-btn {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    .format-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+
+    .checkbox-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+    }
+    
+    .checkbox-wrapper input[type="checkbox"] {
+      width: 1rem;
+      height: 1rem;
+      accent-color: #6366f1;
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 12h8M10 20h20M10 28h14" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Text Formatter</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Text Formatter
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Text Processing Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Live formatting enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Input Text
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Type or paste text here... Or drag & drop a file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.csv,.md,.json,.xml,.html,.js,.css,.py,.java,.cpp,.c,.php,.rb,.go,.rs,.swift,.kt,.sql,.log" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Chars: 0 | Words: 0 | Lines: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Output -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Formatted Result
+            </label>
+            <div class="flex gap-1">
+              <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                Copy
+              </button>
+              <button id="downloadBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Download
+              </button>
+            </div>
+          </div>
+          
+          <textarea id="outputText" readonly spellcheck="false"
+            class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+            placeholder="Formatted text appears here automatically..."></textarea>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="outputStats">Chars: 0 | Words: 0 | Lines: 0</span>
+            <span id="processingTime" class="text-gray-600"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-4">
+        
+        <!-- Format Options Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          
+          <!-- Case Conversion -->
+          <div class="space-y-2">
+            <label class="text-xs font-medium text-gray-300 block">Case Conversion</label>
+            <div class="flex flex-wrap gap-1">
+              <button class="format-btn rounded-md border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 transition-all" data-action="uppercase">UPPERCASE</button>
+              <button class="format-btn rounded-md border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 transition-all" data-action="lowercase">lowercase</button>
+              <button class="format-btn rounded-md border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 transition-all" data-action="titlecase">Title Case</button>
+              <button class="format-btn rounded-md border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 transition-all" data-action="sentencecase">Sentence case</button>
+              <button class="format-btn rounded-md border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 transition-all" data-action="alternating">aLtErNaTiNg</button>
+            </div>
+          </div>
+
+          <!-- Whitespace & Lines -->
+          <div class="space-y-2">
+            <label class="text-xs font-medium text-gray-300 block">Whitespace & Lines</label>
+            <div class="flex flex-wrap gap-1">
+              <button class="format-btn rounded-md border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 transition-all" data-action="trim">Trim Lines</button>
+              <button class="format-btn rounded-md border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 transition-all" data-action="removeExtraSpaces">Remove Extra Spaces</button>
+              <button class="format-btn rounded-md border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 transition-all" data-action="removeEmptyLines">Remove Empty Lines</button>
+              <button class="format-btn rounded-md border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 transition-all" data-action="removeLineBreaks">Remove Line Breaks</button>
+            </div>
+          </div>
+
+          <!-- Clean & Organize -->
+          <div class="space-y-2">
+            <label class="text-xs font-medium text-gray-300 block">Clean & Organize</label>
+            <div class="flex flex-wrap gap-1">
+              <button class="format-btn rounded-md border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 transition-all" data-action="removeDuplicates">Remove Duplicates</button>
+              <button class="format-btn rounded-md border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 transition-all" data-action="sortLines">Sort Lines (A-Z)</button>
+              <button class="format-btn rounded-md border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 transition-all" data-action="sortLinesDesc">Sort Lines (Z-A)</button>
+              <button class="format-btn rounded-md border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 transition-all" data-action="reverseLines">Reverse Lines</button>
+            </div>
+          </div>
+
+          <!-- Add/Modify -->
+          <div class="space-y-2">
+            <label class="text-xs font-medium text-gray-300 block">Add/Modify</label>
+            <div class="flex flex-wrap gap-1">
+              <button class="format-btn rounded-md border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 transition-all" data-action="addLineNumbers">Add Line Numbers</button>
+              <button class="format-btn rounded-md border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 transition-all" data-action="prefixLines">Add Prefix...</button>
+              <button class="format-btn rounded-md border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 transition-all" data-action="suffixLines">Add Suffix...</button>
+            </div>
+          </div>
+
+          <!-- Transform -->
+          <div class="space-y-2">
+            <label class="text-xs font-medium text-gray-300 block">Transform</label>
+            <div class="flex flex-wrap gap-1">
+              <button class="format-btn rounded-md border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 transition-all" data-action="reverseText">Reverse Text</button>
+              <button class="format-btn rounded-md border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 transition-all" data-action="base64encode">Base64 Encode</button>
+              <button class="format-btn rounded-md border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 transition-all" data-action="base64decode">Base64 Decode</button>
+            </div>
+          </div>
+
+          <!-- Find & Replace -->
+          <div class="space-y-2">
+            <label class="text-xs font-medium text-gray-300 block">Find & Replace</label>
+            <div class="space-y-1.5">
+              <input type="text" id="findText" placeholder="Find..." class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <input type="text" id="replaceText" placeholder="Replace with..." class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <button id="findReplaceBtn" class="w-full compact-btn rounded-md bg-indigo-500/20 hover:bg-indigo-500/30 border border-indigo-500/30 text-indigo-300 transition-all btn-animated">
+                Replace All
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dynamic Options Panel -->
+        <div id="dynamicOptions" class="hidden p-3 rounded-lg bg-white/5 border border-white/10">
+          <div class="flex items-center gap-2">
+            <input type="text" id="dynamicInput" placeholder="Enter value..." class="flex-1 px-2 py-1.5 rounded-md glass-input text-xs">
+            <button id="dynamicApplyBtn" class="compact-btn rounded-md bg-indigo-500/20 hover:bg-indigo-500/30 border border-indigo-500/30 text-indigo-300 transition-all btn-animated">
+              Apply
+            </button>
+            <button id="dynamicCancelBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated">
+              Cancel
+            </button>
+          </div>
+          <p id="dynamicLabel" class="text-xs text-gray-400 mt-1.5"></p>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="flex flex-wrap gap-2 pt-2 border-t border-white/10">
+          <button id="beautifyBtn" class="compact-btn rounded-md bg-green-500/20 hover:bg-green-500/30 border border-green-500/30 text-green-400 transition-all btn-animated flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+            Auto-Beautify
+          </button>
+          <button id="cleanAllBtn" class="compact-btn rounded-md bg-blue-500/20 hover:bg-blue-500/30 border border-blue-500/30 text-blue-400 transition-all btn-animated flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+            Deep Clean
+          </button>
+          <button id="undoBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6"/></svg>
+            Undo
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Text Formatter?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Instant Format</h3>
+          <p class="text-gray-400 text-xs">Real-time formatting as you type</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">20+ Operations</h3>
+          <p class="text-gray-400 text-xs">Case, clean, sort, transform & more</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Drag & Drop</h3>
+          <p class="text-gray-400 text-xs">Upload text files instantly</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based, no uploads</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy or download results</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration required</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Input Text</h3>
+          <p class="text-gray-400 text-xs">Type, paste, or drop a file. The original text loads instantly.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Choose Operation</h3>
+          <p class="text-gray-400 text-xs">Click any formatting button: case, clean, sort, or transform.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Stack Operations</h3>
+          <p class="text-gray-400 text-xs">Apply multiple formats in sequence. Use Undo if needed.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy formatted text or download as a .txt file instantly.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Text Formatting: Master Professional Text Processing with Our Free Online Tool</h2>
+        
+        <p><strong>Text formatting</strong> is the cornerstone of professional digital communication, serving as the bridge between raw, unstructured content and polished, presentable information. Whether you're a developer cleaning code, a writer preparing manuscripts, a data analyst organizing information, or a marketer crafting compelling copy, mastering <strong>text formatting</strong> techniques is essential for modern productivity. Our <strong>text formatter online</strong> solution provides comprehensive formatting capabilities that transform messy text into professional content instantly, without any cost or registration barriers.</p>
+
+        <h2>Understanding Text Formatting: Definition and Importance</h2>
+        
+        <p><strong>Text formatting</strong> refers to the process of organizing, cleaning, and transforming text to improve its readability, consistency, and professional appearance. This encompasses a wide range of operations including case conversion, whitespace management, line organization, duplicate removal, sorting, and various text transformations. When you <strong>format text online</strong>, you're not just changing appearances—you're enhancing the structural integrity and usability of your content.</p>
+
+        <p>The importance of reliable <strong>online text formatter</strong> tools cannot be overstated in today's information-driven world. Consider the daily challenges professionals face: a developer needs to <strong>clean text</strong> by removing extra spaces from code; a content creator must <strong>convert case</strong> for consistent headings; a data analyst has to <strong>sort lines</strong> alphabetically for better organization; a marketer wants to <strong>remove duplicates</strong> from email lists. Without efficient <strong>text formatting tool online</strong> capabilities, these tasks become tedious manual processes consuming valuable time.</p>
+
+        <h2>Comprehensive Text Formatting Operations Explained</h2>
+
+        <h3>Case Conversion: Mastering Text Capitalization</h3>
+        
+        <p>Case conversion is one of the most fundamental yet powerful <strong>text formatting</strong> operations. Different contexts demand different capitalization styles, and our <strong>free text formatter</strong> handles them all seamlessly. <strong>UPPERCASE</strong> conversion transforms all characters to capital letters, essential for creating emphasis, formatting headings, or preparing text for specific technical requirements. <strong>lowercase</strong> conversion ensures uniform minimal capitalization, perfect for email addresses, URLs, hashtags, and casual digital communication.</p>
+
+        <p><strong>Title Case</strong> conversion capitalizes the first letter of each word while maintaining lowercase for articles, prepositions, and conjunctions according to standard grammatical rules. This format is ideal for book titles, article headlines, and formal document headings. <strong>Sentence case</strong> capitalizes only the first letter of each sentence, maintaining the standard reading format for paragraphs and body text. Our <strong>advanced text formatter online free</strong> also includes <strong>alternating case</strong> (aLtErNaTiNg) for creative purposes, social media styling, and unique visual effects.</p>
+
+        <h3>Whitespace Management: Cleaning Text Structure</h3>
+        
+        <p>Whitespace issues plague text copied from various sources—PDFs, websites, word processors, and different operating systems. Our <strong>text beautifier online free</strong> provides comprehensive whitespace management tools. The <strong>trim lines</strong> function removes leading and trailing spaces from each line, ensuring consistent alignment and eliminating invisible characters that cause formatting inconsistencies.</p>
+
+        <p><strong>Remove extra spaces</strong> functionality collapses multiple consecutive spaces into single spaces, cleaning up text that appears irregular or poorly spaced. This is particularly crucial when <strong>formatting text for documents online free</strong> where precise spacing affects readability and professional appearance. The <strong>remove empty lines</strong> operation eliminates blank lines that create unwanted gaps in content, while <strong>remove line breaks</strong> transforms multi-line text into continuous paragraphs—essential for preparing content for different platforms and formats.</p>
+
+        <h3>Line Organization: Sorting, Deduplicating, and Reversing</h3>
+        
+        <p>Organizing lines of text is a common requirement across many professional scenarios. Our <strong>text layout formatter online</strong> provides sophisticated line organization capabilities. <strong>Sort lines alphabetically</strong> (A-Z or Z-A) organizes lists, names, items, or any text into logical sequences, making information easier to scan and locate. This <strong>bulk text formatter online</strong> feature handles large datasets efficiently, processing thousands of lines instantly.</p>
+
+        <p><strong>Remove duplicates</strong> eliminates repeated lines while preserving the original order or sorted sequence, crucial for cleaning email lists, inventory data, or any collection where uniqueness matters. The <strong>reverse lines</strong> operation inverts the order of all lines, useful for chronological reordering, creating countdowns, or specific data processing requirements. Combined with <strong>add line numbers</strong> functionality, these tools create perfectly organized, reference-ready documents.</p>
+
+        <h3>Text Transformation: Encoding and Reversal</h3>
+        
+        <p>Beyond basic formatting, our <strong>text format converter online free</strong> includes advanced transformation capabilities. <strong>Base64 encoding and decoding</strong> enables text to be safely transmitted across systems that only support ASCII characters, essential for email attachments, URL parameters, and data serialization. The <strong>reverse text</strong> operation mirrors characters from end to beginning, useful for creative writing, puzzles, and specific encoding scenarios.</p>
+
+        <h3>Find and Replace: Precision Text Editing</h3>
+        
+        <p>The <strong>find and replace</strong> functionality in our <strong>text formatting editor online</strong> provides precise text manipulation capabilities. Unlike simple search-and-replace, our tool processes entire documents instantly, replacing all instances of specified text with alternatives. This is invaluable for updating terminology, correcting errors across large documents, standardizing formatting patterns, or adapting content for different audiences. The <strong>text processing formatter online</strong> ensures these operations happen instantly with visual feedback.</p>
+
+        <h2>Professional Applications of Text Formatting</h2>
+
+        <h3>Software Development and Programming</h3>
+        
+        <p>Developers rely heavily on <strong>text formatting for coding online free</strong> tools to maintain clean, readable code. Consistent indentation, proper line breaks, and standardized spacing are essential for code readability and collaboration. Our <strong>text format optimizer online free</strong> helps developers clean configuration files, format log outputs, standardize variable naming through case conversion, and prepare code snippets for documentation. JSON, XML, CSV, and other data formats require precise <strong>text formatting</strong> to validate correctly and process efficiently.</p>
+
+        <h3>Content Creation and Publishing</h3>
+        
+        <p>Writers, bloggers, and publishers use <strong>text styling tool online</strong> solutions to prepare content for multiple platforms. A single article might need different formatting for: WordPress (HTML-ready), Medium (clean paragraphs), social media (character limits and line breaks), email newsletters (narrow columns), and print documents (justified text). Rather than manually reformatting for each platform, automated <strong>text formatting</strong> ensures consistent quality across all channels. Our <strong>all in one text formatter online free</strong> handles these diverse requirements seamlessly.</p>
+
+        <h3>Data Processing and Analysis</h3>
+        
+        <p>Data professionals constantly interact with messy datasets requiring <strong>text cleaning and formatter online</strong> operations. CSV files need delimiter standardization, log files require timestamp extraction and formatting, survey responses demand consistent case and spacing, and database exports need duplicate removal and sorting. The <strong>text formatting utility online</strong> provides these capabilities without requiring complex spreadsheet software or programming scripts, making data preparation accessible to everyone.</p>
+
+        <h3>Marketing and Communication</h3>
+        
+        <p>Marketing professionals manage extensive content libraries and communication lists that require constant <strong>text formatting</strong>. Email campaigns need consistent subject line capitalization, product descriptions require standardized formatting, customer lists must be deduplicated and sorted, and social media content needs specific line break patterns. Our <strong>free online text formatter tool</strong> streamlines these workflows, ensuring professional consistency across all marketing materials.</p>
+
+        <h3>Academic and Research Applications</h3>
+        
+        <p>Students and researchers use <strong>text formatting</strong> for bibliography organization, citation formatting, data cleaning for statistical analysis, and manuscript preparation. Reference lists must be sorted alphabetically, research data requires consistent formatting for analysis tools, and quotations need proper attribution formatting. The <strong>text formatting generator online</strong> capabilities support these academic requirements with precision and reliability.</p>
+
+        <h2>Best Practices for Effective Text Formatting</h2>
+
+        <h3>Pre-Processing and Source Analysis</h3>
+        
+        <p>Before applying <strong>text formatting</strong> operations, analyze your source text to understand its structure and issues. Identify the types of inconsistencies present: mixed case styles, irregular spacing, unwanted line breaks, duplicate entries, or specific characters requiring removal. This analysis helps determine which <strong>text formatting</strong> operations to apply and in what sequence. Our <strong>text format adjuster online</strong> allows you to preview changes instantly, ensuring the right approach.</p>
+
+        <h3>Operation Sequencing Strategy</h3>
+        
+        <p>The order of <strong>text formatting</strong> operations matters significantly. Generally, follow this sequence for best results: First, handle structural issues (remove empty lines, standardize line breaks). Second, clean whitespace (trim lines, remove extra spaces). Third, apply content transformations (case conversion, find/replace). Fourth, organize the result (sort lines, remove duplicates, add line numbers). Our <strong>online text formatting without login</strong> tool supports unlimited undo, allowing you to experiment with different sequences safely.</p>
+
+        <h3>Preserving Original Content</h3>
+        
+        <p>Always maintain a copy of your original text before applying <strong>text formatting</strong> operations. While our tool includes comprehensive undo functionality, having the original source ensures you can restart if needed. This is particularly important when processing large documents or applying multiple complex transformations. The <strong>text formatting for documents online free</strong> approach should always prioritize data safety.</p>
+
+        <h2>Comparing Text Formatting Approaches</h2>
+
+        <h3>Manual Formatting vs. Automated Tools</h3>
+        
+        <p>Manual formatting using text editors or word processors involves repetitive find-and-replace operations, manual line-by-line editing, and careful spacing adjustments. While feasible for small texts, it becomes impractical for: large documents (thousands of lines), repetitive operations (weekly reports), precise requirements (exact character trimming), or multiple formatting types. Automated <strong>text formatter online</strong> tools eliminate human error, ensure consistency, and complete in seconds what might take hours manually.</p>
+
+        <h3>Spreadsheet Software vs. Dedicated Formatting Tools</h3>
+        
+        <p>Excel and Google Sheets offer basic text manipulation through formulas and functions. However, they struggle with: complex pattern matching, multi-step formatting workflows, large file handling, and instant preview capabilities. Dedicated <strong>online text formatter</strong> tools provide greater flexibility, handle larger inputs, support more methods, and offer real-time visual feedback. Our <strong>text formatting editor online</strong> bridges the gap between simplicity and power.</p>
+
+        <h2>Advanced Text Formatting Techniques</h2>
+
+        <h3>Stacking Multiple Operations</h3>
+        
+        <p>Professional <strong>text formatting</strong> often requires combining multiple operations sequentially. For example, preparing a cleaned email list might involve: trim lines → remove empty lines → convert to lowercase → remove duplicates → sort alphabetically. Our <strong>advanced text formatter online free</strong> supports unlimited operation stacking with full undo capability, enabling complex formatting workflows without starting over.</p>
+
+        <h3>Handling Special Characters and Encoding</h3>
+        
+        <p>Modern text includes emoji, Unicode symbols, mathematical notation, and international characters that require careful handling. Our <strong>text format converter online free</strong> properly processes UTF-8 encoded text, preserving special characters while applying formatting operations. The <strong>Base64 encoding</strong> feature ensures text can be safely transmitted across systems with limited character support.</p>
+
+        <h2>The Future of Text Formatting Technology</h2>
+
+        <p>Artificial intelligence is beginning to influence <strong>text formatting</strong>, moving beyond mechanical operations toward intelligent content enhancement. AI-powered formatters can: detect content type and suggest appropriate formatting, identify and correct grammatical inconsistencies, suggest optimal line lengths for readability, and adapt formatting based on target platform requirements. These capabilities will transform <strong>text formatter</strong> tools from simple utilities into intelligent assistants that understand content context.</p>
+
+        <h2>Conclusion: Master Your Text with Professional Formatting</h2>
+
+        <p><strong>Text formatting</strong> remains one of the most essential yet underappreciated skills in digital work. From simple case conversion to complex multi-step cleaning workflows, the ability to format text efficiently empowers professionals across every industry. Whether you're preparing data for analysis, formatting content for publication, cleaning code for review, or organizing information for presentation, mastering <strong>text formatting</strong> techniques will dramatically improve your productivity and output quality.</p>
+
+        <p>Our <strong>free online text formatter</strong> provides all the capabilities you need to handle any formatting scenario. With support for 20+ operations including case conversion, whitespace cleaning, line organization, text transformation, and find/replace functionality, this tool serves everyone from casual users to data professionals. The browser-based architecture ensures privacy and accessibility, while the intuitive interface requires no learning curve. Whether you need to <strong>clean text</strong>, <strong>convert case</strong>, <strong>sort lines</strong>, <strong>remove duplicates</strong>, or perform complex multi-step formatting, our <strong>text formatting utility online</strong> delivers professional results instantly. Stop struggling with manual text manipulation—start using our professional <strong>text formatter online</strong> today and experience the efficiency of automated text formatting.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool format text automatically as I type?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>text formatter online</strong> features <strong>live formatting</strong>. As you type or paste text, the tool displays real-time statistics and allows instant formatting operations. Click any formatting button and see results immediately in the output area. The "Live formatting enabled" indicator confirms the feature is active. Changes apply instantly, making this the most responsive <strong>free text formatter</strong> available.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I apply multiple formatting operations in sequence?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely! Our <strong>online text formatter</strong> supports unlimited operation stacking. For example, you can: trim lines → remove extra spaces → convert to lowercase → remove duplicates → sort alphabetically. Each operation builds on the previous result. Use the Undo button to step back through your operation history if needed. This makes our tool the ultimate <strong>all in one text formatter online free</strong> solution.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What is the difference between "Trim Lines" and "Remove Extra Spaces"?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Trim Lines</strong> removes leading and trailing whitespace from each line (spaces at the beginning and end). <strong>Remove Extra Spaces</strong> collapses multiple consecutive spaces anywhere in the text into single spaces. Use trim for alignment issues, and remove extra spaces for general spacing cleanup. For best results, often apply both: trim first, then remove extra spaces. Our <strong>text cleaner and formatter online</strong> handles these operations precisely.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I clean up text copied from a PDF or website?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Use our <strong>Auto-Beautify</strong> button for instant cleaning, or manually apply: Remove Extra Spaces → Remove Empty Lines → Trim Lines. For PDF text with hard line breaks, also use Remove Line Breaks to create flowing paragraphs. The <strong>Deep Clean</strong> button applies an aggressive cleaning sequence for heavily formatted source text. Our <strong>text beautifier online free</strong> is specifically designed for these common scenarios.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I add line numbers to my text?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Click the <strong>"Add Line Numbers"</strong> button to prefix each line with its line number (1., 2., 3., etc.). This is perfect for code review, legal documents, poetry analysis, or any text requiring precise reference points. The numbers are added with a period and space for clean formatting. Use this feature after sorting or organizing your text for best results.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What file types are supported for upload?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">All text-based files: TXT, CSV, JSON, XML, HTML, Markdown, and code files (JS, CSS, Python, Java, C/C++, PHP, Ruby, Go, Rust, Swift, Kotlin, SQL, LOG). Files are read as plain text, so any text file works regardless of extension. Drag and drop or use the file picker to upload. Our <strong>bulk text formatter online</strong> handles large files efficiently.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is there a limit to how much text I can format?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">The tool handles text up to 10-20MB (several million characters), roughly 3,000-5,000 pages. Limits vary by browser—Chrome/Edge handle larger files than Safari/mobile. For extremely large files (100MB+), consider splitting the file first or using command-line tools. Our <strong>free online text formatter tool</strong> is optimized for typical daily use cases.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my data secure?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely. All processing happens <strong>locally in your browser</strong>—text never uploads to servers or leaves your device. You can verify this with browser DevTools (Network tab shows no external data transfer). Works offline after loading. Ideal for confidential documents, code, or sensitive data. Privacy is built into our <strong>text formatter online</strong> architecture.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What is the difference between "Sort Lines" and "Remove Duplicates"?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Sort Lines</strong> reorganizes all lines alphabetically (A-Z or Z-A) while keeping all instances, including duplicates. <strong>Remove Duplicates</strong> keeps only unique lines, eliminating repeated entries while preserving the original order (or sorted order if applied after sorting). Use sort for organization, remove duplicates for cleaning lists. Our <strong>text formatting utility online</strong> handles both operations efficiently.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this tool free?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, completely <strong>free</strong> with no registration, usage limits, watermarks, or hidden fees. Use for personal or commercial projects without attribution. This is truly a <strong>free text formatter</strong> for everyone. Supported by unobtrusive advertising and voluntary user support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const outputText = document.getElementById('outputText');
+const inputStats = document.getElementById('inputStats');
+const outputStats = document.getElementById('outputStats');
+const processingTime = document.getElementById('processingTime');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+
+// Buttons
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const resetBtn = document.getElementById('resetBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const findReplaceBtn = document.getElementById('findReplaceBtn');
+const beautifyBtn = document.getElementById('beautifyBtn');
+const cleanAllBtn = document.getElementById('cleanAllBtn');
+const undoBtn = document.getElementById('undoBtn');
+
+// Dynamic options
+const dynamicOptions = document.getElementById('dynamicOptions');
+const dynamicInput = document.getElementById('dynamicInput');
+const dynamicApplyBtn = document.getElementById('dynamicApplyBtn');
+const dynamicCancelBtn = document.getElementById('dynamicCancelBtn');
+const dynamicLabel = document.getElementById('dynamicLabel');
+
+// Format buttons
+const formatBtns = document.querySelectorAll('.format-btn');
+
+// History for undo
+let history = [];
+let currentAction = null;
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Update stats
+function updateStats(textarea, statsElement) {
+  const text = textarea.value;
+  const chars = text.length;
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+  const lines = text === '' ? 0 : text.split('\n').length;
+  statsElement.textContent = `Chars: ${chars} | Words: ${words} | Lines: ${lines}`;
+}
+
+function updateInputStats() {
+  updateStats(inputText, inputStats);
+}
+
+function updateOutputStats() {
+  updateStats(outputText, outputStats);
+}
+
+// Save to history
+function saveToHistory() {
+  if (history.length > 20) history.shift(); // Limit history
+  history.push(inputText.value);
+}
+
+// Undo function
+function undo() {
+  if (history.length > 0) {
+    inputText.value = history.pop();
+    updateInputStats();
+    formatText();
+  }
+}
+
+// Format operations
+const formatOperations = {
+  uppercase: (text) => text.toUpperCase(),
+  lowercase: (text) => text.toLowerCase(),
+  titlecase: (text) => text.replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()),
+  sentencecase: (text) => text.toLowerCase().replace(/(^\s*\w|[\.\!\?]\s*\w)/g, (c) => c.toUpperCase()),
+  alternating: (text) => {
+    return text.split('').map((char, i) => 
+      i % 2 === 0 ? char.toLowerCase() : char.toUpperCase()
+    ).join('');
+  },
+  trim: (text) => text.split('\n').map(line => line.trim()).join('\n'),
+  removeExtraSpaces: (text) => text.replace(/\s+/g, ' ').replace(/^\s+|\s+$/gm, ''),
+  removeEmptyLines: (text) => text.split('\n').filter(line => line.trim() !== '').join('\n'),
+  removeLineBreaks: (text) => text.replace(/\n/g, ' ').replace(/\s+/g, ' ').trim(),
+  removeDuplicates: (text) => {
+    const lines = text.split('\n');
+    const seen = new Set();
+    return lines.filter(line => {
+      const trimmed = line.trim();
+      if (seen.has(trimmed)) return false;
+      seen.add(trimmed);
+      return true;
+    }).join('\n');
+  },
+  sortLines: (text) => text.split('\n').sort((a, b) => a.localeCompare(b)).join('\n'),
+  sortLinesDesc: (text) => text.split('\n').sort((a, b) => b.localeCompare(a)).join('\n'),
+  reverseLines: (text) => text.split('\n').reverse().join('\n'),
+  addLineNumbers: (text) => text.split('\n').map((line, i) => `${i + 1}. ${line}`).join('\n'),
+  reverseText: (text) => text.split('').reverse().join(''),
+  base64encode: (text) => {
+    try {
+      return btoa(unescape(encodeURIComponent(text)));
+    } catch (e) {
+      return text;
+    }
+  },
+  base64decode: (text) => {
+    try {
+      return decodeURIComponent(escape(atob(text)));
+    } catch (e) {
+      return text;
+    }
+  }
+};
+
+// Dynamic operations
+function showDynamicOptions(action, label, placeholder) {
+  currentAction = action;
+  dynamicLabel.textContent = label;
+  dynamicInput.placeholder = placeholder;
+  dynamicOptions.classList.remove('hidden');
+  dynamicInput.value = '';
+  dynamicInput.focus();
+}
+
+function hideDynamicOptions() {
+  dynamicOptions.classList.add('hidden');
+  currentAction = null;
+}
+
+function applyDynamicOperation() {
+  const value = dynamicInput.value;
+  if (!value) return;
+  
+  saveToHistory();
+  let text = inputText.value;
+  
+  if (currentAction === 'prefixLines') {
+    text = text.split('\n').map(line => value + line).join('\n');
+  } else if (currentAction === 'suffixLines') {
+    text = text.split('\n').map(line => line + value).join('\n');
+  }
+  
+  inputText.value = text;
+  updateInputStats();
+  formatText();
+  hideDynamicOptions();
+}
+
+// Main format function
+function formatText() {
+  const startTime = performance.now();
+  const text = inputText.value;
+  
+  if (!text) {
+    outputText.value = '';
+    updateOutputStats();
+    processingTime.textContent = '';
+    return;
+  }
+  
+  // For now, just copy input to output (operations modify input)
+  outputText.value = text;
+  updateOutputStats();
+  
+  const endTime = performance.now();
+  processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+}
+
+// Apply format operation
+function applyFormat(action) {
+  if (!inputText.value) return;
+  
+  saveToHistory();
+  
+  const startTime = performance.now();
+  
+  if (formatOperations[action]) {
+    inputText.value = formatOperations[action](inputText.value);
+  }
+  
+  updateInputStats();
+  formatText();
+  
+  const endTime = performance.now();
+  processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+}
+
+// Find and replace
+function findReplace() {
+  const find = document.getElementById('findText').value;
+  const replace = document.getElementById('replaceText').value;
+  
+  if (!find || !inputText.value) return;
+  
+  saveToHistory();
+  
+  const startTime = performance.now();
+  inputText.value = inputText.value.split(find).join(replace);
+  updateInputStats();
+  formatText();
+  
+  const endTime = performance.now();
+  processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+}
+
+// Auto-beautify
+function autoBeautify() {
+  if (!inputText.value) return;
+  saveToHistory();
+  
+  const startTime = performance.now();
+  let text = inputText.value;
+  
+  // Apply beautify sequence
+  text = formatOperations.removeExtraSpaces(text);
+  text = formatOperations.trim(text);
+  text = formatOperations.removeEmptyLines(text);
+  
+  inputText.value = text;
+  updateInputStats();
+  formatText();
+  
+  const endTime = performance.now();
+  processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+}
+
+// Deep clean
+function deepClean() {
+  if (!inputText.value) return;
+  saveToHistory();
+  
+  const startTime = performance.now();
+  let text = inputText.value;
+  
+  // Aggressive cleaning
+  text = text.replace(/[^\x20-\x7E\n]/g, ''); // Remove non-printable chars
+  text = formatOperations.removeExtraSpaces(text);
+  text = formatOperations.trim(text);
+  text = formatOperations.removeEmptyLines(text);
+  
+  inputText.value = text;
+  updateInputStats();
+  formatText();
+  
+  const endTime = performance.now();
+  processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+}
+
+// Format button click handlers
+formatBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const action = btn.dataset.action;
+    
+    if (action === 'prefixLines' || action === 'suffixLines') {
+      const label = action === 'prefixLines' ? 'Enter prefix to add at the start of each line:' : 'Enter suffix to add at the end of each line:';
+      const placeholder = action === 'prefixLines' ? 'e.g., "- " or "Item: "' : 'e.g., "," or ";"';
+      showDynamicOptions(action, label, placeholder);
+    } else {
+      applyFormat(action);
+    }
+  });
+});
+
+// Drag and drop handlers
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  if (!file.type.match('text.*') && !file.name.match(/\.(txt|csv|json|xml|html?|md|js|css|py|java|cpp|c|php|rb|go|rs|swift|kt|sql|log)$/i)) {
+    alert('Please upload a text file');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    updateInputStats();
+    formatText();
+  };
+  reader.readAsText(file);
+}
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    updateInputStats();
+    formatText();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  updateInputStats();
+  formatText();
+  inputText.focus();
+}
+
+// Copy output
+async function copyOutput() {
+  if (!outputText.value) return;
+  
+  try {
+    await navigator.clipboard.writeText(outputText.value);
+    const originalText = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalText;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+}
+
+// Download output
+function downloadOutput() {
+  const text = outputText.value;
+  if (!text.trim()) return;
+  
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'formatted-text.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Reset all
+function resetAll() {
+  inputText.value = '';
+  outputText.value = '';
+  history = [];
+  updateInputStats();
+  updateOutputStats();
+  processingTime.textContent = '';
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Event listeners
+inputText.addEventListener('input', () => {
+  updateInputStats();
+  formatText();
+});
+
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+copyBtn.addEventListener('click', copyOutput);
+downloadBtn.addEventListener('click', downloadOutput);
+resetBtn.addEventListener('click', resetAll);
+findReplaceBtn.addEventListener('click', findReplace);
+beautifyBtn.addEventListener('click', autoBeautify);
+cleanAllBtn.addEventListener('click', deepClean);
+undoBtn.addEventListener('click', undo);
+
+dynamicApplyBtn.addEventListener('click', applyDynamicOperation);
+dynamicCancelBtn.addEventListener('click', hideDynamicOptions);
+dynamicInput.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') applyDynamicOperation();
+});
+
+// Initialize
+updateInputStats();
+</script>
+</body>
+</html>

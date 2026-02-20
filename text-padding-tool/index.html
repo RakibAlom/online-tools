@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Text Padding Tool - Free Online String Padding Utility</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online text padding tool. Add left, right, or center padding to text with custom characters. Pad strings to fixed length for coding, data formatting, and alignment. No registration required." />
+  <meta name="keywords" content="text padding tool, text padding online, free text padding tool, online text padding, add padding to text online, text padder online free, string padding tool online, pad text left and right online, text spacing padding tool, text alignment padding online, text format padding tool online, add spaces to text online free, text length padding tool online, pad string with characters online, free online text padding tool, bulk text padding online, text padding utility online, pad text to fixed length online, text padding formatter online, online string padding free, text padding editor online, add leading and trailing characters online, text pad generator online free, text padding calculator online, text padding for coding online free, pad text with zeros online, pad text with spaces online, text padding without login online" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/text-padding-tool/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/text-padding-tool/" />
+  <meta property="og:title" content="Text Padding Tool - Free Online String Padding Utility" />
+  <meta property="og:description" content="Add left, right, or center padding to text with custom characters. Pad strings to fixed length for coding, data formatting, and alignment. No registration required." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/text-padding-tool/" />
+  <meta name="twitter:title" content="Text Padding Tool - Free Online String Padding Utility" />
+  <meta name="twitter:description" content="Add left, right, or center padding to text with custom characters. Pad strings to fixed length for coding, data formatting, and alignment. No registration required." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+
+    .option-card {
+      transition: all 0.2s ease;
+    }
+    
+    .option-card:hover {
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .option-card.active {
+      background: rgba(99, 102, 241, 0.15);
+      border-color: rgba(99, 102, 241, 0.4);
+    }
+
+    .mode-btn {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    .mode-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      opacity: 1;
+    }
+
+    .preview-line {
+      font-family: 'Courier New', monospace;
+      white-space: pre;
+      border-left: 2px solid rgba(99, 102, 241, 0.5);
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 12h20M10 20h20M10 28h20" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Text Padding Tool</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Text Padding Tool
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free String Padding & Alignment Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-padding enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Input Text
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Type or paste text here to add padding... Or drag & drop a text file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.csv,.md,.json,.xml,.html,.js,.css,.py,.java,.cpp,.c,.php,.rb,.go,.rs,.swift,.kt,.sql,.log" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Chars: 0 | Words: 0 | Lines: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Output -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Padded Result
+            </label>
+            <div class="flex gap-1">
+              <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                Copy
+              </button>
+              <button id="downloadBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Download
+              </button>
+            </div>
+          </div>
+          
+          <textarea id="outputText" readonly spellcheck="false"
+            class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+            placeholder="Padded text will appear here automatically..."></textarea>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="outputStats">Lines: 0 | Max Length: 0 | Total Chars: 0</span>
+            <span id="processingTime" class="text-gray-600"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-4">
+        
+        <!-- Padding Mode Selection -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Padding Direction</label>
+          <div class="flex flex-wrap gap-1">
+            <button class="mode-btn active rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-mode="left">Left (Pad Right)</button>
+            <button class="mode-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-mode="right">Right (Pad Left)</button>
+            <button class="mode-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-mode="center">Center</button>
+            <button class="mode-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-mode="both">Both Sides</button>
+          </div>
+        </div>
+
+        <!-- Padding Options -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          <div>
+            <label class="text-xs font-medium text-gray-300 mb-1.5 block flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/></svg>
+              Target Length
+            </label>
+            <input type="number" id="targetLength" min="1" max="1000" value="20" 
+              class="w-full px-3 py-2 rounded-md glass-input text-sm font-medium">
+          </div>
+
+          <div>
+            <label class="text-xs font-medium text-gray-300 mb-1.5 block flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"/></svg>
+              Padding Character
+            </label>
+            <div class="flex gap-2">
+              <select id="paddingCharSelect" class="flex-1 px-3 py-2 rounded-md glass-input text-sm">
+                <option value="space">Space ( )</option>
+                <option value="zero">Zero (0)</option>
+                <option value="dash">Dash (-)</option>
+                <option value="underscore">Underscore (_)</option>
+                <option value="dot">Dot (.)</option>
+                <option value="asterisk">Asterisk (*)</option>
+                <option value="custom">Custom...</option>
+              </select>
+              <input type="text" id="customPaddingChar" maxlength="1" placeholder="?" 
+                class="hidden w-12 px-2 py-2 rounded-md glass-input text-sm text-center">
+            </div>
+          </div>
+
+          <div>
+            <label class="text-xs font-medium text-gray-300 mb-1.5 block flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+              Processing Mode
+            </label>
+            <select id="processingMode" class="w-full px-3 py-2 rounded-md glass-input text-sm">
+              <option value="line">Line-by-Line</option>
+              <option value="whole">Whole Text</option>
+              <option value="word">Word-by-Word</option>
+            </select>
+          </div>
+
+          <div class="flex items-end">
+            <label class="flex items-center gap-2 cursor-pointer glass-panel rounded-lg p-2.5 border border-white/5 w-full">
+              <input type="checkbox" id="truncateLong" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-4 h-4">
+              <span class="text-xs font-medium text-gray-300">Truncate if longer</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Quick Presets -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Quick Presets</label>
+          <div class="flex flex-wrap gap-2">
+            <button class="preset-btn compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated" data-mode="right" data-len="10" data-char="space">Right 10 (Spaces)</button>
+            <button class="preset-btn compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated" data-mode="left" data-len="20" data-char="space">Left 20 (Spaces)</button>
+            <button class="preset-btn compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated" data-mode="center" data-len="30" data-char="space">Center 30</button>
+            <button class="preset-btn compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated" data-mode="right" data-len="8" data-char="zero">Zero Pad (8)</button>
+            <button class="preset-btn compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated" data-mode="right" data-len="15" data-char="dash">Dash Pad (15)</button>
+            <button class="preset-btn compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated" data-mode="both" data-len="50" data-char="asterisk">Both * (50)</button>
+          </div>
+        </div>
+
+        <!-- Live Preview -->
+        <div id="livePreview" class="hidden">
+          <label class="text-xs font-medium text-gray-300 mb-2 block flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            Visual Preview <span class="text-gray-500 font-normal">(first 5 lines)</span>
+          </label>
+          <div id="previewContent" class="glass-panel rounded-lg p-3 text-xs overflow-x-auto">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Text Padding Tool?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Instant</h3>
+          <p class="text-gray-400 text-xs">Real-time padding as you type</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">4 Directions</h3>
+          <p class="text-gray-400 text-xs">Left, right, center, both</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Drag & Drop</h3>
+          <p class="text-gray-400 text-xs">Upload text files easily</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based processing</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy or download results</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration needed</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Enter Text</h3>
+          <p class="text-gray-400 text-xs">Type, paste, or upload your text file. Padding applies automatically.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Choose Direction</h3>
+          <p class="text-gray-400 text-xs">Select left, right, center, or both sides padding mode.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Set Parameters</h3>
+          <p class="text-gray-400 text-xs">Set target length, padding character, and processing mode.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy padded result or download as file. Use in your projects.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Text Padding: Mastering String Alignment and Formatting for Professional Results</h2>
+        
+        <p><strong>Text padding</strong> is a fundamental yet sophisticated operation in digital text processing, serving as the cornerstone of data formatting, string alignment, and content presentation. Whether you're a developer preparing data for database import, a data analyst formatting reports, a programmer aligning console output, or a content creator structuring text for visual appeal, understanding how to effectively <strong>add padding to text online</strong> is essential for modern digital workflows. Our <strong>text padding online</strong> solution provides everything you need for professional string manipulation without any cost or registration barriers.</p>
+
+        <h2>What Is Text Padding and Why Does It Matter?</h2>
+        
+        <p><strong>Text padding</strong> refers to the process of adding extra characters—typically spaces, zeros, or custom symbols—to the beginning, end, or both sides of a text string to achieve a specific length or alignment. This seemingly simple operation underlies countless business processes, programming functions, and data management tasks. At its core, text padding transforms variable-length strings into uniform, structured data that displays consistently across different systems and contexts. When you <strong>pad text left and right online</strong>, you're performing one of the most common data preparation tasks used across industries.</p>
+
+        <p>The importance of reliable <strong>online text padding</strong> tools cannot be overstated in our data-driven world. Consider the daily challenges professionals face: a developer needs to <strong>pad string with characters online</strong> to align database columns in a console application; a data analyst must <strong>add spaces to text online free</strong> to create fixed-width files for legacy systems; a programmer wants to <strong>pad text with zeros online</strong> for invoice number formatting; a web designer needs to <strong>text spacing padding tool</strong> capabilities to align UI elements. Without efficient <strong>string padding tool online</strong> capabilities, these tasks become tedious manual processes prone to inconsistency and error.</p>
+
+        <h2>Understanding Text Padding Methods and Techniques</h2>
+
+        <h3>Left Padding (Right Alignment)</h3>
+        
+        <p>Left padding, also known as right alignment or <strong>pad left</strong>, involves adding characters to the beginning (left side) of a text string. This method pushes the original text to the right, creating alignment along the right edge. Common applications include numeric formatting where numbers should align by their rightmost digit, creating right-aligned columns in tables, and formatting codes or identifiers that need to appear at specific positions within fixed-width fields.</p>
+
+        <p>The most prevalent use of left padding is <strong>pad text with zeros online</strong>, commonly called zero-padding. This technique ensures that numbers maintain consistent digit counts—turning "42" into "00042" for a 5-digit field. Financial systems, invoice generators, and sequential ID creators rely heavily on zero-padding to maintain data consistency and visual alignment. Our <strong>text length padding tool online</strong> supports zero-padding along with any other custom character you might need.</p>
+
+        <h3>Right Padding (Left Alignment)</h3>
+        
+        <p>Right padding, or left alignment, adds characters to the end (right side) of a text string, keeping the original text positioned at the left while extending the total length. This is the most common default alignment for text content, as Western languages read left-to-right. Applications include creating uniform column widths in text tables, preparing data for fixed-width file formats, and ensuring consistent string lengths for database fields or API requirements.</p>
+
+        <p>When you <strong>pad text to fixed length online</strong> using right padding, you create clean, readable columns perfect for console applications, log files, or data exports. The <strong>text padder online free</strong> approach allows you to specify exact widths for each field, ensuring that subsequent columns align perfectly regardless of the content length in previous columns. This is crucial for readability in monospaced environments like terminal windows or code editors.</p>
+
+        <h3>Center Padding (Center Alignment)</h3>
+        
+        <p>Center padding distributes padding characters equally on both sides of the original text, creating visually balanced, centered output. When the required padding is odd, professional <strong>text alignment padding online</strong> tools typically add the extra character to the right side to maintain consistency. Center alignment is essential for headers, titles, decorative text, and any content where visual balance takes priority over strict left or right alignment.</p>
+
+        <p>Creative applications of center padding include generating ASCII art, formatting centered headers in console applications, creating symmetrical visual dividers, and preparing text for centered display in fixed-width containers. The <strong>text format padding tool online</strong> capabilities extend beyond mere functionality into aesthetic presentation, helping content creators achieve professional visual results without complex design software.</p>
+
+        <h3>Both-Sides Padding (Dual Alignment)</h3>
+        
+        <p>Advanced <strong>text padding utility online</strong> scenarios require adding different characters to left and right sides simultaneously. While less common than single-direction padding, this technique appears in specialized formatting requirements such as creating bordered text boxes, preparing data for specific import formats, or generating decorative text patterns. Understanding how to <strong>add leading and trailing characters online</strong> separately gives you maximum flexibility for complex formatting tasks.</p>
+
+        <h2>Professional Applications of Text Padding</h2>
+
+        <h3>Software Development and Programming</h3>
+        
+        <p>Developers rely on <strong>text padding for coding online free</strong> tools for numerous programming tasks. Console application formatting requires precise alignment of menu items, status messages, and data displays. Log file generation benefits from consistent column widths that make scanning and parsing easier. Configuration file creation often requires specific indentation and alignment for readability. Code generation tools use padding to format generated source code properly.</p>
+
+        <p>Database operations frequently involve <strong>bulk text padding online</strong> for fixed-width field preparation. Legacy systems often require specific field lengths for import/export operations. Modern databases might use padded values for specific indexing or sorting behaviors. API integrations sometimes demand exact string lengths for authentication tokens, identifiers, or formatted values. A reliable <strong>online string padding free</strong> tool bridges the gap between modern development practices and legacy system requirements.</p>
+
+        <h3>Data Processing and Analysis</h3>
+        
+        <p>Data professionals use <strong>text padding calculator online</strong> capabilities for ETL (Extract, Transform, Load) processes. Fixed-width file formats remain common in enterprise systems, requiring precise character counts for each field. Data normalization often requires standardizing string lengths before comparison or merging operations. Report generation depends on aligned columns for professional presentation. Our <strong>text padding editor online</strong> handles these data preparation needs efficiently.</p>
+
+        <p>CSV and TSV file preparation sometimes requires padding to maintain column alignment when viewed in text editors. While spreadsheet applications handle variable-length data well, human-readable data exports often benefit from the visual structure that padding provides. <strong>Free online text padding tool</strong> capabilities enable data teams to quickly format exports for presentations, documentation, or manual review processes.</p>
+
+        <h3>Content Management and Publishing</h3>
+        
+        <p>Content creators leverage <strong>text pad generator online free</strong> tools for various publishing tasks. Markdown table formatting requires careful alignment for proper rendering. ASCII art creation depends on precise character positioning. Social media formatting sometimes uses padding for visual emphasis or alignment. Email template preparation might require specific spacing for compatibility across different clients.</p>
+
+        <p>Technical writers use padding to format code examples, command-line outputs, and configuration samples within documentation. Consistent alignment makes technical content more scannable and professional. The <strong>text padding formatter online</strong> approach ensures that documentation examples display correctly across different platforms and devices, maintaining the professional appearance that technical audiences expect.</p>
+
+        <h3>System Administration and DevOps</h3>
+        
+        <p>System administrators apply <strong>text padding without login online</strong> tools for script development and automation. Shell script output formatting requires careful alignment for readability. Log analysis scripts benefit from consistent column widths for pattern recognition. Configuration management tools often generate padded output for file consistency. Monitoring and alerting systems use padding to format status messages and notifications.</p>
+
+        <p>Infrastructure-as-code practices sometimes involve generating padded configuration files where alignment affects parsing or readability. Automation scripts that generate reports or status summaries need reliable padding to produce professional output. The <strong>text padding tool</strong> serves as a quick utility for preparing test data, formatting output samples, or debugging alignment issues without writing custom scripts.</p>
+
+        <h2>Advanced Text Padding Techniques and Strategies</h2>
+
+        <h3>Character Selection Strategy</h3>
+        
+        <p>The choice of padding character significantly impacts output usability. Space characters provide clean, invisible padding ideal for most text alignment scenarios. Zero-padding (0) is standard for numeric fields where maintaining digit significance matters. Dash (-) and underscore (_) padding creates visible separators useful for forms, codes, or decorative purposes. Dot (.) padding appears in table of contents, menu dividers, or financial documents. Asterisk (*) padding generates visual emphasis or decorative borders.</p>
+
+        <p>Custom character selection in advanced <strong>string padding tool online</strong> implementations allows domain-specific formatting. Hash symbols (#) for preprocessing directives, pipe symbols (|) for table construction, or custom Unicode characters for international applications—the flexibility to <strong>pad string with characters online</strong> using any single character enables unlimited formatting possibilities.</p>
+
+        <h3>Length Calculation and Truncation</h3>
+        
+        <p>Professional <strong>text padding to fixed length online</strong> requires understanding length constraints. When source text exceeds the target length, you must either preserve the original (exceeding the target) or truncate to fit. Truncation strategies include simple cutoff (potentially losing meaning), ellipsis insertion (indicating omission), or intelligent truncation (preserving whole words). Our <strong>text padding utility online</strong> provides truncation options while warning about potential data loss.</p>
+
+        <p>Unicode and multibyte character handling complicates length calculations. A "length" of 10 might mean 10 bytes, 10 characters, or 10 display columns—each giving different results with emoji, combining characters, or wide Asian scripts. Professional <strong>online text padding</strong> tools clarify their measurement approach and handle multibyte characters correctly, ensuring predictable results across different character sets.</p>
+
+        <h3>Line-by-Line vs. Whole-Text Processing</h3>
+        
+        <p>Processing mode selection dramatically affects padding results. <strong>Line-by-line processing</strong> treats each line independently, calculating padding based on that line's length—essential for table columns where each row should align. <strong>Whole-text processing</strong> treats the entire input as a single unit, padding once at the boundaries—useful for creating bordered blocks or ensuring a text block fits specific dimensions.</p>
+
+        <p><strong>Word-by-word processing</strong> represents an advanced mode where each word receives individual padding, creating effects like justified text alignment or word-spacing adjustments. Understanding these processing modes helps you select the right approach for your specific formatting goal, whether creating aligned data tables or artistic text presentations.</p>
+
+        <h2>Comparing Text Padding Approaches</h2>
+
+        <h3>Manual Spacing vs. Automated Tools</h3>
+        
+        <p>Manual padding using spacebar or tab keys is feasible for one-off tasks but fails at scale. Counting characters manually is error-prone, especially for large datasets or precise alignment requirements. Automated <strong>text padding online</strong> tools eliminate counting errors, ensure consistency across hundreds of lines, and complete in seconds what might take hours manually. The time savings and accuracy improvements justify adopting a <strong>free text padding tool</strong> for any repetitive padding task.</p>
+
+        <h3>Programming Solutions vs. Online Tools</h3>
+        
+        <p>Developers might write quick padding scripts using Python's `ljust()`, `rjust()`, and `center()` methods, JavaScript's `padStart()` and `padEnd()`, or similar functions in other languages. While effective for technical users, this approach requires coding knowledge, environment setup, and maintenance. <strong>Online text padding</strong> tools democratize these capabilities, making advanced string manipulation accessible to non-technical users while still providing the precision that technical users need. The zero-setup nature of browser-based tools enables immediate productivity for one-time tasks or quick formatting needs.</p>
+
+        <h2>Best Practices for Effective Text Padding</h2>
+
+        <h3>Pre-formatting and Validation</h3>
+        
+        <p>Before applying padding, clean your source text to ensure predictable results. Remove unintended whitespace that might affect length calculations, normalize line endings for consistent processing, and verify character encoding for special symbols. A <strong>text padding editor online</strong> with live preview helps catch formatting issues before applying padding to large datasets.</p>
+
+        <h3>Target Length Selection</h3>
+        
+        <p>Choose target lengths based on your display or storage constraints. For console applications, consider typical terminal widths (80 or 120 characters). For database fields, respect schema-defined column widths. For web display, consider container boundaries and responsive behavior. When creating fixed-width files, research the exact specifications of the consuming system. Our <strong>text padding calculator online</strong> helps you plan and visualize these constraints.</p>
+
+        <h3>Output Verification and Testing</h3>
+        
+        <p>Always verify padded output, especially when using truncation or non-space padding characters. Check that alignment appears correct in the target environment (different fonts or displays may affect visual alignment). Test with edge cases: empty strings, maximum-length strings, and strings containing only whitespace. Professional <strong>bulk text padding online</strong> workflows include validation steps to ensure output quality.</p>
+
+        <h2>The Future of Text Formatting Technology</h2>
+
+        <p>Modern text processing is evolving beyond simple character padding toward intelligent formatting. AI-powered tools can suggest optimal padding based on content analysis, automatically adjust alignment for different display contexts, and integrate padding with broader formatting workflows. Variable-width font considerations, responsive design constraints, and multi-platform compatibility requirements are driving innovation in how we think about text alignment and spacing.</p>
+
+        <p>Despite these advances, fundamental <strong>text padding</strong> remains essential. Fixed-width formats persist in enterprise systems, console applications maintain their relevance in DevOps workflows, and human-readable text alignment continues to matter for comprehension and professionalism. Our platform evolves to incorporate modern innovations while maintaining the reliable, straightforward <strong>text padding without login online</strong> experience that users depend on for daily work.</p>
+
+        <h2>Conclusion: Master Your Text with Professional Padding</h2>
+
+        <p><strong>Text padding</strong> remains one of the most essential yet underappreciated operations in digital text manipulation. From simple space addition to complex multi-character formatting, the ability to align and size text precisely empowers professionals across every technical and creative field. Whether you're formatting database exports, aligning console output, preparing fixed-width data files, or creating visually structured content, mastering <strong>text padding</strong> techniques will dramatically improve your productivity and output quality.</p>
+
+        <p>Our <strong>free online text padding tool</strong> provides all the capabilities you need to handle any padding scenario. With automatic real-time processing as you type, support for four padding directions (left, right, center, both), customizable padding characters including spaces, zeros, and special symbols, plus flexible processing modes (line-by-line, whole-text, word-by-word), this tool serves everyone from casual users to data professionals. The browser-based architecture ensures privacy and accessibility, while the intuitive interface requires no learning curve. Whether you need to <strong>pad text left and right online</strong>, <strong>pad text with zeros online</strong>, <strong>add spaces to text online free</strong>, or perform complex <strong>bulk text padding online</strong> operations, our <strong>text padding utility online</strong> delivers professional results instantly. Stop struggling with manual spacing—start using our professional <strong>text padding online</strong> tool today and experience the efficiency of automated string formatting.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool add padding automatically as I type?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>text padding online</strong> features <strong>automatic real-time padding</strong>. As you type or paste text, the tool instantly applies your selected padding settings and displays the results. We use intelligent debouncing to ensure smooth performance. The "Auto-padding enabled" indicator confirms the feature is active. Changes to padding direction, target length, or character apply instantly, making this the most responsive <strong>free text padding tool</strong> available.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What's the difference between Left, Right, Center, and Both padding modes?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Left (Pad Right)</strong> adds characters to the end, keeping text left-aligned. <strong>Right (Pad Left)</strong> adds characters to the beginning, pushing text right—perfect for numbers. <strong>Center</strong> distributes padding equally on both sides for balanced appearance. <strong>Both</strong> allows different characters on left and right for specialized formatting. Choose based on your alignment needs and target display environment.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I pad text with characters other than spaces?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely! Besides spaces, you can <strong>pad text with zeros online</strong> (for numbers), dashes, underscores, dots, or asterisks. You can also specify any custom single character for specialized needs—like padding with # for comments, | for tables, or specific Unicode characters. This flexibility makes our <strong>string padding tool online</strong> suitable for everything from database formatting to ASCII art creation.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What happens if my text is longer than the target length?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">By default, the tool preserves your original text even if it exceeds the target length (no padding is added). However, if you enable the <strong>"Truncate if longer"</strong> option, text longer than the target will be cut to fit. Use truncation carefully as it removes data. For most data alignment tasks, we recommend setting a target length that accommodates your longest expected string to avoid truncation.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I create zero-padded numbers for IDs or codes?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Select <strong>Right (Pad Left)</strong> mode, set target length to your desired digit count (e.g., 6 for 000001), and choose "Zero (0)" as the padding character. Enter your numbers (one per line for multiple items), and the tool will format them with leading zeros. This creates standard zero-padded numbers perfect for invoice IDs, product SKUs, or sequential codes. Use the "Zero Pad (8)" preset for quick setup.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I process multi-line text with different line lengths?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Use <strong>Line-by-Line</strong> processing mode (the default). Each line is padded independently based on its own length, ensuring all lines reach the same target length regardless of original content. This is perfect for creating aligned columns from variable-length data. The visual preview shows exactly how each line will appear after padding.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is there a file size limit for uploads?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">The tool handles text files up to 5-10MB (roughly 1-2 million characters). This accommodates large CSV files, log files, and codebases. Supported formats include TXT, CSV, JSON, XML, HTML, Markdown, and all common programming languages. Files are processed locally in your browser for privacy and security.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my data secure when using this tool?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">100% secure. All processing happens <strong>locally in your browser</strong>—your text never uploads to any server. You can verify this by checking your browser's Network tab (no data transfer occurs). The tool works offline after loading. This makes it safe for processing sensitive data like customer information, proprietary code, or confidential business data. Privacy is built into our <strong>text padding without login online</strong> architecture.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I create aligned columns for a text table?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">For text tables, use <strong>Right (Pad Left)</strong> for numeric columns (aligns numbers by decimal point) and <strong>Left (Pad Right)</strong> for text columns. Set a target length slightly larger than your longest value in each column. Use space padding and "Line-by-Line" mode. Process each column separately, then combine them with a separator character (like | or tab) if needed. The visual preview helps you verify alignment before exporting.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this tool completely free to use?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, completely <strong>free</strong> with no registration, usage limits, watermarks, or hidden fees. Use it for personal projects, commercial work, or any purpose without attribution. This is truly a <strong>free online text padding tool</strong> for everyone. Supported by unobtrusive advertising and voluntary user support, allowing us to keep it free and accessible worldwide.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const outputText = document.getElementById('outputText');
+const inputStats = document.getElementById('inputStats');
+const outputStats = document.getElementById('outputStats');
+const processingTime = document.getElementById('processingTime');
+const livePreview = document.getElementById('livePreview');
+const previewContent = document.getElementById('previewContent');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+
+// Settings Elements
+const targetLength = document.getElementById('targetLength');
+const paddingCharSelect = document.getElementById('paddingCharSelect');
+const customPaddingChar = document.getElementById('customPaddingChar');
+const processingMode = document.getElementById('processingMode');
+const truncateLong = document.getElementById('truncateLong');
+
+// Buttons
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const resetBtn = document.getElementById('resetBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const modeBtns = document.querySelectorAll('.mode-btn');
+const presetBtns = document.querySelectorAll('.preset-btn');
+
+let currentMode = 'left';
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Update input stats
+function updateInputStats() {
+  const text = inputText.value;
+  const chars = text.length;
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+  const lines = text === '' ? 0 : text.split('\n').length;
+  inputStats.textContent = `Chars: ${chars} | Words: ${words} | Lines: ${lines}`;
+}
+
+// Debounce function for performance
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Get padding character
+function getPaddingChar() {
+  const char = paddingCharSelect.value;
+  if (char === 'custom') {
+    return customPaddingChar.value || ' ';
+  }
+  const chars = {
+    'space': ' ',
+    'zero': '0',
+    'dash': '-',
+    'underscore': '_',
+    'dot': '.',
+    'asterisk': '*'
+  };
+  return chars[char] || ' ';
+}
+
+// Pad text function
+function padText(text, length, char, mode, shouldTruncate) {
+  if (text.length > length) {
+    if (shouldTruncate) {
+      return text.substring(0, length);
+    }
+    return text;
+  }
+  
+  const paddingNeeded = length - text.length;
+  if (paddingNeeded <= 0) return text;
+  
+  const leftPad = Math.floor(paddingNeeded / 2);
+  const rightPad = Math.ceil(paddingNeeded / 2);
+  
+  switch(mode) {
+    case 'left':
+      return text + char.repeat(paddingNeeded);
+    case 'right':
+      return char.repeat(paddingNeeded) + text;
+    case 'center':
+      return char.repeat(leftPad) + text + char.repeat(rightPad);
+    case 'both':
+      // For both, we use same char on both sides, equal distribution
+      return char.repeat(leftPad) + text + char.repeat(rightPad);
+    default:
+      return text;
+  }
+}
+
+// Process text padding
+function processPadding() {
+  const startTime = performance.now();
+  const text = inputText.value;
+  const length = parseInt(targetLength.value) || 20;
+  const char = getPaddingChar();
+  const mode = currentMode;
+  const truncate = truncateLong.checked;
+  const pMode = processingMode.value;
+  
+  if (!text) {
+    outputText.value = '';
+    outputStats.textContent = 'Lines: 0 | Max Length: 0 | Total Chars: 0';
+    processingTime.textContent = '';
+    livePreview.classList.add('hidden');
+    return;
+  }
+  
+  try {
+    let result = [];
+    let lines = [];
+    
+    if (pMode === 'line') {
+      lines = text.split('\n');
+    } else if (pMode === 'word') {
+      lines = text.split(/\s+/).filter(w => w.length > 0);
+    } else {
+      lines = [text];
+    }
+    
+    result = lines.map(line => padText(line, length, char, mode, truncate));
+    
+    const output = result.join('\n');
+    const endTime = performance.now();
+    
+    // Update output
+    outputText.value = output;
+    
+    // Calculate stats
+    const maxLen = Math.max(...result.map(r => r.length));
+    outputStats.textContent = `Lines: ${result.length} | Max Length: ${maxLen} | Total Chars: ${output.length}`;
+    processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+    
+    // Update preview
+    updatePreview(result);
+    
+  } catch (error) {
+    console.error('Padding error:', error);
+  }
+}
+
+// Update live preview
+function updatePreview(lines) {
+  if (lines.length === 0) {
+    livePreview.classList.add('hidden');
+    return;
+  }
+  
+  livePreview.classList.remove('hidden');
+  const previewLines = lines.slice(0, 5);
+  const char = getPaddingChar();
+  
+  previewContent.innerHTML = previewLines.map((line, idx) => {
+    // Highlight padding characters
+    const text = inputText.value.split('\n')[idx] || '';
+    const padded = line;
+    let display = '';
+    
+    if (currentMode === 'right' || currentMode === 'center' || currentMode === 'both') {
+      // Highlight leading padding
+      const leadingMatch = padded.match(new RegExp(`^(${char}+)`));
+      if (leadingMatch) {
+        display += `<span class="text-indigo-400">${leadingMatch[1]}</span>`;
+      }
+    }
+    
+    display += `<span class="text-white">${text}</span>`;
+    
+    if (currentMode === 'left' || currentMode === 'center' || currentMode === 'both') {
+      // Highlight trailing padding
+      const trailingMatch = padded.match(new RegExp(`(${char}+)$`));
+      if (trailingMatch) {
+        display += `<span class="text-indigo-400">${trailingMatch[1]}</span>`;
+      }
+    }
+    
+    return `<div class="preview-line py-1 border-b border-white/5 last:border-0">${display}</div>`;
+  }).join('');
+  
+  if (lines.length > 5) {
+    previewContent.innerHTML += `<div class="text-xs text-gray-500 text-center py-2">... and ${lines.length - 5} more lines</div>`;
+  }
+}
+
+// Debounced processing
+const debouncedProcess = debounce(processPadding, 100);
+
+// Mode selection
+modeBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    modeBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentMode = btn.dataset.mode;
+    debouncedProcess();
+  });
+});
+
+// Event listeners
+inputText.addEventListener('input', () => {
+  updateInputStats();
+  debouncedProcess();
+});
+
+targetLength.addEventListener('input', debouncedProcess);
+truncateLong.addEventListener('change', debouncedProcess);
+processingMode.addEventListener('change', debouncedProcess);
+
+paddingCharSelect.addEventListener('change', () => {
+  if (paddingCharSelect.value === 'custom') {
+    customPaddingChar.classList.remove('hidden');
+  } else {
+    customPaddingChar.classList.add('hidden');
+  }
+  debouncedProcess();
+});
+
+customPaddingChar.addEventListener('input', debouncedProcess);
+
+// Preset buttons
+presetBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    currentMode = btn.dataset.mode;
+    targetLength.value = btn.dataset.len;
+    
+    // Update mode buttons
+    modeBtns.forEach(b => {
+      b.classList.toggle('active', b.dataset.mode === currentMode);
+    });
+    
+    // Set padding char
+    const charMap = {
+      'space': 'space',
+      'zero': 'zero',
+      'dash': 'dash'
+    };
+    paddingCharSelect.value = charMap[btn.dataset.char] || 'space';
+    if (paddingCharSelect.value === 'custom') {
+      customPaddingChar.classList.remove('hidden');
+      customPaddingChar.value = btn.dataset.char;
+    } else {
+      customPaddingChar.classList.add('hidden');
+    }
+    
+    debouncedProcess();
+  });
+});
+
+// Drag and drop handlers
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  if (!file.type.match('text.*') && !file.name.match(/\.(txt|csv|json|xml|html?|md|js|css|py|java|cpp|c|php|rb|go|rs|swift|kt|sql|log)$/i)) {
+    alert('Please upload a text file');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    updateInputStats();
+    processPadding();
+  };
+  reader.readAsText(file);
+}
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    updateInputStats();
+    processPadding();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  updateInputStats();
+  processPadding();
+  inputText.focus();
+}
+
+// Copy output
+async function copyOutput() {
+  if (!outputText.value) return;
+  
+  try {
+    await navigator.clipboard.writeText(outputText.value);
+    const originalText = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalText;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+}
+
+// Download output
+function downloadOutput() {
+  const text = outputText.value;
+  if (!text.trim()) return;
+  
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'padded-text.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Reset all
+function resetAll() {
+  inputText.value = '';
+  outputText.value = '';
+  targetLength.value = 20;
+  paddingCharSelect.value = 'space';
+  customPaddingChar.value = '';
+  customPaddingChar.classList.add('hidden');
+  processingMode.value = 'line';
+  truncateLong.checked = false;
+  currentMode = 'left';
+  
+  modeBtns.forEach(b => b.classList.remove('active'));
+  document.querySelector('[data-mode="left"]').classList.add('active');
+  
+  updateInputStats();
+  outputStats.textContent = 'Lines: 0 | Max Length: 0 | Total Chars: 0';
+  processingTime.textContent = '';
+  livePreview.classList.add('hidden');
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Button event listeners
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+copyBtn.addEventListener('click', copyOutput);
+downloadBtn.addEventListener('click', downloadOutput);
+resetBtn.addEventListener('click', resetAll);
+
+// Initialize
+updateInputStats();
+</script>
+</body>
+</html>

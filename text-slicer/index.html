@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Text Slicer - Free Online Text Slicing Tool</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online text slicer tool. Slice text into equal parts by characters, words, or length. Cut text into pieces, extract segments, and divide content instantly. No registration required." />
+  <meta name="keywords" content="text slicer, text slicer online, free text slicer, online text slicer, slice text online, text slice tool, split text into parts online, cut text into pieces online, text segmenter online free, text chunker online, text slicing tool online, slice text by length online, slice text by characters online, slice text by words online, text cutter online free, text partition tool online, free online text slicer tool, bulk text slicer online, text slicing utility online, divide text online free, text breaker online, segment text tool online free, text slicer without login online, text slice generator online free, text extraction slicer online, text slicing formatter online, online text slicing editor free, text slice calculator online" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/text-slicer/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/text-slicer/" />
+  <meta property="og:title" content="Text Slicer - Free Online Text Slicing Tool" />
+  <meta property="og:description" content="Slice text into equal parts by characters, words, or length. Cut text into pieces and extract segments instantly with no registration required." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/text-slicer/" />
+  <meta name="twitter:title" content="Text Slicer - Free Online Text Slicing Tool" />
+  <meta name="twitter:description" content="Slice text into equal parts by characters, words, or length. Cut text into pieces and extract segments instantly with no registration required." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .method-btn {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    .method-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .slice-preview-item {
+      border-left: 2px solid rgba(99, 102, 241, 0.5);
+      transition: all 0.2s ease;
+    }
+    
+    .slice-preview-item:hover {
+      border-left-color: rgba(99, 102, 241, 1);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 12h20M10 20h20M10 28h20" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Text Slicer</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Text Slicer
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Text Processing Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-slicing enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Input Text
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Type or paste text here... Or drag & drop a file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.csv,.md,.json,.xml,.html,.js,.css,.py,.java,.cpp,.c,.php,.rb,.go,.rs,.swift,.kt,.sql,.log" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Chars: 0 | Words: 0 | Lines: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Output -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Sliced Result <span id="partsCount" class="text-gray-500 font-normal ml-1 hidden">(0 parts)</span>
+            </label>
+            <div class="flex gap-1">
+              <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                Copy
+              </button>
+              <button id="downloadBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Download
+              </button>
+              <button id="downloadPartsBtn" class="hidden compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+                All Parts
+              </button>
+            </div>
+          </div>
+          
+          <textarea id="outputText" readonly spellcheck="false"
+            class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+            placeholder="Sliced text appears here automatically..."></textarea>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="outputStats">Parts: 0 | Chars: 0</span>
+            <span id="processingTime" class="text-gray-600"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-3">
+        
+        <!-- Slice Method -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Slice Method</label>
+          <div class="flex flex-wrap gap-1">
+            <button class="method-btn active rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="length">By Length</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="parts">Into Parts</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="words">By Words</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="lines">By Lines</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="delimiter">By Delimiter</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="extract">Extract Range</button>
+          </div>
+        </div>
+
+        <!-- Method Options -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+          <!-- By Length Options -->
+          <div id="lengthOptions" class="method-panel space-y-2">
+            <label class="text-xs text-gray-400 mb-1 block">Slice Size (characters)</label>
+            <input type="number" id="sliceLength" min="1" value="100" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+          </div>
+
+          <!-- Into Parts Options -->
+          <div id="partsOptions" class="method-panel hidden space-y-2">
+            <label class="text-xs text-gray-400 mb-1 block">Number of Parts</label>
+            <input type="number" id="numParts" min="2" value="4" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+          </div>
+
+          <!-- By Words Options -->
+          <div id="wordsOptions" class="method-panel hidden space-y-2">
+            <label class="text-xs text-gray-400 mb-1 block">Words Per Slice</label>
+            <input type="number" id="wordsPerSlice" min="1" value="10" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+          </div>
+
+          <!-- By Lines Options -->
+          <div id="linesOptions" class="method-panel hidden space-y-2">
+            <label class="text-xs text-gray-400 mb-1 block">Lines Per Slice</label>
+            <input type="number" id="linesPerSlice" min="1" value="5" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+          </div>
+
+          <!-- By Delimiter Options -->
+          <div id="delimiterOptions" class="method-panel hidden space-y-2">
+            <label class="text-xs text-gray-400 mb-1 block">Delimiter</label>
+            <select id="delimiterSelect" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value=",">Comma (,)</option>
+              <option value=" ">Space ( )</option>
+              <option value="\n">New Line</option>
+              <option value="\t">Tab</option>
+              <option value=";">Semicolon (;)</option>
+              <option value="|">Pipe (|)</option>
+              <option value="custom">Custom...</option>
+            </select>
+            <input type="text" id="customDelimiter" placeholder="Enter custom delimiter" class="w-full px-2 py-1.5 rounded-md glass-input text-xs hidden">
+          </div>
+
+          <!-- Extract Range Options -->
+          <div id="extractOptions" class="method-panel hidden space-y-2">
+            <div class="flex gap-2">
+              <div class="flex-1">
+                <label class="text-xs text-gray-400 mb-1 block">Start Position</label>
+                <input type="number" id="extractStart" min="0" value="0" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              </div>
+              <div class="flex-1">
+                <label class="text-xs text-gray-400 mb-1 block">End Position</label>
+                <input type="number" id="extractEnd" min="1" value="100" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              </div>
+            </div>
+          </div>
+
+          <!-- Output Separator -->
+          <div class="">
+            <label class="text-xs text-gray-400 mb-1 block">Separator Between Parts</label>
+            <select id="separatorSelect" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="\n\n">Double New Line</option>
+              <option value="\n">New Line</option>
+              <option value="---">--- (dashes)</option>
+              <option value="===">=== (equals)</option>
+              <option value=" | ">| (pipe)</option>
+              <option value=", ">, (comma)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Options -->
+        <div class="flex flex-wrap gap-4">
+          <label class="flex items-center gap-1.5 text-xs text-gray-400">
+            <input type="checkbox" id="showPartNumbers" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Show part numbers
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400">
+            <input type="checkbox" id="trimSlices" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Trim whitespace from slices
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400">
+            <input type="checkbox" id="removeEmpty" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Remove empty slices
+          </label>
+        </div>
+
+        <!-- Parts Preview -->
+        <div id="partsPreview" class="hidden">
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-xs font-medium text-gray-300">Individual Parts <span class="text-gray-500 font-normal">(click to copy)</span></label>
+          </div>
+          <div id="partsList" class="max-h-40 overflow-y-auto space-y-1 pr-1">
+            <!-- Parts will be inserted here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Text Slicer?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Auto-Slice</h3>
+          <p class="text-gray-400 text-xs">Real-time processing as you type</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">6 Methods</h3>
+          <p class="text-gray-400 text-xs">Length, parts, words, lines & more</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Drag & Drop</h3>
+          <p class="text-gray-400 text-xs">Upload text files instantly</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based, no uploads</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy or download all parts</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration required</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Input Text</h3>
+          <p class="text-gray-400 text-xs">Type, paste, or drop a file. Slicing happens automatically.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Choose Method</h3>
+          <p class="text-gray-400 text-xs">Select by length, parts, words, lines, delimiter, or range.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Configure</h3>
+          <p class="text-gray-400 text-xs">Set slice size, separators, and display options.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy results or download all parts individually.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Text Slicing: Mastering Text Segmentation for Modern Workflows</h2>
+        
+        <p><strong>Text slicing</strong> is a fundamental yet powerful text manipulation technique that enables users to divide large blocks of text into manageable, discrete segments or chunks. Whether you're a content creator breaking down articles for social media, a developer parsing data files, a student organizing research notes, or a data analyst segmenting information for processing, understanding how to effectively <strong>slice text online</strong> is essential for modern digital productivity. Our <strong>free text slicer</strong> tool provides instant access to professional-grade text segmentation capabilities without any cost or technical barriers.</p>
+
+        <p>In an era where information overload is commonplace, the ability to <strong>cut text into pieces online</strong> transforms unwieldy documents into organized, actionable components. Unlike simple text splitting which often relies on finding specific delimiters, <strong>text slicing</strong> offers precise control over segment size, count, and boundaries. This comprehensive guide explores everything you need to know about text segmentation, from basic concepts to advanced applications, helping you maximize the value of our <strong>online text slicer</strong> tool.</p>
+
+        <h2>Understanding Text Slicing: Concepts and Fundamentals</h2>
+
+        <h3>What Is Text Slicing?</h3>
+        
+        <p><strong>Text slicing</strong> refers to the systematic division of a continuous text string into smaller, discrete segments based on specified criteria. While similar to text splitting, slicing emphasizes precision and control—you define exactly how the text should be divided, whether by character count, word boundaries, line breaks, or custom delimiters. When you <strong>slice text by length online</strong>, you're performing a controlled segmentation that preserves content integrity while creating manageable chunks.</p>
+
+        <p>The distinction between slicing and other text manipulation methods is important. <strong>Text chunker online</strong> functionality focuses on creating equal-sized segments regardless of content boundaries. <strong>Text partition tool online</strong> capabilities emphasize dividing text into a specific number of parts. <strong>Text segmenter online free</strong> tools often combine multiple approaches, allowing users to choose the segmentation strategy that best fits their needs. Our <strong>free online text slicer tool</strong> integrates all these approaches into a single, intuitive interface.</p>
+
+        <h3>The Importance of Text Segmentation</h3>
+        
+        <p>Modern digital workflows constantly require <strong>text slicing</strong> operations. Content management systems need to break articles into preview snippets. SMS marketing platforms must divide messages into 160-character segments. Data processing pipelines segment logs for parallel analysis. Social media managers <strong>slice text by characters online</strong> to fit platform limits. Email systems chunk attachments for transmission. These applications demonstrate why reliable <strong>text slicer online</strong> tools are essential utilities.</p>
+
+        <p>Beyond technical necessity, text slicing serves creative and organizational purposes. Writers use <strong>text slice tool</strong> capabilities to restructure narratives, create cliffhangers, or organize chapters. Educators segment reading assignments by difficulty or topic. Researchers divide transcripts for coding and analysis. The versatility of <strong>divide text online free</strong> operations makes text slicing relevant across virtually every domain that works with written content.</p>
+
+        <h2>Text Slicing Methods and Techniques</h2>
+
+        <h3>Slicing by Character Length</h3>
+        
+        <p>The most precise <strong>text slicer</strong> method divides text into segments of exact character counts. When you <strong>slice text by length online</strong>, you specify how many characters each segment should contain, and the tool creates equal-sized chunks regardless of word boundaries. This approach is essential for technical applications: SMS message preparation (160 characters), Twitter posts (280 characters), database field population (fixed-width columns), cryptographic operations (block sizes), and file naming (character limits).</p>
+
+        <p>Character-length slicing requires careful handling of edge cases. What happens when text doesn't divide evenly? Professional <strong>text slicing tool online</strong> solutions offer options: distribute remainder across segments, create a final partial segment, or pad segments to equal length. Unicode characters, combining marks, and multi-byte sequences must be counted correctly—not all characters occupy single bytes. Our <strong>slice text by characters online</strong> functionality handles these complexities, ensuring accurate segmentation regardless of text encoding.</p>
+
+        <h3>Slicing into Equal Parts</h3>
+        
+        <p>Rather than specifying segment size, you can specify segment count. When you need to <strong>split text into parts online</strong> equally, the tool calculates the appropriate slice boundaries to create the requested number of segments. This method proves invaluable for parallel processing (dividing work among CPU cores), load balancing (distributing tasks), collaborative editing (assigning sections), and comparative analysis (equal sample sizes). The <strong>text slice calculator online</strong> logic automatically determines optimal breakpoints.</p>
+
+        <p>Equal-part slicing becomes complex when you want to respect word boundaries. Should segments contain exactly equal character counts, or should they contain roughly equal word counts with variable lengths? Should the algorithm prioritize segment size equality or content coherence? Advanced <strong>bulk text slicer online</strong> tools offer these options, allowing users to balance precision with readability based on their specific requirements.</p>
+
+        <h3>Slicing by Words and Lines</h3>
+        
+        <p>Semantic slicing respects natural language boundaries. When you <strong>slice text by words online</strong>, segments break at word boundaries, preserving readability and linguistic coherence. This approach suits content creation: dividing articles into paragraphs of specified word counts, creating reading assignments of consistent length, or preparing speech excerpts of predictable duration. Similarly, <strong>text breaker online</strong> line-slicing respects paragraph structure, making it ideal for poetry, code, and structured documents.</p>
+
+        <p>Word and line slicing introduces interesting algorithmic challenges. What constitutes a word? Should hyphenated compounds count as one word or two? How should the algorithm handle punctuation attached to words? Professional <strong>text slicing utility online</strong> tools use linguistic rules to make these determinations, ensuring that when you <strong>slice text online</strong>, the results make sense to human readers, not just machines.</p>
+
+        <h3>Delimiter-Based Slicing</h3>
+        
+        <p>Sometimes text contains natural boundaries marked by specific characters or strings. <strong>Text cutter online free</strong> delimiter slicing uses these markers to segment content: commas for CSV data, newlines for log entries, HTML tags for web scraping, markdown headers for document structure, or custom separators for proprietary formats. This method differs from simple splitting in that it can create overlapping segments, include delimiters in output, or handle multiple delimiter types simultaneously.</p>
+
+        <p>Advanced delimiter slicing supports regular expressions, allowing patterns like "split at every third comma" or "slice at sentence endings." When processing structured data with <strong>text extraction slicer online</strong> capabilities, regex patterns can identify complex boundaries that simple string matching cannot. This sophistication makes professional <strong>text slicer without login online</strong> tools suitable for data science and automation workflows.</p>
+
+        <h3>Range Extraction Slicing</h3>
+        
+        <p>Sometimes you don't want to slice entire text—just extract specific portions. Range extraction allows you to <strong>cut text into pieces online</strong> by specifying start and end positions, character ranges, line numbers, or word indices. This surgical approach extracts exactly what you need without processing entire documents. Developers use range extraction for substring operations, log parsing, and data field isolation. Content creators use it for quoting, excerpting, and highlighting.</p>
+
+        <h2>Practical Applications of Text Slicing</h2>
+
+        <h3>Content Creation and Publishing</h3>
+        
+        <p>Digital publishers constantly <strong>slice text online</strong> to adapt content for different platforms and formats. A 2,000-word blog post might be sliced into: Twitter threads (280-character segments), Instagram captions (2,200 characters), email newsletter sections (readable chunks), podcast show notes (topic segments), and social media quote cards (impactful excerpts). Without efficient <strong>text slice generator online free</strong> tools, this repurposing becomes tedious manual work.</p>
+
+        <p>Journalists and bloggers use <strong>text segmenter online free</strong> capabilities to create series content from single long-form pieces. By slicing at logical breakpoints, they transform one article into a multi-part series that drives engagement over time. Fiction writers use slicing to create episodic content for serialization platforms. Technical writers slice documentation into help articles. These creative applications demonstrate how <strong>online text slicing editor free</strong> tools support modern content strategies.</p>
+
+        <h3>Software Development and Data Processing</h3>
+        
+        <p>Programmers rely on <strong>text slicer online</strong> tools for numerous development tasks. API responses often require slicing to extract specific fields. Log files need segmentation for analysis and archiving. Configuration files must be parsed into sections. Test data generation requires controlled text segmentation. When debugging string manipulation code, developers use <strong>text slice tool</strong> utilities to verify expected outputs and identify boundary condition errors.</p>
+
+        <p>Data scientists and analysts use <strong>bulk text slicer online</strong> capabilities to prepare datasets for machine learning. Text classification models often require fixed-length input sequences. Named entity recognition works better with properly segmented text. Sentiment analysis benefits from sentence-level slicing. The <strong>text slicing formatter online</strong> functionality ensures training data is properly prepared for these applications.</p>
+
+        <h3>Education and Research</h3>
+        
+        <p>Educators employ <strong>text slicer</strong> tools to create differentiated learning materials. Complex texts can be sliced by reading level, with simpler segments for struggling readers and advanced segments for gifted students. Research papers can be divided into methodology, results, and discussion sections for targeted study. Historical documents can be segmented by topic for thematic analysis. The ability to <strong>divide text online free</strong> supports personalized education at scale.</p>
+
+        <p>Academic researchers use <strong>text partition tool online</strong> capabilities for qualitative data analysis. Interview transcripts are sliced by question or theme. Survey responses are segmented for coding. Literature reviews are divided by subtopic. These segmentation operations, when performed with professional <strong>text slicing utility online</strong> tools, maintain data integrity while enabling systematic analysis. The <strong>free text slicer</strong> removes cost barriers from academic research workflows.</p>
+
+        <h3>Business and Communication</h3>
+        
+        <p>Corporate communication professionals use text slicing for message optimization. Email subject lines must fit preview panes (character limits). Marketing copy must respect SMS constraints (160 characters). Presentation slides require concise bullet points (word limits). Internal memos need clear section breaks (line limits). <strong>Text slicer online</strong> tools ensure communications meet these constraints without losing meaning.</p>
+
+        <p>Legal professionals use <strong>text cutter online free</strong> capabilities to organize case documents, contracts, and evidence. Slicing by clause, section, or paragraph enables efficient review and reference. Medical transcriptionists segment patient notes by topic or chronology. Financial analysts divide reports by metric or time period. These professional applications require the precision and reliability that quality <strong>online text slicer</strong> tools provide.</p>
+
+        <h2>Advanced Text Slicing Strategies</h2>
+
+        <h3>Overlapping and Sliding Windows</h3>
+        
+        <p>Standard <strong>text slicing</strong> creates discrete, non-overlapping segments. However, some applications benefit from overlapping slices or sliding windows. Natural language processing often uses overlapping windows to preserve context at segment boundaries. Signal processing applies sliding windows to detect patterns. Content analysis might use overlapping segments to ensure no content is missed at slice points. Advanced <strong>text chunker online</strong> tools support these sophisticated segmentation strategies.</p>
+
+        <h3>Smart Boundary Detection</h3>
+        
+        <p>Rather than slicing at exact positions, smart slicing finds optimal boundaries near target positions. If you want 100-character segments but the nearest sentence boundary is at 95 characters, smart slicing adjusts to preserve semantic coherence. This approach requires linguistic analysis: identifying sentence boundaries, clause boundaries, phrase boundaries, and even topic boundaries. Professional <strong>text segmenter online free</strong> tools implement these algorithms for human-friendly output.</p>
+
+        <h3>Conditional and Selective Slicing</h3>
+        
+        <p>Sometimes you only want to slice certain portions of text. Conditional slicing applies segmentation rules only to content matching specific criteria: slice only paragraphs longer than 200 words, segment only lines containing keywords, or extract only sections marked with specific headers. This selective approach, supported by advanced <strong>text extraction slicer online</strong> tools, enables sophisticated text processing workflows without manual pre-filtering.</p>
+
+        <h2>Best Practices for Effective Text Slicing</h2>
+
+        <h3>Choosing the Right Slicing Strategy</h3>
+        
+        <p>Match your slicing method to your content and goals: Use character slicing for technical constraints (SMS, Twitter, database fields). Apply word slicing for readability and linguistic coherence. Choose line slicing for structured documents and poetry. Select delimiter slicing for data files and marked-up content. Use range extraction for surgical precision. Consider smart slicing when segment boundaries matter semantically. The versatility of <strong>free online text slicer tool</strong> solutions supports all these strategies.</p>
+
+        <h3>Handling Edge Cases and Errors</h3>
+        
+        <p>Robust <strong>text slicing</strong> workflows anticipate edge cases: empty input, single-word input, input shorter than slice size, uneven division, special characters, encoding issues, and memory constraints. Professional <strong>text slicer without login online</strong> tools handle these gracefully, providing meaningful output or clear error messages rather than crashing or producing garbage results. Always test slicing operations with boundary case inputs before production use.</p>
+
+        <h3>Preserving Metadata and Context</h3>
+        
+        <p>When slicing text, consider what metadata must be preserved. Original position indicators (line numbers, character offsets) help reference source material. Part numbering (1 of 5, 2 of 5) maintains sequence awareness. Timestamps preserve temporal context for logs. Source attribution maintains provenance for quotes. Quality <strong>text slicing formatter online</strong> tools include options for attaching this metadata to sliced output, ensuring segments remain traceable to their origins.</p>
+
+        <h2>Comparing Text Slicing Approaches</h2>
+
+        <h3>Manual Slicing vs. Automated Tools</h3>
+        
+        <p>Manual text slicing—using text editors to copy, cut, and paste segments—is feasible for small, one-time tasks but becomes impractical for large volumes or repetitive operations. Manual slicing is slow (minutes per document versus seconds), error-prone (humans miscount characters, miss boundaries), and non-reproducible (different results each time). Automated <strong>text slicer online</strong> tools eliminate these issues, providing speed, accuracy, and consistency.</p>
+
+        <h3>Programming Solutions vs. Web Tools</h3>
+        
+        <p>Developers can implement text slicing in any programming language: Python string slicing `text[start:end]`, JavaScript `substring()` methods, or regular expression operations. However, writing code for simple slicing is overkill for one-time needs, and maintaining slicing scripts requires ongoing effort. Web-based <strong>online text slicing editor free</strong> tools provide immediate access, intuitive interfaces, and professional features without setup or maintenance. Our browser-based <strong>text slice calculator online</strong> bridges the gap between power and accessibility.</p>
+
+        <h2>The Future of Text Segmentation Technology</h2>
+
+        <p>Artificial intelligence is transforming <strong>text slicing</strong> from mechanical segmentation to intelligent content analysis. AI-powered tools can: identify optimal slice points based on semantic coherence, maintain topic continuity across segments, adjust slice sizes based on content complexity, generate summaries for each slice, and even translate or adapt content during slicing. These capabilities will elevate <strong>text slicer</strong> tools from simple utilities to intelligent content assistants.</p>
+
+        <p>Our platform evolves continuously to incorporate these innovations while maintaining the simplicity and reliability you expect from a <strong>free text slicer</strong>. We balance cutting-edge features with intuitive interfaces, ensuring that whether you need basic <strong>slice text by length online</strong> functionality or advanced <strong>bulk text slicer online</strong> capabilities, the tool remains accessible and efficient.</p>
+
+        <h2>Conclusion: Master Text Slicing with Professional Tools</h2>
+
+        <p><strong>Text slicing</strong> remains one of the most essential text manipulation operations for modern digital work. From preparing social media content to processing data files, from creating educational materials to analyzing research data, the ability to precisely segment text empowers professionals across every industry. Whether you need to <strong>slice text by characters online</strong>, <strong>slice text by words online</strong>, <strong>cut text into pieces online</strong>, or perform sophisticated <strong>text partition tool online</strong> operations, mastering text slicing techniques will dramatically improve your productivity and output quality.</p>
+
+        <p>Our <strong>free online text slicer tool</strong> provides everything you need for professional text segmentation. With automatic real-time slicing as you type, support for six different methods (by length, into parts, by words, by lines, by delimiter, and range extraction), plus flexible output options and individual part management, this tool serves everyone from casual users to data professionals. The browser-based architecture ensures privacy and accessibility, while the intuitive interface requires no learning curve. Stop struggling with manual text segmentation—start using our professional <strong>text slicer online</strong> today and experience the efficiency of automated text slicing.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool slice text automatically as I type?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>text slicer online</strong> features <strong>automatic real-time slicing</strong>. As you type or paste text, the tool instantly processes your input and displays the sliced results. We use intelligent debouncing to ensure smooth performance. The "Auto-slicing enabled" indicator confirms the feature is active. Changes to slice methods or options also apply instantly, making this the most responsive <strong>free text slicer</strong> available.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What's the difference between slicing by length and into parts?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Slice by length</strong> creates segments of exact character counts (e.g., every 100 characters). <strong>Slice into parts</strong> divides text into a specific number of equal segments (e.g., split into 4 parts). Use length slicing for SMS limits, Twitter posts, or fixed-width fields. Use parts slicing for distributing work, creating equal reading assignments, or parallel processing. Our <strong>online text slicer</strong> supports both approaches.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I download individual slices separately?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! When your text creates multiple slices, the <strong>"All Parts"</strong> button appears. Click it to download a single file containing all slices clearly labeled (Part 1, Part 2, etc.). You can also click any individual slice in the preview section to copy it to clipboard. This <strong>bulk text slicer online</strong> feature makes managing large segmentation tasks simple and efficient.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What file types are supported for upload?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">All text-based files are supported: TXT, CSV, JSON, XML, HTML, Markdown (MD), and code files (JS, CSS, Python, Java, C/C++, PHP, Ruby, Go, Rust, Swift, Kotlin, SQL, LOG). Files are read as plain text, so any text file works regardless of extension. Simply drag and drop or select your file, and our <strong>text slicing utility online</strong> handles the rest.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How does the range extraction method work?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">The <strong>extract range</strong> method allows you to surgically extract a specific portion of text by specifying start and end character positions. For example, setting start to 0 and end to 100 extracts the first 100 characters. This is different from other slicing methods that process entire text—range extraction gives you precise control over exactly which portion to keep. Perfect for <strong>text extraction slicer online</strong> tasks like getting previews or specific sections.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is there a limit to how much text I can slice?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">The tool handles very large texts—up to several million characters or roughly 10-20MB files. Browser memory is the primary limiting factor. Chrome and Edge handle larger files better than mobile browsers. For extremely large files (100MB+), consider using command-line tools or splitting the file first. Our <strong>free text slicer</strong> is optimized for typical daily use including full documents, code files, and lengthy content.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I use custom delimiters for slicing?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Select "By Delimiter" method and choose from common options (comma, space, newline, tab, semicolon, pipe) or enter a custom delimiter of any length. This <strong>text cutter online free</strong> feature supports multi-character delimiters and special characters. Use it to slice CSV data, parse logs, segment marked-up content, or process any structured text format.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my data secure and private?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely. All processing happens <strong>locally in your browser</strong>—your text never uploads to our servers or leaves your device. You can verify this by checking the Network tab in browser DevTools (no data transfer occurs). The tool works offline after initial loading. This makes our <strong>text slicer without login online</strong> ideal for sensitive documents, confidential code, or private messages. Your data privacy is guaranteed.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What separators can I use between slices?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Choose from several separator options: double new line (paragraph break), single new line, dashes (---), equals (===), pipe (|), or comma. You can also choose no separator. This <strong>text slicing formatter online</strong> flexibility ensures your sliced output matches your intended use—whether that's creating readable sections, preparing data for import, or formatting for specific applications.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this tool free to use?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, completely <strong>free</strong> with no registration, usage limits, watermarks, or hidden fees. Use it for personal projects, commercial work, education, or any purpose without attribution. This is truly a <strong>free online text slicer tool</strong> for everyone. The service is supported by unobtrusive advertising. All features are available immediately without creating an account.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const outputText = document.getElementById('outputText');
+const inputStats = document.getElementById('inputStats');
+const outputStats = document.getElementById('outputStats');
+const partsCount = document.getElementById('partsCount');
+const processingTime = document.getElementById('processingTime');
+const partsPreview = document.getElementById('partsPreview');
+const partsList = document.getElementById('partsList');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+
+// Buttons
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const downloadPartsBtn = document.getElementById('downloadPartsBtn');
+const resetBtn = document.getElementById('resetBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+// Method buttons and panels
+const methodBtns = document.querySelectorAll('.method-btn');
+const methodPanels = document.querySelectorAll('.method-panel');
+let currentMethod = 'length';
+
+// Options
+const showPartNumbers = document.getElementById('showPartNumbers');
+const trimSlices = document.getElementById('trimSlices');
+const removeEmpty = document.getElementById('removeEmpty');
+
+// Slice parts storage
+let sliceParts = [];
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Update input stats
+function updateInputStats() {
+  const text = inputText.value;
+  const chars = text.length;
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+  const lines = text === '' ? 0 : text.split('\n').length;
+  inputStats.textContent = `Chars: ${chars} | Words: ${words} | Lines: ${lines}`;
+}
+
+// Debounce function for performance
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Method selection
+methodBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    methodBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentMethod = btn.dataset.method;
+    
+    methodPanels.forEach(panel => panel.classList.add('hidden'));
+    document.getElementById(currentMethod + 'Options').classList.remove('hidden');
+    
+    sliceText();
+  });
+});
+
+// Custom delimiter toggle
+document.getElementById('delimiterSelect').addEventListener('change', (e) => {
+  const customInput = document.getElementById('customDelimiter');
+  if (e.target.value === 'custom') {
+    customInput.classList.remove('hidden');
+  } else {
+    customInput.classList.add('hidden');
+  }
+  sliceText();
+});
+
+// Auto-slice on option changes
+['sliceLength', 'numParts', 'wordsPerSlice', 'linesPerSlice', 'customDelimiter', 'extractStart', 'extractEnd', 'separatorSelect'].forEach(id => {
+  const el = document.getElementById(id);
+  if (el) {
+    el.addEventListener('input', sliceText);
+    el.addEventListener('change', sliceText);
+  }
+});
+
+// Checkbox listeners
+showPartNumbers.addEventListener('change', sliceText);
+trimSlices.addEventListener('change', sliceText);
+removeEmpty.addEventListener('change', sliceText);
+
+// Get separator value
+function getSeparator() {
+  const sep = document.getElementById('separatorSelect').value;
+  return sep.replace(/\\n/g, '\n');
+}
+
+// Main slice function
+function sliceText() {
+  const startTime = performance.now();
+  let text = inputText.value;
+  
+  if (!text.trim()) {
+    outputText.value = '';
+    outputStats.textContent = 'Parts: 0 | Chars: 0';
+    partsCount.classList.add('hidden');
+    partsPreview.classList.add('hidden');
+    downloadPartsBtn.classList.add('hidden');
+    processingTime.textContent = '';
+    sliceParts = [];
+    return;
+  }
+  
+  let parts = [];
+  const separator = getSeparator();
+  
+  try {
+    switch(currentMethod) {
+      case 'length':
+        const sliceLength = parseInt(document.getElementById('sliceLength').value) || 100;
+        for (let i = 0; i < text.length; i += sliceLength) {
+          let part = text.slice(i, i + sliceLength);
+          if (trimSlices.checked) part = part.trim();
+          if (!removeEmpty.checked || part.length > 0) {
+            parts.push(part);
+          }
+        }
+        break;
+        
+      case 'parts':
+        const numParts = parseInt(document.getElementById('numParts').value) || 4;
+        const partSize = Math.ceil(text.length / numParts);
+        for (let i = 0; i < text.length; i += partSize) {
+          let part = text.slice(i, i + partSize);
+          if (trimSlices.checked) part = part.trim();
+          if (!removeEmpty.checked || part.length > 0) {
+            parts.push(part);
+          }
+        }
+        break;
+        
+      case 'words':
+        const wordsPerSlice = parseInt(document.getElementById('wordsPerSlice').value) || 10;
+        const words = text.split(/\s+/).filter(w => w.length > 0);
+        for (let i = 0; i < words.length; i += wordsPerSlice) {
+          let part = words.slice(i, i + wordsPerSlice).join(' ');
+          if (trimSlices.checked) part = part.trim();
+          if (!removeEmpty.checked || part.length > 0) {
+            parts.push(part);
+          }
+        }
+        break;
+        
+      case 'lines':
+        const linesPerSlice = parseInt(document.getElementById('linesPerSlice').value) || 5;
+        const lines = text.split('\n');
+        for (let i = 0; i < lines.length; i += linesPerSlice) {
+          let part = lines.slice(i, i + linesPerSlice).join('\n');
+          if (trimSlices.checked) part = part.trim();
+          if (!removeEmpty.checked || part.length > 0) {
+            parts.push(part);
+          }
+        }
+        break;
+        
+      case 'delimiter':
+        const delimiterSelect = document.getElementById('delimiterSelect').value;
+        let delimiter = delimiterSelect === 'custom' 
+          ? document.getElementById('customDelimiter').value 
+          : delimiterSelect;
+        delimiter = delimiter.replace(/\\n/g, '\n').replace(/\\t/g, '\t');
+        
+        if (delimiter) {
+          const splitParts = text.split(delimiter);
+          splitParts.forEach(part => {
+            if (trimSlices.checked) part = part.trim();
+            if (!removeEmpty.checked || part.length > 0) {
+              parts.push(part);
+            }
+          });
+        }
+        break;
+        
+      case 'extract':
+        const extractStart = parseInt(document.getElementById('extractStart').value) || 0;
+        const extractEnd = parseInt(document.getElementById('extractEnd').value) || text.length;
+        const extracted = text.slice(extractStart, extractEnd);
+        if (extracted) {
+          parts.push(extracted);
+        }
+        break;
+    }
+    
+    const endTime = performance.now();
+    sliceParts = parts;
+    
+    // Build output with separators and optional part numbers
+    let output = '';
+    parts.forEach((part, index) => {
+      if (showPartNumbers.checked && parts.length > 1) {
+        output += `=== Part ${index + 1} ===\n`;
+      }
+      output += part;
+      if (index < parts.length - 1) {
+        output += separator;
+      }
+    });
+    
+    outputText.value = output;
+    
+    // Update stats
+    const totalChars = parts.reduce((sum, part) => sum + part.length, 0);
+    outputStats.textContent = `Parts: ${parts.length} | Chars: ${totalChars}`;
+    partsCount.textContent = `(${parts.length} parts)`;
+    partsCount.classList.remove('hidden');
+    processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+    
+    // Update parts preview
+    displayPartsPreview(parts);
+    
+    // Show download parts button if multiple parts
+    if (parts.length > 1) {
+      downloadPartsBtn.classList.remove('hidden');
+    } else {
+      downloadPartsBtn.classList.add('hidden');
+    }
+    
+  } catch (error) {
+    console.error('Slice error:', error);
+  }
+}
+
+// Debounced slice for typing
+const debouncedSlice = debounce(sliceText, 0);
+
+// Display parts preview
+function displayPartsPreview(parts) {
+  if (parts.length === 0 || parts.length === 1) {
+    partsPreview.classList.add('hidden');
+    return;
+  }
+  
+  partsPreview.classList.remove('hidden');
+  partsList.innerHTML = '';
+  
+  parts.slice(0, 50).forEach((part, index) => {
+    const partDiv = document.createElement('div');
+    partDiv.className = 'slice-preview-item p-2 rounded bg-white/5 cursor-pointer text-xs';
+    const previewText = part.substring(0, 60).replace(/\n/g, ' ');
+    partDiv.innerHTML = `
+      <div class="flex items-center justify-between mb-0.5">
+        <span class="text-xs font-medium text-indigo-400">Part ${index + 1}</span>
+        <span class="text-xs text-gray-500">${part.length}c</span>
+      </div>
+      <div class="text-gray-300 truncate">${previewText}${part.length > 60 ? '...' : ''}</div>
+    `;
+    
+    partDiv.addEventListener('click', () => {
+      navigator.clipboard.writeText(part);
+      partDiv.style.background = 'rgba(34, 197, 94, 0.2)';
+      setTimeout(() => {
+        partDiv.style.background = '';
+      }, 200);
+    });
+    
+    partsList.appendChild(partDiv);
+  });
+  
+  if (parts.length > 50) {
+    const moreDiv = document.createElement('div');
+    moreDiv.className = 'text-xs text-gray-500 text-center py-1';
+    moreDiv.textContent = `... and ${parts.length - 50} more parts`;
+    partsList.appendChild(moreDiv);
+  }
+}
+
+// Drag and drop handlers
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  if (!file.type.match('text.*') && !file.name.match(/\.(txt|csv|json|xml|html?|md|js|css|py|java|cpp|c|php|rb|go|rs|swift|kt|sql|log)$/i)) {
+    alert('Please upload a text file');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    updateInputStats();
+    sliceText();
+  };
+  reader.readAsText(file);
+}
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    updateInputStats();
+    sliceText();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  updateInputStats();
+  sliceText();
+  inputText.focus();
+}
+
+// Copy output
+async function copyOutput() {
+  if (!outputText.value) return;
+  
+  try {
+    await navigator.clipboard.writeText(outputText.value);
+    const originalText = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalText;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+}
+
+// Download output
+function downloadOutput() {
+  const text = outputText.value;
+  if (!text.trim()) return;
+  
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'sliced-text.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Download all parts
+async function downloadAllParts() {
+  if (sliceParts.length === 0) return;
+  
+  let content = '';
+  sliceParts.forEach((part, index) => {
+    content += `=== PART ${index + 1} ===\n${part}\n\n`;
+  });
+  
+  const blob = new Blob([content], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'sliced-parts.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Reset all
+function resetAll() {
+  inputText.value = '';
+  outputText.value = '';
+  updateInputStats();
+  outputStats.textContent = 'Parts: 0 | Chars: 0';
+  partsCount.classList.add('hidden');
+  partsPreview.classList.add('hidden');
+  downloadPartsBtn.classList.add('hidden');
+  processingTime.textContent = '';
+  sliceParts = [];
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Event listeners
+inputText.addEventListener('input', () => {
+  updateInputStats();
+  debouncedSlice();
+});
+
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+copyBtn.addEventListener('click', copyOutput);
+downloadBtn.addEventListener('click', downloadOutput);
+downloadPartsBtn.addEventListener('click', downloadAllParts);
+resetBtn.addEventListener('click', resetAll);
+
+// Initialize
+updateInputStats();
+</script>
+</body>
+</html>

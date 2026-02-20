@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Word Wrap Tool - Free Online Text Wrapping</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online word wrap tool. Wrap text to any width while preserving word boundaries. Perfect for coding, documents, social media, and formatting long text. No registration required." />
+  <meta name="keywords" content="word wrap tool, word wrap online, free word wrap tool, online word wrap tool, wrap text online, wrap text tool online, text wrap tool, text wrapping tool online, line wrap tool online, wrap text to width online, wrap text by characters online, wrap text by column width online, wrap long text online free, word wrapping tool free online, text line wrapper online, paragraph wrap tool online, wrap lines of text online, free online word wrap tool, bulk text wrap online, text wrap utility online, wrap text editor online, word wrap formatter online, text wrapping for coding online free, wrap text without breaking words online, wrap text for documents online free, online paragraph wrap tool free, text wrapping without login online" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/word-wrap-tool/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/word-wrap-tool/" />
+  <meta property="og:title" content="Word Wrap Tool - Free Online Text Wrapping" />
+  <meta property="og:description" content="Free online word wrap tool. Wrap text to any width while preserving word boundaries. Perfect for coding, documents, and formatting long text." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/word-wrap-tool/" />
+  <meta name="twitter:title" content="Word Wrap Tool - Free Online Text Wrapping" />
+  <meta name="twitter:description" content="Free online word wrap tool. Wrap text to any width while preserving word boundaries. Perfect for coding, documents, and formatting long text." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+
+    .wrap-mode-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    .width-preset-btn.active {
+      background: rgba(34, 197, 94, 0.2);
+      border-color: rgba(34, 197, 94, 0.5);
+      color: #4ade80;
+    }
+
+    .ruler-mark {
+      position: absolute;
+      bottom: 0;
+      width: 1px;
+      height: 6px;
+      background: rgba(255,255,255,0.3);
+    }
+    .ruler-mark.major {
+      height: 10px;
+      background: rgba(255,255,255,0.5);
+    }
+    .ruler-number {
+      position: absolute;
+      bottom: 12px;
+      font-size: 9px;
+      color: rgba(255,255,255,0.4);
+      transform: translateX(-50%);
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 12h20M10 20h20M10 28h20" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Word Wrap Tool</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Word Wrap Tool
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Text Formatting Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-wrapping enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Input Text
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Type or paste text here... Or drag & drop a file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.csv,.md,.json,.xml,.html,.js,.css,.py,.java,.cpp,.c,.php,.rb,.go,.rs,.swift,.kt,.sql,.log" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Chars: 0 | Words: 0 | Lines: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Output -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Wrapped Result
+            </label>
+            <div class="flex gap-1">
+              <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                Copy
+              </button>
+              <button id="downloadBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Download
+              </button>
+            </div>
+          </div>
+          
+          <textarea id="outputText" readonly spellcheck="false"
+            class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+            placeholder="Wrapped text appears here automatically..."></textarea>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="outputStats">Lines: 0 | Chars: 0</span>
+            <span id="processingTime" class="text-gray-600"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-4">
+        
+        <!-- Wrap Mode Selection -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Wrap Mode</label>
+          <div class="flex flex-wrap gap-1">
+            <button class="wrap-mode-btn active compact-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-mode="soft">
+              Soft Wrap (Words)
+            </button>
+            <button class="wrap-mode-btn compact-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-mode="hard">
+              Hard Wrap (Strict)
+            </button>
+          </div>
+          <p class="text-xs text-gray-500 mt-1" id="modeDescription">
+            Soft wrap preserves whole words. Lines break at word boundaries only.
+          </p>
+        </div>
+
+        <!-- Width Settings -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          <!-- Line Width -->
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block flex items-center gap-1">
+              Line Width
+              <span class="text-[10px] text-gray-500">(characters)</span>
+            </label>
+            <div class="flex items-center gap-2">
+              <input type="number" id="lineWidth" min="10" max="1000" value="80" 
+                class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+            </div>
+            <!-- Visual Ruler -->
+            <div class="relative h-4 mt-1 bg-white/5 rounded overflow-hidden" id="ruler">
+              <!-- Ruler marks generated by JS -->
+            </div>
+          </div>
+
+          <!-- Width Presets -->
+          <div class="sm:col-span-2 lg:col-span-3">
+            <label class="text-xs text-gray-400 mb-1 block">Quick Presets</label>
+            <div class="flex flex-wrap gap-1">
+              <button class="width-preset-btn compact-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-width="40">40 (Narrow)</button>
+              <button class="width-preset-btn compact-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-width="80">80 (Standard)</button>
+              <button class="width-preset-btn active compact-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-width="120">120 (Wide)</button>
+              <button class="width-preset-btn compact-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-width="280">280 (Twitter)</button>
+              <button class="width-preset-btn compact-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-width="160">160 (SMS)</button>
+              <button class="width-preset-btn compact-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-width="72">72 (Email)</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Options -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          <label class="flex items-center gap-2 text-xs text-gray-400 p-2 rounded-md bg-white/5 border border-white/10 cursor-pointer hover:bg-white/10 transition-colors">
+            <input type="checkbox" id="preserveParagraphs" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3.5 h-3.5">
+            <span>Preserve paragraph breaks</span>
+          </label>
+          
+          <label class="flex items-center gap-2 text-xs text-gray-400 p-2 rounded-md bg-white/5 border border-white/10 cursor-pointer hover:bg-white/10 transition-colors">
+            <input type="checkbox" id="trimLines" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3.5 h-3.5">
+            <span>Trim trailing spaces</span>
+          </label>
+
+          <label class="flex items-center gap-2 text-xs text-gray-400 p-2 rounded-md bg-white/5 border border-white/10 cursor-pointer hover:bg-white/10 transition-colors">
+            <input type="checkbox" id="breakLongWords" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3.5 h-3.5">
+            <span>Break long words/URLs</span>
+          </label>
+        </div>
+
+        <!-- Line Count Preview -->
+        <div id="linePreview" class="hidden">
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-xs font-medium text-gray-300">Line Breakdown</label>
+            <span class="text-xs text-gray-500" id="linePreviewStats"></span>
+          </div>
+          <div id="lineList" class="max-h-32 overflow-y-auto space-y-1 pr-1 font-mono text-xs">
+            <!-- Lines will be inserted here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Word Wrap Tool?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Instant Wrap</h3>
+          <p class="text-gray-400 text-xs">Real-time wrapping as you type</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Smart Breaking</h3>
+          <p class="text-gray-400 text-xs">Preserves word boundaries</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Drag & Drop</h3>
+          <p class="text-gray-400 text-xs">Upload files instantly</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based processing</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy or download results</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration required</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Input Text</h3>
+          <p class="text-gray-400 text-xs">Type, paste, or drop a file. Wrapping happens automatically.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Set Width</h3>
+          <p class="text-gray-400 text-xs">Choose line width or use presets for Twitter, SMS, email.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Choose Mode</h3>
+          <p class="text-gray-400 text-xs">Soft wrap for words, hard wrap for strict character limits.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy wrapped text or download as file.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Word Wrapping: Mastering Text Formatting for the Digital Age</h2>
+        
+        <p><strong>Word wrapping</strong> is one of the most essential yet often overlooked aspects of text formatting in our digital world. Whether you're a programmer adhering to coding standards, a writer preparing content for publication, a social media manager crafting posts, or simply someone trying to format an email properly, understanding how to effectively <strong>wrap text online</strong> can dramatically improve your productivity and the professionalism of your output. Our <strong>free word wrap tool</strong> provides everything you need to format text perfectly for any purpose, without requiring any technical expertise or software installation.</p>
+
+        <h2>What Is Word Wrapping and Why Does It Matter?</h2>
+        
+        <p>At its core, <strong>word wrapping</strong> is the process of breaking lines of text at appropriate points to ensure content fits within specified width constraints while maintaining readability. Unlike simple character truncation that can cut words in half, intelligent <strong>text wrapping</strong> preserves word boundaries, ensuring that text remains comprehensible and professionally formatted. When you <strong>wrap text online</strong> using our tool, you're applying decades of typography best practices instantly.</p>
+
+        <p>The importance of proper <strong>word wrapping</strong> cannot be overstated in modern digital communication. Consider the various contexts where line length matters: code editors enforce character limits to maintain readability; social media platforms have strict post length restrictions; email clients display content in variable-width windows; mobile devices require text to reflow across different screen sizes; database fields have fixed-width limitations. Without a reliable <strong>online word wrap tool</strong>, professionals waste countless hours manually formatting text or, worse, deliver poorly formatted content that appears unprofessional.</p>
+
+        <h2>Understanding Soft Wrap vs. Hard Wrap</h2>
+
+        <h3>Soft Wrapping: Preserving Word Boundaries</h3>
+        
+        <p><strong>Soft wrap</strong> is the default and most commonly used wrapping method in our <strong>word wrap tool</strong>. This approach breaks lines only at word boundaries—spaces, punctuation, or natural transition points—ensuring that no word is ever split across two lines. When you <strong>wrap text to width online</strong> using soft wrap mode, the algorithm looks for the last complete word that fits within your specified character limit, then breaks the line there.</p>
+
+        <p>The benefits of soft wrapping are numerous. Readability remains optimal because readers never encounter hyphenated or broken words. The text maintains a natural flow that respects linguistic boundaries. URLs and email addresses remain clickable and functional. Most importantly, soft wrapping prevents the awkward formatting issues that plague manually-wrapped text. Our <strong>text wrapping tool online</strong> uses intelligent algorithms that handle edge cases like extremely long words, consecutive spaces, and mixed content types.</p>
+
+        <h3>Hard Wrapping: Strict Character Limits</h3>
+        
+        <p><strong>Hard wrap</strong> mode serves scenarios where exact character counts are mandatory, regardless of word boundaries. When you <strong>wrap text by characters online</strong> using hard wrap, lines will contain exactly your specified number of characters, with words broken mid-word if necessary. This mode is essential for specific technical applications where precision outweighs readability considerations.</p>
+
+        <p>Hard wrapping finds its primary use cases in legacy system integration, fixed-width database fields, certain programming languages with strict column requirements, and data transmission protocols with rigid packet sizes. While less common than soft wrapping for general use, having access to a <strong>free online word wrap tool</strong> that supports both modes ensures you're prepared for any formatting challenge. Our tool even provides options to handle long words specially in soft wrap mode, breaking URLs and technical terms intelligently when they exceed reasonable lengths.</p>
+
+        <h2>Practical Applications and Use Cases</h2>
+
+        <h3>Programming and Code Formatting</h3>
+        
+        <p>Developers represent one of the largest user groups for <strong>line wrap tool online</strong> solutions. Modern coding standards, such as PEP 8 for Python (79 characters) or conventional JavaScript style guides (80-120 characters), enforce maximum line lengths to ensure code readability across different displays and during code reviews. When you <strong>wrap text for coding online free</strong>, you're not just formatting—you're adhering to professional standards that improve maintainability.</p>
+
+        <p>Our <strong>text wrap utility online</strong> handles code-specific challenges that generic tools miss. It preserves indentation levels when wrapping, ensuring that wrapped lines maintain their logical hierarchy. It recognizes comment syntax and can wrap documentation differently than code. It handles string literals intelligently, ensuring that breaking long strings doesn't introduce syntax errors. For developers working with legacy codebases or strict style guides, our <strong>wrap text editor online</strong> capabilities save hours of manual reformatting.</p>
+
+        <h3>Social Media and Content Marketing</h3>
+        
+        <p>Social media professionals constantly battle character limits. Twitter's 280-character limit (previously 140) requires careful crafting of messages. Instagram captions have soft limits around 125 characters before truncation. SMS marketing must respect 160-character segments to avoid split messages. When you <strong>wrap long text online free</strong> using our presets for these platforms, you ensure optimal display and engagement.</p>
+
+        <p>Beyond simple character counting, effective social media formatting requires understanding how platforms display wrapped text. Twitter, for instance, shows approximately 40-50 characters per line on mobile devices before wrapping visually. Our <strong>word wrapping tool free online</strong> provides visual previews that simulate these platform-specific displays, allowing content creators to optimize line breaks for maximum impact. The ability to <strong>wrap text without breaking words online</strong> ensures that hashtags, mentions, and keywords remain intact and clickable.</p>
+
+        <h3>Email Communication and Business Correspondence</h3>
+        
+        <p>Email remains the backbone of business communication, and proper formatting significantly impacts professionalism. The traditional 72-character line width standard for email originated from terminal displays but remains relevant today for readability across devices. When you <strong>wrap text for documents online free</strong>, you're ensuring that your emails display correctly whether read on a 27-inch monitor or a smartphone screen.</p>
+
+        <p>Email formatting presents unique challenges that our <strong>paragraph wrap tool online</strong> addresses. Email clients handle line breaks differently—some respect hard breaks, others reflow text automatically. Our tool provides options to preserve paragraph structures while wrapping body text, ensuring that logical sections remain distinct. For email marketers, the ability to <strong>wrap lines of text online</strong> with precise control ensures that templates render consistently across dozens of email clients, from Outlook to Gmail to Apple Mail.</p>
+
+        <h3>Academic and Publishing Workflows</h3>
+        
+        <p>Academic writers and publishers work with strict formatting requirements that often specify exact line lengths or column widths. Journal submissions frequently require specific character-per-line counts. Book typesetting involves complex considerations of measure (line length) for optimal reading experience. Our <strong>text line wrapper online</strong> provides the precision required for these professional publishing workflows.</p>
+
+        <p>Academic formatting often involves citations, footnotes, and references that require special handling. Our <strong>wrap text by column width online</strong> capabilities can format bibliographic entries, ensure consistent indentation across wrapped lines, and handle the mixed content types (text, numbers, symbols) common in academic writing. For researchers preparing manuscripts for submission, having a <strong>free online word wrap tool</strong> that produces publication-ready formatting eliminates a significant source of submission rejection.</p>
+
+        <h2>Advanced Word Wrapping Techniques</h2>
+
+        <h3>Handling Special Content Types</h3>
+        
+        <p>Modern text processing involves content far more complex than simple prose. URLs present unique wrapping challenges—they're often extremely long, contain no spaces for natural breaking points, and must remain functional when wrapped. Our <strong>bulk text wrap online</strong> capabilities include special URL handling that can intelligently break long web addresses at punctuation points (slashes, hyphens, periods) while preserving their clickable structure.</p>
+
+        <p>Technical documentation frequently includes code snippets, command-line examples, file paths, and configuration data that resist standard wrapping. Our <strong>text wrap formatter online</strong> recognizes these content types and applies appropriate wrapping strategies. Code blocks can be preserved with their original formatting while surrounding prose is wrapped. File paths can be broken at directory separators. Configuration values can be handled according to their syntax requirements. This intelligent content detection sets our <strong>online paragraph wrap tool free</strong> apart from simple character-counting utilities.</p>
+
+        <h3>Multi-Platform Publishing Strategies</h3>
+        
+        <p>Content creators increasingly publish across multiple platforms simultaneously, each with different formatting requirements. A blog post might be syndicated to an email newsletter, summarized for Twitter, expanded for LinkedIn, and formatted for an RSS feed. Our <strong>text wrapping without login online</strong> tool enables efficient multi-platform formatting by providing quick presets and the ability to process content iteratively.</p>
+
+        <p>Smart content creators develop platform-specific templates that account for each channel's unique constraints. Our <strong>word wrap online</strong> tool supports this workflow by allowing users to save preferred settings, quickly switch between configurations, and batch process content for different destinations. The time savings from automated wrapping compound significantly when producing content for multiple channels daily.</p>
+
+        <h2>Comparing Wrapping Approaches</h2>
+
+        <h3>Manual Wrapping vs. Automated Tools</h3>
+        
+        <p>Manual word wrapping involves inserting line breaks by hand, typically by pressing Enter at perceived appropriate points. This approach is not only time-consuming but also inconsistent—different editors may wrap at different points, manual wrapping often results in ragged right margins, and re-editing text requires complete re-wrapping. For any text longer than a few paragraphs, manual wrapping becomes impractical and error-prone.</p>
+
+        <p>Automated <strong>text wrapping tool online</strong> solutions eliminate these inconsistencies while providing capabilities impossible to achieve manually. Algorithmic wrapping considers the entire text context, not just the current line. Re-wrapping happens instantly when text changes. Consistent widths are mathematically guaranteed. Our <strong>wrap text online</strong> solution provides these benefits with zero learning curve—simply paste text and receive perfectly formatted output.</p>
+
+        <h3>Built-in Editor Wrapping vs. Dedicated Tools</h3>
+        
+        <p>Most text editors and word processors include some form of word wrapping, but these features often fall short of professional requirements. Editor wrapping is typically visual only—the underlying file doesn't contain actual line breaks, which causes issues when text is copied to other applications. Built-in wrapping rarely offers precise character counting. Editor-specific wrapping doesn't transfer between different software environments.</p>
+
+        <p>Dedicated <strong>online word wrap tool</strong> solutions like ours provide true formatting—actual line break characters inserted at precise positions. This ensures that formatted text displays consistently across all applications and platforms. Our tool's character-level precision supports exact requirements, whether for code style guides, database fields, or communication protocols. The cross-platform accessibility of browser-based tools means your formatting capabilities travel with you, requiring no software installation or licensing.</p>
+
+        <h2>Best Practices for Effective Text Wrapping</h2>
+
+        <h3>Choosing Appropriate Line Lengths</h3>
+        
+        <p>Research in typography and readability provides clear guidance on optimal line lengths for different contexts. For continuous prose, lines of 45-75 characters (including spaces) are considered optimal for reading comprehension—long enough to develop rhythm, short enough to prevent eye strain. Our <strong>wrap text to width online</strong> tool provides presets that respect these guidelines while offering flexibility for specific requirements.</p>
+
+        <p>Technical contexts often demand different standards. Code readability studies suggest 80-100 characters maximum, balancing the need to see complete statements against the realities of modern displays. Social media platforms enforce hard limits that override readability considerations. Database fields may have technical constraints based on storage allocation. Understanding these context-specific requirements helps users select appropriate wrapping parameters in our <strong>text wrap tool</strong>.</p>
+
+        <h3>Managing Paragraph Structures</h3>
+        
+        <p>One common wrapping challenge involves preserving paragraph boundaries while wrapping body text. Naive wrapping tools treat all text as a single block, destroying paragraph distinctions that are essential for readability. Our <strong>wrap text by characters online</strong> solution includes intelligent paragraph detection that respects blank lines and maintains structural divisions.</p>
+
+        <p>For documents with complex structures—headers, lists, blockquotes, code blocks—selective wrapping becomes essential. Our tool provides options to wrap only specific sections, preserve certain formatting patterns, or apply different wrapping rules to different content types. These advanced capabilities support sophisticated document processing workflows that simple tools cannot handle.</p>
+
+        <h3>Quality Assurance and Validation</h3>
+        
+        <p>Professional text processing requires validation that wrapping has occurred correctly. Our <strong>text wrap utility online</strong> includes real-time statistics showing line counts, maximum line lengths, and character distributions. These metrics enable immediate quality verification—users can confirm that all lines meet requirements, identify any anomalies, and adjust parameters before finalizing output.</p>
+
+        <p>For critical applications, we recommend reviewing wrapped output in its final destination environment. Display a sample email in your email client, preview social media posts on mobile devices, compile wrapped code to verify no syntax errors were introduced. While our <strong>free online word wrap tool</strong> is engineered for reliability, validating in context ensures perfect results for high-stakes communications.</p>
+
+        <h2>The Future of Text Formatting Technology</h2>
+
+        <p>Artificial intelligence and machine learning are beginning to influence text formatting, moving beyond mechanical wrapping toward intelligent formatting that understands content meaning. Future <strong>word wrap tool</strong> implementations may analyze text semantics to place line breaks at natural pause points, optimize wrapping for reading comprehension, adapt to individual reader preferences, and even suggest formatting improvements based on content type.</p>
+
+        <p>Despite these advances, the fundamental need for reliable, accessible <strong>text wrapping</strong> remains constant. Our platform evolves continuously, incorporating new capabilities while maintaining the simplicity and reliability that make it indispensable for daily use. Whether you need to quickly <strong>wrap text online</strong> for a single tweet or process thousands of documents through <strong>bulk text wrap online</strong> capabilities, our tool scales to meet your requirements.</p>
+
+        <h2>Conclusion: Master Text Formatting with Professional Word Wrapping</h2>
+
+        <p><strong>Word wrapping</strong> represents one of those essential digital skills that, once mastered, improves nearly every text-based task you perform. From ensuring your code meets style guidelines to optimizing social media engagement, from professionalizing business emails to preparing academic publications, the ability to precisely control text line lengths empowers more effective communication across all channels.</p>
+
+        <p>Our <strong>free word wrap tool</strong> provides all the capabilities you need for professional text formatting. With automatic real-time wrapping as you type, support for both soft and hard wrapping modes, intelligent handling of special content types, and flexible export options, this tool serves everyone from casual users to professional content creators. The browser-based architecture ensures privacy and universal accessibility, while the intuitive interface requires no technical training. Stop struggling with manual formatting or inadequate built-in tools—start using our professional <strong>word wrap online</strong> solution today and experience the efficiency of automated, intelligent text wrapping.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool wrap text automatically as I type?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>word wrap online</strong> tool features <strong>automatic real-time wrapping</strong>. As you type or paste text, the tool instantly processes your input and displays the wrapped result in the right column. Changes to line width, wrap mode, or options apply immediately. The "Auto-wrapping enabled" indicator at the top confirms the feature is active. This makes it the most responsive <strong>free word wrap tool</strong> available.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What's the difference between soft wrap and hard wrap?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Soft wrap</strong> breaks lines at word boundaries only, ensuring no word is ever split. This is best for readability and general use. <strong>Hard wrap</strong> breaks at exactly the character count you specify, even mid-word, which is necessary for strict technical requirements. Our <strong>online word wrap tool</strong> supports both modes—use soft wrap for prose and hard wrap when exact character counts are mandatory.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I use this for Twitter/X posts?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely! Click the "280 (Twitter)" preset to set the width to 280 characters. Use soft wrap to keep words intact, or hard wrap if you need strict character counting. This is the easiest way to <strong>wrap long text online free</strong> for Twitter threads. The tool shows you exactly how many lines your content will occupy, helping you plan thread structure.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I wrap text for coding standards?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">For most coding standards (PEP 8, Google Style, etc.), use the "80 (Standard)" preset with soft wrap mode. This ensures your code comments and documentation wrap at the conventional 80-character limit while preserving word boundaries. Our <strong>wrap text for coding online free</strong> tool preserves indentation levels, so wrapped lines maintain their logical hierarchy in your code.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Will this break my long URLs?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">By default, soft wrap mode preserves entire URLs on single lines. However, if you have extremely long URLs that exceed your line width significantly, enable the "Break long words/URLs" option. This allows the tool to break URLs at punctuation points (slashes, hyphens) intelligently, making them more manageable while remaining functional. Our <strong>text wrapping tool online</strong> handles URLs better than generic text editors.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I wrap multiple files at once?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Use the drag-and-drop zone or file picker to upload text files. The tool will read the file and wrap its contents immediately. For <strong>bulk text wrap online</strong> workflows, you can process files sequentially—each new file replaces the current content, which you can then download wrapped. All processing happens in your browser for privacy. Supported formats include TXT, CSV, MD, JSON, XML, HTML, and all common code file extensions.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this preserve my paragraph breaks?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, by default the "Preserve paragraph breaks" option is enabled. This means blank lines in your input remain blank lines in the output, ensuring your document structure stays intact. Only the text within paragraphs gets wrapped. Disable this option only if you want to treat the entire input as a single block of text. This feature makes our <strong>paragraph wrap tool online</strong> ideal for formatting essays, articles, and structured documents.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is there a file size limit?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">The tool handles files up to 10-20MB (several million characters), roughly equivalent to 3,000-5,000 pages of text. Browser limitations vary—Chrome and Edge handle larger files better than Safari or mobile browsers. For extremely large files (100MB+), consider using command-line tools like `fold` or `fmt`. Our <strong>free online word wrap tool</strong> is optimized for typical daily use cases including documents, code files, and content drafts.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my data secure?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely. All processing happens <strong>locally in your browser</strong>—your text never uploads to any server or leaves your device. You can verify this by checking the Network tab in browser DevTools; you'll see no data transmission to external servers. The tool works offline after initial loading. This makes it ideal for wrapping confidential documents, code, or sensitive business communications. Privacy is built into our <strong>text wrapping without login online</strong> architecture.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this tool free?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, completely <strong>free</strong> with no registration, usage limits, watermarks, or hidden fees. Use it for personal or commercial projects without attribution. This is truly a <strong>free word wrap tool</strong> for everyone. The tool is supported by unobtrusive advertising and voluntary user support, allowing us to maintain and improve the service without charging users.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const outputText = document.getElementById('outputText');
+const inputStats = document.getElementById('inputStats');
+const outputStats = document.getElementById('outputStats');
+const processingTime = document.getElementById('processingTime');
+const linePreview = document.getElementById('linePreview');
+const lineList = document.getElementById('lineList');
+const linePreviewStats = document.getElementById('linePreviewStats');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+const ruler = document.getElementById('ruler');
+
+// Buttons
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const resetBtn = document.getElementById('resetBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+// Settings
+const lineWidthInput = document.getElementById('lineWidth');
+const preserveParagraphs = document.getElementById('preserveParagraphs');
+const trimLines = document.getElementById('trimLines');
+const breakLongWords = document.getElementById('breakLongWords');
+const modeDescription = document.getElementById('modeDescription');
+
+// Wrap mode and width presets
+const wrapModeBtns = document.querySelectorAll('.wrap-mode-btn');
+const widthPresetBtns = document.querySelectorAll('.width-preset-btn');
+let currentMode = 'soft';
+let currentWidth = 120;
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Generate ruler marks
+function generateRuler() {
+  ruler.innerHTML = '';
+  const maxWidth = Math.min(currentWidth, 100);
+  for (let i = 0; i <= maxWidth; i += 10) {
+    const mark = document.createElement('div');
+    mark.className = i % 20 === 0 ? 'ruler-mark major' : 'ruler-mark';
+    mark.style.left = `${(i / maxWidth) * 100}%`;
+    ruler.appendChild(mark);
+    
+    if (i % 20 === 0) {
+      const num = document.createElement('span');
+      num.className = 'ruler-number';
+      num.textContent = i;
+      num.style.left = `${(i / maxWidth) * 100}%`;
+      ruler.appendChild(num);
+    }
+  }
+}
+generateRuler();
+
+// Update input stats
+function updateInputStats() {
+  const text = inputText.value;
+  const chars = text.length;
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+  const lines = text === '' ? 0 : text.split('\n').length;
+  inputStats.textContent = `Chars: ${chars} | Words: ${words} | Lines: ${lines}`;
+}
+
+// Debounce function
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Wrap mode selection
+wrapModeBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    wrapModeBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentMode = btn.dataset.mode;
+    modeDescription.textContent = currentMode === 'soft' 
+      ? 'Soft wrap preserves whole words. Lines break at word boundaries only.'
+      : 'Hard wrap breaks at exact character count, even mid-word.';
+    wrapText();
+  });
+});
+
+// Width preset selection
+widthPresetBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    widthPresetBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentWidth = parseInt(btn.dataset.width);
+    lineWidthInput.value = currentWidth;
+    generateRuler();
+    wrapText();
+  });
+});
+
+// Line width input
+lineWidthInput.addEventListener('input', (e) => {
+  const val = parseInt(e.target.value);
+  if (val >= 10 && val <= 1000) {
+    currentWidth = val;
+    generateRuler();
+    // Update preset buttons
+    widthPresetBtns.forEach(btn => {
+      btn.classList.toggle('active', parseInt(btn.dataset.width) === val);
+    });
+    wrapText();
+  }
+});
+
+// Options change
+[preserveParagraphs, trimLines, breakLongWords].forEach(el => {
+  el.addEventListener('change', wrapText);
+});
+
+// Smart word wrap function
+function wrapText() {
+  const startTime = performance.now();
+  const text = inputText.value;
+  
+  if (!text.trim()) {
+    outputText.value = '';
+    outputStats.textContent = 'Lines: 0 | Chars: 0';
+    processingTime.textContent = '';
+    linePreview.classList.add('hidden');
+    return;
+  }
+  
+  let wrapped = '';
+  const width = currentWidth;
+  const preservePara = preserveParagraphs.checked;
+  const trim = trimLines.checked;
+  const breakLong = breakLongWords.checked;
+  
+  try {
+    if (preservePara) {
+      // Process paragraph by paragraph
+      const paragraphs = text.split(/\n\s*\n/);
+      const wrappedParagraphs = paragraphs.map(para => {
+        if (!para.trim()) return '';
+        return wrapParagraph(para.trim(), width, currentMode, breakLong, trim);
+      });
+      wrapped = wrappedParagraphs.filter(p => p).join('\n\n');
+    } else {
+      // Treat as single block
+      wrapped = wrapParagraph(text, width, currentMode, breakLong, trim);
+    }
+    
+    const endTime = performance.now();
+    outputText.value = wrapped;
+    
+    // Update stats
+    const lines = wrapped.split('\n').length;
+    outputStats.textContent = `Lines: ${lines} | Chars: ${wrapped.length}`;
+    processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+    
+    // Update line preview
+    displayLinePreview(wrapped.split('\n'));
+    
+  } catch (error) {
+    console.error('Wrap error:', error);
+  }
+}
+
+function wrapParagraph(text, width, mode, breakLong, trim) {
+  if (mode === 'hard') {
+    // Hard wrap - strict character count
+    const lines = [];
+    for (let i = 0; i < text.length; i += width) {
+      let line = text.slice(i, i + width);
+      if (trim) line = line.trimEnd();
+      lines.push(line);
+    }
+    return lines.join('\n');
+  } else {
+    // Soft wrap - preserve word boundaries
+    const words = text.split(/\s+/);
+    const lines = [];
+    let currentLine = '';
+    
+    for (const word of words) {
+      // Handle extremely long words
+      if (word.length > width) {
+        if (currentLine) {
+          lines.push(trim ? currentLine.trimEnd() : currentLine);
+          currentLine = '';
+        }
+        
+        if (breakLong) {
+          // Break long word at width boundaries
+          for (let i = 0; i < word.length; i += width) {
+            lines.push(word.slice(i, i + width));
+          }
+        } else {
+          // Keep long word on its own line
+          lines.push(word);
+        }
+        continue;
+      }
+      
+      // Check if word fits on current line
+      const testLine = currentLine ? currentLine + ' ' + word : word;
+      if (testLine.length <= width) {
+        currentLine = testLine;
+      } else {
+        // Word doesn't fit, start new line
+        if (currentLine) {
+          lines.push(trim ? currentLine.trimEnd() : currentLine);
+        }
+        currentLine = word;
+      }
+    }
+    
+    // Don't forget the last line
+    if (currentLine) {
+      lines.push(trim ? currentLine.trimEnd() : currentLine);
+    }
+    
+    return lines.join('\n');
+  }
+}
+
+// Display line preview
+function displayLinePreview(lines) {
+  if (lines.length === 0 || lines.length === 1) {
+    linePreview.classList.add('hidden');
+    return;
+  }
+  
+  linePreview.classList.remove('hidden');
+  lineList.innerHTML = '';
+  linePreviewStats.textContent = `${lines.length} lines total`;
+  
+  lines.slice(0, 20).forEach((line, index) => {
+    const lineDiv = document.createElement('div');
+    lineDiv.className = 'flex items-start gap-2 p-1.5 rounded bg-white/5 text-gray-300';
+    const lineNum = String(index + 1).padStart(3, '0');
+    lineDiv.innerHTML = `
+      <span class="text-gray-500 text-[10px] font-mono select-none w-6 text-right">${lineNum}</span>
+      <span class="font-mono text-xs truncate flex-1">${line || '&nbsp;'}</span>
+      <span class="text-gray-500 text-[10px]">${line.length}c</span>
+    `;
+    lineList.appendChild(lineDiv);
+  });
+  
+  if (lines.length > 20) {
+    const moreDiv = document.createElement('div');
+    moreDiv.className = 'text-xs text-gray-500 text-center py-1';
+    moreDiv.textContent = `... and ${lines.length - 20} more lines`;
+    lineList.appendChild(moreDiv);
+  }
+}
+
+const debouncedWrap = debounce(wrapText, 0);
+
+// Drag and drop handlers
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  if (!file.type.match('text.*') && !file.name.match(/\.(txt|csv|json|xml|html?|md|js|css|py|java|cpp|c|php|rb|go|rs|swift|kt|sql|log)$/i)) {
+    alert('Please upload a text file');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    updateInputStats();
+    wrapText();
+  };
+  reader.readAsText(file);
+}
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    updateInputStats();
+    wrapText();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  updateInputStats();
+  wrapText();
+  inputText.focus();
+}
+
+// Copy output
+async function copyOutput() {
+  if (!outputText.value) return;
+  
+  try {
+    await navigator.clipboard.writeText(outputText.value);
+    const originalText = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalText;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+}
+
+// Download output
+function downloadOutput() {
+  const text = outputText.value;
+  if (!text.trim()) return;
+  
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'wrapped-text.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Reset all
+function resetAll() {
+  inputText.value = '';
+  outputText.value = '';
+  updateInputStats();
+  outputStats.textContent = 'Lines: 0 | Chars: 0';
+  processingTime.textContent = '';
+  linePreview.classList.add('hidden');
+  inputText.focus();
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Event listeners
+inputText.addEventListener('input', () => {
+  updateInputStats();
+  debouncedWrap();
+});
+
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+copyBtn.addEventListener('click', copyOutput);
+downloadBtn.addEventListener('click', downloadOutput);
+resetBtn.addEventListener('click', resetAll);
+
+// Initialize
+updateInputStats();
+</script>
+</body>
+</html>

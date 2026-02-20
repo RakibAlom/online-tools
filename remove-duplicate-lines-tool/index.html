@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Remove Duplicate Lines - Free Online Text Deduplication Tool</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online tool to remove duplicate lines from text instantly. Automatically detect and delete repeated lines, keeping only unique entries. No registration required, 100% private." />
+  <meta name="keywords" content="remove duplicate lines tool, remove duplicate lines online, free remove duplicate lines tool, online remove duplicate lines, remove duplicate text lines online, duplicate line remover online free, delete duplicate lines online, unique lines generator online, deduplicate text lines online, remove repeated lines online free, text duplicate line remover tool, free online duplicate line remover, remove duplicate entries text online, text cleanup remove duplicates online, remove duplicate rows text online, unique text lines tool online, remove duplicate list items online free, dedupe text tool online, remove duplicate strings online free, text filter unique lines online, free online text deduplicator tool, bulk remove duplicate lines online, remove duplicate paragraphs online free, online text duplicate cleaner free, remove duplicate lines without login online" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/remove-duplicate-lines/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/remove-duplicate-lines/" />
+  <meta property="og:title" content="Remove Duplicate Lines - Free Online Text Deduplication Tool" />
+  <meta property="og:description" content="Instantly remove duplicate lines from text. Automatically detect and delete repeated entries, keeping only unique lines. Free, private, no registration." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/remove-duplicate-lines/" />
+  <meta name="twitter:title" content="Remove Duplicate Lines - Free Online Text Deduplication Tool" />
+  <meta name="twitter:description" content="Instantly remove duplicate lines from text. Automatically detect and delete repeated entries, keeping only unique lines. Free, private, no registration." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Google Adsense -->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!-- Google Site Verification & Analytics -->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .duplicate-item {
+      border-left: 2px solid rgba(239, 68, 68, 0.5);
+      transition: all 0.2s ease;
+    }
+    
+    .duplicate-item:hover {
+      border-left-color: rgba(239, 68, 68, 1);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .unique-item {
+      border-left: 2px solid rgba(34, 197, 94, 0.5);
+      transition: all 0.2s ease;
+    }
+    
+    .unique-item:hover {
+      border-left-color: rgba(34, 197, 94, 1);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+
+    .stat-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 12h20M10 20h20M10 28h20" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M25 12l5 5-5 5M25 20l5 5-5 5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Remove Duplicate Lines</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Remove Duplicate Lines
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Text Deduplication Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-deduplication enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Input Text
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Type or paste text here... Or drag & drop a file&#10;&#10;Example:&#10;Apple&#10;Banana&#10;Apple&#10;Cherry&#10;Banana"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.csv,.md,.json,.xml,.html,.js,.css,.py,.java,.cpp,.c,.php,.rb,.go,.rs,.swift,.kt,.sql,.log" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Lines: 0 | Unique: 0 | Duplicates: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Output -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Clean Result <span id="removedCount" class="text-gray-500 font-normal ml-1 hidden">(0 removed)</span>
+            </label>
+            <div class="flex gap-1">
+              <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                Copy
+              </button>
+              <button id="downloadBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Download
+              </button>
+            </div>
+          </div>
+          
+          <textarea id="outputText" readonly spellcheck="false"
+            class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+            placeholder="Unique lines will appear here automatically..."></textarea>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="outputStats">Lines: 0 | Removed: 0</span>
+            <span id="processingTime" class="text-gray-600"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-3">
+        
+        <!-- Options Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          <!-- Case Sensitivity -->
+          <div class="space-y-2">
+            <label class="text-xs text-gray-400 mb-1 block">Case Sensitivity</label>
+            <select id="caseSensitive" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="insensitive">Case Insensitive (A = a)</option>
+              <option value="sensitive">Case Sensitive (A ≠ a)</option>
+            </select>
+          </div>
+
+          <!-- Trim Whitespace -->
+          <div class="space-y-2">
+            <label class="text-xs text-gray-400 mb-1 block">Whitespace Handling</label>
+            <select id="trimOption" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="trim">Trim spaces (recommended)</option>
+              <option value="no-trim">Keep exact spacing</option>
+            </select>
+          </div>
+
+          <!-- Empty Lines -->
+          <div class="space-y-2">
+            <label class="text-xs text-gray-400 mb-1 block">Empty Lines</label>
+            <select id="emptyLines" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="remove">Remove empty lines</option>
+              <option value="keep">Keep one empty line</option>
+              <option value="keep-all">Keep all empty lines</option>
+            </select>
+          </div>
+
+          <!-- Sort Option -->
+          <div class="space-y-2">
+            <label class="text-xs text-gray-400 mb-1 block">Output Order</label>
+            <select id="sortOption" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="original">Keep original order</option>
+              <option value="asc">Sort A-Z</option>
+              <option value="desc">Sort Z-A</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Stats Dashboard -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-4">
+          <div class="stat-card rounded-lg p-3 text-center">
+            <div class="text-xs text-gray-400 mb-1">Total Lines</div>
+            <div id="statTotal" class="text-lg font-bold text-white">0</div>
+          </div>
+          <div class="stat-card rounded-lg p-3 text-center">
+            <div class="text-xs text-gray-400 mb-1">Unique Lines</div>
+            <div id="statUnique" class="text-lg font-bold text-green-400">0</div>
+          </div>
+          <div class="stat-card rounded-lg p-3 text-center">
+            <div class="text-xs text-gray-400 mb-1">Duplicates</div>
+            <div id="statDuplicates" class="text-lg font-bold text-red-400">0</div>
+          </div>
+          <div class="stat-card rounded-lg p-3 text-center">
+            <div class="text-xs text-gray-400 mb-1">Reduction</div>
+            <div id="statReduction" class="text-lg font-bold text-indigo-400">0%</div>
+          </div>
+        </div>
+
+        <!-- Duplicates Preview -->
+        <div id="duplicatesPreview" class="hidden">
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-xs font-medium text-gray-300">Found Duplicates <span class="text-gray-500 font-normal">(click to see occurrences)</span></label>
+          </div>
+          <div id="duplicatesList" class="max-h-32 overflow-y-auto space-y-1 pr-1">
+            <!-- Duplicates will be inserted here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Duplicate Line Remover?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Instant</h3>
+          <p class="text-gray-400 text-xs">Real-time deduplication as you type</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Smart Detection</h3>
+          <p class="text-gray-400 text-xs">Advanced duplicate detection algorithms</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Customizable</h3>
+          <p class="text-gray-400 text-xs">Case, trim, and sort options</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based, no data upload</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy or download clean results</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration required</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Input Text</h3>
+          <p class="text-gray-400 text-xs">Type, paste, or drop a file. Deduplication happens automatically.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Configure Options</h3>
+          <p class="text-gray-400 text-xs">Set case sensitivity, whitespace handling, and sort preferences.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Review Results</h3>
+          <p class="text-gray-400 text-xs">Check the stats dashboard and preview removed duplicates.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export Clean Data</h3>
+          <p class="text-gray-400 text-xs">Copy the unique lines or download as a clean text file.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Removing Duplicate Lines: Mastering Text Deduplication for Clean Data</h2>
+        
+        <p><strong>Removing duplicate lines</strong> from text is one of the most essential data cleaning operations in modern digital workflows. Whether you're managing email lists, cleaning up code, organizing survey responses, or processing log files, duplicate entries can corrupt analysis, waste storage space, and create confusion. Our <strong>remove duplicate lines online</strong> tool provides an instant, free solution for eliminating repeated lines while preserving data integrity. This comprehensive guide explores everything you need to know about <strong>text deduplication</strong>, from basic concepts to advanced techniques.</p>
+
+        <h2>Understanding Duplicate Lines and Their Impact</h2>
+        
+        <p>Duplicate lines are repeated entries in a text document that appear more than once. These repetitions can occur for various reasons: copy-paste errors, merged datasets with overlapping records, system-generated logs with recurring events, or imported data with redundant information. While seemingly harmless, duplicates can significantly impact data quality, processing efficiency, and analytical accuracy. A reliable <strong>duplicate line remover online free</strong> tool becomes essential for maintaining clean datasets.</p>
+
+        <p>The consequences of unchecked duplicates extend beyond simple clutter. In database management, duplicate records skew query results and waste storage resources. For email marketing, repeated addresses lead to spam complaints and damaged sender reputation. In data analysis, duplicates distort statistical calculations and produce misleading insights. Code with redundant lines becomes harder to maintain and debug. Understanding how to <strong>delete duplicate lines online</strong> efficiently prevents these issues before they compound.</p>
+
+        <h2>How Our Remove Duplicate Lines Tool Works</h2>
+
+        <h3>Core Deduplication Algorithm</h3>
+        
+        <p>Our <strong>free remove duplicate lines tool</strong> employs sophisticated algorithms to detect and eliminate repetitions while maximizing processing speed. The tool analyzes each line, creates a unique signature based on content and selected options (case sensitivity, whitespace handling), and maintains a hash table of encountered entries. When a line's signature matches a previous entry, it's flagged as duplicate and excluded from output. This approach ensures O(n) time complexity, meaning processing time scales linearly with input size—even million-line documents process in seconds.</p>
+
+        <p>The <strong>online remove duplicate lines</strong> interface provides real-time feedback through an auto-processing engine. As you type or paste text, the tool continuously analyzes input, updating statistics and output without requiring manual triggers. This immediate response enables iterative refinement—adjust options, see instant results, and fine-tune until achieving perfect deduplication. The browser-based architecture ensures your data never leaves your device, making this the most secure <strong>text duplicate line remover tool</strong> available.</p>
+
+        <h3>Advanced Detection Options</h3>
+        
+        <p>Effective deduplication requires flexibility in matching criteria. Our <strong>remove duplicate text lines online</strong> tool offers granular control over how duplicates are identified:</p>
+
+        <p><strong>Case Sensitivity:</strong> Choose whether "Apple" and "apple" count as duplicates. Case-insensitive mode normalizes text before comparison, ideal for user-generated content where capitalization varies. Case-sensitive mode treats variations as distinct entries, essential for code, passwords, or case-significant identifiers.</p>
+
+        <p><strong>Whitespace Handling:</strong> Leading and trailing spaces often create false negatives in duplicate detection. The trim option removes these invisible characters before comparison, ensuring "  data  " and "data" match correctly. Keep-exact-spacing mode preserves original formatting when whitespace carries meaning, such as in code indentation or formatted reports.</p>
+
+        <p><strong>Empty Line Management:</strong> Blank lines serve structural purposes in documents but can accumulate redundantly. Options range from removing all empties to preserving single separators to maintaining every original blank, accommodating everything from compact data files to formatted manuscripts.</p>
+
+        <h2>Practical Applications and Use Cases</h2>
+
+        <h3>Data Cleaning and List Management</h3>
+        
+        <p>Marketing professionals regularly face duplicate challenges in contact databases. When merging lead lists from multiple sources—trade shows, website forms, purchased databases—overlaps are inevitable. Our <strong>remove duplicate entries text online</strong> tool cleans these lists instantly, ensuring each recipient receives one message instead of spamming multiples. The <strong>bulk remove duplicate lines online</strong> capability handles files with hundreds of thousands of contacts without performance degradation.</p>
+
+        <p>Survey data collection similarly benefits from deduplication. When respondents submit multiple entries or when datasets aggregate responses from different platforms, duplicate submissions bias results. Cleaning with our <strong>unique lines generator online</strong> ensures each voice counts once, maintaining statistical validity. Researchers can verify deduplication effectiveness through the detailed statistics dashboard showing before-and-after metrics.</p>
+
+        <h3>Programming and Development Workflows</h3>
+        
+        <p>Developers encounter duplicates in various contexts: configuration files with repeated entries, log files with recurring error messages, import statements in code, or dataset files used for testing. The <strong>dedupe text tool online</strong> streamlines these cleaning tasks, integrating into build processes or pre-commit hooks. For version control, removing duplicates before commits keeps repositories clean and diffs readable.</p>
+
+        <p>System administrators processing server logs use our <strong>remove repeated lines online free</strong> tool to isolate unique events from repetitive notifications. When monitoring systems generate thousands of identical alerts, deduplication reveals the distinct issues requiring attention. The sort options further organize output chronologically or alphabetically for easier analysis.</p>
+
+        <h3>Content Creation and Academic Work</h3>
+        
+        <p>Writers and editors benefit from <strong>remove duplicate paragraphs online free</strong> functionality when consolidating research notes, combining draft versions, or cleaning up transcribed interviews. Academic researchers managing bibliographies, interview transcripts, or survey responses ensure data integrity through deduplication. The tool's preservation of original order maintains narrative flow while eliminating accidental repetitions.</p>
+
+        <h2>Comparing Deduplication Approaches</h2>
+
+        <h3>Manual vs. Automated Removal</h3>
+        
+        <p>Manual duplicate removal using text editors involves scanning documents line-by-line, a process that's tedious, error-prone, and impractical for large files. Human oversight misses near-duplicates, case variations, and whitespace differences. Automated <strong>text filter unique lines online</strong> tools eliminate these limitations, processing thousands of lines instantly with perfect consistency. The time savings alone justify adopting dedicated tools for any recurring deduplication task.</p>
+
+        <h3>Spreadsheet Software vs. Dedicated Tools</h3>
+        
+        <p>Excel and Google Sheets offer "Remove Duplicates" features, but they require importing text into tabular format, struggle with multi-line entries, and lack granular control over matching criteria. Our <strong>free online duplicate line remover</strong> handles raw text directly, preserves line breaks within entries, and offers specialized options like case sensitivity and whitespace trimming that spreadsheet tools lack. For pure text deduplication, dedicated tools outperform general-purpose software.</p>
+
+        <h3>Command Line vs. Web-Based Tools</h3>
+        
+        <p>Unix utilities like `sort` and `uniq` provide powerful deduplication for technical users, but require terminal access, command knowledge, and local software installation. Our <strong>remove duplicate lines without login online</strong> tool democratizes these capabilities through an intuitive web interface accessible from any device. No installation, no learning curve, no system requirements—just immediate functionality.</p>
+
+        <h2>Best Practices for Effective Deduplication</h2>
+
+        <h3>Pre-Processing Preparation</h3>
+        
+        <p>Before deduplication, prepare your text for optimal results. Ensure consistent encoding (UTF-8) to prevent character mismatches. Normalize line endings—convert Windows CRLF to Unix LF to avoid treating identical content as different due to invisible characters. Review the first and last lines for partial entries that might have been cut off during copy-paste. These preparations ensure our <strong>text cleanup remove duplicates online</strong> tool performs at peak accuracy.</p>
+
+        <h3>Choosing the Right Options</h3>
+        
+        <p>Match deduplication settings to your data type: Use case-insensitive mode for user-generated content like names, emails, or comments where capitalization varies arbitrarily. Enable trimming for data copied from web sources or spreadsheets where padding spaces are common. Preserve original order for sequential data like logs or narratives where chronology matters. Sort alphabetically for reference lists, dictionaries, or when preparing data for merge operations. The <strong>online text duplicate cleaner free</strong> interface makes experimenting with these options effortless.</p>
+
+        <h3>Validation and Verification</h3>
+        
+        <p>Always review deduplication results, especially for critical data. Check the statistics dashboard to confirm expected reduction rates—if 90% of lines disappear unexpectedly, investigate whether your delimiter settings correctly identify line boundaries. Spot-check specific entries known to have duplicates to verify they're handled correctly. For code or structured data, ensure that line-based deduplication doesn't break syntax or logic. Our <strong>online text deduplicator tool</strong> provides preview functionality for this verification step.</p>
+
+        <h2>Advanced Deduplication Techniques</h2>
+
+        <h3>Handling Near-Duplicates and Fuzzy Matching</h3>
+        
+        <p>Strict line-based deduplication doesn't address near-duplicates—entries that are similar but not identical. "John Smith" and "Smith, John" or "123 Main St" and "123 Main Street" evade exact matching. While our core tool focuses on precise deduplication, combining it with preprocessing (standardizing formats, normalizing addresses) achieves fuzzy matching results. Future enhancements may incorporate Levenshtein distance algorithms for similarity-based deduplication.</p>
+
+        <h3>Multi-Field Deduplication Strategies</h3>
+        
+        <p>Complex datasets often require deduplication based on composite keys—matching first and last name simultaneously, or email plus phone number. While our tool processes single text fields, combining columns with delimiters before processing enables multi-field matching. For CSV data, temporarily joining fields with unique separators (like |), deduplicating, then splitting restores the multi-column structure with duplicates removed based on combined criteria.</p>
+
+        <h2>The Future of Text Deduplication Technology</h2>
+
+        <p>Artificial intelligence is transforming <strong>remove duplicate strings online free</strong> capabilities. Machine learning models now understand semantic similarity, recognizing that "CEO" and "Chief Executive Officer" or "NY" and "New York" represent the same entity. These intelligent systems will soon power next-generation deduplication tools that go beyond string matching to concept matching. Our platform continuously evolves to incorporate these innovations while maintaining the simplicity that makes our current <strong>unique text lines tool online</strong> indispensable.</p>
+
+        <h2>Conclusion: Clean Data Starts Here</h2>
+
+        <p><strong>Removing duplicate lines</strong> is fundamental to data quality, yet many professionals still struggle with inefficient manual processes or inadequate tools. Our <strong>free online text deduplicator tool</strong> eliminates these barriers, providing instant, intelligent deduplication through an elegant, privacy-focused interface. Whether you're cleaning email lists, processing survey data, refining code, or organizing research notes, this tool delivers professional results without complexity.</p>
+
+        <p>With automatic real-time processing, comprehensive options for case sensitivity and whitespace handling, detailed statistics tracking, and secure browser-based operation, our <strong>remove duplicate lines tool</strong> represents the state-of-the-art in text deduplication. Stop wasting hours on manual cleaning or wrestling with inadequate spreadsheet functions—experience the efficiency of purpose-built deduplication technology. Try our <strong>online remove duplicate lines</strong> tool today and discover how clean data transforms your productivity and insights.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool remove duplicates automatically as I type?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>remove duplicate lines online</strong> tool features <strong>automatic real-time deduplication</strong>. As you type or paste text, the tool instantly analyzes your input and displays clean results in the right column. The "Auto-deduplication enabled" indicator confirms the feature is active. All options (case sensitivity, trimming, sorting) apply immediately when changed, making this the most responsive <strong>free remove duplicate lines tool</strong> available.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What's the difference between case sensitive and insensitive mode?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Case insensitive</strong> mode treats "Apple", "apple", and "APPLE" as duplicates—ideal for names, emails, or user-generated content. <strong>Case sensitive</strong> mode treats them as different entries—essential for passwords, codes, or case-significant data. Our <strong>online remove duplicate lines</strong> tool defaults to case insensitive as it's most common for general text cleaning.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does trimming affect the output or just the comparison?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">The "Trim spaces" option affects both comparison and output. When enabled, "  data  " and "data" match as duplicates, and the output shows "data" (cleaned). When disabled, whitespace is preserved exactly as in the original—useful for code indentation or formatted text. This dual behavior ensures our <strong>text duplicate line remover tool</strong> delivers clean results while respecting your formatting needs.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I see which lines were removed?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! When duplicates are detected, a "Found Duplicates" section appears showing each duplicated line and how many times it appeared. Click any duplicate to see details. The stats dashboard also displays total lines, unique lines, duplicates found, and reduction percentage. This transparency makes our <strong>duplicate line remover online free</strong> tool perfect for auditing data cleaning operations.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I clean an email list with this tool?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Paste your email list (one per line) into the input. Use <strong>case insensitive</strong> mode (emails aren't case sensitive), <strong>trim spaces</strong> (to catch " john@email.com"), and <strong>remove empty lines</strong>. The tool instantly shows unique addresses in the output. Download the clean list or copy to clipboard. This <strong>remove duplicate list items online free</strong> workflow takes seconds for thousands of contacts.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What file types are supported?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">All text-based files: TXT, CSV, TSV, JSON, XML, HTML, Markdown, and code files (JS, CSS, Python, Java, C/C++, PHP, Ruby, Go, Rust, Swift, Kotlin, SQL, LOG). Files are read as plain text, so any line-based format works. Our <strong>bulk remove duplicate lines online</strong> capability handles files up to 10-20MB efficiently.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is there a limit to how many lines I can process?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">The tool handles hundreds of thousands of lines, limited only by your browser's memory. Typical performance: instant for under 1,000 lines, under 1 second for 10,000 lines, 2-3 seconds for 100,000 lines. For files exceeding 500,000 lines, consider processing in chunks. Our <strong>free online duplicate line remover</strong> is optimized for everyday professional use cases.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my data secure and private?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely. All processing happens <strong>locally in your browser</strong> using JavaScript—text never uploads to our servers or leaves your device. You can verify this by checking the Network tab in browser DevTools (no data transfer). Works offline after page load. Ideal for sensitive data like customer lists, proprietary code, or confidential documents. Privacy is fundamental to our <strong>remove duplicate lines without login online</strong> architecture.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Why does the tool show a small delay when I type?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">We use <strong>debouncing</strong> for performance optimization. Without it, every keystroke would trigger full deduplication analysis, causing lag with large texts. The brief pause after you stop typing ensures smooth performance. The delay is imperceptible (milliseconds) while preventing unnecessary processing. This makes our <strong>deduplicate text lines online</strong> tool feel instant even with substantial inputs.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this tool completely free?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, completely <strong>free</strong> with no registration, usage limits, file size restrictions, watermarks, or hidden fees. Use for personal or commercial projects without attribution. This is truly a <strong>free remove duplicate lines tool</strong> for everyone. Supported by unobtrusive advertising that doesn't interfere with tool functionality.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const outputText = document.getElementById('outputText');
+const inputStats = document.getElementById('inputStats');
+const outputStats = document.getElementById('outputStats');
+const removedCount = document.getElementById('removedCount');
+const processingTime = document.getElementById('processingTime');
+const duplicatesPreview = document.getElementById('duplicatesPreview');
+const duplicatesList = document.getElementById('duplicatesList');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+
+// Stats elements
+const statTotal = document.getElementById('statTotal');
+const statUnique = document.getElementById('statUnique');
+const statDuplicates = document.getElementById('statDuplicates');
+const statReduction = document.getElementById('statReduction');
+
+// Buttons
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const resetBtn = document.getElementById('resetBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+// Options
+const caseSensitive = document.getElementById('caseSensitive');
+const trimOption = document.getElementById('trimOption');
+const emptyLines = document.getElementById('emptyLines');
+const sortOption = document.getElementById('sortOption');
+
+// Data storage
+let duplicateMap = new Map();
+let originalLines = [];
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Update input stats
+function updateInputStats() {
+  const text = inputText.value;
+  const lines = text === '' ? 0 : text.split('\n').length;
+  const chars = text.length;
+  inputStats.textContent = `Lines: ${lines} | Chars: ${chars}`;
+}
+
+// Debounce function for performance
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Main deduplication function
+function removeDuplicates() {
+  const startTime = performance.now();
+  const text = inputText.value;
+  
+  if (!text.trim()) {
+    outputText.value = '';
+    outputStats.textContent = 'Lines: 0 | Removed: 0';
+    removedCount.classList.add('hidden');
+    processingTime.textContent = '';
+    duplicatesPreview.classList.add('hidden');
+    updateStats(0, 0, 0);
+    duplicateMap.clear();
+    originalLines = [];
+    return;
+  }
+  
+  const lines = text.split('\n');
+  originalLines = lines;
+  const seen = new Set();
+  const uniqueLines = [];
+  duplicateMap.clear();
+  
+  const isCaseSensitive = caseSensitive.value === 'sensitive';
+  const shouldTrim = trimOption.value === 'trim';
+  const emptyLineMode = emptyLines.value;
+  const sortMode = sortOption.value;
+  
+  lines.forEach((line, index) => {
+    let processedLine = line;
+    let comparisonKey = line;
+    
+    // Handle whitespace
+    if (shouldTrim) {
+      processedLine = line.trim();
+      comparisonKey = processedLine;
+    }
+    
+    // Handle case sensitivity
+    if (!isCaseSensitive) {
+      comparisonKey = comparisonKey.toLowerCase();
+    }
+    
+    // Handle empty lines
+    if (processedLine === '') {
+      if (emptyLineMode === 'remove') {
+        return; // Skip empty lines entirely
+      } else if (emptyLineMode === 'keep') {
+        comparisonKey = '__EMPTY_LINE__' + index; // Unique key for each empty line
+      }
+    }
+    
+    // Check for duplicates
+    if (seen.has(comparisonKey)) {
+      // Track duplicates
+      if (!duplicateMap.has(comparisonKey)) {
+        duplicateMap.set(comparisonKey, { count: 1, original: processedLine });
+      }
+      duplicateMap.get(comparisonKey).count++;
+    } else {
+      seen.add(comparisonKey);
+      uniqueLines.push({
+        original: line,
+        processed: processedLine,
+        key: comparisonKey,
+        index: index
+      });
+    }
+  });
+  
+  // Sort if requested
+  if (sortMode === 'asc') {
+    uniqueLines.sort((a, b) => a.processed.localeCompare(b.processed));
+  } else if (sortMode === 'desc') {
+    uniqueLines.sort((a, b) => b.processed.localeCompare(a.processed));
+  }
+  
+  // Generate output
+  const output = uniqueLines.map(item => {
+    // If trim was applied and line wasn't empty, use processed version
+    if (shouldTrim && item.processed !== '') {
+      return item.processed;
+    }
+    return item.original;
+  }).join('\n');
+  
+  const endTime = performance.now();
+  
+  // Update UI
+  outputText.value = output;
+  const totalRemoved = lines.length - uniqueLines.length;
+  
+  outputStats.textContent = `Lines: ${uniqueLines.length} | Removed: ${totalRemoved}`;
+  if (totalRemoved > 0) {
+    removedCount.textContent = `(${totalRemoved} removed)`;
+    removedCount.classList.remove('hidden');
+  } else {
+    removedCount.classList.add('hidden');
+  }
+  
+  processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+  
+  // Update stats dashboard
+  updateStats(lines.length, uniqueLines.length, totalRemoved);
+  
+  // Show duplicates preview if any found
+  displayDuplicatesPreview();
+}
+
+// Update statistics dashboard
+function updateStats(total, unique, removed) {
+  statTotal.textContent = total.toLocaleString();
+  statUnique.textContent = unique.toLocaleString();
+  statDuplicates.textContent = removed.toLocaleString();
+  
+  const reduction = total > 0 ? ((removed / total) * 100).toFixed(1) : 0;
+  statReduction.textContent = reduction + '%';
+}
+
+// Display duplicates preview
+function displayDuplicatesPreview() {
+  if (duplicateMap.size === 0) {
+    duplicatesPreview.classList.add('hidden');
+    return;
+  }
+  
+  duplicatesPreview.classList.remove('hidden');
+  duplicatesList.innerHTML = '';
+  
+  // Sort duplicates by count (highest first)
+  const sortedDuplicates = Array.from(duplicateMap.entries())
+    .sort((a, b) => b[1].count - a[1].count)
+    .slice(0, 20); // Limit to top 20
+  
+  sortedDuplicates.forEach(([key, data]) => {
+    const div = document.createElement('div');
+    div.className = 'duplicate-item p-2 rounded bg-white/5 cursor-pointer text-xs';
+    const displayText = data.original.substring(0, 50) + (data.original.length > 50 ? '...' : '');
+    div.innerHTML = `
+      <div class="flex items-center justify-between">
+        <span class="text-xs text-red-400 font-medium">${data.count} duplicates</span>
+        <span class="text-xs text-gray-500">${data.original.length} chars</span>
+      </div>
+      <div class="text-gray-300 truncate mt-0.5">${displayText || '(empty line)'}</div>
+    `;
+    
+    div.addEventListener('click', () => {
+      // Highlight all occurrences in input (visual feedback)
+      navigator.clipboard.writeText(data.original);
+      div.style.background = 'rgba(239, 68, 68, 0.2)';
+      setTimeout(() => {
+        div.style.background = '';
+      }, 200);
+    });
+    
+    duplicatesList.appendChild(div);
+  });
+  
+  if (duplicateMap.size > 20) {
+    const moreDiv = document.createElement('div');
+    moreDiv.className = 'text-xs text-gray-500 text-center py-1';
+    moreDiv.textContent = `... and ${duplicateMap.size - 20} more duplicate types`;
+    duplicatesList.appendChild(moreDiv);
+  }
+}
+
+// Debounced version for typing
+const debouncedDedupe = debounce(removeDuplicates, 0);
+
+// Drag and drop handlers
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  if (!file.type.match('text.*') && !file.name.match(/\.(txt|csv|json|xml|html?|md|js|css|py|java|cpp|c|php|rb|go|rs|swift|kt|sql|log)$/i)) {
+    alert('Please upload a text file');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    updateInputStats();
+    removeDuplicates();
+  };
+  reader.readAsText(file);
+}
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    updateInputStats();
+    removeDuplicates();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  updateInputStats();
+  removeDuplicates();
+  inputText.focus();
+}
+
+// Copy output
+async function copyOutput() {
+  if (!outputText.value) return;
+  
+  try {
+    await navigator.clipboard.writeText(outputText.value);
+    const originalText = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalText;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+}
+
+// Download output
+function downloadOutput() {
+  const text = outputText.value;
+  if (!text.trim()) return;
+  
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'unique-lines.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Reset all
+function resetAll() {
+  inputText.value = '';
+  outputText.value = '';
+  updateInputStats();
+  outputStats.textContent = 'Lines: 0 | Removed: 0';
+  removedCount.classList.add('hidden');
+  processingTime.textContent = '';
+  duplicatesPreview.classList.add('hidden');
+  updateStats(0, 0, 0);
+  duplicateMap.clear();
+  originalLines = [];
+  
+  // Reset options to defaults
+  caseSensitive.value = 'insensitive';
+  trimOption.value = 'trim';
+  emptyLines.value = 'remove';
+  sortOption.value = 'original';
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Event listeners
+inputText.addEventListener('input', () => {
+  updateInputStats();
+  debouncedDedupe();
+});
+
+// Option changes trigger immediate update
+[caseSensitive, trimOption, emptyLines, sortOption].forEach(el => {
+  el.addEventListener('change', removeDuplicates);
+});
+
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+copyBtn.addEventListener('click', copyOutput);
+downloadBtn.addEventListener('click', downloadOutput);
+resetBtn.addEventListener('click', resetAll);
+
+// Initialize
+updateInputStats();
+</script>
+</body>
+</html>

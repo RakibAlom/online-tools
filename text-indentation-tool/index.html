@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Text Indentation Tool - Free Online Indent Formatter</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online text indentation tool. Add, remove, or adjust indentation for code and text. Support for spaces, tabs, and custom indent levels. No registration required." />
+  <meta name="keywords" content="text indentation tool, text indentation online, free text indentation tool, online text indentation, indent text online, text indenter online free, add indent to text online, increase indent text online, decrease indent text online, paragraph indentation tool online, text formatting indent tool, code indentation tool online, indent lines of text online, text tab indent tool online, indent multiple lines online, text indent formatter online, free online text indenter tool, bulk text indentation online, text indentation utility online, indent text by spaces online, indent text by tabs online, text indent editor online, text indentation for coding online free, text indent adjuster online, online paragraph indent tool free, text indentation without login online, text layout indentation tool online" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/text-indentation-tool/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/text-indentation-tool/" />
+  <meta property="og:title" content="Text Indentation Tool - Free Online Indent Formatter" />
+  <meta property="og:description" content="Add, remove, or adjust indentation for code and text. Support for spaces, tabs, and custom indent levels. No registration required." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/text-indentation-tool/" />
+  <meta name="twitter:title" content="Text Indentation Tool - Free Online Indent Formatter" />
+  <meta name="twitter:description" content="Add, remove, or adjust indentation for code and text. Support for spaces, tabs, and custom indent levels. No registration required." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+
+    .option-card {
+      transition: all 0.2s ease;
+    }
+    
+    .option-card:hover {
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .option-card.active {
+      background: rgba(99, 102, 241, 0.15);
+      border-color: rgba(99, 102, 241, 0.4);
+    }
+
+    .action-btn {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    .action-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    .indent-level-btn {
+      min-width: 2rem;
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      opacity: 1;
+    }
+
+    .preview-line {
+      font-family: 'Courier New', monospace;
+      white-space: pre;
+      border-left: 2px solid rgba(99, 102, 241, 0.5);
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 20h6M10 28h12M10 12h20" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Text Indentation Tool</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Text Indentation Tool
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Code & Text Indentation Formatter
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-formatting enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Input Text / Code
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Type or paste text/code here to adjust indentation... Or drag & drop a file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.csv,.md,.json,.xml,.html,.js,.css,.py,.java,.cpp,.c,.php,.rb,.go,.rs,.swift,.kt,.sql,.log" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Chars: 0 | Words: 0 | Lines: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Output -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Indented Result
+            </label>
+            <div class="flex gap-1">
+              <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                Copy
+              </button>
+              <button id="downloadBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Download
+              </button>
+            </div>
+          </div>
+          
+          <textarea id="outputText" readonly spellcheck="false"
+            class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+            placeholder="Indented text will appear here automatically..."></textarea>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="outputStats">Lines: 0 | Avg Indent: 0 | Total Chars: 0</span>
+            <span id="processingTime" class="text-gray-600"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-4">
+        
+        <!-- Primary Actions -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Quick Actions</label>
+          <div class="flex flex-wrap gap-2">
+            <button id="increaseIndentBtn" class="action-btn active rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all btn-animated flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              Increase Indent
+            </button>
+            <button id="decreaseIndentBtn" class="action-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all btn-animated flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+              Decrease Indent
+            </button>
+            <button id="removeIndentBtn" class="action-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all btn-animated flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              Remove All Indent
+            </button>
+            <button id="autoDetectBtn" class="action-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all btn-animated flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              Auto Detect & Fix
+            </button>
+          </div>
+        </div>
+
+        <!-- Indentation Settings -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          <div>
+            <label class="text-xs font-medium text-gray-300 mb-1.5 block flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+              Indent Character
+            </label>
+            <select id="indentChar" class="w-full px-3 py-2 rounded-md glass-input text-sm">
+              <option value="space">Spaces</option>
+              <option value="tab">Tabs</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="text-xs font-medium text-gray-300 mb-1.5 block flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
+              Spaces per Indent
+            </label>
+            <select id="spacesPerIndent" class="w-full px-3 py-2 rounded-md glass-input text-sm">
+              <option value="2">2 spaces</option>
+              <option value="4" selected>4 spaces</option>
+              <option value="8">8 spaces</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="text-xs font-medium text-gray-300 mb-1.5 block flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"/></svg>
+              Indent Levels
+            </label>
+            <input type="number" id="indentLevels" min="1" max="20" value="1" 
+              class="w-full px-3 py-2 rounded-md glass-input text-sm font-medium">
+          </div>
+
+          <div class="flex items-end">
+            <label class="flex items-center gap-2 cursor-pointer glass-panel rounded-lg p-2.5 border border-white/5 w-full">
+              <input type="checkbox" id="preserveEmpty" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-4 h-4">
+              <span class="text-xs font-medium text-gray-300">Preserve Empty Lines</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Indent Level Presets -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Set Specific Indent Level</label>
+          <div class="flex flex-wrap gap-2">
+            <button class="indent-level-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated" data-level="0">0</button>
+            <button class="indent-level-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated" data-level="1">1</button>
+            <button class="indent-level-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated" data-level="2">2</button>
+            <button class="indent-level-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated" data-level="3">3</button>
+            <button class="indent-level-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated" data-level="4">4</button>
+            <button class="indent-level-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated" data-level="6">6</button>
+            <button class="indent-level-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated" data-level="8">8</button>
+            <button class="indent-level-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated" data-level="12">12</button>
+          </div>
+        </div>
+
+        <!-- Quick Presets -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Language Presets</label>
+          <div class="flex flex-wrap gap-2">
+            <button class="preset-btn compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated" data-char="space" data-spaces="2">Python (2)</button>
+            <button class="preset-btn compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated" data-char="space" data-spaces="4">JavaScript (4)</button>
+            <button class="preset-btn compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated" data-char="tab" data-spaces="4">Linux Kernel (Tab)</button>
+            <button class="preset-btn compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated" data-char="space" data-spaces="4">Java (4)</button>
+            <button class="preset-btn compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated" data-char="space" data-spaces="2">Ruby (2)</button>
+            <button class="preset-btn compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated" data-char="space" data-spaces="4">PHP (4)</button>
+          </div>
+        </div>
+
+        <!-- Live Preview -->
+        <div id="livePreview" class="hidden">
+          <label class="text-xs font-medium text-gray-300 mb-2 block flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            Visual Preview <span class="text-gray-500 font-normal">(first 5 lines, spaces shown as ·)</span>
+          </label>
+          <div id="previewContent" class="glass-panel rounded-lg p-3 text-xs overflow-x-auto font-mono">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Text Indentation Tool?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Instant</h3>
+          <p class="text-gray-400 text-xs">Real-time indentation as you type</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Flexible</h3>
+          <p class="text-gray-400 text-xs">Spaces, tabs, or custom levels</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Drag & Drop</h3>
+          <p class="text-gray-400 text-xs">Upload code files easily</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based processing</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy or download results</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration needed</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Enter Text</h3>
+          <p class="text-gray-400 text-xs">Type, paste, or upload your code/text file. Changes apply automatically.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Choose Action</h3>
+          <p class="text-gray-400 text-xs">Increase, decrease, remove, or auto-detect indentation levels.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Configure</h3>
+          <p class="text-gray-400 text-xs">Select spaces/tabs, set indent size, and adjust levels. Use presets for quick setup.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy formatted result or download as file. Use in your projects immediately.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Text Indentation: Mastering Code Formatting and Alignment for Professional Development</h2>
+        
+        <p><strong>Text indentation</strong> is a fundamental yet critical practice in computer programming and text formatting, serving as the cornerstone of code readability, logical structure visualization, and professional document presentation. Whether you're a software developer maintaining complex codebases, a data analyst formatting reports, a technical writer creating structured documentation, or a student learning programming fundamentals, understanding how to properly <strong>indent text online</strong> is essential for producing high-quality, maintainable work. Our <strong>text indentation online</strong> solution provides everything you need for professional indentation management without any cost or registration barriers.</p>
+
+        <h2>What Is Text Indentation and Why Does It Matter?</h2>
+        
+        <p><strong>Text indentation</strong> refers to the practice of adding whitespace—typically spaces or tab characters—at the beginning of lines to visually organize content and indicate hierarchical relationships. In programming, indentation demonstrates code structure, showing which statements belong to loops, conditionals, functions, or classes. In general text formatting, indentation creates visual hierarchy for paragraphs, lists, and nested content. When you <strong>add indent to text online</strong>, you're applying a formatting convention that transforms flat text into structured, scannable information.</p>
+
+        <p>The importance of consistent <strong>online text indentation</strong> cannot be overstated across technical fields. In software development, indentation directly impacts code comprehension—poorly indented code requires significantly more cognitive effort to understand, increasing the risk of bugs and maintenance errors. In Python and other off-side rule languages, indentation is syntactically significant; incorrect indentation causes program failures. For data and documentation, proper indentation enables quick scanning and information retrieval. Without reliable <strong>text indenter online free</strong> tools, professionals waste countless hours manually adjusting spacing or fighting with editor configurations.</p>
+
+        <h2>Understanding Indentation Methods and Techniques</h2>
+
+        <h3>Spaces vs. Tabs: The Great Debate</h3>
+        
+        <p>The choice between spaces and tabs represents one of programming's longest-standing debates, with valid arguments on both sides. <strong>Spaces</strong> offer consistency—every viewer sees exactly the same alignment regardless of editor settings. Two spaces always equal two character positions; four spaces always equal four. This predictability makes spaces the choice for languages like Python, JavaScript, and Java, where alignment precision matters for readability.</p>
+
+        <p><strong>Tabs</strong> provide flexibility—a single tab character represents one indentation level, but each developer can configure their display width (2, 4, or 8 spaces) based on preference or visual needs. This adaptability benefits accessibility, as developers with visual impairments can adjust tab widths for comfortable reading. Tabs also result in smaller file sizes and allow keyboard navigation by indentation level. The Linux kernel and some C communities traditionally prefer tabs for these reasons.</p>
+
+        <p>Professional <strong>text indentation tool</strong> implementations support both approaches, recognizing that different projects, teams, and languages have different conventions. Our <strong>free text indentation tool</strong> allows you to choose spaces or tabs dynamically, adjusting to your specific requirements without forcing a particular philosophy.</p>
+
+        <h3>Indentation Depth and Levels</h3>
+        
+        <p>Indentation depth—the number of spaces or tabs per level—varies by language and convention. Common standards include <strong>2 spaces</strong> for Ruby, XML, and HTML; <strong>4 spaces</strong> for Python, Java, C++, and JavaScript; and <strong>tabs</strong> (typically displayed as 4 or 8 spaces) for Linux kernel code and some C projects. The <strong>text indent adjuster online</strong> must accommodate these variations to serve diverse development needs.</p>
+
+        <p>Indentation levels represent nesting depth—each logical block (function, loop, conditional) typically increases the indentation level by one. Deeply nested code (5+ levels) may indicate design problems requiring refactoring, but when necessary, clear indentation becomes even more critical for comprehension. <strong>Increase indent text online</strong> capabilities allow you to add or remove levels efficiently when refactoring or restructuring code.</p>
+
+        <h3>Block Indentation Styles</h3>
+        
+        <p>Beyond simple character choice, programming languages adopt specific indentation styles that affect brace placement and block formatting. <strong>K&R style</strong> (Kernighan and Ritchie) keeps opening braces on the same line as control statements, saving vertical space. <strong>Allman style</strong> (BSD style) places braces on their own lines, making block boundaries more visible. <strong>GNU style</strong> uses 2-space indentation with braces indented 2 spaces from the control statement. While our <strong>text indentation utility online</strong> focuses on whitespace management rather than brace placement, understanding these styles helps you apply appropriate indentation levels to existing code.</p>
+
+        <h2>Professional Applications of Text Indentation</h2>
+
+        <h3>Software Development and Code Maintenance</h3>
+        
+        <p>Developers rely on <strong>code indentation tool online</strong> capabilities for numerous daily tasks. Code review preparation often requires standardizing indentation to match team conventions before submitting pull requests. Legacy code modernization involves converting outdated indentation styles to current standards. Debugging frequently requires temporarily adjusting indentation to isolate code blocks or visualize execution flow. Refactoring—moving code between functions or reorganizing class structures—necessitates indentation adjustments throughout affected code.</p>
+
+        <p>Language-specific requirements drive indentation tool usage. Python's syntactic dependence on indentation makes precise management essential—too little or too much indentation changes program behavior or causes syntax errors. YAML and similar whitespace-sensitive formats require careful indentation for valid parsing. Makefile syntax uses tabs exclusively for command indentation, with spaces causing build failures. A versatile <strong>text indentation for coding online free</strong> tool handles these language-specific needs.</p>
+
+        <h3>Data Formatting and Documentation</h3>
+        
+        <p>Data professionals use <strong>paragraph indentation tool online</strong> features for structured data preparation. JSON and XML files become more readable with proper indentation, especially for complex nested structures. Configuration files for applications, servers, and deployment tools require consistent indentation for valid parsing. Log file analysis benefits from indented formatting when processing hierarchical or nested log entries. Data export formatting for reports and presentations often requires specific indentation for professional appearance.</p>
+
+        <p>Technical documentation creation involves extensive indentation management. Markdown files use indentation for code blocks, nested lists, and definition lists. reStructuredText and AsciiDoc formats rely on indentation for structural elements. API documentation examples must show properly indented code samples that developers can copy and use directly. The <strong>text layout indentation tool online</strong> ensures documentation examples are correctly formatted and professional.</p>
+
+        <h3>Content Management and Publishing</h3>
+        
+        <p>Content creators leverage <strong>text formatting indent tool</strong> capabilities for various publishing workflows. Email formatting sometimes requires specific indentation for quoted replies or nested threading. Forum and wiki contributions often use indentation for code blocks, quotes, and hierarchical discussions. Markdown content for blogs, documentation sites, and static site generators requires precise indentation for proper rendering. Academic writing in plain text formats uses indentation for block quotes, footnotes, and structured arguments.</p>
+
+        <h2>Advanced Text Indentation Techniques</h2>
+
+        <h3>Smart Indentation Detection and Conversion</h3>
+        
+        <p>Professional <strong>text indentation online</strong> tools go beyond simple addition or removal of whitespace. Smart detection analyzes existing indentation patterns to determine whether a file uses spaces, tabs, or mixed indentation. Conversion capabilities transform between conventions—converting 4-space indentation to tabs, normalizing mixed indentation to consistent spaces, or adjusting depth levels (2 spaces to 4 spaces) to match project standards.</p>
+
+        <p>Mixed indentation—combining tabs and spaces—represents a common problem, especially in files edited by multiple contributors with different editor settings. Smart tools detect mixed usage, highlight inconsistencies, and offer normalization options. The principle of "tabs for indentation, spaces for alignment" helps avoid mixing issues, but when encountered, <strong>bulk text indentation online</strong> tools can sanitize and standardize the file.</p>
+
+        <h3>Context-Aware Indentation Management</h3>
+        
+        <p>Advanced <strong>text indent editor online</strong> features understand context beyond simple line-by-line processing. Preserving relative indentation maintains the relationship between lines when adjusting overall levels—if line A has 4 spaces and line B has 8 spaces, increasing both by one level results in 8 and 12 spaces respectively, preserving the 4-space difference. Handling empty lines requires decisions about whether blank lines should retain indentation (preserving vertical structure) or be stripped clean.</p>
+
+        <p>Comment and string literal handling requires special consideration. In most languages, indentation within multi-line strings should be preserved as content rather than adjusted as code. Comment indentation typically follows code indentation for visual consistency, though some documentation comments (like Javadoc or docstrings) follow specific conventions. Professional <strong>online paragraph indent tool free</strong> implementations respect these distinctions.</p>
+
+        <h3>Accessibility and Visual Considerations</h3>
+        
+        <p>Modern <strong>text indentation without login online</strong> tools consider accessibility requirements. Wide indentation (8 spaces or large tab widths) can cause excessive horizontal scrolling for users with low vision who require large fonts. Narrow indentation (2 spaces) may be difficult to distinguish for some visual impairments. Configurable display options allow users to adjust how indentation appears without modifying the underlying file—converting tabs to spaces for display, adjusting visible tab width, or showing indentation guides (vertical lines indicating indentation levels).</p>
+
+        <h2>Comparing Indentation Approaches</h2>
+
+        <h3>Manual Indentation vs. Automated Tools</h3>
+        
+        <p>Manual indentation using spacebar or tab key is feasible for small edits but fails at scale. Counting spaces manually is error-prone; maintaining consistency across hundreds of lines is tedious. Editor auto-indent features help but often require configuration and may not handle pasted code correctly. Automated <strong>indent lines of text online</strong> tools provide precision, consistency, and speed—converting entire files in milliseconds with guaranteed uniformity. The time savings and error reduction justify using a <strong>free online text indenter tool</strong> for any non-trivial indentation task.</p>
+
+        <h3>IDE Formatting vs. Online Tools</h3>
+        
+        <p>Integrated Development Environments (IDEs) offer powerful formatting capabilities, but they require installation, configuration, and project setup. Online indentation tools provide immediate accessibility—no installation, no configuration files, no IDE-specific settings. They're ideal for quick formatting tasks, working on unfamiliar machines, processing files outside project contexts, or when IDE formatting produces undesirable results. The <strong>text indentation utility online</strong> complements rather than replaces IDE capabilities, offering convenience and accessibility.</p>
+
+        <h2>Best Practices for Effective Indentation</h2>
+
+        <h3>Consistency and Convention Adherence</h3>
+        
+        <p>The primary rule of indentation is consistency—whatever convention you choose, apply it uniformly throughout your project. Mixed conventions create visual noise, complicate version control diffs, and confuse contributors. When joining existing projects, always adopt the established indentation style regardless of personal preference. Our <strong>text indent formatter online</strong> helps you quickly adapt code to match project standards.</p>
+
+        <h3>Appropriate Depth Management</h3>
+        
+        <p>Excessive indentation depth (5+ levels) often indicates code complexity that should be refactored. Functions with deeply nested conditionals and loops are difficult to test, debug, and maintain. Consider extracting nested logic into separate functions or simplifying conditional structures. When deep nesting is unavoidable, clear indentation becomes even more critical—ensure your <strong>text tab indent tool online</strong> produces consistent, visible indentation that clarifies the structure rather than obscuring it.</p>
+
+        <h3>Version Control Considerations</h3>
+        
+        <p>Indentation changes in version control systems can create noisy diffs that obscure meaningful changes. When reformatting indentation across an entire file, consider doing so in a separate commit from functional changes. Some teams use automated formatting tools in pre-commit hooks to ensure consistency without manual intervention. Our <strong>text indentation tool</strong> helps you prepare clean, properly formatted commits that focus reviewer attention on substance rather than style.</p>
+
+        <h2>The Future of Text Formatting Technology</h2>
+
+        <p>Artificial intelligence and machine learning are beginning to influence indentation and formatting practices. Smart formatters can infer indentation conventions from existing code, automatically adapting to project styles without explicit configuration. Language models can suggest optimal indentation for complex nested structures, balancing readability with vertical space efficiency. As remote development and cloud-based editing grow, browser-based <strong>online text indentation</strong> tools will integrate more deeply with development workflows, offering IDE-like capabilities without local installation.</p>
+
+        <p>Despite technological advances, fundamental indentation principles remain constant. The visual organization of text, the indication of hierarchical structure through whitespace, and the balance between personal preference and team consistency—these concepts transcend specific tools or technologies. Our platform evolves to incorporate innovations while maintaining the reliable, straightforward <strong>text indentation without login online</strong> experience that professionals depend on for daily productivity.</p>
+
+        <h2>Conclusion: Master Your Code with Professional Indentation</h2>
+
+        <p><strong>Text indentation</strong> remains one of the most essential practices in software development and technical writing. From simple visual organization to syntactically significant structure, proper indentation transforms unreadable text into clear, maintainable, professional content. Whether you're preparing code for review, formatting documentation for publication, or learning programming fundamentals, mastering indentation techniques will dramatically improve your work quality and efficiency.</p>
+
+        <p>Our <strong>free online text indentation tool</strong> provides all the capabilities you need to handle any indentation scenario. With automatic real-time processing as you type, support for both spaces and tabs, flexible indentation depth adjustment, plus smart features like auto-detection and bulk processing, this tool serves everyone from casual users to professional developers. The browser-based architecture ensures privacy and accessibility, while the intuitive interface requires no learning curve. Whether you need to <strong>indent text online</strong>, <strong>increase indent text online</strong>, <strong>decrease indent text online</strong>, or perform complex <strong>bulk text indentation online</strong> operations, our <strong>text indentation utility online</strong> delivers professional results instantly. Stop struggling with manual spacing adjustments—start using our professional <strong>text indentation online</strong> tool today and experience the efficiency of automated code formatting.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool format indentation automatically as I type?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>text indentation online</strong> features <strong>automatic real-time formatting</strong>. As you type or paste code/text, the tool instantly applies your selected indentation settings. The "Auto-formatting enabled" indicator confirms the feature is active. Click any action button (Increase, Decrease, Remove, or Auto-Detect) to apply changes instantly. The visual preview shows exactly how your indentation will look, making this the most responsive <strong>free text indentation tool</strong> available.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Should I use spaces or tabs for indentation?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">It depends on your project and language. <strong>Spaces</strong> (typically 2 or 4) are preferred for Python, JavaScript, Java, and most modern web development—they ensure consistent display across all editors. <strong>Tabs</strong> are traditional for C, Linux kernel code, and some legacy systems—they offer flexibility for individual viewer preferences. Our <strong>text indenter online free</strong> supports both, with presets for common language conventions. When in doubt, check your project's style guide or use the language preset buttons for quick configuration.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How does the Auto Detect & Fix feature work?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">The <strong>Auto Detect</strong> feature analyzes your text to identify the current indentation pattern—detecting whether you use spaces, tabs, or a mix, and determining the indentation size. It then normalizes the entire text to use your currently selected settings (spaces/tabs and indent size), fixing inconsistencies and mixed indentation. This is perfect for cleaning up files edited by multiple contributors or converting between different indentation conventions.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I remove all indentation from my text?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Click the <strong>"Remove All Indent"</strong> button to strip all leading whitespace from every line. This is useful when preparing text for systems that don't handle indentation well, when you need to reformat from scratch, or when copying code from indented contexts into flat formats. The tool preserves empty lines (unless you uncheck "Preserve Empty Lines") and only removes leading whitespace, not spaces within the text itself.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What's the difference between 2-space and 4-space indentation?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>2 spaces</strong> are common in Ruby, HTML/XML, and some JavaScript projects—they save horizontal space and work well for deeply nested structures. <strong>4 spaces</strong> are standard for Python, Java, C++, and most enterprise code—they provide clearer visual distinction between indentation levels. The choice often depends on language conventions and team preferences. Use our language presets (Python, JavaScript, Java, etc.) to quickly apply the correct standard for your project.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I process multiple files at once?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Currently, the tool processes one file at a time via drag-and-drop or file selection. However, you can process files sequentially very quickly—formatting settings persist between files, so you can drop multiple files one after another without reconfiguring. For <strong>bulk text indentation online</strong> across many files, we recommend using the tool to establish the correct settings, then applying those settings consistently to each file. Each file's content is processed independently to ensure accuracy.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my code secure when using this tool?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">100% secure. All processing happens <strong>locally in your browser</strong>—your code never uploads to any server or leaves your device. You can verify this by checking your browser's Network tab (no data transfer occurs). The tool works offline after loading. This makes it safe for processing proprietary code, sensitive scripts, or confidential business logic. Privacy is built into our <strong>text indentation without login online</strong> architecture.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I fix Python indentation errors?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Python requires consistent indentation (typically 4 spaces). Use the <strong>Python (2)</strong> or <strong>JavaScript (4)</strong> preset depending on your project's convention. Paste your code, click <strong>Auto Detect & Fix</strong> to normalize mixed indentation, then use <strong>Increase/Decrease Indent</strong> to adjust specific blocks. The visual preview shows spaces as "·" so you can verify consistency. Ensure no tabs remain if your project uses spaces exclusively—Python treats tabs and spaces as different indentation levels.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Why does the preview show dots instead of spaces?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">The visual preview uses middle dots (·) to represent space characters, making indentation visible and countable. This helps you verify that indentation is applied correctly—especially useful when debugging Python code or ensuring consistent spacing. The actual output uses real space characters (or tabs, if selected); the dots are just for visualization in the preview panel.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this tool completely free to use?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, completely <strong>free</strong> with no registration, usage limits, watermarks, or hidden fees. Use it for personal projects, commercial work, open-source contributions, or any purpose without attribution. This is truly a <strong>free online text indenter tool</strong> for everyone. Supported by unobtrusive advertising and voluntary user support, allowing us to keep it free and accessible to developers worldwide.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const outputText = document.getElementById('outputText');
+const inputStats = document.getElementById('inputStats');
+const outputStats = document.getElementById('outputStats');
+const processingTime = document.getElementById('processingTime');
+const livePreview = document.getElementById('livePreview');
+const previewContent = document.getElementById('previewContent');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+
+// Settings Elements
+const indentChar = document.getElementById('indentChar');
+const spacesPerIndent = document.getElementById('spacesPerIndent');
+const indentLevels = document.getElementById('indentLevels');
+const preserveEmpty = document.getElementById('preserveEmpty');
+
+// Action Buttons
+const increaseIndentBtn = document.getElementById('increaseIndentBtn');
+const decreaseIndentBtn = document.getElementById('decreaseIndentBtn');
+const removeIndentBtn = document.getElementById('removeIndentBtn');
+const autoDetectBtn = document.getElementById('autoDetectBtn');
+const actionBtns = document.querySelectorAll('.action-btn');
+
+// Other Buttons
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const resetBtn = document.getElementById('resetBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const indentLevelBtns = document.querySelectorAll('.indent-level-btn');
+const presetBtns = document.querySelectorAll('.preset-btn');
+
+let currentAction = 'increase';
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Update input stats
+function updateInputStats() {
+  const text = inputText.value;
+  const chars = text.length;
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+  const lines = text === '' ? 0 : text.split('\n').length;
+  inputStats.textContent = `Chars: ${chars} | Words: ${words} | Lines: ${lines}`;
+}
+
+// Get indent string
+function getIndentString(levels = 1) {
+  const char = indentChar.value;
+  const spaces = parseInt(spacesPerIndent.value) || 4;
+  const totalLevels = parseInt(indentLevels.value) || 1;
+  const actualLevels = levels * totalLevels;
+  
+  if (char === 'tab') {
+    return '\t'.repeat(actualLevels);
+  } else {
+    return ' '.repeat(spaces * actualLevels);
+  }
+}
+
+// Detect indentation in text
+function detectIndentation(text) {
+  const lines = text.split('\n');
+  let spaceCounts = {};
+  let tabCount = 0;
+  
+  lines.forEach(line => {
+    const match = line.match(/^(\s+)/);
+    if (match) {
+      const whitespace = match[1];
+      if (whitespace.includes('\t')) {
+        tabCount++;
+      } else {
+        const len = whitespace.length;
+        spaceCounts[len] = (spaceCounts[len] || 0) + 1;
+      }
+    }
+  });
+  
+  // Determine most common
+  let maxCount = 0;
+  let commonSpace = 4;
+  for (const [len, count] of Object.entries(spaceCounts)) {
+    if (count > maxCount) {
+      maxCount = count;
+      commonSpace = parseInt(len);
+    }
+  }
+  
+  if (tabCount > maxCount) {
+    return { type: 'tab', size: 4 };
+  } else {
+    // Round to common values
+    if (commonSpace <= 2) commonSpace = 2;
+    else if (commonSpace <= 4) commonSpace = 4;
+    else commonSpace = 8;
+    return { type: 'space', size: commonSpace };
+  }
+}
+
+// Process indentation
+function processIndentation() {
+  const startTime = performance.now();
+  const text = inputText.value;
+  
+  if (!text) {
+    outputText.value = '';
+    outputStats.textContent = 'Lines: 0 | Avg Indent: 0 | Total Chars: 0';
+    processingTime.textContent = '';
+    livePreview.classList.add('hidden');
+    return;
+  }
+  
+  const preserve = preserveEmpty.checked;
+  const lines = text.split('\n');
+  let result = [];
+  
+  try {
+    switch(currentAction) {
+      case 'increase':
+        const indentStr = getIndentString();
+        result = lines.map(line => {
+          if (!line.trim() && !preserve) return '';
+          return indentStr + line;
+        });
+        break;
+        
+      case 'decrease':
+        const currentIndent = getIndentString();
+        result = lines.map(line => {
+          if (!line.trim() && !preserve) return '';
+          // Remove one level of indentation
+          if (indentChar.value === 'tab') {
+            return line.replace(/^\t/, '');
+          } else {
+            const spaces = parseInt(spacesPerIndent.value) || 4;
+            const regex = new RegExp(`^ {1,${spaces}}`);
+            return line.replace(regex, '');
+          }
+        });
+        break;
+        
+      case 'remove':
+        result = lines.map(line => {
+          if (!line.trim() && !preserve) return '';
+          return line.replace(/^\s+/, '');
+        });
+        break;
+        
+      case 'auto':
+        // Detect and normalize
+        const detected = detectIndentation(text);
+        indentChar.value = detected.type;
+        spacesPerIndent.value = detected.size;
+        
+        result = lines.map(line => {
+          if (!line.trim() && !preserve) return '';
+          const currentIndent = line.match(/^(\s*)/)[1];
+          const content = line.slice(currentIndent.length);
+          
+          // Calculate current level (approximate)
+          let currentLevel = 0;
+          if (detected.type === 'tab') {
+            currentLevel = currentIndent.split('\t').length - 1 + Math.floor(currentIndent.replace(/\t/g, '').length / detected.size);
+          } else {
+            currentLevel = Math.floor(currentIndent.length / detected.size);
+          }
+          
+          // Rebuild with new settings
+          const newIndent = getIndentString(currentLevel);
+          return newIndent + content;
+        });
+        break;
+    }
+    
+    const output = result.join('\n');
+    const endTime = performance.now();
+    
+    // Calculate stats
+    const avgIndent = result.reduce((sum, line) => {
+      const match = line.match(/^(\s+)/);
+      return sum + (match ? match[1].length : 0);
+    }, 0) / result.length;
+    
+    outputText.value = output;
+    outputStats.textContent = `Lines: ${result.length} | Avg Indent: ${avgIndent.toFixed(1)} | Total Chars: ${output.length}`;
+    processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+    
+    // Update preview
+    updatePreview(result);
+    
+  } catch (error) {
+    console.error('Indentation error:', error);
+  }
+}
+
+// Update live preview
+function updatePreview(lines) {
+  if (lines.length === 0) {
+    livePreview.classList.add('hidden');
+    return;
+  }
+  
+  livePreview.classList.remove('hidden');
+  const previewLines = lines.slice(0, 5);
+  
+  previewContent.innerHTML = previewLines.map((line, idx) => {
+    // Show spaces as dots for visibility
+    const visible = line.replace(/ /g, '·').replace(/\t/g, '→   ');
+    return `<div class="preview-line py-1 border-b border-white/5 last:border-0 text-gray-300">${visible || '<span class="text-gray-600">(empty)</span>'}</div>`;
+  }).join('');
+  
+  if (lines.length > 5) {
+    previewContent.innerHTML += `<div class="text-xs text-gray-500 text-center py-2">... and ${lines.length - 5} more lines</div>`;
+  }
+}
+
+// Action button handlers
+increaseIndentBtn.addEventListener('click', () => {
+  currentAction = 'increase';
+  updateActionButtons();
+  processIndentation();
+});
+
+decreaseIndentBtn.addEventListener('click', () => {
+  currentAction = 'decrease';
+  updateActionButtons();
+  processIndentation();
+});
+
+removeIndentBtn.addEventListener('click', () => {
+  currentAction = 'remove';
+  updateActionButtons();
+  processIndentation();
+});
+
+autoDetectBtn.addEventListener('click', () => {
+  currentAction = 'auto';
+  updateActionButtons();
+  processIndentation();
+});
+
+function updateActionButtons() {
+  actionBtns.forEach(btn => btn.classList.remove('active'));
+  if (currentAction === 'increase') increaseIndentBtn.classList.add('active');
+  else if (currentAction === 'decrease') decreaseIndentBtn.classList.add('active');
+  else if (currentAction === 'remove') removeIndentBtn.classList.add('active');
+  else if (currentAction === 'auto') autoDetectBtn.classList.add('active');
+}
+
+// Indent level buttons
+indentLevelBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    indentLevels.value = btn.dataset.level;
+    if (inputText.value) {
+      processIndentation();
+    }
+  });
+});
+
+// Preset buttons
+presetBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    indentChar.value = btn.dataset.char;
+    spacesPerIndent.value = btn.dataset.spaces;
+    if (inputText.value) {
+      processIndentation();
+    }
+  });
+});
+
+// Settings change handlers
+indentChar.addEventListener('change', () => {
+  if (inputText.value) processIndentation();
+});
+spacesPerIndent.addEventListener('change', () => {
+  if (inputText.value) processIndentation();
+});
+indentLevels.addEventListener('input', () => {
+  if (inputText.value) processIndentation();
+});
+preserveEmpty.addEventListener('change', () => {
+  if (inputText.value) processIndentation();
+});
+
+// Input handling
+inputText.addEventListener('input', () => {
+  updateInputStats();
+  if (currentAction === 'auto') {
+    // Don't auto-process on type for auto mode
+  } else {
+    processIndentation();
+  }
+});
+
+// Drag and drop handlers
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  if (!file.type.match('text.*') && !file.name.match(/\.(txt|csv|json|xml|html?|md|js|css|py|java|cpp|c|php|rb|go|rs|swift|kt|sql|log)$/i)) {
+    alert('Please upload a text file');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    updateInputStats();
+    // Auto-detect on file load
+    currentAction = 'auto';
+    updateActionButtons();
+    processIndentation();
+  };
+  reader.readAsText(file);
+}
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    updateInputStats();
+    processIndentation();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  updateInputStats();
+  outputText.value = '';
+  outputStats.textContent = 'Lines: 0 | Avg Indent: 0 | Total Chars: 0';
+  processingTime.textContent = '';
+  livePreview.classList.add('hidden');
+  inputText.focus();
+}
+
+// Copy output
+async function copyOutput() {
+  if (!outputText.value) return;
+  
+  try {
+    await navigator.clipboard.writeText(outputText.value);
+    const originalText = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalText;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+}
+
+// Download output
+function downloadOutput() {
+  const text = outputText.value;
+  if (!text.trim()) return;
+  
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'indented-text.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Reset all
+function resetAll() {
+  inputText.value = '';
+  outputText.value = '';
+  indentChar.value = 'space';
+  spacesPerIndent.value = '4';
+  indentLevels.value = '1';
+  preserveEmpty.checked = true;
+  currentAction = 'increase';
+  updateActionButtons();
+  updateInputStats();
+  outputStats.textContent = 'Lines: 0 | Avg Indent: 0 | Total Chars: 0';
+  processingTime.textContent = '';
+  livePreview.classList.add('hidden');
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Button event listeners
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+copyBtn.addEventListener('click', copyOutput);
+downloadBtn.addEventListener('click', downloadOutput);
+resetBtn.addEventListener('click', resetAll);
+
+// Initialize
+updateInputStats();
+updateActionButtons();
+</script>
+</body>
+</html>
