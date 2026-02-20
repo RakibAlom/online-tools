@@ -1,0 +1,1810 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Text Editor - Free Online Text Editing Tool</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online text editor with rich formatting, code editing, spell check, word count & export. No login required. Edit text online instantly." />
+  <meta name="keywords" content="text editor, text editor online, free text editor, online text editor, edit text online, text editing tool online, free online text editor tool, online text editing platform, text editor for coding online, text editor for documents online, online text editor free, text editor and formatter online, rich text editor online free, plain text editor online, online text editing utility, bulk text editor online, free online text editing tool, online text editor without login, advanced text editor online free, online text editor for writers, text editor for notes online free, text editor with formatting online, text editor for html online free, simple online text editor free, online code and text editor free" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/text-editor/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/text-editor/" />
+  <meta property="og:title" content="Text Editor - Free Online Text Editing Tool" />
+  <meta property="og:description" content="Free online text editor with rich formatting, code editing, spell check, word count & export. No login required." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/text-editor/" />
+  <meta name="twitter:title" content="Text Editor - Free Online Text Editing Tool" />
+  <meta name="twitter:description" content="Free online text editor with rich formatting, code editing, spell check, word count & export. No login required." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            glass: {
+              100: 'rgba(255,255,255,0.03)',
+              200: 'rgba(255,255,255,0.06)',
+              300: 'rgba(255,255,255,0.1)',
+              border: 'rgba(255,255,255,0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #0a0a0a; color: #e5e5e5; }
+
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image:
+        radial-gradient(at 0% 0%, rgba(60,60,60,0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40,40,40,0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60,60,60,0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40,40,40,0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20,20,20,0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .glass-input {
+      background: rgba(0,0,0,0.4);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: #f5f5f5;
+    }
+
+    .glass-input:focus { background: rgba(0,0,0,0.6); border-color: rgba(255,255,255,0.2); outline: none; }
+    .glass-hover:hover { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.15); }
+
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: rgba(0,0,0,0.2); }
+    ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.25); }
+
+    .btn-animated { transition: all 0.2s ease; }
+    .btn-animated:active { transform: scale(0.97); }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0; opacity: 0; overflow: hidden;
+    }
+    #mobileMenu.open { max-height: 500px; opacity: 1; }
+
+    .article-content h2 { font-size: 1.75rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: #e2e8f0; }
+    .article-content h3 { font-size: 1.35rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #cbd5e1; }
+    .article-content p { margin-bottom: 1rem; line-height: 1.8; color: #94a3b8; }
+    .article-content ul, .article-content ol { margin-bottom: 1rem; padding-left: 1.5rem; color: #94a3b8; }
+    .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-content strong { color: #e2e8f0; }
+
+    .faq-content { transition: max-height 0.3s ease, opacity 0.3s ease; max-height: 0; opacity: 0; overflow: hidden; }
+    .faq-content.open { max-height: 600px; opacity: 1; }
+    .faq-icon { transition: transform 0.3s ease; }
+    .faq-icon.open { transform: rotate(180deg); }
+
+    .glow-text { text-shadow: 0 0 30px rgba(255,255,255,0.1); }
+
+    /* ===== EDITOR TOOLBAR ===== */
+    .toolbar-wrap {
+      background: rgba(15,15,15,0.95);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 6px 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2px;
+      align-items: center;
+    }
+
+    .toolbar-divider {
+      width: 1px;
+      height: 22px;
+      background: rgba(255,255,255,0.12);
+      margin: 0 4px;
+      flex-shrink: 0;
+    }
+
+    .tb-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 5px;
+      background: transparent;
+      border: 1px solid transparent;
+      color: #c0c0c0;
+      cursor: pointer;
+      font-size: 13px;
+      transition: all 0.15s ease;
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    .tb-btn:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.12); color: #fff; }
+    .tb-btn.active { background: rgba(99,102,241,0.2); border-color: rgba(99,102,241,0.5); color: #818cf8; }
+    .tb-btn svg { width: 14px; height: 14px; pointer-events: none; }
+
+    .tb-select {
+      background: rgba(0,0,0,0.5);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: #d0d0d0;
+      border-radius: 5px;
+      padding: 0 6px;
+      height: 28px;
+      font-size: 12px;
+      cursor: pointer;
+      outline: none;
+      flex-shrink: 0;
+    }
+
+    .tb-select:focus { border-color: rgba(99,102,241,0.5); }
+    .tb-select option { background: #1a1a1a; color: #e5e5e5; }
+
+    /* Color picker inline */
+    .color-btn-wrap {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      flex-shrink: 0;
+    }
+
+    .color-btn-wrap input[type="color"] {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: pointer;
+      border: none;
+      padding: 0;
+    }
+
+    .color-btn-visual {
+      width: 28px;
+      height: 28px;
+      border-radius: 5px;
+      border: 1px solid rgba(255,255,255,0.12);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      background: transparent;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .color-btn-visual:hover { border-color: rgba(255,255,255,0.25); background: rgba(255,255,255,0.05); }
+
+    .color-indicator {
+      width: 16px;
+      height: 4px;
+      border-radius: 2px;
+      margin-top: 1px;
+    }
+
+    /* Tooltip */
+    .tb-btn[data-tooltip]:hover::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: calc(100% + 6px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0,0,0,0.9);
+      color: #fff;
+      font-size: 10px;
+      padding: 3px 7px;
+      border-radius: 4px;
+      white-space: nowrap;
+      pointer-events: none;
+      z-index: 999;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .color-btn-wrap[data-tooltip]:hover::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: calc(100% + 6px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0,0,0,0.9);
+      color: #fff;
+      font-size: 10px;
+      padding: 3px 7px;
+      border-radius: 4px;
+      white-space: nowrap;
+      pointer-events: none;
+      z-index: 999;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* ===== EDITOR AREA ===== */
+    .editor-container {
+      background: #fff;
+      min-height: 480px;
+      color: #111;
+      padding: 24px 32px;
+      outline: none;
+      font-family: 'Times New Roman', Georgia, serif;
+      font-size: 15px;
+      line-height: 1.8;
+      word-wrap: break-word;
+      overflow-y: auto;
+    }
+
+    .editor-container:focus { outline: none; }
+
+    /* Editor content styles */
+    .editor-container h1 { font-size: 2rem; font-weight: 700; margin: 1rem 0 0.5rem; line-height: 1.2; }
+    .editor-container h2 { font-size: 1.6rem; font-weight: 700; margin: 1rem 0 0.5rem; }
+    .editor-container h3 { font-size: 1.3rem; font-weight: 600; margin: 0.75rem 0 0.4rem; }
+    .editor-container h4 { font-size: 1.1rem; font-weight: 600; margin: 0.75rem 0 0.4rem; }
+    .editor-container h5 { font-size: 0.95rem; font-weight: 600; margin: 0.75rem 0 0.4rem; }
+    .editor-container h6 { font-size: 0.85rem; font-weight: 600; margin: 0.75rem 0 0.4rem; color: #555; }
+    .editor-container p { margin: 0.5rem 0; }
+    .editor-container ul { list-style-type: disc; padding-left: 1.5rem; margin: 0.5rem 0; }
+    .editor-container ol { list-style-type: decimal; padding-left: 1.5rem; margin: 0.5rem 0; }
+    .editor-container li { margin: 0.25rem 0; }
+    .editor-container blockquote {
+      border-left: 4px solid #6366f1;
+      margin: 1rem 0;
+      padding: 0.5rem 1rem;
+      background: #f3f4f6;
+      color: #444;
+      font-style: italic;
+      border-radius: 0 4px 4px 0;
+    }
+    .editor-container pre {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      padding: 1rem;
+      border-radius: 6px;
+      font-family: 'Courier New', monospace;
+      font-size: 13px;
+      overflow-x: auto;
+      margin: 0.75rem 0;
+    }
+    .editor-container code {
+      background: #f1f5f9;
+      color: #e11d48;
+      padding: 1px 5px;
+      border-radius: 3px;
+      font-family: 'Courier New', monospace;
+      font-size: 13px;
+    }
+    .editor-container pre code { background: transparent; color: #d4d4d4; padding: 0; }
+    .editor-container table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 0.75rem 0;
+    }
+    .editor-container table td, .editor-container table th {
+      border: 1px solid #d1d5db;
+      padding: 8px 12px;
+      text-align: left;
+    }
+    .editor-container table th { background: #f3f4f6; font-weight: 600; }
+    .editor-container hr { border: none; border-top: 2px solid #e5e7eb; margin: 1rem 0; }
+    .editor-container a { color: #6366f1; text-decoration: underline; }
+    .editor-container img { max-width: 100%; height: auto; border-radius: 4px; }
+
+    /* ===== STATUS BAR ===== */
+    .status-bar {
+      background: rgba(10,10,10,0.8);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 5px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .status-item {
+      font-size: 11px;
+      color: #666;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .status-item span { color: #999; }
+
+    /* Compact button */
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+    }
+    .modal-overlay.open { opacity: 1; pointer-events: all; }
+    .modal-box {
+      background: #111;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 12px;
+      padding: 24px;
+      width: 90%;
+      max-width: 440px;
+      transform: translateY(10px);
+      transition: transform 0.2s ease;
+    }
+    .modal-overlay.open .modal-box { transform: translateY(0); }
+
+    /* Find/Replace panel */
+    #findReplacePanel {
+      display: none;
+      background: rgba(15,15,15,0.98);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 12px;
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      z-index: 100;
+      width: 320px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    }
+
+    #findReplacePanel.open { display: block; }
+
+    .compact-input {
+      background: rgba(0,0,0,0.5);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: #e5e5e5;
+      border-radius: 5px;
+      padding: 5px 8px;
+      font-size: 12px;
+      width: 100%;
+      outline: none;
+    }
+
+    .compact-input:focus { border-color: rgba(99,102,241,0.5); }
+
+    /* Print styles */
+    @media print {
+      body * { visibility: hidden; }
+      #editorArea, #editorArea * { visibility: visible; }
+      #editorArea { position: absolute; left: 0; top: 0; width: 100%; background: white; padding: 20px; }
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 640px) {
+      .toolbar-wrap { gap: 1px; }
+      .tb-btn { width: 26px; height: 26px; }
+      .editor-container { padding: 16px; }
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 10h20v3H10zM10 17h16v3H10zM10 24h12v3H10zM28 26v-6l4 3-4 3z" fill="white"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Text Editor</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Text Editor
+      </h1>
+      <p class="text-gray-400 text-sm px-4">Online Free Text Editing Tool</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Editor Interface -->
+    <div class="glass-panel rounded-xl overflow-hidden mb-4">
+
+      <!-- Top Action Bar -->
+      <div class="flex items-center justify-between px-3 py-2 border-b border-white/10 bg-black/20 flex-wrap gap-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span id="saveStatus">Auto-saved</span>
+        </div>
+        <div class="flex gap-1 flex-wrap">
+          <button id="newDocBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1" data-tooltip="New Document">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            New
+          </button>
+          <button id="openFileBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/></svg>
+            Open
+          </button>
+          <input type="file" id="fileInput" accept=".txt,.html,.htm,.md,.css,.js,.json,.xml,.csv" class="hidden">
+          <button id="findReplaceBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            Find
+          </button>
+          <div class="flex gap-1">
+            <button id="downloadTxtBtn" class="compact-btn rounded-md bg-indigo-500/15 hover:bg-indigo-500/25 border border-indigo-500/30 text-indigo-300 transition-all btn-animated flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              TXT
+            </button>
+            <button id="downloadHtmlBtn" class="compact-btn rounded-md bg-indigo-500/15 hover:bg-indigo-500/25 border border-indigo-500/30 text-indigo-300 transition-all btn-animated flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              HTML
+            </button>
+            <button id="printBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+              Print
+            </button>
+          </div>
+          <button id="clearEditorBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+            Clear
+          </button>
+        </div>
+      </div>
+
+      <!-- Toolbar Row 1: History + Block Format + Font -->
+      <div class="toolbar-wrap">
+        <!-- Undo/Redo -->
+        <button class="tb-btn btn-animated" id="undoBtn" data-tooltip="Undo (Ctrl+Z)" onclick="document.execCommand('undo')">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h10a8 8 0 018 8v2M3 10l6 6M3 10l6-6"/></svg>
+        </button>
+        <button class="tb-btn btn-animated" id="redoBtn" data-tooltip="Redo (Ctrl+Y)" onclick="document.execCommand('redo')">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 10H11a8 8 0 00-8 8v2M21 10l-6 6M21 10l-6-6"/></svg>
+        </button>
+
+        <div class="toolbar-divider"></div>
+
+        <!-- Block Format -->
+        <select class="tb-select" id="formatBlock" style="width:115px;" data-tooltip="Block Format">
+          <option value="p">Paragraph</option>
+          <option value="h1">Heading 1</option>
+          <option value="h2">Heading 2</option>
+          <option value="h3">Heading 3</option>
+          <option value="h4">Heading 4</option>
+          <option value="h5">Heading 5</option>
+          <option value="h6">Heading 6</option>
+          <option value="pre">Preformatted</option>
+          <option value="blockquote">Blockquote</option>
+        </select>
+
+        <div class="toolbar-divider"></div>
+
+        <!-- Font Family -->
+        <select class="tb-select" id="fontName" style="width:115px;">
+          <option value="Times New Roman">Times New Roman</option>
+          <option value="Arial">Arial</option>
+          <option value="Georgia">Georgia</option>
+          <option value="Verdana">Verdana</option>
+          <option value="Courier New">Courier New</option>
+          <option value="Trebuchet MS">Trebuchet MS</option>
+          <option value="Impact">Impact</option>
+          <option value="Comic Sans MS">Comic Sans MS</option>
+          <option value="Palatino">Palatino</option>
+          <option value="Tahoma">Tahoma</option>
+        </select>
+
+        <!-- Font Size -->
+        <select class="tb-select" id="fontSize" style="width:58px;">
+          <option value="1">8pt</option>
+          <option value="2">10pt</option>
+          <option value="3" selected>12pt</option>
+          <option value="4">14pt</option>
+          <option value="5">18pt</option>
+          <option value="6">24pt</option>
+          <option value="7">36pt</option>
+        </select>
+
+        <div class="toolbar-divider"></div>
+
+        <!-- Bold, Italic, Underline, Strikethrough, Superscript, Subscript -->
+        <button class="tb-btn btn-animated" id="boldBtn" data-tooltip="Bold (Ctrl+B)" onclick="exec('bold')">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M6 4h8a4 4 0 014 4 4 4 0 01-4 4H6V4zm0 8h9a4 4 0 010 8H6v-8z"/></svg>
+        </button>
+        <button class="tb-btn btn-animated" id="italicBtn" data-tooltip="Italic (Ctrl+I)" onclick="exec('italic')">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M10 4v3h2.21l-3.42 10H6v3h8v-3h-2.21l3.42-10H18V4h-8z"/></svg>
+        </button>
+        <button class="tb-btn btn-animated" id="underlineBtn" data-tooltip="Underline (Ctrl+U)" onclick="exec('underline')">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M5 21h14v-2H5v2zM12 17a6 6 0 006-6V3h-2.5v8a3.5 3.5 0 01-7 0V3H6v8a6 6 0 006 6z"/></svg>
+        </button>
+        <button class="tb-btn btn-animated" id="strikeBtn" data-tooltip="Strikethrough" onclick="exec('strikeThrough')">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M6.85 7.08C6.85 4.37 9.45 3 12.24 3c1.64 0 3 .49 3.9 1.28.77.69 1.23 1.62 1.23 2.72h-2.68c0-.61-.16-1.07-.39-1.38-.3-.4-.9-.68-2.07-.68-.82 0-1.6.23-1.6 1.04 0 .7.74 1.08 2.77 1.47 2.26.43 4.77 1.19 4.77 4.17 0 2.76-2.59 4.18-5.42 4.18-1.81 0-3.37-.44-4.35-1.3-.86-.75-1.41-1.81-1.41-3.19h2.62c0 .62.23 1.12.55 1.45.41.41 1.06.64 2.59.64.97 0 2.12-.31 2.12-1.18 0-.88-.78-1.2-2.71-1.58L8.35 9.6C7.28 9.16 6.85 8.21 6.85 7.08zM4 13h16v-2H4v2z"/></svg>
+        </button>
+        <button class="tb-btn btn-animated" data-tooltip="Superscript" onclick="exec('superscript')">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M20.5 6.5L18 9l2.5 2.5H19L16.75 9 14.5 11.5h-1.5l2.5-2.5L13 6.5h1.5L16.75 9l2.25-2.5h1.5zM5.88 20H3.5l4.5-7-4-6.5H6.5L9 10.5 11.5 6.5H14l-4 6.5 4.5 7h-2.5L9 15z"/></svg>
+        </button>
+        <button class="tb-btn btn-animated" data-tooltip="Subscript" onclick="exec('subscript')">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M20.5 15.5L18 18l2.5 2.5H19L16.75 18 14.5 20.5h-1.5l2.5-2.5-2.5-2.5h1.5l2.25 2.5 2.25-2.5h1.5zM5.88 16H3.5l4.5-7-4-6.5H6.5L9 6.5 11.5 2.5H14l-4 6.5 4.5 7h-2.5L9 11z"/></svg>
+        </button>
+
+        <div class="toolbar-divider"></div>
+
+        <!-- Text Color -->
+        <div class="color-btn-wrap" data-tooltip="Text Color" style="position:relative;">
+          <div class="color-btn-visual" id="textColorVisual">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24">
+              <path d="M12 2L7 17h3l1-3h4l1 3h3L14 2h-2zm-1 9l1.5-5 1.5 5H11z" fill="currentColor" style="color:#c0c0c0"/>
+            </svg>
+            <div class="color-indicator" id="textColorBar" style="background:#000000;"></div>
+          </div>
+          <input type="color" id="textColorPicker" value="#000000" title="Text Color">
+        </div>
+
+        <!-- Background/Highlight Color -->
+        <div class="color-btn-wrap" data-tooltip="Highlight Color" style="position:relative;">
+          <div class="color-btn-visual" id="bgColorVisual">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24">
+              <path d="M16.56 8.94L7.62 0 6.21 1.41l2.38 2.38-5.15 5.15a1.49 1.49 0 000 2.12l5.5 5.5c.29.29.68.44 1.06.44s.77-.15 1.06-.44l5.5-5.5c.59-.58.59-1.53 0-2.12zM5.21 10L10 5.21 14.79 10H5.21zM19 11.5s-2 2.17-2 3.5c0 1.1.9 2 2 2s2-.9 2-2c0-1.33-2-3.5-2-3.5z" fill="currentColor" style="color:#c0c0c0"/>
+              <path d="M0 20h24v4H0z" fill="none"/>
+            </svg>
+            <div class="color-indicator" id="bgColorBar" style="background:#ffff00;"></div>
+          </div>
+          <input type="color" id="bgColorPicker" value="#ffff00" title="Highlight Color">
+        </div>
+
+        <div class="toolbar-divider"></div>
+
+        <!-- Alignment -->
+        <button class="tb-btn btn-animated" data-tooltip="Align Left" onclick="exec('justifyLeft')">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h10M4 14h16M4 18h10"/></svg>
+        </button>
+        <button class="tb-btn btn-animated" data-tooltip="Align Center" onclick="exec('justifyCenter')">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M7 10h10M4 14h16M7 18h10"/></svg>
+        </button>
+        <button class="tb-btn btn-animated" data-tooltip="Align Right" onclick="exec('justifyRight')">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M10 10h10M4 14h16M10 18h10"/></svg>
+        </button>
+        <button class="tb-btn btn-animated" data-tooltip="Justify" onclick="exec('justifyFull')">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+        </button>
+
+        <div class="toolbar-divider"></div>
+
+        <!-- Lists -->
+        <button class="tb-btn btn-animated" id="ulBtn" data-tooltip="Bullet List" onclick="exec('insertUnorderedList')">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
+        </button>
+        <button class="tb-btn btn-animated" id="olBtn" data-tooltip="Numbered List" onclick="exec('insertOrderedList')">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11M10 12h11M10 18h11M4 6h.01M4 12h.01M4 18h.01"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7V5m0 0h1.5M3 5v2m-1 0h2M3 11v-1m0 0 .5-.5m-.5.5h1.5m-1.5 0v1M3 17v-1m0 2h1.5M3 17v1"/></svg>
+        </button>
+
+        <!-- Indent / Outdent -->
+        <button class="tb-btn btn-animated" data-tooltip="Indent" onclick="exec('indent')">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l4 4-4 4M11 6h10M11 12h10M11 18h10"/></svg>
+        </button>
+        <button class="tb-btn btn-animated" data-tooltip="Outdent" onclick="exec('outdent')">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8l-4 4 4 4M11 6h10M11 12h10M11 18h10"/></svg>
+        </button>
+
+        <div class="toolbar-divider"></div>
+
+        <!-- Link, Unlink, Image -->
+        <button class="tb-btn btn-animated" id="linkBtn" data-tooltip="Insert Link" onclick="insertLink()">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+        </button>
+        <button class="tb-btn btn-animated" data-tooltip="Remove Link" onclick="exec('unlink')">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/></svg>
+        </button>
+        <button class="tb-btn btn-animated" data-tooltip="Insert Image" onclick="insertImage()">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+        </button>
+        <button class="tb-btn btn-animated" data-tooltip="Insert Table" onclick="insertTable()">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18M10 3v18M3 6a3 3 0 013-3h12a3 3 0 013 3v12a3 3 0 01-3 3H6a3 3 0 01-3-3V6z"/></svg>
+        </button>
+
+        <div class="toolbar-divider"></div>
+
+        <!-- Horizontal Rule, Blockquote, Code -->
+        <button class="tb-btn btn-animated" data-tooltip="Horizontal Rule" onclick="exec('insertHorizontalRule')">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 12h16"/></svg>
+        </button>
+        <button class="tb-btn btn-animated" data-tooltip="Blockquote" onclick="insertBlockquote()">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/></svg>
+        </button>
+        <button class="tb-btn btn-animated" data-tooltip="Inline Code" onclick="insertCode()">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+        </button>
+
+        <div class="toolbar-divider"></div>
+
+        <!-- Clear Formatting, Select All -->
+        <button class="tb-btn btn-animated" data-tooltip="Clear Formatting" onclick="exec('removeFormat')">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+        <button class="tb-btn btn-animated" data-tooltip="Select All (Ctrl+A)" onclick="exec('selectAll')">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+        </button>
+
+        <!-- View HTML Source -->
+        <button class="tb-btn btn-animated" id="sourceBtn" data-tooltip="View HTML Source" onclick="toggleSource()">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16M7 7l-4 5 4 5M17 7l4 5-4 5"/></svg>
+        </button>
+
+        <!-- Full Screen -->
+        <button class="tb-btn btn-animated" id="fullscreenBtn" data-tooltip="Full Screen" onclick="toggleFullscreen()">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
+        </button>
+      </div>
+
+      <!-- Editor Body with Find/Replace -->
+      <div id="editorWrapper" style="position:relative;">
+        <!-- Find & Replace Panel -->
+        <div id="findReplacePanel">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-semibold text-gray-200">Find & Replace</span>
+            <button onclick="closeFindReplace()" class="text-gray-500 hover:text-white text-xs">✕</button>
+          </div>
+          <div class="space-y-2">
+            <div>
+              <label class="text-xs text-gray-400 mb-1 block">Find</label>
+              <input type="text" id="findInput" class="compact-input" placeholder="Search text...">
+            </div>
+            <div>
+              <label class="text-xs text-gray-400 mb-1 block">Replace with</label>
+              <input type="text" id="replaceInput" class="compact-input" placeholder="Replacement...">
+            </div>
+            <div class="flex items-center gap-2">
+              <label class="flex items-center gap-1.5 text-xs text-gray-400">
+                <input type="checkbox" id="caseSensitive" class="w-3 h-3">
+                Case sensitive
+              </label>
+            </div>
+            <div class="flex gap-1.5 pt-1">
+              <button onclick="findText()" class="compact-btn flex-1 rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 text-xs btn-animated">Find</button>
+              <button onclick="replaceText()" class="compact-btn flex-1 rounded-md bg-indigo-500/15 hover:bg-indigo-500/25 border border-indigo-500/30 text-indigo-300 text-xs btn-animated">Replace</button>
+              <button onclick="replaceAll()" class="compact-btn flex-1 rounded-md bg-indigo-500/15 hover:bg-indigo-500/25 border border-indigo-500/30 text-indigo-300 text-xs btn-animated">All</button>
+            </div>
+            <div id="findResultMsg" class="text-xs text-gray-500"></div>
+          </div>
+        </div>
+
+        <!-- The actual editor -->
+        <div id="editorArea" class="editor-container" contenteditable="true" spellcheck="true">
+          <p>Start typing here...</p>
+        </div>
+
+        <!-- Source view -->
+        <textarea id="sourceArea" class="w-full font-mono text-xs p-4 bg-[#1e1e1e] text-gray-300 resize-none hidden" style="min-height:480px; outline:none; border:none;"></textarea>
+      </div>
+
+      <!-- Status Bar -->
+      <div class="status-bar">
+        <div class="flex items-center gap-4 flex-wrap">
+          <div class="status-item">Words: <span id="wordCount">0</span></div>
+          <div class="status-item">Chars: <span id="charCount">0</span></div>
+          <div class="status-item">Lines: <span id="lineCount">0</span></div>
+          <div class="status-item">Selected: <span id="selectionCount">0</span></div>
+        </div>
+        <div class="flex items-center gap-3 flex-wrap">
+          <div class="status-item">
+            <select id="lineHeightSelect" class="tb-select" style="height:22px; font-size:11px;">
+              <option value="1.4">Line 1.4</option>
+              <option value="1.6">Line 1.6</option>
+              <option value="1.8" selected>Line 1.8</option>
+              <option value="2.0">Line 2.0</option>
+              <option value="2.5">Line 2.5</option>
+            </select>
+          </div>
+          <div class="status-item">Zoom:
+            <select id="zoomSelect" class="tb-select" style="height:22px; font-size:11px;">
+              <option value="75">75%</option>
+              <option value="90">90%</option>
+              <option value="100" selected>100%</option>
+              <option value="110">110%</option>
+              <option value="125">125%</option>
+              <option value="150">150%</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Link Modal -->
+    <div class="modal-overlay" id="linkModal">
+      <div class="modal-box">
+        <h3 class="text-sm font-semibold text-white mb-4 flex items-center gap-2">
+          <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+          Insert Link
+        </h3>
+        <div class="space-y-3">
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Display Text</label>
+            <input type="text" id="linkText" class="compact-input" placeholder="Link text (optional)">
+          </div>
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">URL *</label>
+            <input type="url" id="linkUrl" class="compact-input" placeholder="https://...">
+          </div>
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Open in</label>
+            <select id="linkTarget" class="compact-input">
+              <option value="_self">Same window</option>
+              <option value="_blank" selected>New window</option>
+            </select>
+          </div>
+          <div class="flex gap-2 pt-1">
+            <button onclick="confirmLink()" class="flex-1 compact-btn rounded-md bg-indigo-500/20 hover:bg-indigo-500/30 border border-indigo-500/40 text-indigo-300 btn-animated">Insert</button>
+            <button onclick="closeModal('linkModal')" class="flex-1 compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 btn-animated">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Image Modal -->
+    <div class="modal-overlay" id="imageModal">
+      <div class="modal-box">
+        <h3 class="text-sm font-semibold text-white mb-4 flex items-center gap-2">
+          <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          Insert Image
+        </h3>
+        <div class="space-y-3">
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Image URL</label>
+            <input type="url" id="imageUrl" class="compact-input" placeholder="https://example.com/image.jpg">
+          </div>
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Or Upload Image</label>
+            <input type="file" id="imageFile" accept="image/*" class="compact-input" style="padding:4px;">
+          </div>
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Alt Text</label>
+            <input type="text" id="imageAlt" class="compact-input" placeholder="Image description">
+          </div>
+          <div class="flex gap-2">
+            <div class="flex-1">
+              <label class="text-xs text-gray-400 mb-1 block">Width (px)</label>
+              <input type="number" id="imageWidth" class="compact-input" placeholder="auto">
+            </div>
+            <div class="flex-1">
+              <label class="text-xs text-gray-400 mb-1 block">Align</label>
+              <select id="imageAlign" class="compact-input">
+                <option value="none">None</option>
+                <option value="left">Left</option>
+                <option value="right">Right</option>
+                <option value="center">Center</option>
+              </select>
+            </div>
+          </div>
+          <div class="flex gap-2 pt-1">
+            <button onclick="confirmImage()" class="flex-1 compact-btn rounded-md bg-indigo-500/20 hover:bg-indigo-500/30 border border-indigo-500/40 text-indigo-300 btn-animated">Insert</button>
+            <button onclick="closeModal('imageModal')" class="flex-1 compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 btn-animated">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Table Modal -->
+    <div class="modal-overlay" id="tableModal">
+      <div class="modal-box">
+        <h3 class="text-sm font-semibold text-white mb-4 flex items-center gap-2">
+          <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18M10 3v18M3 6a3 3 0 013-3h12a3 3 0 013 3v12a3 3 0 01-3 3H6a3 3 0 01-3-3V6z"/></svg>
+          Insert Table
+        </h3>
+        <div class="space-y-3">
+          <div class="flex gap-3">
+            <div class="flex-1">
+              <label class="text-xs text-gray-400 mb-1 block">Rows</label>
+              <input type="number" id="tableRows" class="compact-input" value="3" min="1" max="20">
+            </div>
+            <div class="flex-1">
+              <label class="text-xs text-gray-400 mb-1 block">Columns</label>
+              <input type="number" id="tableCols" class="compact-input" value="3" min="1" max="10">
+            </div>
+          </div>
+          <label class="flex items-center gap-2 text-xs text-gray-400">
+            <input type="checkbox" id="tableHeader" checked class="w-3 h-3">
+            Include header row
+          </label>
+          <div class="flex gap-2 pt-1">
+            <button onclick="confirmTable()" class="flex-1 compact-btn rounded-md bg-indigo-500/20 hover:bg-indigo-500/30 border border-indigo-500/40 text-indigo-300 btn-animated">Insert</button>
+            <button onclick="closeModal('tableModal')" class="flex-1 compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 btn-animated">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Text Editor?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h10"/></svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Rich Format</h3>
+          <p class="text-gray-400 text-xs">Full formatting toolbar with all essential controls</p>
+        </div>
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">HTML Source</h3>
+          <p class="text-gray-400 text-xs">Toggle between visual and HTML source view</p>
+        </div>
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Find & Replace</h3>
+          <p class="text-gray-400 text-xs">Powerful search with case sensitivity options</p>
+        </div>
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">100% browser-based, nothing uploaded to servers</p>
+        </div>
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Download as TXT or HTML file anytime</p>
+        </div>
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No account or registration needed, ever</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Start Writing</h3>
+          <p class="text-gray-400 text-xs">Click the editor and type, or paste your text directly.</p>
+        </div>
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Format Text</h3>
+          <p class="text-gray-400 text-xs">Select text and apply bold, italic, headings, colors, and more.</p>
+        </div>
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Insert Elements</h3>
+          <p class="text-gray-400 text-xs">Add links, images, tables, lists, blockquotes, and code blocks.</p>
+        </div>
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Download as TXT or HTML, or print your document directly.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Ultimate Guide to Online Text Editors: Everything You Need to Know</h2>
+
+        <p>In the digital age, the ability to <strong>edit text online</strong> effectively and efficiently has become a critical skill for professionals, students, content creators, and developers alike. Whether you need a <strong>free text editor</strong> for drafting a quick document, a <strong>rich text editor online free</strong> solution for formatting articles, or an <strong>online text editor for coding</strong> and technical writing, having the right tool at your fingertips makes all the difference. Our <strong>free online text editor tool</strong> combines the power of a desktop word processor with the convenience of browser-based accessibility — no installation, no login, and no cost.</p>
+
+        <h2>What Is an Online Text Editor?</h2>
+
+        <p>An <strong>online text editor</strong> is a web-based application that allows users to create, modify, and format text content directly in their browser. Unlike traditional desktop applications such as Microsoft Word or Notepad, an <strong>online text editing platform</strong> requires no software installation and works across any device with a modern web browser. These tools range from simple <strong>plain text editor online</strong> solutions to full-featured <strong>rich text editor online</strong> platforms with advanced formatting, media embedding, and export capabilities.</p>
+
+        <p>The evolution of <strong>text editing tool online</strong> applications has been remarkable. Early web-based editors offered little more than a basic textarea with no formatting options. Today's <strong>advanced text editor online free</strong> tools rival professional desktop software, offering everything from heading styles and list management to table insertion, image embedding, syntax highlighting, and real-time word counts. The modern <strong>online text editor free</strong> experience is seamless, powerful, and accessible from anywhere.</p>
+
+        <h2>Key Features of Our Online Text Editor</h2>
+
+        <h3>Comprehensive Rich Text Formatting</h3>
+
+        <p>Our <strong>text editor with formatting online</strong> provides a complete toolbar that covers every formatting need. Users can apply six levels of headings (H1 through H6) to organize documents hierarchically, essential for both readability and SEO when creating web content. The standard character formatting options — bold, italic, underline, and strikethrough — are complemented by superscript and subscript capabilities for scientific notation, footnotes, and mathematical expressions.</p>
+
+        <p>The <strong>text editor and formatter online</strong> approach means you never need to leave your browser to achieve professional document formatting. Choose from multiple font families including Times New Roman, Arial, Georgia, Verdana, Courier New, and more. Adjust font sizes from 8pt to 36pt to create visual hierarchy. Apply text alignment — left, center, right, or fully justified — to match your document's style requirements.</p>
+
+        <h3>Advanced Color Controls</h3>
+
+        <p>One of the most useful features of our <strong>online text editor without login</strong> is the precise color control system. The text color picker allows you to apply any color from the full RGB spectrum to selected text, making it perfect for creating color-coded notes, emphasizing important information, or matching brand colors in marketing copy. The background/highlight color picker lets you highlight passages for review, create visual callouts, or color-code sections of your document.</p>
+
+        <p>Unlike many online editors that offer only a limited palette, our <strong>free online text editing tool</strong> uses native color pickers that give access to millions of colors with precise hex, RGB, and HSL value input. The current selected color is always visible in the toolbar, so you always know what color will be applied before you make a selection.</p>
+
+        <h3>Lists, Indentation, and Document Structure</h3>
+
+        <p>Proper document structure is essential for readability and comprehension. Our <strong>text editor online</strong> provides robust list management with both ordered (numbered) and unordered (bulleted) list types. Lists can be nested to multiple levels using the indent and outdent controls, allowing you to create complex hierarchical outlines and multi-level content structures. This is particularly valuable for technical documentation, instructional content, legal documents, and academic writing.</p>
+
+        <h3>Blockquotes and Code Formatting</h3>
+
+        <p>For writers, journalists, and content creators who frequently quote sources, the blockquote feature provides visual distinction for quoted content. Blockquotes in our editor are styled with an indigo left border and subtle background, making quoted material immediately recognizable. Code blocks use monospace font with a dark background — perfect for technical documentation, programming tutorials, and developer-focused content. Inline code highlighting makes it easy to reference variable names, file paths, or short code snippets within regular text.</p>
+
+        <h3>Table Insertion and Management</h3>
+
+        <p>Data presentation often requires tabular format. Our <strong>online text editor for writers</strong> and professionals includes a table insertion wizard that lets you specify the number of rows and columns, choose whether to include a styled header row, and place the table immediately into your document. Tables are styled with clean borders and header shading out of the box, giving documents a polished, professional appearance without any additional work.</p>
+
+        <h3>Link and Image Management</h3>
+
+        <p>A complete <strong>text editor for documents online</strong> must handle multimedia content. Our link insertion dialog allows you to specify the display text, destination URL, and whether the link opens in the same or a new window. Image insertion supports both URL-based and file-upload methods, with options to set alt text for accessibility, specify width, and control alignment. This makes our <strong>online text editor free</strong> suitable for creating web-ready content, blog posts, and rich documentation.</p>
+
+        <h3>Find and Replace Functionality</h3>
+
+        <p>Editing long documents requires efficient navigation. The built-in Find and Replace panel in our <strong>text editing tool online</strong> lets you locate any text string and optionally replace it with something else. The case sensitivity toggle ensures precise matching when needed. The Replace All function makes bulk text changes instant — perfect for correcting a repeated spelling mistake, updating a name that changed, or swapping terminology throughout a long document.</p>
+
+        <h3>HTML Source View</h3>
+
+        <p>For developers and technical users, our <strong>text editor for HTML online free</strong> includes a dedicated HTML source view mode. Toggle between the visual rich text view and the raw HTML code with a single click. Edit HTML directly in the source view, then switch back to see the rendered result. This makes our tool valuable as both an <strong>online text editor for writing</strong> and as a lightweight <strong>text editor for coding online</strong>.</p>
+
+        <h3>Auto-Save and Local Storage</h3>
+
+        <p>Nothing is more frustrating than losing work due to an accidental browser close or navigation. Our <strong>online text editor without login</strong> automatically saves your content to browser localStorage every few seconds. When you return to the editor, your last session is restored automatically. The status bar shows "Auto-saved" when your content has been saved, giving you peace of mind as you work.</p>
+
+        <h2>Who Needs an Online Text Editor?</h2>
+
+        <h3>Writers and Content Creators</h3>
+
+        <p>Bloggers, journalists, novelists, and content marketers all benefit from a capable <strong>online text editor for writers</strong>. The distraction-free editing environment, combined with full formatting controls, word count tracking, and easy export options, makes it ideal for drafting articles, blog posts, social media copy, email newsletters, and long-form content. The ability to paste content from other sources and clean up formatting makes it particularly useful for content repurposing workflows.</p>
+
+        <h3>Students and Academics</h3>
+
+        <p>Students frequently need to draft essays, research papers, lab reports, and presentations. A <strong>free online text editor tool</strong> provides all the formatting capabilities needed for academic writing — proper heading hierarchy, citation formatting, lists, tables for data presentation, and clean export to formats compatible with submission requirements. The superscript and subscript functions are essential for scientific notation and mathematical expressions.</p>
+
+        <h3>Developers and Technical Writers</h3>
+
+        <p>Technical documentation, README files, API documentation, and code tutorials all benefit from a <strong>text editor for coding online</strong> that bridges the gap between plain text and rich formatting. The code block and inline code formatting, HTML source view, and clean export to HTML make this an excellent tool for developers who need to create formatted documentation without leaving the browser.</p>
+
+        <h3>Business Professionals</h3>
+
+        <p>From drafting memos to creating meeting notes, business professionals need a reliable <strong>free text editor</strong> that's always accessible. No software installation means it's available from any workstation, including locked-down corporate computers where installing new software isn't permitted. The print function makes it easy to produce hard copies directly from the browser.</p>
+
+        <h2>Online Text Editor vs. Desktop Applications</h2>
+
+        <p>Comparing an <strong>online text editing utility</strong> to desktop applications like Microsoft Word, Google Docs, or LibreOffice reveals a clear trade-off: feature depth versus accessibility. Desktop applications offer advanced features like mail merge, complex styles, track changes with multi-reviewer support, and deep integration with operating system features. However, they require installation, licensing costs (in the case of commercial software), and are tied to specific devices.</p>
+
+        <p>An <strong>advanced text editor online free</strong> offers something different: instant availability from any device, zero cost, no account required, and a focused feature set that covers the needs of most everyday writing and editing tasks. For content that doesn't require the deep feature set of Word or the collaboration features of Google Docs, a browser-based <strong>text editor online</strong> is often the faster, simpler choice.</p>
+
+        <h2>Tips for Getting the Most from Our Text Editor</h2>
+
+        <h3>Use Keyboard Shortcuts</h3>
+
+        <p>Learn the standard keyboard shortcuts to speed up your workflow significantly. Ctrl+B for bold, Ctrl+I for italic, Ctrl+U for underline, Ctrl+Z to undo, Ctrl+Y to redo, and Ctrl+A to select all are the most essential. These shortcuts work the same way in our <strong>online text editor</strong> as they do in desktop applications, making the transition seamless.</p>
+
+        <h3>Work in Source View for HTML Content</h3>
+
+        <p>If you're creating content that will be published on a website or CMS platform, use the HTML source view to review and clean up the generated markup. This ensures you're pasting clean, minimal HTML into your publishing platform rather than the bloated markup that word processors often generate. Our <strong>text editor for HTML online free</strong> generates clean, semantic HTML that's ready for web use.</p>
+
+        <h3>Use Headings Consistently</h3>
+
+        <p>Proper heading hierarchy (H1 for the main title, H2 for main sections, H3 for subsections) is important both for document readability and for SEO if the content will be published online. Our <strong>text editor and formatter online</strong> makes it easy to apply consistent heading styles throughout your document using the format block selector.</p>
+
+        <h3>Export Early and Often</h3>
+
+        <p>While auto-save protects your work within the browser session, it's good practice to download an HTML or TXT copy of important documents regularly. Use the TXT download for plain text content that needs to be pasted into other systems, and the HTML download when you need to preserve all formatting and structure.</p>
+
+        <h2>SEO Benefits of Using a Rich Text Editor for Content Creation</h2>
+
+        <p>Content creators who use a <strong>rich text editor online free</strong> with proper heading structure and semantic HTML output gain real SEO advantages. Search engines understand heading hierarchy and use it to determine topic structure and keyword relevance. Properly tagged lists, blockquotes, and tables signal well-organized, authoritative content. By drafting content in our <strong>free online text editor</strong> and exporting clean HTML, you ensure that your published content has the structural integrity that search engines reward.</p>
+
+        <h2>Privacy and Security</h2>
+
+        <p>All processing in our <strong>online text editing platform</strong> happens entirely within your browser. Your text is never transmitted to any server. The auto-save feature stores content in your browser's localStorage — a local storage mechanism that's private to your browser and inaccessible to websites or external parties. This makes our <strong>text editor online free</strong> suitable for confidential documents, drafting sensitive communications, and working with proprietary information.</p>
+
+        <h2>Conclusion</h2>
+
+        <p>Our <strong>free online text editor</strong> delivers professional-grade text editing capabilities in a completely free, browser-based, no-registration-required package. Whether you're a writer crafting your next article, a developer documenting an API, a student drafting an essay, or a professional composing a business document, this <strong>text editor online</strong> has everything you need. With rich formatting, heading styles, color controls, list management, table and image insertion, find and replace, HTML source view, and reliable export options, it stands as the most capable <strong>free text editor</strong> available without any sign-up. Start writing today and experience the difference a truly powerful <strong>online text editing tool</strong> makes.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this text editor completely free to use?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, completely free with no registration, no account creation, no usage limits, and no hidden fees. Our <strong>free online text editor tool</strong> is supported by unobtrusive advertising. All features including rich formatting, export, find and replace, and HTML source view are fully available at no cost.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Will my text be saved if I accidentally close the tab?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! The editor automatically saves your content to your browser's localStorage every few seconds. If you close and reopen the tab, your last saved content will be restored automatically. However, clearing your browser data will erase the saved content, so it's always a good idea to download important work as TXT or HTML for permanent storage.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I open and edit existing files?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Click the "Open" button in the top action bar to load a file from your device. Supported formats include TXT, HTML, HTM, Markdown (MD), CSS, JavaScript, JSON, XML, and CSV. The file contents will load directly into the editor, where you can make changes and re-export.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I switch between rich text and HTML code view?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Click the <strong>&lt;/&gt; Source</strong> button (the code icon) in the toolbar to toggle between the visual rich text editor and the raw HTML source view. In source view, you can directly edit the HTML markup. When you switch back to visual mode, the changes you made in HTML are rendered immediately. This makes our tool excellent as a <strong>text editor for HTML online free</strong>.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my content private and secure?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely. All editing and processing happens entirely within your browser. Your text is never sent to any server or stored remotely. You can verify this using your browser's Developer Tools (Network tab) — there are no data transfers. This makes the tool safe for confidential documents, proprietary content, and sensitive personal writing.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What keyboard shortcuts are supported?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">All standard text editing shortcuts work: <strong>Ctrl+B</strong> (Bold), <strong>Ctrl+I</strong> (Italic), <strong>Ctrl+U</strong> (Underline), <strong>Ctrl+Z</strong> (Undo), <strong>Ctrl+Y</strong> or <strong>Ctrl+Shift+Z</strong> (Redo), <strong>Ctrl+A</strong> (Select All), <strong>Ctrl+C</strong> (Copy), <strong>Ctrl+V</strong> (Paste), <strong>Ctrl+X</strong> (Cut). These are the same shortcuts used in Word, Google Docs, and other text editors.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I add a table to my document?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Click the table icon in the toolbar (it looks like a grid). A dialog will appear where you can specify the number of rows and columns, and whether to include a styled header row. Click "Insert" to place the table at the current cursor position. You can then click any cell and type to add content. Use the Tab key to move between cells.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I use this on mobile devices?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! The editor is fully responsive and works on smartphones and tablets. The toolbar wraps and scrolls on smaller screens to ensure all tools remain accessible. Touch interactions work as expected. For the best mobile experience, use a modern browser like Chrome or Safari on iOS/Android.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I use Find and Replace?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Click the "Find" button in the top bar to open the Find & Replace panel. Enter your search text in the "Find" field and optionally enter replacement text in the "Replace with" field. Click "Find" to locate the next instance, "Replace" to replace the current selection and move to the next, or "All" to replace every instance in the document at once. Enable "Case sensitive" for exact case matching.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What export formats are available?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">You can export your document as a <strong>TXT file</strong> (plain text, no formatting, universal compatibility) or as an <strong>HTML file</strong> (preserves all formatting, suitable for web use). The Print function uses your browser's print dialog which also allows saving as a PDF. For DOCX format, paste the exported HTML into Word or Google Docs.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// ============================================================
+// INITIALIZATION
+// ============================================================
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+const editor = document.getElementById('editorArea');
+const sourceArea = document.getElementById('sourceArea');
+let isSourceMode = false;
+let savedRange = null;
+
+// Mobile menu
+document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+  document.getElementById('mobileMenu').classList.toggle('open');
+});
+document.addEventListener('click', (e) => {
+  const menu = document.getElementById('mobileMenu');
+  const btn = document.getElementById('mobileMenuBtn');
+  if (!btn.contains(e.target) && !menu.contains(e.target)) menu.classList.remove('open');
+});
+
+// ============================================================
+// EXEC COMMAND WRAPPER
+// ============================================================
+function exec(cmd, val = null) {
+  if (isSourceMode) return;
+  editor.focus();
+  document.execCommand(cmd, false, val);
+  updateStats();
+  updateToolbarState();
+  triggerAutoSave();
+}
+
+// ============================================================
+// FORMAT BLOCK
+// ============================================================
+document.getElementById('formatBlock').addEventListener('change', function() {
+  if (isSourceMode) return;
+  editor.focus();
+  document.execCommand('formatBlock', false, this.value);
+  updateToolbarState();
+  triggerAutoSave();
+});
+
+// ============================================================
+// FONT NAME
+// ============================================================
+document.getElementById('fontName').addEventListener('change', function() {
+  exec('fontName', this.value);
+});
+
+// ============================================================
+// FONT SIZE
+// ============================================================
+document.getElementById('fontSize').addEventListener('change', function() {
+  exec('fontSize', this.value);
+});
+
+// ============================================================
+// TEXT COLOR
+// ============================================================
+const textColorPicker = document.getElementById('textColorPicker');
+const textColorBar = document.getElementById('textColorBar');
+
+textColorPicker.addEventListener('input', function() {
+  textColorBar.style.background = this.value;
+  exec('foreColor', this.value);
+});
+
+// ============================================================
+// BACKGROUND / HIGHLIGHT COLOR
+// ============================================================
+const bgColorPicker = document.getElementById('bgColorPicker');
+const bgColorBar = document.getElementById('bgColorBar');
+
+bgColorPicker.addEventListener('input', function() {
+  bgColorBar.style.background = this.value;
+  exec('hiliteColor', this.value);
+});
+
+// ============================================================
+// INSERT LINK
+// ============================================================
+function insertLink() {
+  if (isSourceMode) return;
+  savedRange = saveSelection();
+  const sel = window.getSelection();
+  document.getElementById('linkText').value = sel && sel.toString() ? sel.toString() : '';
+  document.getElementById('linkUrl').value = '';
+  openModal('linkModal');
+}
+
+function confirmLink() {
+  const url = document.getElementById('linkUrl').value.trim();
+  if (!url) { alert('Please enter a URL'); return; }
+  const text = document.getElementById('linkText').value.trim();
+  const target = document.getElementById('linkTarget').value;
+  restoreSelection(savedRange);
+  editor.focus();
+  if (text) {
+    const sel = window.getSelection();
+    if (sel && !sel.isCollapsed) {
+      document.execCommand('createLink', false, url);
+    } else {
+      const a = `<a href="${escHtml(url)}" target="${target}">${escHtml(text)}</a>`;
+      document.execCommand('insertHTML', false, a);
+    }
+  } else {
+    document.execCommand('createLink', false, url);
+  }
+  // Set target on newly created link
+  const links = editor.querySelectorAll('a[href="' + url + '"]');
+  links.forEach(l => l.target = target);
+  closeModal('linkModal');
+  triggerAutoSave();
+}
+
+// ============================================================
+// INSERT IMAGE
+// ============================================================
+function insertImage() {
+  if (isSourceMode) return;
+  savedRange = saveSelection();
+  document.getElementById('imageUrl').value = '';
+  document.getElementById('imageAlt').value = '';
+  document.getElementById('imageWidth').value = '';
+  openModal('imageModal');
+}
+
+function confirmImage() {
+  const file = document.getElementById('imageFile').files[0];
+  const url = document.getElementById('imageUrl').value.trim();
+  const alt = document.getElementById('imageAlt').value.trim();
+  const width = document.getElementById('imageWidth').value.trim();
+  const align = document.getElementById('imageAlign').value;
+
+  restoreSelection(savedRange);
+  editor.focus();
+
+  const buildImg = (src) => {
+    let style = '';
+    if (width) style += `width:${width}px;max-width:100%;`;
+    if (align === 'left') style += 'float:left;margin:0 12px 8px 0;';
+    else if (align === 'right') style += 'float:right;margin:0 0 8px 12px;';
+    else if (align === 'center') style += 'display:block;margin:0 auto;';
+    return `<img src="${escHtml(src)}" alt="${escHtml(alt)}" style="${style}">`;
+  };
+
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      document.execCommand('insertHTML', false, buildImg(e.target.result));
+      closeModal('imageModal');
+      triggerAutoSave();
+    };
+    reader.readAsDataURL(file);
+  } else if (url) {
+    document.execCommand('insertHTML', false, buildImg(url));
+    closeModal('imageModal');
+    triggerAutoSave();
+  } else {
+    alert('Please provide an image URL or upload a file');
+  }
+}
+
+// ============================================================
+// INSERT TABLE
+// ============================================================
+function insertTable() {
+  if (isSourceMode) return;
+  savedRange = saveSelection();
+  openModal('tableModal');
+}
+
+function confirmTable() {
+  const rows = parseInt(document.getElementById('tableRows').value) || 3;
+  const cols = parseInt(document.getElementById('tableCols').value) || 3;
+  const hasHeader = document.getElementById('tableHeader').checked;
+
+  restoreSelection(savedRange);
+  editor.focus();
+
+  let html = '<table>';
+  if (hasHeader) {
+    html += '<thead><tr>';
+    for (let c = 0; c < cols; c++) html += `<th>Header ${c + 1}</th>`;
+    html += '</tr></thead>';
+  }
+  html += '<tbody>';
+  const bodyRows = hasHeader ? rows - 1 : rows;
+  for (let r = 0; r < Math.max(bodyRows, 1); r++) {
+    html += '<tr>';
+    for (let c = 0; c < cols; c++) html += '<td>&nbsp;</td>';
+    html += '</tr>';
+  }
+  html += '</tbody></table><p><br></p>';
+
+  document.execCommand('insertHTML', false, html);
+  closeModal('tableModal');
+  triggerAutoSave();
+}
+
+// ============================================================
+// BLOCKQUOTE
+// ============================================================
+function insertBlockquote() {
+  if (isSourceMode) return;
+  editor.focus();
+  const sel = window.getSelection();
+  if (sel && sel.toString()) {
+    const text = sel.toString();
+    document.execCommand('insertHTML', false, `<blockquote>${escHtml(text)}</blockquote><p><br></p>`);
+  } else {
+    document.execCommand('insertHTML', false, '<blockquote>Quote text here...</blockquote><p><br></p>');
+  }
+  triggerAutoSave();
+}
+
+// ============================================================
+// INLINE CODE
+// ============================================================
+function insertCode() {
+  if (isSourceMode) return;
+  editor.focus();
+  const sel = window.getSelection();
+  const text = sel && sel.toString() ? sel.toString() : 'code';
+  document.execCommand('insertHTML', false, `<code>${escHtml(text)}</code>`);
+  triggerAutoSave();
+}
+
+// ============================================================
+// HTML SOURCE TOGGLE
+// ============================================================
+function toggleSource() {
+  isSourceMode = !isSourceMode;
+  const sourceBtn = document.getElementById('sourceBtn');
+
+  if (isSourceMode) {
+    sourceArea.value = editor.innerHTML;
+    editor.classList.add('hidden');
+    sourceArea.classList.remove('hidden');
+    sourceBtn.classList.add('active');
+    sourceArea.focus();
+  } else {
+    editor.innerHTML = sourceArea.value;
+    editor.classList.remove('hidden');
+    sourceArea.classList.add('hidden');
+    sourceBtn.classList.remove('active');
+    editor.focus();
+    triggerAutoSave();
+  }
+  updateStats();
+}
+
+// ============================================================
+// FULLSCREEN
+// ============================================================
+function toggleFullscreen() {
+  const wrapper = document.getElementById('editorWrapper');
+  const btn = document.getElementById('fullscreenBtn');
+  if (!document.fullscreenElement) {
+    wrapper.requestFullscreen().catch(() => {});
+    btn.classList.add('active');
+  } else {
+    document.exitFullscreen();
+    btn.classList.remove('active');
+  }
+}
+
+document.addEventListener('fullscreenchange', () => {
+  if (!document.fullscreenElement) {
+    document.getElementById('fullscreenBtn').classList.remove('active');
+  }
+});
+
+// ============================================================
+// FIND & REPLACE
+// ============================================================
+document.getElementById('findReplaceBtn').addEventListener('click', () => {
+  const panel = document.getElementById('findReplacePanel');
+  panel.classList.toggle('open');
+  if (panel.classList.contains('open')) document.getElementById('findInput').focus();
+});
+
+function closeFindReplace() {
+  document.getElementById('findReplacePanel').classList.remove('open');
+}
+
+function getEditorText() {
+  return isSourceMode ? sourceArea.value : editor.innerHTML;
+}
+
+function findText() {
+  if (isSourceMode) return;
+  const needle = document.getElementById('findInput').value;
+  const cs = document.getElementById('caseSensitive').checked;
+  const msg = document.getElementById('findResultMsg');
+  if (!needle) { msg.textContent = ''; return; }
+
+  // Use browser find API
+  const found = window.find(needle, cs, false, true, false, true, false);
+  msg.textContent = found ? '' : 'Not found';
+}
+
+function replaceText() {
+  if (isSourceMode) return;
+  const needle = document.getElementById('findInput').value;
+  const replacement = document.getElementById('replaceInput').value;
+  const cs = document.getElementById('caseSensitive').checked;
+  const msg = document.getElementById('findResultMsg');
+  if (!needle) return;
+
+  const found = window.find(needle, cs, false, true, false, true, false);
+  if (found) {
+    document.execCommand('insertText', false, replacement);
+    msg.textContent = 'Replaced';
+    triggerAutoSave();
+  } else {
+    msg.textContent = 'Not found';
+  }
+}
+
+function replaceAll() {
+  if (isSourceMode) {
+    const needle = document.getElementById('findInput').value;
+    const replacement = document.getElementById('replaceInput').value;
+    const cs = document.getElementById('caseSensitive').checked;
+    if (!needle) return;
+    const flags = cs ? 'g' : 'gi';
+    const escaped = needle.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const count = (sourceArea.value.match(new RegExp(escaped, flags)) || []).length;
+    sourceArea.value = sourceArea.value.replace(new RegExp(escaped, flags), replacement);
+    document.getElementById('findResultMsg').textContent = `Replaced ${count} instance(s)`;
+    return;
+  }
+
+  const needle = document.getElementById('findInput').value;
+  const replacement = document.getElementById('replaceInput').value;
+  const cs = document.getElementById('caseSensitive').checked;
+  const msg = document.getElementById('findResultMsg');
+  if (!needle) return;
+
+  const escaped = needle.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const flags = cs ? 'g' : 'gi';
+  const count = (editor.innerHTML.match(new RegExp(escaped, flags)) || []).length;
+  editor.innerHTML = editor.innerHTML.replace(new RegExp(escaped, flags), escHtml(replacement));
+  msg.textContent = count > 0 ? `Replaced ${count} instance(s)` : 'Not found';
+  triggerAutoSave();
+}
+
+// ============================================================
+// FILE OPEN
+// ============================================================
+document.getElementById('openFileBtn').addEventListener('click', () => {
+  document.getElementById('fileInput').click();
+});
+
+document.getElementById('fileInput').addEventListener('change', function() {
+  const file = this.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    const content = e.target.result;
+    if (isSourceMode) {
+      sourceArea.value = content;
+    } else {
+      if (file.name.match(/\.html?$/i)) {
+        editor.innerHTML = content;
+      } else {
+        editor.innerHTML = '<p>' + content.replace(/\n\n/g, '</p><p>').replace(/\n/g, '<br>') + '</p>';
+      }
+    }
+    updateStats();
+    triggerAutoSave();
+  };
+  reader.readAsText(file);
+  this.value = '';
+});
+
+// ============================================================
+// NEW DOCUMENT
+// ============================================================
+document.getElementById('newDocBtn').addEventListener('click', () => {
+  if (confirm('Clear the editor and start a new document?')) {
+    editor.innerHTML = '<p>Start typing here...</p>';
+    if (isSourceMode) { sourceArea.value = editor.innerHTML; }
+    updateStats();
+    triggerAutoSave();
+  }
+});
+
+// ============================================================
+// CLEAR EDITOR
+// ============================================================
+document.getElementById('clearEditorBtn').addEventListener('click', () => {
+  if (confirm('Clear all content from the editor?')) {
+    editor.innerHTML = '';
+    if (isSourceMode) sourceArea.value = '';
+    updateStats();
+    triggerAutoSave();
+  }
+});
+
+// ============================================================
+// DOWNLOAD TXT
+// ============================================================
+document.getElementById('downloadTxtBtn').addEventListener('click', () => {
+  const text = editor.innerText || editor.textContent;
+  download('document.txt', text, 'text/plain');
+});
+
+// ============================================================
+// DOWNLOAD HTML
+// ============================================================
+document.getElementById('downloadHtmlBtn').addEventListener('click', () => {
+  const html = `<!DOCTYPE html>\n<html lang="en">\n<head>\n<meta charset="UTF-8">\n<title>Document</title>\n<style>body{font-family:Georgia,serif;max-width:800px;margin:40px auto;padding:0 20px;line-height:1.8;color:#111;}blockquote{border-left:4px solid #6366f1;padding:8px 16px;background:#f3f4f6;color:#444;}pre{background:#1e1e1e;color:#d4d4d4;padding:16px;border-radius:6px;}code{background:#f1f5f9;color:#e11d48;padding:1px 5px;border-radius:3px;}table{border-collapse:collapse;width:100%;}td,th{border:1px solid #d1d5db;padding:8px 12px;}th{background:#f3f4f6;}hr{border:none;border-top:2px solid #e5e7eb;}</style>\n</head>\n<body>\n${editor.innerHTML}\n</body>\n</html>`;
+  download('document.html', html, 'text/html');
+});
+
+function download(filename, content, type) {
+  const blob = new Blob([content], { type });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = filename;
+  document.body.appendChild(a); a.click();
+  document.body.removeChild(a); URL.revokeObjectURL(url);
+}
+
+// ============================================================
+// PRINT
+// ============================================================
+document.getElementById('printBtn').addEventListener('click', () => window.print());
+
+// ============================================================
+// STATS
+// ============================================================
+function updateStats() {
+  const text = editor.innerText || '';
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).filter(w => w.length > 0).length;
+  const chars = text.length;
+  const lines = text === '' ? 0 : text.split('\n').filter(l => l.trim() !== '').length;
+
+  document.getElementById('wordCount').textContent = words;
+  document.getElementById('charCount').textContent = chars;
+  document.getElementById('lineCount').textContent = lines;
+}
+
+function updateSelectionCount() {
+  const sel = window.getSelection();
+  document.getElementById('selectionCount').textContent = sel ? sel.toString().length : 0;
+}
+
+editor.addEventListener('input', () => { updateStats(); triggerAutoSave(); });
+editor.addEventListener('keyup', updateStats);
+editor.addEventListener('mouseup', updateSelectionCount);
+editor.addEventListener('selectionchange', updateSelectionCount);
+document.addEventListener('selectionchange', updateSelectionCount);
+
+// ============================================================
+// TOOLBAR STATE UPDATE
+// ============================================================
+function updateToolbarState() {
+  document.getElementById('boldBtn').classList.toggle('active', document.queryCommandState('bold'));
+  document.getElementById('italicBtn').classList.toggle('active', document.queryCommandState('italic'));
+  document.getElementById('underlineBtn').classList.toggle('active', document.queryCommandState('underline'));
+  document.getElementById('strikeBtn').classList.toggle('active', document.queryCommandState('strikeThrough'));
+  document.getElementById('ulBtn').classList.toggle('active', document.queryCommandState('insertUnorderedList'));
+  document.getElementById('olBtn').classList.toggle('active', document.queryCommandState('insertOrderedList'));
+}
+
+editor.addEventListener('keyup', updateToolbarState);
+editor.addEventListener('mouseup', updateToolbarState);
+editor.addEventListener('click', updateToolbarState);
+
+// ============================================================
+// LINE HEIGHT
+// ============================================================
+document.getElementById('lineHeightSelect').addEventListener('change', function() {
+  editor.style.lineHeight = this.value;
+});
+
+// ============================================================
+// ZOOM
+// ============================================================
+document.getElementById('zoomSelect').addEventListener('change', function() {
+  editor.style.zoom = this.value + '%';
+});
+
+// ============================================================
+// AUTO-SAVE TO LOCALSTORAGE
+// ============================================================
+let autoSaveTimer;
+const SAVE_KEY = 'easyprotools_texteditor_content';
+
+function triggerAutoSave() {
+  clearTimeout(autoSaveTimer);
+  document.getElementById('saveStatus').textContent = 'Saving...';
+  autoSaveTimer = setTimeout(() => {
+    try {
+      localStorage.setItem(SAVE_KEY, editor.innerHTML);
+      document.getElementById('saveStatus').textContent = 'Auto-saved';
+    } catch (e) {
+      document.getElementById('saveStatus').textContent = 'Save failed';
+    }
+  }, 1000);
+}
+
+// Restore on load
+try {
+  const saved = localStorage.getItem(SAVE_KEY);
+  if (saved && saved.trim() !== '') {
+    editor.innerHTML = saved;
+    updateStats();
+  }
+} catch (e) {}
+
+// ============================================================
+// MODAL HELPERS
+// ============================================================
+function openModal(id) {
+  document.getElementById(id).classList.add('open');
+}
+
+function closeModal(id) {
+  document.getElementById(id).classList.remove('open');
+}
+
+// Close modal on overlay click
+document.querySelectorAll('.modal-overlay').forEach(overlay => {
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) overlay.classList.remove('open');
+  });
+});
+
+// ============================================================
+// SELECTION HELPERS
+// ============================================================
+function saveSelection() {
+  const sel = window.getSelection();
+  if (sel && sel.rangeCount > 0) return sel.getRangeAt(0).cloneRange();
+  return null;
+}
+
+function restoreSelection(range) {
+  if (!range) return;
+  const sel = window.getSelection();
+  sel.removeAllRanges();
+  sel.addRange(range);
+}
+
+// ============================================================
+// FAQ TOGGLE
+// ============================================================
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// ============================================================
+// HTML ESCAPE HELPER
+// ============================================================
+function escHtml(str) {
+  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+// ============================================================
+// INIT
+// ============================================================
+updateStats();
+updateToolbarState();
+</script>
+</body>
+</html>
