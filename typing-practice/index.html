@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>EasyPro Typing | Online Typing Practice</title>
+    <meta name="description"
+        content="Free online typing practice tool. Improve typing speed and accuracy with timed tests, word challenges, quotes and custom text. Track progress with user profiles." />
+    <meta name="keywords"
+        content="typing practice,typing practice online,free typing practice,online typing practice free,easy typing practice,typing practice tool online,typing speed practice online,free online typing lessons,typing test and practice online,typing trainer online free,learn typing online free,keyboard typing practice online,touch typing practice free online,typing accuracy practice online,typing exercise online free,beginner typing practice online,typing skills practice free,typing improvement tool online,free typing tutor online,online typing drills free" />
+    <meta name="author" content="EasyPro Tools" />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://easyprotools.com/typing-practice/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://easyprotools.com/typing-practice/" />
+    <meta property="og:title" content="EasyPro Typing | Online Typing Practice" />
+    <meta property="og:description"
+        content="Free online typing practice. Improve speed with timed tests, word challenges, quotes. Track progress with profiles and leaderboards." />
+    <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+    <meta property="og:site_name" content="EasyPro Tools" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://easyprotools.com/typing-practice/" />
+    <meta name="twitter:title" content="EasyPro Typing | Online Typing Practice" />
+    <meta name="twitter:description"
+        content="Free online typing practice. Improve speed and accuracy. Track progress with user profiles." />
+    <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+    <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+    <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779"
+        crossorigin="anonymous"></script>
+    <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-4D39CLDW58');</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class', theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] } } } }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0a0a;
+            color: #e5e5e5;
+        }
+
+        .bg-mesh {
+            background: #0a0a0a;
+            background-image: radial-gradient(at 0% 0%, rgba(60, 60, 60, .12) 0, transparent 50%), radial-gradient(at 100% 100%, rgba(40, 40, 40, .12) 0, transparent 50%);
+            background-attachment: fixed;
+        }
+
+        .glass-panel {
+            background: rgba(20, 20, 20, .6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, .08);
+        }
+
+        .glass-input {
+            background: rgba(0, 0, 0, .4);
+            border: 1px solid rgba(255, 255, 255, .1);
+            color: #f5f5f5;
+        }
+
+        .glass-input:focus {
+            background: rgba(0, 0, 0, .6);
+            border-color: rgba(255, 255, 255, .2);
+            outline: none;
+        }
+
+        #mobileMenu {
+            transition: max-height .3s ease, opacity .3s ease;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+
+        #mobileMenu.open {
+            max-height: 300px;
+            opacity: 1;
+        }
+
+        /* Typing area */
+        #wordDisplay {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.2rem;
+            line-height: 2.75rem;
+            height: 8.25rem;
+            overflow: hidden;
+            position: relative;
+            cursor: text;
+            user-select: none;
+            letter-spacing: .02em;
+        }
+
+        .word {
+            display: inline;
+        }
+
+        .letter {
+            display: inline;
+            color: #374151;
+            transition: color .05s;
+        }
+
+        .letter.correct {
+            color: #d1d5db;
+        }
+
+        .letter.incorrect {
+            color: #ef4444;
+            text-decoration: underline wavy rgba(239, 68, 68, .5);
+        }
+
+        .letter.extra {
+            color: #dc2626;
+        }
+
+
+        .word-error .letter:not(.correct) {
+            color: #6b7280;
+        }
+
+        #typingCaret {
+            display: inline-block;
+            width: 2px;
+            height: 1.5rem;
+            background: #e2a613;
+            margin-left: 0;
+            vertical-align: middle;
+            border-radius: 1px;
+            animation: blink 1s step-end infinite;
+            margin-right: -2px;
+        }
+
+        #typingCaret.caret-block {
+            width: .6em;
+            background: rgba(226, 166, 19, .4);
+            border-radius: 2px;
+        }
+
+        #typingCaret.caret-underline {
+            width: .7em;
+            height: 2px;
+            vertical-align: baseline;
+            margin-bottom: 2px;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
+
+        #wordDisplayWrapper {
+            position: relative;
+            outline: none;
+        }
+
+        #wordDisplayWrapper.unfocused #wordDisplay::after {
+            content: 'Click to focus or press any key';
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(10, 10, 10, .85);
+            backdrop-filter: blur(4px);
+            font-family: 'Inter', sans-serif;
+            color: #4b5563;
+            font-size: .875rem;
+            border-radius: .5rem;
+        }
+
+        /* Mode / sub buttons */
+        .mode-btn {
+            color: #4b5563;
+            font-size: .8rem;
+            padding: .2rem .5rem;
+            border-radius: .375rem;
+            transition: color .15s;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: .25rem;
+        }
+
+        .mode-btn:hover {
+            color: #d1d5db;
+        }
+
+        .mode-btn.mode-active {
+            color: #e2a613;
+        }
+
+        .sub-btn {
+            font-size: .75rem;
+            padding: .15rem .5rem;
+            border-radius: .375rem;
+            color: #4b5563;
+            transition: color .15s;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .sub-btn:hover {
+            color: #d1d5db;
+        }
+
+        .sub-btn.sub-active {
+            color: #e2a613;
+        }
+
+        .toggle-btn {
+            font-size: .75rem;
+            padding: .2rem .6rem;
+            border-radius: .375rem;
+            border: 1px solid rgba(255, 255, 255, .08);
+            color: #4b5563;
+            background: transparent;
+            cursor: pointer;
+            transition: all .15s;
+        }
+
+        .toggle-btn:hover {
+            color: #d1d5db;
+            border-color: rgba(255, 255, 255, .15);
+        }
+
+        .toggle-btn.toggle-active {
+            color: #e2a613;
+            border-color: rgba(226, 166, 19, .4);
+            background: rgba(226, 166, 19, .08);
+        }
+
+        /* Progress */
+        .progress-bar {
+            height: 2px;
+            background: rgba(255, 255, 255, .08);
+            border-radius: 9999px;
+            overflow: hidden;
+            flex: 1;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: #e2a613;
+            border-radius: 9999px;
+            transition: width .1s linear;
+            width: 0%;
+        }
+
+        /* Results */
+        .stat-card {
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid rgba(255, 255, 255, .07);
+            border-radius: .75rem;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        /* Leaderboard tabs */
+        .lb-tab {
+            font-size: .7rem;
+            padding: .2rem .6rem;
+            border-radius: .375rem;
+            color: #4b5563;
+            cursor: pointer;
+            border: none;
+            background: none;
+            transition: color .15s;
+        }
+
+        .lb-tab:hover {
+            color: #d1d5db;
+        }
+
+        .lb-tab.lb-tab-active {
+            color: #e2a613;
+            background: rgba(226, 166, 19, .08);
+        }
+
+        /* Auth tabs */
+        .auth-tab {
+            font-size: .85rem;
+            padding: .4rem 1rem;
+            border-bottom: 2px solid transparent;
+            color: #6b7280;
+            cursor: pointer;
+            transition: all .15s;
+        }
+
+        .auth-tab.auth-tab-active {
+            color: #e2a613;
+            border-bottom-color: #e2a613;
+        }
+
+        /* Level badge */
+        .level-badge {
+            background: linear-gradient(135deg, #e2a613, #f59e0b);
+            color: #000;
+            padding: .1rem .45rem;
+            border-radius: 9999px;
+            font-size: .65rem;
+            font-weight: 700;
+        }
+
+        /* Article */
+        .article-content h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: .75rem;
+            color: #e2e8f0;
+        }
+
+        .article-content h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-top: 1.25rem;
+            margin-bottom: .5rem;
+            color: #cbd5e1;
+        }
+
+        .article-content p {
+            margin-bottom: .875rem;
+            line-height: 1.85;
+            color: #94a3b8;
+        }
+
+        .article-content ul,
+        .article-content ol {
+            margin-bottom: .875rem;
+            padding-left: 1.5rem;
+            color: #94a3b8;
+        }
+
+        .article-content li {
+            margin-bottom: .4rem;
+            line-height: 1.75;
+        }
+
+        .article-content strong {
+            color: #e2e8f0;
+        }
+
+        /* FAQ */
+        .faq-content {
+            transition: max-height .3s ease, opacity .3s ease;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+
+        .faq-content.open {
+            max-height: 400px;
+            opacity: 1;
+        }
+
+        .faq-icon {
+            transition: transform .3s ease;
+        }
+
+        .faq-icon.open {
+            transform: rotate(180deg);
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, .2);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, .12);
+            border-radius: 3px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, .22);
+        }
+
+        /* Profile XP bar */
+        .xp-bar {
+            height: 4px;
+            background: rgba(255, 255, 255, .08);
+            border-radius: 9999px;
+            overflow: hidden;
+        }
+
+        .xp-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #e2a613, #f59e0b);
+            border-radius: 9999px;
+            transition: width .5s;
+        }
+
+        /* compact btn */
+        .cbtn {
+            font-size: .72rem;
+            padding: .25rem .65rem;
+            border-radius: .375rem;
+            border: 1px solid rgba(255, 255, 255, .1);
+            background: rgba(255, 255, 255, .05);
+            color: #9ca3af;
+            cursor: pointer;
+            transition: all .15s;
+            display: inline-flex;
+            align-items: center;
+            gap: .25rem;
+        }
+
+        .cbtn:hover {
+            background: rgba(255, 255, 255, .1);
+            color: #e5e5e5;
+        }
+
+        .cbtn:active {
+            transform: scale(.97);
+        }
+
+        /* Modal */
+        #modalOverlay {
+            position: fixed;
+            inset: 0;
+            z-index: 50;
+            background: rgba(0, 0, 0, .75);
+            backdrop-filter: blur(4px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+    </style>
+</head>
+
+<body class="bg-mesh min-h-screen flex flex-col">
+
+    <!-- HEADER -->
+    <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex items-center justify-between h-14">
+                <div class="flex items-center gap-2">
+                    <svg class="w-7 h-7 flex-shrink-0" viewBox="0 0 40 40" fill="none">
+                        <rect width="40" height="40" rx="10" fill="url(#lg)" />
+                        <rect x="7" y="12" width="26" height="3" rx="1.5" fill="white" opacity=".9" />
+                        <rect x="7" y="19" width="18" height="3" rx="1.5" fill="white" opacity=".7" />
+                        <rect x="7" y="26" width="22" height="3" rx="1.5" fill="white" opacity=".8" />
+                        <circle cx="33" cy="27.5" r="4" fill="#e2a613" />
+                        <defs>
+                            <linearGradient id="lg" x1="0" y1="0" x2="40" y2="40">
+                                <stop stop-color="#6366f1" />
+                                <stop offset="1" stop-color="#8b5cf6" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <div>
+                        <p class="text-sm font-bold text-white leading-none">EasyPro Typing</p>
+                        <p class="text-gray-400 text-xs hidden sm:block">Online Typing Practice</p>
+                    </div>
+                </div>
+                <nav class="hidden md:flex items-center gap-5">
+                    <a href="https://easyprotools.com/"
+                        class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1"><svg
+                            class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                        </svg>Home</a>
+                    <a href="https://easyprotools.com/"
+                        class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1"><svg
+                            class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                        </svg>All Tools</a>
+                    <!-- <button id="btnSettings" class="cbtn" title="Settings (Ctrl+,)"><svg class="w-3 h-3" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>Settings</button> -->
+                    <!-- <div id="userMenu" class="hidden flex items-center gap-2">
+                        <button id="btnProfile" class="cbtn"><svg class="w-3 h-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                            </svg><span id="userDisplay"></span></button>
+                        <button id="btnSignOut" class="cbtn text-red-400 border-red-500/20 hover:bg-red-500/10">Sign
+                            Out</button>
+                    </div>
+                    <button id="btnSignIn"
+                        class="text-xs px-3 py-1.5 rounded-md bg-yellow-400/10 border border-yellow-400/30 text-yellow-400 hover:bg-yellow-400/20 transition-all">Sign
+                        In</button> -->
+                </nav>
+                <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300"><svg
+                        class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg></button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-black/95">
+            <div class="px-4 py-3 space-y-1">
+                <a href="https://easyprotools.com/"
+                    class="block px-3 py-2 rounded-md text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-colors">Home</a>
+                <a href="https://easyprotools.com/"
+                    class="block px-3 py-2 rounded-md text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-colors">All
+                    Tools</a>
+                <button id="btnSignInMobile" onclick="App.showModal('auth')"
+                    class="w-full text-left px-3 py-2 rounded-md text-sm text-yellow-400 hover:bg-white/10 transition-colors">Sign
+                    In / Register</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- BANNER -->
+    <section class="py-3 px-4 text-center">
+        <h1
+            class="text-xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
+            EasyPro Typing</h1>
+        <p class="text-gray-500 text-xs mt-1">Online Free Typing Practice Tool</p>
+    </section>
+
+    <!-- MAIN -->
+    <main class="flex-grow max-w-5xl mx-auto px-4 pb-12 w-full">
+
+        <!-- TYPING TOOL -->
+        <div class="glass-panel rounded-xl p-4 mb-6">
+
+            <!-- Top mode bar -->
+            <div class="flex flex-wrap items-center gap-x-3 gap-y-1 mb-3 border-b border-white/5 pb-3">
+                <!-- Toggles -->
+                <button id="btnPunct" class="toggle-btn">@ punctuation</button>
+                <button id="btnNums" class="toggle-btn"># numbers</button>
+                <div class="w-px h-4 bg-white/10 hidden sm:block"></div>
+                <!-- Mode buttons -->
+                <button class="mode-btn mode-active" data-mode="time"><svg class="w-3 h-3" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>time</button>
+                <button class="mode-btn" data-mode="words"><svg class="w-3 h-3" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 10h16M4 14h8" />
+                    </svg>words</button>
+                <button class="mode-btn" data-mode="quote"><svg class="w-3 h-3" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                    </svg>quote</button>
+                <button class="mode-btn" data-mode="custom"><svg class="w-3 h-3" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                    </svg>custom</button>
+                <!-- Sub-mode bar -->
+                <div class="w-px h-4 bg-white/10 hidden sm:block"></div>
+                <div id="subModeBar" class="flex items-center gap-1">
+                    <button class="sub-btn" data-sub="15">15</button>
+                    <button class="sub-btn" data-sub="30">30</button>
+                    <button class="sub-btn sub-active" data-sub="60">60</button>
+                    <button class="sub-btn" data-sub="120">120</button>
+                    <button class="sub-btn" data-sub="300">300</button>
+                    <button class="sub-btn" data-sub="custom" title="Custom value">✎</button>
+                </div>
+                <!-- Quote size bar (hidden by default) -->
+                <div id="quoteSizeBar" class="hidden flex items-center gap-1">
+                    <button class="sub-btn" data-qsize="short">short</button>
+                    <button class="sub-btn sub-active" data-qsize="medium">medium</button>
+                    <button class="sub-btn" data-qsize="long">long</button>
+                </div>
+                <!-- Custom sub value input -->
+                <div id="customSubInputWrap" class="hidden">
+                    <input id="customSubInput" type="number" min="1" placeholder="seconds"
+                        class="glass-input rounded px-2 py-0.5 text-xs w-20" />
+                </div>
+                <!-- Restart shortcut hint -->
+                <div class="ml-auto text-xs text-gray-600 hidden sm:flex items-center gap-2">
+                    <kbd class="px-1 py-0.5 rounded bg-white/5 border border-white/10 font-mono text-xs">Tab</kbd>
+                    restart
+                    <kbd class="px-1 py-0.5 rounded bg-white/5 border border-white/10 font-mono text-xs">Esc</kbd> reset
+                </div>
+            </div>
+
+            <!-- Custom text area (hidden by default) -->
+            <div id="customArea" class="hidden mb-3">
+                <textarea id="customTextInput" rows="3"
+                    class="glass-input w-full rounded-lg p-3 text-sm resize-none font-mono"
+                    placeholder="Type or paste your custom text here, then click Apply..."></textarea>
+                <button id="customApplyBtn" class="mt-1.5 cbtn">Apply &amp; Start</button>
+            </div>
+
+            <!-- Test area -->
+            <div id="testArea">
+                <!-- Live stats -->
+                <div class="flex items-center gap-4 mb-3 px-1">
+                    <div class="text-center min-w-[3rem]">
+                        <span id="liveWpm" class="text-2xl font-bold text-yellow-400 font-mono tabular-nums">0</span>
+                        <p class="text-gray-600 text-xs">wpm</p>
+                    </div>
+                    <div class="progress-bar">
+                        <div id="progressBar" class="progress-fill"></div>
+                    </div>
+                    <div class="text-center min-w-[3rem]">
+                        <span id="timerDisplay"
+                            class="text-2xl font-bold text-gray-200 font-mono tabular-nums">60</span>
+                        <p class="text-gray-600 text-xs">sec</p>
+                    </div>
+                    <div class="text-center min-w-[3rem]">
+                        <span id="liveAccuracy"
+                            class="text-xl font-semibold text-gray-300 font-mono tabular-nums">100</span>
+                        <p class="text-gray-600 text-xs">acc%</p>
+                    </div>
+                </div>
+
+                <!-- Word display wrapper (focusable) -->
+                <div id="wordDisplayWrapper" tabindex="0"
+                    class="unfocused rounded-lg bg-black/30 p-4 mb-2 focus:ring-1 focus:ring-yellow-400/30"
+                    style="outline:none;">
+                    <div id="wordDisplay"></div>
+                </div>
+                <!-- Mobile hidden input -->
+                <input id="mobileInput" type="text" autocomplete="off" autocorrect="off" autocapitalize="off"
+                    spellcheck="false" class="opacity-0 absolute w-0 h-0 pointer-events-none" />
+            </div>
+
+            <!-- Results area (hidden initially) -->
+            <div id="resultsArea" class="hidden">
+                <div class="text-center mb-4">
+                    <div class="flex justify-center gap-2 mb-2">
+                        <span id="xpBadge"
+                            class="hidden text-xs px-2 py-0.5 rounded-full bg-yellow-400/20 text-yellow-400 border border-yellow-400/30"
+                            id="xpBadge"></span>
+                    </div>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
+                        <div class="stat-card">
+                            <p class="text-4xl font-bold text-yellow-400 font-mono" id="resWpm">0</p>
+                            <p class="text-xs text-gray-500 mt-1">WPM</p>
+                        </div>
+                        <div class="stat-card">
+                            <p class="text-4xl font-bold text-gray-200 font-mono" id="resAccuracy">0%</p>
+                            <p class="text-xs text-gray-500 mt-1">Accuracy</p>
+                        </div>
+                        <div class="stat-card">
+                            <p class="text-2xl font-bold text-gray-400 font-mono" id="resRawWpm">0</p>
+                            <p class="text-xs text-gray-500 mt-1">Raw WPM</p>
+                        </div>
+                        <div class="stat-card">
+                            <p class="text-2xl font-bold text-gray-400 font-mono" id="resConsistency">0%</p>
+                            <p class="text-xs text-gray-500 mt-1">Consistency</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-3 gap-3 mb-4 text-sm">
+                        <div class="stat-card">
+                            <p class="text-lg font-mono text-gray-300" id="resChars">0/0</p>
+                            <p class="text-xs text-gray-600">Chars</p>
+                        </div>
+                        <div class="stat-card">
+                            <p class="text-lg font-mono text-red-400" id="resErrors">0</p>
+                            <p class="text-xs text-gray-600">Errors</p>
+                        </div>
+                        <div class="stat-card">
+                            <p class="text-lg font-mono text-gray-300" id="resTime">0s</p>
+                            <p class="text-xs text-gray-600">Time</p>
+                        </div>
+                    </div>
+                    <!-- WPM Chart -->
+                    <div class="mb-4 px-2">
+                        <svg id="wpmChart" class="w-full" height="80" style="overflow:visible;"></svg>
+                    </div>
+                    <div class="flex justify-center gap-3">
+                        <button id="btnRestart"
+                            class="px-5 py-2 rounded-lg bg-yellow-400/10 border border-yellow-400/30 text-yellow-400 text-sm hover:bg-yellow-400/20 transition-all font-medium"><svg
+                                class="w-4 h-4 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                            </svg>Restart</button>
+                        <button id="btnNextTest"
+                            class="px-5 py-2 rounded-lg bg-white/5 border border-white/10 text-gray-300 text-sm hover:bg-white/10 transition-all">Next
+                            Test</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END TYPING TOOL -->
+
+    </main>
+
+    <!-- LEADERBOARD -->
+    <!-- <section class="max-w-5xl mx-auto px-4 mb-8 w-full">
+        <div class="glass-panel rounded-xl p-4">
+            <h2 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                <svg class="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+                Leaderboard
+            </h2>
+            <div id="leaderboardTabs" class="flex flex-wrap gap-1 mb-3 pb-3 border-b border-white/5">
+                <span class="text-xs text-gray-500 mr-1 flex items-center">Time:</span>
+                <button class="lb-tab lb-tab-active" data-lbtab="time_15">15s</button>
+                <button class="lb-tab" data-lbtab="time_30">30s</button>
+                <button class="lb-tab" data-lbtab="time_60">60s</button>
+                <button class="lb-tab" data-lbtab="time_120">120s</button>
+                <button class="lb-tab" data-lbtab="time_300">300s</button>
+                <span class="text-xs text-gray-500 ml-2 mr-1 flex items-center">Words:</span>
+                <button class="lb-tab" data-lbtab="words_10">10</button>
+                <button class="lb-tab" data-lbtab="words_25">25</button>
+                <button class="lb-tab" data-lbtab="words_50">50</button>
+                <button class="lb-tab" data-lbtab="words_100">100</button>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left">
+                    <thead>
+                        <tr class="bg-white/5">
+                            <th class="py-2 px-3 text-xs text-gray-500 font-medium">Rank</th>
+                            <th class="py-2 px-3 text-xs text-gray-500 font-medium">Player</th>
+                            <th class="py-2 px-3 text-xs text-gray-500 font-medium">WPM</th>
+                            <th class="py-2 px-3 text-xs text-gray-500 font-medium">Accuracy</th>
+                            <th class="py-2 px-3 text-xs text-gray-500 font-medium">Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboardTable">
+                        <tr>
+                            <td colspan="5" class="py-6 text-center text-gray-600 text-sm">No scores yet. Complete a
+                                test to appear here!</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- FEATURES -->
+    <section class="max-w-5xl mx-auto px-4 mb-8 w-full">
+        <h2
+            class="text-xl md:text-2xl font-bold text-center mb-5 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+            Why Use EasyPro Typing?</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+            <div class="glass-panel rounded-lg p-3 hover:border-white/15 transition-all">
+                <div class="w-8 h-8 bg-yellow-400/10 rounded-md flex items-center justify-center mb-2"><svg
+                        class="w-4 h-4 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg></div>
+                <h3 class="text-sm font-semibold text-white mb-1">6 Modes</h3>
+                <p class="text-xs text-gray-400">Time, words, quote, custom + toggles</p>
+            </div>
+            <div class="glass-panel rounded-lg p-3 hover:border-white/15 transition-all">
+                <div class="w-8 h-8 bg-yellow-400/10 rounded-md flex items-center justify-center mb-2"><svg
+                        class="w-4 h-4 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg></div>
+                <h3 class="text-sm font-semibold text-white mb-1">Leaderboard</h3>
+                <p class="text-xs text-gray-400">Compete globally across all modes</p>
+            </div>
+            <div class="glass-panel rounded-lg p-3 hover:border-white/15 transition-all">
+                <div class="w-8 h-8 bg-yellow-400/10 rounded-md flex items-center justify-center mb-2"><svg
+                        class="w-4 h-4 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg></div>
+                <h3 class="text-sm font-semibold text-white mb-1">Profiles</h3>
+                <p class="text-xs text-gray-400">Track history and progress</p>
+            </div>
+            <div class="glass-panel rounded-lg p-3 hover:border-white/15 transition-all">
+                <div class="w-8 h-8 bg-yellow-400/10 rounded-md flex items-center justify-center mb-2"><svg
+                        class="w-4 h-4 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg></div>
+                <h3 class="text-sm font-semibold text-white mb-1">Real-time</h3>
+                <p class="text-xs text-gray-400">Live WPM, accuracy &amp; timer</p>
+            </div>
+            <div class="glass-panel rounded-lg p-3 hover:border-white/15 transition-all">
+                <div class="w-8 h-8 bg-yellow-400/10 rounded-md flex items-center justify-center mb-2"><svg
+                        class="w-4 h-4 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                    </svg></div>
+                <h3 class="text-sm font-semibold text-white mb-1">Levels</h3>
+                <p class="text-xs text-gray-400">10-level XP progression system</p>
+            </div>
+            <div class="glass-panel rounded-lg p-3 hover:border-white/15 transition-all">
+                <div class="w-8 h-8 bg-yellow-400/10 rounded-md flex items-center justify-center mb-2"><svg
+                        class="w-4 h-4 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg></div>
+                <h3 class="text-sm font-semibold text-white mb-1">Free</h3>
+                <p class="text-xs text-gray-400">No subscription, no limits</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW TO USE -->
+    <section class="max-w-5xl mx-auto px-4 mb-8 w-full">
+        <h2
+            class="text-xl md:text-2xl font-bold text-center mb-5 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+            How to Use</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <div class="glass-panel rounded-lg p-3">
+                <div class="w-6 h-6 bg-yellow-400/20 rounded-full flex items-center justify-center mb-2"><span
+                        class="text-yellow-400 text-xs font-bold">1</span></div>
+                <h3 class="text-sm font-semibold text-white mb-1">Pick a Mode</h3>
+                <p class="text-xs text-gray-400">Choose time, words, quote, or custom. Toggle punctuation and numbers.
+                </p>
+            </div>
+            <div class="glass-panel rounded-lg p-3">
+                <div class="w-6 h-6 bg-yellow-400/20 rounded-full flex items-center justify-center mb-2"><span
+                        class="text-yellow-400 text-xs font-bold">2</span></div>
+                <h3 class="text-sm font-semibold text-white mb-1">Start Typing</h3>
+                <p class="text-xs text-gray-400">Click the text area and start typing. The timer begins on your first
+                    keystroke.</p>
+            </div>
+            <div class="glass-panel rounded-lg p-3">
+                <div class="w-6 h-6 bg-yellow-400/20 rounded-full flex items-center justify-center mb-2"><span
+                        class="text-yellow-400 text-xs font-bold">3</span></div>
+                <h3 class="text-sm font-semibold text-white mb-1">See Results</h3>
+                <p class="text-xs text-gray-400">View WPM, accuracy, consistency, and your per-second WPM chart.</p>
+            </div>
+            <div class="glass-panel rounded-lg p-3">
+                <div class="w-6 h-6 bg-yellow-400/20 rounded-full flex items-center justify-center mb-2"><span
+                        class="text-yellow-400 text-xs font-bold">4</span></div>
+                <h3 class="text-sm font-semibold text-white mb-1">Track Progress</h3>
+                <p class="text-xs text-gray-400">Register free to save history, earn XP, level up, and climb
+                    leaderboards.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARTICLE -->
+    <section class="max-w-5xl mx-auto px-4 mb-8 w-full">
+        <article class="glass-panel rounded-xl p-5 md:p-8 article-content">
+            <h2>The Complete Guide to Online Typing Practice: Improve Speed and Accuracy</h2>
+            <p><strong>Typing practice</strong> has become one of the most valuable digital skills in the modern world.
+                Whether you are a student completing assignments, a professional drafting reports, a developer writing
+                code, or a writer crafting articles, the ability to type quickly and accurately defines how productive
+                you can be. Our <strong>free online typing practice</strong> platform is designed to help everyone from
+                beginners to advanced users dramatically improve their keyboard skills through structured, engaging, and
+                measurable exercises. With real-time feedback, multiple test modes, detailed statistics, and a
+                comprehensive user system, this <strong>typing practice tool online</strong> makes skill development
+                both effective and enjoyable.</p>
+            <p>In today's knowledge economy, most professional and academic work happens on a keyboard. The average
+                office worker types for four or more hours daily. Research shows that improving typing speed from 35 WPM
+                to 70 WPM can save over three hours of productive time each week—time that would otherwise be spent
+                hunting and pecking at keys. That is why <strong>typing practice online</strong> tools have grown so
+                valuable: they provide a convenient, consistent, and measurable way to develop muscle memory, build
+                finger strength, and acquire the rhythm that separates efficient typists from frustrated ones.</p>
+
+            <h2>What Is Typing Practice and Why Does It Matter?</h2>
+            <h3>Defining Keyboard Typing Practice</h3>
+            <p><strong>Typing practice</strong> refers to structured, deliberate exercises intended to build speed,
+                accuracy, and automaticity on a keyboard. Unlike casual typing in day-to-day work, dedicated
+                <strong>typing exercise online free</strong> sessions focus specifically on reinforcing correct finger
+                placement, reducing error rates, and increasing words-per-minute output. Through consistent repetition,
+                these exercises help your fingers learn where every key lives on the keyboard without you needing to
+                look down—a skill called <strong>touch typing</strong>.
+            </p>
+            <p>Touch typing, the foundation of efficient keyboard use, relies on the home row—the row where your fingers
+                rest naturally (ASDF and JKL;). From this position, trained typists can reach every key on the board
+                without lifting their wrists or glancing at their hands. Developing this skill through regular
+                <strong>typing accuracy practice online</strong> sessions builds the neural pathways that make typing as
+                automatic as walking or riding a bike.
+            </p>
+
+            <h3>The Productivity Impact of Typing Speed</h3>
+            <p>Consider what typing speed means in practical terms. At 30 WPM, a professional takes over 6 minutes to
+                type a 200-word email. At 70 WPM, the same email takes under 3 minutes. Scaled across hundreds of
+                emails, reports, messages, and documents produced annually, faster typing adds up to days of recovered
+                time. For developers especially, <strong>keyboard typing practice online</strong> can accelerate code
+                output, reduce friction during pair programming sessions, and allow cognitive resources to focus on
+                logic rather than key locations.</p>
+
+            <h2>Understanding Words Per Minute (WPM) and Typing Metrics</h2>
+            <p><strong>Words per minute (WPM)</strong> is the universal standard for measuring typing speed. Despite its
+                name, WPM is calculated from characters, not actual words: every five characters (including spaces and
+                punctuation) counts as one "word." This standardization ensures that typing long words and short words
+                is scored fairly. So if you type 300 characters in one minute, your WPM is 60, regardless of how many
+                actual words those characters formed.</p>
+            <p>Accuracy is measured as the percentage of keystrokes that were correct. High accuracy is at least as
+                important as raw speed—typing quickly but incorrectly costs more time in corrections than slow,
+                deliberate typing. The gold standard is to maintain above 95% accuracy while maximizing speed. Most
+                <strong>free online typing lessons</strong> and practice tools, including ours, calculate both raw WPM
+                (total characters typed divided by time) and net WPM (correct characters only), giving a complete
+                picture of performance.
+            </p>
+            <p><strong>Consistency</strong> is a lesser-known but important metric. It measures how evenly you maintain
+                your WPM throughout a test, calculated from the standard deviation of your per-second WPM. A high
+                consistency score means your speed is steady rather than bursty—an indicator of strong rhythm and
+                control. Our <strong>typing test and practice online</strong> platform displays all three metrics: WPM,
+                accuracy, and consistency, along with a per-second WPM chart that visualizes your performance across the
+                entire test.</p>
+
+            <h2>How Our Free Online Typing Practice Tool Works</h2>
+            <p>Our <strong>typing trainer online free</strong> platform is built around a real-time word display engine
+                inspired by the most popular typing practice websites. Words are shown in a three-line scrolling
+                display. As you type, each character is immediately highlighted green for correct or red for incorrect.
+                The blinking gold caret shows your exact position in the current word. When you reach the end of the
+                visible window, the display scrolls upward automatically so you can continue without interruption—just
+                like a professional typing environment.</p>
+            <p>The tool operates entirely in your browser. No text is sent to any server; all processing happens locally
+                on your device. This makes it completely private and means the tool works even if your internet
+                connection drops after the page loads. There is no download, no plugin, and no account required to start
+                practicing—though creating a free account unlocks history tracking, the leaderboard, and the level
+                progression system.</p>
+
+            <h2>Typing Practice Modes Explained</h2>
+            <h3>Time Mode</h3>
+            <p><strong>Time-based practice</strong> is the most popular form of typing test. You choose a duration—15
+                seconds for a quick sprint, 30 seconds for a short warm-up, 60 seconds for the standard benchmark, 120
+                seconds for an extended session, or 300 seconds for a full five-minute endurance test. The clock starts
+                on your first keystroke. Words are generated continuously so you never run out of text. At the end of
+                the timer, the test stops and your results appear instantly. Time mode is ideal for benchmarking
+                progress since results from different sessions are directly comparable.</p>
+            <h3>Words Mode</h3>
+            <p><strong>Word count mode</strong> gives you a fixed number of words to type—10 for a quick drill, 25 for a
+                short practice, 50 for a balanced session, or 100 and 200 for extended challenges. The test ends when
+                you complete all words, and the elapsed time determines your WPM. Word mode is excellent for practicing
+                specific patterns without time pressure, and the ability to set custom word counts via the pencil icon
+                allows you to tailor the exercise precisely.</p>
+            <h3>Quote Mode</h3>
+            <p><strong>Quote typing practice</strong> uses real text from famous quotes and speeches, giving you a more
+                natural typing experience with varied rhythm, capitalization, and phrasing. You can choose short (1–2
+                sentences), medium (a paragraph), or long (multiple paragraphs) quotes. Typing real sentences helps
+                train context-aware finger movement and improves performance in real-world typing tasks like email and
+                documentation.</p>
+            <h3>Custom Mode</h3>
+            <p><strong>Custom text mode</strong> lets you paste any text of your choosing—a product description, a code
+                snippet, a speech excerpt, or even a foreign language passage. Type your content into the custom text
+                area, click Apply, and the practice session generates from your exact input. This is especially useful
+                for professionals who want to practice typing domain-specific vocabulary or for students reviewing essay
+                drafts by retyping them.</p>
+            <h3>Punctuation and Numbers Toggles</h3>
+            <p>The <strong>punctuation toggle</strong> adds commas, periods, apostrophes, semicolons, and other
+                punctuation marks throughout the generated text, training you on the special characters that appear
+                constantly in real writing. The <strong>numbers toggle</strong> replaces approximately 15% of words with
+                numeric values (0–999), giving you practice on the number row. Both toggles can be combined for a
+                challenging mixed test that mirrors the demands of data entry or technical documentation work.</p>
+
+            <h2>How to Improve Your Typing Speed With Regular Practice</h2>
+            <h3>Establish Correct Posture and Finger Position</h3>
+            <p>Before typing a single word, your setup matters. Sit upright with your back supported, elbows at roughly
+                90 degrees, and wrists slightly elevated above the keyboard. Place your left hand fingers on A, S, D, F
+                and your right hand on J, K, L, ;. Your thumbs rest on the space bar. This is the <strong>home row
+                    position</strong>, and every efficiently typed character begins with a return to these anchor
+                points. Using incorrect finger placement is the most common mistake beginners make, and it creates
+                hard-to-break habits that cap long-term speed potential.</p>
+            <h3>Focus on Accuracy Before Speed</h3>
+            <p>The single most important principle of <strong>typing improvement</strong> is: accuracy first, speed
+                second. Many beginners rush and build the habit of backspacing constantly. Every backspace stroke is
+                wasted motion. Instead, slow down until you can type at 95%+ accuracy, then gradually increase your
+                pace. Speed follows accuracy naturally as muscle memory develops. Our platform's real-time accuracy
+                display keeps this metric visible at all times to reinforce this habit.</p>
+            <h3>Practice Little and Often</h3>
+            <p>Research on skill acquisition consistently shows that short, frequent practice sessions outperform long,
+                infrequent ones. Fifteen to thirty minutes of focused <strong>typing exercise online free</strong>
+                practice daily will produce measurable results within two to three weeks. Use our 15-second or 30-second
+                time modes for warm-up drills, then move to 60-second benchmark tests to measure your actual speed. The
+                progress charts in your profile will confirm the improvement over time.</p>
+            <h3>Target Your Weak Keys</h3>
+            <p>Everyone has weak keys—usually keys on the opposite side of the keyboard from their dominant hand, or
+                less-used characters like Q, X, Z. After completing a test, review which characters produced the most
+                errors. Then use custom mode to write sentences heavily featuring those characters and practice them
+                specifically. This targeted approach accelerates improvement far faster than general practice alone.</p>
+
+            <h2>Typing Practice for Different Users</h2>
+            <h3>Students</h3>
+            <p><strong>Typing practice for students</strong> improves performance across all subjects. Faster typing
+                means more thorough notes, faster essay submissions, and better performance in timed online exams. We
+                recommend starting with word mode at 25 words with no toggles, ensuring accuracy above 95%, then
+                gradually increasing word count and enabling punctuation as comfort grows.</p>
+            <h3>Developers and Programmers</h3>
+            <p>For developers, typing speed correlates directly with coding productivity. While IDE autocomplete helps,
+                the ability to type fluidly reduces cognitive load and keeps you in flow. Enable the punctuation toggle
+                to practice symbols like commas, semicolons, and periods that appear constantly in code. Custom mode is
+                ideal for practicing code-like patterns and syntax.</p>
+            <h3>Content Writers and Journalists</h3>
+            <p>Writers benefit enormously from <strong>free typing practice</strong>. At 80+ WPM with high accuracy,
+                your typing speed matches your thinking speed, allowing ideas to flow directly onto the screen without
+                bottleneck. Quote mode is particularly valuable for writers, as practicing real prose develops rhythm
+                and phrasing familiarity that carries over into original writing.</p>
+            <h3>Data Entry Professionals</h3>
+            <p>Data entry requires both speed and precision with numbers and special characters. Enable both the numbers
+                and punctuation toggles simultaneously for the most realistic simulation of data entry work. The long
+                time modes (120s and 300s) build the endurance needed for sustained accuracy during long data processing
+                sessions.</p>
+
+            <h2>The Level and XP Progression System</h2>
+            <p>Our <strong>learn typing online free</strong> platform includes a ten-level progression system that
+                rewards consistent practice. Every test you complete earns XP based on your WPM and accuracy (XP = WPM ×
+                accuracy/100 × 10). As XP accumulates, you advance through levels from Novice up through Beginner,
+                Apprentice, Intermediate, Proficient, Advanced, Expert, Master, Grandmaster, and finally Legend. Your
+                current level and XP progress bar are displayed in your profile. This gamification element gives you a
+                clear sense of long-term progress and an extra motivational layer beyond raw WPM improvements.</p>
+
+            <h2>Understanding the Leaderboard System</h2>
+            <p>The <strong>typing speed practice online</strong> leaderboard shows the top 10 scores for each test
+                category. There are separate leaderboards for time-based tests (15s, 30s, 60s, 120s, 300s) and word
+                count tests (10, 25, 50, 100 words). Only your personal best score for each category is counted,
+                preventing spam entries. This means consistent improvers can climb the leaderboard over time as their
+                peak performance grows. Sign in or register to have your scores saved and counted.</p>
+
+            <h2>Conclusion: Start Your Typing Journey Today</h2>
+            <p><strong>Typing practice online</strong> is one of the highest-return skill investments available. The
+                hours you spend practicing on our <strong>free typing tutor online</strong> platform will pay dividends
+                every single day for the rest of your career. Whether you are starting from scratch or looking to push
+                past a plateau, our multi-mode practice system, detailed statistics, and progression system give you
+                everything needed for a structured improvement journey. Begin with a 60-second time test right now, set
+                a baseline WPM, and commit to fifteen minutes of daily practice. Within a month, you will be
+                consistently faster, more accurate, and more confident at your keyboard than you ever thought possible.
+            </p>
+        </article>
+    </section>
+
+    <!-- FAQ -->
+    <section class="max-w-5xl mx-auto px-4 mb-8 w-full">
+        <h2
+            class="text-xl md:text-2xl font-bold text-center mb-5 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+            Frequently Asked Questions</h2>
+        <div class="space-y-2">
+
+            <div class="glass-panel rounded-lg overflow-hidden">
+                <button
+                    class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors">
+                    <span class="text-sm font-medium text-gray-200 pr-4">How is WPM calculated in this typing
+                        test?</span>
+                    <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="faq-content px-3">
+                    <p class="text-gray-400 text-xs pb-3 leading-relaxed">WPM is calculated using the standard formula:
+                        every 5 correct characters (including spaces) count as one word. The formula is <strong>(correct
+                            characters / 5) / (elapsed time in minutes)</strong>. Raw WPM counts all characters typed
+                        including errors, while the main WPM figure counts only correctly typed characters.</p>
+                </div>
+            </div>
+
+            <div class="glass-panel rounded-lg overflow-hidden">
+                <button
+                    class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors">
+                    <span class="text-sm font-medium text-gray-200 pr-4">Do I need to register to use the typing
+                        practice tool?</span>
+                    <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="faq-content px-3">
+                    <p class="text-gray-400 text-xs pb-3 leading-relaxed">No, you can start practicing immediately
+                        without any account. However, registering (free) allows your results to be saved to your
+                        profile, your scores to appear on the leaderboard, and your XP and level to progress over time.
+                        Registration takes under 30 seconds.</p>
+                </div>
+            </div>
+
+            <div class="glass-panel rounded-lg overflow-hidden">
+                <button
+                    class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors">
+                    <span class="text-sm font-medium text-gray-200 pr-4">What is a good WPM typing speed?</span>
+                    <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="faq-content px-3">
+                    <p class="text-gray-400 text-xs pb-3 leading-relaxed">The average adult types at 35–45 WPM. Office
+                        and administrative professionals typically aim for 60–80 WPM. Professional typists and data
+                        entry specialists often achieve 80–100+ WPM. Competitive typists and speed demons can exceed
+                        120–150 WPM. Anything above 70 WPM is considered above average.</p>
+                </div>
+            </div>
+
+            <div class="glass-panel rounded-lg overflow-hidden">
+                <button
+                    class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors">
+                    <span class="text-sm font-medium text-gray-200 pr-4">How does the level and XP system work?</span>
+                    <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="faq-content px-3">
+                    <p class="text-gray-400 text-xs pb-3 leading-relaxed">Every completed test earns XP equal to
+                        <strong>WPM × (accuracy / 100) × 10</strong>. As you accumulate XP you advance through 10
+                        levels: Novice → Beginner → Apprentice → Intermediate → Proficient → Advanced → Expert → Master
+                        → Grandmaster → Legend. Your level is displayed next to your name in the header and on your
+                        profile page.
+                    </p>
+                </div>
+            </div>
+
+            <div class="glass-panel rounded-lg overflow-hidden">
+                <button
+                    class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors">
+                    <span class="text-sm font-medium text-gray-200 pr-4">What does the Consistency percentage
+                        mean?</span>
+                    <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="faq-content px-3">
+                    <p class="text-gray-400 text-xs pb-3 leading-relaxed">Consistency measures how steadily you
+                        maintained your typing speed throughout the test. It is calculated from the coefficient of
+                        variation of your per-second WPM values. A score of 90%+ means your speed was very even. A low
+                        score means your speed varied significantly—common when you encounter unfamiliar words or lose
+                        focus.</p>
+                </div>
+            </div>
+
+            <div class="glass-panel rounded-lg overflow-hidden">
+                <button
+                    class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors">
+                    <span class="text-sm font-medium text-gray-200 pr-4">Is my data private and secure?</span>
+                    <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="faq-content px-3">
+                    <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes. All processing and data storage happens
+                        locally in your browser using IndexedDB—a browser-native database. Your typed text, test
+                        results, and account data never leave your device. Passwords are hashed using SHA-256 before
+                        storage. The only data sent externally is anonymous analytics via Google Analytics.</p>
+                </div>
+            </div>
+
+            <div class="glass-panel rounded-lg overflow-hidden">
+                <button
+                    class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors">
+                    <span class="text-sm font-medium text-gray-200 pr-4">Can I use this tool on mobile devices?</span>
+                    <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="faq-content px-3">
+                    <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, the tool is fully responsive and works on
+                        mobile devices. Tapping the word display area opens your device's keyboard. However, for the
+                        best typing practice experience and most accurate WPM measurements, a physical desktop or laptop
+                        keyboard is strongly recommended.</p>
+                </div>
+            </div>
+
+            <div class="glass-panel rounded-lg overflow-hidden">
+                <button
+                    class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors">
+                    <span class="text-sm font-medium text-gray-200 pr-4">What keyboard shortcuts are available?</span>
+                    <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="faq-content px-3">
+                    <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Tab</strong> restarts the current test
+                        with new random words. <strong>Escape</strong> also resets and regenerates the test.
+                        <strong>Backspace</strong> deletes the last typed character. There is no way to navigate back to
+                        a previous word once you have moved forward—this encourages forward-only, accurate typing
+                        habits.
+                    </p>
+                </div>
+            </div>
+
+            <div class="glass-panel rounded-lg overflow-hidden">
+                <button
+                    class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors">
+                    <span class="text-sm font-medium text-gray-200 pr-4">How long does it take to improve typing
+                        speed?</span>
+                    <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="faq-content px-3">
+                    <p class="text-gray-400 text-xs pb-3 leading-relaxed">With 15–30 minutes of daily <strong>typing
+                            practice online free</strong> sessions focusing on accuracy first, most people see
+                        measurable improvement within 2–3 weeks. Moving from 30 WPM to 60 WPM typically takes 1–2
+                        months. Reaching 80+ WPM generally requires 3–6 months of regular, structured practice with
+                        proper technique.</p>
+                </div>
+            </div>
+
+            <div class="glass-panel rounded-lg overflow-hidden">
+                <button
+                    class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors">
+                    <span class="text-sm font-medium text-gray-200 pr-4">What is blind mode in the settings?</span>
+                    <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="faq-content px-3">
+                    <p class="text-gray-400 text-xs pb-3 leading-relaxed">Blind mode hides visual error
+                        highlighting—incorrect characters still count as errors in your score, but they are not shown in
+                        red. Some advanced typists use blind mode to train themselves to push through mistakes and
+                        maintain typing rhythm instead of stopping to fix every error, which can interrupt flow.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+        <div
+            class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+            <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank"
+                    class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+            <div class="flex gap-4">
+                <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+                <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All
+                    Tools</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL OVERLAY -->
+    <div id="modalOverlay" class="hidden">
+        <div class="modal-overlay-bg absolute inset-0" onclick="App.closeModal()"></div>
+
+        <!-- AUTH MODAL -->
+        <div id="authModal" class="hidden relative glass-panel rounded-2xl p-6 w-full max-w-sm z-10"
+            onclick="event.stopPropagation()">
+            <button class="modal-close absolute top-3 right-3 text-gray-500 hover:text-white"
+                onclick="App.closeModal()"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg></button>
+            <div class="flex gap-4 mb-5 border-b border-white/10">
+                <button id="tabLogin" class="auth-tab auth-tab-active">Sign In</button>
+                <button id="tabRegister" class="auth-tab">Register</button>
+            </div>
+            <!-- Login -->
+            <div id="loginPanel">
+                <form id="loginForm" class="space-y-3">
+                    <input id="loginUsername" type="text" placeholder="Username or Email" autocomplete="username"
+                        class="glass-input w-full rounded-lg px-3 py-2 text-sm" />
+                    <input id="loginPassword" type="password" placeholder="Password" autocomplete="current-password"
+                        class="glass-input w-full rounded-lg px-3 py-2 text-sm" />
+                    <p id="loginError" class="hidden text-red-400 text-xs"></p>
+                    <button type="submit"
+                        class="w-full py-2 rounded-lg bg-yellow-400/10 border border-yellow-400/30 text-yellow-400 text-sm hover:bg-yellow-400/20 transition-all font-medium">Sign
+                        In</button>
+                </form>
+            </div>
+            <!-- Register -->
+            <div id="registerPanel" class="hidden">
+                <form id="registerForm" class="space-y-3">
+                    <input id="regUsername" type="text" placeholder="Username (3+ chars, letters/numbers)"
+                        autocomplete="username" class="glass-input w-full rounded-lg px-3 py-2 text-sm" />
+                    <input id="regEmail" type="email" placeholder="Email (optional)" autocomplete="email"
+                        class="glass-input w-full rounded-lg px-3 py-2 text-sm" />
+                    <input id="regPassword" type="password" placeholder="Password (6+ chars)"
+                        autocomplete="new-password" class="glass-input w-full rounded-lg px-3 py-2 text-sm" />
+                    <input id="regPassword2" type="password" placeholder="Confirm Password" autocomplete="new-password"
+                        class="glass-input w-full rounded-lg px-3 py-2 text-sm" />
+                    <p id="registerError" class="hidden text-red-400 text-xs"></p>
+                    <button type="submit"
+                        class="w-full py-2 rounded-lg bg-yellow-400/10 border border-yellow-400/30 text-yellow-400 text-sm hover:bg-yellow-400/20 transition-all font-medium">Create
+                        Account</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- PROFILE MODAL -->
+        <div id="profileModal"
+            class="hidden relative glass-panel rounded-2xl p-6 w-full max-w-2xl z-10 max-h-[85vh] overflow-y-auto"
+            onclick="event.stopPropagation()">
+            <button class="modal-close absolute top-3 right-3 text-gray-500 hover:text-white"
+                onclick="App.closeModal()"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg></button>
+            <div class="flex items-start gap-4 mb-5">
+                <div class="w-14 h-14 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center text-black text-xl font-bold flex-shrink-0"
+                    id="profAvatar">U</div>
+                <div class="flex-1">
+                    <h2 class="text-xl font-bold text-white" id="profUsername">Username</h2>
+                    <p class="text-sm text-gray-400"><span id="profLevelName"
+                            class="text-yellow-400 font-medium"></span> &middot; <span id="profLevel"></span> &middot;
+                        Joined <span id="profJoinDate"></span></p>
+                    <p class="text-xs text-gray-500 mt-1" id="profXP"></p>
+                    <div class="xp-bar mt-2">
+                        <div id="profXpBar" class="xp-fill" style="width:0%"></div>
+                    </div>
+                    <p class="text-xs text-gray-600 mt-1" id="profNextLevel"></p>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
+                <div class="stat-card">
+                    <p class="text-2xl font-bold text-yellow-400 font-mono" id="profBestWPM">0</p>
+                    <p class="text-xs text-gray-500">Best WPM</p>
+                </div>
+                <div class="stat-card">
+                    <p class="text-2xl font-bold text-gray-300 font-mono" id="profAvgWPM">0</p>
+                    <p class="text-xs text-gray-500">Avg WPM</p>
+                </div>
+                <div class="stat-card">
+                    <p class="text-2xl font-bold text-gray-300 font-mono" id="profAvgAcc">0%</p>
+                    <p class="text-xs text-gray-500">Avg Acc</p>
+                </div>
+                <div class="stat-card">
+                    <p class="text-2xl font-bold text-gray-300 font-mono" id="profTests">0</p>
+                    <p class="text-xs text-gray-500">Tests</p>
+                </div>
+            </div>
+            <h3 class="text-sm font-semibold text-gray-300 mb-2">Recent History</h3>
+            <div class="overflow-x-auto rounded-lg border border-white/5">
+                <table class="w-full text-left">
+                    <thead>
+                        <tr class="bg-white/5">
+                            <th class="py-1.5 px-2 text-xs text-gray-500 font-medium">Mode</th>
+                            <th class="py-1.5 px-2 text-xs text-gray-500 font-medium">WPM</th>
+                            <th class="py-1.5 px-2 text-xs text-gray-500 font-medium">Acc</th>
+                            <th class="py-1.5 px-2 text-xs text-gray-500 font-medium">Time</th>
+                            <th class="py-1.5 px-2 text-xs text-gray-500 font-medium">Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historyTable"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- SETTINGS MODAL -->
+        <div id="settingsModal" class="hidden relative glass-panel rounded-2xl p-6 w-full max-w-sm z-10"
+            onclick="event.stopPropagation()">
+            <button class="modal-close absolute top-3 right-3 text-gray-500 hover:text-white"
+                onclick="App.closeModal()"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg></button>
+            <h2 class="text-lg font-bold text-white mb-4">Settings</h2>
+            <div class="space-y-4">
+                <label class="flex items-center justify-between"><span class="text-sm text-gray-300">Dark
+                        Mode</span><input id="settingDarkMode" type="checkbox" checked
+                        class="w-4 h-4 accent-yellow-400" /></label>
+                <div><label class="block text-sm text-gray-300 mb-1.5">Caret Style</label>
+                    <select id="settingCaret" class="glass-input w-full rounded-lg px-3 py-1.5 text-sm">
+                        <option value="bar">Bar (|)</option>
+                        <option value="block">Block</option>
+                        <option value="underline">Underline</option>
+                    </select>
+                </div>
+                <label class="flex items-center justify-between"><span class="text-sm text-gray-300">Sound on
+                        Error</span><input id="settingSoundError" type="checkbox"
+                        class="w-4 h-4 accent-yellow-400" /></label>
+                <label class="flex items-center justify-between"><span class="text-sm text-gray-300">Blind Mode (hide
+                        errors)</span><input id="settingBlindMode" type="checkbox"
+                        class="w-4 h-4 accent-yellow-400" /></label>
+            </div>
+        </div>
+
+    </div><!-- END MODAL OVERLAY -->
+
+    <!-- SCRIPTS -->
+    <script src="js/db.js"></script>
+    <script src="js/words.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/typing.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
