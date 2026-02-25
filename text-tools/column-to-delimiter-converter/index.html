@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Column to Delimiter Converter - Free Online CSV Tool</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online column to delimiter converter. Instantly convert column text to CSV, TSV, pipe, semicolon, or custom delimiters. Batch process data with real-time preview." />
+  <meta name="keywords" content="column to delimiter converter, convert columns to delimiter, convert columns to csv, columns to comma separated, convert column text to delimited, column to tsv converter, convert columns to pipe separated, column to semicolon separated, columns to tab separated, convert column data to delimiter, column to custom delimiter, convert column to csv online, convert column to text delimiter, column to delimiter online, convert spreadsheet columns to delimiter, convert column list to csv, convert data columns to delimiter, convert column format to delimiter, columns to delimited text, convert column text to csv, column to delimiter free, online column to delimiter converter, convert column entries to delimiter, batch column to delimiter tool, convert column strings to delimiter, column to delimiter utility, convert multiple columns to delimiter, convert table columns to delimiter, convert csv columns online, convert column to separator, convert column to text separator, column delimiter formatter, column to delimiter editor, convert column data free online, convert column to pipe, convert column to tab, convert column to semicolon, convert column to custom separator, column text to delimited format, online column converter free, column to delimiter batch converter, convert text columns to csv, convert column to delimited list, free column to delimiter tool" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/column-to-delimiter-converter/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/column-to-delimiter-converter/" />
+  <meta property="og:title" content="Column to Delimiter Converter - Free Online CSV Tool" />
+  <meta property="og:description" content="Instantly convert column text to CSV, TSV, pipe, semicolon, or custom delimiters. Batch process data with real-time preview." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/column-to-delimiter-converter/" />
+  <meta name="twitter:title" content="Column to Delimiter Converter - Free Online CSV Tool" />
+  <meta name="twitter:description" content="Instantly convert column text to CSV, TSV, pipe, semicolon, or custom delimiters. Batch process data with real-time preview." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .preset-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    .preset-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M12 12h4v16h-4zM18 12h4v16h-4zM24 12h4v16h-4z" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Column to Delimiter</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Data Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Column to Delimiter Converter
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Data Formatting Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-converting enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+              Column Data (One item per line)
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Paste column data here...&#10;One item per line&#10;Or drag & drop a file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.csv,.tsv,.md,.json,.xml,.html,.sql,.log" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Lines: 0 | Items: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Output -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Delimited Result
+            </label>
+            <div class="flex gap-1">
+              <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                Copy
+              </button>
+              <button id="downloadBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Download
+              </button>
+            </div>
+          </div>
+          
+          <textarea id="outputText" readonly spellcheck="false"
+            class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+            placeholder="Delimited output appears here..."></textarea>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="outputStats">Length: 0 chars | Items: 0</span>
+            <span id="processingTime" class="text-gray-600"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-3">
+        
+        <!-- Preset Delimiters -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Quick Select Delimiter</label>
+          <div class="flex flex-wrap gap-1">
+            <button class="preset-btn active rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-delimiter=", " data-ext="csv">Comma (,)</button>
+            <button class="preset-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-delimiter="\t" data-ext="tsv">Tab (TSV)</button>
+            <button class="preset-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-delimiter="|" data-ext="txt">Pipe (|)</button>
+            <button class="preset-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-delimiter=";" data-ext="csv">Semicolon (;)</button>
+            <button class="preset-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-delimiter=" - " data-ext="txt">Dash (-)</button>
+            <button class="preset-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-delimiter=" " data-ext="txt">Space</button>
+            <button class="preset-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-delimiter=":" data-ext="txt">Colon (:)</button>
+            <button class="preset-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-delimiter="," data-ext="json">JSON Array</button>
+          </div>
+        </div>
+
+        <!-- Custom Options -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Custom Delimiter</label>
+            <input type="text" id="customDelimiter" placeholder="Enter custom..." class="w-full px-2 py-1.5 rounded-md glass-input text-xs font-mono">
+          </div>
+          
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Quote Character</label>
+            <select id="quoteSelect" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="">None</option>
+              <option value='"' selected>Double Quote (")</option>
+              <option value="'">Single Quote (')</option>
+              <option value="`">Backtick (`)</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Line Ending</label>
+            <select id="lineEndingSelect" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="">None (single line)</option>
+              <option value="\n">New Line (multiline)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Options -->
+        <div class="grid grid-cols-1 sm:grid-cols-4 gap-2">
+          <label class="flex items-center gap-1.5 text-xs text-gray-400">
+            <input type="checkbox" id="removeEmpty" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Remove empty lines
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400">
+            <input type="checkbox" id="trimWhitespace" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Trim whitespace
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400">
+            <input type="checkbox" id="removeDuplicates" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Remove duplicates
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400">
+            <input type="checkbox" id="sortItems" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Sort alphabetically
+          </label>
+        </div>
+
+        <!-- Preview -->
+        <div id="previewSection" class="hidden">
+          <label class="text-xs font-medium text-gray-300 mb-1 block">Preview <span class="text-gray-500 font-normal">(first 200 chars)</span></label>
+          <div class="p-2 rounded-md bg-black/40 border border-white/10 font-mono text-xs text-gray-300 break-all" id="previewContent"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Converter?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Instant Convert</h3>
+          <p class="text-gray-400 text-xs">Real-time conversion as you type</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">8+ Formats</h3>
+          <p class="text-gray-400 text-xs">CSV, TSV, Pipe, JSON & more</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Drag & Drop</h3>
+          <p class="text-gray-400 text-xs">Upload files instantly</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based, no uploads</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy or download results</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration required</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Paste Data</h3>
+          <p class="text-gray-400 text-xs">Enter column data with one item per line, or drop a file.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Select Format</h3>
+          <p class="text-gray-400 text-xs">Choose CSV, TSV, Pipe, or enter a custom delimiter.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Configure</h3>
+          <p class="text-gray-400 text-xs">Add quotes, remove duplicates, sort, or trim whitespace.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy the result or download as CSV/TXT file.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Column to Delimiter Conversion: Mastering Data Transformation for Modern Workflows</h2>
+        
+        <p><strong>Column to delimiter conversion</strong> is one of the most fundamental yet powerful data transformation operations in modern digital workflows. Whether you need to <strong>convert columns to CSV</strong> for spreadsheet import, <strong>convert columns to delimiter</strong> separated values for database operations, or <strong>convert column text to delimited</strong> format for API integrations, understanding how to effectively transform columnar data into various delimiter-separated formats is essential for productivity. Our <strong>column to delimiter converter</strong> provides a comprehensive, instant solution for all your data formatting needs without any cost or registration barriers.</p>
+
+        <h2>What Is Column to Delimiter Conversion and Why Does It Matter?</h2>
+        
+        <p><strong>Column to delimiter conversion</strong> refers to the process of transforming data organized in vertical columns (one item per line) into horizontal formats where items are separated by specific delimiter characters. This transformation serves as the bridge between different data systems, file formats, and processing workflows. When you <strong>convert column data to delimiter</strong> formats, you're essentially reorienting data structure to match the requirements of your target application or system.</p>
+
+        <p>The importance of reliable <strong>online column to delimiter converter</strong> tools has grown exponentially as data interoperability becomes critical across modern tech stacks. Data analysts need to <strong>convert column list to CSV</strong> for Excel analysis. Developers must <strong>convert columns to pipe separated</strong> values for Unix command pipelines. Database administrators <strong>convert column entries to delimiter</strong> formats for SQL IN clauses. Marketing professionals <strong>convert column text to CSV</strong> for email list imports. Without efficient <strong>column to delimiter online</strong> capabilities, these transformations become tedious manual processes prone to errors.</p>
+
+        <h2>Understanding Delimiter Formats and Applications</h2>
+
+        <h3>Comma-Separated Values (CSV)</h3>
+        
+        <p>CSV represents the most ubiquitous <strong>columns to comma separated</strong> format, serving as the lingua franca of data exchange. When you <strong>convert column to CSV online</strong>, you're creating files compatible with virtually every spreadsheet application, database system, and data analysis tool. CSV's simplicity—values separated by commas, rows separated by newlines—belies its power as a universal data interchange format.</p>
+
+        <p>However, CSV complexity emerges when data contains commas, quotes, or newlines. Professional <strong>column to delimiter converter</strong> tools must handle these edge cases through proper quoting and escaping. Our tool automatically wraps fields containing delimiters in quotes and escapes internal quotes, ensuring your <strong>convert columns to csv</strong> operations produce valid, parseable output. Whether preparing data for Excel, Google Sheets, or database imports, our <strong>convert column to csv online</strong> functionality ensures compatibility.</p>
+
+        <h3>Tab-Separated Values (TSV)</h3>
+        
+        <p>TSV offers a cleaner alternative when data frequently contains commas. By using the tab character (ASCII 9) as the delimiter, TSV avoids the quoting complexity that plagues CSV files with comma-heavy content. When you <strong>convert columns to tab separated</strong> format, you create files that are both human-readable in text editors and machine-parseable with simple split operations.</p>
+
+        <p>Scientific computing, bioinformatics, and Unix command-line workflows particularly favor TSV. Tools like awk, cut, and sort process TSV efficiently. Spreadsheet applications open TSV files seamlessly. Our <strong>column to tsv converter</strong> provides one-click transformation to this format, handling the invisible tab characters correctly to ensure your <strong>columns to tsv converter</strong> output works reliably across systems.</p>
+
+        <h3>Pipe and Custom Delimiters</h3>
+        
+        <p>Pipe-separated values (PSV) use the vertical bar character (|) as a delimiter, offering excellent visibility and rarity in natural text. When you <strong>convert columns to pipe separated</strong> format, you create data files that are easily scannable by humans while remaining machine-parseable. PSV excels in log files, configuration files, and data pipelines where visual clarity matters.</p>
+
+        <p>Beyond standard formats, modern workflows demand flexibility for <strong>column to custom delimiter</strong> conversion. Semicolons serve European locales where commas function as decimal separators. Colons work well for key-value pair formats. Double pipes (||) or other multi-character sequences provide unique delimiters for complex data containing virtually every standard character. Our <strong>column delimiter formatter</strong> supports any custom delimiter string, enabling specialized <strong>convert column to custom separator</strong> workflows.</p>
+
+        <h2>Professional Applications of Column Conversion</h2>
+
+        <h3>Database Operations and SQL</h3>
+        
+        <p>Database professionals constantly <strong>convert column data to delimiter</strong> formats for SQL operations. The IN clause requires comma-separated values: SELECT * FROM users WHERE id IN (1,2,3,4,5). Insert statements need delimited value lists. Bulk import commands expect specific delimiter formats. Export operations produce columnar data requiring transformation for other systems.</p>
+
+        <p>Our <strong>column to delimiter utility</strong> streamlines these database workflows. Convert ID columns to comma lists for WHERE IN clauses. Transform query results into pipe-separated logs. Prepare bulk insert data with proper quoting. The <strong>convert data columns to delimiter</strong> capabilities integrate seamlessly with MySQL, PostgreSQL, SQL Server, Oracle, and any SQL-compliant system.</p>
+
+        <h3>Spreadsheet and Data Analysis</h3>
+        
+        <p>Spreadsheet power users rely on <strong>convert spreadsheet columns to delimiter</strong> operations for advanced data manipulation. Copy a column from Excel, convert to comma-separated format, and paste into formula arguments. Transform vertical lists into horizontal arrays for lookup functions. Convert columnar export data into CSV for import into analysis tools.</p>
+
+        <p>Data scientists and analysts use <strong>convert column format to delimiter</strong> transformations when preparing data for Python pandas, R, or statistical software. Machine learning pipelines often expect specific delimiter formats. Feature lists, label columns, and parameter sets all require flexible conversion between columnar and delimited representations. Our <strong>column to delimiter editor</strong> handles these data science workflows efficiently.</p>
+
+        <h3>Programming and API Development</h3>
+        
+        <p>Developers integrate <strong>convert column strings to delimiter</strong> operations throughout their code. Configuration files list modules, dependencies, or features in delimited formats. API endpoints accept comma-separated query parameters. Environment variables store lists using colons or other delimiters. Build scripts process file lists separated by spaces or newlines.</p>
+
+        <p>JSON arrays represent a special case of delimiter conversion. When you need to <strong>convert column text to csv</strong> or JSON, you're transforming data for JavaScript consumption. Our tool's JSON array preset wraps items in brackets and quotes, creating valid JSON that parses immediately in web applications. The <strong>convert csv columns online</strong> functionality extends to modern API formats.</p>
+
+        <h3>System Administration and DevOps</h3>
+        
+        <p>System administrators leverage <strong>convert text columns to csv</strong> and other formats for automation scripts. Cron jobs process lists of servers, users, or directories. Log analysis extracts columnar data into delimited summaries. Configuration management tools like Ansible, Puppet, and Chef consume lists in various formats. Shell scripts pipe columnar command output into delimited format for further processing.</p>
+
+        <p>The Unix philosophy of small, composable tools makes <strong>column to delimiter batch converter</strong> functionality essential. Convert ls output to comma-separated file lists. Transform ps columns into pipe-separated process lists. Prepare find results for xargs consumption. Our browser-based tool complements command-line workflows, providing visual feedback and advanced options like duplicate removal and sorting.</p>
+
+        <h2>Advanced Conversion Techniques and Strategies</h2>
+
+        <h3>Data Cleaning and Preprocessing</h3>
+        
+        <p>Raw column data rarely arrives in perfect condition. Empty lines, inconsistent whitespace, duplicate entries, and unsorted values require preprocessing before conversion. Professional <strong>column to delimiter free</strong> tools must provide these cleaning capabilities integrated into the conversion workflow.</p>
+
+        <p>Our <strong>free column to delimiter tool</strong> includes comprehensive preprocessing options. Remove empty lines eliminates blank rows that would create empty delimited fields. Trim whitespace cleans leading and trailing spaces that cause matching failures. Remove duplicates ensures unique value lists for SQL IN clauses or configuration sets. Sort alphabetically creates ordered output for easier verification and comparison. These options transform our tool from a simple converter into a complete <strong>column delimiter formatter</strong> solution.</p>
+
+        <h3>Quoting and Escaping Strategies</h3>
+        
+        <p>Delimiter collision occurs when data contains the delimiter character itself. Fields with commas break CSV parsing unless properly quoted. Values with quotes require escaping. Newlines within fields demand special handling. Understanding these edge cases separates basic <strong>convert column to text delimiter</strong> tools from professional solutions.</p>
+
+        <p>Our quoting options provide flexibility for different requirements. No quoting produces clean output for simple data. Double quotes wrap fields, with internal quotes escaped as "" per CSV standards. Single quotes work for SQL string literals and JavaScript arrays. Backticks suit template literals and Markdown code blocks. The <strong>convert column to text separator</strong> logic handles these variations correctly, ensuring output validity for your specific use case.</p>
+
+        <h3>Line Ending and Format Variations</h3>
+        
+        <p>Output format extends beyond delimiter selection. Single-line output creates compact comma-separated strings suitable for SQL queries or URL parameters. Multi-line output with newlines between items improves readability for long lists and supports formats requiring one item per line with delimiters. JSON array format adds structural brackets and quotes for JavaScript consumption.</p>
+
+        <p>Operating system line ending differences (CRLF vs LF) can cause issues when transferring files between Windows and Unix systems. Our <strong>online column converter free</strong> tool produces consistent LF line endings, compatible with modern applications across platforms. The <strong>convert column to delimited list</strong> output works reliably whether you're on Windows, macOS, or Linux.</p>
+
+        <h2>Best Practices for Column Conversion</h2>
+
+        <h3>Input Validation and Preparation</h3>
+        
+        <p>Before converting, examine your column data for consistency. Check for mixed data types that might require different quoting. Identify special characters that need escaping. Verify line ending consistency. Remove header rows unless they're part of the data. Our live preview shows exactly how your data will appear after conversion, catching issues before export.</p>
+
+        <h3>Delimiter Selection Guidelines</h3>
+        
+        <p>Choose delimiters based on your data content and target system: Use commas for standard CSV compatibility with spreadsheets and databases. Select tabs when data contains commas (addresses, descriptions, names). Choose pipes for visual clarity in logs and config files. Pick semicolons for European decimal number compatibility. Use custom delimiters when standard characters appear frequently in your data. The <strong>convert column to separator</strong> flexibility accommodates any requirement.</p>
+
+        <h3>Post-Conversion Verification</h3>
+        
+        <p>Always verify converted output, especially for critical data operations. Import CSV into a test spreadsheet before production use. Validate JSON array syntax with a parser. Check SQL IN clause length limits (some databases restrict list size). Ensure pipe-delimited files don't break when piped through command-line tools. Our preview function helps catch obvious issues, but domain-specific testing ensures production readiness.</p>
+
+        <h2>Comparing Conversion Approaches</h2>
+
+        <h3>Manual Conversion vs. Automated Tools</h3>
+        
+        <p>Manual conversion using text editors involves find-and-replace operations, regular expressions, and careful cursor positioning. While feasible for small datasets, manual methods fail for: large lists (hundreds or thousands of items), repetitive conversions (weekly reports), complex quoting requirements (fields with commas and quotes), and consistency requirements (identical formatting across files). Automated <strong>column to delimiter online</strong> tools eliminate human error, ensure consistency, and process thousands of items instantly.</p>
+
+        <h3>Spreadsheet Software vs. Dedicated Tools</h3>
+        
+        <p>Excel and Google Sheets offer TRANSPOSE functions and text joining capabilities for basic column-to-row conversion. However, they struggle with: large datasets (row limits), complex quoting and escaping, custom delimiter requirements, automated workflows, and batch processing. Dedicated <strong>column to delimiter utility</strong> tools provide greater flexibility, handle larger inputs, support more formats, and integrate into automated workflows. Our browser-based approach requires no installation and works across all platforms.</p>
+
+        <h2>The Future of Data Transformation Technology</h2>
+
+        <p>Artificial intelligence is beginning to influence <strong>column to delimiter conversion</strong>, moving beyond mechanical transformation toward intelligent data preparation. AI-powered tools can: automatically detect data types and suggest appropriate quoting, identify and suggest removal of outliers or anomalies, recognize patterns requiring special delimiter handling, and validate output against target system requirements. These capabilities will transform <strong>column to delimiter converter</strong> tools from simple utilities into intelligent data preparation assistants.</p>
+
+        <h2>Conclusion: Master Your Data with Professional Conversion</h2>
+
+        <p><strong>Column to delimiter conversion</strong> remains one of the most essential data transformation operations in modern digital work. From simple comma separation to complex custom-delimited formats with advanced preprocessing, the ability to <strong>convert column data to delimiter</strong> formats empowers professionals across every industry. Whether you're preparing data for database queries, spreadsheet analysis, API integrations, or configuration files, mastering <strong>column to delimiter</strong> techniques dramatically improves your productivity and data quality.</p>
+
+        <p>Our <strong>free online column to delimiter converter</strong> provides all the capabilities you need to handle any conversion scenario. With automatic real-time conversion as you type, support for 8+ standard formats (CSV, TSV, pipe, semicolon, and custom), comprehensive preprocessing options (deduplication, sorting, trimming), and flexible quoting strategies, this tool serves everyone from casual users to data professionals. The browser-based architecture ensures privacy and accessibility, while the intuitive interface requires no learning curve. Whether you need to <strong>convert columns to csv</strong>, <strong>convert columns to pipe separated</strong>, <strong>convert column to tab</strong>, <strong>convert column to semicolon</strong>, or <strong>convert column to custom separator</strong>, our <strong>column to delimiter converter</strong> delivers professional results instantly. Stop struggling with manual data manipulation—start using our professional <strong>online column to delimiter converter</strong> today and experience the efficiency of automated data transformation.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool convert columns automatically as I type?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>column to delimiter converter</strong> features <strong>automatic real-time conversion</strong>. As you paste or type column data, the tool instantly converts to your selected delimiter format. The "Auto-converting enabled" indicator confirms active processing. Changes to delimiter selection, quoting options, or preprocessing settings apply immediately. This makes our <strong>online column to delimiter converter</strong> the fastest way to transform your data.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What's the difference between CSV, TSV, and Pipe formats?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>CSV (Comma)</strong> is the universal standard for spreadsheets and databases. <strong>TSV (Tab)</strong> avoids comma conflicts in text data and works well with Unix tools. <strong>Pipe (|)</strong> offers visual clarity and rarely appears in natural text. Choose CSV for maximum compatibility, TSV when data contains commas, Pipe for logs and configs. Our <strong>convert columns to delimiter</strong> tool supports all formats with one-click presets.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I handle items containing commas in CSV format?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Use the <strong>Quote Character</strong> option set to double quotes ("). Our tool automatically wraps fields containing commas, quotes, or newlines in quotes, and escapes internal quotes by doubling them. This follows RFC 4180 CSV standards, ensuring compatibility with Excel, Google Sheets, and database imports. For example, <code>John, Jr.</code> becomes <code>"John, Jr."</code> in the output.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I convert columns to SQL IN clause format?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! For SQL IN clauses, use comma delimiter with single quotes. Select comma preset, set Quote Character to single quote ('), and enable "Remove empty lines" and "Trim whitespace". Your column of IDs or values becomes a clean SQL list: <code>'value1','value2','value3'</code>. Wrap with parentheses in your query: <code>WHERE id IN ('value1','value2','value3')</code>. Our <strong>convert column entries to delimiter</strong> handles SQL formatting perfectly.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What file types can I upload?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Supported formats include TXT, CSV, TSV, Markdown, JSON, XML, HTML, SQL, and LOG files. Any text file containing one column of data works. Drag and drop onto the input area or use the file select button. The <strong>column to delimiter batch converter</strong> processes files up to 10-20MB efficiently, handling thousands of lines instantly.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I remove duplicates and sort my data?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Check the <strong>"Remove duplicates"</strong> and <strong>"Sort alphabetically"</strong> options in the settings section. These preprocess your column data before delimiter conversion, ensuring clean, ordered output. Perfect for creating unique lists for SQL queries, configuration files, or data validation. The operations happen instantly as you type, with results shown in real-time.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I use a custom delimiter not in the presets?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely! Enter any custom delimiter in the "Custom Delimiter" field—single characters like @, #, $ or multi-character sequences like ||, ::, or ->. This enables specialized <strong>convert column to custom delimiter</strong> workflows for proprietary formats, legacy systems, or unique data requirements. The tool accepts any string as your separator.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my data secure when using this tool?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Completely. All processing occurs <strong>locally in your browser</strong>—data never uploads to servers or leaves your device. Verify this with browser DevTools (Network tab shows no data transfer). Works offline after loading. Safe for sensitive data, proprietary lists, confidential IDs, or personal information. Privacy is fundamental to our <strong>online column to delimiter converter</strong> design.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this tool free to use?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, 100% <strong>free</strong> with no registration, usage limits, watermarks, or premium tiers. Use for personal or commercial projects without attribution. This is truly a <strong>free column to delimiter tool</strong> for everyone. Supported by unobtrusive advertising. All features are available immediately—no account required.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I convert to JSON array format?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Click the <strong>"JSON Array"</strong> preset button. This automatically configures comma delimiter with double quotes, wraps output in square brackets, and formats as valid JSON. Perfect for JavaScript applications, API requests, or configuration files. Your column data becomes <code>["item1","item2","item3"]</code> instantly, ready to parse with JSON.parse() or use directly in code.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const outputText = document.getElementById('outputText');
+const inputStats = document.getElementById('inputStats');
+const outputStats = document.getElementById('outputStats');
+const processingTime = document.getElementById('processingTime');
+const previewSection = document.getElementById('previewSection');
+const previewContent = document.getElementById('previewContent');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+
+// Buttons
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const resetBtn = document.getElementById('resetBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+// Controls
+const presetBtns = document.querySelectorAll('.preset-btn');
+const customDelimiter = document.getElementById('customDelimiter');
+const quoteSelect = document.getElementById('quoteSelect');
+const lineEndingSelect = document.getElementById('lineEndingSelect');
+const removeEmpty = document.getElementById('removeEmpty');
+const trimWhitespace = document.getElementById('trimWhitespace');
+const removeDuplicates = document.getElementById('removeDuplicates');
+const sortItems = document.getElementById('sortItems');
+
+let currentDelimiter = ', ';
+let currentExtension = 'csv';
+let isJsonMode = false;
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Update input stats
+function updateInputStats() {
+  const text = inputText.value;
+  const lines = text === '' ? 0 : text.split('\n').length;
+  const items = text === '' ? 0 : text.split('\n').filter(line => line.trim() !== '').length;
+  inputStats.textContent = `Lines: ${lines} | Items: ${items}`;
+}
+
+// Debounce function
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Preset buttons
+presetBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    presetBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentDelimiter = btn.dataset.delimiter;
+    currentExtension = btn.dataset.ext;
+    isJsonMode = btn.textContent.includes('JSON');
+    customDelimiter.value = '';
+    convertColumns();
+  });
+});
+
+// Custom delimiter input
+customDelimiter.addEventListener('input', () => {
+  if (customDelimiter.value) {
+    presetBtns.forEach(b => b.classList.remove('active'));
+    currentDelimiter = customDelimiter.value;
+    currentExtension = 'txt';
+    isJsonMode = false;
+    convertColumns();
+  }
+});
+
+// Other controls
+[quoteSelect, lineEndingSelect, removeEmpty, trimWhitespace, removeDuplicates, sortItems].forEach(el => {
+  el.addEventListener('input', convertColumns);
+  el.addEventListener('change', convertColumns);
+});
+
+// Escape special characters for CSV/JSON
+function escapeField(field, quoteChar) {
+  if (!quoteChar) return field;
+  if (isJsonMode) {
+    return field.replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/\n/g, '\\n').replace(/\r/g, '\\r').replace(/\t/g, '\\t');
+  }
+  if (field.includes(quoteChar) || field.includes(currentDelimiter) || field.includes('\n')) {
+    return quoteChar + field.replace(new RegExp(quoteChar, 'g'), quoteChar + quoteChar) + quoteChar;
+  }
+  return field;
+}
+
+// Main conversion function
+function convertColumns() {
+  const startTime = performance.now();
+  let text = inputText.value;
+  
+  if (!text.trim()) {
+    outputText.value = '';
+    outputStats.textContent = 'Length: 0 chars | Items: 0';
+    processingTime.textContent = '';
+    previewSection.classList.add('hidden');
+    return;
+  }
+  
+  let items = text.split('\n');
+  
+  // Preprocessing
+  if (removeEmpty.checked) {
+    items = items.filter(line => line.trim() !== '');
+  }
+  
+  if (trimWhitespace.checked) {
+    items = items.map(line => line.trim());
+  }
+  
+  if (removeDuplicates.checked) {
+    items = [...new Set(items)];
+  }
+  
+  if (sortItems.checked) {
+    items.sort((a, b) => a.localeCompare(b));
+  }
+  
+  const quoteChar = quoteSelect.value;
+  const lineEnding = lineEndingSelect.value;
+  
+  // Convert delimiter escape sequences
+  let delimiter = currentDelimiter;
+  if (delimiter === '\\t') delimiter = '\t';
+  if (delimiter === '\\n') delimiter = '\n';
+  
+  // Format items
+  let formattedItems = items.map(item => escapeField(item, quoteChar));
+  
+  let result = '';
+  
+  if (isJsonMode) {
+    result = '[' + formattedItems.map(item => '"' + item + '"').join(',') + ']';
+  } else {
+    if (lineEnding === '\\n') {
+      result = formattedItems.join(delimiter + '\n');
+    } else {
+      result = formattedItems.join(delimiter);
+    }
+  }
+  
+  const endTime = performance.now();
+  
+  outputText.value = result;
+  outputStats.textContent = `Length: ${result.length} chars | Items: ${items.length}`;
+  processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+  
+  // Update preview
+  if (result.length > 0) {
+    previewSection.classList.remove('hidden');
+    const preview = result.substring(0, 200) + (result.length > 200 ? '...' : '');
+    previewContent.textContent = preview;
+  }
+}
+
+const debouncedConvert = debounce(convertColumns, 0);
+
+// Drag and drop handlers
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  if (!file.type.match('text.*') && !file.name.match(/\.(txt|csv|tsv|md|json|xml|html?|sql|log)$/i)) {
+    alert('Please upload a text file');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    updateInputStats();
+    convertColumns();
+  };
+  reader.readAsText(file);
+}
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    updateInputStats();
+    convertColumns();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  updateInputStats();
+  convertColumns();
+  inputText.focus();
+}
+
+// Copy output
+async function copyOutput() {
+  if (!outputText.value) return;
+  
+  try {
+    await navigator.clipboard.writeText(outputText.value);
+    const originalText = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalText;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+}
+
+// Download output
+function downloadOutput() {
+  const text = outputText.value;
+  if (!text.trim()) return;
+  
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `converted.${currentExtension}`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Reset all
+function resetAll() {
+  inputText.value = '';
+  outputText.value = '';
+  updateInputStats();
+  outputStats.textContent = 'Length: 0 chars | Items: 0';
+  processingTime.textContent = '';
+  previewSection.classList.add('hidden');
+  customDelimiter.value = '';
+  presetBtns.forEach(b => b.classList.remove('active'));
+  presetBtns[0].classList.add('active');
+  currentDelimiter = ', ';
+  currentExtension = 'csv';
+  isJsonMode = false;
+  quoteSelect.value = '"';
+  lineEndingSelect.value = '';
+  removeEmpty.checked = true;
+  trimWhitespace.checked = true;
+  removeDuplicates.checked = false;
+  sortItems.checked = false;
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Event listeners
+inputText.addEventListener('input', () => {
+  updateInputStats();
+  debouncedConvert();
+});
+
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+copyBtn.addEventListener('click', copyOutput);
+downloadBtn.addEventListener('click', downloadOutput);
+resetBtn.addEventListener('click', resetAll);
+
+// Initialize
+updateInputStats();
+</script>
+</body>
+</html>

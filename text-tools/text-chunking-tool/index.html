@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Text Chunking Tool - Free Online Text Splitter</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online text chunking tool. Instantly split text into chunks by characters, words, lines, or custom size. Perfect for coding, CSV, spreadsheets, and data processing." />
+  <meta name="keywords" content="text chunking tool, split text into chunks, break text into parts online, text splitter tool, divide text into chunks, text chunk generator, text chunking online, split large text into pieces, text segmentation tool, text chunking utility, chunk text free online, text chunk formatter, text chunking for coding, text chunking for csv, text chunking for spreadsheet, text chunking tool free, chunk text into lines, text chunking editor, online text chunker, text to chunks tool, text chunking batch tool, text chunking software online, chunk text automatically, split paragraphs into chunks, divide text file into chunks, text chunking for analysis, chunk text for processing, break text into segments, text chunking for data, text chunking service online, text chunking generator free, online text splitter for chunks, split long text into chunks, text chunking for seo keywords, chunk text for excel, chunk text by characters, chunk text by words, text chunking tool for developers, chunk text for database, chunk text online free, text chunking utility free, text chunking for writing, text chunking for content, split text lines into chunks" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/text-chunking-tool/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/text-chunking-tool/" />
+  <meta property="og:title" content="Text Chunking Tool - Free Online Text Splitter" />
+  <meta property="og:description" content="Instantly split text into chunks by characters, words, lines, or custom size. Perfect for coding, CSV, spreadsheets, and data processing." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/text-chunking-tool/" />
+  <meta name="twitter:title" content="Text Chunking Tool - Free Online Text Splitter" />
+  <meta name="twitter:description" content="Instantly split text into chunks by characters, words, lines, or custom size. Perfect for coding, CSV, spreadsheets, and data processing." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .method-btn {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    .method-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .chunk-preview-item {
+      border-left: 2px solid rgba(99, 102, 241, 0.5);
+      transition: all 0.2s ease;
+    }
+    
+    .chunk-preview-item:hover {
+      border-left-color: rgba(99, 102, 241, 1);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 14h20M10 20h20M10 26h20" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Text Chunking Tool</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Splitter</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Text Chunking Tool
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Text Processing Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-chunking enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Input Text
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Type or paste text here...&#10;Or drag & drop a file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.csv,.md,.json,.xml,.html,.js,.css,.py,.java,.cpp,.c,.php,.rb,.go,.rs,.swift,.kt,.sql,.log" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Chars: 0 | Words: 0 | Lines: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Output -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Chunked Result <span id="chunksCount" class="text-gray-500 font-normal ml-1 hidden">(0 chunks)</span>
+            </label>
+            <div class="flex gap-1">
+              <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                Copy
+              </button>
+              <button id="downloadBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Download
+              </button>
+              <button id="downloadChunksBtn" class="hidden compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+                All Chunks
+              </button>
+            </div>
+          </div>
+          
+          <textarea id="outputText" readonly spellcheck="false"
+            class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+            placeholder="Chunked results appear here automatically..."></textarea>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="outputStats">Chunks: 0 | Chars: 0</span>
+            <span id="processingTime" class="text-gray-600"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-3">
+        
+        <!-- Chunk Method -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Chunk Method</label>
+          <div class="flex flex-wrap gap-1">
+            <button class="method-btn active rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="chars">By Characters</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="words">By Words</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="lines">By Lines</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="paragraphs">By Paragraphs</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="sentences">By Sentences</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="regex">By Regex</button>
+          </div>
+        </div>
+
+        <!-- Method Options -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+          <!-- Character/Word/Line Options -->
+          <div id="sizeOptions" class="method-panel">
+            <label class="text-xs text-gray-400 mb-1 block">Chunk Size</label>
+            <input type="number" id="chunkSize" min="1" value="1000" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+          </div>
+
+          <!-- Overlap Option -->
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Overlap (chars/words/lines)</label>
+            <input type="number" id="overlapSize" min="0" value="0" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+          </div>
+
+          <!-- Regex Options -->
+          <div id="regexOptions" class="method-panel hidden">
+            <label class="text-xs text-gray-400 mb-1 block">Regex Pattern</label>
+            <input type="text" id="regexPattern" placeholder="e.g. \n\n or \. " class="w-full px-2 py-1.5 rounded-md glass-input text-xs font-mono">
+          </div>
+
+          <!-- Separator -->
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Chunk Separator</label>
+            <select id="separatorSelect" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="\n\n">Double New Line</option>
+              <option value="\n">Single New Line</option>
+              <option value="---">Triple Dash (---)</option>
+              <option value="===">Triple Equal (===)</option>
+              <option value="|||">Triple Pipe (|||)</option>
+              <option value="">None</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Options -->
+        <div class="grid grid-cols-1 sm:grid-cols-4 gap-2">
+          <label class="flex items-center gap-1.5 text-xs text-gray-400">
+            <input type="checkbox" id="removeEmpty" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Remove empty chunks
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400">
+            <input type="checkbox" id="trimChunks" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Trim chunk edges
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400">
+            <input type="checkbox" id="addNumbering" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Add chunk numbers
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400">
+            <input type="checkbox" id="preserveWords" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Preserve whole words
+          </label>
+        </div>
+
+        <!-- Chunks Preview -->
+        <div id="chunksPreview" class="hidden">
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-xs font-medium text-gray-300">Individual Chunks <span class="text-gray-500 font-normal">(click to copy)</span></label>
+          </div>
+          <div id="chunksList" class="max-h-32 overflow-y-auto space-y-1 pr-1">
+            <!-- Chunks will be inserted here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Text Chunking Tool?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Auto-Chunk</h3>
+          <p class="text-gray-400 text-xs">Real-time processing as you type</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">6 Methods</h3>
+          <p class="text-gray-400 text-xs">Chars, words, lines, paragraphs & more</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Drag & Drop</h3>
+          <p class="text-gray-400 text-xs">Upload files instantly</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based, no uploads</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy or download results</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration required</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Input Text</h3>
+          <p class="text-gray-400 text-xs">Type, paste, or drop a file. Chunking happens automatically.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Choose Method</h3>
+          <p class="text-gray-400 text-xs">Select by characters, words, lines, paragraphs, sentences, or regex.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Configure</h3>
+          <p class="text-gray-400 text-xs">Set chunk size, overlap, separator. Enable word preservation.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy result or download all chunks individually or combined.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Text Chunking: Mastering Text Segmentation for Modern Workflows</h2>
+        
+        <p><strong>Text chunking</strong> is one of the most fundamental yet powerful text processing operations in modern digital workflows. Whether you need to <strong>split text into chunks</strong> for AI processing, <strong>break text into parts online</strong> for content management, or <strong>divide text into chunks</strong> for data analysis, understanding how to effectively segment large texts into manageable pieces is essential for productivity. Our <strong>text chunking tool</strong> provides a comprehensive, instant solution for all your text segmentation needs without any cost or registration barriers.</p>
+
+        <h2>What Is Text Chunking and Why Does It Matter?</h2>
+        
+        <p><strong>Text chunking</strong> refers to the process of dividing large continuous texts into smaller, manageable segments or chunks based on specific criteria. This transformation serves critical purposes across natural language processing, content management, data preparation, and software development. When you <strong>split large text into pieces</strong>, you're essentially creating modular units that can be processed, analyzed, stored, or transmitted more effectively.</p>
+
+        <p>The importance of reliable <strong>online text chunker</strong> tools has exploded with the rise of AI and large language models. These systems have token limits—GPT-4 handles 8K-32K tokens, Claude processes up to 100K tokens, but all have boundaries. When you <strong>chunk text for processing</strong> in AI workflows, you ensure your content fits within these constraints while maintaining semantic coherence. Beyond AI, developers <strong>chunk text for database</strong> storage to avoid field size limits, content creators <strong>split paragraphs into chunks</strong> for publishing platforms, and data analysts <strong>divide text file into chunks</strong> for parallel processing.</p>
+
+        <h2>Understanding Chunking Methods and Strategies</h2>
+
+        <h3>Character-Based Chunking</h3>
+        
+        <p>The most straightforward <strong>text chunking online</strong> method divides text by character count. When you <strong>chunk text by characters</strong>, you specify an exact size (e.g., 1000 characters) and the text splits at that boundary. This method offers predictability—every chunk has approximately the same size, making it ideal for systems with strict byte or character limits.</p>
+
+        <p>However, naive character chunking can split words, sentences, or even UTF-8 multi-byte characters mid-sequence. Professional <strong>text segmentation tool</strong> implementations include "preserve whole words" options that adjust chunk boundaries to the nearest word boundary, preventing awkward breaks. Our <strong>chunk text free online</strong> tool provides intelligent boundary detection, ensuring chunks end at natural breaking points unless strict size compliance is required.</p>
+
+        <h3>Word-Based and Semantic Chunking</h3>
+        
+        <p><strong>Chunk text by words</strong> methods offer more natural segmentation than raw character counts. By counting words rather than characters, chunks maintain more consistent information density—a 100-word chunk contains roughly similar semantic content regardless of word length variations. This approach suits natural language processing tasks where word boundaries matter more than byte counts.</p>
+
+        <p>Advanced <strong>text chunking for analysis</strong> extends to semantic boundaries. <strong>Split text into chunks</strong> at sentence boundaries to preserve complete thoughts. <strong>Chunk text into lines</strong> for poetry, code, or structured data. <strong>Divide text into chunks</strong> at paragraph boundaries for document processing. Our <strong>text chunk generator</strong> supports all these semantic levels, letting you choose the appropriate granularity for your specific use case.</p>
+
+        <h3>Regex and Pattern-Based Chunking</h3>
+        
+        <p>For specialized <strong>text chunking for coding</strong> or data processing, regular expression chunking provides maximum flexibility. Define custom patterns—split at every function definition, divide by markdown headers, segment by JSON object boundaries, or chunk by any regex pattern your data requires. This method transforms our tool from a simple splitter into a powerful <strong>text chunking utility</strong> for complex data formats.</p>
+
+        <h2>Professional Applications of Text Chunking</h2>
+
+        <h3>AI and Large Language Model Processing</h3>
+        
+        <p>The primary driver of modern <strong>text chunking tool</strong> adoption is AI integration. Large language models have context windows that limit input size. When processing long documents, books, or extensive datasets, you must <strong>split long text into chunks</strong> that fit within these constraints while maintaining coherence across chunk boundaries.</p>
+
+        <p>Our tool's overlap feature addresses this challenge. By specifying an overlap (e.g., 100 characters), each chunk includes the end of the previous chunk, ensuring no context is lost at boundaries. This <strong>chunk text automatically</strong> capability with overlap is essential for: summarizing long documents where beginning context matters, question-answering systems requiring full document access, translation services processing book-length texts, and code analysis tools examining large repositories.</p>
+
+        <h3>Database and Storage Optimization</h3>
+        
+        <p>Database administrators and backend developers use <strong>text chunking for database</strong> operations to handle field size limitations. VARCHAR fields often max at 255-4000 characters. TEXT fields have performance implications. BLOB storage requires careful management. When storing large texts—log files, HTML content, JSON responses, or user-generated content—<strong>chunk text for database</strong> sharding improves performance and reliability.</p>
+
+        <p>The <strong>text chunking for csv</strong> and spreadsheet workflows similarly benefit from chunking. Excel cells handle 32,767 characters, but display issues emerge much sooner. CSV parsers have line length limits. By <strong>chunk text for excel</strong> preparation, you ensure data imports successfully without truncation or corruption. Our <strong>text chunking for spreadsheet</strong> options include CSV-friendly separators and formatting.</p>
+
+        <h3>Content Management and Publishing</h3>
+        
+        <p>Content creators and publishers leverage <strong>text chunking for content</strong> management across platforms. Blog posts split into preview excerpts and full content. Email newsletters divide into sections for modular templates. Social media threads require character-limited chunks. Documentation systems segment into navigable pages. E-learning platforms break lessons into digestible modules.</p>
+
+        <p>The <strong>text chunking for writing</strong> workflow extends to creative applications. Novelists split manuscripts into chapters. Screenwriters segment scripts into scenes. Academic writers divide papers into sections. Our <strong>text chunking editor</strong> provides preview capabilities, letting authors see exactly how their content divides before publishing.</p>
+
+        <h3>Software Development and Data Engineering</h3>
+        
+        <p>Developers integrate <strong>text chunking tool for developers</strong> capabilities throughout their workflows. Log file analysis processes chunks in parallel for speed. API responses paginate through chunked data. Build scripts handle large file lists in batches. Testing frameworks divide test suites into parallelizable chunks. Configuration files split into environment-specific sections.</p>
+
+        <p>The <strong>text chunking batch tool</strong> approach supports automated pipelines. Process thousands of files with consistent chunking rules. Generate chunks with predictable naming for downstream processing. Validate chunk integrity with checksums. Our browser-based tool integrates into workflows through copy-paste or file download, complementing command-line chunking utilities.</p>
+
+        <h2>Advanced Chunking Techniques and Strategies</h2>
+
+        <h3>Overlap and Context Preservation</h3>
+        
+        <p>When <strong>break text into segments</strong> for processing, maintaining context across boundaries is crucial. Simple chunking creates hard boundaries where information splits unnaturally. Overlap chunking solves this by including the tail of chunk N at the head of chunk N+1, creating a sliding window effect.</p>
+
+        <p>This technique proves essential for: Named entity recognition spanning chunk boundaries, sentiment analysis requiring paragraph context, code analysis where functions cross chunk limits, and any task where mid-sentence splits would corrupt meaning. Our <strong>text chunking service online</strong> provides configurable overlap from 0 to any size, balancing context preservation against redundancy.</p>
+
+        <h3>Intelligent Boundary Detection</h3>
+        
+        <p>Professional <strong>text chunk formatter</strong> tools don't split blindly—they find optimal boundaries. When preserving whole words, the algorithm searches backward from the target size to the previous space. For sentence preservation, it finds the nearest period, question mark, or exclamation point. Paragraph-aware chunking respects double line breaks.</p>
+
+        <p>Our boundary detection handles edge cases: URLs that shouldn't split mid-domain, email addresses requiring preservation, code identifiers that lose meaning when broken, and markdown formatting that corrupts if split incorrectly. The <strong>chunk text online free</strong> experience includes these intelligent defaults while allowing override for strict size requirements.</p>
+
+        <h3>Chunk Metadata and Organization</h3>
+        
+        <p>Beyond raw text division, professional chunking includes organizational metadata. Chunk numbering (1/10, 2/10, etc.) helps track position in sequence. Byte offsets enable reconstruction of original text. Checksums verify chunk integrity. Headers indicate chunking parameters for reproducibility.</p>
+
+        <p>Our "Add chunk numbers" option includes position indicators in output. Combined with configurable separators (double newlines, dashes, custom strings), chunks become self-documenting. The <strong>text chunking generator free</strong> provides this organization without complexity, making downstream processing straightforward.</p>
+
+        <h2>Best Practices for Text Chunking</h2>
+
+        <h3>Size Selection Guidelines</h3>
+        
+        <p>Choose chunk sizes based on your target system and content type: AI language models typically use 500-2000 tokens (roughly 2000-8000 characters), Database VARCHAR fields often limit to 255-4000 characters, Excel cells display best under 1000 characters, Email subjects should stay under 78 characters, SMS messages limit to 160 characters, Tweet threads work best at 280-character segments.</p>
+
+        <p>Consider content density—1000 characters of Chinese text contains more information than 1000 characters of English due to character complexity. Code chunks should align with function or class boundaries when possible. Literary content respects paragraph and scene structure. Our <strong>online text splitter for chunks</strong> adapts to all these requirements.</p>
+
+        <h3>Separator Strategy</h3>
+        
+        <p>The visual separator between chunks affects readability and parsing. Double newlines create clear visual separation for human readers. Triple dashes (---) or equals (===) provide explicit boundaries for automated parsing. Custom separators like "|||" or "<|endoftext|>" suit specific pipeline requirements.</p>
+
+        <p>For machine-readable output, consider JSON array format with chunks as elements. For human review, numbered chunks with headers work best. For database storage, delimited format with chunk IDs enables reconstruction. The <strong>text chunking utility free</strong> provides flexible separator options for all scenarios.</p>
+
+        <h3>Validation and Quality Assurance</h3>
+        
+        <p>Always validate chunked output, especially for critical data. Verify total character count matches original (accounting for separator additions). Check that no content was lost at boundaries. Ensure special characters and encoding preserved correctly. Test reconstruction by joining chunks and comparing to original.</p>
+
+        <p>Our preview function shows the first few chunks instantly, catching obvious errors. The individual chunks list lets you inspect each segment. Download all chunks separately for batch validation. These quality features make our tool suitable for production <strong>text chunking for data</strong> workflows.</p>
+
+        <h2>Comparing Chunking Approaches</h2>
+
+        <h3>Manual Chunking vs. Automated Tools</h3>
+        
+        <p>Manual chunking using text editors involves cursor positioning, copy-paste operations, and careful tracking. While feasible for small texts, it fails for: large documents (thousands of chunks), consistent sizing (manual estimation is imprecise), repetitive operations (weekly reports), and complex boundaries (sentence/paragraph detection). Automated <strong>chunk text online free</strong> tools eliminate human error, ensure consistency, and process in seconds what takes hours manually.</p>
+
+        <h3>Programming Scripts vs. Online Tools</h3>
+        
+        <p>Python scripts with text splitting logic offer customization but require development time, debugging, and maintenance. Shell commands like split work for simple byte division but lack semantic awareness. Online tools provide immediate availability, no installation, cross-platform compatibility, and intuitive interfaces. Our <strong>text chunking software online</strong> bridges the gap—powerful enough for complex requirements, simple enough for immediate use.</p>
+
+        <h2>The Future of Text Segmentation Technology</h2>
+
+        <p>Artificial intelligence is transforming <strong>text chunking</strong> from mechanical splitting to intelligent segmentation. Emerging capabilities include: semantic chunking that respects topic boundaries, adaptive sizing based on content complexity, automatic overlap optimization for specific AI models, and entity-aware splitting that keeps related information together. These advances will make <strong>text chunking tool</strong> systems into intelligent content processors that understand meaning, not just boundaries.</p>
+
+        <h2>Conclusion: Master Your Text with Professional Chunking</h2>
+
+        <p><strong>Text chunking</strong> remains one of the most essential text processing operations in the AI and data era. From simple character division to complex semantic segmentation, the ability to <strong>split text into chunks</strong> empowers professionals across every industry. Whether you're preparing content for AI processing, optimizing database storage, managing publishing workflows, or developing software pipelines, mastering <strong>text chunking</strong> techniques dramatically improves your productivity and output quality.</p>
+
+        <p>Our <strong>free online text chunking tool</strong> provides all the capabilities you need to handle any chunking scenario. With automatic real-time processing as you type, support for six chunking methods (characters, words, lines, paragraphs, sentences, regex), intelligent features (overlap, word preservation, boundary detection), and flexible export options, this tool serves everyone from casual users to AI professionals. The browser-based architecture ensures privacy and accessibility, while the intuitive interface requires no learning curve. Whether you need to <strong>chunk text by characters</strong>, <strong>chunk text by words</strong>, <strong>break text into parts online</strong>, or <strong>divide text into chunks</strong> for any application, our <strong>text chunking utility</strong> delivers professional results instantly. Stop struggling with manual text segmentation—start using our professional <strong>text chunking tool</strong> today and experience the efficiency of automated text chunking.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool chunk text automatically as I type?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>text chunking tool</strong> features <strong>automatic real-time chunking</strong>. As you type or paste text, the tool instantly processes your input and displays chunked results. The "Auto-chunking enabled" indicator confirms active processing. Changes to chunk size, method, or options apply immediately. This makes our <strong>online text chunker</strong> the fastest way to segment your text.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What is chunk overlap and why would I use it?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Overlap</strong> includes the end of one chunk at the beginning of the next, creating shared context between segments. Essential for AI processing where context matters across boundaries. For example, with 1000-character chunks and 100-character overlap, chunk 2 starts with the last 100 characters of chunk 1. Prevents information loss at chunk boundaries. Set overlap to 0 for distinct chunks with no redundancy.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I chunk text for ChatGPT or Claude?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">For GPT-4, use <strong>By Characters</strong> method with 2000-4000 characters (roughly 500-1000 tokens). Enable "Preserve whole words" to avoid mid-word splits. Set overlap to 200-400 characters to maintain context. For Claude with 100K context, you can use larger chunks (8000-15000 characters). Add chunk numbers to track sequence. Our <strong>chunk text for processing</strong> features optimize for AI workflows.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What's the difference between chunking methods?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>By Characters</strong> splits at exact character counts—best for size limits. <strong>By Words</strong> counts words for consistent information density. <strong>By Lines</strong> respects line breaks for code/poetry. <strong>By Paragraphs</strong> keeps double-line-break separated blocks together. <strong>By Sentences</strong> preserves complete sentences ending with .!? <strong>By Regex</strong> uses custom patterns for specialized splitting. Choose based on your content structure and processing needs.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I download individual chunks separately?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! The <strong>"All Chunks"</strong> button appears when multiple chunks are generated. Click it to download a file with all chunks clearly labeled and separated. Or click any individual chunk in the preview section to copy it to clipboard. Perfect for AI processing where you submit chunks individually, or for organizing content into separate files.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What file types are supported?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">All text-based files: TXT, CSV, Markdown, JSON, XML, HTML, and code files (JS, CSS, Python, Java, C/C++, PHP, Ruby, Go, Rust, Swift, Kotlin, SQL, LOG). Files are read as plain text, so any text file works regardless of extension. Drag and drop or use the file picker. Our <strong>text chunking batch tool</strong> handles files up to 10-20MB efficiently.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How does "Preserve whole words" work?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">When enabled, the tool adjusts chunk boundaries to the nearest space, preventing words from being split mid-string. For example, if your target is 100 characters but the 100th character is in the middle of "processing", the chunk extends to 107 characters to include the complete word. This creates more natural, readable chunks at the cost of slight size variation. Disable for exact size compliance.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my data secure?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely. All processing happens <strong>locally in your browser</strong>—text never uploads to servers or leaves your device. Verify with browser DevTools (Network tab shows no data transfer). Works offline after loading. Safe for confidential documents, proprietary code, personal data, or sensitive content. Privacy is guaranteed in our <strong>text chunking service online</strong> architecture.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this tool free?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, completely <strong>free</strong> with no registration, usage limits, watermarks, or hidden fees. Use for personal or commercial projects without attribution. This is truly a <strong>text chunking generator free</strong> solution for everyone. Supported by unobtrusive advertising. All features available immediately—no account required.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I use regex chunking?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Select <strong>"By Regex"</strong> method, then enter a JavaScript-compatible regular expression. Use <code>\n\n</code> to split by double newlines (paragraphs), <code>\. </code> to split by sentences, <code>#{1,6}\s</code> to split by Markdown headers. The tool splits at each regex match, creating chunks between matches. Useful for specialized formats like logs, code files, or structured data. Test your pattern with the live preview.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const outputText = document.getElementById('outputText');
+const inputStats = document.getElementById('inputStats');
+const outputStats = document.getElementById('outputStats');
+const chunksCount = document.getElementById('chunksCount');
+const processingTime = document.getElementById('processingTime');
+const chunksPreview = document.getElementById('chunksPreview');
+const chunksList = document.getElementById('chunksList');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+
+// Buttons
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const downloadChunksBtn = document.getElementById('downloadChunksBtn');
+const resetBtn = document.getElementById('resetBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+// Controls
+const methodBtns = document.querySelectorAll('.method-btn');
+const methodPanels = document.querySelectorAll('.method-panel');
+const chunkSize = document.getElementById('chunkSize');
+const overlapSize = document.getElementById('overlapSize');
+const regexPattern = document.getElementById('regexPattern');
+const separatorSelect = document.getElementById('separatorSelect');
+const removeEmpty = document.getElementById('removeEmpty');
+const trimChunks = document.getElementById('trimChunks');
+const addNumbering = document.getElementById('addNumbering');
+const preserveWords = document.getElementById('preserveWords');
+
+let currentMethod = 'chars';
+let currentChunks = [];
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Update input stats
+function updateInputStats() {
+  const text = inputText.value;
+  const chars = text.length;
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+  const lines = text === '' ? 0 : text.split('\n').length;
+  inputStats.textContent = `Chars: ${chars} | Words: ${words} | Lines: ${lines}`;
+}
+
+// Debounce function
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Method selection
+methodBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    methodBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentMethod = btn.dataset.method;
+    
+    methodPanels.forEach(panel => panel.classList.add('hidden'));
+    if (currentMethod === 'regex') {
+      document.getElementById('regexOptions').classList.remove('hidden');
+      document.getElementById('sizeOptions').classList.add('hidden');
+    } else {
+      document.getElementById('sizeOptions').classList.remove('hidden');
+      document.getElementById('regexOptions').classList.add('hidden');
+    }
+    
+    chunkText();
+  });
+});
+
+// Input listeners
+[chunkSize, overlapSize, regexPattern, separatorSelect, removeEmpty, trimChunks, addNumbering, preserveWords].forEach(el => {
+  el.addEventListener('input', chunkText);
+  el.addEventListener('change', chunkText);
+});
+
+// Find word boundary
+function findWordBoundary(text, targetPos, direction) {
+  if (direction === 'backward') {
+    for (let i = targetPos; i >= 0; i--) {
+      if (/\s/.test(text[i])) return i;
+    }
+    return 0;
+  } else {
+    for (let i = targetPos; i < text.length; i++) {
+      if (/\s/.test(text[i])) return i;
+    }
+    return text.length;
+  }
+}
+
+// Main chunking function
+function chunkText() {
+  const startTime = performance.now();
+  const text = inputText.value;
+  
+  if (!text.trim()) {
+    outputText.value = '';
+    outputStats.textContent = 'Chunks: 0 | Chars: 0';
+    chunksCount.classList.add('hidden');
+    chunksPreview.classList.add('hidden');
+    downloadChunksBtn.classList.add('hidden');
+    processingTime.textContent = '';
+    currentChunks = [];
+    return;
+  }
+  
+  const size = parseInt(chunkSize.value) || 1000;
+  const overlap = parseInt(overlapSize.value) || 0;
+  const separator = separatorSelect.value.replace(/\\n/g, '\n');
+  let chunks = [];
+  
+  try {
+    switch(currentMethod) {
+      case 'chars':
+        // Character-based chunking with optional word preservation
+        let pos = 0;
+        while (pos < text.length) {
+          let end = Math.min(pos + size, text.length);
+          
+          if (preserveWords.checked && end < text.length) {
+            // Find word boundary backward
+            const boundary = findWordBoundary(text, end, 'backward');
+            if (boundary > pos) end = boundary;
+          }
+          
+          let chunk = text.substring(pos, end);
+          if (trimChunks.checked) chunk = chunk.trim();
+          if (chunk || !removeEmpty.checked) chunks.push(chunk);
+          
+          // Move position, accounting for overlap
+          pos = end - (overlap > 0 && end < text.length ? overlap : 0);
+          if (pos <= end - 1 && overlap > 0) pos = end; // Prevent infinite loop
+        }
+        break;
+        
+      case 'words':
+        // Word-based chunking
+        const words = text.split(/\s+/);
+        let wordPos = 0;
+        while (wordPos < words.length) {
+          let end = Math.min(wordPos + size, words.length);
+          let chunkWords = words.slice(wordPos, end);
+          let chunk = chunkWords.join(' ');
+          if (trimChunks.checked) chunk = chunk.trim();
+          if (chunk || !removeEmpty.checked) chunks.push(chunk);
+          
+          wordPos = end - (overlap > 0 && end < words.length ? overlap : 0);
+          if (wordPos <= end - 1 && overlap > 0) wordPos = end;
+        }
+        break;
+        
+      case 'lines':
+        // Line-based chunking
+        const lines = text.split('\n');
+        let linePos = 0;
+        while (linePos < lines.length) {
+          let end = Math.min(linePos + size, lines.length);
+          let chunkLines = lines.slice(linePos, end);
+          let chunk = chunkLines.join('\n');
+          if (trimChunks.checked) chunk = chunk.trim();
+          if (chunk || !removeEmpty.checked) chunks.push(chunk);
+          
+          linePos = end - (overlap > 0 && end < lines.length ? overlap : 0);
+          if (linePos <= end - 1 && overlap > 0) linePos = end;
+        }
+        break;
+        
+      case 'paragraphs':
+        // Paragraph-based chunking (split by double newlines)
+        const paragraphs = text.split(/\n\s*\n/);
+        let paraPos = 0;
+        while (paraPos < paragraphs.length) {
+          let end = Math.min(paraPos + size, paragraphs.length);
+          let chunkParas = paragraphs.slice(paraPos, end);
+          let chunk = chunkParas.join('\n\n');
+          if (trimChunks.checked) chunk = chunk.trim();
+          if (chunk || !removeEmpty.checked) chunks.push(chunk);
+          
+          paraPos = end - (overlap > 0 && end < paragraphs.length ? overlap : 0);
+          if (paraPos <= end - 1 && overlap > 0) paraPos = end;
+        }
+        break;
+        
+      case 'sentences':
+        // Sentence-based chunking
+        const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];
+        let sentPos = 0;
+        while (sentPos < sentences.length) {
+          let end = Math.min(sentPos + size, sentences.length);
+          let chunkSents = sentences.slice(sentPos, end);
+          let chunk = chunkSents.join('');
+          if (trimChunks.checked) chunk = chunk.trim();
+          if (chunk || !removeEmpty.checked) chunks.push(chunk);
+          
+          sentPos = end - (overlap > 0 && end < sentences.length ? overlap : 0);
+          if (sentPos <= end - 1 && overlap > 0) sentPos = end;
+        }
+        break;
+        
+      case 'regex':
+        // Regex-based chunking
+        const pattern = regexPattern.value;
+        if (pattern) {
+          const regex = new RegExp(pattern, 'g');
+          const parts = text.split(regex);
+          chunks = parts.filter(p => p.trim() || !removeEmpty.checked);
+          if (trimChunks.checked) chunks = chunks.map(c => c.trim());
+        }
+        break;
+    }
+    
+    // Remove empty chunks if enabled
+    if (removeEmpty.checked) {
+      chunks = chunks.filter(c => c.length > 0);
+    }
+    
+    currentChunks = chunks;
+    const endTime = performance.now();
+    
+    // Format output
+    let output = '';
+    chunks.forEach((chunk, index) => {
+      if (addNumbering.checked) {
+        output += `=== CHUNK ${index + 1}/${chunks.length} ===\n`;
+      }
+      output += chunk + separator;
+    });
+    
+    outputText.value = output.trim();
+    
+    // Update stats
+    const totalChars = chunks.reduce((sum, c) => sum + c.length, 0);
+    outputStats.textContent = `Chunks: ${chunks.length} | Chars: ${totalChars}`;
+    chunksCount.textContent = `(${chunks.length} chunks)`;
+    chunksCount.classList.remove('hidden');
+    processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+    
+    // Update preview
+    displayChunksPreview(chunks);
+    
+    // Show download button if multiple chunks
+    if (chunks.length > 1) {
+      downloadChunksBtn.classList.remove('hidden');
+    } else {
+      downloadChunksBtn.classList.add('hidden');
+    }
+    
+  } catch (error) {
+    console.error('Chunk error:', error);
+  }
+}
+
+const debouncedChunk = debounce(chunkText, 0);
+
+// Display chunks preview
+function displayChunksPreview(chunks) {
+  if (chunks.length === 0 || chunks.length === 1) {
+    chunksPreview.classList.add('hidden');
+    return;
+  }
+  
+  chunksPreview.classList.remove('hidden');
+  chunksList.innerHTML = '';
+  
+  chunks.slice(0, 20).forEach((chunk, index) => {
+    const chunkDiv = document.createElement('div');
+    chunkDiv.className = 'chunk-preview-item p-2 rounded bg-white/5 cursor-pointer text-xs';
+    const preview = chunk.substring(0, 60).replace(/\n/g, ' ') + (chunk.length > 60 ? '...' : '');
+    chunkDiv.innerHTML = `
+      <div class="flex items-center justify-between mb-0.5">
+        <span class="text-xs font-medium text-indigo-400">Chunk ${index + 1}</span>
+        <span class="text-xs text-gray-500">${chunk.length}c</span>
+      </div>
+      <div class="text-gray-300 truncate">${preview}</div>
+    `;
+    
+    chunkDiv.addEventListener('click', () => {
+      navigator.clipboard.writeText(chunk);
+      chunkDiv.style.background = 'rgba(34, 197, 94, 0.2)';
+      setTimeout(() => {
+        chunkDiv.style.background = '';
+      }, 200);
+    });
+    
+    chunksList.appendChild(chunkDiv);
+  });
+  
+  if (chunks.length > 20) {
+    const moreDiv = document.createElement('div');
+    moreDiv.className = 'text-xs text-gray-500 text-center py-1';
+    moreDiv.textContent = `... and ${chunks.length - 20} more chunks`;
+    chunksList.appendChild(moreDiv);
+  }
+}
+
+// Drag and drop handlers
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  if (!file.type.match('text.*') && !file.name.match(/\.(txt|csv|md|json|xml|html?|js|css|py|java|cpp|c|php|rb|go|rs|swift|kt|sql|log)$/i)) {
+    alert('Please upload a text file');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    updateInputStats();
+    chunkText();
+  };
+  reader.readAsText(file);
+}
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    updateInputStats();
+    chunkText();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  updateInputStats();
+  chunkText();
+  inputText.focus();
+}
+
+// Copy output
+async function copyOutput() {
+  if (!outputText.value) return;
+  
+  try {
+    await navigator.clipboard.writeText(outputText.value);
+    const originalText = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalText;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+}
+
+// Download output
+function downloadOutput() {
+  const text = outputText.value;
+  if (!text.trim()) return;
+  
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'chunked-text.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Download all chunks separately
+function downloadAllChunks() {
+  if (currentChunks.length === 0) return;
+  
+  let content = '';
+  currentChunks.forEach((chunk, index) => {
+    content += `=== CHUNK ${index + 1}/${currentChunks.length} ===\n${chunk}\n\n`;
+  });
+  
+  const blob = new Blob([content], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'all-chunks.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Reset all
+function resetAll() {
+  inputText.value = '';
+  outputText.value = '';
+  updateInputStats();
+  outputStats.textContent = 'Chunks: 0 | Chars: 0';
+  chunksCount.classList.add('hidden');
+  chunksPreview.classList.add('hidden');
+  downloadChunksBtn.classList.add('hidden');
+  processingTime.textContent = '';
+  currentChunks = [];
+  chunkSize.value = 1000;
+  overlapSize.value = 0;
+  regexPattern.value = '';
+  separatorSelect.value = '\n\n';
+  removeEmpty.checked = true;
+  trimChunks.checked = true;
+  addNumbering.checked = false;
+  preserveWords.checked = true;
+  methodBtns.forEach(b => b.classList.remove('active'));
+  methodBtns[0].classList.add('active');
+  currentMethod = 'chars';
+  methodPanels.forEach(panel => panel.classList.add('hidden'));
+  document.getElementById('sizeOptions').classList.remove('hidden');
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Event listeners
+inputText.addEventListener('input', () => {
+  updateInputStats();
+  debouncedChunk();
+});
+
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+copyBtn.addEventListener('click', copyOutput);
+downloadBtn.addEventListener('click', downloadOutput);
+downloadChunksBtn.addEventListener('click', downloadAllChunks);
+resetBtn.addEventListener('click', resetAll);
+
+// Initialize
+updateInputStats();
+</script>
+</body>
+</html>

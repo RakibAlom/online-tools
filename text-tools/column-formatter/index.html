@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Column Formatter - Free Online Text Column Alignment Tool</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online column formatter tool. Align text into clean columns, format CSV data, organize lists into structured columns. Auto-alignment with no registration required." />
+  <meta name="keywords" content="column formatter, format columns online, align text in columns, text column formatter, column alignment tool, format csv columns, format spreadsheet columns, organize text into columns, column text editor online, text column organizer, format columns free, online column formatter, clean columns online, format data in columns, format table columns online, column spacing tool, column text formatter, align column data, format column text free, format multiple columns online, text to columns tool, column formatting utility, format words in columns, format lines into columns, column formatter for csv, column formatter for excel, column editor online, bulk column formatter, column layout tool online, column spacing formatter, format column list, format column entries, column text organizer free, column formatting tool online, format columns without coding, column data cleaner, text to column formatter, column structure editor, column formatting online free, text column alignment, format table text columns, column content formatter, column tool for text, organize data in columns online, free column formatter tool, column formatting editor" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/column-formatter/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/column-formatter/" />
+  <meta property="og:title" content="Column Formatter - Free Online Text Column Alignment Tool" />
+  <meta property="og:description" content="Align text into clean columns, format CSV data, organize lists into structured columns. Auto-alignment with no registration required." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/column-formatter/" />
+  <meta name="twitter:title" content="Column Formatter - Free Online Text Column Alignment Tool" />
+  <meta name="twitter:description" content="Align text into clean columns, format CSV data, organize lists into structured columns. Auto-alignment with no registration required." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .method-btn {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    .method-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .column-preview {
+      font-family: 'Courier New', monospace;
+      line-height: 1.6;
+      white-space: pre;
+      overflow-x: auto;
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+
+    .align-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 12h20M10 20h20M10 28h20" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Column Formatter</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Column Formatter
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Data Formatting Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-formatting enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Input Data
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Paste data here (CSV, TSV, or space-separated)... Or drag & drop a file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop data file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.csv,.tsv,.md,.json,.xml,.html,.sql,.log" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Rows: 0 | Columns: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Output -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Formatted Columns
+            </label>
+            <div class="flex gap-1">
+              <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                Copy
+              </button>
+              <button id="downloadBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Download
+              </button>
+            </div>
+          </div>
+          
+          <textarea id="outputText" readonly spellcheck="false"
+            class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none column-preview"
+            placeholder="Formatted columns appear here automatically..."></textarea>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="outputStats">Rows: 0 | Width: 0 chars</span>
+            <span id="processingTime" class="text-gray-600"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-3">
+        
+        <!-- Input Format -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Input Format</label>
+          <div class="flex flex-wrap gap-1">
+            <button class="method-btn active rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-format="auto">Auto-Detect</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-format="csv">Comma (CSV)</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-format="tsv">Tab (TSV)</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-format="space">Space</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-format="pipe">Pipe (|)</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-format="custom">Custom</button>
+          </div>
+        </div>
+
+        <!-- Settings Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+          <!-- Custom Delimiter -->
+          <div id="customOptions" class="format-panel hidden space-y-2">
+            <label class="text-xs text-gray-400 mb-1 block">Custom Delimiter</label>
+            <input type="text" id="customDelimiter" placeholder="e.g. ; or ::" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+          </div>
+
+          <!-- Column Alignment -->
+          <div class="space-y-2">
+            <label class="text-xs text-gray-400 mb-1 block">Alignment</label>
+            <div class="flex gap-1">
+              <button class="align-btn active flex-1 py-1.5 px-2 rounded-md border border-white/10 bg-white/5 text-xs text-gray-300 transition-all" data-align="left">
+                <svg class="w-3 h-3 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h10M4 18h16"/></svg>
+              </button>
+              <button class="align-btn flex-1 py-1.5 px-2 rounded-md border border-white/10 bg-white/5 text-xs text-gray-300 transition-all" data-align="center">
+                <svg class="w-3 h-3 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M7 12h10M4 18h16"/></svg>
+              </button>
+              <button class="align-btn flex-1 py-1.5 px-2 rounded-md border border-white/10 bg-white/5 text-xs text-gray-300 transition-all" data-align="right">
+                <svg class="w-3 h-3 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M10 12h10M4 18h16"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Spacing Options -->
+          <div class="space-y-2">
+            <label class="text-xs text-gray-400 mb-1 block">Column Gap (spaces)</label>
+            <input type="number" id="columnGap" min="1" max="10" value="2" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="trimWhitespace" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Trim cell whitespace
+            </label>
+          </div>
+
+          <!-- Output Options -->
+          <div class="space-y-2">
+            <label class="text-xs text-gray-400 mb-1 block">Output Format</label>
+            <select id="outputFormat" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="spaces">Aligned Spaces</option>
+              <option value="csv">Comma (CSV)</option>
+              <option value="tsv">Tab (TSV)</option>
+              <option value="markdown">Markdown Table</option>
+              <option value="html">HTML Table</option>
+            </select>
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="addBorders" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Add borders/lines
+            </label>
+          </div>
+        </div>
+
+        <!-- Column Preview Info -->
+        <div id="columnInfo" class="hidden">
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-xs font-medium text-gray-300">Column Analysis</label>
+          </div>
+          <div class="p-3 rounded-md bg-black/40 border border-white/10 text-xs">
+            <div id="columnDetails" class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-gray-400">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Column Formatter?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Auto-Format</h3>
+          <p class="text-gray-400 text-xs">Real-time column alignment</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Multi-Format</h3>
+          <p class="text-gray-400 text-xs">CSV, TSV, space, pipe & more</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Drag & Drop</h3>
+          <p class="text-gray-400 text-xs">Upload CSV/TSV instantly</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based processing</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Markdown, HTML, CSV & more</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration required</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Input Data</h3>
+          <p class="text-gray-400 text-xs">Paste CSV/TSV data or drag & drop a file. Formatting happens automatically.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Set Format</h3>
+          <p class="text-gray-400 text-xs">Choose delimiter (comma, tab, space) or let auto-detect handle it.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Configure</h3>
+          <p class="text-gray-400 text-xs">Select alignment, spacing, and output format. Changes apply instantly.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy formatted text or download as CSV, Markdown, or HTML table.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Column Formatting: Mastering Text Alignment and Data Organization</h2>
+        
+        <p><strong>Column formatting</strong> is an essential data manipulation technique that transforms messy, unstructured text into clean, aligned, and readable columns. Whether you need to <strong>format columns online</strong> for a spreadsheet, <strong>align text in columns</strong> for a report, or <strong>organize text into columns</strong> for data analysis, understanding column formatting is crucial for modern productivity. Our <strong>column formatter</strong> tool provides instant, browser-based formatting without registration or cost barriers.</p>
+
+        <h2>What Is Column Formatting and Why Does It Matter?</h2>
+        
+        <p><strong>Column formatting</strong> refers to the process of arranging text data into vertical columns with consistent alignment and spacing. This transformation takes raw data—often comma-separated values (CSV), tab-separated values (TSV), or space-delimited text—and converts it into a visually structured format where each column has uniform width and proper alignment. When you <strong>format columns online</strong>, you're performing a data cleaning operation that improves readability, enables analysis, and prepares data for further processing.</p>
+
+        <p>The importance of reliable <strong>online column formatter</strong> tools extends across numerous professions. Data analysts use <strong>text column formatter</strong> capabilities to clean imported datasets before analysis. Developers <strong>format csv columns</strong> to inspect API responses and debug data pipelines. Content creators <strong>align column data</strong> to present information in readable tables. System administrators <strong>format data in columns</strong> to parse log files and configuration outputs. Without efficient <strong>column alignment tool</strong> capabilities, these tasks require manual spacing adjustments that are time-consuming and error-prone.</p>
+
+        <h2>Understanding Column Formatting Methods and Techniques</h2>
+
+        <h3>Delimiter Detection and Parsing</h3>
+        
+        <p>The foundation of <strong>column formatter</strong> functionality is identifying how input data separates into columns. Common delimiters include commas for CSV files, tabs for TSV format, spaces for command-line output, pipes for Unix-style data streams, and semicolons for European CSV variants. Advanced <strong>column text editor online</strong> tools automatically detect these delimiters by analyzing the input structure, counting character frequencies, and identifying consistent patterns that indicate column boundaries.</p>
+
+        <p>When you <strong>format spreadsheet columns</strong> using our tool, the auto-detection algorithm examines your data to determine the most likely delimiter. It looks for characters that appear consistently between data fields, handles quoted fields that might contain delimiter characters, and recognizes escape sequences that protect special characters. This intelligent parsing ensures that <strong>format csv columns</strong> operations produce accurate results even with complex, real-world data that includes commas within text fields or irregular spacing.</p>
+
+        <h3>Column Width Calculation and Alignment</h3>
+        
+        <p>Once data is parsed into columns, the <strong>column spacing tool</code> must calculate appropriate widths for each column. This involves finding the longest content in each column and adding padding for visual separation. The calculation must handle variable-width characters (like tabs, emoji, and CJK characters), respect Unicode combining characters, and account for the specified gap between columns. Professional <strong>column text formatter</strong> implementations optimize these calculations for performance with large datasets while maintaining accuracy.</p>
+
+        <p>Alignment options—left, center, and right—provide additional control over <strong>text column alignment</strong>. Left alignment (default) keeps text flush with the left edge, ideal for readable text and most data types. Right alignment aligns numbers and currency values by their decimal points, making comparisons easier. Center alignment creates symmetrical layouts for headers and decorative text. When you <strong>align text in columns</strong> using our tool, you choose the alignment that best serves your data's purpose and audience.</p>
+
+        <h3>Output Format Generation</h3>
+        
+        <p>Modern <strong>column formatting utility</strong> tools support multiple output formats beyond simple spaced text. Markdown tables provide portable formatting for documentation and README files. HTML tables enable web presentation with styling options. CSV and TSV output allow re-import into spreadsheet applications. JSON conversion facilitates API integration and programmatic processing. This multi-format capability transforms a simple <strong>text to columns tool</strong> into a comprehensive data transformation platform.</p>
+
+        <h2>Professional Applications of Column Formatting</h2>
+
+        <h3>Data Analysis and Business Intelligence</h3>
+        
+        <p>Data professionals rely on <strong>column formatter</strong> tools as the first step in data preparation workflows. Raw data from databases, APIs, and flat files often arrives with inconsistent formatting, irregular delimiters, or embedded whitespace. Before analysis can begin, this data must be normalized into clean columns. <strong>Format columns free</strong> tools provide immediate visual feedback that helps analysts identify data quality issues: misaligned columns indicate parsing errors, variable row lengths suggest missing data, and width variations reveal outliers.</p>
+
+        <p>Exploratory data analysis benefits from <strong>column formatting online free</strong> capabilities. Quickly formatting sample datasets allows analysts to understand structure, identify column types, and spot anomalies before writing code. Presenting findings to stakeholders requires <strong>format table columns online</strong> operations that transform technical outputs into readable reports. Whether preparing data for Python pandas, R, SQL, or Excel, proper column formatting ensures accurate import and analysis.</p>
+
+        <h3>Software Development and Debugging</h3>
+        
+        <p>Developers constantly interact with columnar data that requires formatting. API responses often return JSON or CSV that needs <strong>format multiple columns online</strong> inspection to verify field mappings. Database query results display as columns that benefit from alignment for readability. Log files contain space-separated fields that <strong>column data cleaner</strong> tools can organize for analysis. Configuration files, environment variable listings, and command outputs all present as columnar data that developers need to parse and understand.</p>
+
+        <p>Debugging data pipelines often involves examining intermediate outputs that have lost their formatting. A <strong>bulk column formatter</strong> can quickly restore structure to garbled data streams, revealing where transformations went wrong. When writing documentation, developers use <strong>format columns without coding</strong> tools to create example outputs that readers can understand without executing code. Our browser-based tool integrates seamlessly into development workflows through simple copy-paste operations.</p>
+
+        <h3>Content Creation and Documentation</h3>
+        
+        <p>Technical writers and content creators use <strong>column layout tool online</strong> functionality to present data effectively. Comparison tables, feature matrices, pricing charts, and specification lists all benefit from proper column alignment. Markdown tables—created by <strong>column formatting tool online</strong> conversion—render beautifully in GitHub, GitLab, and static site generators. HTML table generation enables web-based documentation with responsive design and styling options.</p>
+
+        <p>Academic writing often requires presenting research data in aligned columns. Survey results, statistical outputs, and bibliographic information all display more professionally when properly formatted. Journalists use <strong>text column organizer</strong> tools to prepare data for publication, ensuring that numbers align correctly and text remains readable. The ability to <strong>format words in columns</strong> quickly allows content creators to iterate on presentation without wrestling with complex table editors.</p>
+
+        <h3>System Administration and DevOps</h3>
+        
+        <p>IT professionals work extensively with command-line tools that output columnar data. The `ps` command lists processes in columns; `ls` displays file listings; `df` shows disk usage; `netstat` presents network connections. Piping these outputs through <strong>column structure editor</strong> tools—or using similar formatting capabilities—transforms dense command output into readable reports. When documenting system states or sharing terminal output with colleagues, proper column formatting eliminates confusion.</p>
+
+        <p>Configuration management involves editing files with columnar structure. Hosts files map IPs to hostnames in aligned columns. Cron schedules display time specifications in columnar format. Firewall rules, user lists, and permission matrices all benefit from <strong>column content formatter</strong> organization. System administrators use <strong>organize data in columns online</strong> tools to verify configuration correctness before deployment, catching misalignments that could cause service failures.</p>
+
+        <h2>Advanced Column Formatting Techniques</h2>
+
+        <h3>Handling Irregular and Malformed Data</h3>
+        
+        <p>Real-world data rarely arrives in perfect condition. Missing fields, extra delimiters, quoted strings containing delimiters, and mixed line endings all challenge <strong>column formatting editor</strong> implementations. Advanced tools handle these edge cases through intelligent parsing: recognizing quote characters that protect embedded delimiters, detecting and normalizing line ending variations, and providing options for handling empty fields (preserving them as blank columns versus collapsing them).</p>
+
+        <p>When data contains variable numbers of columns per row, the <strong>free column formatter tool</strong> must decide whether to pad short rows with empty columns or trim long rows to match the first row's structure. Our tool provides visibility into these decisions through the column analysis display, showing row counts, column counts, and width statistics that help users understand their data's structure and quality.</p>
+
+        <h3>Unicode and Internationalization Support</h3>
+        
+        <p>Modern data includes content from worldwide languages, mathematical symbols, emoji, and special characters. Proper <strong>column spacing formatter</strong> implementation must account for character width variations—full-width CJK characters occupy more visual space than half-width Latin characters, combining characters modify base characters without adding width, and zero-width joiners affect emoji presentation. Our tool handles these complexities, ensuring that <strong>format column list</strong> operations produce correctly aligned output regardless of content language.</p>
+
+        <h3>Performance Optimization for Large Datasets</h3>
+        
+        <p>Processing megabytes of columnar data requires efficient algorithms. Single-pass parsing that simultaneously detects delimiters, calculates widths, and generates output minimizes processing time. Memory-efficient string handling prevents browser crashes with large files. Web Worker support (where available) prevents UI freezing during intensive operations. Our <strong>bulk column formatter</strong> implements these optimizations, handling files with millions of rows while maintaining responsive user interaction.</p>
+
+        <h2>Best Practices for Effective Column Formatting</h2>
+
+        <h3>Data Validation Before Formatting</h3>
+        
+        <p>Before applying <strong>column formatter</strong> operations, examine your data for common issues. Check that delimiters are consistent throughout the file—mixed commas and tabs cause parsing errors. Verify that quote characters are properly paired; unclosed quotes extend fields across line boundaries. Look for encoding issues that display as garbled characters or question marks. Our tool's auto-detection helps identify these problems, but understanding your data's source and expected structure prevents formatting surprises.</p>
+
+        <h3>Choosing Appropriate Alignment</h3>
+        
+        <p>Match alignment to data type for optimal readability. Text data (names, descriptions, categories) reads best with left alignment. Numeric data (counts, measurements, identifiers) aligns right for easy comparison of magnitude. Currency and decimal values should align by the decimal point—our tool handles this through right alignment of the entire field. Headers often look best centered above their columns. When <strong>align column data</strong>, consider both aesthetic balance and functional readability.</p>
+
+        <h3>Spacing and Visual Hierarchy</h3>
+        
+        <p>Column gap selection affects readability and density. Minimal spacing (1-2 characters) creates compact tables suitable for dense data and limited screen space. Wider spacing (3-4 characters) improves readability for sparse data or presentations. Consider adding borders or separator lines for complex tables with many columns—the visual boundaries help readers track across rows. Our <strong>column text organizer free</strong> tool provides these spacing and border options to optimize your specific use case.</p>
+
+        <h2>Comparing Column Formatting Approaches</h2>
+
+        <h3>Spreadsheet Software vs. Dedicated Tools</h3>
+        
+        <p>Excel, Google Sheets, and similar applications provide powerful column formatting capabilities with visual interfaces. However, they require file import/export workflows, may alter data types (converting strings to dates or numbers), and add overhead for simple formatting tasks. Dedicated <strong>online column formatter</strong> tools offer immediate results without file conversion, preserve data as text to prevent type coercion, and provide specialized options for specific formatting needs. For quick inspections, data cleaning, or format conversion, browser-based tools offer superior efficiency.</p>
+
+        <h3>Command-Line Tools vs. Visual Interfaces</h3>
+        
+        <p>Unix provides the `column` command for terminal-based formatting, useful in scripts and automated pipelines. However, it requires terminal access, has limited alignment options, and provides no visual feedback for errors. Our <strong>column editor online</strong> tool complements command-line workflows by providing immediate visual feedback, multiple output formats, and accessibility across operating systems without installation. Use command-line tools for automation, browser tools for exploration and presentation.</p>
+
+        <h2>The Future of Data Formatting Technology</h2>
+
+        <p>Artificial intelligence is beginning to influence <strong>column formatting</strong> through intelligent data type detection, automatic delimiter suggestions, and anomaly highlighting. Future <strong>column formatting online free</strong> tools may automatically suggest optimal alignment based on content analysis, detect and flag data quality issues in real-time, and provide one-click transformations between formats based on detected patterns. As data volumes grow and sources multiply, the demand for intelligent, accessible formatting tools will only increase.</p>
+
+        <h2>Conclusion: Master Column Formatting for Enhanced Productivity</h2>
+
+        <p><strong>Column formatting</strong> remains one of the most practical and widely-used data manipulation techniques across industries. From data analysis to software development, content creation to system administration, the ability to <strong>format columns online</strong> efficiently empowers professionals to work more effectively with structured data. Whether you need to <strong>align text in columns</strong> for readability, <strong>format csv columns</strong> for analysis, or <strong>organize text into columns</strong> for presentation, mastering this technique will significantly enhance your productivity.</p>
+
+        <p>Our <strong>free column formatter tool</strong> provides all the functionality you need for professional column formatting. With automatic real-time processing, support for multiple input and output formats, flexible alignment options, and browser-based privacy, this tool serves everyone from casual users to data professionals. Stop struggling with manual spacing and misaligned data—start using our professional <strong>column formatter</strong> today and experience the efficiency of automated column formatting.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool format columns automatically as I type?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>column formatter</strong> features <strong>automatic real-time formatting</strong>. As you paste or type data, the tool instantly detects delimiters, calculates column widths, and displays aligned output. The "Auto-formatting enabled" indicator confirms active processing. Changes to alignment, spacing, or output format apply immediately, making this the most responsive <strong>online column formatter</strong> available.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What delimiters does the auto-detect feature recognize?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Auto-detect recognizes commas (CSV), tabs (TSV), spaces, pipes (|), and semicolons. It analyzes your data to find the delimiter that produces the most consistent column structure. For ambiguous cases (like space-separated data that might contain commas), you can manually select the format. The <strong>custom</strong> option allows any delimiter string for specialized data formats.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I format large CSV files with this tool?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>bulk column formatter</strong> handles files up to 10-20MB (millions of rows). Drag and drop CSV, TSV, or text files directly onto the input area. The tool processes large datasets efficiently with optimized algorithms. For extremely large files (100MB+), consider processing in chunks or using command-line tools. Browser-based processing keeps your data private even with large files.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What's the difference between left, center, and right alignment?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Left alignment</strong> (default) keeps text flush with the left edge—best for readable text and most data. <strong>Right alignment</strong> aligns content to the right edge—ideal for numbers and currency to align decimal points. <strong>Center alignment</strong> centers content in each column—great for headers and symmetrical presentation. Choose based on your data type and readability needs.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I export formatted columns to different formats?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Select your desired <strong>Output Format</strong> from the dropdown: <strong>Aligned Spaces</strong> for plain text, <strong>Comma (CSV)</strong> for spreadsheet import, <strong>Tab (TSV)</strong> for database tools, <strong>Markdown Table</strong> for documentation, or <strong>HTML Table</strong> for web pages. The output updates instantly. Click <strong>Download</strong> to save the formatted result with the appropriate file extension.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What does the 'Trim cell whitespace' option do?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">When enabled, this option removes leading and trailing spaces from each cell before calculating column widths. This produces tighter, cleaner formatting by eliminating extra whitespace that often appears in imported data. Disable it if you need to preserve intentional spacing within your data cells. The option applies to all columns uniformly.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my data secure when using this tool?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely. All processing happens <strong>locally in your browser</strong>—your data never uploads to our servers or leaves your device. You can verify this by checking your browser's Network tab (no data transfer to external servers). The tool works offline after loading. This makes it ideal for processing sensitive data, proprietary business information, or personal records. Privacy is built into our <strong>column formatter</strong> architecture.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I format data with uneven column counts?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! The tool handles irregular data gracefully. Rows with fewer columns receive blank padding; rows with extra columns extend the table width. The Column Analysis section shows statistics including row count, max columns detected, and any irregularities. This helps you identify data quality issues while still producing readable formatted output from messy source data.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool work with non-English characters?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Full Unicode support includes Chinese, Japanese, Korean (CJK), Arabic, Cyrillic, accented Latin characters, emoji, and mathematical symbols. The tool correctly calculates visual widths for full-width characters and handles combining characters. Whether your data contains European languages, Asian scripts, or special symbols, the column alignment remains accurate and readable.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this tool free to use?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, completely <strong>free</strong> with no registration, usage limits, watermarks, or hidden fees. Use it for personal projects, commercial work, or educational purposes without attribution. This is truly a <strong>free column formatter tool</strong> for everyone. The tool is supported by unobtrusive advertising and voluntary user support, allowing us to maintain and improve the service while keeping it accessible to all users worldwide.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const outputText = document.getElementById('outputText');
+const inputStats = document.getElementById('inputStats');
+const outputStats = document.getElementById('outputStats');
+const processingTime = document.getElementById('processingTime');
+const columnInfo = document.getElementById('columnInfo');
+const columnDetails = document.getElementById('columnDetails');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+
+// Buttons
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const resetBtn = document.getElementById('resetBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+// Format buttons and panels
+const formatBtns = document.querySelectorAll('.method-btn');
+const alignBtns = document.querySelectorAll('.align-btn');
+const formatPanels = document.querySelectorAll('.format-panel');
+let currentFormat = 'auto';
+let currentAlign = 'left';
+
+// Options
+const customDelimiter = document.getElementById('customDelimiter');
+const columnGap = document.getElementById('columnGap');
+const trimWhitespace = document.getElementById('trimWhitespace');
+const outputFormat = document.getElementById('outputFormat');
+const addBorders = document.getElementById('addBorders');
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Detect delimiter
+function detectDelimiter(text) {
+  if (!text.trim()) return ' ';
+  
+  const delimiters = [
+    { char: '\t', name: 'tab' },
+    { char: ',', name: 'comma' },
+    { char: '|', name: 'pipe' },
+    { char: ';', name: 'semicolon' },
+    { char: '  ', name: 'space' }
+  ];
+  
+  let maxCols = 0;
+  let detected = ' ';
+  
+  for (const delim of delimiters) {
+    const lines = text.split('\n').filter(l => l.trim());
+    if (lines.length === 0) continue;
+    
+    const colCounts = lines.map(line => line.split(delim.char).length);
+    const avgCols = colCounts.reduce((a, b) => a + b, 0) / colCounts.length;
+    const consistency = colCounts.every(c => c === colCounts[0]);
+    
+    if (avgCols > maxCols && avgCols > 1 && consistency) {
+      maxCols = avgCols;
+      detected = delim.char;
+    }
+  }
+  
+  return detected;
+}
+
+// Parse rows
+function parseRows(text, delimiter) {
+  return text.split('\n').map(line => {
+    if (trimWhitespace.checked) {
+      return line.split(delimiter).map(cell => cell.trim());
+    }
+    return line.split(delimiter);
+  }).filter(row => row.length > 0 && row.some(cell => cell.length > 0));
+}
+
+// Calculate column widths
+function calculateWidths(rows) {
+  if (rows.length === 0) return [];
+  
+  const numCols = Math.max(...rows.map(row => row.length));
+  const widths = new Array(numCols).fill(0);
+  
+  for (const row of rows) {
+    for (let i = 0; i < row.length; i++) {
+      const cellWidth = String(row[i]).length;
+      widths[i] = Math.max(widths[i], cellWidth);
+    }
+  }
+  
+  return widths;
+}
+
+// Format cell
+function formatCell(cell, width, align) {
+  const str = String(cell);
+  const pad = width - str.length;
+  
+  if (align === 'right') {
+    return ' '.repeat(pad) + str;
+  } else if (align === 'center') {
+    const left = Math.floor(pad / 2);
+    const right = pad - left;
+    return ' '.repeat(left) + str + ' '.repeat(right);
+  }
+  return str + ' '.repeat(pad);
+}
+
+// Format to aligned text
+function formatAligned(rows, widths, gap) {
+  const gapStr = ' '.repeat(parseInt(gap) || 2);
+  
+  return rows.map(row => {
+    return row.map((cell, i) => {
+      const width = widths[i] || 0;
+      return formatCell(cell, width, currentAlign);
+    }).join(gapStr);
+  }).join('\n');
+}
+
+// Format to CSV
+function formatCSV(rows) {
+  return rows.map(row => 
+    row.map(cell => {
+      const str = String(cell);
+      if (str.includes(',') || str.includes('"') || str.includes('\n')) {
+        return '"' + str.replace(/"/g, '""') + '"';
+      }
+      return str;
+    }).join(',')
+  ).join('\n');
+}
+
+// Format to TSV
+function formatTSV(rows) {
+  return rows.map(row => row.join('\t')).join('\n');
+}
+
+// Format to Markdown
+function formatMarkdown(rows, widths) {
+  if (rows.length === 0) return '';
+  
+  const gapStr = ' | ';
+  const header = rows[0].map((cell, i) => formatCell(cell, widths[i] || 0, currentAlign)).join(gapStr);
+  const separator = widths.map(w => '-'.repeat(w)).join('|');
+  
+  const data = rows.slice(1).map(row => 
+    row.map((cell, i) => formatCell(cell, widths[i] || 0, currentAlign)).join(gapStr)
+  ).join('\n');
+  
+  return '| ' + header + ' |\n|' + separator + '|\n' + (data ? '| ' + data + ' |' : '');
+}
+
+// Format to HTML
+function formatHTML(rows, widths) {
+  const borderAttr = addBorders.checked ? ' border="1"' : '';
+  const style = addBorders.checked ? ' style="border-collapse: collapse;"' : '';
+  
+  let html = `<table${borderAttr}${style}>\n`;
+  
+  if (rows.length > 0) {
+    html += '  <tr>\n';
+    for (const cell of rows[0]) {
+      html += `    <th>${escapeHtml(cell)}</th>\n`;
+    }
+    html += '  </tr>\n';
+    
+    for (let i = 1; i < rows.length; i++) {
+      html += '  <tr>\n';
+      for (const cell of rows[i]) {
+        html += `    <td>${escapeHtml(cell)}</td>\n`;
+      }
+      html += '  </tr>\n';
+    }
+  }
+  
+  html += '</table>';
+  return html;
+}
+
+function escapeHtml(text) {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
+}
+
+// Main format function
+function formatColumns() {
+  const startTime = performance.now();
+  const text = inputText.value;
+  
+  if (!text.trim()) {
+    outputText.value = '';
+    inputStats.textContent = 'Rows: 0 | Columns: 0';
+    outputStats.textContent = 'Rows: 0 | Width: 0 chars';
+    processingTime.textContent = '';
+    columnInfo.classList.add('hidden');
+    return;
+  }
+  
+  try {
+    // Determine delimiter
+    let delimiter;
+    if (currentFormat === 'auto') {
+      delimiter = detectDelimiter(text);
+    } else if (currentFormat === 'csv') {
+      delimiter = ',';
+    } else if (currentFormat === 'tsv') {
+      delimiter = '\t';
+    } else if (currentFormat === 'space') {
+      delimiter = '  ';
+    } else if (currentFormat === 'pipe') {
+      delimiter = '|';
+    } else if (currentFormat === 'custom') {
+      delimiter = customDelimiter.value || ' ';
+    } else {
+      delimiter = ' ';
+    }
+    
+    // Parse rows
+    const rows = parseRows(text, delimiter);
+    
+    if (rows.length === 0) {
+      outputText.value = '';
+      columnInfo.classList.add('hidden');
+      return;
+    }
+    
+    // Calculate stats
+    const numCols = Math.max(...rows.map(row => row.length));
+    const widths = calculateWidths(rows);
+    const totalWidth = widths.reduce((a, b) => a + b, 0) + (widths.length - 1) * (parseInt(columnGap.value) || 2);
+    
+    // Format output
+    let result;
+    const format = outputFormat.value;
+    
+    if (format === 'csv') {
+      result = formatCSV(rows);
+    } else if (format === 'tsv') {
+      result = formatTSV(rows);
+    } else if (format === 'markdown') {
+      result = formatMarkdown(rows, widths);
+    } else if (format === 'html') {
+      result = formatHTML(rows, widths);
+    } else {
+      result = formatAligned(rows, widths, columnGap.value);
+    }
+    
+    const endTime = performance.now();
+    
+    // Update output
+    outputText.value = result;
+    
+    // Update stats
+    inputStats.textContent = `Rows: ${rows.length} | Columns: ${numCols}`;
+    outputStats.textContent = `Rows: ${rows.length} | Width: ${totalWidth} chars`;
+    processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+    
+    // Update column info
+    columnInfo.classList.remove('hidden');
+    columnDetails.innerHTML = `
+      <div>Rows: <span class="text-gray-300">${rows.length}</span></div>
+      <div>Columns: <span class="text-gray-300">${numCols}</span></div>
+      <div>Delimiter: <span class="text-gray-300">${delimiter === '\t' ? 'Tab' : delimiter}</span></div>
+      <div>Max Width: <span class="text-gray-300">${Math.max(...widths, 0)}</span></div>
+    `;
+    
+  } catch (error) {
+    console.error('Format error:', error);
+  }
+}
+
+// Debounce function
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+const debouncedFormat = debounce(formatColumns, 0);
+
+// Format selection
+formatBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    formatBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentFormat = btn.dataset.format;
+    
+    formatPanels.forEach(panel => panel.classList.add('hidden'));
+    const panel = document.getElementById(currentFormat + 'Options');
+    if (panel) panel.classList.remove('hidden');
+    
+    formatColumns();
+  });
+});
+
+// Alignment selection
+alignBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    alignBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentAlign = btn.dataset.align;
+    formatColumns();
+  });
+});
+
+// Options listeners
+[customDelimiter, columnGap, trimWhitespace, outputFormat, addBorders].forEach(el => {
+  if (el) {
+    el.addEventListener('input', formatColumns);
+    el.addEventListener('change', formatColumns);
+  }
+});
+
+// Drag and drop
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  if (!file.type.match('text.*') && !file.name.match(/\.(txt|csv|tsv|md|json|xml|html?|sql|log)$/i)) {
+    alert('Please upload a text file');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    formatColumns();
+  };
+  reader.readAsText(file);
+}
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    formatColumns();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  formatColumns();
+  inputText.focus();
+}
+
+// Copy output
+async function copyOutput() {
+  if (!outputText.value) return;
+  
+  try {
+    await navigator.clipboard.writeText(outputText.value);
+    const originalText = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalText;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+}
+
+// Download output
+function downloadOutput() {
+  const text = outputText.value;
+  if (!text.trim()) return;
+  
+  let filename = 'formatted-columns.txt';
+  const format = outputFormat.value;
+  if (format === 'csv') filename = 'formatted.csv';
+  else if (format === 'tsv') filename = 'formatted.tsv';
+  else if (format === 'markdown') filename = 'formatted.md';
+  else if (format === 'html') filename = 'formatted.html';
+  
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Reset all
+function resetAll() {
+  inputText.value = '';
+  outputText.value = '';
+  inputStats.textContent = 'Rows: 0 | Columns: 0';
+  outputStats.textContent = 'Rows: 0 | Width: 0 chars';
+  processingTime.textContent = '';
+  columnInfo.classList.add('hidden');
+  
+  // Reset options
+  currentFormat = 'auto';
+  formatBtns.forEach(b => b.classList.remove('active'));
+  formatBtns[0].classList.add('active');
+  
+  currentAlign = 'left';
+  alignBtns.forEach(b => b.classList.remove('active'));
+  alignBtns[0].classList.add('active');
+  
+  columnGap.value = 2;
+  trimWhitespace.checked = true;
+  outputFormat.value = 'spaces';
+  addBorders.checked = false;
+  customDelimiter.value = '';
+  
+  formatPanels.forEach(panel => panel.classList.add('hidden'));
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Event listeners
+inputText.addEventListener('input', debouncedFormat);
+
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+copyBtn.addEventListener('click', copyOutput);
+downloadBtn.addEventListener('click', downloadOutput);
+resetBtn.addEventListener('click', resetAll);
+</script>
+</body>
+</html>

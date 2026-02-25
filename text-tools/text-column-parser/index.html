@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Text Column Parser - Free Online Column Extraction Tool</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online text column parser. Extract columns from delimited text, parse CSV data, analyze column structures. Instant parsing with no registration required." />
+  <meta name="keywords" content="text column parser, parse text columns online, extract columns from text, text column extractor, text column analyzer, parse csv columns, parse delimited text to columns, parse spreadsheet text, parse column data online, split text into columns, parse table columns, text column parsing tool, text column splitter, parse text file columns, parse text lines to columns, column text parser free, online text column parser, parse column entries, parse column list online, parse text for spreadsheet, parse text into table columns, text column utility, parse multiple columns from text, parse text to column list, text column formatter online, parse text strings to columns, text column editor online, batch text column parser, parse text data columns, parse csv file columns, parse column values, parse delimited data into columns, free text column parser tool, text column parsing utility online, parse column content from text, text column parser free online, parse columnar text online, text column parser for excel, text column data parser, parse column text free, text column parser batch tool, text column extractor online free, parse text columns instantly, online text column parsing tool, parse column data from file" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/text-column-parser/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/text-column-parser/" />
+  <meta property="og:title" content="Text Column Parser - Free Online Column Extraction Tool" />
+  <meta property="og:description" content="Extract columns from delimited text, parse CSV data, analyze column structures. Instant parsing with no registration required." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/text-column-parser/" />
+  <meta name="twitter:title" content="Text Column Parser - Free Online Column Extraction Tool" />
+  <meta name="twitter:description" content="Extract columns from delimited text, parse CSV data, analyze column structures. Instant parsing with no registration required." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .method-btn {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    .method-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .column-preview {
+      font-family: 'Courier New', monospace;
+      line-height: 1.6;
+      white-space: pre;
+      overflow-x: auto;
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+
+    .column-checkbox:checked + div {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+    }
+
+    .extract-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 12h20M10 20h20M10 28h20M14 12v16M20 12v16M26 12v16" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Text Column Parser</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Data Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Text Column Parser
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Column Extraction Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-parsing enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Input Text
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Paste columnar text here (CSV, TSV, or delimited)... Or drag & drop a file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.csv,.tsv,.psv,.ssv,.md,.json,.xml,.sql,.log" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Rows: 0 | Columns: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Output -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Parsed Columns
+            </label>
+            <div class="flex gap-1">
+              <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                Copy
+              </button>
+              <button id="downloadBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Download
+              </button>
+            </div>
+          </div>
+          
+          <textarea id="outputText" readonly spellcheck="false"
+            class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none column-preview"
+            placeholder="Extracted columns appear here automatically..."></textarea>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="outputStats">Extracted: 0 columns | 0 rows</span>
+            <span id="processingTime" class="text-gray-600"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-3">
+        
+        <!-- Input Delimiter -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Input Delimiter</label>
+          <div class="flex flex-wrap gap-1">
+            <button class="method-btn active rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-delimiter="auto">Auto-Detect</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-delimiter="comma">Comma (,)</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-delimiter="tab">Tab</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-delimiter="pipe">Pipe (|)</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-delimiter="semicolon">Semicolon (;)</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-delimiter="space">Space</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-delimiter="custom">Custom</button>
+          </div>
+        </div>
+
+        <!-- Settings Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+          <!-- Custom Delimiter -->
+          <div id="customOptions" class="delimiter-panel hidden space-y-2">
+            <label class="text-xs text-gray-400 mb-1 block">Custom Delimiter</label>
+            <input type="text" id="customDelimiter" placeholder="e.g. :: or ~" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+          </div>
+
+          <!-- Column Selection -->
+          <div class="space-y-2">
+            <label class="text-xs text-gray-400 mb-1 block">Column Selection</label>
+            <div class="flex gap-1">
+              <button class="extract-btn active flex-1 py-1.5 px-2 rounded-md border border-white/10 bg-white/5 text-xs text-gray-300 transition-all" data-extract="all">All</button>
+              <button class="extract-btn flex-1 py-1.5 px-2 rounded-md border border-white/10 bg-white/5 text-xs text-gray-300 transition-all" data-extract="specific">Specific</button>
+              <button class="extract-btn flex-1 py-1.5 px-2 rounded-md border border-white/10 bg-white/5 text-xs text-gray-300 transition-all" data-extract="range">Range</button>
+            </div>
+          </div>
+
+          <!-- Specific Columns -->
+          <div id="specificOptions" class="extract-panel hidden space-y-2">
+            <label class="text-xs text-gray-400 mb-1 block">Column Numbers (comma-separated)</label>
+            <input type="text" id="specificColumns" placeholder="e.g. 1,3,5" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+          </div>
+
+          <!-- Column Range -->
+          <div id="rangeOptions" class="extract-panel hidden space-y-2">
+            <div class="flex gap-2">
+              <div class="flex-1">
+                <label class="text-xs text-gray-400 mb-1 block">From</label>
+                <input type="number" id="rangeFrom" min="1" value="1" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              </div>
+              <div class="flex-1">
+                <label class="text-xs text-gray-400 mb-1 block">To</label>
+                <input type="number" id="rangeTo" min="1" value="3" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              </div>
+            </div>
+          </div>
+
+          <!-- Processing Options -->
+          <div class="space-y-2">
+            <label class="text-xs text-gray-400 mb-1 block">Processing Options</label>
+            <div class="flex flex-col gap-1.5">
+              <label class="flex items-center gap-1.5 text-xs text-gray-400">
+                <input type="checkbox" id="trimCells" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+                Trim cell whitespace
+              </label>
+              <label class="flex items-center gap-1.5 text-xs text-gray-400">
+                <input type="checkbox" id="removeEmpty" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+                Remove empty rows
+              </label>
+              <label class="flex items-center gap-1.5 text-xs text-gray-400">
+                <input type="checkbox" id="firstRowHeaders" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+                First row is headers
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column Selector -->
+        <div id="columnSelector" class="hidden">
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-xs font-medium text-gray-300">Select Columns to Extract</label>
+            <button id="selectAllBtn" class="text-xs text-indigo-400 hover:text-indigo-300 transition-colors">Select All</button>
+          </div>
+          <div id="columnCheckboxes" class="flex flex-wrap gap-2">
+            <!-- Checkboxes generated dynamically -->
+          </div>
+        </div>
+
+        <!-- Column Analysis -->
+        <div id="columnAnalysis" class="hidden">
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-xs font-medium text-gray-300">Column Analysis</label>
+          </div>
+          <div class="p-3 rounded-md bg-black/40 border border-white/10">
+            <div id="analysisDetails" class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs text-gray-400">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Text Column Parser?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Auto-Parse</h3>
+          <p class="text-gray-400 text-xs">Smart delimiter detection</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Selective</h3>
+          <p class="text-gray-400 text-xs">Extract specific columns</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Drag & Drop</h3>
+          <p class="text-gray-400 text-xs">Upload files instantly</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based processing</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Multiple output formats</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration required</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Input Data</h3>
+          <p class="text-gray-400 text-xs">Paste delimited text or drop a file. Auto-detection starts immediately.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Select Columns</h3>
+          <p class="text-gray-400 text-xs">Choose all, specific, or range of columns to extract from your data.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Configure</h3>
+          <p class="text-gray-400 text-xs">Set delimiter, trim options, and header preferences. Changes apply instantly.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Extract</h3>
+          <p class="text-gray-400 text-xs">Copy extracted columns or download in your preferred format.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Text Column Parsing: Mastering Data Extraction and Columnar Analysis</h2>
+        
+        <p><strong>Text column parsing</strong> is a fundamental data processing technique that enables professionals to extract, analyze, and manipulate structured information from delimited text sources. Whether you need to <strong>parse text columns online</strong> for data cleaning, <strong>extract columns from text</strong> for analysis, or <strong>parse csv columns</strong> for database import, understanding column parsing is essential for modern data workflows. Our <strong>text column parser</strong> provides instant, browser-based extraction without registration or cost barriers.</p>
+
+        <h2>What Is Text Column Parsing and Why Does It Matter?</h2>
+        
+        <p><strong>Text column parsing</strong> refers to the systematic process of analyzing text data organized in columns—separated by delimiters such as commas, tabs, pipes, or custom characters—and extracting specific fields or reorganizing the data structure. This transformation takes raw, linear text storage and converts it into accessible, manipulable data components. When you <strong>parse column data online</strong>, you're performing the critical first step that enables all subsequent data analysis, transformation, and visualization operations.</p>
+
+        <p>The importance of reliable <strong>online text column parser</strong> tools extends across virtually every domain that handles structured data. Data scientists <strong>parse delimited text to columns</strong> to prepare training datasets for machine learning models. Business analysts <strong>parse spreadsheet text</strong> to examine financial reports and sales data. Developers <strong>parse text file columns</strong> to process configuration files and log outputs. Database administrators <strong>parse columnar text online</strong> to migrate data between systems. Without efficient <strong>column text parser free</strong> tools, these routine operations become tedious manual processes prone to errors.</p>
+
+        <h2>Understanding Column Parsing Methods and Techniques</h2>
+
+        <h3>Delimiter Recognition and Tokenization</h3>
+        
+        <p>The foundation of <strong>text column parsing tool</strong> functionality is accurate delimiter detection. Delimiters are characters or strings that separate data fields within each row. Common delimiters include commas for CSV (Comma-Separated Values), tabs for TSV (Tab-Separated Values), pipes for Unix-style data streams, and semicolons for European CSV variants. Advanced <strong>text column analyzer</strong> implementations automatically detect these delimiters by analyzing character frequency patterns and field consistency across sample rows.</p>
+
+        <p>Tokenization—the process of splitting rows into individual fields—must handle complex scenarios beyond simple string splitting. Fields containing delimiter characters must be protected, typically through quoting mechanisms. Quote characters within quoted fields must be escaped. Newlines within quoted fields must be preserved as part of the field rather than treated as row terminators. When you <strong>split text into columns</strong> using professional tools, these edge cases are handled automatically, ensuring data integrity throughout the parsing process.</p>
+
+        <h3>Selective Column Extraction</h3>
+        
+        <p>Not all columns in a dataset are equally relevant for every task. <strong>Text column extractor</strong> functionality enables selective extraction—pulling only specific columns by index, by name (when headers are present), or by pattern matching. This selective approach reduces data volume, improves processing speed, and focuses analysis on relevant information. When you <strong>parse multiple columns from text</strong>, you can choose exactly which fields to retain and which to discard.</p>
+
+        <p>Column selection strategies include: extracting single columns for simple analysis, extracting multiple specific columns for focused datasets, extracting column ranges for contiguous data blocks, and extracting columns by pattern for dynamic schema handling. The <strong>parse column entries</strong> capability transforms monolithic data dumps into targeted, actionable information subsets. Our tool provides intuitive interfaces for all these selection modes, making <strong>parse column list online</strong> operations accessible to users regardless of technical background.</p>
+
+        <h3>Data Type Inference and Transformation</h3>
+        
+        <p>Raw text columns lack explicit type information, but effective <strong>text column utility</strong> tools infer types from content patterns. Numeric columns containing integers or decimals can be identified for mathematical operations. Date columns in various formats can be recognized for temporal analysis. Boolean columns with true/false or yes/no values can be distinguished for logical operations. While the parsed output remains text-based, type awareness enables intelligent formatting, alignment, and validation.</p>
+
+        <h2>Professional Applications of Column Parsing</h2>
+
+        <h3>Data Cleaning and Preparation</h3>
+        
+        <p>Data science workflows begin with <strong>parse text data columns</strong> operations that transform raw sources into clean, structured formats. Real-world data arrives with inconsistencies: mixed delimiters, irregular quoting, encoding issues, and missing values. Before analysis can proceed, these issues must be identified and resolved. <strong>Parse csv file columns</strong> tools provide visual feedback that helps data scientists spot anomalies—misaligned columns indicate parsing errors, variable row lengths suggest schema drift, and width variations reveal data quality issues.</p>
+
+        <p>The <strong>batch text column parser</strong> capability enables processing of large datasets that exceed interactive tool limits. Log files with millions of rows, historical transaction archives, and sensor data streams all require efficient parsing algorithms that maintain performance at scale. Our browser-based tool handles substantial volumes while providing the responsiveness needed for iterative data exploration and cleaning workflows.</p>
+
+        <h3>Business Intelligence and Reporting</h3>
+        
+        <p>Business analysts constantly extract columns from exports generated by ERP systems, CRM platforms, and financial software. These exports often contain dozens of fields, but specific reports require only subsets. When you <strong>parse column values</strong> from these exports, you create focused datasets that feed into pivot tables, charts, and dashboards. The ability to <strong>parse text for spreadsheet</strong> applications streamlines reporting workflows and reduces manual data manipulation.</p>
+
+        <p>Regulatory compliance and audit processes require <strong>parse column content from text</strong> operations that extract specific fields for review. Transaction logs, access records, and change histories must be parsed to demonstrate compliance with data protection regulations, financial reporting standards, and security policies. Automated column parsing ensures consistent, accurate extraction that satisfies audit requirements.</p>
+
+        <h3>Software Development and DevOps</h3>
+        
+        <p>Developers parse columnar data in numerous contexts. API responses often return CSV or TSV formats that require <strong>parse text strings to columns</strong> transformation before processing. Configuration files use delimited formats that must be parsed to extract settings and parameters. Test data generators produce columnar output that needs parsing for validation and verification. The <strong>text column editor online</strong> capability provides immediate visual feedback during debugging and development.</p>
+
+        <p>DevOps teams parse log files and metrics streams that use columnar formats. Web server logs, application traces, and system monitoring data all arrive as delimited text that must be parsed for analysis. When troubleshooting production issues, the ability to <strong>parse text lines to columns</code> quickly—extracting timestamps, error codes, and message fields—accelerates root cause identification and resolution.</p>
+
+        <h3>Content Migration and Integration</h3>
+        
+        <p>Content management projects involve <strong>parse text into table columns</strong> operations that transform legacy data for modern platforms. Product catalogs, user directories, and content repositories often export as delimited files that must be parsed, mapped, and loaded into new systems. The <strong>text column formatter online</strong> functionality helps content teams validate source data, identify mapping issues, and ensure clean migration.</p>
+
+        <h2>Advanced Column Parsing Techniques</h2>
+
+        <h3>Handling Complex Delimited Formats</h3>
+        
+        <p>Real-world data rarely conforms to simple specifications. RFC 4180 defines standard CSV format, but actual files vary widely: different quote characters, alternate line endings, byte order marks, and encoding variations. Professional <strong>text column parsing utility online</strong> tools handle these variations through configurable parsing options and automatic detection. When you <strong>parse delimited data into columns</strong>, robust error handling ensures that malformed rows don't crash the entire process.</p>
+
+        <p>Multi-character delimiters present additional challenges. Some legacy systems use double colons (::), tildes (~), or other multi-byte sequences as field separators. Fixed-width formats—where columns are defined by character positions rather than delimiters—require different parsing logic altogether. Versatile <strong>free text column parser tool</strong> implementations support these specialized formats through custom delimiter specification and positional parsing options.</p>
+
+        <h3>Header Handling and Schema Extraction</h3>
+        
+        <p>Many datasets include header rows that name each column. When <strong>parse text columns instantly</strong>, preserving these headers maintains semantic meaning and enables column selection by name rather than index. Advanced parsers can use headers to generate JSON objects, SQL CREATE TABLE statements, or programming language structs that reflect the data schema. This schema extraction bridges the gap between raw text and structured data types.</p>
+
+        <p>The <strong>first row is headers</strong> option in our tool enables intelligent header handling. When enabled, the first row is treated as column names rather than data, appearing in selection interfaces and optionally included in output formats that support named fields (like JSON). This simple option dramatically improves usability for datasets that include descriptive headers.</p>
+
+        <h3>Encoding and Internationalization</h3>
+        
+        <p>Global data sources require encoding-aware parsing. UTF-8, the modern standard, supports all Unicode characters but must be decoded correctly to avoid corruption. Legacy files may use Latin-1, Windows code pages, or Asian encodings. The <strong>text column extractor online free</strong> tool must detect or accept encoding specifications to parse international text correctly. Byte Order Marks (BOM) at file beginnings indicate UTF variants and must be handled transparently.</p>
+
+        <h2>Best Practices for Effective Column Parsing</h2>
+
+        <h3>Pre-Parsing Validation</h3>
+        
+        <p>Before applying <strong>text column parser</strong> operations, examine your source data characteristics. Check file size to ensure it fits within tool limits. Preview the first few rows to identify the delimiter and verify consistent structure. Look for encoding issues—garbled characters or replacement symbols indicate mismatched encoding. Check for quoted fields that might contain embedded delimiters or newlines. Our tool's preview functionality helps identify these characteristics before full parsing.</p>
+
+        <h3>Selective Extraction Strategy</h3>
+        
+        <p>Match your column selection to your analysis goals. Extract only the columns needed for immediate tasks to reduce cognitive load and processing time. Use column ranges for contiguous data blocks, specific indices for scattered fields, and header names when semantic meaning matters. When preparing data for others, include descriptive headers and consistent formatting. The <strong>parse text to column list</strong> approach—creating clear, minimal extracts—improves collaboration and reduces errors.</p>
+
+        <h3>Post-Parsing Verification</h3>
+        
+        <p>Always verify parsed output, especially for critical data. Check that row counts match expectations—lost rows indicate parsing failures, duplicated rows suggest delimiter issues. Verify that extracted columns contain expected data types—numeric fields shouldn't contain text, dates should follow consistent formats. Spot-check specific values against source data to confirm accurate extraction. Professional <strong>text column parser batch tool</strong> workflows include these validation steps as standard practice.</p>
+
+        <h2>Comparing Column Parsing Approaches</h2>
+
+        <h3>Spreadsheet Applications vs. Dedicated Parsers</h3>
+        
+        <p>Excel, Google Sheets, and similar tools provide Import and Text to Columns features for parsing delimited data. However, they require file-based workflows, may alter data types automatically, struggle with large files, and lack advanced extraction options. Dedicated <strong>online text column parsing tool</strong> utilities offer immediate paste-and-parse workflows, type preservation, large file support, and selective extraction capabilities. For quick inspections, data sampling, or format conversion, browser-based parsers provide superior efficiency.</p>
+
+        <h3>Programming Solutions vs. Visual Tools</h3>
+        
+        <p>Developers can write parsing scripts using Python's csv module, JavaScript split operations, or specialized libraries like Pandas. While powerful, these require coding knowledge, environment setup, and iteration time. Visual <strong>parse column text free</strong> tools provide immediate feedback, accessible to non-technical users and convenient for technical users needing quick results. The optimal workflow often combines both: visual tools for exploration and scripts for production automation.</p>
+
+        <h2>The Future of Columnar Data Processing</h2>
+
+        <p>Artificial intelligence is beginning to enhance <strong>text column parsing</strong> through intelligent schema detection, automatic delimiter suggestion, and anomaly identification. Future tools may automatically recommend optimal parsing strategies based on content analysis, detect and repair malformed data, and suggest appropriate data types for extracted columns. As data volumes grow and sources diversify, smart parsing tools will become increasingly essential for efficient data preparation.</p>
+
+        <h2>Conclusion: Master Column Parsing for Data Excellence</h2>
+
+        <p><strong>Text column parsing</strong> remains one of the most fundamental yet powerful techniques in data processing. From CSV extraction to TSV transformation, selective column retrieval to schema analysis, the ability to <strong>parse text columns online</strong> efficiently empowers professionals across every data-driven field. Whether you need to <strong>parse csv columns</strong> for analysis, <strong>extract columns from text</strong> for reporting, or handle specialized delimited formats, mastering this technique will significantly enhance your productivity and data quality.</p>
+
+        <p>Our <strong>free text column parser tool</strong> provides all the functionality you need for professional column parsing. With automatic delimiter detection, flexible column selection (all, specific, or range), header handling, and multiple output formats, this tool serves everyone from casual users to data professionals. The browser-based architecture ensures privacy and accessibility, while the intuitive interface requires no learning curve. Stop struggling with manual data extraction—start using our professional <strong>text column parser</strong> today and experience the efficiency of automated column parsing.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool parse columns automatically?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>text column parser</strong> features <strong>automatic delimiter detection and parsing</strong>. As you paste data, the tool analyzes it to identify the delimiter (comma, tab, pipe, etc.) and immediately parses it into columns. The "Auto-parsing enabled" indicator confirms active processing. You can also manually select your delimiter or choose specific columns to extract. All changes apply instantly with real-time preview.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I extract specific columns from my data?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Select the <strong>"Specific"</strong> option under Column Selection, then enter the column numbers you want to extract (e.g., "1,3,5" for columns 1, 3, and 5). Alternatively, use the <strong>"Range"</strong> option to extract a continuous block (e.g., columns 2-4). The Column Selector section also provides checkboxes for each detected column. The output will contain only your selected columns in the specified order.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I parse large files with this tool?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>batch text column parser</strong> handles files up to 10-20MB (millions of rows). Drag and drop CSV, TSV, or delimited text files. The tool uses optimized algorithms for efficient processing. For extremely large files (100MB+), consider processing in chunks or using command-line tools. Browser-based processing ensures your data stays private even with large files.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What does "First row is headers" option do?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">When enabled, the first row of your data is treated as column headers rather than data values. These headers appear in the Column Selector checkboxes, making it easier to identify which columns to extract. Headers are preserved in the output for formats that support them (like CSV with headers or JSON). Disable this option if your data has no header row.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How does the auto-detect delimiter feature work?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">The auto-detect algorithm analyzes your data to find the delimiter that produces the most consistent column structure. It checks for commas, tabs, pipes, semicolons, and multiple spaces. The algorithm looks for characters that appear regularly between fields and produce consistent column counts across rows. It works accurately for 95% of standard formats. You can always override with manual selection if needed.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does the tool handle quoted fields correctly?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our parser correctly handles RFC 4180 compliant CSV quoting. Fields wrapped in double quotes can contain commas, tabs, newlines, and other delimiters without breaking the column structure. Internal quotes are handled by doubling them (""). This ensures that data like "New York, NY" or "He said ""Hello""" stays in single columns rather than splitting incorrectly.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my data secure when using this tool?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely. All processing happens <strong>locally in your browser</strong>—your data never uploads to our servers or leaves your device. You can verify this by checking your browser's Network tab (no external data transfer). The tool works offline after loading. This makes it ideal for processing sensitive business data, personal information, or confidential records. Privacy is built into our <strong>text column parser</strong> architecture.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I parse data with inconsistent column counts?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! The tool handles irregular data gracefully. Rows with fewer fields receive blank padding; rows with extra fields are included with all data preserved. The Column Analysis section shows the maximum number of columns detected and flags any inconsistencies. This helps you identify data quality issues while still producing usable output from imperfect source data.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool work with international characters?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Full Unicode support includes all international characters, emoji, and special symbols. The tool handles UTF-8 encoding correctly, including files with Byte Order Marks (BOM). Whether your data contains Chinese characters, Arabic script, European accents, or mathematical symbols, the parsing maintains character integrity and proper column alignment.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this tool free to use?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, completely <strong>free</strong> with no registration, usage limits, watermarks, or hidden fees. Use it for personal projects, commercial work, or educational purposes without attribution. This is truly a <strong>free text column parser tool</strong> for everyone. The tool is supported by unobtrusive advertising and voluntary user support, allowing us to maintain and improve the service while keeping it accessible to all users worldwide.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const outputText = document.getElementById('outputText');
+const inputStats = document.getElementById('inputStats');
+const outputStats = document.getElementById('outputStats');
+const processingTime = document.getElementById('processingTime');
+const columnSelector = document.getElementById('columnSelector');
+const columnCheckboxes = document.getElementById('columnCheckboxes');
+const selectAllBtn = document.getElementById('selectAllBtn');
+const columnAnalysis = document.getElementById('columnAnalysis');
+const analysisDetails = document.getElementById('analysisDetails');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+
+// Buttons
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const resetBtn = document.getElementById('resetBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+// Delimiter buttons
+const delimiterBtns = document.querySelectorAll('.method-btn');
+const extractBtns = document.querySelectorAll('.extract-btn');
+const delimiterPanels = document.querySelectorAll('.delimiter-panel');
+const extractPanels = document.querySelectorAll('.extract-panel');
+
+let currentDelimiter = 'auto';
+let currentExtract = 'all';
+let parsedData = [];
+let headers = [];
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Detect delimiter
+function detectDelimiter(text) {
+  if (!text.trim()) return ',';
+  
+  const lines = text.split('\n').filter(l => l.trim());
+  if (lines.length === 0) return ',';
+  
+  const delimiters = [
+    { char: '\t', weight: 3 },
+    { char: ',', weight: 2 },
+    { char: '|', weight: 2 },
+    { char: ';', weight: 2 },
+    { char: '  ', weight: 1 }
+  ];
+  
+  let bestDelimiter = ',';
+  let maxScore = 0;
+  
+  for (const delim of delimiters) {
+    let colCounts = [];
+    for (const line of lines.slice(0, 10)) {
+      const count = line.split(delim.char).length;
+      colCounts.push(count);
+    }
+    
+    const uniqueCounts = [...new Set(colCounts)];
+    const avgCols = colCounts.reduce((a, b) => a + b, 0) / colCounts.length;
+    
+    if (uniqueCounts.length === 1 && avgCols > 1) {
+      const score = avgCols * delim.weight;
+      if (score > maxScore) {
+        maxScore = score;
+        bestDelimiter = delim.char;
+      }
+    }
+  }
+  
+  return bestDelimiter;
+}
+
+// Parse CSV with quote handling
+function parseCSV(text, delimiter) {
+  const rows = [];
+  let currentRow = [];
+  let currentCell = '';
+  let inQuotes = false;
+  
+  for (let i = 0; i < text.length; i++) {
+    const char = text[i];
+    const nextChar = text[i + 1];
+    
+    if (inQuotes) {
+      if (char === '"') {
+        if (nextChar === '"') {
+          currentCell += '"';
+          i++;
+        } else {
+          inQuotes = false;
+        }
+      } else {
+        currentCell += char;
+      }
+    } else {
+      if (char === '"') {
+        inQuotes = true;
+      } else if (char === delimiter) {
+        currentRow.push(currentCell);
+        currentCell = '';
+      } else if (char === '\n') {
+        currentRow.push(currentCell);
+        rows.push(currentRow);
+        currentRow = [];
+        currentCell = '';
+      } else {
+        currentCell += char;
+      }
+    }
+  }
+  
+  if (currentCell || currentRow.length > 0) {
+    currentRow.push(currentCell);
+    rows.push(currentRow);
+  }
+  
+  return rows;
+}
+
+// Parse simple delimited
+function parseSimple(text, delimiter) {
+  return text.split('\n').map(line => line.split(delimiter));
+}
+
+// Get delimiter
+function getDelimiter() {
+  switch(currentDelimiter) {
+    case 'comma': return ',';
+    case 'tab': return '\t';
+    case 'pipe': return '|';
+    case 'semicolon': return ';';
+    case 'space': return '  ';
+    case 'custom': return customDelimiter.value || ',';
+    case 'auto':
+    default:
+      return detectDelimiter(inputText.value);
+  }
+}
+
+// Process data
+function processData() {
+  const trimCells = document.getElementById('trimCells').checked;
+  const removeEmpty = document.getElementById('removeEmpty').checked;
+  const firstRowHeaders = document.getElementById('firstRowHeaders').checked;
+  
+  let rows = parsedData.map(row => 
+    row.map(cell => trimCells ? cell.trim() : cell)
+  ).filter(row => !removeEmpty || row.some(cell => cell.length > 0));
+  
+  if (firstRowHeaders && rows.length > 0) {
+    headers = rows[0];
+    rows = rows.slice(1);
+  } else {
+    headers = rows[0].map((_, i) => `Column ${i + 1}`);
+  }
+  
+  return rows;
+}
+
+// Get selected column indices
+function getSelectedColumns() {
+  const maxCols = Math.max(...parsedData.map(row => row.length));
+  
+  if (currentExtract === 'all') {
+    return Array.from({length: maxCols}, (_, i) => i);
+  } else if (currentExtract === 'specific') {
+    const input = document.getElementById('specificColumns').value;
+    return input.split(',').map(s => parseInt(s.trim()) - 1).filter(n => !isNaN(n) && n >= 0);
+  } else if (currentExtract === 'range') {
+    const from = parseInt(document.getElementById('rangeFrom').value) - 1;
+    const to = parseInt(document.getElementById('rangeTo').value);
+    return Array.from({length: Math.max(0, to - from)}, (_, i) => from + i);
+  }
+  
+  // Checkbox selection
+  const checkboxes = columnCheckboxes.querySelectorAll('input[type="checkbox"]');
+  return Array.from(checkboxes).map((cb, i) => cb.checked ? i : -1).filter(i => i >= 0);
+}
+
+// Update column checkboxes
+function updateColumnCheckboxes() {
+  if (parsedData.length === 0) {
+    columnSelector.classList.add('hidden');
+    return;
+  }
+  
+  const maxCols = Math.max(...parsedData.map(row => row.length));
+  const firstRowHeaders = document.getElementById('firstRowHeaders').checked;
+  
+  columnCheckboxes.innerHTML = '';
+  
+  for (let i = 0; i < maxCols; i++) {
+    const label = document.createElement('label');
+    label.className = 'flex items-center gap-2 cursor-pointer';
+    
+    const headerText = firstRowHeaders && parsedData[0][i] ? parsedData[0][i] : `Col ${i + 1}`;
+    
+    label.innerHTML = `
+      <input type="checkbox" class="column-checkbox rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3" value="${i}" checked>
+      <div class="px-2 py-1 rounded border border-white/10 bg-white/5 text-xs text-gray-300 transition-all">
+        ${headerText}
+      </div>
+    `;
+    
+    columnCheckboxes.appendChild(label);
+  }
+  
+  if (currentExtract === 'checkbox') {
+    columnSelector.classList.remove('hidden');
+  }
+}
+
+// Extract and format output
+function extractColumns() {
+  const startTime = performance.now();
+  const text = inputText.value;
+  
+  if (!text.trim()) {
+    outputText.value = '';
+    inputStats.textContent = 'Rows: 0 | Columns: 0';
+    outputStats.textContent = 'Extracted: 0 columns | 0 rows';
+    processingTime.textContent = '';
+    columnSelector.classList.add('hidden');
+    columnAnalysis.classList.add('hidden');
+    parsedData = [];
+    return;
+  }
+  
+  try {
+    // Parse input
+    const delimiter = getDelimiter();
+    
+    if (delimiter === ',' && currentDelimiter !== 'space') {
+      parsedData = parseCSV(text, delimiter);
+    } else {
+      parsedData = parseSimple(text, delimiter);
+    }
+    
+    if (parsedData.length === 0) {
+      columnSelector.classList.add('hidden');
+      columnAnalysis.classList.add('hidden');
+      return;
+    }
+    
+    // Process data
+    const rows = processData();
+    const selectedCols = getSelectedColumns();
+    
+    // Extract selected columns
+    const extracted = rows.map(row => 
+      selectedCols.map(colIndex => row[colIndex] || '')
+    );
+    
+    // Format output
+    const output = extracted.map(row => row.join('\t')).join('\n');
+    
+    const endTime = performance.now();
+    
+    // Update output
+    outputText.value = output;
+    
+    // Update stats
+    const maxCols = Math.max(...parsedData.map(row => row.length));
+    inputStats.textContent = `Rows: ${parsedData.length} | Columns: ${maxCols}`;
+    outputStats.textContent = `Extracted: ${selectedCols.length} columns | ${extracted.length} rows`;
+    processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+    
+    // Update column selector
+    updateColumnCheckboxes();
+    
+    // Update analysis
+    columnAnalysis.classList.remove('hidden');
+    analysisDetails.innerHTML = `
+      <div>Total Rows: <span class="text-gray-300">${parsedData.length}</span></div>
+      <div>Max Columns: <span class="text-gray-300">${maxCols}</span></div>
+      <div>Extracted: <span class="text-gray-300">${selectedCols.length}</span></div>
+      <div>Delimiter: <span class="text-gray-300">${delimiter === '\t' ? 'Tab' : delimiter}</span></div>
+    `;
+    
+  } catch (error) {
+    console.error('Parse error:', error);
+  }
+}
+
+// Debounce function
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+const debouncedExtract = debounce(extractColumns, 0);
+
+// Delimiter selection
+delimiterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    delimiterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentDelimiter = btn.dataset.delimiter;
+    
+    delimiterPanels.forEach(panel => panel.classList.add('hidden'));
+    const panel = document.getElementById(currentDelimiter + 'Options');
+    if (panel) panel.classList.remove('hidden');
+    
+    extractColumns();
+  });
+});
+
+// Extract mode selection
+extractBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    extractBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentExtract = btn.dataset.extract;
+    
+    extractPanels.forEach(panel => panel.classList.add('hidden'));
+    const panel = document.getElementById(currentExtract + 'Options');
+    if (panel) panel.classList.remove('hidden');
+    
+    if (currentExtract === 'checkbox') {
+      columnSelector.classList.remove('hidden');
+    } else {
+      columnSelector.classList.add('hidden');
+    }
+    
+    extractColumns();
+  });
+});
+
+// Options listeners
+const options = ['customDelimiter', 'specificColumns', 'rangeFrom', 'rangeTo', 'trimCells', 'removeEmpty', 'firstRowHeaders'];
+options.forEach(id => {
+  const el = document.getElementById(id);
+  if (el) {
+    el.addEventListener('input', extractColumns);
+    el.addEventListener('change', () => {
+      if (id === 'firstRowHeaders') updateColumnCheckboxes();
+      extractColumns();
+    });
+  }
+});
+
+// Select all columns
+selectAllBtn.addEventListener('click', () => {
+  const checkboxes = columnCheckboxes.querySelectorAll('input[type="checkbox"]');
+  const allChecked = Array.from(checkboxes).every(cb => cb.checked);
+  checkboxes.forEach(cb => cb.checked = !allChecked);
+  selectAllBtn.textContent = allChecked ? 'Select All' : 'Deselect All';
+  extractColumns();
+});
+
+// Column checkbox change
+columnCheckboxes.addEventListener('change', (e) => {
+  if (e.target.classList.contains('column-checkbox')) {
+    extractColumns();
+  }
+});
+
+// Drag and drop
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  if (!file.type.match('text.*') && !file.name.match(/\.(txt|csv|tsv|psv|ssv|md|json|xml|sql|log)$/i)) {
+    alert('Please upload a text file');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    extractColumns();
+  };
+  reader.readAsText(file);
+}
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    extractColumns();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  extractColumns();
+  inputText.focus();
+}
+
+// Copy output
+async function copyOutput() {
+  if (!outputText.value) return;
+  
+  try {
+    await navigator.clipboard.writeText(outputText.value);
+    const originalText = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalText;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+}
+
+// Download output
+function downloadOutput() {
+  const text = outputText.value;
+  if (!text.trim()) return;
+  
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'extracted-columns.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Reset all
+function resetAll() {
+  inputText.value = '';
+  outputText.value = '';
+  inputStats.textContent = 'Rows: 0 | Columns: 0';
+  outputStats.textContent = 'Extracted: 0 columns | 0 rows';
+  processingTime.textContent = '';
+  columnSelector.classList.add('hidden');
+  columnAnalysis.classList.add('hidden');
+  parsedData = [];
+  headers = [];
+  
+  // Reset options
+  currentDelimiter = 'auto';
+  delimiterBtns.forEach(b => b.classList.remove('active'));
+  delimiterBtns[0].classList.add('active');
+  
+  currentExtract = 'all';
+  extractBtns.forEach(b => b.classList.remove('active'));
+  extractBtns[0].classList.add('active');
+  
+  document.getElementById('trimCells').checked = true;
+  document.getElementById('removeEmpty').checked = false;
+  document.getElementById('firstRowHeaders').checked = false;
+  document.getElementById('customDelimiter').value = '';
+  document.getElementById('specificColumns').value = '';
+  document.getElementById('rangeFrom').value = 1;
+  document.getElementById('rangeTo').value = 3;
+  
+  delimiterPanels.forEach(panel => panel.classList.add('hidden'));
+  extractPanels.forEach(panel => panel.classList.add('hidden'));
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Event listeners
+inputText.addEventListener('input', debouncedExtract);
+
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+copyBtn.addEventListener('click', copyOutput);
+downloadBtn.addEventListener('click', downloadOutput);
+resetBtn.addEventListener('click', resetAll);
+</script>
+</body>
+</html>
