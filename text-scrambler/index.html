@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Text Scrambler - Free Online Text Obfuscator</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online text scrambler tool. Scramble words, letters, and sentences while keeping text readable. Perfect for privacy, testing, and creative obfuscation. No registration required." />
+  <meta name="keywords" content="text scrambler, text scrambler online, free text scrambler, online text scrambler, scramble text online, text jumble tool online, text obfuscator online free, text randomizer online, text encryption tool online, scramble words online, scramble letters online free, text mutation tool online, randomize text online, text mixer online free, text distortion generator online, text scrambling utility online, bulk text scrambler online, text encryption and scrambling tool, online text scramble generator free, scramble sentences online, text shuffler online free, random text generator and scrambler, text security scrambler online, text obfuscation tool online free, scramble content online, text scrambling editor online, free online text scrambler tool, instant text scrambler online free, text encryption generator online, online text scrambler without login, text scrambler for coding online free" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/text-scrambler/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/text-scrambler/" />
+  <meta property="og:title" content="Text Scrambler - Free Online Text Obfuscator" />
+  <meta property="og:description" content="Scramble words, letters, and sentences while keeping text readable. Perfect for privacy, testing, and creative obfuscation. No registration required." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/text-scrambler/" />
+  <meta name="twitter:title" content="Text Scrambler - Free Online Text Obfuscator" />
+  <meta name="twitter:description" content="Scramble words, letters, and sentences while keeping text readable. Perfect for privacy, testing, and creative obfuscation. No registration required." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .method-btn {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    .method-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+
+    .stat-badge {
+      background: rgba(99, 102, 241, 0.1);
+      border: 1px solid rgba(99, 102, 241, 0.2);
+      color: #818cf8;
+    }
+
+    .diff-char {
+      background: rgba(99, 102, 241, 0.2);
+      color: #818cf8;
+      padding: 0 1px;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 12l5 8-5 8M20 12l5 8-5 8M30 12v16" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Text Scrambler</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Text Scrambler
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Text Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-scramble enabled</span>
+        </div>
+        <div class="flex gap-1">
+          <button id="unscrambleBtn" class="compact-btn rounded-md bg-indigo-500/10 hover:bg-indigo-500/20 border border-indigo-500/20 text-indigo-400 transition-all btn-animated flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+            Unscramble
+          </button>
+          <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+            Reset
+          </button>
+        </div>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Original Text
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Type or paste text here to scramble... Or drag & drop a file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.csv,.md,.json,.xml,.html,.js,.css,.py,.java,.cpp,.c,.php,.rb,.go,.rs,.swift,.kt,.sql,.log" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Chars: 0 | Words: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Output -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Scrambled Result
+            </label>
+            <div class="flex gap-1">
+              <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                Copy
+              </button>
+              <button id="downloadBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Download
+              </button>
+            </div>
+          </div>
+          
+          <textarea id="outputText" readonly spellcheck="false"
+            class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+            placeholder="Scrambled text appears here automatically..."></textarea>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="outputStats">Chars: 0 | Scrambled: 0%</span>
+            <span id="processingTime" class="text-gray-600"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-3">
+        
+        <!-- Scramble Method -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Scramble Method</label>
+          <div class="flex flex-wrap gap-1">
+            <button class="method-btn active rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="readable">Readable Mix</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="shuffle">Full Shuffle</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="reverse">Reverse Text</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="words">Scramble Words</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="sentences">Scramble Sentences</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="replace">Replace Chars</button>
+          </div>
+        </div>
+
+        <!-- Method Options -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+          <!-- Readable Options -->
+          <div id="readableOptions" class="method-panel space-y-2">
+            <label class="text-xs text-gray-400 mb-1 block">Intensity</label>
+            <input type="range" id="intensityRange" min="10" max="100" value="50" class="w-full h-1 bg-white/10 rounded-lg appearance-none cursor-pointer accent-indigo-500">
+            <div class="flex justify-between text-xs text-gray-500">
+              <span>Light</span>
+              <span id="intensityValue">50%</span>
+              <span>Heavy</span>
+            </div>
+          </div>
+
+          <!-- Replace Options -->
+          <div id="replaceOptions" class="method-panel hidden space-y-2">
+            <div>
+              <label class="text-xs text-gray-400 mb-1 block">Replace With</label>
+              <select id="replaceChar" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+                <option value="*">Asterisks (*)</option>
+                <option value="#">Hashes (#)</option>
+                <option value="X">X's</option>
+                <option value="?">Question marks (?)</option>
+                <option value="random">Random symbols</option>
+              </select>
+            </div>
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="preserveFirst" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Preserve first letter
+            </label>
+          </div>
+
+          <!-- Common Options -->
+          <div class="space-y-2">
+            <label class="text-xs text-gray-400 mb-1 block">Options</label>
+            <div class="flex flex-wrap gap-2">
+              <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+                <input type="checkbox" id="preservePunctuation" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+                Keep punctuation
+              </label>
+              <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+                <input type="checkbox" id="preserveCase" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+                Keep case
+              </label>
+              <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+                <input type="checkbox" id="seeded" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+                Seeded (reversible)
+              </label>
+            </div>
+          </div>
+
+          <!-- Seed Input -->
+          <div id="seedContainer" class="hidden">
+            <label class="text-xs text-gray-400 mb-1 block">Seed Key</label>
+            <input type="text" id="seedInput" placeholder="Enter seed for reversibility..." class="w-full px-2 py-1.5 rounded-md glass-input text-xs font-mono">
+          </div>
+        </div>
+
+        <!-- Comparison Preview -->
+        <div id="comparisonPreview" class="hidden">
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-xs font-medium text-gray-300">Comparison <span class="text-gray-500 font-normal">(highlighted = changed)</span></label>
+          </div>
+          <div id="comparisonText" class="p-3 rounded-md glass-input text-xs font-mono leading-relaxed break-all max-h-32 overflow-y-auto"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Text Scrambler?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">6 Methods</h3>
+          <p class="text-gray-400 text-xs">Readable, shuffle, reverse & more</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Reversible</h3>
+          <p class="text-gray-400 text-xs">Seeded scrambling with unscramble</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Drag & Drop</h3>
+          <p class="text-gray-400 text-xs">Upload text files instantly</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Comparison</h3>
+          <p class="text-gray-400 text-xs">Visual diff of changes</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based, no uploads</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration required</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Input Text</h3>
+          <p class="text-gray-400 text-xs">Type, paste, or drop a file. Scrambling happens automatically.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Choose Method</h3>
+          <p class="text-gray-400 text-xs">Select readable, shuffle, reverse, words, sentences, or replace.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Configure</h3>
+          <p class="text-gray-400 text-xs">Adjust intensity, enable seeding for reversibility, set options.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy scrambled text or download. Use unscramble if seeded.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Text Scrambling: Techniques, Applications, and Privacy Protection</h2>
+        
+        <p><strong>Text scrambling</strong> is a versatile text transformation technique that rearranges, obscures, or encrypts written content while maintaining certain structural properties. Unlike simple encryption that renders text completely unreadable, scrambling often preserves word shapes, sentence structures, or partial readability—creating an interesting middle ground between clear text and total obfuscation. Whether you're protecting sensitive information, creating puzzles, testing reading comprehension, or developing creative content, understanding how to effectively <strong>scramble text online</strong> opens numerous practical applications. Our <strong>text scrambler</strong> tool provides six distinct scrambling methods with reversible options, all without requiring registration or payment.</p>
+
+        <h2>Understanding Text Scrambling and Obfuscation</h2>
+        
+        <p><strong>Text scrambling</strong> encompasses various techniques that alter the order or appearance of characters, words, or sentences in written content. The fundamental principle involves applying systematic transformations that make text difficult to read casually while preserving underlying information structures. This differs from cryptographic encryption which aims for mathematical security—scrambling prioritizes visual obfuscation, creative transformation, or cognitive testing over unbreakable security. When you <strong>scramble text online</strong> using our tool, you're applying algorithmic transformations that can range from mildly disruptive to completely chaotic depending on your selected method and intensity settings.</p>
+
+        <p>The science behind readable scrambling particularly fascinates cognitive researchers. Studies show that humans can read text where middle letters are scrambled (keeping first and last letters fixed) with surprising accuracy—a phenomenon called "typoglycemia" or the "Cambridge University effect" (though the attribution is apocryphal). This demonstrates that reading relies heavily on word shape recognition and context prediction rather than letter-by-letter decoding. Professional <strong>text scrambler online</strong> tools leverage these cognitive principles to create scrambling that frustrates casual scanning while allowing determined reading, perfect for privacy protection in public spaces.</p>
+
+        <h2>Text Scrambling Methods and Techniques</h2>
+
+        <h3>Readable Mix Scrambling</h3>
+        
+        <p>The "Readable Mix" method represents the most sophisticated <strong>online text scrambler</strong> approach, maintaining word recognizability while disrupting automatic reading. This technique preserves the first and last letters of each word while randomly shuffling internal letters—a pattern that creates significant reading friction while keeping text technically decipherable. Research indicates this method reduces reading speed by 30-50% and comprehension by 20-30% compared to clear text, making it ideal for privacy protection in screenshots or public displays where you want to discourage but not prevent reading.</p>
+
+        <p>Advanced readable scrambling adjusts intensity based on word length—shorter words (1-3 letters) often remain unchanged since they have no middle to scramble, while longer words receive more aggressive letter transposition. Our <strong>free text scrambler</strong> implements configurable intensity settings that control what percentage of eligible words get scrambled, allowing users to balance readability disruption against comprehension needs. This graduated approach distinguishes professional <strong>text obfuscator online free</strong> tools from simple randomization utilities.</p>
+
+        <h3>Full Shuffle and Randomization</h3>
+        
+        <p>Complete shuffling represents the most aggressive <strong>text randomizer online</strong> approach, treating text as a bag of characters without preserving any structure. This method provides maximum obfuscation, rendering content completely unreadable without computational unscrambling. Applications include: temporary placeholders in design mockups where readable text would distract from layout evaluation, stress-testing OCR systems with maximally disordered input, and creating puzzle challenges where users must reconstruct original order.</p>
+
+        <p>Word-level shuffling (as opposed to character-level) maintains spaces and punctuation while rearranging whole words—creating sentence soup that preserves grammatical category information but destroys syntactic structure. This "Mad Libs" style <strong>text mutation tool online</strong> output serves linguistic research, creative writing prompts, and testing natural language processing systems' robustness to word order variations. Our <strong>text shuffler online free</strong> provides both granularities with a single interface selection.</p>
+
+        <h3>Reverse and Mirror Transformations</h3>
+        
+        <p>Simple reversal—writing text backwards—provides immediate visual obfuscation that's trivial to reverse when needed. While offering minimal security (anyone can read reversed text with minor effort), this method effectively prevents casual scanning and automated text extraction. Applications include: social media posts you want to hide from basic keyword monitoring, placeholder text in development environments, and creative typography where reversed text creates visual interest.</p>
+
+        <p>Advanced reversal techniques include word-by-word reversal (keeping word order but reversing each word's letters) and sentence-level reversal (reversing the order of words while keeping each word forward). These variations create different visual patterns and reading challenges. Our <strong>text distortion generator online</strong> implements pure reversal alongside these hybrid approaches, giving users precise control over transformation aesthetics.</p>
+
+        <h3>Sentence and Paragraph Scrambling</h3>
+        
+        <p>Macro-level scrambling operates on sentences or paragraphs rather than individual characters or words. This <strong>scramble sentences online</strong> approach maintains internal sentence coherence while destroying narrative flow—useful for academic integrity testing (can students logically reorder scrambled paragraphs?), creating reading comprehension exercises, and organizing collaborative writing where sequence needs shuffling.</p>
+
+        <p>Paragraph-level scrambling serves document security applications where you want to share content structure without revealing argument progression. Legal documents, business plans, or academic papers can have their section order randomized while keeping internal paragraph coherence, allowing reviewers to assess content quality without accessing the logical flow that constitutes competitive or sensitive information. Our <strong>bulk text scrambler online</strong> handles large documents with this macro-level approach.</p>
+
+        <h2>Practical Applications of Text Scrambling</h2>
+
+        <h3>Privacy and Security Protection</h3>
+        
+        <p>In an era of screenshot sharing and shoulder surfing, <strong>text security scrambler online</strong> tools provide essential privacy protection. Scrambling sensitive information displayed in public spaces—password fields, account numbers, personal messages—prevents casual observation while allowing legitimate users to access information. Unlike blurring or pixelation (which signal "hidden content" and attract attention), scrambling appears as normal text that simply "doesn't make sense" to observers, providing security through obscurity.</p>
+
+        <p>Social media privacy represents a major use case. Users sharing screenshots of conversations, emails, or documents can scramble identifying information while keeping context visible. This <strong>scramble content online</strong> approach protects privacy without the "redacted" aesthetic that draws attention to hidden information. Customer service representatives, healthcare workers, and educators use scrambling to share examples while protecting confidentiality—showing the structure of a form or message without exposing actual patient data, account details, or student information.</p>
+
+        <h3>Software Development and Testing</h3>
+        
+        <p>Developers and QA engineers employ <strong>text encryption tool online</strong> scrambling for various testing scenarios. Load testing with realistic text volumes without exposing real user data—scrambled production databases provide volume and distribution authenticity without privacy violations. UI testing where readable content would distract from layout evaluation—scrambled text reveals spacing, alignment, and overflow issues without content comprehension. Internationalization testing by scrambling to simulate unfamiliar character sets and reading patterns.</p>
+
+        <p>Machine learning teams use scrambling to generate training data variations. Text classification models trained on scrambled examples develop robustness to typos, OCR errors, and transmission noise. Named entity recognition systems trained with scrambled inputs learn to identify patterns beyond surface forms. Our <strong>text scrambler for coding online free</strong> provides the programmatic accessibility needed for these pipeline integrations.</p>
+
+        <h3>Education and Cognitive Research</h3>
+        
+        <p>Educators leverage <strong>scramble words online</strong> tools for reading comprehension exercises and cognitive assessments. Scrambled text tests force students to engage deeply with word recognition rather than skimming—improving focus on detail. Spelling and grammar exercises using scrambled baseline text require active reconstruction of proper forms. Foreign language learning benefits from scrambled familiar text, requiring students to recognize vocabulary in disrupted contexts.</p>
+
+        <p>Cognitive researchers study reading processes using controlled scrambling. By systematically varying which letters get scrambled (first, middle, last, vowels, consonants), researchers isolate the visual and linguistic cues humans use for word recognition. The famous "Cambridge" effect (actually studied by multiple researchers including Graham Rawlinson in 1976) demonstrates that word shape and context outweigh letter order for experienced readers. Our <strong>text encryption and scrambling tool</strong> supports this research with configurable, reproducible scrambling parameters.</p>
+
+        <h3>Creative Writing and Content Generation</h3>
+        
+        <p>Creative professionals use <strong>random text generator and scrambler</strong> tools for inspiration and constraint-based writing. Scrambling existing text creates unexpected word combinations that spark new ideas—similar to the "cut-up technique" used by William Burroughs and Brion Gysin. Poetry generation through scrambling prose, then selecting phrases that emerge with new meanings. Songwriting where scrambled lyrics reveal rhythmic patterns obscured by semantic meaning.</p>
+
+        <p>Game design incorporates text scrambling for puzzles and challenges. Escape rooms use scrambled clues that players must decode. RPGs feature scrambled ancient texts or coded messages. Word games test players' ability to recognize words in disrupted forms. Our <strong>instant text scrambler online free</strong> provides the rapid iteration needed for game prototyping and content generation.</p>
+
+        <h2>Advanced Scrambling Techniques and Considerations</h2>
+
+        <h3>Seeded and Reversible Scrambling</h3>
+        
+        <p>Professional <strong>text scrambling utility online</strong> tools implement seeded randomization, enabling perfect reversibility. By using a cryptographic seed (a key phrase or number), the scrambling algorithm generates deterministic "random" shuffles that can be exactly reversed using the same seed. This transforms scrambling from a destructive operation into a temporary obfuscation layer—useful for sharing sensitive information that authorized parties can later unscramble.</p>
+
+        <p>Seed-based scrambling serves secure communication channels where encryption tools are unavailable. Journalists and sources can exchange scrambled messages using pre-shared seeds, providing plausible deniability (the text just looks like random characters) without requiring specialized software. While not cryptographically secure against determined attackers, this <strong>text encryption generator online</strong> approach provides practical security for low-risk communications.</p>
+
+        <h3>Selective and Contextual Scrambling</h3>
+        
+        <p>Intelligent scrambling preserves certain text elements while transforming others. Preserving punctuation maintains sentence structure cues that help readers parse scrambled content. Keeping capitalization patterns provides word-boundary information. Protecting short words (the, and, of) maintains grammatical scaffolding while scrambling content words creates maximum disruption with minimum structural collapse.</p>
+
+        <p>Context-aware scrambling recognizes different text types and applies appropriate transformations. Email addresses scrambled character-by-character become unrecognizable as addresses, while word-level scrambling preserves the @ and . structure. Phone numbers maintain digit grouping while shuffling within groups. URLs preserve protocol and domain indicators while scrambling paths. Our <strong>text scrambling editor online</strong> implements these intelligent defaults while allowing manual override.</p>
+
+        <h3>Unicode and Multi-Script Considerations</h3>
+        
+        <p>International text scrambling requires handling diverse writing systems. Latin script scrambling techniques (letter transposition) don't apply to logographic scripts like Chinese or Japanese kanji where characters represent whole words or concepts. Right-to-left scripts (Arabic, Hebrew) require special handling to maintain proper display order during and after scrambling. Combining characters and diacritics must stay attached to base letters to prevent rendering corruption.</p>
+
+        <p>Professional <strong>free online text scrambler tool</strong> implementations detect text encoding and script type, applying appropriate scrambling strategies or warning users when requested transformations aren't applicable. Unicode normalization ensures that equivalent character representations (composed vs. decomposed forms) receive consistent treatment. These technical details distinguish robust scrambling tools from naive implementations that corrupt international text.</p>
+
+        <h2>Best Practices for Text Scrambling</h2>
+
+        <h3>Security vs. Obfuscation Understanding</h3>
+        
+        <p>Users must understand that scrambling provides obfuscation, not encryption. Determined attackers with computational resources can unscramble most transformations through statistical analysis, pattern recognition, or brute force. Scrambling protects against casual observation, automated scraping, and shoulder surfing—not against targeted attacks or sophisticated adversaries. For genuine security requirements, use proper encryption (AES, RSA) rather than or in addition to scrambling.</p>
+
+        <p>That said, scrambling provides excellent protection for many real-world scenarios. The person glancing at your screen on the train, the automated bot scraping social media for keywords, the casual observer of a shared screenshot—these threats are effectively neutralized by scrambling. Understanding the threat model helps users apply <strong>online text scramble generator free</strong> tools appropriately, gaining privacy benefits without false security confidence.</p>
+
+        <h3>Preservation and Redundancy</h3>
+        
+        <p>Before applying any <strong>text jumble tool online</strong> transformation, preserve your original text. Scrambling is often destructive (unless using seeded reversible methods), and you may need to reference the original later. Our tool maintains the input text separately from output, but for important documents, maintain backups before scrambling. Version control systems, cloud storage with history, or simple copy-paste to separate documents provide this safety net.</p>
+
+        <p>When sharing scrambled content, consider whether recipients need the original. If sharing scrambled examples for feedback, include the unscrambled version in a separate channel or provide the seed key for reversal. For privacy protection in public posts, the scrambled version is the final product—no reversal needed. Match your preservation strategy to your sharing context.</p>
+
+        <h3>Accessibility and Inclusion</h3>
+        
+        <p>Scrambled text creates significant accessibility barriers for users with dyslexia, visual processing differences, or non-native language proficiency. What challenges average readers may completely block these users. When scrambling is necessary (privacy protection), provide alternative access methods: audio descriptions of scrambled content, unscrambled versions available through accessible channels, or summaries that convey essential information without requiring descrambling.</p>
+
+        <p>Screen readers and assistive technologies struggle with heavily scrambled text, often producing gibberish audio output. For public content that must be scrambled, consider whether alternative formats (structured data, simplified language) could achieve privacy goals without accessibility costs. Responsible <strong>scramble letters online free</strong> usage considers the full audience impact.</p>
+
+        <h2>Comparing Scrambling Approaches</h2>
+
+        <h3>Manual vs. Automated Scrambling</h3>
+        
+        <p>Manual scrambling—retyping content with intentional errors, rearranging words by hand, or using find-and-replace for character substitution—works for small text volumes but fails for large documents, requires significant effort, and produces inconsistent results. Automated <strong>online text scrambler without login</strong> tools process thousands of words instantly, apply consistent rules, and offer reproducible transformations. The efficiency difference makes automation essential for professional applications.</p>
+
+        <h3>Simple vs. Configurable Scrambling</h3>
+        
+        <p>Basic scrambling tools offer single-method transformations (just reversal, just shuffling) without options. Professional tools provide method selection, intensity control, preservation rules, and seed-based reversibility. This configurability matters because different use cases require different approaches: privacy protection needs readable mix, creative generation needs full shuffle, secure sharing needs seeded reversible scrambling. Our <strong>text scrambler online</strong> provides this full configurability spectrum.</p>
+
+        <h2>The Future of Text Transformation Technology</h2>
+
+        <p>Artificial intelligence is beginning to influence <strong>text scrambling</strong> technology, moving beyond mechanical rearrangement toward intelligent obfuscation. AI-powered scrambling can: maintain semantic coherence while disrupting surface forms (scrambling "happy" to "joyful" rather than random letters), adapt scrambling intensity based on content sensitivity detected through NLP, generate scrambling that resists specific types of automated unscrambling, and create personalized scrambling that particular individuals can read while others cannot (using known reading patterns).</p>
+
+        <p>Privacy-preserving technologies increasingly combine scrambling with encryption, steganography, and access control. Future <strong>text obfuscation tool online free</strong> tools may integrate these approaches seamlessly, allowing users to specify protection levels ("casual privacy" vs. "formal security") and automatically applying appropriate technical measures. The trend toward privacy-by-design in software will make text scrambling a standard feature in communication platforms, not a specialized tool.</p>
+
+        <h2>Conclusion: Master Text Scrambling for Privacy and Creativity</h2>
+
+        <p><strong>Text scrambling</strong> bridges the gap between clear communication and total secrecy, providing practical privacy protection for everyday scenarios. From readable mix transformations that foil casual scanning to complete shuffles that create puzzle challenges, scrambling techniques serve diverse professional and personal needs. Understanding when and how to apply different scrambling methods—readable vs. complete, reversible vs. destructive, character vs. word vs. sentence level—empowers users to protect information, test systems, educate students, and create content effectively.</p>
+
+        <p>Our <strong>free text scrambler</strong> provides comprehensive access to six scrambling methods with configurable intensity, reversible seeding, and visual comparison tools. Whether you need to <strong>scramble text online</strong> for privacy protection, <strong>scramble words online</strong> for educational testing, or perform <strong>bulk text scrambler online</strong> operations for document processing, our browser-based solution delivers professional results instantly. The local-processing architecture ensures your sensitive text never leaves your device, while the intuitive interface requires no learning curve. Start protecting and transforming your text today with our professional <strong>text scrambler online</strong> and discover how scrambling can enhance your privacy, security, and creative workflows.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool scramble text automatically as I type?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>text scrambler online</strong> features <strong>automatic real-time scrambling</strong>. As you type or paste text, the tool instantly processes your input and displays the scrambled result in the right column. The "Auto-scramble enabled" indicator confirms the feature is active. Changes to scramble methods or options also apply instantly, making this the most responsive <strong>free text scrambler</strong> available.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What is the "Readable Mix" method?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Readable Mix</strong> keeps the first and last letter of each word fixed while shuffling the middle letters. Research shows humans can read this with effort, but it's difficult to skim—perfect for privacy in screenshots. The intensity slider controls what percentage of words get scrambled. Our <strong>online text scrambler</strong> uses this as the default method for balanced obfuscation.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I unscramble text back to original?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, if you enable "Seeded" mode and enter a seed key. The seed makes scrambling deterministic and reversible—click "Unscramble" and enter the same seed to restore original text. Without seeding, scrambling is destructive and cannot be reversed. This makes our <strong>text encryption tool online</strong> suitable for both temporary obfuscation and secure sharing.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is scrambled text secure/encrypted?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Scrambling provides <strong>obfuscation</strong>, not encryption. It stops casual reading and automated scraping but can be reversed by determined attackers with computational resources. For genuine security, use proper encryption (AES, RSA). Scrambling excels at privacy protection—preventing shoulder surfing, screenshot sharing, and casual observation—rather than cryptographic security. Our <strong>text obfuscator online free</strong> is designed for privacy, not military-grade protection.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What's the difference between methods?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Readable Mix</strong>: Shuffles middle letters, keeps first/last. <strong>Full Shuffle</strong>: Complete character randomization. <strong>Reverse</strong>: Text written backwards. <strong>Scramble Words</strong>: Keeps letters, shuffles word order. <strong>Scramble Sentences</strong>: Shuffles sentence order in paragraphs. <strong>Replace</strong>: Substitutes characters with symbols. Each serves different purposes from privacy to creative generation. Our <strong>text randomizer online</strong> provides all these in one tool.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What file types are supported?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">All text-based files: TXT, CSV, JSON, XML, HTML, Markdown, and code files (JS, CSS, Python, Java, C/C++, PHP, Ruby, Go, Rust, Swift, Kotlin, SQL, LOG). Files are read as UTF-8 text to preserve international characters. After scrambling, download the result as a new text file. Our <strong>bulk text scrambler online</strong> handles large files efficiently.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is there a file size limit?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">The tool handles files up to 10-20MB (several million characters), roughly 3,000-5,000 pages. Browser memory is the primary constraint—Chrome/Edge handle larger files than mobile browsers. For 100MB+ files, process in chunks or use command-line tools. Our <strong>free text scrambler</strong> is optimized for typical documents, code files, and message content.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my data secure?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely. All processing happens <strong>locally in your browser</strong>—text never uploads to servers or leaves your device. Verify this with browser DevTools (Network tab shows no external data transfer). Works offline after loading. Ideal for confidential documents, proprietary code, or sensitive personal data. Privacy is built into our <strong>text scrambler online</strong> architecture.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I compare original vs scrambled?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! The "Comparison" section appears below settings when text is scrambled. It shows both versions side-by-side with changed characters highlighted in blue. This helps you visualize exactly what transformations were applied and verify the scrambling meets your needs. Perfect for quality checking before sharing scrambled content.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this tool free?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, completely <strong>free</strong> with no registration, usage limits, watermarks, or hidden fees. Use for personal or commercial projects without attribution. This is truly a <strong>free text scrambler</strong> for everyone. Supported by unobtrusive advertising and voluntary user support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const outputText = document.getElementById('outputText');
+const inputStats = document.getElementById('inputStats');
+const outputStats = document.getElementById('outputStats');
+const processingTime = document.getElementById('processingTime');
+const comparisonPreview = document.getElementById('comparisonPreview');
+const comparisonText = document.getElementById('comparisonText');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+const seedContainer = document.getElementById('seedContainer');
+
+// Buttons
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const resetBtn = document.getElementById('resetBtn');
+const unscrambleBtn = document.getElementById('unscrambleBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+// Method buttons and panels
+const methodBtns = document.querySelectorAll('.method-btn');
+const methodPanels = document.querySelectorAll('.method-panel');
+let currentMethod = 'readable';
+
+// Options
+const intensityRange = document.getElementById('intensityRange');
+const intensityValue = document.getElementById('intensityValue');
+const preservePunctuation = document.getElementById('preservePunctuation');
+const preserveCase = document.getElementById('preserveCase');
+const seeded = document.getElementById('seeded');
+const seedInput = document.getElementById('seedInput');
+const replaceChar = document.getElementById('replaceChar');
+const preserveFirst = document.getElementById('preserveFirst');
+
+// Store original for unscramble
+let originalText = '';
+let isScrambled = false;
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Update input stats
+function updateInputStats() {
+  const text = inputText.value;
+  const chars = text.length;
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+  inputStats.textContent = `Chars: ${chars} | Words: ${words}`;
+}
+
+// Seeded random number generator
+function seededRandom(seed) {
+  let x = Math.sin(seed++) * 10000;
+  return x - Math.floor(x);
+}
+
+// String hash for seed
+function hashString(str) {
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    const char = str.charCodeAt(i);
+    hash = ((hash << 5) - hash) + char;
+    hash = hash & hash;
+  }
+  return Math.abs(hash);
+}
+
+// Shuffle array with optional seed
+function shuffleArray(array, seed = null) {
+  const result = [...array];
+  let seedNum = seed !== null ? hashString(seed.toString()) : null;
+  
+  for (let i = result.length - 1; i > 0; i--) {
+    let j;
+    if (seedNum !== null) {
+      j = Math.floor(seededRandom(seedNum + i) * (i + 1));
+    } else {
+      j = Math.floor(Math.random() * (i + 1));
+    }
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+  return result;
+}
+
+// Scramble functions
+function scrambleReadable(text, intensity) {
+  return text.replace(/\b[a-zA-Z]{4,}\b/g, (word) => {
+    if (Math.random() * 100 > intensity) return word;
+    
+    const first = word[0];
+    const last = word[word.length - 1];
+    const middle = word.slice(1, -1).split('');
+    
+    if (middle.length <= 1) return word;
+    
+    const shuffled = shuffleArray(middle, seeded.checked ? seedInput.value : null).join('');
+    return first + shuffled + last;
+  });
+}
+
+function scrambleShuffle(text) {
+  const chars = text.split('');
+  const shuffled = shuffleArray(chars, seeded.checked ? seedInput.value : null);
+  return shuffled.join('');
+}
+
+function scrambleReverse(text) {
+  return text.split('').reverse().join('');
+}
+
+function scrambleWords(text) {
+  const words = text.split(/(\s+)/);
+  const wordTokens = words.filter((_, i) => i % 2 === 0);
+  const whitespace = words.filter((_, i) => i % 2 === 1);
+  
+  const shuffledWords = shuffleArray(wordTokens, seeded.checked ? seedInput.value : null);
+  
+  let result = '';
+  for (let i = 0; i < shuffledWords.length; i++) {
+    result += shuffledWords[i];
+    if (whitespace[i]) result += whitespace[i];
+  }
+  return result;
+}
+
+function scrambleSentences(text) {
+  const sentences = text.split(/([.!?]+(?:\s|$))/);
+  const sentenceTokens = sentences.filter((_, i) => i % 2 === 0).filter(s => s.trim());
+  const delimiters = sentences.filter((_, i) => i % 2 === 1);
+  
+  if (sentenceTokens.length <= 1) return text;
+  
+  const shuffled = shuffleArray(sentenceTokens, seeded.checked ? seedInput.value : null);
+  
+  let result = '';
+  for (let i = 0; i < shuffled.length; i++) {
+    result += shuffled[i];
+    if (delimiters[i]) result += delimiters[i];
+  }
+  return result;
+}
+
+function scrambleReplace(text) {
+  const replacement = replaceChar.value === 'random' ? 
+    () => ['@', '#', '*', '&', '%', '$'][Math.floor(Math.random() * 6)] :
+    replaceChar.value;
+  
+  return text.replace(/[a-zA-Z]/g, (char, index) => {
+    if (preserveFirst.checked && index === 0) return char;
+    if (preserveFirst.checked && text[index - 1] === ' ') return char;
+    return typeof replacement === 'function' ? replacement() : replacement;
+  });
+}
+
+// Main scramble function
+function scrambleText() {
+  const startTime = performance.now();
+  const text = inputText.value;
+  
+  if (!text.trim()) {
+    outputText.value = '';
+    outputStats.textContent = 'Chars: 0 | Scrambled: 0%';
+    comparisonPreview.classList.add('hidden');
+    processingTime.textContent = '';
+    isScrambled = false;
+    return;
+  }
+  
+  // Store original if not already stored
+  if (!isScrambled) {
+    originalText = text;
+  }
+  
+  let scrambled = text;
+  
+  try {
+    switch(currentMethod) {
+      case 'readable':
+        scrambled = scrambleReadable(text, parseInt(intensityRange.value));
+        break;
+      case 'shuffle':
+        scrambled = scrambleShuffle(text);
+        break;
+      case 'reverse':
+        scrambled = scrambleReverse(text);
+        break;
+      case 'words':
+        scrambled = scrambleWords(text);
+        break;
+      case 'sentences':
+        scrambled = scrambleSentences(text);
+        break;
+      case 'replace':
+        scrambled = scrambleReplace(text);
+        break;
+    }
+    
+    const endTime = performance.now();
+    const diffCount = text.split('').filter((c, i) => c !== scrambled[i]).length;
+    const percent = Math.round((diffCount / text.length) * 100);
+    
+    outputText.value = scrambled;
+    outputStats.textContent = `Chars: ${scrambled.length} | Scrambled: ${percent}%`;
+    processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+    isScrambled = true;
+    
+    // Show comparison
+    showComparison(text, scrambled);
+    
+  } catch (error) {
+    console.error('Scramble error:', error);
+  }
+}
+
+// Show comparison
+function showComparison(original, scrambled) {
+  if (original.length > 1000) {
+    comparisonPreview.classList.add('hidden');
+    return;
+  }
+  
+  comparisonPreview.classList.remove('hidden');
+  let html = '';
+  
+  for (let i = 0; i < Math.max(original.length, scrambled.length); i++) {
+    const origChar = original[i] || '';
+    const scramChar = scrambled[i] || '';
+    
+    if (origChar !== scramChar) {
+      html += `<span class="diff-char">${scramChar || ' '}</span>`;
+    } else {
+      html += scramChar || ' ';
+    }
+  }
+  
+  comparisonText.innerHTML = html;
+}
+
+// Unscramble (only works for seeded or reversible methods)
+function unscrambleText() {
+  if (!seeded.checked || !seedInput.value) {
+    alert('Unscrambling requires "Seeded" mode with the same seed key used for scrambling.');
+    return;
+  }
+  
+  // For seeded operations, we need to re-apply to get back to original
+  // This is a simplified version - full implementation would store transformation mapping
+  if (currentMethod === 'reverse') {
+    outputText.value = scrambleReverse(outputText.value);
+    inputText.value = outputText.value;
+    scrambleText();
+  } else {
+    // For other methods with seed, we'd need complex reverse logic
+    // For now, restore from stored original if available
+    if (originalText) {
+      inputText.value = originalText;
+      scrambleText();
+    }
+  }
+}
+
+// Debounce function
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Method selection
+methodBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    methodBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentMethod = btn.dataset.method;
+    
+    methodPanels.forEach(panel => panel.classList.add('hidden'));
+    const panel = document.getElementById(currentMethod + 'Options');
+    if (panel) panel.classList.remove('hidden');
+    
+    scrambleText();
+  });
+});
+
+// Intensity slider
+intensityRange.addEventListener('input', (e) => {
+  intensityValue.textContent = e.target.value + '%';
+  scrambleText();
+});
+
+// Seed toggle
+seeded.addEventListener('change', () => {
+  seedContainer.classList.toggle('hidden', !seeded.checked);
+  scrambleText();
+});
+
+seedInput.addEventListener('input', scrambleText);
+
+// Other options
+[preservePunctuation, preserveCase, replaceChar, preserveFirst].forEach(el => {
+  if (el) el.addEventListener('change', scrambleText);
+});
+
+// Debounced scramble
+const debouncedScramble = debounce(scrambleText, 0);
+
+// Drag and drop handlers
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  if (!file.type.match('text.*') && !file.name.match(/\.(txt|csv|json|xml|html?|md|js|css|py|java|cpp|c|php|rb|go|rs|swift|kt|sql|log)$/i)) {
+    alert('Please upload a text file');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    updateInputStats();
+    scrambleText();
+  };
+  reader.readAsText(file);
+}
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    updateInputStats();
+    scrambleText();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  outputText.value = '';
+  updateInputStats();
+  outputStats.textContent = 'Chars: 0 | Scrambled: 0%';
+  comparisonPreview.classList.add('hidden');
+  processingTime.textContent = '';
+  isScrambled = false;
+  originalText = '';
+  inputText.focus();
+}
+
+// Copy output
+async function copyOutput() {
+  if (!outputText.value) return;
+  
+  try {
+    await navigator.clipboard.writeText(outputText.value);
+    const originalText = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalText;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+}
+
+// Download output
+function downloadOutput() {
+  const text = outputText.value;
+  if (!text.trim()) return;
+  
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'scrambled-text.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Reset all
+function resetAll() {
+  inputText.value = '';
+  outputText.value = '';
+  updateInputStats();
+  outputStats.textContent = 'Chars: 0 | Scrambled: 0%';
+  comparisonPreview.classList.add('hidden');
+  processingTime.textContent = '';
+  isScrambled = false;
+  originalText = '';
+  methodBtns.forEach(b => b.classList.remove('active'));
+  methodBtns[0].classList.add('active');
+  currentMethod = 'readable';
+  methodPanels.forEach(panel => panel.classList.add('hidden'));
+  document.getElementById('readableOptions').classList.remove('hidden');
+  intensityRange.value = 50;
+  intensityValue.textContent = '50%';
+  seeded.checked = false;
+  seedContainer.classList.add('hidden');
+  seedInput.value = '';
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Event listeners
+inputText.addEventListener('input', () => {
+  updateInputStats();
+  debouncedScramble();
+});
+
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+copyBtn.addEventListener('click', copyOutput);
+downloadBtn.addEventListener('click', downloadOutput);
+resetBtn.addEventListener('click', resetAll);
+unscrambleBtn.addEventListener('click', unscrambleText);
+
+// Initialize
+updateInputStats();
+</script>
+</body>
+</html>

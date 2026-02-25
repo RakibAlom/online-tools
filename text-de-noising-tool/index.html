@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Text De-noising Tool - Free Online Text Cleaner</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online text de-noising tool. Remove random characters, fix encoding issues, and clean noisy or corrupted text instantly. Restore text clarity with no registration required." />
+  <meta name="keywords" content="text de-noising tool, text de-noising online, free text de-noising tool, online text de-noising, remove noise from text online, text noise remover online, clean noisy text online, text denoiser online free, text cleanup tool online, text distortion remover online, text de-obfuscation online, text clarity tool online, remove random characters from text online, text purification tool online, free online text de-noising tool, bulk text de-noising online, clean scrambled text online free, text noise reduction tool, text de-noising utility online, text de-noiser editor online, text correction tool online free, text distortion cleaner online, text clarity and cleanup online, online text de-noiser free, text noise fixer online free, text cleanup and de-noising tool online, remove glitches from text online, text de-noising tool without login online" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/text-de-noising-tool/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/text-de-noising-tool/" />
+  <meta property="og:title" content="Text De-noising Tool - Free Online Text Cleaner" />
+  <meta property="og:description" content="Remove random characters, fix encoding issues, and clean noisy or corrupted text instantly. Restore text clarity with no registration required." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/text-de-noising-tool/" />
+  <meta name="twitter:title" content="Text De-noising Tool - Free Online Text Cleaner" />
+  <meta name="twitter:description" content="Remove random characters, fix encoding issues, and clean noisy or corrupted text instantly. Restore text clarity with no registration required." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .method-btn {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    .method-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .checkbox-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+    }
+    
+    .checkbox-wrapper input[type="checkbox"] {
+      width: 0.875rem;
+      height: 0.875rem;
+      border-radius: 0.25rem;
+      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(0,0,0,0.4);
+      cursor: pointer;
+      accent-color: #6366f1;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+
+    .noise-highlight {
+      background: rgba(239, 68, 68, 0.2);
+      border-bottom: 1px dotted rgba(239, 68, 68, 0.5);
+    }
+    
+    .clean-highlight {
+      background: rgba(34, 197, 94, 0.2);
+      border-bottom: 1px dotted rgba(34, 197, 94, 0.5);
+    }
+
+    .stat-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 20h20M20 10v20" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Text De-noising</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Text De-noising Tool
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Text Cleanup Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-cleaning enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+              Noisy Input
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <textarea id="inputText" spellcheck="false"
+            class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+            placeholder="Paste noisy, corrupted, or scrambled text here..."></textarea>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Chars: 0 | Noise: 0%</span>
+            <button id="sampleBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              Sample
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Output -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Clean Output
+            </label>
+            <div class="flex gap-1">
+              <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                Copy
+              </button>
+              <button id="downloadBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Download
+              </button>
+            </div>
+          </div>
+          
+          <textarea id="outputText" readonly spellcheck="false"
+            class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+            placeholder="Clean, de-noised text appears here..."></textarea>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="outputStats">Chars: 0 | Removed: 0</span>
+            <span id="processingTime" class="text-gray-600"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-3">
+        
+        <!-- Cleaning Method -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Cleaning Method</label>
+          <div class="flex flex-wrap gap-1">
+            <button class="method-btn active rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="smart">Smart Clean</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="aggressive">Aggressive</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="custom">Custom</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="encoding">Fix Encoding</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="whitespace">Fix Whitespace</button>
+          </div>
+        </div>
+
+        <!-- Options Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+          <!-- Smart Options -->
+          <div id="smartOptions" class="method-panel space-y-2">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="removeSpecialChars" checked>
+              <span class="text-xs text-gray-400">Remove special chars</span>
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="fixEncoding" checked>
+              <span class="text-xs text-gray-400">Fix encoding issues</span>
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="normalizeWhitespace" checked>
+              <span class="text-xs text-gray-400">Normalize spaces</span>
+            </div>
+          </div>
+
+          <!-- Aggressive Options -->
+          <div id="aggressiveOptions" class="method-panel hidden space-y-2">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="removeNonAscii" checked>
+              <span class="text-xs text-gray-400">Remove non-ASCII</span>
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="removePunctuation" checked>
+              <span class="text-xs text-gray-400">Remove punctuation</span>
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="removeNumbers">
+              <span class="text-xs text-gray-400">Remove numbers</span>
+            </div>
+          </div>
+
+          <!-- Custom Options -->
+          <div id="customOptions" class="method-panel hidden space-y-2">
+            <div>
+              <label class="text-xs text-gray-400 mb-1 block">Chars to Remove</label>
+              <input type="text" id="customChars" placeholder="e.g. @#$%" class="w-full px-2 py-1.5 rounded-md glass-input text-xs font-mono">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="caseSensitive">
+              <span class="text-xs text-gray-400">Case sensitive</span>
+            </div>
+          </div>
+
+          <!-- Encoding Options -->
+          <div id="encodingOptions" class="method-panel hidden space-y-2">
+            <div>
+              <label class="text-xs text-gray-400 mb-1 block">Source Encoding</label>
+              <select id="sourceEncoding" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+                <option value="auto">Auto-detect</option>
+                <option value="utf8">UTF-8</option>
+                <option value="latin1">Latin-1 (ISO-8859-1)</option>
+                <option value="windows1252">Windows-1252</option>
+                <option value="macroman">Mac Roman</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Whitespace Options -->
+          <div id="whitespaceOptions" class="method-panel hidden space-y-2">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="removeExtraSpaces" checked>
+              <span class="text-xs text-gray-400">Remove extra spaces</span>
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="removeLineBreaks">
+              <span class="text-xs text-gray-400">Remove line breaks</span>
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="trimLines" checked>
+              <span class="text-xs text-gray-400">Trim each line</span>
+            </div>
+          </div>
+
+          <!-- Common Options (always visible) -->
+          <div class="space-y-2">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="preserveStructure" checked>
+              <span class="text-xs text-gray-400">Preserve paragraphs</span>
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="removeEmptyLines" checked>
+              <span class="text-xs text-gray-400">Remove empty lines</span>
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="fixQuotes" checked>
+              <span class="text-xs text-gray-400">Fix smart quotes</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats Display -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-3">
+          <div class="stat-card rounded-md p-2 text-center">
+            <div class="text-xs text-gray-500 mb-1">Noise Detected</div>
+            <div id="noiseDetected" class="text-lg font-semibold text-red-400">0</div>
+          </div>
+          <div class="stat-card rounded-md p-2 text-center">
+            <div class="text-xs text-gray-500 mb-1">Chars Removed</div>
+            <div id="charsRemoved" class="text-lg font-semibold text-orange-400">0</div>
+          </div>
+          <div class="stat-card rounded-md p-2 text-center">
+            <div class="text-xs text-gray-500 mb-1">Lines Cleaned</div>
+            <div id="linesCleaned" class="text-lg font-semibold text-blue-400">0</div>
+          </div>
+          <div class="stat-card rounded-md p-2 text-center">
+            <div class="text-xs text-gray-500 mb-1">Clarity Score</div>
+            <div id="clarityScore" class="text-lg font-semibold text-green-400">100%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Text De-noising Tool?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Auto-Clean</h3>
+          <p class="text-gray-400 text-xs">Real-time noise detection and removal</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">5 Methods</h3>
+          <p class="text-gray-400 text-xs">Smart, aggressive, custom & more</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Stats</h3>
+          <p class="text-gray-400 text-xs">Real-time noise analysis</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based, no uploads</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy or download results</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration required</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Paste Noisy Text</h3>
+          <p class="text-gray-400 text-xs">Input corrupted, encoded, or noisy text.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Select Method</h3>
+          <p class="text-gray-400 text-xs">Choose Smart, Aggressive, or Custom cleaning.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Adjust Options</h3>
+          <p class="text-gray-400 text-xs">Fine-tune what to remove or preserve.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export Clean Text</h3>
+          <p class="text-gray-400 text-xs">Copy or download the de-noised result.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Text De-noising: Restoring Clarity to Corrupted and Noisy Text</h2>
+        
+        <p><strong>Text de-noising</strong> has emerged as a critical capability in our data-driven world, where information frequently becomes corrupted through encoding errors, transmission glitches, OCR misrecognition, or copy-paste artifacts. Whether you're a data scientist cleaning datasets for machine learning, a journalist restoring damaged documents, a developer parsing scraped web content, or a regular user trying to read garbled text messages, understanding how to <strong>remove noise from text online</strong> is essential for modern digital literacy. Our <strong>free text de-noising tool</strong> provides professional-grade text restoration capabilities without cost or complexity.</p>
+
+        <h2>Understanding Text Noise and Its Origins</h2>
+        
+        <p><strong>Text noise</strong> refers to any unwanted characters, symbols, or artifacts that corrupt the readability and usability of textual content. Unlike image noise which manifests as visual grain or pixelation, text noise appears as random characters, encoding artifacts, misplaced symbols, or structural corruption that obscures meaning. Common manifestations include Mojibake ( garbled characters like � or Ã©), random special characters (@, #, $, %), excessive whitespace, mixed encoding standards, and OCR errors where letters are misrecognized as similar-looking symbols.</p>
+
+        <p>The sources of text noise are numerous and often unavoidable. <strong>Encoding mismatches</strong> occur when text saved in one character set (like UTF-8) is opened in another (like Latin-1), producing gibberish. <strong>Transmission errors</strong> introduce random characters during data transfer, especially in legacy systems or unstable connections. <strong>Optical Character Recognition (OCR)</strong> frequently confuses similar characters—'O' with '0', 'l' with '1', 'S' with '5'. <strong>Copy-paste operations</strong> from PDFs, web pages, or formatted documents often carry invisible formatting codes and special characters. Database migrations, file format conversions, and cross-platform transfers all introduce opportunities for corruption. Understanding these origins helps users select appropriate <strong>text de-noising online</strong> strategies.</p>
+
+        <h2>Types of Text Noise and Detection Methods</h2>
+
+        <h3>Character-Level Noise</h3>
+        
+        <p>At the most granular level, <strong>character-level noise</strong> involves individual corrupted symbols within otherwise readable text. This includes replacement characters (�), combining diacritics that detach from base letters, control characters ( invisible ASCII codes 0-31), and extended ASCII artifacts from old Windows systems. A professional <strong>text noise remover online</strong> must identify these characters through unicode analysis, checking code points against valid ranges for the target language. Our <strong>online text de-noising</strong> tool automatically detects suspicious code points and replacement characters that indicate encoding failures.</p>
+
+        <h3>Structural Noise</h3>
+        
+        <p><strong>Structural noise</strong> affects text organization—excessive line breaks, random tab characters, inconsistent spacing, and formatting codes embedded as visible characters. PDF extractions commonly suffer from structural noise where page breaks become random line feeds, or where tables convert to chaotic space-separated values. Web scraping produces structural noise when HTML tags, CSS classes, or JavaScript snippets contaminate extracted text. <strong>Clean noisy text online</strong> operations must normalize whitespace, remove control characters, and restore logical paragraph structure without destroying intentional formatting.</p>
+
+        <h3>Semantic Noise</h3>
+        
+        <p>The most challenging category, <strong>semantic noise</strong>, involves character substitutions that create valid but incorrect words—"the" becoming "tbe", "and" becoming "ahd", or numbers replacing letters ("l33t sp34k" style corruption). This noise passes basic character validation but destroys meaning. Advanced <strong>text denoiser online free</strong> tools use dictionary checks, n-gram analysis, and statistical language models to identify improbable word formations. While our tool focuses on character and structural cleaning, it provides the foundation for subsequent semantic correction by ensuring character validity.</p>
+
+        <h2>Professional Applications of Text De-noising</h2>
+
+        <h3>Data Science and Machine Learning</h3>
+        
+        <p>Machine learning models are notoriously sensitive to input quality. <strong>Text de-noising</strong> is often the first step in NLP pipelines, preceding tokenization, embedding, and model training. Noisy training data produces models that learn incorrect patterns—associating � with certain sentiments, or treating random symbols as semantic features. Data scientists use <strong>bulk text de-noising online</strong> tools to preprocess thousands of documents before feeding them to BERT, GPT, or custom models. Clean data directly improves model accuracy, reduces training time, and prevents overfitting to artifacts.</p>
+
+        <h3>Digital Humanities and Archive Restoration</h3>
+        
+        <p>Historians and archivists frequently work with digitized documents suffering from century-old encoding issues, multiple migration corruptions, or OCR errors from degraded source material. A letter from 1890 digitized in 1990, converted to Word in 2005, and emailed in 2023 accumulates layers of encoding transformations. <strong>Text de-obfuscation online</strong> tools help restore these documents to readable states, preserving cultural heritage. The ability to <strong>clean scrambled text online free</strong> enables researchers to access primary sources previously considered too corrupted for analysis.</p>
+
+        <h3>Web Scraping and Data Extraction</h3>
+        
+        <p>Modern web scraping extracts content from millions of pages with varying encoding declarations, HTML quality, and JavaScript rendering. The resulting datasets inevitably contain substantial noise—HTML entities (&amp;lt;), JavaScript fragments, CSS classes as text, and encoding mismatches from servers claiming UTF-8 while serving Latin-1. Automated <strong>text cleanup tool online</strong> processing becomes essential for making scraped data usable. E-commerce price monitoring, news aggregation, and academic research all depend on clean extraction pipelines.</p>
+
+        <h3>Business Intelligence and Document Processing</h3>
+        
+        <p>Enterprise document processing handles invoices, contracts, emails, and reports from diverse sources. PDF-to-text conversion alone introduces substantial noise—headers, footers, page numbers embedded in content, and table structures destroyed. Customer service teams receive emails with corrupted subject lines from international clients. Legal teams review contracts with encoding issues from different jurisdictions. <strong>Text purification tool online</strong> solutions standardize these documents for search, analysis, and compliance archiving.</p>
+
+        <h2>De-noising Methodologies and Techniques</h2>
+
+        <h3>Smart Cleaning: Balanced Restoration</h3>
+        
+        <p><strong>Smart cleaning</strong> represents the default approach for most <strong>text de-noising</strong> tasks, balancing aggressive removal with content preservation. This method removes clearly invalid characters (replacement symbols, control codes) while preserving punctuation, international characters, and legitimate special symbols. It fixes common encoding issues like Mojibake patterns, normalizes whitespace (converting multiple spaces to single spaces, standardizing line endings), and removes invisible formatting characters. Smart cleaning is ideal when you need readable text without destroying legitimate special characters or international text. Our <strong>text clarity tool online</strong> implements smart cleaning as the default mode.</p>
+
+        <h3>Aggressive Cleaning: Maximum Purity</h3>
+        
+        <p>When data quality matters more than preserving special characters, <strong>aggressive cleaning</strong> removes everything except essential alphanumeric content. This method strips all non-ASCII characters, removes punctuation (or reduces it to basic periods and commas), eliminates numbers if specified, and collapses all whitespace to single spaces. Aggressive cleaning produces data suitable for strict analysis pipelines, search indexing, or machine learning where any special character might be considered noise. However, it destroys international text, mathematical notation, and legitimate punctuation—use only when certain about content requirements.</p>
+
+        <h3>Custom Cleaning: Targeted Removal</h3>
+        
+        <p><strong>Custom cleaning</strong> provides surgical precision for specific noise patterns. Users specify exact characters to remove—perhaps only @ symbols from email extraction, or only # from social media data. This method supports case-sensitive removal (removing 'A' but not 'a') and regex patterns for complex matching. Custom cleaning preserves all unspecified content, making it ideal when noise follows predictable patterns but legitimate content includes diverse special characters. The <strong>text distortion remover online</strong> capabilities shine when dealing with domain-specific corruption.</p>
+
+        <h3>Encoding Repair: Character Set Recovery</h3>
+        
+        <p>Many <strong>text de-noising</strong> challenges stem not from random corruption but from encoding misidentification. When UTF-8 text is read as Latin-1, "café" becomes "cafÃ©". When Latin-1 is read as UTF-8, it produces replacement characters. <strong>Fix encoding</strong> methods attempt to detect original encodings and transcode correctly. While true automatic detection is theoretically impossible (the same bytes can be valid in multiple encodings), statistical analysis of byte patterns provides educated guesses. Our tool offers manual encoding selection when automatic detection fails, allowing users to specify source and target encodings for accurate recovery.</p>
+
+        <h3>Whitespace Normalization: Structural Restoration</h3>
+        
+        <p>Whitespace issues plague text from many sources—tabs converted to spaces unevenly, line breaks appearing as \r\n (Windows), \n (Unix), or \r (old Mac), non-breaking spaces ( ) masquerading as regular spaces, and zero-width joiners affecting string matching. <strong>Fix whitespace</strong> methods standardize these to consistent formats, remove excessive blank lines, trim leading/trailing spaces from each line, and optionally collapse all whitespace to single spaces. This structural cleaning is often sufficient for making text readable and processable without removing any content characters.</p>
+
+        <h2>Advanced De-noising Strategies</h2>
+
+        <h3>Multi-Pass Processing</h3>
+        
+        <p>Complex noise often requires sequential cleaning stages. A first pass might fix encoding issues, converting garbled bytes to correct characters. A second pass removes structural noise like HTML tags. A third pass applies smart character cleaning to remove remaining artifacts. A final pass normalizes whitespace and formatting. <strong>Free online text de-noising tools</strong> that preserve original input while showing preview outputs enable this iterative approach without data loss. Users can copy cleaned output back to input for additional processing cycles.</p>
+
+        <h3>Pattern Recognition and Heuristics</h3>
+        
+        <p>Beyond simple character removal, advanced <strong>text de-noising</strong> employs pattern recognition. Repeated special characters (#####) often indicate redacted content or formatting artifacts. Specific byte sequences signal particular encoding failures—Ã followed by another character typically indicates UTF-8 read as Latin-1. HTML entity patterns (&amp;#123;) suggest web content needing decoding. Regular expressions identify and remove these patterns intelligently. Our <strong>text de-noising utility online</strong> incorporates common pattern detection for automatic handling of frequent corruption types.</p>
+
+        <h3>Preservation vs. Removal Trade-offs</h3>
+        
+        <p>Every de-noising decision involves trade-offs. Removing all non-ASCII characters eliminates international text. Collapsing whitespace destroys poetry formatting. Stripping punctuation harms sentence tokenization. Professional <strong>text de-noiser editor online</strong> tools provide granular options—preserve paragraphs while removing empty lines, keep international characters while removing symbols, maintain line breaks within paragraphs but remove excessive ones. Understanding these trade-offs ensures appropriate cleaning for specific use cases.</p>
+
+        <h2>Best Practices for Text De-noising Workflows</h2>
+
+        <h3>Always Preserve Originals</h3>
+        
+        <p>Destructive cleaning should never overwrite source data. Maintain original corrupted versions alongside cleaned outputs. This enables reprocessing with different parameters if initial cleaning proves too aggressive or insufficient. Version control systems, dated filenames, or dedicated "cleaned" subdirectories support this practice. Browser-based <strong>text de-noising tool without login online</strong> solutions naturally preserve originals by generating separate outputs.</p>
+
+        <h3>Validate Output Quality</h3>
+        
+        <p>After cleaning, verify that: Legitimate content remains intact (no destroyed words or characters), noise is actually reduced (visual inspection and character count comparison), structure is preserved (paragraphs, lists, tables if applicable), and encoding is correct (no new Mojibake introduced). Sample checks across document sections ensure consistent processing. Statistical comparison (character counts, word counts, line counts) quantifies cleaning impact.</p>
+
+        <h3>Handle Edge Cases Explicitly</h3>
+        
+        <p>Certain content types require special handling: Code snippets contain meaningful special characters that should not be stripped. Mathematical text uses Greek letters and operators essential to meaning. Poetry and literature use intentional line breaks and spacing. Legal documents have precise formatting requirements. URLs and email addresses contain @, /, and . characters that are content, not noise. Configure <strong>text cleanup and de-noising tool online</strong> settings appropriately for content type, or use custom cleaning with carefully specified removal sets.</p>
+
+        <h2>Comparing De-noising Approaches</h2>
+
+        <h3>Manual Cleaning vs. Automated Tools</h3>
+        
+        <p>Manual cleaning using find-and-replace in text editors works for small, simple cases but fails at scale. Humans cannot efficiently process thousands of documents, consistently apply complex regex patterns, or detect invisible control characters. Automated <strong>online text de-noiser free</strong> tools process instantly, apply rules consistently, handle invisible characters, and scale to any volume. The time savings become substantial with multiple documents or frequent cleaning needs.</p>
+
+        <h3>Programming Solutions vs. Web Tools</h3>
+        
+        <p>Python (with libraries like ftfy, chardet, regex), Perl (historically strong at text processing), and command-line tools (iconv, sed, tr) offer powerful de-noising for technical users. However, they require installation, coding knowledge, and environment setup. Web-based <strong>text noise fixer online free</strong> tools provide immediate access, intuitive interfaces, visual feedback, and cross-platform availability without installation. For one-off tasks or non-technical users, web tools significantly outperform programming solutions.</p>
+
+        <h2>The Future of Text De-noising Technology</h2>
+        
+        <p>Artificial intelligence is transforming <strong>text de-noising</strong> from rule-based character replacement to context-aware restoration. Neural networks trained on corrupted/clean text pairs learn to recognize and repair complex noise patterns. Transformer models like BERT can suggest corrections for semantic noise where context indicates likely intended words. Automated encoding detection improves through machine learning on byte distribution patterns. Real-time collaborative editing introduces new challenges as multiple encoding sources merge. Our platform evolves to incorporate these advances while maintaining the simplicity essential for immediate utility.</p>
+
+        <h2>Conclusion: Achieving Text Clarity with Professional De-noising</h2>
+        
+        <p><strong>Text de-noising</strong> represents a fundamental data preparation step that impacts everything from academic research to business intelligence, from machine learning accuracy to everyday readability. The ability to <strong>remove noise from text online</strong> efficiently separates usable information from digital corruption. Whether dealing with encoding errors, OCR artifacts, web scraping debris, or copy-paste contamination, professional cleaning tools restore text to its intended clarity.</p>
+
+        <p>Our <strong>free online text de-noising tool</strong> provides comprehensive capabilities for all de-noising scenarios. With five cleaning methods (Smart, Aggressive, Custom, Encoding Repair, Whitespace Fix), real-time noise detection statistics, granular preservation options, and instant browser-based processing, this tool serves data scientists, developers, researchers, and general users alike. The privacy-preserving local processing ensures sensitive documents remain secure, while the intuitive interface requires no technical training. Stop struggling with corrupted text—use our <strong>text de-noising online</strong> solution to restore clarity instantly. Whether you need to <strong>clean noisy text online</strong>, <strong>remove random characters from text online</strong>, or perform <strong>bulk text de-noising online</strong>, our <strong>text distortion cleaner online</strong> delivers professional results every time.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool clean text automatically as I type?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>text de-noising tool</strong> features <strong>automatic real-time cleaning</strong>. As you paste or type noisy text, the tool instantly analyzes and cleans it using your selected method. The cleaned result appears immediately in the right panel. The "Auto-cleaning enabled" indicator confirms active processing. Changes to cleaning methods or options also apply instantly, making this the most responsive <strong>free text de-noising tool</strong> available.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What's the difference between Smart and Aggressive cleaning?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Smart Clean</strong> removes obviously invalid characters (replacement symbols �, control codes) while preserving punctuation, international characters, and legitimate special symbols. It fixes encoding issues and normalizes whitespace. <strong>Aggressive</strong> removes everything except basic alphanumeric characters, destroying international text and most punctuation. Use Smart for general readability, Aggressive when you need pure ASCII data for processing.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I remove specific characters only?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely! Select the <strong>Custom</strong> method and enter specific characters to remove in the "Chars to Remove" field. For example, enter "@#$" to remove only those symbols while preserving everything else. Enable "Case sensitive" to distinguish between uppercase and lowercase. This surgical approach is perfect when noise follows predictable patterns but legitimate content includes diverse special characters.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I fix garbled characters like "cafÃ©"?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Select <strong>Fix Encoding</strong> method. Try "Auto-detect" first—our tool analyzes byte patterns to guess the original encoding. If that fails, manually select likely source encodings: "Latin-1 (ISO-8859-1)" for Western European text, "Windows-1252" for Windows documents, or "Mac Roman" for old Mac files. The tool attempts to transcode correctly. Note: Some corruption is irreversible if original bytes are lost, but encoding fixes recover most Mojibake issues.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What is the "Clarity Score"?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">The <strong>Clarity Score</strong> estimates text quality as a percentage. It calculates the ratio of "clean" characters (letters, numbers, common punctuation) to total characters. 100% means no noise detected; lower scores indicate substantial corruption. This metric helps quantify cleaning effectiveness and compare before/after quality. Scores below 70% suggest heavy noise requiring aggressive cleaning; scores above 90% indicate light cleaning needs.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Will this tool fix OCR errors like "0" instead of "O"?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Basic OCR errors (0/O, 1/l, 5/S) are challenging because both characters are valid—the error is semantic, not encoding-related. Our tool removes clearly invalid characters but doesn't automatically substitute similar-looking valid characters, as this could change intended meaning (e.g., "l0l" might be intentional internet slang). For OCR correction, use this tool first to remove encoding noise, then apply spell-checking or specialized OCR correction software.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is there a file size limit?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">The tool handles text up to 100,000 characters (roughly 20,000 words or 40 pages) efficiently. Browser memory limits apply for extremely large texts (500,000+ characters). For massive datasets, process in sections or use command-line tools. The <strong>bulk text de-noising online</strong> capability is optimized for typical documents, emails, articles, and code files.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my data secure?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Completely secure. All processing happens <strong>locally in your browser</strong>—your text never uploads to servers, databases, or cloud services. You can verify this by monitoring the Network tab in browser DevTools (no data transfer occurs). The tool functions offline after initial page load. Ideal for confidential documents, proprietary code, medical records, or legal texts. Privacy is fundamental to our <strong>text de-noising tool without login online</strong> design.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I undo cleaning if I remove too much?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! The tool never modifies your original input—it generates a new cleaned version in the output panel. Your noisy original remains in the left panel unchanged. To "undo," simply copy your original back to input, or click Reset to start fresh. This non-destructive workflow lets you experiment with different cleaning methods without losing source data. We recommend copying cleaned output to a separate file rather than overwriting originals.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this tool really free?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, 100% <strong>free</strong> with no registration, usage limits, watermarks, or hidden fees. Use for personal or commercial projects without attribution. This is truly a <strong>free text de-noising tool</strong> with no login required. Supported by unobtrusive advertising that doesn't interfere with functionality. We believe useful tools should be accessible to everyone, from students cleaning research data to professionals processing business documents.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const outputText = document.getElementById('outputText');
+const inputStats = document.getElementById('inputStats');
+const outputStats = document.getElementById('outputStats');
+const processingTime = document.getElementById('processingTime');
+const noiseDetected = document.getElementById('noiseDetected');
+const charsRemoved = document.getElementById('charsRemoved');
+const linesCleaned = document.getElementById('linesCleaned');
+const clarityScore = document.getElementById('clarityScore');
+
+// Buttons
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const resetBtn = document.getElementById('resetBtn');
+const sampleBtn = document.getElementById('sampleBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+// Method buttons and panels
+const methodBtns = document.querySelectorAll('.method-btn');
+const methodPanels = document.querySelectorAll('.method-panel');
+let currentMethod = 'smart';
+
+// Options
+const removeSpecialChars = document.getElementById('removeSpecialChars');
+const fixEncoding = document.getElementById('fixEncoding');
+const normalizeWhitespace = document.getElementById('normalizeWhitespace');
+const removeNonAscii = document.getElementById('removeNonAscii');
+const removePunctuation = document.getElementById('removePunctuation');
+const removeNumbers = document.getElementById('removeNumbers');
+const customChars = document.getElementById('customChars');
+const caseSensitive = document.getElementById('caseSensitive');
+const sourceEncoding = document.getElementById('sourceEncoding');
+const removeExtraSpaces = document.getElementById('removeExtraSpaces');
+const removeLineBreaks = document.getElementById('removeLineBreaks');
+const trimLines = document.getElementById('trimLines');
+const preserveStructure = document.getElementById('preserveStructure');
+const removeEmptyLines = document.getElementById('removeEmptyLines');
+const fixQuotes = document.getElementById('fixQuotes');
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Update input stats
+function updateInputStats(text) {
+  const chars = text.length;
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+  const lines = text === '' ? 0 : text.split('\n').length;
+  
+  // Calculate noise percentage
+  const noiseChars = countNoiseChars(text);
+  const noisePercent = chars > 0 ? Math.round((noiseChars / chars) * 100) : 0;
+  
+  inputStats.textContent = `Chars: ${chars} | Noise: ${noisePercent}%`;
+  noiseDetected.textContent = noiseChars;
+  
+  return { chars, words, lines, noiseChars, noisePercent };
+}
+
+// Count noise characters
+function countNoiseChars(text) {
+  let count = 0;
+  for (let char of text) {
+    const code = char.charCodeAt(0);
+    // Control chars (except tab, newline)
+    if ((code < 32 && code !== 9 && code !== 10 && code !== 13) || 
+        // Replacement char
+        code === 0xFFFD ||
+        // High private use
+        (code >= 0xE000 && code <= 0xF8FF) ||
+        // Surrogates
+        (code >= 0xD800 && code <= 0xDFFF)) {
+      count++;
+    }
+  }
+  return count;
+}
+
+// Calculate clarity score
+function calculateClarityScore(text) {
+  if (!text) return 100;
+  const cleanChars = text.match(/[a-zA-Z0-9\s.,;:!?'"()-]/g) || [];
+  return Math.round((cleanChars.length / text.length) * 100);
+}
+
+// Debounce function
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Method selection
+methodBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    methodBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentMethod = btn.dataset.method;
+    
+    methodPanels.forEach(panel => panel.classList.add('hidden'));
+    const panel = document.getElementById(currentMethod + 'Options');
+    if (panel) panel.classList.remove('hidden');
+    
+    deNoiseText();
+  });
+});
+
+// De-noising function
+function deNoiseText() {
+  const startTime = performance.now();
+  const text = inputText.value;
+  
+  if (!text) {
+    outputText.value = '';
+    outputStats.textContent = 'Chars: 0 | Removed: 0';
+    processingTime.textContent = '';
+    charsRemoved.textContent = '0';
+    linesCleaned.textContent = '0';
+    clarityScore.textContent = '100%';
+    return;
+  }
+  
+  const inputStats = updateInputStats(text);
+  let result = text;
+  let removedCount = 0;
+  
+  try {
+    switch(currentMethod) {
+      case 'smart':
+        if (removeSpecialChars.checked) {
+          const originalLength = result.length;
+          // Remove control chars except whitespace
+          result = result.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F-\x9F]/g, '');
+          // Remove replacement chars
+          result = result.replace(/\uFFFD/g, '');
+          removedCount += originalLength - result.length;
+        }
+        
+        if (fixEncoding.checked) {
+          // Fix common Mojibake patterns
+          const fixes = {
+            'Ã©': 'é', 'Ã¨': 'è', 'Ãª': 'ê', 'Ã«': 'ë',
+            'Ã ': 'à', 'Ã¢': 'â', 'Ã¤': 'ä', 'Ã£': 'ã',
+            'Ã¹': 'ù', 'Ã»': 'û', 'Ã¼': 'ü', 'Ã§': 'ç',
+            'Ã´': 'ô', 'Ã¶': 'ö', 'Ã²': 'ò', 'Ã³': 'ó',
+            'Ã±': 'ñ', 'Ã­': 'í', 'Ã¬': 'ì', 'Ã®': 'î',
+            'Ã¡': 'á', 'Ã¢': 'â', 'Ã£': 'ã', 'Ã¤': 'ä',
+            'Ã¥': 'å', 'Ã¦': 'æ', 'Ã¸': 'ø', 'Ã¥': 'å'
+          };
+          
+          for (let [bad, good] of Object.entries(fixes)) {
+            const regex = new RegExp(bad, 'g');
+            const matches = result.match(regex);
+            if (matches) {
+              result = result.replace(regex, good);
+              removedCount += matches.length * (bad.length - good.length);
+            }
+          }
+        }
+        
+        if (normalizeWhitespace.checked) {
+          const originalLength = result.length;
+          // Normalize line endings
+          result = result.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+          // Remove trailing whitespace
+          result = result.replace(/[ \t]+$/gm, '');
+          // Normalize multiple spaces (but preserve indentation if structure preserved)
+          if (!preserveStructure.checked) {
+            result = result.replace(/[ \t]+/g, ' ');
+          } else {
+            result = result.replace(/ +/g, ' ').replace(/\t+/g, '\t');
+          }
+          removedCount += Math.max(0, originalLength - result.length);
+        }
+        break;
+        
+      case 'aggressive':
+        if (removeNonAscii.checked) {
+          const originalLength = result.length;
+          result = result.replace(/[^\x00-\x7F]/g, '');
+          removedCount += originalLength - result.length;
+        }
+        
+        if (removePunctuation.checked) {
+          const originalLength = result.length;
+          result = result.replace(/[^\w\s]/g, '');
+          removedCount += originalLength - result.length;
+        }
+        
+        if (removeNumbers.checked) {
+          const originalLength = result.length;
+          result = result.replace(/[0-9]/g, '');
+          removedCount += originalLength - result.length;
+        }
+        
+        // Always normalize whitespace in aggressive mode
+        result = result.replace(/\s+/g, ' ').trim();
+        break;
+        
+      case 'custom':
+        const charsToRemove = customChars.value;
+        if (charsToRemove) {
+          const flags = caseSensitive.checked ? 'g' : 'gi';
+          const escaped = charsToRemove.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+          const regex = new RegExp(`[${escaped}]`, flags);
+          const originalLength = result.length;
+          result = result.replace(regex, '');
+          removedCount += originalLength - result.length;
+        }
+        break;
+        
+      case 'encoding':
+        // Encoding fixes based on selection
+        const encoding = sourceEncoding.value;
+        if (encoding === 'latin1' || encoding === 'auto') {
+          // Common Latin-1 to UTF-8 fixes
+          const latin1Fixes = {
+            'Ã¡': 'á', 'Ã©': 'é', 'Ã­': 'í', 'Ã³': 'ó', 'Ãº': 'ú',
+            'Ã ': 'à', 'Ã¨': 'è', 'Ã¬': 'ì', 'Ã²': 'ò', 'Ã¹': 'ù',
+            'Ã¢': 'â', 'Ãª': 'ê', 'Ã®': 'î', 'Ã´': 'ô', 'Ã»': 'û',
+            'Ã£': 'ã', 'Ã±': 'ñ', 'Ãµ': 'õ', 'Ã§': 'ç'
+          };
+          for (let [bad, good] of Object.entries(latin1Fixes)) {
+            result = result.replace(new RegExp(bad, 'g'), good);
+          }
+        }
+        if (encoding === 'windows1252') {
+          // Windows-1252 specific fixes
+          result = result.replace(/â€[™œžŸ]/g, match => {
+            const map = { 'â€™': "'", 'â€œ': '"', 'â€': '"', 'â€¢': '•', 'â€¦': '…' };
+            return map[match] || match;
+          });
+        }
+        break;
+        
+      case 'whitespace':
+        if (removeExtraSpaces.checked) {
+          const originalLength = result.length;
+          result = result.replace(/[ \t]+/g, ' ');
+          removedCount += originalLength - result.length;
+        }
+        
+        if (removeLineBreaks.checked) {
+          const originalLength = result.length;
+          result = result.replace(/[\r\n]+/g, ' ');
+          removedCount += originalLength - result.length;
+        }
+        
+        if (trimLines.checked) {
+          result = result.split('\n').map(line => line.trim()).join('\n');
+        }
+        break;
+    }
+    
+    // Common post-processing
+    if (removeEmptyLines.checked) {
+      result = result.split('\n').filter(line => line.trim() !== '').join('\n');
+    }
+    
+    if (fixQuotes.checked) {
+      result = result.replace(/[\u2018\u2019]/g, "'").replace(/[\u201C\u201D]/g, '"');
+    }
+    
+    // Preserve structure if requested
+    if (preserveStructure.checked && currentMethod !== 'aggressive') {
+      // Ensure paragraph breaks are maintained
+      result = result.replace(/\n{3,}/g, '\n\n');
+    }
+    
+    const endTime = performance.now();
+    const lines = result === '' ? 0 : result.split('\n').length;
+    const finalClarity = calculateClarityScore(result);
+    
+    outputText.value = result;
+    outputStats.textContent = `Chars: ${result.length} | Removed: ${removedCount}`;
+    processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+    charsRemoved.textContent = removedCount;
+    linesCleaned.textContent = lines;
+    clarityScore.textContent = `${finalClarity}%`;
+    
+  } catch (error) {
+    console.error('De-noising error:', error);
+  }
+}
+
+// Debounced version
+const debouncedDeNoise = debounce(deNoiseText, 0);
+
+// Sample text
+sampleBtn.addEventListener('click', () => {
+  inputText.value = `HÃ©llo WÃ¶rld! This is sÃ¶me nÃ¶isy tÃ©xt.\n\nHere are sÃ¶me special chars: Â© Â® â„¢ \n\nAnd sÃ¶me extra   spaces   and\ttabs.\n\n\nMultiple empty lines above.`;
+  updateInputStats(inputText.value);
+  deNoiseText();
+});
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    updateInputStats(text);
+    deNoiseText();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  updateInputStats('');
+  deNoiseText();
+  inputText.focus();
+}
+
+// Copy output
+async function copyOutput() {
+  if (!outputText.value) return;
+  
+  try {
+    await navigator.clipboard.writeText(outputText.value);
+    const originalText = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalText;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+}
+
+// Download output
+function downloadOutput() {
+  const text = outputText.value;
+  if (!text.trim()) return;
+  
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'clean-text.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Reset all
+function resetAll() {
+  inputText.value = '';
+  outputText.value = '';
+  updateInputStats('');
+  outputStats.textContent = 'Chars: 0 | Removed: 0';
+  processingTime.textContent = '';
+  charsRemoved.textContent = '0';
+  linesCleaned.textContent = '0';
+  clarityScore.textContent = '100%';
+  currentMethod = 'smart';
+  methodBtns.forEach(b => b.classList.remove('active'));
+  document.querySelector('[data-method="smart"]').classList.add('active');
+  methodPanels.forEach(panel => panel.classList.add('hidden'));
+  document.getElementById('smartOptions').classList.remove('hidden');
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Event listeners
+inputText.addEventListener('input', () => {
+  updateInputStats(inputText.value);
+  debouncedDeNoise();
+});
+
+// Option change listeners
+[removeSpecialChars, fixEncoding, normalizeWhitespace, removeNonAscii, 
+ removePunctuation, removeNumbers, caseSensitive, sourceEncoding,
+ removeExtraSpaces, removeLineBreaks, trimLines, preserveStructure,
+ removeEmptyLines, fixQuotes].forEach(el => {
+  if (el) el.addEventListener('change', deNoiseText);
+});
+
+customChars.addEventListener('input', () => {
+  if (currentMethod === 'custom') deNoiseText();
+});
+
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+copyBtn.addEventListener('click', copyOutput);
+downloadBtn.addEventListener('click', downloadOutput);
+resetBtn.addEventListener('click', resetAll);
+
+// Initialize
+updateInputStats('');
+</script>
+</body>
+</html>

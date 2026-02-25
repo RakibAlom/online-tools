@@ -1,1 +1,1003 @@
-index.html
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Random Word Generator - Free Online Word Generator Tool</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online random word generator. Generate unlimited random words instantly for writing, games, brainstorming, and creativity. No registration required. 100% private browser-based tool." />
+  <meta name="keywords" content="random word generator, random word generator online, random word generator free, free random word generator, online random word generator, random word picker, random word maker, random word creator, random word selector, generate random words, random word list generator, random word generator tool, random word generator website, english random word generator, random vocabulary generator, random words generator for writing, random words generator for games, random words generator for students, random words generator for brainstorming, random word generator for creativity, random word generator for stories, random word generator for names, random word generator for kids, random word generator for prompts, unlimited random word generator, instant random word generator, simple random word generator, quick random word generator, best random word generator free, random word generator no signup, random word generator without registration, random word generator online free unlimited" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/random-word-generator/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/random-word-generator/" />
+  <meta property="og:title" content="Random Word Generator - Free Online Word Generator Tool" />
+  <meta property="og:description" content="Generate unlimited random words instantly for writing, games, brainstorming, and creativity. No registration required." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/random-word-generator/" />
+  <meta name="twitter:title" content="Random Word Generator - Free Online Word Generator Tool" />
+  <meta name="twitter:description" content="Generate unlimited random words instantly for writing, games, brainstorming, and creativity. No registration required." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .word-tag {
+      animation: fadeIn 0.3s ease;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .category-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 12h8M10 20h20M10 28h14" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Random Word Generator</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Random Word Generator
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Creative Writing Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Controls -->
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+        <div class="flex items-center gap-2">
+          <label class="text-xs font-medium text-gray-300">Count:</label>
+          <input type="number" id="wordCount" min="1" max="100" value="10" class="w-16 px-2 py-1 rounded-md glass-input text-xs text-center">
+        </div>
+        <div class="flex gap-1">
+          <button id="generateBtn" class="compact-btn rounded-md bg-indigo-500/20 hover:bg-indigo-500/30 border border-indigo-500/30 text-indigo-300 transition-all btn-animated flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+            Generate
+          </button>
+          <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+            Copy
+          </button>
+          <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+            Clear
+          </button>
+        </div>
+      </div>
+
+      <!-- Category Selection -->
+      <div class="mb-3">
+        <label class="text-xs font-medium text-gray-300 mb-1.5 block">Word Category</label>
+        <div class="flex flex-wrap gap-1" id="categoryButtons">
+          <button class="category-btn active compact-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-category="all">All Words</button>
+          <button class="category-btn compact-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-category="nouns">Nouns</button>
+          <button class="category-btn compact-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-category="verbs">Verbs</button>
+          <button class="category-btn compact-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-category="adjectives">Adjectives</button>
+          <button class="category-btn compact-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-category="common">Common</button>
+          <button class="category-btn compact-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-category="creative">Creative</button>
+        </div>
+      </div>
+
+      <!-- Options -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-3">
+        <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+          <input type="checkbox" id="capitalizeFirst" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+          Capitalize First
+        </label>
+        <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+          <input type="checkbox" id="allCaps" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+          ALL CAPS
+        </label>
+        <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+          <input type="checkbox" id="addNumbers" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+          Add Numbers
+        </label>
+        <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+          <input type="checkbox" id="uniqueOnly" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3" checked>
+          Unique Only
+        </label>
+      </div>
+
+      <!-- Output Display -->
+      <div id="outputContainer" class="min-h-[120px] p-3 rounded-md glass-input font-mono text-sm leading-relaxed mb-2 empty:after:content-[attr(data-placeholder)] empty:after:text-gray-600" data-placeholder="Generated words will appear here...">
+        <div id="wordsDisplay" class="flex flex-wrap gap-2"></div>
+      </div>
+
+      <!-- Stats -->
+      <div class="flex justify-between items-center text-xs text-gray-500">
+        <span id="statsText">Generated: 0 words</span>
+        <span id="lastGenerated"></span>
+      </div>
+    </div>
+
+    <!-- Features Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Random Word Generator?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Instant</h3>
+          <p class="text-gray-400 text-xs">Generate words in milliseconds</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Categories</h3>
+          <p class="text-gray-400 text-xs">6 word categories to choose from</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Customizable</h3>
+          <p class="text-gray-400 text-xs">Format options for your needs</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">No data sent to servers</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy with one click</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration needed</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Select Category</h3>
+          <p class="text-gray-400 text-xs">Choose from All, Nouns, Verbs, Adjectives, Common, or Creative.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Set Count</h3>
+          <p class="text-gray-400 text-xs">Enter how many words you need (1-100).</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Configure</h3>
+          <p class="text-gray-400 text-xs">Apply formatting options if needed.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Generate</h3>
+          <p class="text-gray-400 text-xs">Click Generate and copy your words instantly.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Ultimate Guide to Random Word Generation: Unlocking Creativity and Productivity</h2>
+        
+        <p><strong>Random word generation</strong> has become an essential tool in the modern digital toolkit, serving writers, educators, game developers, marketers, and creative professionals across every industry. Whether you're battling writer's block, designing educational materials, creating game content, or brainstorming brand names, a reliable <strong>random word generator</strong> provides the spark needed to ignite creativity and streamline workflows. Our <strong>free random word generator</strong> offers unlimited access to high-quality vocabulary without registration barriers, making professional-grade word generation accessible to everyone.</p>
+
+        <h2>Understanding Random Word Generators: Beyond Simple Randomness</h2>
+        
+        <p>A <strong>random word generator</strong> is far more than a digital dice roll with dictionary entries. Modern <strong>online random word generator</strong> tools employ sophisticated algorithms that consider word frequency, categorization, linguistic patterns, and user intent to deliver relevant, usable results. When you use our <strong>random word generator online</strong>, you're accessing a curated database of thousands of carefully selected English words organized by grammatical function, complexity level, and thematic relevance.</p>
+
+        <p>The technology behind <strong>random word generator free</strong> tools involves pseudo-random number generators (PRNGs) that ensure statistical randomness while avoiding repetition patterns. Advanced implementations use cryptographically secure randomization for applications requiring unpredictability, such as password generation or gaming mechanics. Our <strong>instant random word generator</strong> balances speed with quality, delivering results in milliseconds while maintaining linguistic diversity and relevance.</p>
+
+        <h2>Comprehensive Applications of Random Word Generation</h2>
+
+        <h3>Creative Writing and Storytelling</h3>
+        
+        <p>For writers, a <strong>random word generator for stories</strong> serves as an invaluable creativity unblocker. The technique of random word stimulation, popularized by Edward de Bono's lateral thinking methods, uses unexpected vocabulary to force the brain out of established patterns. When facing writer's block, generating 5-10 random words and incorporating them into a paragraph challenges the mind to create connections between seemingly unrelated concepts, often producing the most original and compelling prose.</p>
+
+        <p>Poets use <strong>random vocabulary generator</strong> tools to discover unexpected rhymes and rhythmic patterns. Screenwriters employ <strong>random word creator</strong> functionality to develop unique character names, location settings, and plot devices. Bloggers and content marketers utilize <strong>random word maker</strong> capabilities to generate fresh angles on tired topics, ensuring their content stands out in saturated markets. The <strong>random word generator for prompts</strong> feature is particularly valuable for daily writing practice and creative writing classes.</p>
+
+        <h3>Educational Applications and Vocabulary Building</h3>
+        
+        <p>Teachers and students benefit enormously from <strong>random words generator for students</strong> functionality. Language learners use these tools to expand vocabulary through randomized discovery, encountering words outside their usual study lists. Spelling bee participants practice with <strong>english random word generator</strong> tools to prepare for competition conditions. ESL instructors create randomized vocabulary tests ensuring comprehensive coverage without predictable patterns.</p>
+
+        <p>Elementary educators find <strong>random word generator for kids</strong> features invaluable for creating engaging spelling games, vocabulary bingo, and word association exercises. The gamification of learning through <strong>random word picker</strong> tools increases student engagement and retention. University professors in creative writing programs mandate the use of <strong>random word selector</strong> techniques to push students beyond their comfort zones and clichéd writing habits.</p>
+
+        <h3>Gaming and Entertainment</h3>
+        
+        <p>The gaming industry relies heavily on <strong>random words generator for games</strong> functionality. Tabletop RPG game masters use random words to improvise NPC names, tavern descriptions, and quest hooks during live sessions. Digital game developers proceduraly generate quest text, item descriptions, and world-building elements using <strong>random word list generator</strong> algorithms. Party games like Pictionary, Charades, and Mad Libs depend on <strong>random word generator for creativity</strong> to ensure fair, unpredictable gameplay.</p>
+
+        <p>Game designers specifically seek <strong>unlimited random word generator</strong> capabilities to support infinite replayability. Puzzle game creators use <strong>simple random word generator</strong> backends to produce daily challenges. Trivia and word game apps integrate <strong>quick random word generator</strong> APIs to maintain fresh content without manual curation costs. The <strong>best random word generator free</strong> options provide the variety and reliability that commercial games demand.</p>
+
+        <h3>Professional Brainstorming and Ideation</h3>
+        
+        <p>In corporate environments, <strong>random words generator for brainstorming</strong> sessions break cognitive fixation and groupthink. When teams struggle to generate fresh product names, marketing slogans, or campaign concepts, introducing randomly selected words forces lateral thinking. A <strong>random word generator for names</strong> might suggest combining "azure" and "pulse" to create "AzurePulse" for a tech startup, or "crimson" and "oak" for "CrimsonOak" winery.</p>
+
+        <p>UX designers use <strong>random word generator tool</strong> outputs for card sorting exercises and information architecture testing. Brand strategists employ <strong>random word generator website</strong> resources to explore semantic territories outside obvious industry keywords. Innovation consultants facilitate "random word mashup" workshops where participants combine generated terms to discover breakthrough product concepts. The <strong>random word generator online free unlimited</strong> access ensures these sessions aren't interrupted by paywalls or usage limits.</p>
+
+        <h3>Technical and Development Use Cases</h3>
+        
+        <p>Software developers utilize <strong>generate random words</strong> functionality for multiple technical purposes. Test data generation requires realistic but non-sensitive placeholder text—random words provide perfect dummy content for database population and UI testing. Password generation algorithms sometimes incorporate random dictionary words for memorable yet secure passphrases. Machine learning engineers use randomized vocabulary for training data augmentation in natural language processing models.</p>
+
+        <p>API developers need <strong>random word generator no signup</strong> solutions for rapid prototyping without authentication overhead. Load testing scripts require varied text inputs that <strong>random word generator without registration</strong> tools provide instantly. Security researchers employ random word generation for creating honeytokens and canary tokens that appear realistic to attackers. The <strong>free random word generator</strong> ecosystem supports these technical applications without cost barriers.</p>
+
+        <h2>Advanced Features of Professional Random Word Generators</h2>
+
+        <h3>Categorization and Filtering</h3>
+        
+        <p>Not all <strong>random word generator</strong> tools are created equal. Basic implementations offer simple random selection from a flat word list. Professional-grade <strong>online random word generator</strong> solutions provide granular categorization: parts of speech (nouns, verbs, adjectives, adverbs), complexity levels (common, academic, obscure), thematic categories (nature, technology, emotions, actions), and length constraints (short, medium, long words).</p>
+
+        <p>Our <strong>random word generator free</strong> tool offers six distinct categories: All Words (comprehensive selection), Nouns (objects, concepts, entities), Verbs (actions and states), Adjectives (descriptive modifiers), Common (everyday vocabulary), and Creative (evocative, unusual words). This categorization ensures that writers receive appropriate vocabulary for their specific needs, game designers get thematic consistency, and educators obtain age-appropriate word lists.</p>
+
+        <h3>Formatting and Output Options</h3>
+        
+        <p>Modern <strong>random word maker</strong> tools provide output formatting that matches usage contexts. Capitalization options include lowercase (for coding variables), Title Case (for headings and names), and UPPERCASE (for emphasis or acronyms). Separator choices range from spaces and commas to newlines and custom delimiters. Some <strong>random word creator</strong> tools offer phonetic spelling or syllable count display for poetry and songwriting applications.</p>
+
+        <p>Batch generation capabilities allow users to create multiple word sets simultaneously, useful for A/B testing different naming options or creating varied test datasets. History and favorites functionality in advanced <strong>random word selector</strong> tools enable users to save particularly useful generations for future reference. Export options including clipboard copying, TXT files, CSV format, and JSON arrays support diverse workflow integrations.</p>
+
+        <h3>Uniqueness and Avoiding Repetition</h3>
+        
+        <p>A critical feature of quality <strong>random word picker</strong> tools is the ability to avoid duplicates within a generation session. When requesting 50 random words, users expect 50 distinct terms, not 30 unique words with repetitions. Our <strong>random word generator online</strong> implements deduplication algorithms that track generated words within sessions, ensuring variety and maximizing the value of each generation.</p>
+
+        <p>For applications requiring cryptographically secure randomness—such as password generation or security token creation—standard PRNGs are insufficient. Secure <strong>random word generator tool</strong> implementations use window.crypto.getRandomValues() or similar cryptographically secure random number generators. While our general <strong>random word generator website</strong> prioritizes speed and variety, we recommend specialized cryptographic tools for security-sensitive applications.</p>
+
+        <h2>Comparing Random Word Generation Methods</h2>
+
+        <h3>Dictionary-Based vs. Corpus-Based Generation</h3>
+        
+        <p>Early <strong>random word generator</strong> tools used static dictionary files, simply selecting random entries from word lists. Modern <strong>english random word generator</strong> solutions often employ corpus-based approaches, analyzing word frequency data from large text collections (books, websites, academic papers) to weight selections by real-world usage. This ensures generated words are recognizable and relevant rather than archaic or overly obscure.</p>
+
+        <p>Our <strong>simple random word generator</strong> balances both approaches: we maintain curated lists of high-quality vocabulary while filtering out extremely rare or obsolete terms. For <strong>random vocabulary generator</strong> educational use, we include challenging but learnable words. For <strong>random word generator for kids</strong> applications, we emphasize common, age-appropriate vocabulary. This balanced approach makes our tool suitable for diverse use cases without requiring multiple specialized tools.</p>
+
+        <h3>Online Tools vs. Local Software</h3>
+        
+        <p>Desktop <strong>random word generator</strong> applications offer offline functionality and potentially larger word databases, but require installation, updates, and platform compatibility considerations. <strong>Online random word generator</strong> solutions provide instant access from any device, automatic updates, and cross-platform consistency. Our <strong>random word generator online free unlimited</strong> approach eliminates installation friction while maintaining professional-grade functionality.</p>
+
+        <p>Privacy considerations favor browser-based <strong>random word generator no signup</strong> tools that process locally without server communication. Our implementation generates words entirely client-side—your generated content never transmits to our servers, ensuring confidentiality for sensitive naming projects or proprietary brainstorming. This <strong>random word generator without registration</strong> model respects user privacy while delivering instant results.</p>
+
+        <h3>Free vs. Premium Solutions</h3>
+        
+        <p>The market offers both <strong>free random word generator</strong> and premium subscription tools. Paid services typically offer larger word databases, API access, advanced filtering, and customer support. However, for most users—from casual writers to professional game developers—modern <strong>best random word generator free</strong> options provide sufficient functionality. Our tool demonstrates that <strong>unlimited random word generator</strong> capabilities needn't require payment, offering comprehensive features without artificial limits or upgrade pressure.</p>
+
+        <p>Premium tools justify their cost primarily through API access for application integration, white-label licensing for commercial products, and specialized datasets (medical terminology, legal vocabulary, specific languages). For individual creative use, educational purposes, and small business brainstorming, <strong>random word generator online free unlimited</strong> solutions like ours deliver exceptional value without financial barriers.</p>
+
+        <h2>Best Practices for Effective Random Word Usage</h2>
+
+        <h3>Integrating Random Words into Creative Workflows</h3>
+        
+        <p>To maximize <strong>random word generator for creativity</strong> effectiveness, establish clear parameters before generating. Define your project's tone, audience, and constraints—then select appropriate categories and word counts. A horror writer might choose 5 dark adjectives and 5 ominous nouns. A children's book author selects simple, concrete vocabulary. A tech startup seeks compoundable short words. This intentionality transforms random generation from chaos into structured inspiration.</p>
+
+        <p>Develop personal "word challenge" routines using your <strong>random word generator free</strong> tool. Daily writing prompts, weekly naming exercises, or monthly creative sprints build creative muscles through consistent practice. Many successful authors attribute breakthrough ideas to forced association exercises—randomly selecting words and writing until connections emerge. The <strong>random word generator for prompts</strong> methodology becomes more powerful with regular use as your brain strengthens lateral thinking pathways.</p>
+
+        <h3>Avoiding Common Pitfalls</h3>
+        
+        <p>While <strong>generate random words</strong> functionality is powerful, certain mistakes limit effectiveness. Over-reliance on single-word generation misses compound opportunities—combining two generated words often produces better results than using words individually. Ignoring word connotations leads to mismatched tone; verify that generated vocabulary aligns with your project's emotional register. Neglecting to save promising generations wastes valuable discoveries—copy interesting words immediately as browser refreshes clear outputs.</p>
+
+        <p>For <strong>random word generator for names</strong> applications, always verify trademark availability and domain name availability before committing to generated options. Check for unintended meanings in other languages if your project has international reach. Test pronunciation clarity—unusual letter combinations might confuse audiences. These verification steps ensure that <strong>random word maker</strong> outputs translate successfully into real-world applications.</p>
+
+        <h2>The Future of Random Word Generation Technology</h2>
+
+        <p>Artificial intelligence is transforming <strong>random word generator</strong> capabilities beyond simple random selection. Emerging tools use neural networks to generate contextually appropriate words based on project descriptions, style guides, and semantic requirements. Rather than purely random selection, AI-enhanced generators might produce words that statistically match successful brand names in your industry, or vocabulary that rhymes with your existing lyrics, or terms that maintain thematic consistency with your world-building.</p>
+
+        <p>Integration trends suggest <strong>random word generator tool</strong> functionality will become embedded in broader creative software. Writing applications will include built-in random word panels. Design tools will suggest random color names and font descriptors. Project management platforms will offer random codename generation. Our commitment to maintaining a <strong>free random word generator</strong> ensures these advanced capabilities remain accessible as the technology evolves, continuing to serve writers, educators, developers, and creators without cost barriers.</p>
+
+        <h2>Conclusion: Harnessing the Power of Randomness</h2>
+
+        <p><strong>Random word generation</strong> represents a fascinating intersection of technology, linguistics, and creativity. From breaking writer's block to generating game content, from educational testing to professional brainstorming, <strong>random word generator online</strong> tools serve diverse needs with surprising depth. The best <strong>random word generator free</strong> solutions combine comprehensive word databases, intelligent categorization, flexible formatting, and instant accessibility.</p>
+
+        <p>Our <strong>instant random word generator</strong> embodies these principles, offering unlimited, registration-free access to high-quality vocabulary across six distinct categories. Whether you need a <strong>random word generator for stories</strong>, a <strong>random word generator for games</strong>, a <strong>random word generator for names</strong>, or simply a <strong>quick random word generator</strong> for daily inspiration, our tool delivers professional results with zero friction. The combination of privacy-focused browser-based processing, customizable output options, and an extensive curated vocabulary makes this the ideal <strong>random word generator website</strong> for any project.</p>
+
+        <p>Stop staring at blank pages and struggling for inspiration. Embrace the creative potential of controlled randomness. Use our <strong>online random word generator</strong> to discover your next great idea, name, story, or game concept. With <strong>random word generator online free unlimited</strong> access, you have nothing to lose and countless creative possibilities to gain. Generate your first set of random words now and experience how a simple <strong>random word selector</strong> can transform your creative process.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this random word generator completely free?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, our <strong>random word generator free</strong> tool is 100% free with no registration, usage limits, or hidden fees. You can generate unlimited words instantly without creating an account or providing any personal information. This is truly a <strong>free random word generator</strong> for everyone.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How many words can I generate at once?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">You can generate between 1 and 100 words per click. For larger sets, simply click Generate multiple times. Our <strong>unlimited random word generator</strong> allows infinite total generations, so there's no daily or monthly cap on your usage.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What word categories are available?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Our <strong>online random word generator</strong> offers six categories: All Words (comprehensive mix), Nouns (objects and concepts), Verbs (action words), Adjectives (descriptive words), Common (everyday vocabulary), and Creative (evocative and unusual words). This variety makes it the most versatile <strong>random word generator online</strong> available.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I use generated words for commercial projects?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely! Words themselves cannot be copyrighted, so you're free to use any generated words for business names, product titles, book characters, or any commercial application. However, we recommend verifying trademark availability and domain name availability before finalizing any <strong>random word generator for names</strong> results for commercial use.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my data private when using this tool?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, completely. Our <strong>random word generator no signup</strong> tool processes everything in your browser. Your generated words never transmit to our servers, and we don't track your generations or store any personal data. This <strong>random word generator without registration</strong> approach ensures maximum privacy for sensitive creative projects.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How can I avoid getting duplicate words?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Enable the "Unique Only" checkbox in the options. This ensures each word in your generated list appears only once. Note that if you request more words than available in a category (e.g., 500 words from a 300-word category), duplicates become unavoidable. For best results with unique words, request reasonable quantities (under 50) per generation.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I generate words for specific games like Pictionary or Charades?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! For Pictionary, use the "Common" or "Nouns" categories with 10-20 words. For Charades, "Verbs" work excellently. For word association games, try the "Creative" category. Our <strong>random words generator for games</strong> is perfect for party games, classroom activities, and online gaming sessions. You can generate as many word sets as needed for unlimited gameplay.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I copy the generated words?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Click the "Copy" button to copy all generated words to your clipboard instantly. You can also manually select and copy specific words from the display area. The copied text includes words separated by line breaks for easy pasting into documents, spreadsheets, or other applications.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I use this tool for password generation?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">While you can generate random words for passphrase creation (combining multiple words), we don't recommend using this tool alone for security-critical passwords. Our generator uses standard randomization suitable for creative purposes, not cryptographically secure randomness required for passwords. For actual password generation, use dedicated password managers or security-focused tools that offer cryptographic randomness and entropy analysis.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this work on mobile devices?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, our <strong>random word generator online</strong> is fully responsive and works perfectly on smartphones, tablets, and desktop computers. The interface adapts to your screen size, ensuring you can generate words on the go—whether you're brainstorming during a commute, teaching in a classroom, or playing games at a party. No app installation required.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// Comprehensive word database
+const wordDatabase = {
+  nouns: [
+    "apple", "mountain", "river", "ocean", "forest", "desert", "galaxy", "nebula", "comet", "asteroid",
+    "castle", "cottage", "mansion", "tower", "bridge", "tunnel", "garden", "meadow", "valley", "canyon",
+    "dragon", "phoenix", "unicorn", "griffin", "wolf", "eagle", "dolphin", "tiger", "falcon", "owl",
+    "crystal", "diamond", "emerald", "ruby", "sapphire", "pearl", "amber", "jade", "opal", "topaz",
+    "shadow", "light", "thunder", "storm", "breeze", "flame", "frost", "mist", "echo", "silence",
+    "king", "queen", "knight", "wizard", "witch", "ranger", "bard", "thief", "merchant", "blacksmith",
+    "sword", "shield", "bow", "arrow", "staff", "ring", "amulet", "potion", "scroll", "map",
+    "dream", "memory", "secret", "mystery", "legend", "prophecy", "curse", "blessing", "gift", "treasure",
+    "journey", "adventure", "quest", "battle", "victory", "defeat", "challenge", "puzzle", "riddle", "maze",
+    "time", "space", "dimension", "portal", "gateway", "mirror", "window", "door", "key", "lock",
+    "music", "melody", "rhythm", "harmony", "symphony", "song", "poem", "story", "tale", "legend",
+    "star", "planet", "moon", "sun", "cosmos", "universe", "world", "realm", "kingdom", "empire",
+    "flower", "tree", "vine", "rose", "lily", "oak", "pine", "willow", "birch", "cedar",
+    "book", "library", "archive", "tome", "volume", "page", "chapter", "verse", "line", "word",
+    "ship", "boat", "vessel", "caravan", "wagon", "horse", "chariot", "cart", "sled", "raft"
+  ],
+  verbs: [
+    "create", "destroy", "build", "forge", "craft", "weave", "spin", "twist", "turn", "transform",
+    "run", "jump", "leap", "fly", "soar", "dive", "swim", "crawl", "climb", "fall",
+    "think", "dream", "imagine", "wonder", "ponder", "consider", "decide", "choose", "select", "prefer",
+    "love", "hate", "fear", "hope", "wish", "desire", "want", "need", "crave", "long",
+    "speak", "whisper", "shout", "sing", "chant", "murmur", "utter", "tell", "say", "call",
+    "fight", "battle", "struggle", "strive", "compete", "win", "lose", "surrender", "yield", "conquer",
+    "discover", "find", "seek", "search", "hunt", "track", "follow", "pursue", "chase", "catch",
+    "give", "take", "receive", "accept", "refuse", "reject", "offer", "present", "deliver", "send",
+    "grow", "shrink", "expand", "contract", "stretch", "compress", "rise", "fall", "ascend", "descend",
+    "begin", "start", "initiate", "launch", "commence", "end", "finish", "complete", "conclude", "close",
+    "learn", "study", "teach", "instruct", "educate", "train", "practice", "rehearse", "prepare", "ready",
+    "wait", "pause", "stop", "halt", "continue", "proceed", "advance", "progress", "move", "go",
+    "remember", "forget", "recall", "remind", "recognize", "identify", "know", "understand", "comprehend", "grasp",
+    "make", "break", "fix", "repair", "mend", "heal", "hurt", "harm", "damage", "wound",
+    "watch", "see", "look", "observe", "notice", "gaze", "stare", "glance", "peek", "spy"
+  ],
+  adjectives: [
+    "bright", "dark", "shiny", "dull", "clear", "cloudy", "transparent", "opaque", "solid", "liquid",
+    "big", "small", "huge", "tiny", "massive", "minute", "enormous", "microscopic", "gigantic", "miniature",
+    "fast", "slow", "quick", "rapid", "swift", "speedy", "sluggish", "gradual", "steady", "hasty",
+    "hot", "cold", "warm", "cool", "freezing", "burning", "icy", "fiery", "frigid", "scorching",
+    "new", "old", "ancient", "modern", "fresh", "stale", "young", "aged", "antique", "current",
+    "good", "bad", "great", "terrible", "excellent", "awful", "wonderful", "horrible", "fantastic", "dreadful",
+    "happy", "sad", "joyful", "sorrowful", "cheerful", "gloomy", "merry", "melancholy", "delighted", "miserable",
+    "strong", "weak", "powerful", "feeble", "mighty", "frail", "potent", "impotent", "tough", "fragile",
+    "beautiful", "ugly", "pretty", "hideous", "gorgeous", "repulsive", "lovely", "unsightly", "attractive", "plain",
+    "smart", "stupid", "intelligent", "foolish", "clever", "dull", "wise", "silly", "brilliant", "ignorant",
+    "brave", "cowardly", "courageous", "fearful", "bold", "timid", "daring", "afraid", "fearless", "scared",
+    "loud", "quiet", "noisy", "silent", "boisterous", "mute", "vociferous", "hushed", "deafening", "inaudible",
+    "smooth", "rough", "soft", "hard", "silky", "coarse", "polished", "jagged", "even", "uneven",
+    "sweet", "bitter", "sour", "salty", "tasty", "bland", "delicious", "tasteless", "yummy", "icky",
+    "near", "far", "close", "distant", "adjacent", "remote", "proximate", "faraway", "neighboring", "secluded"
+  ],
+  common: [
+    "house", "car", "dog", "cat", "tree", "book", "phone", "computer", "table", "chair",
+    "water", "food", "money", "time", "work", "school", "friend", "family", "love", "home",
+    "city", "town", "road", "street", "park", "store", "market", "bank", "hospital", "school",
+    "day", "night", "morning", "evening", "week", "month", "year", "today", "tomorrow", "yesterday",
+    "man", "woman", "child", "boy", "girl", "person", "people", "group", "team", "crowd",
+    "hand", "foot", "head", "eye", "ear", "nose", "mouth", "arm", "leg", "back",
+    "red", "blue", "green", "yellow", "black", "white", "orange", "purple", "pink", "brown",
+    "one", "two", "three", "four", "five", "first", "last", "next", "previous", "many",
+    "happy", "sad", "good", "bad", "big", "small", "new", "old", "long", "short",
+    "eat", "drink", "sleep", "walk", "run", "talk", "read", "write", "play", "work"
+  ],
+  creative: [
+    "ethereal", "mellifluous", "effervescent", "luminous", "serendipity", "petrichor", "ephemeral", "sonder", "vellichor", "efflorescence",
+    "murmuration", "limerence", "bombinate", "defenestration", "gossamer", "halcyon", "imbroglio", "incandescent", "ineffable", "lassitude",
+    "moiety", "onomatopoeia", "palimpsest", "panacea", "paradigm", "quixotic", "ratatouille", "riposte", "sanguine", "scintilla",
+    "susurrus", "syzygy", "tintinnabulation", "ubiquitous", "verisimilitude", "wanderlust", "wherewithal", "zeitgeist", "aesthetic", "alchemy",
+    "arcane", "aurora", "azure", "bastion", "bliss", "bucolic", "cacophony", "cascade", "celestial", "chimera",
+    "clandestine", "cosmic", "crimson", "crystalline", "dappled", "dawn", "dusk", "ebony", "echo", "eclipse",
+    "elixir", "ember", "enigma", "essence", "eternal", "fable", "frost", "glimmer", "golden", "harmony",
+    "hollow", "horizon", "illusion", "infinity", "ivory", "jade", "journey", "labyrinth", "lagoon", "legend",
+    "lotus", "midnight", "mirage", "moonlight", "mystic", "nebula", "nocturne", "obsidian", "oracle", "phantom",
+    "phoenix", "prism", "pristine", "pulse", "quasar", "radiant", "realm", "reverie", "rune", "sanctuary"
+  ]
+};
+
+// DOM Elements
+const wordCountInput = document.getElementById('wordCount');
+const wordsDisplay = document.getElementById('wordsDisplay');
+const statsText = document.getElementById('statsText');
+const lastGenerated = document.getElementById('lastGenerated');
+const generateBtn = document.getElementById('generateBtn');
+const copyBtn = document.getElementById('copyBtn');
+const clearBtn = document.getElementById('clearBtn');
+const categoryButtons = document.querySelectorAll('.category-btn');
+const capitalizeFirst = document.getElementById('capitalizeFirst');
+const allCaps = document.getElementById('allCaps');
+const addNumbers = document.getElementById('addNumbers');
+const uniqueOnly = document.getElementById('uniqueOnly');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+let currentCategory = 'all';
+let generatedWords = [];
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Category selection
+categoryButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    categoryButtons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentCategory = btn.dataset.category;
+    generateWords();
+  });
+});
+
+// Get words from category
+function getWordsFromCategory(category) {
+  if (category === 'all') {
+    return [...wordDatabase.nouns, ...wordDatabase.verbs, ...wordDatabase.adjectives, ...wordDatabase.common, ...wordDatabase.creative];
+  }
+  return wordDatabase[category] || [];
+}
+
+// Generate random words
+function generateWords() {
+  const count = parseInt(wordCountInput.value) || 10;
+  const words = getWordsFromCategory(currentCategory);
+  const unique = uniqueOnly.checked;
+  const capitalize = capitalizeFirst.checked;
+  const caps = allCaps.checked;
+  const numbers = addNumbers.checked;
+  
+  let selected = [];
+  const tempWords = [...words];
+  
+  for (let i = 0; i < count; i++) {
+    if (tempWords.length === 0) break;
+    
+    const randomIndex = Math.floor(Math.random() * tempWords.length);
+    let word = tempWords[randomIndex];
+    
+    if (unique) {
+      tempWords.splice(randomIndex, 1);
+    }
+    
+    // Apply formatting
+    if (caps) {
+      word = word.toUpperCase();
+    } else if (capitalize) {
+      word = word.charAt(0).toUpperCase() + word.slice(1);
+    }
+    
+    if (numbers) {
+      word += Math.floor(Math.random() * 100);
+    }
+    
+    selected.push(word);
+  }
+  
+  generatedWords = selected;
+  displayWords(selected);
+  updateStats(selected.length);
+}
+
+// Display words
+function displayWords(words) {
+  wordsDisplay.innerHTML = '';
+  words.forEach((word, index) => {
+    const tag = document.createElement('span');
+    tag.className = 'word-tag px-2 py-1 rounded bg-white/10 text-gray-200 text-xs border border-white/10 cursor-pointer hover:bg-white/20 transition-colors';
+    tag.textContent = word;
+    tag.style.animationDelay = `${index * 0.02}s`;
+    tag.addEventListener('click', () => {
+      navigator.clipboard.writeText(word);
+      tag.style.background = 'rgba(34, 197, 94, 0.3)';
+      setTimeout(() => {
+        tag.style.background = '';
+      }, 300);
+    });
+    wordsDisplay.appendChild(tag);
+  });
+}
+
+// Update stats
+function updateStats(count) {
+  statsText.textContent = `Generated: ${count} words`;
+  lastGenerated.textContent = new Date().toLocaleTimeString();
+}
+
+// Copy to clipboard
+async function copyWords() {
+  if (generatedWords.length === 0) return;
+  
+  try {
+    const text = generatedWords.join('\n');
+    await navigator.clipboard.writeText(text);
+    
+    const originalText = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalText;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+}
+
+// Clear display
+function clearDisplay() {
+  wordsDisplay.innerHTML = '';
+  generatedWords = [];
+  statsText.textContent = 'Generated: 0 words';
+  lastGenerated.textContent = '';
+}
+
+// Event listeners
+generateBtn.addEventListener('click', generateWords);
+copyBtn.addEventListener('click', copyWords);
+clearBtn.addEventListener('click', clearDisplay);
+
+// Auto-generate on option changes
+[capitalizeFirst, allCaps, addNumbers, uniqueOnly].forEach(el => {
+  el.addEventListener('change', () => {
+    if (generatedWords.length > 0) {
+      generateWords();
+    }
+  });
+});
+
+wordCountInput.addEventListener('input', () => {
+  let val = parseInt(wordCountInput.value);
+  if (val > 100) wordCountInput.value = 100;
+  if (val < 1) wordCountInput.value = 1;
+});
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Initialize with default generation
+generateWords();
+</script>
+</body>
+</html>

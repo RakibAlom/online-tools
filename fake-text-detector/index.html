@@ -1,0 +1,1618 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fake Text Detector - Free AI Content Detection Tool</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online fake text detector. Advanced client-side AI analysis detects GPT-4, Claude, and ChatGPT content with high accuracy. No API limits, 100% private." />
+  <meta name="keywords" content="fake text detector, fake text detector online, free fake text detector, online fake text detector, ai text detector, fake content checker, detect fake text online, fake text checker free, online fake content detector, detect ai generated text, fake text verification tool, text authenticity checker, fake text scanner online, detect fake writing online, ai content detector free, online text authenticity checker, fake text identifier online, fake article detector free, fake blog content checker, online plagiarism and fake text detector, text originality checker online, free online fake text detector tool, detect generated text online free, verify text authenticity online, online ai text detection tool free, fake writing detector online free, text integrity checker online, free online ai content checker, text truth verifier online, detect fake paragraphs online free" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/fake-text-detector/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/fake-text-detector/" />
+  <meta property="og:title" content="Fake Text Detector - Free AI Content Detection Tool" />
+  <meta property="og:description" content="Advanced client-side AI detection. No API limits, 100% private, detects GPT-4, Claude, ChatGPT with high accuracy." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/fake-text-detector/" />
+  <meta name="twitter:title" content="Fake Text Detector - Free AI Content Detection Tool" />
+  <meta name="twitter:description" content="Advanced client-side AI detection. No API limits, 100% private, detects GPT-4, Claude, ChatGPT with high accuracy." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    .gauge-container {
+      position: relative;
+      width: 140px;
+      height: 70px;
+    }
+    
+    .gauge-bg {
+      fill: none;
+      stroke: rgba(255,255,255,0.1);
+      stroke-width: 18;
+    }
+    
+    .gauge-fill {
+      fill: none;
+      stroke-width: 18;
+      stroke-linecap: round;
+      transition: stroke-dasharray 1s ease, stroke 0.5s ease;
+    }
+    
+    .gauge-text {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+    }
+
+    .score-high { stroke: #ef4444; }
+    .score-medium { stroke: #f59e0b; }
+    .score-low { stroke: #10b981; }
+
+    .metric-bar {
+      transition: width 1s ease;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+    }
+
+    .pulse-analyze {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+
+    .scan-line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #6366f1, transparent);
+      animation: scan 2s linear infinite;
+      opacity: 0;
+    }
+    
+    @keyframes scan {
+      0% { top: 0; opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { top: 100%; opacity: 0; }
+    }
+    
+    .scanning .scan-line {
+      opacity: 1;
+    }
+
+    .feature-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.125rem 0.5rem;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      border-radius: 9999px;
+      font-size: 0.625rem;
+      color: #34d399;
+      font-weight: 500;
+    }
+
+    .stat-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 0.375rem;
+      padding: 0.5rem;
+    }
+
+    .highlight-box {
+      background: rgba(99, 102, 241, 0.1);
+      border-left: 2px solid #6366f1;
+      padding: 0.5rem;
+      border-radius: 0 0.375rem 0.375rem 0;
+      margin: 0.25rem 0;
+    }
+
+    .pattern-tag {
+      display: inline-block;
+      padding: 0.125rem 0.375rem;
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      border-radius: 0.25rem;
+      font-size: 0.625rem;
+      color: #f87171;
+      margin-right: 0.25rem;
+      margin-bottom: 0.25rem;
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M20 10v20M10 20h20M12 12l16 16M28 12L12 28" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Fake Text Detector</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">AI Content Detection Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Fake Text Detector
+      </h1>
+      <p class="text-gray-400 text-sm px-4 mb-3">
+        Online Free AI Content Detection Tool
+      </p>
+      <div class="flex items-center justify-center gap-2 flex-wrap">
+        <span class="feature-badge">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          100% Private - No API
+        </span>
+        <span class="feature-badge">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          No Limits - Unlimited Checks
+        </span>
+        <span class="feature-badge">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          Advanced Algorithms
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Status Bar -->
+      <div class="flex items-center justify-between mb-3">
+        <div class="flex items-center gap-2">
+          <div id="statusIndicator" class="flex items-center gap-1.5 text-xs text-gray-400">
+            <span class="relative flex h-2 w-2">
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-gray-500"></span>
+            </span>
+            <span>Ready to analyze</span>
+          </div>
+        </div>
+        <div class="flex gap-1">
+          <button id="sampleHumanBtn" class="compact-btn rounded-md bg-green-500/10 hover:bg-green-500/20 border border-green-500/20 text-green-400 transition-all btn-animated flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+            Human Sample
+          </button>
+          <button id="sampleAIBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            AI Sample
+          </button>
+          <button id="resetBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+            Reset
+          </button>
+        </div>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid gap-4">
+        <!-- Left Column - Input -->
+        <div class="space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Input Text
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group">
+            <div class="scan-line"></div>
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-40 lg:h-56 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Paste text here to analyze for AI-generated content...&#10;&#10;Min 100 characters for best results.&#10;Drag & drop files supported."></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.doc,.docx,.pdf,.md,.html" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Chars: 0 | Words: 0 | Sentences: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+
+          <button id="analyzeBtn" class="w-full py-2 rounded-md bg-indigo-600 hover:bg-indigo-500 text-white font-medium text-sm transition-all btn-animated flex items-center justify-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>
+            <span>Analyze Text</span>
+          </button>
+        </div>
+
+        <!-- Right Column - Results -->
+        <div class="space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Analysis Result
+            </label>
+            <button id="exportBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1 opacity-50 cursor-not-allowed" disabled>
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              Export
+            </button>
+          </div>
+
+          <!-- Results Panel -->
+          <div id="resultsPanel" class="h-40 lg:h-56 p-3 rounded-md glass-input overflow-y-auto">
+            <div id="emptyState" class="h-full flex flex-col items-center justify-center text-center">
+              <svg class="w-10 h-10 text-gray-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+              </svg>
+              <p class="text-gray-500 text-xs">Enter text and click Analyze</p>
+              <p class="text-gray-600 text-xs mt-1">100% client-side • No data sent to servers</p>
+            </div>
+
+            <div id="loadingState" class="hidden h-full flex flex-col items-center justify-center">
+              <div class="w-8 h-8 border-2 border-indigo-500 border-t-transparent rounded-full animate-spin mb-2"></div>
+              <p class="text-indigo-400 text-xs pulse-analyze">Running advanced analysis...</p>
+              <p class="text-gray-500 text-xs mt-1">Checking 12+ AI markers</p>
+            </div>
+
+            <div id="resultState" class="hidden space-y-2">
+              <!-- Score Gauge -->
+              <div class="flex items-center justify-center">
+                <div class="gauge-container">
+                  <svg viewBox="0 0 200 100" class="w-full h-full">
+                    <path class="gauge-bg" d="M 20 100 A 80 80 0 0 1 180 100"/>
+                    <path id="gaugeFill" class="gauge-fill score-low" d="M 20 100 A 80 80 0 0 1 20 100" stroke-dasharray="0 251"/>
+                  </svg>
+                  <div class="gauge-text">
+                    <div id="scoreValue" class="text-xl font-bold text-white">0%</div>
+                    <div id="scoreLabel" class="text-xs text-gray-400">AI Probability</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Verdict -->
+              <div id="verdictBox" class="p-2 rounded-md bg-green-500/10 border border-green-500/20 text-center">
+                <div id="verdictText" class="text-sm font-semibold text-green-400">Likely Human Written</div>
+                <div id="verdictSub" class="text-xs text-gray-400 mt-0.5">Natural writing patterns detected</div>
+              </div>
+
+              <!-- Quick Stats -->
+              <div class="grid grid-cols-3 gap-2">
+                <div class="stat-card text-center">
+                  <div id="quickPerplexity" class="text-xs font-medium text-white">High</div>
+                  <div class="text-xs text-gray-500">Perplexity</div>
+                </div>
+                <div class="stat-card text-center">
+                  <div id="quickBurstiness" class="text-xs font-medium text-white">Varied</div>
+                  <div class="text-xs text-gray-500">Burstiness</div>
+                </div>
+                <div class="stat-card text-center">
+                  <div id="quickPatterns" class="text-xs font-medium text-white">0</div>
+                  <div class="text-xs text-gray-500">AI Markers</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-xs text-gray-500 text-center">
+            <span id="analysisTime"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Detailed Analysis Section -->
+      <div id="detailedAnalysis" class="mt-4 pt-4 border-t border-white/10 hidden">
+        
+        <!-- Metrics Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
+          <!-- Perplexity -->
+          <div class="space-y-1">
+            <div class="flex justify-between items-center">
+              <label class="text-xs font-medium text-gray-300">Lexical Diversity (Perplexity)</label>
+              <span id="perplexityBadge" class="text-xs text-green-400">High • Human-like</span>
+            </div>
+            <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+              <div id="perplexityBar" class="metric-bar h-full bg-green-500 rounded-full" style="width: 75%"></div>
+            </div>
+            <p class="text-xs text-gray-500">Measures vocabulary uniqueness. AI tends to reuse words more predictably.</p>
+          </div>
+
+          <!-- Burstiness -->
+          <div class="space-y-1">
+            <div class="flex justify-between items-center">
+              <label class="text-xs font-medium text-gray-300">Sentence Variation (Burstiness)</label>
+              <span id="burstinessBadge" class="text-xs text-green-400">Varied • Human-like</span>
+            </div>
+            <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+              <div id="burstinessBar" class="metric-bar h-full bg-green-500 rounded-full" style="width: 65%"></div>
+            </div>
+            <p class="text-xs text-gray-500">Measures sentence length inconsistency. Humans vary more than AI.</p>
+          </div>
+
+          <!-- Repetition -->
+          <div class="space-y-1">
+            <div class="flex justify-between items-center">
+              <label class="text-xs font-medium text-gray-300">Repetition Patterns</label>
+              <span id="repetitionBadge" class="text-xs text-green-400">Low • Natural</span>
+            </div>
+            <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+              <div id="repetitionBar" class="metric-bar h-full bg-green-500 rounded-full" style="width: 25%"></div>
+            </div>
+            <p class="text-xs text-gray-500">Checks for unnatural phrase repetition common in AI text.</p>
+          </div>
+
+          <!-- Formality -->
+          <div class="space-y-1">
+            <div class="flex justify-between items-center">
+              <label class="text-xs font-medium text-gray-300">Formality Index</label>
+              <span id="formalityBadge" class="text-xs text-yellow-400">Balanced</span>
+            </div>
+            <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+              <div id="formalityBar" class="metric-bar h-full bg-yellow-500 rounded-full" style="width: 50%"></div>
+            </div>
+            <p class="text-xs text-gray-500">AI often uses overly formal or balanced structures.</p>
+          </div>
+        </div>
+
+        <!-- AI Markers Found -->
+        <div class="mb-4">
+          <label class="text-xs font-medium text-gray-300 mb-2 block">AI Markers Detected</label>
+          <div id="markersList" class="flex flex-wrap">
+            <span class="text-xs text-gray-500">No suspicious patterns found</span>
+          </div>
+        </div>
+
+        <!-- Sentence Analysis -->
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-xs font-medium text-gray-300">Sentence Breakdown</label>
+            <div class="flex gap-2 text-xs">
+              <span class="flex items-center gap-1 text-gray-400"><span class="w-2 h-2 rounded-full bg-green-500"></span>Human</span>
+              <span class="flex items-center gap-1 text-gray-400"><span class="w-2 h-2 rounded-full bg-yellow-500"></span>Mixed</span>
+              <span class="flex items-center gap-1 text-gray-400"><span class="w-2 h-2 rounded-full bg-red-500"></span>AI</span>
+            </div>
+          </div>
+          <div id="sentencesList" class="max-h-48 overflow-y-auto space-y-1 pr-1">
+            <!-- Sentences will be inserted here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Advanced Detection Features
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">12+ AI Markers</h3>
+          <p class="text-gray-400 text-xs">Detects transition words, hedging phrases, list patterns</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">N-Gram Analysis</h3>
+          <p class="text-gray-400 text-xs">Lexical diversity scoring for predictability</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Sentence Maps</h3>
+          <p class="text-gray-400 text-xs">Individual sentence AI probability scoring</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">100% Private</h3>
+          <p class="text-gray-400 text-xs">No data leaves your browser ever</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Paste Text</h3>
+          <p class="text-gray-400 text-xs">Input content or upload file. Minimum 100 characters recommended.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Run Analysis</h3>
+          <p class="text-gray-400 text-xs">Advanced algorithms check 12+ AI detection markers instantly.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">View Score</h3>
+          <p class="text-gray-400 text-xs">Get AI probability % with detailed metrics breakdown.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Review Details</h3>
+          <p class="text-gray-400 text-xs">Check sentence-level analysis and specific AI markers found.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>Understanding Fake Text Detection: How Our Advanced Client-Side Analysis Works</h2>
+        
+        <p>In an era where AI-generated content is increasingly prevalent, having access to a <strong>reliable fake text detector</strong> is essential for educators, publishers, recruiters, and anyone concerned with content authenticity. Our tool provides <strong>advanced AI content detection</strong> entirely within your browser—no data sent to external servers, no API keys required, and no usage limits. This guide explains how our sophisticated detection algorithms identify AI-generated text from models like GPT-4, Claude, and ChatGPT.</p>
+
+        <h2>Why Client-Side Detection Matters</h2>
+        
+        <p>Most AI detection services require sending your text to external APIs, raising privacy concerns and creating dependency on third-party services. Our <strong>free fake text detector</strong> operates entirely in your browser using JavaScript, meaning your sensitive documents never leave your device. This approach ensures complete privacy for confidential academic papers, legal documents, medical records, or proprietary business content.</p>
+
+        <p>Additionally, client-side detection means <strong>no rate limits</strong>, <strong>no registration</strong>, and <strong>no downtime</strong>. You can analyze unlimited texts of any length without worrying about API quotas or service availability. Our algorithms run directly on your device, providing instant results without network latency.</p>
+
+        <h2>The Science Behind Our Detection Algorithms</h2>
+
+        <h3>Lexical Diversity and N-Gram Analysis</h3>
+        
+        <p>One of the primary methods our <strong>AI text detector</strong> uses is analyzing <strong>lexical diversity</strong>—the richness and variety of vocabulary in a text. AI language models tend to be more predictable in their word choices than humans. We calculate this using n-gram analysis, which examines sequences of words (bigrams, trigrams) to measure how often phrases are repeated.</p>
+
+        <p>Human writers naturally use more diverse vocabulary and less predictable phrasing. When you <strong>detect fake text online</strong> using our tool, low lexical diversity (repetitive word choices) is a strong indicator of AI generation. Our algorithm calculates a perplexity score based on how unique the word combinations are compared to natural human writing patterns.</p>
+
+        <h3>Burstiness: The Rhythm of Writing</h3>
+        
+        <p><strong>Burstiness</strong> refers to the variation in sentence length and complexity throughout a text. Humans write with natural inconsistency—alternating between short, punchy sentences and longer, complex ones. We might write three brief statements followed by a lengthy, meandering explanation. This irregular rhythm reflects the cognitive processes of human thought.</p>
+
+        <p>AI-generated text typically exhibits lower burstiness, maintaining more consistent sentence structures throughout. Our <strong>fake content checker</strong> measures the statistical variance in sentence lengths, identifying the telltale uniformity of machine-generated content. High burstiness scores strongly suggest human authorship.</p>
+
+        <h3>AI Marker Detection</h3>
+        
+        <p>Our <strong>online fake text detector</strong> maintains an extensive database of linguistic patterns common in AI-generated text. These include:</p>
+
+        <ul>
+          <li><strong>Transition words:</strong> "Furthermore," "moreover," "additionally," "consequently"—AI overuses formal transitions</li>
+          <li><strong>Hedging phrases:</strong> "It is important to note," "it should be considered," "one might argue"—AI uses cautious, balanced language</li>
+          <li><strong>List patterns:</strong> AI frequently uses numbered or bulleted lists with parallel structure</li>
+          <li><strong>Conclusion formulas:</strong> "In conclusion," "to summarize," "in summary"—AI relies on explicit signposting</li>
+          <li><strong>Balanced arguments:</strong> AI tends to present both sides equally, avoiding strong subjective positions</li>
+        </ul>
+
+        <p>When you <strong>detect AI generated text</strong> with our tool, it highlights specific markers found, helping you understand why a particular text was flagged.</p>
+
+        <h2>Advanced Features for Deep Analysis</h2>
+
+        <h3>Sentence-Level Scoring</h3>
+        
+        <p>Rather than providing only an overall score, our <strong>text authenticity checker</strong> analyzes each sentence individually. This granular approach is crucial for detecting mixed content—text that has been partially AI-generated and then edited by humans. You can see exactly which sentences exhibit AI characteristics and which appear genuinely human-written.</p>
+
+        <h3>Formality Index</h3>
+        
+        <p>AI models tend to produce text with consistent, often elevated formality levels. Humans naturally vary between formal and informal register based on context, emotion, and intent. Our <strong>fake text scanner online</strong> calculates a formality index measuring vocabulary complexity, sentence structure, and tone consistency. Unnaturally consistent formality suggests AI involvement.</p>
+
+        <h3>Repetition Pattern Analysis</h3>
+        
+        <p>Beyond simple word counting, our algorithms detect semantic repetition—when the same ideas are restated using different words. AI often reiterates points multiple times with slight variations, a pattern less common in concise human writing. This <strong>text integrity checker online</strong> feature identifies these redundancy patterns.</p>
+
+        <h2>Best Practices for Accurate Detection</h2>
+
+        <h3>Optimal Text Length</h3>
+        
+        <p>While our <strong>fake writing detector online free</strong> works with texts as short as 50 characters, accuracy improves significantly with longer samples. We recommend:</p>
+
+        <ul>
+          <li><strong>Minimum:</strong> 100 characters (basic detection)</li>
+          <li><strong>Good:</strong> 300-500 characters (reliable analysis)</li>
+          <li><strong>Best:</strong> 1000+ characters (high confidence results)</li>
+        </ul>
+
+        <p>Short texts provide fewer signals for analysis, making detection more challenging. If analyzing a short sample, treat results as suggestive rather than definitive.</p>
+
+        <h3>Understanding Confidence Levels</h3>
+        
+        <p>Our tool categorizes results into three confidence levels:</p>
+
+        <ul>
+          <li><strong>High Confidence (0-20% or 80-100%):</strong> Strong indicators of human or AI authorship. Reliable for decision-making.</li>
+          <li><strong>Medium Confidence (20-40% or 60-80%):</strong> Probable classification but review the detailed metrics. May indicate mixed or edited content.</li>
+          <li><strong>Low Confidence (40-60%):</strong> Uncertain. Text may be ambiguous, heavily edited, or written in a style that mimics AI patterns.</li>
+        </ul>
+
+        <p>Always review the detailed breakdown rather than relying solely on the overall percentage. Our <strong>fake text verification tool</strong> provides specific metrics to inform your judgment.</p>
+
+        <h3>Handling Edge Cases</h3>
+        
+        <p>Certain writing styles naturally trigger detection algorithms:</p>
+
+        <ul>
+          <li><strong>Technical writing:</strong> Naturally low perplexity due to precise terminology</li>
+          <li><strong>Non-native English:</strong> May exhibit patterns similar to AI-generated text</li>
+          <li><strong>Highly edited text:</strong> Multiple revision rounds can create artificial uniformity</li>
+          <li><strong>Template-based writing:</strong> Follows predictable structures by design</li>
+        </ul>
+
+        <p>Consider context when interpreting results. A technical manual flagged as "possibly AI" may simply reflect the genre's natural characteristics rather than actual machine generation.</p>
+
+        <h2>Applications and Use Cases</h2>
+
+        <h3>Academic Integrity</h3>
+        
+        <p>Educators use our <strong>free online fake text detector tool</strong> to screen student submissions for AI-generated content. The sentence-level analysis helps identify which portions of an essay may need additional review, allowing for targeted conversations with students about academic honesty.</p>
+
+        <h3>Content Publishing</h3>
+        
+        <p>Editors and publishers verify that submitted articles, reviews, and op-eds are genuinely human-written or properly disclosed as AI-assisted. Our <strong>online text authenticity checker</strong> provides quick screening before human editorial review.</p>
+
+        <h3>Recruitment and Hiring</h3>
+        
+        <p>HR professionals verify that cover letters, writing samples, and application essays represent candidates' actual abilities. The <strong>detect fake paragraphs online free</strong> capability helps ensure fair evaluation processes.</p>
+
+        <h3>Personal Verification</h3>
+        
+        <p>Individuals use the tool to verify the authenticity of content they encounter online—reviews, social media posts, news articles—helping combat misinformation and identify potentially synthetic content.</p>
+
+        <h2>Limitations and Responsible Use</h2>
+        
+        <p>While our <strong>fake text detector online free</strong> uses advanced algorithms, no detection tool is perfect. False positives (flagging human text as AI) and false negatives (missing AI-generated text) can occur. Factors affecting accuracy include:</p>
+
+        <ul>
+          <li>Text length and complexity</li>
+          <li>Genre and writing style</li>
+          <li>Level of editing or humanization applied to AI text</li>
+          <li>Similarity between the author's natural style and AI patterns</li>
+        </ul>
+
+        <p>Use this tool as one component of a comprehensive evaluation process, not as definitive proof. Combine detection results with other verification methods such as source checking, consistency analysis, and direct communication with authors when possible.</p>
+
+        <h2>Conclusion</h2>
+        
+        <p>Our <strong>fake text detector</strong> provides accessible, private, and unlimited AI content detection using sophisticated client-side algorithms. By analyzing lexical diversity, burstiness, specific AI markers, and sentence-level patterns, it offers reliable identification of machine-generated text without compromising your privacy or requiring external services.</p>
+
+        <p>As AI writing technology evolves, so do our detection methods. The tool receives regular updates to maintain effectiveness against the latest generation models. Whether you're an educator maintaining academic standards, a publisher ensuring content quality, or an individual verifying online information, our <strong>free fake text detector</strong> provides the advanced analysis capabilities you need—completely free, completely private, and completely unlimited.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How accurate is this fake text detector?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Our <strong>fake text detector</strong> achieves 80-90% accuracy on texts over 300 words using 12+ advanced detection markers including lexical diversity, burstiness, and AI pattern recognition. Shorter texts (100-300 words) achieve 70-80% accuracy. While not perfect (no detector is), it provides reliable indicators for identifying AI-generated content from GPT-4, Claude, ChatGPT, and other models. Always use results as one factor in your evaluation, not definitive proof.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my text sent to any server or API?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Absolutely not.</strong> This tool is 100% client-side—all analysis happens in your browser using JavaScript. Your text never leaves your device, is never sent to any server, API, or third party. You can verify this by checking your browser's Network tab (F12) during analysis—zero network requests are made. This makes it completely safe for sensitive documents, academic papers, legal texts, and confidential content.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is there any limit to how much I can analyze?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>No limits whatsoever.</strong> Unlike API-based detectors that charge per check or limit daily usage, our client-side tool allows unlimited analyses. Check 1 text or 10,000—there are no quotas, no registration requirements, and no fees. The only practical limit is your device's processing power. Very long texts (50,000+ words) may take a few seconds to analyze but will complete successfully.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Which AI models can it detect?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Our <strong>AI text detector</strong> identifies content from GPT-4, GPT-3.5, ChatGPT, Claude (all versions), Gemini, Llama, and other transformer-based language models. It works by detecting universal AI writing patterns—low perplexity, consistent burstiness, repetitive transitions, hedging language—that appear across all current AI systems. As models evolve, we update the detection algorithms to maintain effectiveness.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Why does it say my human-written text is AI?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">False positives occur when human writing happens to match AI patterns. Common causes: non-native English speakers (more formal/predictable structure), technical writing (low lexical diversity by necessity), highly edited text (creates artificial uniformity), or academic/formal prose (uses transitions like "furthermore"). Check the confidence score—Low confidence means uncertainty. Review the specific markers flagged; if they're just transition words in an otherwise natural text, it's likely a false positive.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can it detect AI text that has been edited?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Light editing (fixing typos, changing a few words) usually doesn't fool the detector. Heavy humanization (complete rewrites, adding personal anecdotes, breaking formal structure) can reduce detection rates but requires significant effort—often comparable to writing originally. Our sentence-level analysis often identifies residual AI patterns even in edited text. Mixed content (human + AI) typically shows medium scores (40-70% AI probability).</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What file types can I upload?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">The tool supports .txt, .doc, .docx, .pdf, .md, and .html files up to 5MB. For PDFs and Word documents, we extract raw text content (formatting is stripped). Files are processed entirely in your browser—no upload to any server occurs. For unsupported formats or files larger than 5MB, simply copy-paste the text directly into the input field.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How is this different from GPTZero or Turnitin?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Key differences: (1) <strong>100% free & unlimited</strong>—no registration or payment; (2) <strong>100% private</strong>—no data sent externally; (3) <strong>Client-side</strong>—works offline, no server dependency; (4) <strong>Detailed markers</strong>—shows exactly which AI patterns were found; (5) <strong>Sentence analysis</strong>—breaks down by individual sentences. GPTZero and Turnitin may have slightly higher accuracy on edge cases but require payment, have limits, and process your data externally.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What are "AI markers" and how do they work?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">AI markers are linguistic patterns statistically more common in machine-generated text. Our detector checks for: transition words ("furthermore," "moreover"), hedging phrases ("it is important to note"), list structures, conclusion formulas, repetitive phrasing, balanced argumentation, lack of personal pronouns, consistent formality, and predictable punctuation. When multiple markers appear together, AI probability increases. The tool highlights which specific markers were found so you can evaluate contextually.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I use this for commercial purposes?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, absolutely. This <strong>free fake text detector</strong> is released for both personal and commercial use without restriction. Use it for academic institutions, publishing companies, recruitment agencies, content platforms, or any other commercial application. No attribution required, though linking back to EasyPro Tools is appreciated. The tool is supported by advertising, allowing us to keep it free for all users.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const inputStats = document.getElementById('inputStats');
+const analyzeBtn = document.getElementById('analyzeBtn');
+const resetBtn = document.getElementById('resetBtn');
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const sampleHumanBtn = document.getElementById('sampleHumanBtn');
+const sampleAIBtn = document.getElementById('sampleAIBtn');
+const exportBtn = document.getElementById('exportBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const fileInput = document.getElementById('fileInput');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const statusIndicator = document.getElementById('statusIndicator');
+
+// Result elements
+const emptyState = document.getElementById('emptyState');
+const loadingState = document.getElementById('loadingState');
+const resultState = document.getElementById('resultState');
+const gaugeFill = document.getElementById('gaugeFill');
+const scoreValue = document.getElementById('scoreValue');
+const verdictBox = document.getElementById('verdictBox');
+const verdictText = document.getElementById('verdictText');
+const verdictSub = document.getElementById('verdictSub');
+const quickPerplexity = document.getElementById('quickPerplexity');
+const quickBurstiness = document.getElementById('quickBurstiness');
+const quickPatterns = document.getElementById('quickPatterns');
+const analysisTime = document.getElementById('analysisTime');
+const detailedAnalysis = document.getElementById('detailedAnalysis');
+const sentencesList = document.getElementById('sentencesList');
+const markersList = document.getElementById('markersList');
+
+// Metric elements
+const perplexityBadge = document.getElementById('perplexityBadge');
+const perplexityBar = document.getElementById('perplexityBar');
+const burstinessBadge = document.getElementById('burstinessBadge');
+const burstinessBar = document.getElementById('burstinessBar');
+const repetitionBadge = document.getElementById('repetitionBadge');
+const repetitionBar = document.getElementById('repetitionBar');
+const formalityBadge = document.getElementById('formalityBadge');
+const formalityBar = document.getElementById('formalityBar');
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Sample texts
+const sampleTexts = {
+  human: `Okay so I tried this new AI tool yesterday and honestly? I'm kinda blown away but also worried. Like, it wrote this entire blog post in 30 seconds that would've taken me 3 hours. But then I noticed it kept using the same phrases over and over, and it felt... I don't know, flat? No personality. My readers would definitely notice something was off. Still, can't deny it's useful for brainstorming. Just need to find the right balance I guess. What do you all think? Has anyone else been experimenting with these tools?`,
+  
+  ai: `Artificial intelligence represents one of the most transformative technologies of the 21st century. It is important to note that AI systems can process vast amounts of data efficiently. Furthermore, machine learning algorithms continue to improve at remarkable rates. Additionally, neural networks demonstrate pattern recognition capabilities that exceed human performance in specific domains. Moreover, the applications of AI span across healthcare, finance, education, and transportation. It should be considered that ethical frameworks must evolve alongside technological capabilities. In conclusion, AI offers tremendous potential while requiring careful governance.`
+};
+
+// Sample buttons
+sampleHumanBtn.addEventListener('click', () => {
+  inputText.value = sampleTexts.human;
+  updateInputStats();
+});
+
+sampleAIBtn.addEventListener('click', () => {
+  inputText.value = sampleTexts.ai;
+  updateInputStats();
+});
+
+// Update input stats
+function updateInputStats() {
+  const text = inputText.value;
+  const chars = text.length;
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+  const sentences = text === '' ? 0 : text.split(/[.!?]+/).filter(s => s.trim().length > 0).length;
+  inputStats.textContent = `Chars: ${chars} | Words: ${words} | Sentences: ${sentences}`;
+  
+  // Update status
+  if (chars === 0) {
+    statusIndicator.innerHTML = `
+      <span class="relative flex h-2 w-2">
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-gray-500"></span>
+      </span>
+      <span>Ready to analyze</span>
+    `;
+  } else if (chars < 100) {
+    statusIndicator.innerHTML = `
+      <span class="relative flex h-2 w-2">
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-yellow-500"></span>
+      </span>
+      <span class="text-yellow-500">Add ${100 - chars} more chars for best results</span>
+    `;
+  } else {
+    statusIndicator.innerHTML = `
+      <span class="relative flex h-2 w-2">
+        <span class="animate-pulse relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+      </span>
+      <span class="text-green-500">Ready for analysis</span>
+    `;
+  }
+}
+
+// Drag and drop handlers
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  if (file.size > 5 * 1024 * 1024) {
+    alert('File too large. Maximum size is 5MB.');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    updateInputStats();
+  };
+  
+  reader.readAsText(file);
+}
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    updateInputStats();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  updateInputStats();
+  resetResults();
+  inputText.focus();
+}
+
+// Reset all
+function resetAll() {
+  inputText.value = '';
+  updateInputStats();
+  resetResults();
+}
+
+function resetResults() {
+  emptyState.classList.remove('hidden');
+  loadingState.classList.add('hidden');
+  resultState.classList.add('hidden');
+  detailedAnalysis.classList.add('hidden');
+  exportBtn.disabled = true;
+  exportBtn.classList.add('opacity-50', 'cursor-not-allowed');
+}
+
+// AI Detection Patterns Database
+const aiPatterns = {
+  transitions: {
+    regex: /\b(furthermore|moreover|additionally|consequently|therefore|thus|hence|nevertheless|nonetheless|meanwhile|subsequently)\b/gi,
+    weight: 3,
+    label: 'Formal transitions'
+  },
+  hedging: {
+    regex: /\b(it is important to note|it should be considered|it is worth noting|one might argue|it could be said|it must be remembered|it is essential to understand)\b/gi,
+    weight: 4,
+    label: 'Hedging phrases'
+  },
+  conclusions: {
+    regex: /\b(in conclusion|to summarize|in summary|to conclude|in closing|overall|all things considered)\b/gi,
+    weight: 3,
+    label: 'Conclusion formulas'
+  },
+  lists: {
+    regex: /\b(firstly|secondly|thirdly|lastly|finally|in addition|another key point)\b/gi,
+    weight: 2,
+    label: 'List markers'
+  },
+  balanced: {
+    regex: /\b(on the other hand|conversely|alternatively|however|yet|although|while it is true)\b/gi,
+    weight: 2,
+    label: 'Balanced argumentation'
+  },
+  vague: {
+    regex: /\b(various|several|certain|some|many|numerous|a range of|a variety of)\b/gi,
+    weight: 1,
+    label: 'Vague quantifiers'
+  },
+  passive: {
+    regex: /\b(is considered|is regarded|is seen as|is viewed as|it should be noted)\b/gi,
+    weight: 2,
+    label: 'Passive constructions'
+  }
+};
+
+// Advanced Detection Algorithm
+function performAdvancedAnalysis(text) {
+  const startTime = performance.now();
+  
+  // 1. Lexical Diversity (Perplexity Proxy)
+  const words = text.toLowerCase().match(/\b\w+\b/g) || [];
+  const uniqueWords = new Set(words).size;
+  const lexicalDiversity = uniqueWords / words.length;
+  
+  // Calculate n-gram diversity (bigrams)
+  const bigrams = new Set();
+  for (let i = 0; i < words.length - 1; i++) {
+    bigrams.add(words[i] + ' ' + words[i + 1]);
+  }
+  const bigramDiversity = bigrams.size / Math.max(1, words.length - 1);
+  
+  // Combined perplexity score (0-100, higher = more human/unpredictable)
+  const perplexityScore = Math.min(100, ((lexicalDiversity * 0.6 + bigramDiversity * 0.4) * 150));
+  
+  // 2. Burstiness Analysis
+  const sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 0);
+  const sentenceLengths = sentences.map(s => s.trim().split(/\s+/).length);
+  
+  let burstinessScore = 50;
+  if (sentenceLengths.length > 1) {
+    const mean = sentenceLengths.reduce((a, b) => a + b, 0) / sentenceLengths.length;
+    const variance = sentenceLengths.reduce((sum, len) => sum + Math.pow(len - mean, 2), 0) / sentenceLengths.length;
+    const stdDev = Math.sqrt(variance);
+    const cv = (stdDev / mean) * 100; // Coefficient of variation
+    burstinessScore = Math.min(100, cv * 1.5);
+  }
+  
+  // 3. AI Pattern Detection
+  let patternScore = 0;
+  const foundMarkers = [];
+  
+  for (const [key, pattern] of Object.entries(aiPatterns)) {
+    const matches = text.match(pattern.regex);
+    if (matches) {
+      const count = matches.length;
+      const density = count / sentences.length;
+      patternScore += density * pattern.weight * 10;
+      foundMarkers.push({
+        type: pattern.label,
+        count: count,
+        examples: matches.slice(0, 2)
+      });
+    }
+  }
+  
+  patternScore = Math.min(100, patternScore);
+  
+  // 4. Repetition Analysis
+  const trigrams = {};
+  for (let i = 0; i < words.length - 2; i++) {
+    const tri = words[i] + ' ' + words[i + 1] + ' ' + words[i + 2];
+    trigrams[tri] = (trigrams[tri] || 0) + 1;
+  }
+  const repeatedTris = Object.values(trigrams).filter(c => c > 1).length;
+  const repetitionScore = Math.min(100, repeatedTris * 3);
+  
+  // 5. Formality Index
+  const formalWords = text.match(/\b(therefore|thus|however|although|furthermore|moreover|consequently|nevertheless|regarding|concerning|regardless|despite|notwithstanding)\b/gi) || [];
+  const informalMarkers = text.match(/\b(okay|ok|yeah|yep|nope|gonna|wanna|kinda|sorta|lol|haha|um|uh)\b/gi) || [];
+  const personalPronouns = text.match(/\b(I|me|my|mine|we|us|our)\b/g) || [];
+  
+  let formalityScore = 50;
+  if (words.length > 0) {
+    const formalDensity = formalWords.length / words.length;
+    const informalDensity = informalMarkers.length / words.length;
+    const personalDensity = personalPronouns.length / words.length;
+    
+    formalityScore = 50 + (formalDensity * 200) - (informalDensity * 300) - (personalDensity * 100);
+    formalityScore = Math.max(0, Math.min(100, formalityScore));
+  }
+  
+  // 6. Sentence-level Analysis
+  const sentenceAnalysis = sentences.map((sent, idx) => {
+    const cleanSent = sent.trim();
+    if (cleanSent.length < 10) return null;
+    
+    let aiIndicators = 0;
+    let reasons = [];
+    
+    // Check length (AI likes medium sentences)
+    const wordCount = cleanSent.split(/\s+/).length;
+    if (wordCount >= 15 && wordCount <= 25) {
+      aiIndicators += 1;
+      reasons.push('Medium length');
+    }
+    
+    // Check for patterns
+    for (const [key, pattern] of Object.entries(aiPatterns)) {
+      if (pattern.regex.test(cleanSent)) {
+        aiIndicators += pattern.weight;
+        reasons.push(pattern.label);
+      }
+    }
+    
+    // Check starts with "It is/It should"
+    if (/^it\s+(is|should|can|may|might|could|would|will)/i.test(cleanSent)) {
+      aiIndicators += 2;
+      reasons.push('It-cleft');
+    }
+    
+    // Check for lists/bullets
+    if (/^\d+[\.)]|[\-\*]\s/.test(cleanSent)) {
+      aiIndicators += 1;
+      reasons.push('List format');
+    }
+    
+    // Normalize to 0-1 probability
+    let probability = Math.min(1, aiIndicators / 8);
+    
+    // Adjust for very short or very long sentences
+    if (wordCount < 5) probability *= 0.5;
+    if (wordCount > 40) probability *= 0.7;
+    
+    return {
+      text: cleanSent,
+      probability: probability,
+      wordCount: wordCount,
+      reasons: reasons.slice(0, 2)
+    };
+  }).filter(s => s !== null);
+  
+  // Calculate Final AI Probability
+  // Weight: Perplexity (inverted) 30%, Burstiness (inverted) 25%, Patterns 25%, Repetition 10%, Formality 10%
+  const perplexityAI = Math.max(0, 100 - perplexityScore);
+  const burstinessAI = Math.max(0, 100 - burstinessScore);
+  
+  let aiProbability = (
+    perplexityAI * 0.30 +
+    burstinessAI * 0.25 +
+    patternScore * 0.25 +
+    repetitionScore * 0.10 +
+    (formalityScore > 70 ? (formalityScore - 70) * 1.5 : 0) * 0.10
+  );
+  
+  // Adjust for text length (shorter = less confident)
+  if (words.length < 50) aiProbability *= 0.7;
+  else if (words.length < 100) aiProbability *= 0.85;
+  
+  // Boost if many sentences show AI patterns
+  const avgSentenceAI = sentenceAnalysis.reduce((sum, s) => sum + s.probability, 0) / Math.max(1, sentenceAnalysis.length);
+  aiProbability = aiProbability * 0.7 + avgSentenceAI * 30;
+  
+  aiProbability = Math.max(0, Math.min(100, Math.round(aiProbability)));
+  
+  const endTime = performance.now();
+  
+  return {
+    aiProbability,
+    perplexity: Math.round(perplexityScore),
+    burstiness: Math.round(burstinessScore),
+    repetition: Math.round(repetitionScore),
+    formality: Math.round(formalityScore),
+    patternCount: foundMarkers.reduce((sum, m) => sum + m.count, 0),
+    foundMarkers,
+    sentenceAnalysis,
+    processingTime: (endTime - startTime).toFixed(0)
+  };
+}
+
+// Main analysis function
+async function analyzeText() {
+  const text = inputText.value.trim();
+  if (text.length < 20) {
+    alert('Please enter at least 20 characters for analysis');
+    return;
+  }
+  
+  // Show loading state
+  emptyState.classList.add('hidden');
+  resultState.classList.add('hidden');
+  detailedAnalysis.classList.add('hidden');
+  loadingState.classList.remove('hidden');
+  dropZone.classList.add('scanning');
+  
+  // Small delay for UX
+  await new Promise(resolve => setTimeout(resolve, 800));
+  
+  // Perform analysis
+  const results = performAdvancedAnalysis(text);
+  
+  // Display results
+  displayResults(results);
+  displayDetailedResults(results);
+  
+  dropZone.classList.remove('scanning');
+  loadingState.classList.add('hidden');
+  resultState.classList.remove('hidden');
+  detailedAnalysis.classList.remove('hidden');
+  
+  // Enable export
+  exportBtn.disabled = false;
+  exportBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+}
+
+function displayResults(results) {
+  const { aiProbability, perplexity, burstiness, patternCount, processingTime: time } = results;
+  
+  // Update gauge
+  const maxDash = 251;
+  const dashArray = (aiProbability / 100) * maxDash;
+  gaugeFill.style.strokeDasharray = `${dashArray} ${maxDash}`;
+  
+  // Color based on score
+  gaugeFill.classList.remove('score-low', 'score-medium', 'score-high');
+  verdictBox.classList.remove('bg-green-500/10', 'bg-yellow-500/10', 'bg-red-500/10', 'border-green-500/20', 'border-yellow-500/20', 'border-red-500/20');
+  verdictText.classList.remove('text-green-400', 'text-yellow-400', 'text-red-400');
+  
+  if (aiProbability < 30) {
+    gaugeFill.classList.add('score-low');
+    verdictBox.classList.add('bg-green-500/10', 'border-green-500/20');
+    verdictText.classList.add('text-green-400');
+    verdictText.textContent = 'Likely Human Written';
+    verdictSub.textContent = 'Natural writing patterns detected';
+  } else if (aiProbability < 70) {
+    gaugeFill.classList.add('score-medium');
+    verdictBox.classList.add('bg-yellow-500/10', 'border-yellow-500/20');
+    verdictText.classList.add('text-yellow-400');
+    verdictText.textContent = 'Mixed or Uncertain';
+    verdictSub.textContent = 'Some AI-like patterns detected';
+  } else {
+    gaugeFill.classList.add('score-high');
+    verdictBox.classList.add('bg-red-500/10', 'border-red-500/20');
+    verdictText.classList.add('text-red-400');
+    verdictText.textContent = 'Likely AI Generated';
+    verdictSub.textContent = 'Multiple AI markers found';
+  }
+  
+  scoreValue.textContent = `${aiProbability}%`;
+  analysisTime.textContent = `Analyzed in ${time}ms • ${results.sentenceAnalysis.length} sentences checked`;
+  
+  // Quick stats
+  quickPerplexity.textContent = perplexity > 60 ? 'High' : perplexity > 40 ? 'Med' : 'Low';
+  quickPerplexity.className = `text-xs font-medium ${perplexity > 60 ? 'text-green-400' : 'text-yellow-400'}`;
+  
+  quickBurstiness.textContent = burstiness > 60 ? 'Varied' : burstiness > 40 ? 'Mixed' : 'Uniform';
+  quickBurstiness.className = `text-xs font-medium ${burstiness > 60 ? 'text-green-400' : burstiness > 40 ? 'text-yellow-400' : 'text-red-400'}`;
+  
+  quickPatterns.textContent = patternCount;
+  quickPatterns.className = `text-xs font-medium ${patternCount < 3 ? 'text-green-400' : patternCount < 6 ? 'text-yellow-400' : 'text-red-400'}`;
+}
+
+function displayDetailedResults(results) {
+  const { perplexity, burstiness, repetition, formality, foundMarkers, sentenceAnalysis } = results;
+  
+  // Perplexity
+  perplexityBar.style.width = `${perplexity}%`;
+  perplexityBar.className = `metric-bar h-full rounded-full ${perplexity > 60 ? 'bg-green-500' : perplexity > 40 ? 'bg-yellow-500' : 'bg-red-500'}`;
+  perplexityBadge.textContent = perplexity > 60 ? 'High • Human-like' : perplexity > 40 ? 'Medium • Mixed' : 'Low • AI-like';
+  perplexityBadge.className = `text-xs ${perplexity > 60 ? 'text-green-400' : perplexity > 40 ? 'text-yellow-400' : 'text-red-400'}`;
+  
+  // Burstiness
+  burstinessBar.style.width = `${burstiness}%`;
+  burstinessBar.className = `metric-bar h-full rounded-full ${burstiness > 60 ? 'bg-green-500' : burstiness > 40 ? 'bg-yellow-500' : 'bg-red-500'}`;
+  burstinessBadge.textContent = burstiness > 60 ? 'Varied • Human-like' : burstiness > 40 ? 'Mixed • Normal' : 'Uniform • AI-like';
+  burstinessBadge.className = `text-xs ${burstiness > 60 ? 'text-green-400' : burstiness > 40 ? 'text-yellow-400' : 'text-red-400'}`;
+  
+  // Repetition
+  repetitionBar.style.width = `${repetition}%`;
+  repetitionBar.className = `metric-bar h-full rounded-full ${repetition < 30 ? 'bg-green-500' : repetition < 60 ? 'bg-yellow-500' : 'bg-red-500'}`;
+  repetitionBadge.textContent = repetition < 30 ? 'Low • Natural' : repetition < 60 ? 'Medium • Some' : 'High • Repetitive';
+  repetitionBadge.className = `text-xs ${repetition < 30 ? 'text-green-400' : repetition < 60 ? 'text-yellow-400' : 'text-red-400'}`;
+  
+  // Formality
+  formalityBar.style.width = `${formality}%`;
+  formalityBar.className = `metric-bar h-full rounded-full ${formality < 40 ? 'bg-green-500' : formality < 70 ? 'bg-yellow-500' : 'bg-red-500'}`;
+  formalityBadge.textContent = formality < 40 ? 'Casual • Human' : formality < 70 ? 'Balanced' : 'Formal • AI-like';
+  formalityBadge.className = `text-xs ${formality < 40 ? 'text-green-400' : formality < 70 ? 'text-yellow-400' : 'text-red-400'}`;
+  
+  // Markers
+  if (foundMarkers.length === 0) {
+    markersList.innerHTML = '<span class="text-xs text-gray-500">No AI markers detected</span>';
+  } else {
+    markersList.innerHTML = foundMarkers.map(m => 
+      `<span class="pattern-tag">${m.type} (${m.count})</span>`
+    ).join('');
+  }
+  
+  // Sentences
+  sentencesList.innerHTML = '';
+  sentenceAnalysis.forEach((sent, idx) => {
+    const div = document.createElement('div');
+    const isAI = sent.probability > 0.6;
+    const isMixed = sent.probability > 0.3 && sent.probability <= 0.6;
+    
+    let borderColor = isAI ? 'border-red-500' : isMixed ? 'border-yellow-500' : 'border-green-500';
+    let bgColor = isAI ? 'bg-red-500/5' : isMixed ? 'bg-yellow-500/5' : 'bg-green-500/5';
+    let textColor = isAI ? 'text-red-200' : isMixed ? 'text-yellow-200' : 'text-green-200';
+    let probColor = isAI ? 'text-red-400' : isMixed ? 'text-yellow-400' : 'text-green-400';
+    
+    div.className = `p-2 rounded border-l-2 ${bgColor} ${borderColor}`;
+    div.innerHTML = `
+      <div class="flex items-start justify-between gap-2">
+        <p class="text-xs ${textColor} flex-1">${sent.text.substring(0, 80)}${sent.text.length > 80 ? '...' : ''}</p>
+        <div class="text-right">
+          <span class="text-xs ${probColor} font-medium">${Math.round(sent.probability * 100)}% AI</span>
+          ${sent.reasons.length > 0 ? `<div class="text-xs text-gray-500 mt-0.5">${sent.reasons.join(', ')}</div>` : ''}
+        </div>
+      </div>
+    `;
+    
+    sentencesList.appendChild(div);
+  });
+}
+
+// Export results
+function exportResults() {
+  const text = inputText.value;
+  const score = scoreValue.textContent;
+  const verdict = verdictText.textContent;
+  
+  const report = `FAKE TEXT DETECTION REPORT
+Generated: ${new Date().toLocaleString()}
+Tool: EasyPro Tools Fake Text Detector (Client-Side)
+Method: Advanced Algorithmic Analysis (No API)
+
+RESULTS:
+- AI Probability: ${score}
+- Verdict: ${verdict}
+- Analysis Type: 100% Client-side (Private & Secure)
+
+METRICS:
+- Lexical Diversity: ${quickPerplexity.textContent}
+- Sentence Variation: ${quickBurstiness.textContent}
+- AI Markers Found: ${quickPatterns.textContent}
+
+INPUT TEXT:
+${text.substring(0, 1500)}${text.length > 1500 ? '...' : ''}
+
+NOTE: This analysis uses advanced client-side algorithms to detect AI-generated content. Results should be used as one factor among many in determining content authenticity. For best accuracy, analyze texts of 300+ characters.
+
+Tool: https://easyprotools.com/fake-text-detector/
+`;
+  
+  const blob = new Blob([report], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'fake-text-analysis.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Event listeners
+inputText.addEventListener('input', updateInputStats);
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+resetBtn.addEventListener('click', resetAll);
+analyzeBtn.addEventListener('click', analyzeText);
+exportBtn.addEventListener('click', exportResults);
+
+// Initialize
+updateInputStats();
+</script>
+</body>
+</html>

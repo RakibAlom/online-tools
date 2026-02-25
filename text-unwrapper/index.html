@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Text Unwrapper - Free Online Line Break Removal Tool</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online text unwrapper. Remove line breaks, join broken lines, and unwrap paragraphs instantly. Clean text formatting with no registration required." />
+  <meta name="keywords" content="text unwrapper, text unwrapper online, free text unwrapper, online text unwrapper, unwrap text online, remove line breaks from text, join broken lines online, text line unwrapping tool, unwrap paragraphs online free, text reformatter online, remove text wrapping online, text unwrap utility online, free online text unwrapper tool, bulk text unwrapper online, unwrap wrapped text online, text unwrap editor online free, remove hard returns from text online, text unwrap and format online, online text line joiner free, text unwrap converter online, unwrap text blocks online free, online text unwrap tool without login, free text reflow tool online, text formatting unwrapper online, unwrap text for documents online, instant text unwrapper online free, online paragraph unwrapping tool free, text unwrap and clean tool online, remove forced line breaks online free" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/text-unwrapper/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/text-unwrapper/" />
+  <meta property="og:title" content="Text Unwrapper - Free Online Line Break Removal Tool" />
+  <meta property="og:description" content="Remove line breaks, join broken lines, and unwrap paragraphs instantly. Clean text formatting with no registration required." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/text-unwrapper/" />
+  <meta name="twitter:title" content="Text Unwrapper - Free Online Line Break Removal Tool" />
+  <meta name="twitter:description" content="Remove line breaks, join broken lines, and unwrap paragraphs instantly. Clean text formatting with no registration required." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .method-btn {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    .method-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 0.5rem;
+    }
+
+    .stat-item {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 0.375rem;
+      padding: 0.5rem;
+      text-align: center;
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+
+    .line-break-visual {
+      background: rgba(34, 197, 94, 0.2);
+      border: 1px solid rgba(34, 197, 94, 0.4);
+      border-radius: 2px;
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      margin: 0 2px;
+      vertical-align: middle;
+    }
+
+    .paragraph-break-visual {
+      background: rgba(99, 102, 241, 0.3);
+      border: 1px solid rgba(99, 102, 241, 0.5);
+      border-radius: 2px;
+      display: inline-block;
+      width: 16px;
+      height: 8px;
+      margin: 0 2px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 20h20M15 15l5-5 5 5M15 25l5 5 5-5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Text Unwrapper</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Text Unwrapper
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Text Formatting Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-unwrapping enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Wrapped Input
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Paste text with hard line breaks here... Or drag & drop a file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.csv,.md,.json,.xml,.html,.js,.css,.py,.java,.cpp,.c,.php,.rb,.go,.rs,.swift,.kt,.sql,.log" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Chars: 0 | Words: 0 | Lines: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Output -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              Unwrapped Output
+            </label>
+            <div class="flex gap-1">
+              <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                Copy
+              </button>
+              <button id="downloadBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Download
+              </button>
+            </div>
+          </div>
+          
+          <textarea id="outputText" readonly spellcheck="false"
+            class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+            placeholder="Unwrapped text appears here automatically..."></textarea>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="outputStats">Lines joined: 0 | Size change: 0%</span>
+            <span id="processingTime" class="text-gray-600"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-3">
+        
+        <!-- Unwrap Method -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Unwrapping Mode</label>
+          <div class="flex flex-wrap gap-1">
+            <button class="method-btn active rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="paragraphs">Smart Paragraphs</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="all">Join All Lines</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="sentences">By Sentences</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="preserve">Preserve Paragraphs</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="custom">Custom Rules</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="email">Email Format</button>
+          </div>
+        </div>
+
+        <!-- Method Options -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+          <!-- Paragraphs Options -->
+          <div id="paragraphsOptions" class="method-panel space-y-2">
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="detectParagraphs" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Auto-detect paragraphs
+            </label>
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="removeIndent" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Remove line indentation
+            </label>
+          </div>
+
+          <!-- All Lines Options -->
+          <div id="allOptions" class="method-panel hidden space-y-2">
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="singleParagraph" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Single paragraph output
+            </label>
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="addSpaceOnJoin" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Add space when joining
+            </label>
+          </div>
+
+          <!-- Sentences Options -->
+          <div id="sentencesOptions" class="method-panel hidden space-y-2">
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="splitSentences" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Split at sentence endings
+            </label>
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="preserveLineEndings" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Keep original line endings
+            </label>
+          </div>
+
+          <!-- Preserve Options -->
+          <div id="preserveOptions" class="method-panel hidden space-y-2">
+            <div>
+              <label class="text-xs text-gray-400 mb-1 block">Blank lines to preserve</label>
+              <select id="blankLinesToKeep" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+                <option value="1">Single (1)</option>
+                <option value="2" selected>Double (2)</option>
+                <option value="all">All blank lines</option>
+              </select>
+            </div>
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="trimWrappedLines" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Trim wrapped lines
+            </label>
+          </div>
+
+          <!-- Custom Options -->
+          <div id="customOptions" class="method-panel hidden space-y-2">
+            <div>
+              <label class="text-xs text-gray-400 mb-1 block">Join lines shorter than</label>
+              <input type="number" id="minLineLength" min="1" max="200" value="50" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+            </div>
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="reformatOutput" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Reformat to width
+            </label>
+          </div>
+
+          <!-- Email Options -->
+          <div id="emailOptions" class="method-panel hidden space-y-2">
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="fixEmailQuotes" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Fix quoted text (>)
+            </label>
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="removeEmailHeaders" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Remove header lines
+            </label>
+          </div>
+
+          <!-- Common Options -->
+          <div class="space-y-2">
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="removeExtraSpaces" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Remove extra spaces
+            </label>
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="normalizeLineEndings" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Normalize line endings
+            </label>
+          </div>
+        </div>
+
+        <!-- Visual Preview -->
+        <div id="unwrapPreview" class="hidden">
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-xs font-medium text-gray-300">Line Break Analysis</label>
+          </div>
+          <div class="stats-grid text-xs">
+            <div class="stat-item">
+              <div class="text-gray-400 mb-1">Total Lines</div>
+              <div id="totalLines" class="text-white font-mono font-semibold">0</div>
+            </div>
+            <div class="stat-item">
+              <div class="text-gray-400 mb-1">Short Lines</div>
+              <div id="shortLines" class="text-yellow-400 font-mono font-semibold">0</div>
+            </div>
+            <div class="stat-item">
+              <div class="text-gray-400 mb-1">Paragraphs</div>
+              <div id="paragraphCount" class="text-indigo-400 font-mono font-semibold">0</div>
+            </div>
+            <div class="stat-item">
+              <div class="text-gray-400 mb-1">Lines Joined</div>
+              <div id="joinedCount" class="text-green-400 font-mono font-semibold">0</div>
+            </div>
+            <div class="stat-item">
+              <div class="text-gray-400 mb-1">Blank Lines</div>
+              <div id="blankLines" class="text-orange-400 font-mono font-semibold">0</div>
+            </div>
+            <div class="stat-item">
+              <div class="text-gray-400 mb-1">Size Change</div>
+              <div id="sizeChange" class="text-emerald-400 font-mono font-semibold">0%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Text Unwrapper?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Instant</h3>
+          <p class="text-gray-400 text-xs">Real-time unwrapping as you type</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">6 Modes</h3>
+          <p class="text-gray-400 text-xs">Smart detection to custom rules</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Drag & Drop</h3>
+          <p class="text-gray-400 text-xs">Upload files instantly</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Analytics</h3>
+          <p class="text-gray-400 text-xs">Detailed line break stats</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based processing</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration needed</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Input Text</h3>
+          <p class="text-gray-400 text-xs">Paste wrapped text or drop a file. Unwrapping happens instantly.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Select Mode</h3>
+          <p class="text-gray-400 text-xs">Choose from 6 unwrapping modes based on your text structure.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Review Stats</h3>
+          <p class="text-gray-400 text-xs">Check the line break analysis to see what was joined.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy unwrapped text or download the result instantly.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Text Unwrapping: Mastering Line Break Removal for Professional Document Processing</h2>
+        
+        <p><strong>Text unwrapping</strong> stands as one of the most essential yet frequently overlooked operations in document processing, content management, and data preparation workflows. Whether you're a journalist cleaning up interview transcripts, a programmer formatting code comments, a researcher preparing academic papers, or a business professional standardizing reports, understanding how to effectively <strong>remove line breaks from text</strong> dramatically improves productivity and output quality. Our <strong>free text unwrapper</strong> provides professional-grade line break management capabilities without any cost or registration barriers.</p>
+
+        <h2>What Is Text Unwrapping and Why Does It Matter?</h2>
+        
+        <p><strong>Text unwrapping</strong> refers to the process of removing unwanted hard line breaks from text content, transforming fixed-width formatted text into fluid paragraphs suitable for modern digital formats. Hard line breaks—carriage returns and line feeds inserted at specific character positions—were necessary for typewriters, early word processors, and terminal displays with fixed widths. However, modern responsive layouts, reflowable e-books, and dynamic content management systems handle text wrapping automatically, making manual line breaks obsolete and often problematic.</p>
+
+        <p>The importance of reliable <strong>online text unwrapper</strong> tools extends across virtually every professional domain. Consider the common scenarios: PDF documents copied as text retain their original line breaks, creating awkward mid-sentence breaks in Word documents; email threads accumulate quoted text with broken lines that become unreadable when forwarded; OCR-scanned documents insert line breaks at scan margins regardless of actual paragraph structure; terminal output and log files wrap at screen width, breaking continuous data streams; and web-scraped content preserves HTML line breaks that disrupt markdown formatting. Without efficient <strong>text line unwrapping tools</strong>, correcting these issues requires tedious manual editing or complex regular expression operations.</p>
+
+        <h2>Understanding Line Break Types and Unwrapping Methods</h2>
+
+        <h3>Hard vs. Soft Line Breaks</h3>
+        
+        <p>Understanding the distinction between hard and soft line breaks is crucial for effective <strong>text unwrapping</strong>. Hard line breaks (explicit carriage returns and line feeds) force text to start on new lines regardless of container width. Soft line breaks (word wrapping) adapt to display width and reflow as needed. Professional <strong>unwrap text online</strong> tools target hard breaks while preserving semantic paragraph boundaries indicated by blank lines or indentation.</p>
+
+        <p>Different operating systems encode hard line breaks differently: Windows uses CRLF (\r\n), Unix/Linux uses LF (\n), and classic Mac OS used CR (\r). When files transfer between systems, these inconsistencies cause "staircase" text, double-spacing, or entire paragraphs appearing as single lines. Modern <strong>text unwrap utility online</strong> solutions normalize these encodings before processing, ensuring consistent behavior regardless of source platform.</p>
+
+        <h3>Paragraph Detection Intelligence</h3>
+        
+        <p>The most sophisticated <strong>online text unwrapper</strong> implementations don't simply remove all line breaks—they intelligently distinguish between line breaks that separate paragraphs (which should be preserved) and those that merely wrap long lines (which should be removed). This detection relies on multiple signals: blank lines between paragraphs, indentation patterns, line length analysis (shorter lines often indicate intentional breaks), punctuation at line endings (periods suggest paragraph ends), and semantic analysis of content flow.</p>
+
+        <p>Our <strong>free online text unwrapper tool</strong> implements advanced paragraph detection algorithms. The <strong>Smart Paragraphs</strong> mode analyzes line lengths and spacing to automatically identify paragraph boundaries; <strong>Preserve Paragraphs</strong> mode maintains explicit blank lines while joining wrapped text within paragraphs; <strong>By Sentences</strong> mode uses punctuation analysis to ensure sentences aren't split across lines; and <strong>Email Format</strong> mode specifically handles quoted email text with ">" prefixes. This contextual intelligence separates amateur tools from professional solutions.</p>
+
+        <h3>Joining Strategies and Separator Handling</h3>
+        
+        <p>When <strong>joining broken lines online</strong>, the separator character between joined lines significantly impacts readability. Simple concatenation creates run-together words when lines break mid-word without hyphens. Space insertion prevents this but introduces double spaces when original lines already end with spaces. Professional <strong>text unwrap editors online free</strong> implement smart joining: detecting existing trailing spaces, handling hyphenated line breaks (removing hyphens when joining), and preserving intentional spacing from formatted lists or poetry.</p>
+
+        <p>Special cases require specific handling. Email quoted lines prefixed with ">" need prefix removal before joining, then optional re-addition afterward. Code comments may wrap at specific comment markers that should be consolidated. Poetry and lyrics rely on intentional line breaks that must be preserved despite appearing as short lines. Academic citations often wrap but shouldn't be joined into continuous paragraphs. Our <strong>text unwrap converter online</strong> provides mode-specific handling for these scenarios.</p>
+
+        <h2>Professional Applications of Text Unwrapping</h2>
+
+        <h3>Document Conversion and Migration</h3>
+        
+        <p>The most common use case for <strong>text unwrappers</strong> involves converting documents between formats. PDF to Word conversion often produces text with preserved line breaks that must be removed for proper reflow. Plain text exports from mainframe systems require unwrapping for modern database import. E-book creation from scanned sources demands unwrapping to enable responsive text flow across device sizes. Content migration from legacy CMS platforms to modern headless systems requires line break normalization.</p>
+
+        <p>Data scientists and analysts rely on <strong>bulk text unwrapper online</strong> solutions to prepare datasets for processing. CSV files exported from fixed-width reports contain embedded line breaks; log files wrap at terminal width, breaking stack traces into multiple lines; and API documentation copied from terminals requires unwrapping before markdown conversion. These preprocessing steps ensure that downstream analysis operates on semantically correct text structures rather than presentation artifacts.</p>
+
+        <h3>Email and Communication Cleanup</h3>
+        
+        <p>Email threads present unique <strong>text unwrapping</strong> challenges. Each reply level adds quote markers (>) and often re-wraps text at progressively shorter widths. Forwarded emails accumulate multiple wrapping layers, creating "staircase" formatting where each line is shorter than the last. <strong>Remove text wrapping online</strong> tools specifically designed for email format can strip quote markers, unwrap quoted text, and optionally reformat with standard quoting for clean forwarding.</p>
+
+        <p>Customer support teams, help desk professionals, and communication coordinators use <strong>text unwrap and clean tool online</strong> solutions to standardize incoming correspondence. Unwrapped text pastes cleanly into ticketing systems, knowledge bases, and CRM platforms without formatting artifacts. The <strong>Email Format</strong> mode in our tool specifically targets these use cases, handling nested quotes, signature blocks, and header lines intelligently.</p>
+
+        <h3>Programming and Technical Documentation</h3>
+        
+        <p>Developers constantly interact with wrapped text requiring <strong>unwrapping</strong>. Code comments wrapped at 80 columns need unwrapping before documentation generation; terminal output captured for bug reports requires cleanup; man pages and help text converted to markdown need paragraph reconstruction; and stack traces copied from narrow terminal windows need joining for readability. <strong>Instant text unwrapper online free</strong> tools integrate into developer workflows through browser bookmarks or clipboard managers.</p>
+
+        <p>Technical writers preparing documentation from multiple sources use <strong>unwrap text blocks online free</strong> solutions to normalize contributor submissions. Subject matter experts submit content in various formats—email, Word documents, wiki pages, plain text—all with different wrapping conventions. Unwrapping creates consistent source material for final publication formatting, regardless of original submission format.</p>
+
+        <h3>Academic and Research Workflows</h3>
+        
+        <p>Researchers and academics encounter wrapped text throughout their workflows. PDF journal articles copied for citation management retain column-width line breaks; interview transcripts from transcription services often wrap at arbitrary widths; scanned historical documents produce OCR text with preserved line breaks from original page layouts; and collaborative writing platforms export content with platform-specific wrapping. <strong>Online paragraph unwrapping tool free</strong> solutions enable researchers to focus on content analysis rather than formatting cleanup.</p>
+
+        <h2>Advanced Text Unwrapping Techniques</h2>
+
+        <h3>Heuristic Line Length Analysis</h3>
+        
+        <p>Professional <strong>text unwrappers</strong> analyze line length distributions to distinguish wrapped paragraphs from intentionally short lines. Statistical analysis identifies the "natural" line length of wrapped text—typically 60-80 characters for terminal output, 40-60 for email, and variable for word processor exports. Lines significantly shorter than this threshold likely represent intentional breaks (paragraphs, list items, addresses) and should be preserved. Lines near the threshold should be joined with subsequent lines.</p>
+
+        <p>Our <strong>online text unwrap tool without login</strong> implements configurable length thresholds. The <strong>Custom Rules</strong> mode allows specifying minimum line lengths for joining, enabling fine-tuned control over unwrapping behavior. This proves essential for processing mixed content where some sections wrap at 80 characters and others at 40, or for handling poetry interspersed with prose.</p>
+
+        <h3>Punctuation and Semantic Analysis</h3>
+        
+        <p>Beyond length analysis, semantic signals indicate appropriate unwrapping points. Sentence-ending punctuation (periods, question marks, exclamation points) followed by line breaks suggest paragraph boundaries. Lines ending without punctuation likely continue on subsequent lines. Opening parentheses, brackets, or quotes at line starts suggest continuation from previous lines. Professional <strong>text reformatters online</strong> weight these signals to make intelligent unwrapping decisions without requiring explicit user configuration for each document.</p>
+
+        <h3>Reflow and Reformatting</h3>
+        
+        <p>After unwrapping, text often requires reflowing to new width constraints. Academic submissions may need 60-character lines for journal submission; code comments may need rewrapping at 72 columns per project standards; and email composition may require 78-character width for RFC compliance. Advanced <strong>text formatting unwrappers online</strong> offer optional reflow after unwrapping, applying new wrapping rules to the cleaned text.</p>
+
+        <h2>Comparing Text Unwrapping Approaches</h2>
+
+        <h3>Manual Editing vs. Automated Tools</h3>
+        
+        <p>Manual line break removal using find-replace operations in text editors proves tedious and error-prone. Simple regex patterns like replacing all newlines with spaces destroy paragraph structure. Complex multi-step operations—removing newlines except when followed by blank lines, handling various line ending types, preserving intentional short lines—require sophisticated regex knowledge most users lack. Automated <strong>online text unwrappers</strong> encapsulate this expertise in one-click solutions.</p>
+
+        <h3>Command-Line Tools vs. Web Interfaces</h3>
+        
+        <p>Technical users might employ command-line utilities like `fmt`, `fold`, or `par` for text reformatting. These powerful tools require installation, configuration, and command-line comfort. Browser-based <strong>text unwrap utilities online</strong> require no installation, work across all operating systems, process text instantly without file I/O, and provide visual feedback during configuration. For occasional use, collaborative environments, or non-technical users, web tools offer superior accessibility.</p>
+
+        <h2>Best Practices for Effective Text Unwrapping</h2>
+
+        <h3>Pre-Processing Preparation</h3>
+        
+        <p>Before unwrapping, prepare text to ensure optimal results. Remove obvious artifacts: email headers, page numbers, footers, and headers from copied PDFs; HTML tags if processing web-scraped content; and control characters that might interfere with line break detection. Enable <strong>normalize line endings</strong> to handle mixed CRLF/LF files consistently. These preparation steps ensure the unwrapping algorithm operates on clean, consistent input.</p>
+
+        <h3>Selecting Appropriate Unwrapping Modes</h3>
+        
+        <p>Match the unwrapping mode to your content type: Use <strong>Smart Paragraphs</strong> for general documents with mixed content—it automatically detects paragraph boundaries; choose <strong>Join All Lines</strong> for code, data, or log files where all line breaks should be removed; select <strong>By Sentences</strong> for academic or legal text where sentence integrity is paramount; enable <strong>Preserve Paragraphs</strong> for structured documents with explicit paragraph breaks; configure <strong>Custom Rules</strong> for specialized formats with specific line length patterns; and apply <strong>Email Format</strong> for correspondence cleanup with quote handling.</p>
+
+        <h3>Validation and Post-Processing</h3>
+        
+        <p>Always review unwrapped text before final use. Check that paragraph boundaries remain correct; verify that list items haven't been joined into paragraphs; confirm that poetry, addresses, and code blocks remain properly formatted; and ensure that sentence flow remains natural without awkward joins. Our <strong>text unwrapper online</strong> provides detailed statistics—lines joined, paragraphs detected, size change percentage—enabling quick validation of processing results.</p>
+
+        <h2>The Future of Text Reformatting Technology</h2>
+
+        <p>Artificial intelligence is beginning to influence <strong>text unwrapping</strong>, moving beyond heuristic analysis toward semantic understanding. Future tools will identify document structure types automatically and apply appropriate unwrapping profiles; recognize and preserve specific formatting patterns (poetry, code, addresses) without explicit configuration; learn from user corrections to improve future unwrapping decisions; and integrate with document conversion pipelines for seamless format migration. These capabilities will transform <strong>text unwrappers</strong> from simple line break removers into intelligent document restructuring assistants.</p>
+
+        <h2>Conclusion: Master Clean Text with Professional Unwrapping</h2>
+
+        <p><strong>Text unwrapping</strong> remains an essential operation in modern document workflows, bridging the gap between fixed-width legacy formats and fluid modern layouts. From cleaning up PDF copies to standardizing email correspondence, from preparing research data to formatting technical documentation, the ability to intelligently remove line breaks while preserving semantic structure saves hours of manual editing and prevents formatting errors. Whether you're processing a single paragraph or terabytes of legacy documents, mastering <strong>text unwrapping</strong> techniques will improve your productivity and output quality.</p>
+
+        <p>Our <strong>free online text unwrapper</strong> provides comprehensive functionality for any unwrapping scenario. With six distinct unwrapping modes (smart paragraphs, join all lines, by sentences, preserve paragraphs, custom rules, and email format), real-time processing with detailed analytics, support for files and bulk operations, and complete privacy through browser-based processing, this tool serves everyone from casual users to professional document processors. Stop struggling with manually removing line breaks or complex regex patterns. Start using our professional <strong>text unwrapper online</strong> today and experience the efficiency of automated text restructuring.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool unwrap text automatically as I type?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>online text unwrapper</strong> features <strong>automatic real-time processing</strong>. As you type or paste text, the tool instantly analyzes line breaks and produces unwrapped output according to your selected mode. The "Auto-unwrapping enabled" indicator confirms active processing. Switch between modes or adjust options, and see results update immediately without clicking any buttons.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What's the difference between unwrapping modes?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Smart Paragraphs</strong> automatically detects paragraph boundaries by analyzing line lengths and spacing—best for general documents. <strong>Join All Lines</strong> removes every line break for continuous text—ideal for code or data. <strong>By Sentences</strong> ensures sentences aren't split across lines—perfect for academic text. <strong>Preserve Paragraphs</strong> keeps explicit blank lines while joining wrapped text within paragraphs. <strong>Custom Rules</strong> lets you set specific line length thresholds. <strong>Email Format</strong> handles quoted email text with ">" prefixes.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Will this destroy my paragraph structure?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Not with the appropriate mode selected. <strong>Smart Paragraphs</strong> and <strong>Preserve Paragraphs</strong> modes specifically detect and maintain paragraph boundaries indicated by blank lines or indentation. Only wrapped lines within paragraphs get joined. Use <strong>Join All Lines</strong> only when you truly want everything combined into one paragraph, such as for code comments or data processing.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I handle email quoted text?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Use the <strong>Email Format</strong> mode specifically designed for this. It recognizes ">" quote markers, unwraps quoted text while preserving quote levels, and handles nested replies correctly. Enable "Fix quoted text" to clean up staircase formatting where each reply level gets progressively narrower. This mode makes forwarded email threads readable again.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I unwrap multiple files at once?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Currently, our <strong>free text unwrapper</strong> processes one file or text block at a time. For bulk file processing, unwrap each file individually or concatenate files before processing. For enterprise bulk processing needs, consider command-line tools like `fmt` or `par` for automated pipelines. Each download captures the current unwrapped state.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What file types are supported?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">All plain text files: TXT, CSV, JSON, XML, HTML, Markdown (MD), and code files (JS, CSS, Python, Java, C/C++, PHP, Ruby, Go, Rust, Swift, Kotlin, SQL, LOG). Files are read as UTF-8 text. Binary files (images, executables, Word/Excel documents) will produce gibberish—convert to text first or copy-paste content directly.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is there a size limit for text processing?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">The tool handles text up to 100,000 characters (approximately 20,000 words or 60 pages) efficiently. Performance depends on your device's capabilities—modern computers process large texts instantly, while mobile devices may experience slight delays with files over 50KB. For extremely large documents, process in sections.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my data secure and private?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Completely. All processing happens <strong>locally in your browser</strong> using JavaScript—your text never uploads to our servers, never leaves your device, and isn't stored anywhere. You can verify this by disconnecting from the internet after loading the page—the tool continues working offline. Ideal for processing confidential documents, proprietary code, or sensitive data.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this tool really free?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, 100% <strong>free</strong> with no registration, usage limits, watermarks, or premium tiers. Use for personal projects, commercial work, education, or any purpose without attribution. This is truly a <strong>free online text unwrapper tool</strong> supported by unobtrusive advertising. We believe useful tools should be accessible to everyone regardless of budget.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Why do I need to unwrap text?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Text copied from PDFs, emails, terminals, and scanned documents often contains hard line breaks that made sense in the original format but create problems elsewhere. These forced line breaks cause awkward formatting in Word documents, break text flow in responsive layouts, disrupt data processing, and make content hard to read when forwarded or quoted. <strong>Removing hard returns from text online</strong> restores proper paragraph structure for modern digital use.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const outputText = document.getElementById('outputText');
+const inputStats = document.getElementById('inputStats');
+const outputStats = document.getElementById('outputStats');
+const processingTime = document.getElementById('processingTime');
+const unwrapPreview = document.getElementById('unwrapPreview');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+
+// Buttons
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const resetBtn = document.getElementById('resetBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+// Method buttons and panels
+const methodBtns = document.querySelectorAll('.method-btn');
+const methodPanels = document.querySelectorAll('.method-panel');
+let currentMethod = 'paragraphs';
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Update input stats
+function updateInputStats() {
+  const text = inputText.value;
+  const chars = text.length;
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+  const lines = text === '' ? 0 : text.split('\n').length;
+  inputStats.textContent = `Chars: ${chars} | Words: ${words} | Lines: ${lines}`;
+}
+
+// Debounce function
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Method selection
+methodBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    methodBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentMethod = btn.dataset.method;
+    
+    methodPanels.forEach(panel => panel.classList.add('hidden'));
+    document.getElementById(currentMethod + 'Options').classList.remove('hidden');
+    
+    unwrapText();
+  });
+});
+
+// Auto-unwrap on option changes
+['detectParagraphs', 'removeIndent', 'singleParagraph', 'addSpaceOnJoin', 'splitSentences', 'preserveLineEndings', 'blankLinesToKeep', 'trimWrappedLines', 'minLineLength', 'reformatOutput', 'fixEmailQuotes', 'removeEmailHeaders', 'removeExtraSpaces', 'normalizeLineEndings'].forEach(id => {
+  const el = document.getElementById(id);
+  if (el) {
+    el.addEventListener('change', unwrapText);
+    el.addEventListener('input', unwrapText);
+  }
+});
+
+// Analyze text structure
+function analyzeText(text) {
+  const lines = text.split('\n');
+  const totalLines = lines.length;
+  let shortLines = 0;
+  let blankLines = 0;
+  let paragraphs = 0;
+  let inParagraph = false;
+  
+  lines.forEach(line => {
+    if (line.trim() === '') {
+      blankLines++;
+      if (inParagraph) {
+        paragraphs++;
+        inParagraph = false;
+      }
+    } else {
+      if (line.length < 50) shortLines++;
+      inParagraph = true;
+    }
+  });
+  
+  if (inParagraph) paragraphs++;
+  
+  return { totalLines, shortLines, blankLines, paragraphs };
+}
+
+// Unwrap text function
+function unwrapText() {
+  const startTime = performance.now();
+  let text = inputText.value;
+  
+  if (!text) {
+    outputText.value = '';
+    outputStats.textContent = 'Lines joined: 0 | Size change: 0%';
+    processingTime.textContent = '';
+    unwrapPreview.classList.add('hidden');
+    return;
+  }
+  
+  const originalLength = text.length;
+  const analysis = analyzeText(text);
+  let result = text;
+  let linesJoined = 0;
+  
+  try {
+    // Normalize line endings first
+    if (document.getElementById('normalizeLineEndings').checked) {
+      result = result.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+    }
+    
+    switch(currentMethod) {
+      case 'paragraphs':
+        if (document.getElementById('detectParagraphs').checked) {
+          const lines = result.split('\n');
+          const processed = [];
+          let currentPara = '';
+          
+          for (let i = 0; i < lines.length; i++) {
+            const line = document.getElementById('removeIndent').checked ? lines[i].trimStart() : lines[i];
+            
+            if (line.trim() === '') {
+              if (currentPara) {
+                processed.push(currentPara);
+                currentPara = '';
+              }
+              processed.push('');
+            } else if (line.length < 50 && i < lines.length - 1 && lines[i + 1].trim() === '') {
+              if (currentPara) {
+                processed.push(currentPara);
+                currentPara = '';
+              }
+              processed.push(line);
+            } else {
+              if (currentPara && !currentPara.endsWith(' ')) currentPara += ' ';
+              currentPara += line;
+              linesJoined++;
+            }
+          }
+          
+          if (currentPara) processed.push(currentPara);
+          result = processed.join('\n');
+        }
+        break;
+        
+      case 'all':
+        const addSpace = document.getElementById('addSpaceOnJoin').checked;
+        const lines = result.split('\n');
+        let joined = '';
+        
+        for (let i = 0; i < lines.length; i++) {
+          const trimmed = lines[i].trim();
+          if (trimmed) {
+            if (joined && addSpace && !joined.endsWith(' ')) joined += ' ';
+            joined += trimmed;
+            if (i < lines.length - 1) linesJoined++;
+          }
+        }
+        
+        result = document.getElementById('singleParagraph').checked ? joined : joined;
+        break;
+        
+      case 'sentences':
+        if (document.getElementById('splitSentences').checked) {
+          result = result.replace(/([.!?])\s*\n\s*/g, "$1\n");
+          const sentLines = result.split('\n');
+          const sentProcessed = [];
+          let currentSent = '';
+          
+          for (let line of sentLines) {
+            const trimmed = line.trim();
+            if (!trimmed) {
+              if (currentSent) {
+                sentProcessed.push(currentSent);
+                currentSent = '';
+              }
+              sentProcessed.push('');
+            } else if (/[.!?]$/.test(trimmed)) {
+              currentSent += (currentSent ? ' ' : '') + trimmed;
+              sentProcessed.push(currentSent);
+              currentSent = '';
+            } else {
+              currentSent += (currentSent ? ' ' : '') + trimmed;
+              linesJoined++;
+            }
+          }
+          
+          if (currentSent) sentProcessed.push(currentSent);
+          result = sentProcessed.join('\n');
+        }
+        break;
+        
+      case 'preserve':
+        const blankToKeep = document.getElementById('blankLinesToKeep').value;
+        const paraLines = result.split('\n');
+        const paraProcessed = [];
+        let currentParagraph = '';
+        let blankCount = 0;
+        
+        for (let line of paraLines) {
+          if (line.trim() === '') {
+            blankCount++;
+            if (currentParagraph) {
+              paraProcessed.push(currentParagraph);
+              currentParagraph = '';
+            }
+            if (blankToKeep === 'all' || blankCount <= parseInt(blankToKeep)) {
+              paraProcessed.push('');
+            }
+          } else {
+            blankCount = 0;
+            const processedLine = document.getElementById('trimWrappedLines').checked ? line.trim() : line;
+            if (currentParagraph && !currentParagraph.endsWith(' ')) currentParagraph += ' ';
+            currentParagraph += processedLine;
+            linesJoined++;
+          }
+        }
+        
+        if (currentParagraph) paraProcessed.push(currentParagraph);
+        result = paraProcessed.join('\n').replace(/\n{3,}/g, '\n\n');
+        break;
+        
+      case 'custom':
+        const minLength = parseInt(document.getElementById('minLineLength').value) || 50;
+        const customLines = result.split('\n');
+        const customProcessed = [];
+        let currentCustom = '';
+        
+        for (let line of customLines) {
+          if (line.length < minLength && line.trim() !== '') {
+            if (currentCustom) {
+              customProcessed.push(currentCustom);
+              currentCustom = '';
+            }
+            customProcessed.push(line);
+          } else if (line.trim() === '') {
+            if (currentCustom) {
+              customProcessed.push(currentCustom);
+              currentCustom = '';
+            }
+            customProcessed.push('');
+          } else {
+            if (currentCustom && !currentCustom.endsWith(' ')) currentCustom += ' ';
+            currentCustom += line;
+            linesJoined++;
+          }
+        }
+        
+        if (currentCustom) customProcessed.push(currentCustom);
+        result = customProcessed.join('\n');
+        
+        if (document.getElementById('reformatOutput').checked) {
+          result = result.replace(/(.{1,80})(\s|$)/g, "$1\n").trim();
+        }
+        break;
+        
+      case 'email':
+        const emailLines = result.split('\n');
+        const emailProcessed = [];
+        let currentQuote = '';
+        let currentQuoteLevel = 0;
+        
+        for (let line of emailLines) {
+          if (document.getElementById('removeEmailHeaders').checked && /^[A-Z][a-zA-Z-]+:\s/.test(line)) {
+            continue;
+          }
+          
+          const quoteMatch = line.match(/^(>+)\s*/);
+          const quoteLevel = quoteMatch ? quoteMatch[1].length : 0;
+          const content = line.replace(/^>\s*/, '').trim();
+          
+          if (quoteLevel !== currentQuoteLevel || !content) {
+            if (currentQuote) {
+              emailProcessed.push((currentQuoteLevel > 0 ? '> '.repeat(currentQuoteLevel) : '') + currentQuote);
+              currentQuote = '';
+            }
+            currentQuoteLevel = quoteLevel;
+          }
+          
+          if (content) {
+            if (currentQuote && !currentQuote.endsWith(' ')) currentQuote += ' ';
+            currentQuote += content;
+            linesJoined++;
+          } else if (!quoteMatch) {
+            emailProcessed.push('');
+          }
+        }
+        
+        if (currentQuote) {
+          emailProcessed.push((currentQuoteLevel > 0 ? '> '.repeat(currentQuoteLevel) : '') + currentQuote);
+        }
+        
+        result = emailProcessed.join('\n');
+        break;
+    }
+    
+    // Remove extra spaces if enabled
+    if (document.getElementById('removeExtraSpaces').checked) {
+      result = result.replace(/[ \t]+/g, ' ').replace(/^[ \t]+/gm, '');
+    }
+    
+    const endTime = performance.now();
+    outputText.value = result;
+    
+    // Calculate stats
+    const unwrappedLength = result.length;
+    const sizeChange = originalLength > 0 ? Math.round(((unwrappedLength - originalLength) / originalLength) * 100) : 0;
+    
+    outputStats.textContent = `Lines joined: ${linesJoined} | Size change: ${sizeChange > 0 ? '+' : ''}${sizeChange}%`;
+    processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+    
+    // Update analysis
+    document.getElementById('totalLines').textContent = analysis.totalLines;
+    document.getElementById('shortLines').textContent = analysis.shortLines;
+    document.getElementById('paragraphCount').textContent = analysis.paragraphs;
+    document.getElementById('joinedCount').textContent = linesJoined;
+    document.getElementById('blankLines').textContent = analysis.blankLines;
+    document.getElementById('sizeChange').textContent = (sizeChange > 0 ? '+' : '') + sizeChange + '%';
+    unwrapPreview.classList.remove('hidden');
+    
+  } catch (error) {
+    console.error('Unwrapping error:', error);
+  }
+}
+
+const debouncedUnwrap = debounce(unwrapText, 50);
+
+// Drag and drop handlers
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  if (!file.type.match('text.*') && !file.name.match(/\.(txt|csv|json|xml|html?|md|js|css|py|java|cpp|c|php|rb|go|rs|swift|kt|sql|log)$/i)) {
+    alert('Please upload a text file');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    updateInputStats();
+    unwrapText();
+  };
+  reader.readAsText(file);
+}
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    updateInputStats();
+    unwrapText();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  updateInputStats();
+  unwrapText();
+  inputText.focus();
+}
+
+// Copy output
+async function copyOutput() {
+  if (!outputText.value) return;
+  
+  try {
+    await navigator.clipboard.writeText(outputText.value);
+    const originalText = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalText;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+}
+
+// Download output
+function downloadOutput() {
+  const text = outputText.value;
+  if (!text.trim()) return;
+  
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'unwrapped-text.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Reset all
+function resetAll() {
+  inputText.value = '';
+  outputText.value = '';
+  updateInputStats();
+  outputStats.textContent = 'Lines joined: 0 | Size change: 0%';
+  processingTime.textContent = '';
+  unwrapPreview.classList.add('hidden');
+  
+  // Reset to defaults
+  document.getElementById('detectParagraphs').checked = true;
+  document.getElementById('removeIndent').checked = true;
+  document.getElementById('removeExtraSpaces').checked = true;
+  document.getElementById('normalizeLineEndings').checked = true;
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Event listeners
+inputText.addEventListener('input', () => {
+  updateInputStats();
+  debouncedUnwrap();
+});
+
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+copyBtn.addEventListener('click', copyOutput);
+downloadBtn.addEventListener('click', downloadOutput);
+resetBtn.addEventListener('click', resetAll);
+
+// Initialize
+updateInputStats();
+</script>
+</body>
+</html>

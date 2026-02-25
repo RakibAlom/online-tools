@@ -1,0 +1,1509 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Text Fragment Extractor - Free Online Text Snippet Tool</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online text fragment extractor. Extract specific lines, paragraphs, or text segments by position, pattern, or delimiter. No registration required." />
+  <meta name="keywords" content="text fragment extractor, text fragment extractor online, free text fragment extractor, online text fragment extractor, extract text fragments online, text snippet extractor online free, text portion extractor, extract parts of text online, text selection tool online, text segment extractor online, free online text fragment extractor tool, text snippet generator online, bulk text fragment extractor online, extract lines from text online, extract paragraphs from text online free, text substring extractor online, text piece extractor online free, text fragment parser online, text fragment retriever online, extract text sections online free, online text fragment extraction tool, free text snippet extractor online, extract specific text online, online text selection extractor free, text fragment analysis tool online, text fragment extraction utility online, extract text content online free, text fragment editor online free, instant text fragment extractor online, text fragment extraction tool without login online" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/text-fragment-extractor/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/text-fragment-extractor/" />
+  <meta property="og:title" content="Text Fragment Extractor - Free Online Text Snippet Tool" />
+  <meta property="og:description" content="Extract specific lines, paragraphs, or text segments by position, pattern, or delimiter. No registration required." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/text-fragment-extractor/" />
+  <meta name="twitter:title" content="Text Fragment Extractor - Free Online Text Snippet Tool" />
+  <meta name="twitter:description" content="Extract specific lines, paragraphs, or text segments by position, pattern, or delimiter. No registration required." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .method-btn {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    .method-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .range-input {
+      width: 100%;
+      height: 4px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 2px;
+      outline: none;
+      -webkit-appearance: none;
+    }
+    
+    .range-input::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 14px;
+      height: 14px;
+      background: #6366f1;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+
+    .fragment-preview {
+      border-left: 2px solid rgba(99, 102, 241, 0.5);
+      transition: all 0.2s ease;
+    }
+    
+    .fragment-preview:hover {
+      border-left-color: rgba(99, 102, 241, 1);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .stat-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 12h20M10 20h14M10 28h8" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Text Fragment</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Text Fragment Extractor
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Text Extraction Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-extraction enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              Source Text
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Type or paste text here... Or drag & drop a file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.csv,.md,.json,.xml,.html,.log,.js,.css,.py,.java" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Chars: 0 | Words: 0 | Lines: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Output -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              Extracted Fragment
+            </label>
+            <div class="flex gap-1">
+              <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                Copy
+              </button>
+              <button id="downloadBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Download
+              </button>
+            </div>
+          </div>
+          
+          <textarea id="outputText" readonly spellcheck="false"
+            class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+            placeholder="Extracted fragment appears here..."></textarea>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="outputStats">Chars: 0 | Fragment: 0%</span>
+            <span id="processingTime" class="text-gray-600"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-3">
+        
+        <!-- Extraction Method -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Extraction Method</label>
+          <div class="flex flex-wrap gap-1">
+            <button class="method-btn active rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="lines">Line Range</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="chars">Character Range</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="words">Word Range</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="regex">Regex Pattern</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="delimiter">Delimiter</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="paragraphs">Paragraphs</button>
+          </div>
+        </div>
+
+        <!-- Method Options -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+          <!-- Line Range Options -->
+          <div id="linesOptions" class="method-panel space-y-2">
+            <div class="flex gap-2">
+              <div class="flex-1">
+                <label class="text-xs text-gray-400 mb-1 block">Start Line</label>
+                <input type="number" id="startLine" min="1" value="1" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              </div>
+              <div class="flex-1">
+                <label class="text-xs text-gray-400 mb-1 block">End Line</label>
+                <input type="number" id="endLine" min="1" placeholder="Last" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <input type="checkbox" id="invertLines" class="rounded bg-black/40 border-white/20 text-indigo-500 w-3 h-3">
+              <span class="text-xs text-gray-400">Invert selection (exclude range)</span>
+            </div>
+          </div>
+
+          <!-- Character Range Options -->
+          <div id="charsOptions" class="method-panel hidden space-y-2">
+            <div class="flex gap-2">
+              <div class="flex-1">
+                <label class="text-xs text-gray-400 mb-1 block">Start Position</label>
+                <input type="number" id="startChar" min="0" value="0" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              </div>
+              <div class="flex-1">
+                <label class="text-xs text-gray-400 mb-1 block">Length</label>
+                <input type="number" id="charLength" min="1" placeholder="All" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <input type="checkbox" id="fromEnd" class="rounded bg-black/40 border-white/20 text-indigo-500 w-3 h-3">
+              <span class="text-xs text-gray-400">Count from end</span>
+            </div>
+          </div>
+
+          <!-- Word Range Options -->
+          <div id="wordsOptions" class="method-panel hidden space-y-2">
+            <div class="flex gap-2">
+              <div class="flex-1">
+                <label class="text-xs text-gray-400 mb-1 block">Start Word</label>
+                <input type="number" id="startWord" min="1" value="1" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              </div>
+              <div class="flex-1">
+                <label class="text-xs text-gray-400 mb-1 block">Word Count</label>
+                <input type="number" id="wordCount" min="1" placeholder="All" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              </div>
+            </div>
+          </div>
+
+          <!-- Regex Options -->
+          <div id="regexOptions" class="method-panel hidden space-y-2">
+            <div>
+              <label class="text-xs text-gray-400 mb-1 block">Pattern</label>
+              <input type="text" id="regexPattern" placeholder="e.g. \b\w{5}\b or error.*details" class="w-full px-2 py-1.5 rounded-md glass-input text-xs font-mono">
+            </div>
+            <div class="flex gap-2">
+              <div class="flex-1">
+                <label class="text-xs text-gray-400 mb-1 block">Match Group</label>
+                <select id="matchGroup" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+                  <option value="0">Full Match</option>
+                  <option value="1">Group 1</option>
+                  <option value="2">Group 2</option>
+                  <option value="3">Group 3</option>
+                </select>
+              </div>
+              <div class="flex items-center gap-2 pt-5">
+                <input type="checkbox" id="globalMatch" checked class="rounded bg-black/40 border-white/20 text-indigo-500 w-3 h-3">
+                <span class="text-xs text-gray-400">All matches</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Delimiter Options -->
+          <div id="delimiterOptions" class="method-panel hidden space-y-2">
+            <div>
+              <label class="text-xs text-gray-400 mb-1 block">Delimiter</label>
+              <select id="delimiterSelect" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+                <option value=",">Comma (,)</option>
+                <option value=";">Semicolon (;)</option>
+                <option value="|">Pipe (|)</option>
+                <option value="\t">Tab</option>
+                <option value=" ">Space</option>
+                <option value="\n">New Line</option>
+                <option value="custom">Custom...</option>
+              </select>
+            </div>
+            <div id="customDelimiterContainer" class="hidden">
+              <input type="text" id="customDelimiter" placeholder="Enter delimiter..." class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+            </div>
+            <div class="flex gap-2">
+              <div class="flex-1">
+                <label class="text-xs text-gray-400 mb-1 block">Field Index</label>
+                <input type="number" id="fieldIndex" min="1" value="1" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              </div>
+              <div class="flex items-center gap-2 pt-5">
+                <input type="checkbox" id="multipleFields" class="rounded bg-black/40 border-white/20 text-indigo-500 w-3 h-3">
+                <span class="text-xs text-gray-400">Multiple</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Paragraph Options -->
+          <div id="paragraphsOptions" class="method-panel hidden space-y-2">
+            <div class="flex gap-2">
+              <div class="flex-1">
+                <label class="text-xs text-gray-400 mb-1 block">Start Paragraph</label>
+                <input type="number" id="startPara" min="1" value="1" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              </div>
+              <div class="flex-1">
+                <label class="text-xs text-gray-400 mb-1 block">Count</label>
+                <input type="number" id="paraCount" min="1" placeholder="All" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <input type="checkbox" id="blankLineSep" checked class="rounded bg-black/40 border-white/20 text-indigo-500 w-3 h-3">
+              <span class="text-xs text-gray-400">Blank line separator</span>
+            </div>
+          </div>
+
+          <!-- Common Options -->
+          <div class="space-y-2">
+            <div class="flex items-center gap-2">
+              <input type="checkbox" id="trimResult" checked class="rounded bg-black/40 border-white/20 text-indigo-500 w-3 h-3">
+              <span class="text-xs text-gray-400">Trim result</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <input type="checkbox" id="removeEmpty" checked class="rounded bg-black/40 border-white/20 text-indigo-500 w-3 h-3">
+              <span class="text-xs text-gray-400">Remove empty</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <input type="checkbox" id="uniqueOnly" class="rounded bg-black/40 border-white/20 text-indigo-500 w-3 h-3">
+              <span class="text-xs text-gray-400">Unique only</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Presets -->
+        <div class="flex flex-wrap gap-1">
+          <button class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated" onclick="applyPreset('first10')">First 10 Lines</button>
+          <button class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated" onclick="applyPreset('last10')">Last 10 Lines</button>
+          <button class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated" onclick="applyPreset('firstPara')">First Paragraph</button>
+          <button class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated" onclick="applyPreset('emails')">Extract Emails</button>
+          <button class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated" onclick="applyPreset('urls')">Extract URLs</button>
+          <button class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated" onclick="applyPreset('csv1')">CSV Column 1</button>
+        </div>
+
+        <!-- Stats Display -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-3">
+          <div class="stat-card rounded-md p-2 text-center">
+            <div class="text-xs text-gray-500 mb-1">Total Lines</div>
+            <div id="statTotalLines" class="text-lg font-semibold text-blue-400">0</div>
+          </div>
+          <div class="stat-card rounded-md p-2 text-center">
+            <div class="text-xs text-gray-500 mb-1">Extracted</div>
+            <div id="statExtracted" class="text-lg font-semibold text-green-400">0</div>
+          </div>
+          <div class="stat-card rounded-md p-2 text-center">
+            <div class="text-xs text-gray-500 mb-1">Match Count</div>
+            <div id="statMatches" class="text-lg font-semibold text-orange-400">0</div>
+          </div>
+          <div class="stat-card rounded-md p-2 text-center">
+            <div class="text-xs text-gray-500 mb-1">Extraction %</div>
+            <div id="statPercent" class="text-lg font-semibold text-purple-400">0%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Text Fragment Extractor?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Auto-Extract</h3>
+          <p class="text-gray-400 text-xs">Real-time extraction as you type</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">6 Methods</h3>
+          <p class="text-gray-400 text-xs">Lines, chars, words, regex & more</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Drag & Drop</h3>
+          <p class="text-gray-400 text-xs">Upload files instantly</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based, no uploads</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy or download results</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration required</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Input Text</h3>
+          <p class="text-gray-400 text-xs">Type, paste, or drop a file containing your source text.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Choose Method</h3>
+          <p class="text-gray-400 text-xs">Select extraction method: lines, characters, regex, etc.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Set Parameters</h3>
+          <p class="text-gray-400 text-xs">Specify range, pattern, or delimiter for extraction.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy extracted fragment or download as file.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Text Fragment Extraction: Precision Tools for Modern Data Workflows</h2>
+        
+        <p><strong>Text fragment extraction</strong> has become an indispensable capability in our data-rich environment, where professionals constantly need to isolate specific portions of text from larger documents, logs, datasets, or codebases. Whether you're a developer parsing error logs, a data analyst extracting specific fields from CSV files, a researcher isolating relevant passages from academic papers, or a content manager repurposing sections from existing documents, understanding how to <strong>extract text fragments online</strong> efficiently can dramatically improve productivity. Our <strong>free text fragment extractor</strong> provides professional-grade extraction capabilities without cost or complexity barriers.</p>
+
+        <h2>Understanding Text Fragment Extraction</h2>
+        
+        <p><strong>Text fragment extraction</strong> refers to the process of selecting and isolating specific portions of text based on position, pattern, structure, or content criteria. Unlike simple copy-paste operations that require manual selection, extraction tools automate the process of identifying boundaries, handling large volumes, and ensuring precision. The need for <strong>online text fragment extraction</strong> arises from the sheer scale of modern text processing—manually extracting line 1,247 from a 10,000-line log file is impractical, as is manually finding all email addresses in a 500-page document.</p>
+
+        <p>The importance of reliable <strong>text fragment extractor online</strong> tools extends across virtually every industry. Software engineers extract stack traces from logs to debug applications. Data scientists isolate specific features from raw datasets for machine learning. Legal professionals extract relevant clauses from contract repositories. Journalists pull quotes from interview transcripts. Customer service teams extract ticket numbers from email threads. Each scenario requires precise <strong>text portion extractor</strong> capabilities that manual methods cannot provide at scale.</p>
+
+        <h2>Extraction Methodologies and Techniques</h2>
+
+        <h3>Positional Extraction: Lines, Characters, and Words</h3>
+        
+        <p>The most straightforward <strong>text fragment extraction</strong> methods rely on absolute or relative positions within the source text. <strong>Line range extraction</strong> isolates specific lines by number—extracting lines 1-10 for a preview, lines 100-200 for a specific section, or line 50 alone for a particular entry. This method is essential for log analysis, where errors appear at specific line numbers, or for code review, where particular functions occupy known line ranges. When you <strong>extract lines from text online</strong>, you gain the ability to navigate massive files with surgical precision.</p>
+
+        <p><strong>Character position extraction</strong> operates at the granular level of individual characters, enabling extraction of substrings by start position and length. This method proves invaluable when dealing with fixed-width data formats, where specific fields occupy character positions 1-10, 11-25, and so on. It's also crucial for extracting portions of long strings where only specific segments carry meaning. Our <strong>text substring extractor online</strong> handles both absolute positions and relative positions from string ends.</p>
+
+        <p><strong>Word range extraction</strong> provides semantic positioning, isolating text by word count rather than character count. Extracting the first 50 words generates document summaries automatically. Extracting words 100-200 captures specific sections without worrying about variable character widths. This approach aligns with how humans conceptualize text structure, making it intuitive for content summarization and preview generation. The <strong>text snippet extractor online free</strong> tool implements all three positional methods with real-time preview.</p>
+
+        <h3>Pattern-Based Extraction: Regex and Delimiters</h3>
+        
+        <p>Positional methods fail when target content moves within text or appears multiple times irregularly. <strong>Pattern-based extraction</strong> solves this by identifying content through structural characteristics rather than locations. <strong>Regular expression (regex) extraction</strong> represents the most powerful pattern approach, using formal language patterns to match complex text structures. Extracting all email addresses (\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b), phone numbers, URLs, or specific error codes becomes automated and exhaustive.</p>
+
+        <p><strong>Delimiter-based extraction</strong> splits text at specific separator characters and extracts fields by position. CSV processing exemplifies this—comma-delimited values are extracted by field index. Log files with pipe or tab separators yield structured data through delimiter extraction. Configuration files with key=value pairs extract values after the equals sign. The <strong>text fragment parser online</strong> capabilities handle multiple delimiter types including commas, tabs, pipes, semicolons, and custom strings.</p>
+
+        <h3>Structural Extraction: Paragraphs and Sections</h3>
+        
+        <p>Documents possess implicit structure that <strong>text fragment extraction</strong> can leverage. <strong>Paragraph extraction</strong> isolates content blocks separated by blank lines, preserving the natural organization of prose documents. Extracting the first paragraph yields executive summaries. Extracting alternating paragraphs can separate dialogue from narration. Extracting paragraphs containing specific keywords finds relevant sections within long documents. This structural awareness distinguishes professional <strong>text segment extractor online</strong> tools from simple string manipulation utilities.</p>
+
+        <h2>Professional Applications of Fragment Extraction</h2>
+
+        <h3>Log Analysis and Debugging</h3>
+        
+        <p>Application and server logs generate thousands of lines hourly, containing vital diagnostic information buried in verbosity. Developers use <strong>text fragment extraction</strong> to isolate error lines (those containing "ERROR" or "Exception"), extract stack traces (multi-line patterns following error markers), pull specific request IDs from distributed traces, and capture timestamps within specific ranges. Without <strong>bulk text fragment extractor online</strong> capabilities, debugging production issues becomes a manual needle-in-haystack search. Automated extraction turns logs from write-only archives into queryable data sources.</p>
+
+        <h3>Data Processing and ETL Pipelines</h3>
+        
+        <p>Extract, Transform, Load (ETL) processes constantly isolate specific fields from raw data. CSV files require column extraction by index or header name. JSON logs need specific path extraction. Fixed-width mainframe outputs demand character-position extraction. Web scraping produces HTML requiring tag-content extraction. Each ETL stage relies on <strong>text fragment extraction</strong> to normalize diverse inputs into structured formats suitable for data warehouses and analytics platforms. The reliability of these pipelines depends on precise, repeatable extraction logic.</p>
+
+        <h3>Content Management and Repurposing</h3>
+        
+        <p>Content teams frequently extract and repurpose existing material. Extracting the first paragraph of blog posts generates meta descriptions. Pulling all headings creates table of contents automatically. Isolating blockquotes produces social media content. Extracting image captions from articles feeds image galleries. Legal teams extract clauses from contract templates. Technical writers extract API endpoints from specifications. These workflows require <strong>text selection tool online</strong> capabilities that handle document structure intelligently.</p>
+
+        <h3>Academic Research and Text Analysis</h3>
+        
+        <p>Researchers processing corpora for linguistic analysis, sentiment scoring, or thematic coding rely heavily on extraction. Isolating specific speaker turns from interview transcripts. Extracting citations from academic papers. Pulling methodology sections from research articles. Isolating footnotes and endnotes. Extracting figure captions and table contents. Each extraction task feeds into larger analytical frameworks. The <strong>text fragment analysis tool online</strong> capabilities support these research workflows with precision and reproducibility.</p>
+
+        <h2>Advanced Extraction Strategies</h2>
+
+        <h3>Multi-Stage Extraction Pipelines</h3>
+        
+        <p>Complex extraction tasks often require sequential processing. A first stage might extract lines containing error markers. A second stage extracts timestamps from those lines. A third stage extracts error codes from the remaining text. This pipeline approach decomposes complex patterns into manageable stages. Our <strong>online text fragment extraction tool</strong> supports this workflow by preserving original text while showing extraction results, allowing iterative refinement.</p>
+
+        <h3>Context-Aware Extraction</h3>
+        
+        <p>Sometimes fragments require surrounding context for meaning. Extracting lines with errors plus 3 lines before and after for context. Extracting regex matches with capturing groups that include surrounding delimiters. Extracting paragraphs containing keywords plus adjacent paragraphs for flow. Context-aware extraction balances precision with comprehensibility, ensuring isolated fragments remain meaningful.</p>
+
+        <h3>Inversion and Exclusion Extraction</h3>
+        
+        <p>Rather than extracting matching content, sometimes you need everything except specific fragments. Extracting all lines except header rows. Removing boilerplate text from standardized documents. Excluding comments from code files. Inversion extraction complements standard extraction, providing complete control over text transformation. The <strong>text fragment editor online free</strong> tool includes inversion options for flexible content manipulation.</p>
+
+        <h2>Best Practices for Text Fragment Extraction</h2>
+
+        <h3>Validation and Verification</h3>
+        
+        <p>Always validate extraction results, especially with pattern-based methods. Regex patterns may match unintended content or miss edge cases. Verify that extracted fragments contain expected content. Check boundary conditions—first and last lines, empty inputs, maximum lengths. Test with sample data before processing production volumes. Professional <strong>text piece extractor online free</strong> workflows include validation checkpoints.</p>
+
+        <h3>Handling Edge Cases</h3>
+        
+        <p>Robust extraction anticipates edge cases: empty inputs, missing delimiters, overlapping patterns, unicode characters, extremely long lines, and binary data masquerading as text. Defensive extraction specifies default behaviors for missing data, handles encoding errors gracefully, and validates output format consistency. These considerations separate production-ready extraction from casual text manipulation.</p>
+
+        <h3>Performance Considerations</h3>
+        
+        <p>Extraction performance varies dramatically with method and scale. Positional extraction on small text is instantaneous. Regex extraction on megabyte files may require optimization. Processing gigabyte files demands streaming approaches rather than loading entire contents into memory. For <strong>instant text fragment extractor online</strong> responsiveness, our tool optimizes common operations while providing progress feedback for intensive tasks.</p>
+
+        <h2>Comparing Extraction Approaches</h2>
+
+        <h3>Manual vs. Automated Extraction</h3>
+        
+        <p>Manual extraction using text editor search and selection works for one-off tasks with small volumes. However, it becomes impractical for: large files (thousands of lines), repetitive operations (daily reports), precise requirements (exactly characters 100-200), or complex patterns (all valid email addresses). Automated <strong>text fragment retriever online</strong> tools eliminate human error, ensure consistency, and complete in seconds what might take hours manually.</p>
+
+        <h3>Programming vs. Web-Based Tools</h3>
+        
+        <p>Python (with regex, pandas, or specialized libraries), awk, sed, and Perl offer powerful extraction for technical users. However, they require installation, coding knowledge, and environment setup. Web-based <strong>free online text fragment extractor tools</strong> provide immediate access, intuitive interfaces, visual feedback, and cross-platform availability. For quick tasks, collaborative work, or non-technical users, web tools significantly outperform programming solutions.</p>
+
+        <h2>The Future of Text Fragment Technology</h2>
+        
+        <p>Artificial intelligence is beginning to transform <strong>text fragment extraction</strong> from pattern matching to semantic understanding. Natural language processing models can extract "the conclusion" without explicit markers, identify "all addresses" regardless of format variation, and summarize "the main points" through comprehension rather than position. These AI capabilities will complement traditional extraction methods, offering both precision and intelligence. Our platform evolves to incorporate these advances while maintaining the reliability and speed you expect from a <strong>text fragment extraction utility online</strong>.</p>
+
+        <h2>Conclusion: Master Precision Extraction</h2>
+        
+        <p><strong>Text fragment extraction</strong> represents a fundamental text processing operation that impacts productivity across virtually every knowledge-work domain. From debugging code to analyzing research, from processing data to managing content, the ability to isolate specific text portions precisely and efficiently separates effective workflows from frustrating manual labor.</p>
+
+        <p>Our <strong>free online text fragment extractor</strong> provides comprehensive capabilities for all extraction scenarios. With six extraction methods (line range, character range, word range, regex pattern, delimiter, and paragraph), real-time statistics, quick presets for common tasks, and instant browser-based processing, this tool serves developers, data scientists, researchers, and content professionals alike. The privacy-preserving local processing ensures sensitive documents remain secure, while the intuitive interface requires no technical training. Stop scrolling through endless text—use our <strong>text fragment extractor online</strong> to isolate exactly what you need instantly. Whether you need to <strong>extract parts of text online</strong>, <strong>extract specific text online</strong>, or perform <strong>bulk text fragment extraction online</strong>, our <strong>online text selection extractor free</strong> delivers professional results every time.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool extract fragments automatically as I type?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>text fragment extractor</strong> features <strong>automatic real-time extraction</strong>. As you paste or type text, the tool instantly extracts fragments using your selected method and parameters. The result appears immediately in the right panel. The "Auto-extraction enabled" indicator confirms active processing. Changes to extraction methods, ranges, or options also apply instantly.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I extract specific lines from a large file?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Select the <strong>Line Range</strong> method, enter the start line number (e.g., 100), and optionally enter an end line number (e.g., 150). Leave end line empty to extract from start to end of file. Use "Invert selection" to extract everything except the specified range. The stats panel shows total lines and extraction percentage. For quick access, use the "First 10 Lines" or "Last 10 Lines" presets.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I extract text using regular expressions?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely! Select the <strong>Regex Pattern</strong> method and enter your pattern. Use standard JavaScript regex syntax. Enable "All matches" to extract every occurrence, or disable for first match only. Use capturing groups (parentheses) in your pattern and select the group number to extract specific portions. Common patterns are available via presets: "Extract Emails" and "Extract URLs" demonstrate regex power.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I extract a specific column from CSV data?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Select <strong>Delimiter</strong> method, choose "Comma (,)" as delimiter, and enter the field index (1 for first column, 2 for second, etc.). Enable "Multiple" and enter comma-separated indices (e.g., "1,3,5") to extract multiple columns simultaneously. This works for any delimiter—tabs for TSV, pipes for pipe-delimited, or custom characters for specialized formats. Use the "CSV Column 1" preset for quick first-column extraction.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I extract from the end of text (last N lines/characters)?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">For <strong>Character Range</strong>, enable "Count from end" to specify positions relative to text end. For lines, calculate the start line as total lines minus desired count (e.g., if file has 1000 lines and you want last 10, set start line to 991). The stats panel shows total lines to help calculate. Future updates will include direct "last N" options for all methods.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What's the maximum file size I can process?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">The tool handles text up to 50,000 characters (roughly 10,000 words or 20 pages) efficiently in browser memory. For larger files (up to several MB), drag-and-drop works but may take longer to process. Browser memory limits apply for extremely large files (100MB+). For massive datasets, consider command-line tools like `sed`, `awk`, or `grep` for server-side processing. The <strong>bulk text fragment extractor online</strong> is optimized for typical daily use.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my data secure?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Completely secure. All processing happens <strong>locally in your browser</strong>—your text never uploads to servers, databases, or cloud services. Verify this by monitoring the Network tab in browser DevTools (no data transfer occurs). The tool functions offline after initial page load. Ideal for confidential documents, proprietary code, medical records, or legal texts. Privacy is fundamental to our <strong>text fragment extraction tool without login online</strong> design.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I extract multiple fragments at once?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! <strong>Regex Pattern</strong> with "All matches" enabled extracts every occurrence of your pattern, each on a new line. <strong>Delimiter</strong> with "Multiple" fields extracts several columns simultaneously. For multiple line ranges, run extraction multiple times or use regex with alternation (pattern1|pattern2). The "Unique only" option removes duplicate fragments from results.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this tool really free?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, 100% <strong>free</strong> with no registration, usage limits, watermarks, or hidden fees. Use for personal or commercial projects without attribution. This is truly a <strong>free text fragment extractor</strong> with no login required. Supported by unobtrusive advertising. We believe powerful text tools should be accessible to everyone.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I extract paragraphs instead of lines?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Select the <strong>Paragraphs</strong> method. The tool detects paragraphs separated by blank lines (two consecutive newlines). Specify start paragraph number and optionally the count. Enable "Blank line separator" to maintain paragraph boundaries in output. Use the "First Paragraph" preset for quick executive summary extraction. This method preserves the natural structure of prose documents better than line-based extraction.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const outputText = document.getElementById('outputText');
+const inputStats = document.getElementById('inputStats');
+const outputStats = document.getElementById('outputStats');
+const processingTime = document.getElementById('processingTime');
+const statTotalLines = document.getElementById('statTotalLines');
+const statExtracted = document.getElementById('statExtracted');
+const statMatches = document.getElementById('statMatches');
+const statPercent = document.getElementById('statPercent');
+
+// Buttons
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const resetBtn = document.getElementById('resetBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+// Drop zone
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+
+// Method buttons and panels
+const methodBtns = document.querySelectorAll('.method-btn');
+const methodPanels = document.querySelectorAll('.method-panel');
+let currentMethod = 'lines';
+
+// Options
+const startLine = document.getElementById('startLine');
+const endLine = document.getElementById('endLine');
+const invertLines = document.getElementById('invertLines');
+const startChar = document.getElementById('startChar');
+const charLength = document.getElementById('charLength');
+const fromEnd = document.getElementById('fromEnd');
+const startWord = document.getElementById('startWord');
+const wordCount = document.getElementById('wordCount');
+const regexPattern = document.getElementById('regexPattern');
+const matchGroup = document.getElementById('matchGroup');
+const globalMatch = document.getElementById('globalMatch');
+const delimiterSelect = document.getElementById('delimiterSelect');
+const customDelimiterContainer = document.getElementById('customDelimiterContainer');
+const customDelimiter = document.getElementById('customDelimiter');
+const fieldIndex = document.getElementById('fieldIndex');
+const multipleFields = document.getElementById('multipleFields');
+const startPara = document.getElementById('startPara');
+const paraCount = document.getElementById('paraCount');
+const blankLineSep = document.getElementById('blankLineSep');
+const trimResult = document.getElementById('trimResult');
+const removeEmpty = document.getElementById('removeEmpty');
+const uniqueOnly = document.getElementById('uniqueOnly');
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Update input stats
+function updateInputStats() {
+  const text = inputText.value;
+  const chars = text.length;
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+  const lines = text === '' ? 0 : text.split('\n').length;
+  
+  inputStats.textContent = `Chars: ${chars} | Words: ${words} | Lines: ${lines}`;
+  statTotalLines.textContent = lines;
+  
+  return { chars, words, lines };
+}
+
+// Debounce function
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Method selection
+methodBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    methodBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentMethod = btn.dataset.method;
+    
+    methodPanels.forEach(panel => panel.classList.add('hidden'));
+    const panel = document.getElementById(currentMethod + 'Options');
+    if (panel) panel.classList.remove('hidden');
+    
+    extractFragment();
+  });
+});
+
+// Delimiter select change
+delimiterSelect.addEventListener('change', () => {
+  if (delimiterSelect.value === 'custom') {
+    customDelimiterContainer.classList.remove('hidden');
+  } else {
+    customDelimiterContainer.classList.add('hidden');
+  }
+  extractFragment();
+});
+
+// Extract function
+function extractFragment() {
+  const startTime = performance.now();
+  const text = inputText.value;
+  
+  if (!text) {
+    outputText.value = '';
+    outputStats.textContent = 'Chars: 0 | Fragment: 0%';
+    processingTime.textContent = '';
+    statExtracted.textContent = '0';
+    statMatches.textContent = '0';
+    statPercent.textContent = '0%';
+    return;
+  }
+  
+  const inputStats = updateInputStats();
+  let result = '';
+  let matchCount = 0;
+  
+  try {
+    switch(currentMethod) {
+      case 'lines':
+        const lines = text.split('\n');
+        const sLine = Math.max(1, parseInt(startLine.value) || 1);
+        const eLine = endLine.value ? Math.min(lines.length, parseInt(endLine.value)) : lines.length;
+        
+        if (invertLines.checked) {
+          // Extract lines NOT in range
+          const before = lines.slice(0, sLine - 1);
+          const after = lines.slice(eLine);
+          result = [...before, ...after].join('\n');
+          matchCount = lines.length - (eLine - sLine + 1);
+        } else {
+          // Extract lines in range
+          result = lines.slice(sLine - 1, eLine).join('\n');
+          matchCount = eLine - sLine + 1;
+        }
+        break;
+        
+      case 'chars':
+        let sChar = parseInt(startChar.value) || 0;
+        const len = parseInt(charLength.value);
+        
+        if (fromEnd.checked) {
+          sChar = text.length - sChar;
+        }
+        
+        if (len) {
+          result = text.substr(sChar, len);
+        } else {
+          result = text.substr(sChar);
+        }
+        matchCount = 1;
+        break;
+        
+      case 'words':
+        const words = text.split(/\s+/).filter(w => w.length > 0);
+        const sWord = Math.max(0, (parseInt(startWord.value) || 1) - 1);
+        const count = parseInt(wordCount.value) || words.length;
+        result = words.slice(sWord, sWord + count).join(' ');
+        matchCount = Math.min(count, words.length - sWord);
+        break;
+        
+      case 'regex':
+        const pattern = regexPattern.value;
+        if (pattern) {
+          const flags = globalMatch.checked ? 'g' : '';
+          const regex = new RegExp(pattern, flags);
+          const group = parseInt(matchGroup.value) || 0;
+          
+          if (globalMatch.checked) {
+            const matches = text.match(regex);
+            if (matches) {
+              result = matches.join('\n');
+              matchCount = matches.length;
+            }
+          } else {
+            const match = text.match(regex);
+            if (match) {
+              result = match[group] || match[0];
+              matchCount = 1;
+            }
+          }
+        }
+        break;
+        
+      case 'delimiter':
+        const delim = delimiterSelect.value === 'custom' ? customDelimiter.value : delimiterSelect.value;
+        if (delim) {
+          const processedDelim = delim.replace(/\\n/g, '\n').replace(/\\t/g, '\t');
+          const lines = text.split('\n');
+          const indices = multipleFields.checked ? 
+            fieldIndex.value.split(',').map(s => parseInt(s.trim()) - 1).filter(n => !isNaN(n)) : 
+            [(parseInt(fieldIndex.value) || 1) - 1];
+          
+          const extractedLines = lines.map(line => {
+            const fields = line.split(processedDelim);
+            return indices.map(i => fields[i] || '').join(processedDelim);
+          });
+          
+          result = extractedLines.join('\n');
+          matchCount = lines.length;
+        }
+        break;
+        
+      case 'paragraphs':
+        const paras = text.split(/\n\s*\n/).filter(p => p.trim());
+        const sPara = Math.max(0, (parseInt(startPara.value) || 1) - 1);
+        const pCount = parseInt(paraCount.value) || paras.length;
+        const selected = paras.slice(sPara, sPara + pCount);
+        result = blankLineSep.checked ? selected.join('\n\n') : selected.join('\n');
+        matchCount = selected.length;
+        break;
+    }
+    
+    // Post-processing
+    if (trimResult.checked) {
+      result = result.trim();
+    }
+    
+    if (removeEmpty.checked) {
+      result = result.split('\n').filter(line => line.trim()).join('\n');
+    }
+    
+    if (uniqueOnly.checked && currentMethod === 'regex' && globalMatch.checked) {
+      const lines = result.split('\n');
+      result = [...new Set(lines)].join('\n');
+    }
+    
+    const endTime = performance.now();
+    const percent = inputStats.chars > 0 ? Math.round((result.length / inputStats.chars) * 100) : 0;
+    
+    outputText.value = result;
+    outputStats.textContent = `Chars: ${result.length} | Fragment: ${percent}%`;
+    processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+    statExtracted.textContent = result.length;
+    statMatches.textContent = matchCount;
+    statPercent.textContent = `${percent}%`;
+    
+  } catch (error) {
+    console.error('Extraction error:', error);
+    outputText.value = 'Error: ' + error.message;
+  }
+}
+
+// Debounced version
+const debouncedExtract = debounce(extractFragment, 0);
+
+// Presets
+function applyPreset(preset) {
+  switch(preset) {
+    case 'first10':
+      methodBtns.forEach(b => b.classList.remove('active'));
+      document.querySelector('[data-method="lines"]').classList.add('active');
+      currentMethod = 'lines';
+      methodPanels.forEach(p => p.classList.add('hidden'));
+      document.getElementById('linesOptions').classList.remove('hidden');
+      startLine.value = 1;
+      endLine.value = 10;
+      invertLines.checked = false;
+      break;
+      
+    case 'last10':
+      methodBtns.forEach(b => b.classList.remove('active'));
+      document.querySelector('[data-method="lines"]').classList.add('active');
+      currentMethod = 'lines';
+      methodPanels.forEach(p => p.classList.add('hidden'));
+      document.getElementById('linesOptions').classList.remove('hidden');
+      const lines = inputText.value.split('\n').length;
+      startLine.value = Math.max(1, lines - 9);
+      endLine.value = '';
+      invertLines.checked = false;
+      break;
+      
+    case 'firstPara':
+      methodBtns.forEach(b => b.classList.remove('active'));
+      document.querySelector('[data-method="paragraphs"]').classList.add('active');
+      currentMethod = 'paragraphs';
+      methodPanels.forEach(p => p.classList.add('hidden'));
+      document.getElementById('paragraphsOptions').classList.remove('hidden');
+      startPara.value = 1;
+      paraCount.value = 1;
+      break;
+      
+    case 'emails':
+      methodBtns.forEach(b => b.classList.remove('active'));
+      document.querySelector('[data-method="regex"]').classList.add('active');
+      currentMethod = 'regex';
+      methodPanels.forEach(p => p.classList.add('hidden'));
+      document.getElementById('regexOptions').classList.remove('hidden');
+      regexPattern.value = '[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}';
+      globalMatch.checked = true;
+      break;
+      
+    case 'urls':
+      methodBtns.forEach(b => b.classList.remove('active'));
+      document.querySelector('[data-method="regex"]').classList.add('active');
+      currentMethod = 'regex';
+      methodPanels.forEach(p => p.classList.add('hidden'));
+      document.getElementById('regexOptions').classList.remove('hidden');
+      regexPattern.value = 'https?://[^\\s<>\"{}|\\^`\\[\\]]+';
+      globalMatch.checked = true;
+      break;
+      
+    case 'csv1':
+      methodBtns.forEach(b => b.classList.remove('active'));
+      document.querySelector('[data-method="delimiter"]').classList.add('active');
+      currentMethod = 'delimiter';
+      methodPanels.forEach(p => p.classList.add('hidden'));
+      document.getElementById('delimiterOptions').classList.remove('hidden');
+      delimiterSelect.value = ',';
+      fieldIndex.value = 1;
+      multipleFields.checked = false;
+      break;
+  }
+  
+  extractFragment();
+}
+
+// Drag and drop
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  if (!file.type.match('text.*') && !file.name.match(/\.(txt|csv|json|xml|html?|md|js|css|py|java|log)$/i)) {
+    alert('Please upload a text file');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    updateInputStats();
+    extractFragment();
+  };
+  reader.readAsText(file);
+}
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    updateInputStats();
+    extractFragment();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  updateInputStats();
+  extractFragment();
+  inputText.focus();
+}
+
+// Copy output
+async function copyOutput() {
+  if (!outputText.value) return;
+  
+  try {
+    await navigator.clipboard.writeText(outputText.value);
+    const originalText = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalText;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+}
+
+// Download output
+function downloadOutput() {
+  const text = outputText.value;
+  if (!text.trim()) return;
+  
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'extracted-fragment.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Reset all
+function resetAll() {
+  inputText.value = '';
+  outputText.value = '';
+  updateInputStats();
+  outputStats.textContent = 'Chars: 0 | Fragment: 0%';
+  processingTime.textContent = '';
+  statExtracted.textContent = '0';
+  statMatches.textContent = '0';
+  statPercent.textContent = '0%';
+  
+  // Reset options
+  startLine.value = 1;
+  endLine.value = '';
+  startChar.value = 0;
+  charLength.value = '';
+  startWord.value = 1;
+  wordCount.value = '';
+  regexPattern.value = '';
+  startPara.value = 1;
+  paraCount.value = '';
+  
+  currentMethod = 'lines';
+  methodBtns.forEach(b => b.classList.remove('active'));
+  document.querySelector('[data-method="lines"]').classList.add('active');
+  methodPanels.forEach(p => p.classList.add('hidden'));
+  document.getElementById('linesOptions').classList.remove('hidden');
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Event listeners
+inputText.addEventListener('input', () => {
+  updateInputStats();
+  debouncedExtract();
+});
+
+// Option change listeners
+[startLine, endLine, invertLines, startChar, charLength, fromEnd, startWord, wordCount,
+ regexPattern, matchGroup, globalMatch, delimiterSelect, customDelimiter, fieldIndex,
+ multipleFields, startPara, paraCount, blankLineSep, trimResult, removeEmpty, uniqueOnly]
+.forEach(el => {
+  if (el) el.addEventListener('change', extractFragment);
+});
+
+[startLine, endLine, startChar, charLength, startWord, wordCount, startPara, paraCount, fieldIndex]
+.forEach(el => {
+  if (el) el.addEventListener('input', debouncedExtract);
+});
+
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+copyBtn.addEventListener('click', copyOutput);
+downloadBtn.addEventListener('click', downloadOutput);
+resetBtn.addEventListener('click', resetAll);
+
+// Initialize
+updateInputStats();
+</script>
+</body>
+</html>
