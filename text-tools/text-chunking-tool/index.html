@@ -459,7 +459,7 @@
           <!-- Character/Word/Line Options -->
           <div id="sizeOptions" class="method-panel">
             <label class="text-xs text-gray-400 mb-1 block">Chunk Size</label>
-            <input type="number" id="chunkSize" min="1" value="1000" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+            <input type="number" id="chunkSize" min="1" value="100" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
           </div>
 
           <!-- Overlap Option -->
@@ -645,7 +645,7 @@
 
         <h3>Character-Based Chunking</h3>
         
-        <p>The most straightforward <strong>text chunking online</strong> method divides text by character count. When you <strong>chunk text by characters</strong>, you specify an exact size (e.g., 1000 characters) and the text splits at that boundary. This method offers predictability—every chunk has approximately the same size, making it ideal for systems with strict byte or character limits.</p>
+        <p>The most straightforward <strong>text chunking online</strong> method divides text by character count. When you <strong>chunk text by characters</strong>, you specify an exact size (e.g., 100 characters) and the text splits at that boundary. This method offers predictability—every chunk has approximately the same size, making it ideal for systems with strict byte or character limits.</p>
 
         <p>However, naive character chunking can split words, sentences, or even UTF-8 multi-byte characters mid-sequence. Professional <strong>text segmentation tool</strong> implementations include "preserve whole words" options that adjust chunk boundaries to the nearest word boundary, preventing awkward breaks. Our <strong>chunk text free online</strong> tool provides intelligent boundary detection, ensuring chunks end at natural breaking points unless strict size compliance is required.</p>
 
@@ -709,9 +709,9 @@
 
         <h3>Size Selection Guidelines</h3>
         
-        <p>Choose chunk sizes based on your target system and content type: AI language models typically use 500-2000 tokens (roughly 2000-8000 characters), Database VARCHAR fields often limit to 255-4000 characters, Excel cells display best under 1000 characters, Email subjects should stay under 78 characters, SMS messages limit to 160 characters, Tweet threads work best at 280-character segments.</p>
+        <p>Choose chunk sizes based on your target system and content type: AI language models typically use 500-2000 tokens (roughly 2000-8000 characters), Database VARCHAR fields often limit to 255-4000 characters, Excel cells display best under 100 characters, Email subjects should stay under 78 characters, SMS messages limit to 160 characters, Tweet threads work best at 280-character segments.</p>
 
-        <p>Consider content density—1000 characters of Chinese text contains more information than 1000 characters of English due to character complexity. Code chunks should align with function or class boundaries when possible. Literary content respects paragraph and scene structure. Our <strong>online text splitter for chunks</strong> adapts to all these requirements.</p>
+        <p>Consider content density—100 characters of Chinese text contains more information than 100 characters of English due to character complexity. Code chunks should align with function or class boundaries when possible. Literary content respects paragraph and scene structure. Our <strong>online text splitter for chunks</strong> adapts to all these requirements.</p>
 
         <h3>Separator Strategy</h3>
         
@@ -773,7 +773,7 @@
             </svg>
           </button>
           <div class="faq-content px-3">
-            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Overlap</strong> includes the end of one chunk at the beginning of the next, creating shared context between segments. Essential for AI processing where context matters across boundaries. For example, with 1000-character chunks and 100-character overlap, chunk 2 starts with the last 100 characters of chunk 1. Prevents information loss at chunk boundaries. Set overlap to 0 for distinct chunks with no redundancy.</p>
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Overlap</strong> includes the end of one chunk at the beginning of the next, creating shared context between segments. Essential for AI processing where context matters across boundaries. For example, with 100-character chunks and 100-character overlap, chunk 2 starts with the last 100 characters of chunk 1. Prevents information loss at chunk boundaries. Set overlap to 0 for distinct chunks with no redundancy.</p>
           </div>
         </div>
 
@@ -785,7 +785,7 @@
             </svg>
           </button>
           <div class="faq-content px-3">
-            <p class="text-gray-400 text-xs pb-3 leading-relaxed">For GPT-4, use <strong>By Characters</strong> method with 2000-4000 characters (roughly 500-1000 tokens). Enable "Preserve whole words" to avoid mid-word splits. Set overlap to 200-400 characters to maintain context. For Claude with 100K context, you can use larger chunks (8000-15000 characters). Add chunk numbers to track sequence. Our <strong>chunk text for processing</strong> features optimize for AI workflows.</p>
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">For GPT-4, use <strong>By Characters</strong> method with 2000-4000 characters (roughly 500-100 tokens). Enable "Preserve whole words" to avoid mid-word splits. Set overlap to 200-400 characters to maintain context. For Claude with 100K context, you can use larger chunks (8000-15000 characters). Add chunk numbers to track sequence. Our <strong>chunk text for processing</strong> features optimize for AI workflows.</p>
           </div>
         </div>
 
@@ -1021,7 +1021,7 @@ function chunkText() {
     return;
   }
   
-  const size = parseInt(chunkSize.value) || 1000;
+  const size = parseInt(chunkSize.value) || 100;
   const overlap = parseInt(overlapSize.value) || 0;
   const separator = separatorSelect.value.replace(/\\n/g, '\n');
   let chunks = [];
@@ -1346,7 +1346,7 @@ function resetAll() {
   downloadChunksBtn.classList.add('hidden');
   processingTime.textContent = '';
   currentChunks = [];
-  chunkSize.value = 1000;
+  chunkSize.value = 100;
   overlapSize.value = 0;
   regexPattern.value = '';
   separatorSelect.value = '\n\n';
