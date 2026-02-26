@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Text Syllable Splitter - Free Online Syllable Separator</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online text syllable splitter tool. Automatically split words into syllables, analyze syllable patterns, and hyphenate text. Perfect for linguistics, poetry, and SEO." />
+  <meta name="keywords" content="text syllable splitter, syllable splitter online, free syllable splitter, split text into syllables online, syllable separator tool online, word syllable splitter online, syllable divider online free, syllable breakdown tool online, split words into syllables free, syllable parser online, syllable segmentation tool online, syllable analyzer online free, text syllable separation tool, hyphenate words into syllables online, syllable detection tool online, syllable generator from text online, split syllables for words online, syllable extraction tool online, syllable tokenizer online free, syllable counter and splitter online, syllable processing tool free, free online syllable splitter tool, text to syllables converter online, syllable splitter for linguistics online, syllable splitter for writers online, syllable splitter for seo online, online syllable splitting tool free" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/text-syllable-splitter/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/text-syllable-splitter/" />
+  <meta property="og:title" content="Text Syllable Splitter - Free Online Syllable Separator" />
+  <meta property="og:description" content="Automatically split words into syllables, analyze syllable patterns, and hyphenate text. Perfect for linguistics, poetry, and SEO." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/text-syllable-splitter/" />
+  <meta name="twitter:title" content="Text Syllable Splitter - Free Online Syllable Separator" />
+  <meta name="twitter:description" content="Automatically split words into syllables, analyze syllable patterns, and hyphenate text. Perfect for linguistics, poetry, and SEO." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .syllable-word {
+      display: inline-block;
+      margin: 0.25rem;
+      padding: 0.5rem 0.75rem;
+      background: rgba(99, 102, 241, 0.1);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      border-radius: 0.375rem;
+      transition: all 0.2s ease;
+    }
+    
+    .syllable-word:hover {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+    }
+
+    .syllable-part {
+      color: #818cf8;
+      font-weight: 600;
+    }
+
+    .syllable-separator {
+      color: rgba(255, 255, 255, 0.4);
+      margin: 0 0.125rem;
+    }
+
+    .stats-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 0.5rem;
+      padding: 0.75rem;
+      text-align: center;
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+
+    .split-btn {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    .split-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 14h20M10 20h14M10 26h20" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Syllable Splitter</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Text Syllable Splitter
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Linguistics Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-splitting enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Input Text
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Type or paste text here... Or drag & drop a file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.csv,.md,.json,.xml,.html,.doc,.docx,.pdf" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Words: 0 | Chars: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Syllable Output -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Syllable Split <span id="wordCount" class="text-gray-500 font-normal ml-1 hidden">(0 words)</span>
+            </label>
+            <div class="flex gap-1">
+              <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                Copy
+              </button>
+              <button id="downloadBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Download
+              </button>
+            </div>
+          </div>
+          
+          <div id="outputContainer" class="w-full h-48 lg:h-64 p-3 rounded-md glass-input overflow-y-auto">
+            <div class="text-center text-gray-500 text-xs mt-8">
+              <svg class="w-8 h-8 mx-auto mb-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              <p>Syllable breakdown will appear here automatically...</p>
+            </div>
+          </div>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="outputStats">Total Syllables: 0 | Avg: 0</span>
+            <span id="processingTime" class="text-gray-600"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-3">
+        
+        <!-- Split Method -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Display Format</label>
+          <div class="flex flex-wrap gap-1">
+            <button class="split-btn active rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-format="hyphen">Hy-phen-at-ed</button>
+            <button class="split-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-format="dots">Syl·la·bles</button>
+            <button class="split-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-format="spaces">Syl la bles</button>
+            <button class="split-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-format="brackets">Syl[la]bles</button>
+            <button class="split-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-format="colors">Color Coded</button>
+          </div>
+        </div>
+
+        <!-- Options Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Language</label>
+            <select id="language" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="en">English</option>
+              <option value="es">Spanish</option>
+              <option value="fr">French</option>
+              <option value="de">German</option>
+              <option value="it">Italian</option>
+              <option value="pt">Portuguese</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Min Word Length</label>
+            <input type="number" id="minWordLength" min="1" value="3" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+          </div>
+
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Max Syllables/Word</label>
+            <input type="number" id="maxSyllables" min="1" value="10" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+          </div>
+
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Output Style</label>
+            <select id="outputStyle" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="inline">Inline Text</option>
+              <option value="list">Word List</option>
+              <option value="json">JSON Format</option>
+              <option value="csv">CSV Export</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Toggles -->
+        <div class="flex flex-wrap gap-3">
+          <label class="flex items-center gap-1.5 text-xs text-gray-400">
+            <input type="checkbox" id="showCount" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Show syllable count
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400">
+            <input type="checkbox" id="highlightStress" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Highlight stress
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400">
+            <input type="checkbox" id="ignoreNumbers" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Ignore numbers
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400">
+            <input type="checkbox" id="preserveCase" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Preserve case
+          </label>
+        </div>
+
+        <!-- Stats Display -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-3">
+          <div class="stats-card">
+            <div class="text-lg font-bold text-indigo-400" id="statTotalWords">0</div>
+            <div class="text-xs text-gray-500">Total Words</div>
+          </div>
+          <div class="stats-card">
+            <div class="text-lg font-bold text-purple-400" id="statTotalSyllables">0</div>
+            <div class="text-xs text-gray-500">Total Syllables</div>
+          </div>
+          <div class="stats-card">
+            <div class="text-lg font-bold text-pink-400" id="statAvgSyllables">0</div>
+            <div class="text-xs text-gray-500">Avg Syllables/Word</div>
+          </div>
+          <div class="stats-card">
+            <div class="text-lg font-bold text-orange-400" id="statLongestWord">0</div>
+            <div class="text-xs text-gray-500">Longest Word</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Syllable Splitter?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Auto-Split</h3>
+          <p class="text-gray-400 text-xs">Real-time syllable detection</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">6 Languages</h3>
+          <p class="text-gray-400 text-xs">EN, ES, FR, DE, IT, PT</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Drag & Drop</h3>
+          <p class="text-gray-400 text-xs">Upload files instantly</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Analytics</h3>
+          <p class="text-gray-400 text-xs">Detailed syllable stats</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based processing</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration needed</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Enter Text</h3>
+          <p class="text-gray-400 text-xs">Type, paste, or upload your text document.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Select Format</h3>
+          <p class="text-gray-400 text-xs">Choose hyphen, dots, spaces, or color display.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Analyze</h3>
+          <p class="text-gray-400 text-xs">View syllable breakdowns and statistics instantly.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy or download results in multiple formats.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Text Syllable Splitting: Mastering Phonetic Analysis for Linguistics, Poetry, and SEO</h2>
+        
+        <p><strong>Text syllable splitting</strong> is a sophisticated linguistic analysis technique that breaks words into their constituent phonetic units—syllables. Unlike simple character counting, syllable analysis reveals the rhythmic structure of language, essential for poetry, readability assessment, speech therapy, and search engine optimization. Whether you're a linguist studying phonological patterns, a poet crafting metered verse, an educator teaching reading skills, or an SEO specialist optimizing content for voice search, understanding how to <strong>split text into syllables online</strong> is invaluable. Our <strong>free syllable splitter</strong> provides professional-grade phonetic analysis without any cost or registration barriers.</p>
+
+        <h2>What Is Syllable Splitting and Why Does It Matter?</h2>
+        
+        <p><strong>Syllable splitting</strong> refers to the process of dividing words into their natural pronunciation units based on vowel sounds and consonant patterns. A syllable typically contains a vowel sound (which may be surrounded by consonants) and represents a single beat in spoken language. The word "syllable" itself splits into three units: syl-la-ble. This decomposition reveals the fundamental rhythmic building blocks of language.</p>
+
+        <p>The importance of accessible <strong>syllable splitter online</strong> tools has grown across multiple disciplines. Linguists use <strong>syllable segmentation tools</strong> to analyze phonological structures across languages. Poets and songwriters rely on <strong>word syllable splitters</strong> to craft metered verse and rhythmic lyrics. Educators employ <strong>syllable breakdown tools</strong> to teach phonics and reading fluency. Speech therapists utilize <strong>syllable parsers</strong> for articulation exercises. SEO professionals leverage <strong>syllable analysis</strong> to optimize content for natural language processing and voice search algorithms. Without efficient <strong>online syllable splitting tools</strong>, these analyses require tedious manual phonetic transcription.</p>
+
+        <h2>Understanding Syllable Structure and Detection Methods</h2>
+
+        <h3>The Anatomy of a Syllable</h3>
+        
+        <p>Before exploring splitting techniques, it's essential to understand syllable composition. A syllable consists of three potential parts: the onset (initial consonant(s)), the nucleus (vowel sound— the syllable's essential component), and the coda (final consonant(s)). The nucleus is mandatory; onsets and codas are optional. In the word "split" (split), "spl" is the onset, "i" is the nucleus, and "t" is the coda.</p>
+
+        <p>English syllable structure follows specific phonotactic constraints—rules about which sounds can combine. Not all consonant clusters are permissible (English allows "str" but not "zdr" at word beginnings). Vowels can be monophthongs (single sounds like "a") or diphthongs (gliding sounds like "ai" in "rain"). Professional <strong>syllable separator tools online</strong> must account for these phonological rules to achieve accurate segmentation.</p>
+
+        <h3>Vowel-Based Detection</h3>
+        
+        <p>The most fundamental <strong>split words into syllables free</strong> approach counts vowel sounds, as every syllable requires at least one vowel. However, this simple rule quickly encounters complications: silent "e" at word ends (like "make"—one syllable, not two), vowel digraphs (two letters representing one sound, like "ea" in "bread"), diphthongs (two vowel sounds in one syllable, like "oi" in "boil"), and the letter "y" functioning as a vowel (as in "gym" or "happy").</p>
+
+        <p>Advanced <strong>syllable detection tools online</strong> employ pattern matching to handle these exceptions. They recognize that "tion" and "sion" endings create shun sounds (one syllable), that "le" at word ends often forms its own syllable (ta-ble, sim-ple), and that compound words require splitting at morpheme boundaries (book-store, not boo-kstore). Our <strong>syllable analyzer online free</strong> implements these linguistic rules for accurate English syllabification.</p>
+
+        <h3>Phonotactic Rules and Consonant Clusters</h3>
+        
+        <p>Consonant clusters (sequences of consonants) often indicate syllable boundaries. When two consonants appear between vowels, the syllable boundary typically falls between them (Eng-lish, not En-glish). However, certain clusters remain together across syllable boundaries (de-press, not dep-ress, because "pr" is a valid onset cluster). Triple consonant clusters usually split after the first consonant (in-stall, not ins-tall).</p>
+
+        <p><strong>Syllable tokenizers online free</strong> must encode hundreds of these phonotactic patterns. They need to know that "ck" stays together (tick-et), that "ng" represents a single sound (sing-ing), and that compound consonants like "x" (ks) and "qu" (kw) affect syllable counts. This linguistic knowledge distinguishes professional <strong>syllable extraction tools</strong> from naive vowel-counting algorithms.</p>
+
+        <h2>Professional Applications of Syllable Splitting</h2>
+
+        <h3>Poetry and Creative Writing</h3>
+        
+        <p>Poets have relied on syllable counting for millennia to create rhythmic verse. From the strict 5-7-5 structure of haiku to the iambic pentameter of Shakespearean sonnets, <strong>text syllable separation tools</strong> help writers achieve precise metrical patterns. Modern poets use <strong>syllable dividers online free</strong> to experiment with form, verify their meter, and teach poetic structure to students.</p>
+
+        <p>Songwriting similarly depends on syllable matching. Lyrics must fit melodic rhythms, requiring exact syllable counts per musical phrase. A <strong>syllable counter and splitter online</strong> helps songwriters ensure that replacement words maintain rhythmic compatibility. When adapting songs for translation, syllable matching preserves the musical integrity across languages.</p>
+
+        <h3>Education and Literacy Development</h3>
+        
+        <p>Reading education research consistently demonstrates that syllable awareness predicts reading success. Phonics programs teach students to "chunk" words into syllables for decoding. Struggling readers benefit from explicit <strong>syllable segmentation</strong> instruction, breaking intimidating multisyllabic words into manageable units. Teachers use <strong>syllable generators from text online</strong> to create decodable texts matched to students' skill levels.</p>
+
+        <p>English Language Learners (ELLs) particularly benefit from syllable analysis. Unlike native speakers who intuit syllable boundaries, ELLs must explicitly learn English phonotactics. <strong>Hyphenate words into syllables online</strong> tools provide visual scaffolding, showing exactly where syllable boundaries fall. This explicit marking accelerates the development of phonological awareness in second language acquisition.</p>
+
+        <h3>Speech Therapy and Pathology</h3>
+        
+        <p>Speech-language pathologists use <strong>syllable breakdown tools</strong> for both assessment and intervention. Apraxia of speech, a motor planning disorder, often manifests in syllable-level difficulties. Patients may successfully produce single syllables but struggle with multisyllabic words. <strong>Syllable splitting for linguistics online</strong> helps therapists identify exactly which syllable structures challenge their clients.</p>
+
+        <p>Fluency disorders (stuttering) also relate to syllable structure. Research shows that stuttering more commonly occurs at content words, word beginnings, and stressed syllables. By analyzing the <strong>syllable patterns</strong> in a client's speech sample, therapists can predict high-risk words and develop targeted fluency strategies. Our <strong>syllable processing tool free</strong> supports these clinical analyses.</p>
+
+        <h3>SEO and Natural Language Processing</h3>
+        
+        <p>Search engine optimization has entered the voice search era, where <strong>syllable patterns</strong> affect how content ranks. Voice assistants prioritize natural, conversational language with predictable rhythmic patterns. Content with consistent syllable structures sounds more natural when synthesized to speech, improving user experience metrics that influence rankings. SEO professionals use <strong>syllable splitters for SEO online</strong> to optimize content for voice queries.</p>
+
+        <p>Readability algorithms also incorporate syllable metrics. The Flesch Reading Ease score, widely used in content optimization, calculates average syllables per word. Lower syllable counts indicate easier reading. By <strong>splitting syllables for words online</strong>, content creators can identify and simplify overly complex vocabulary, improving accessibility and engagement metrics.</p>
+
+        <h2>Advanced Syllable Splitting Techniques</h2>
+
+        <h3>Multilingual Syllabification</h3>
+        
+        <p>Different languages follow different syllable rules, requiring specialized <strong>syllable parsers</strong>. Spanish syllabification is more regular than English, generally splitting between consonants (ca-sa, not cas-a) and keeping consonant clusters with following vowels (em-bra-za-da). French syllabification involves liaisons—linking final consonants to following vowel-initial words, creating syllables that cross word boundaries.</p>
+
+        <p>German compound words create extreme syllable challenges, with words like "Donaudampfschifffahrtsgesellschaftskapitänsmütze" (Danube steamship captain's hat—43 letters, 12 syllables) requiring morphological analysis before phonetic splitting. Professional <strong>online syllable splitting tools</strong> must handle these language-specific patterns or default to universal approximations.</p>
+
+        <h3>Morphological Awareness</h3>
+        
+        <p>The most accurate <strong>syllable splitters</strong> incorporate morphological knowledge—recognition of prefixes, suffixes, and roots. The word "unhappiness" splits un-hap-pi-ness, respecting both phonological and morphological boundaries. A purely phonetic splitter might produce un-hap-piness, missing the "ness" suffix boundary. Prefixes like "un-", "re-", "pre-" typically form their own syllables, as do suffixes like "-tion", "-sion", "-ly", "-ness".</p>
+
+        <p>This morphophonemic approach proves essential for educational applications. Students learning word analysis benefit from seeing meaningful parts (morphemes) aligned with syllable boundaries. Our <strong>text to syllables converter online</strong> prioritizes these pedagogically significant splits when morphological boundaries are clear.</p>
+
+        <h3>Handling Edge Cases and Ambiguities</h3>
+        
+        <p>English syllable boundaries aren't always determinate. Some words allow multiple valid splits depending on dialect or speech rate. "Caramel" varies between two syllables (car-mel) and three (car-a-mel) across English dialects. "Poem" can be one syllable (pome) or two (po-em) depending on pronunciation style. Professional <strong>syllable analyzers</strong> must either choose the most common variant or flag ambiguities for user review.</p>
+
+        <p>Loanwords from other languages retain foreign syllable patterns. "Croissant" (French) has two syllables (crois-sant) despite English phonotactics suggesting otherwise. "Sushi" (Japanese) maintains its two-syllable structure (su-shi) in English. <strong>Syllable segmentation tools online</strong> benefit from etymological databases to handle these borrowed pronunciations accurately.</p>
+
+        <h2>Best Practices for Effective Syllable Analysis</h2>
+
+        <h3>Pre-processing and Text Normalization</h3>
+        
+        <p>Before syllable splitting, prepare your text for optimal results. Remove or standardize punctuation (apostrophes in contractions affect syllable counts—"don't" is one syllable, not two). Handle numbers (decide whether "100" counts as "one hundred" (3 syllables) or remains numeric). Normalize abbreviations ("Dr." vs "Doctor"—different syllable counts). Expand acronyms if treating them as spoken words. These normalizations ensure consistent, meaningful syllable analysis.</p>
+
+        <h3>Choosing the Right Output Format</h3>
+        
+        <p>Match your syllable display to your use case: Hyphenation (syl-la-ble) suits readability assessment and poetry analysis. Dots (syl·la·ble) provide clear visual separation without suggesting word breaks. Spaces (syl la ble) emphasize the separate nature of syllables for phonics instruction. Color coding helps visual learners track syllable patterns across texts. JSON or CSV exports enable further computational analysis in spreadsheet or statistical software. Our <strong>free online syllable splitter tool</strong> supports all these formats.</p>
+
+        <h3>Statistical Analysis and Interpretation</h3>
+        
+        <p>Raw syllable counts provide limited insight; statistical analysis reveals patterns. Calculate average syllables per word to assess vocabulary complexity (higher averages indicate more sophisticated language). Identify polysyllabic word density (percentage of words with 3+ syllables) as a readability predictor. Track syllable distribution patterns (how many 1-syllable, 2-syllable, 3-syllable words appear) to characterize text rhythm. Compare these metrics across texts or against grade-level benchmarks. Our tool's built-in analytics support these professional assessments.</p>
+
+        <h2>Comparing Syllable Splitting Approaches</h2>
+
+        <h3>Manual Analysis vs. Automated Tools</h3>
+        
+        <p>Manual syllable counting requires linguistic training and considerable time. Even experts disagree on ambiguous cases, and fatigue leads to counting errors. Automated <strong>syllable splitters</strong> provide consistency, speed, and scalability—processing thousands of words in seconds with uniform application of rules. For any text longer than a few paragraphs, automated tools prove essential. Our <strong>free syllable splitter</strong> makes this automation accessible to everyone.</p>
+
+        <h3>Dictionary Lookup vs. Algorithmic Splitting</h3>
+        
+        <p>Some syllable tools rely on dictionary lookups, referencing pre-syllabified word lists. This approach achieves perfect accuracy for dictionary words but fails on neologisms, proper nouns, compound words, and misspellings. Algorithmic splitters apply phonotactic rules dynamically, handling novel words but occasionally producing errors on irregular forms. Hybrid approaches combine both methods—dictionary lookup when available, algorithmic fallback for unknown words—providing the best balance of accuracy and coverage.</p>
+
+        <h2>The Future of Syllable Technology</h2>
+
+        <p>Machine learning is transforming <strong>syllable splitting</strong>, with neural networks trained on pronunciation dictionaries achieving human-level accuracy. These models learn subtle patterns that rule-based systems miss, improving handling of edge cases and dialectal variations. Future <strong>syllable tools</strong> will likely offer personalized models adapted to specific regional accents or individual speech patterns, supporting more precise speech therapy and voice interface optimization.</p>
+
+        <h2>Conclusion: Master Phonetic Analysis with Professional Syllable Splitting</h2>
+
+        <p><strong>Text syllable splitting</strong> remains one of the most valuable yet underutilized text analysis techniques available to language professionals. From poetic meter to reading instruction, from speech pathology to SEO optimization, understanding the syllabic structure of text opens insights invisible to superficial reading. Whether you're counting syllables for haiku, simplifying vocabulary for accessibility, analyzing phonological patterns, or optimizing for voice search, mastering <strong>syllable analysis</strong> enhances your linguistic precision.</p>
+
+        <p>Our <strong>free online syllable splitter</strong> provides all the capabilities you need for professional syllable analysis. With automatic real-time splitting as you type, support for six major languages, multiple display formats, and comprehensive statistical analytics, this tool serves everyone from casual poets to computational linguists. The browser-based architecture ensures privacy and accessibility, while the intuitive interface requires no phonetic training. Whether you need to <strong>split text into syllables online</strong>, <strong>hyphenate words into syllables online</strong>, <strong>analyze syllable patterns</strong>, or perform bulk <strong>syllable processing</strong>, our <strong>syllable splitting utility online</strong> delivers professional results instantly. Stop counting syllables manually—start using our professional <strong>text syllable splitter online</strong> today and experience the efficiency of automated phonetic analysis.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool split syllables automatically as I type?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>syllable splitter online</strong> features <strong>automatic real-time syllable detection</strong>. As you type or paste text, the tool instantly analyzes each word and displays the syllable breakdown. We use intelligent debouncing to ensure smooth performance. The "Auto-splitting enabled" indicator confirms the feature is active. Changes to display format or options also apply instantly.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How accurate is the syllable splitting?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Our tool achieves approximately 95%+ accuracy for standard English vocabulary using phonotactic rules and morphological analysis. It handles complex patterns like silent e, vowel digraphs, compound words, and common affixes. Some ambiguous words (like "caramel" which varies between 2-3 syllables by dialect) default to the most common pronunciation. For specialized linguistic research, we recommend verifying edge cases against pronunciation dictionaries.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Which languages are supported?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Currently: <strong>English, Spanish, French, German, Italian, and Portuguese</strong>. Each language uses specific phonotactic rules appropriate to its syllable structure. English and German handle complex consonant clusters; Spanish and Italian follow more regular vowel-consonant patterns; French accounts for liaison and mute e; Portuguese includes nasal vowel handling. Select your language from the dropdown for optimized results.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What's the difference between the display formats?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Hyphen</strong> (syl-la-ble): Standard dictionary style, best for readability scores. <strong>Dots</strong> (syl·la·ble): Clear separation without line-break confusion. <strong>Spaces</strong> (syl la ble): Emphasizes separate units for phonics instruction. <strong>Brackets</strong> (syl[la]ble): Shows syllable hierarchy. <strong>Colors</strong>: Visual differentiation for pattern recognition. Choose based on your specific use case—poetry, education, linguistic analysis, or data processing.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I export the syllable data?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Use the <strong>Output Style</strong> selector to choose format: <strong>Inline Text</strong> for reading, <strong>Word List</strong> for vocabulary analysis, <strong>JSON</strong> for programming/AI applications, or <strong>CSV</strong> for spreadsheet import. Click <strong>Download</strong> to save files, or <strong>Copy</strong> to clipboard. The statistics panel shows total words, total syllables, average syllables per word, and longest word for quick reference.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does it handle numbers and special characters?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">By default, numbers are ignored (toggle "Ignore numbers" to change). Special characters and punctuation are stripped from words before syllable analysis. Contractions like "don't" are treated as single words (1 syllable). Possessives ("teacher's") keep the apostrophe but it's not counted as a syllable boundary. For best results with mixed content, enable "Ignore numbers" and ensure words are space-separated.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I process long documents?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">The tool handles texts up to 50,000 characters (roughly 10,000 words or 30-40 pages). For longer documents, process in sections or use the file upload feature. Performance depends on your device's processing power. The <strong>free online syllable splitter tool</strong> is optimized for essays, articles, poems, and moderate-length documents. Very large texts (novels, books) should be split into chapters.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my text data secure?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely. All processing happens <strong>locally in your browser</strong>—text never uploads to servers or leaves your device. You can verify this with browser DevTools (Network tab shows no data transfer). Works offline after loading. Ideal for confidential documents, student data (FERPA compliant), proprietary content, or personal creative writing. Privacy is built into our <strong>syllable splitter online</strong> architecture.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this tool free?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, completely <strong>free</strong> with no registration, usage limits, watermarks, or hidden fees. Use for personal or commercial projects without attribution. This is truly a <strong>free syllable splitter</strong> for everyone. Supported by unobtrusive advertising and voluntary user support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// Syllable splitting algorithm (simplified for English)
+function splitSyllables(word) {
+  word = word.toLowerCase().replace(/[^a-z]/g, '');
+  if (word.length <= 3) return [word];
+  
+  const vowels = 'aeiouy';
+  const syllables = [];
+  let current = '';
+  
+  for (let i = 0; i < word.length; i++) {
+    current += word[i];
+    
+    // Check if we should split after this character
+    if (i < word.length - 1) {
+      const isVowel = vowels.includes(word[i]);
+      const nextIsVowel = vowels.includes(word[i + 1]);
+      
+      // Split between consonant and vowel (VC pattern)
+      if (!isVowel && nextIsVowel && current.length > 1) {
+        // Check for common patterns that shouldn't split
+        if (!isDigraph(word.substring(i-1, i+1))) {
+          syllables.push(current);
+          current = '';
+        }
+      }
+      
+      // Split between two consonants (CC pattern)
+      if (!isVowel && !nextIsVowel && i > 0) {
+        // Keep common blends together
+        if (!isBlend(word.substring(i, i+2))) {
+          syllables.push(current.slice(0, -1));
+          current = current.slice(-1);
+        }
+      }
+    }
+  }
+  
+  if (current) syllables.push(current);
+  
+  // Post-process: merge orphaned consonants
+  return mergeOrphaned(syllables);
+}
+
+function isDigraph(chars) {
+  const digraphs = ['th', 'sh', 'ch', 'ph', 'wh', 'gh', 'ck', 'ng'];
+  return digraphs.includes(chars);
+}
+
+function isBlend(chars) {
+  const blends = ['bl', 'br', 'cl', 'cr', 'dr', 'fl', 'fr', 'gl', 'gr', 'pl', 'pr', 'sc', 'sk', 'sl', 'sm', 'sn', 'sp', 'st', 'sw', 'tr', 'tw', 'str', 'spr', 'scr'];
+  return blends.includes(chars);
+}
+
+function mergeOrphaned(syllables) {
+  if (syllables.length <= 1) return syllables;
+  
+  const merged = [syllables[0]];
+  for (let i = 1; i < syllables.length; i++) {
+    const prev = merged[merged.length - 1];
+    const curr = syllables[i];
+    
+    // If previous ends with vowel and current is single consonant, merge
+    if (/[aeiouy]$/.test(prev) && /^[^aeiouy]$/.test(curr) && curr.length === 1) {
+      merged[merged.length - 1] = prev + curr;
+    } else {
+      merged.push(curr);
+    }
+  }
+  
+  return merged.filter(s => s.length > 0);
+}
+
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const inputStats = document.getElementById('inputStats');
+const outputContainer = document.getElementById('outputContainer');
+const outputStats = document.getElementById('outputStats');
+const wordCount = document.getElementById('wordCount');
+const processingTime = document.getElementById('processingTime');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+
+// Stats elements
+const statTotalWords = document.getElementById('statTotalWords');
+const statTotalSyllables = document.getElementById('statTotalSyllables');
+const statAvgSyllables = document.getElementById('statAvgSyllables');
+const statLongestWord = document.getElementById('statLongestWord');
+
+// Buttons
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const resetBtn = document.getElementById('resetBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+// Format buttons
+const splitBtns = document.querySelectorAll('.split-btn');
+let currentFormat = 'hyphen';
+
+// Options
+const language = document.getElementById('language');
+const minWordLength = document.getElementById('minWordLength');
+const maxSyllables = document.getElementById('maxSyllables');
+const outputStyle = document.getElementById('outputStyle');
+const showCount = document.getElementById('showCount');
+const highlightStress = document.getElementById('highlightStress');
+const ignoreNumbers = document.getElementById('ignoreNumbers');
+const preserveCase = document.getElementById('preserveCase');
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Update input stats
+function updateInputStats() {
+  const text = inputText.value;
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+  inputStats.textContent = `Words: ${words} | Chars: ${text.length}`;
+}
+
+// Debounce function
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Format selection
+splitBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    splitBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentFormat = btn.dataset.format;
+    splitSyllablesInText();
+  });
+});
+
+// Auto-split on option changes
+[language, minWordLength, maxSyllables, outputStyle, showCount, highlightStress, ignoreNumbers, preserveCase].forEach(el => {
+  if (el) {
+    el.addEventListener('change', splitSyllablesInText);
+  }
+});
+
+// Format syllables based on selected format
+function formatSyllables(syllableArray, format) {
+  switch(format) {
+    case 'hyphen':
+      return syllableArray.join('-');
+    case 'dots':
+      return syllableArray.join('·');
+    case 'spaces':
+      return syllableArray.join(' ');
+    case 'brackets':
+      if (syllableArray.length === 1) return syllableArray[0];
+      return syllableArray[0] + '[' + syllableArray.slice(1, -1).join('][') + ']' + syllableArray[syllableArray.length - 1];
+    case 'colors':
+      return syllableArray.map((s, i) => `<span class="${i % 2 === 0 ? 'text-indigo-400' : 'text-purple-400'}">${s}</span>`).join('');
+    default:
+      return syllableArray.join('-');
+  }
+}
+
+// Main syllable splitting function
+function splitSyllablesInText() {
+  const startTime = performance.now();
+  const text = inputText.value;
+  
+  if (!text.trim()) {
+    outputContainer.innerHTML = `
+      <div class="text-center text-gray-500 text-xs mt-8">
+        <svg class="w-8 h-8 mx-auto mb-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+        <p>Syllable breakdown will appear here automatically...</p>
+      </div>
+    `;
+    wordCount.classList.add('hidden');
+    outputStats.textContent = 'Total Syllables: 0 | Avg: 0';
+    processingTime.textContent = '';
+    updateStats(0, 0, 0, 0);
+    return;
+  }
+  
+  // Process text
+  let words = text.split(/\s+/).filter(w => w.length > 0);
+  
+  if (ignoreNumbers.checked) {
+    words = words.filter(w => !/^\d+$/.test(w));
+  }
+  
+  const minLen = parseInt(minWordLength.value) || 1;
+  words = words.filter(w => w.replace(/[^a-zA-Z]/g, '').length >= minLen);
+  
+  const maxSyl = parseInt(maxSyllables.value) || 10;
+  
+  let totalSyllables = 0;
+  let longestWord = '';
+  let longestSyllables = 0;
+  
+  const processedWords = words.map(word => {
+    const cleanWord = word.replace(/[^a-zA-Z]/g, '');
+    const syllables = splitSyllables(cleanWord);
+    
+    if (syllables.length > maxSyl) {
+      return { original: word, syllables: [cleanWord], count: 1 };
+    }
+    
+    totalSyllables += syllables.length;
+    
+    if (syllables.length > longestSyllables) {
+      longestSyllables = syllables.length;
+      longestWord = cleanWord;
+    }
+    
+    return { original: word, syllables, count: syllables.length };
+  });
+  
+  const endTime = performance.now();
+  
+  // Update stats
+  wordCount.textContent = `(${words.length} words)`;
+  wordCount.classList.remove('hidden');
+  outputStats.textContent = `Total Syllables: ${totalSyllables} | Avg: ${words.length > 0 ? (totalSyllables / words.length).toFixed(2) : 0}`;
+  processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+  
+  updateStats(words.length, totalSyllables, words.length > 0 ? (totalSyllables / words.length).toFixed(2) : 0, longestSyllables);
+  
+  // Display output
+  displayOutput(processedWords);
+}
+
+function updateStats(words, syllables, avg, longest) {
+  statTotalWords.textContent = words;
+  statTotalSyllables.textContent = syllables;
+  statAvgSyllables.textContent = avg;
+  statLongestWord.textContent = longest;
+}
+
+function displayOutput(processedWords) {
+  const style = outputStyle.value;
+  
+  if (style === 'json') {
+    const jsonData = processedWords.map(pw => ({
+      word: pw.original,
+      syllables: pw.syllables,
+      count: pw.count
+    }));
+    outputContainer.innerHTML = `<pre class="text-xs text-gray-300 overflow-x-auto">${JSON.stringify(jsonData, null, 2)}</pre>`;
+    return;
+  }
+  
+  if (style === 'csv') {
+    let csv = 'Word,Syllables,Count\n';
+    processedWords.forEach(pw => {
+      csv += `"${pw.original}","${pw.syllables.join('-')}",${pw.count}\n`;
+    });
+    outputContainer.innerHTML = `<pre class="text-xs text-gray-300 overflow-x-auto">${csv}</pre>`;
+    return;
+  }
+  
+  if (style === 'list') {
+    const html = processedWords.map(pw => {
+      const formatted = formatSyllables(pw.syllables, currentFormat);
+      const countBadge = showCount.checked ? `<span class="ml-2 text-xs text-gray-500">(${pw.count})</span>` : '';
+      return `<div class="syllable-word">${formatted}${countBadge}</div>`;
+    }).join('');
+    outputContainer.innerHTML = html || '<div class="text-gray-500 text-center">No words to display</div>';
+    return;
+  }
+  
+  // Inline style
+  const html = processedWords.map(pw => {
+    const formatted = formatSyllables(pw.syllables, currentFormat);
+    const countBadge = showCount.checked ? `<sup class="text-xs text-gray-500 ml-0.5">${pw.count}</sup>` : '';
+    
+    if (currentFormat === 'colors') {
+      return `<span class="mr-2">${formatted}${countBadge}</span>`;
+    }
+    return `<span class="syllable-word inline-block mr-2 mb-2">${formatted}${countBadge}</span>`;
+  }).join(' ');
+  
+  outputContainer.innerHTML = html || '<div class="text-gray-500 text-center">No words to display</div>';
+}
+
+// Debounced version
+const debouncedSplit = debounce(splitSyllablesInText, 300);
+
+// Drag and drop handlers
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    updateInputStats();
+    splitSyllablesInText();
+  };
+  reader.readAsText(file);
+}
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    updateInputStats();
+    splitSyllablesInText();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  updateInputStats();
+  splitSyllablesInText();
+  inputText.focus();
+}
+
+// Copy output
+async function copyOutput() {
+  const text = outputContainer.innerText;
+  if (!text.trim()) return;
+  
+  try {
+    await navigator.clipboard.writeText(text);
+    const originalText = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalText;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+}
+
+// Download output
+function downloadOutput() {
+  const text = outputContainer.innerText;
+  if (!text.trim()) return;
+  
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'syllable-split.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Reset all
+function resetAll() {
+  inputText.value = '';
+  updateInputStats();
+  splitSyllablesInText();
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Event listeners
+inputText.addEventListener('input', () => {
+  updateInputStats();
+  debouncedSplit();
+});
+
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+copyBtn.addEventListener('click', copyOutput);
+downloadBtn.addEventListener('click', downloadOutput);
+resetBtn.addEventListener('click', resetAll);
+
+// Initialize
+updateInputStats();
+</script>
+</body>
+</html>

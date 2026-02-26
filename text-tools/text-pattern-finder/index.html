@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Text Pattern Finder - Free Online Pattern Detection Tool</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online text pattern finder tool. Instantly detect, analyze, and extract patterns, sequences, and repeated structures from your text. Supports regex and bulk processing." />
+  <meta name="keywords" content="text pattern finder, text pattern finder online, free text pattern finder, find text patterns online, text pattern detection tool, online text pattern search, text pattern analyzer online, text pattern recognition tool free, detect text sequences online, text pattern matcher online, text pattern scanner online free, search text patterns online, text pattern extractor online, pattern detection in text free, bulk text pattern finder online, text sequence finder online, text pattern locator online free, text pattern identifier online, text structure finder online, text pattern recognition online free, online text pattern checker free, text regex pattern finder online, text pattern search utility online, text pattern detection tool free, text pattern finder for writers online, text pattern finder for seo online, online text pattern finder free, text pattern analyzer for coding online, free text pattern finder without login, online text pattern search tool free" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/text-pattern-finder/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/text-pattern-finder/" />
+  <meta property="og:title" content="Text Pattern Finder - Free Online Pattern Detection Tool" />
+  <meta property="og:description" content="Instantly detect, analyze, and extract patterns, sequences, and repeated structures from your text. Supports regex and bulk processing." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/text-pattern-finder/" />
+  <meta name="twitter:title" content="Text Pattern Finder - Free Online Pattern Detection Tool" />
+  <meta name="twitter:description" content="Instantly detect, analyze, and extract patterns, sequences, and repeated structures from your text. Supports regex and bulk processing." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .method-btn {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    .method-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+
+    .match-highlight {
+      background: rgba(99, 102, 241, 0.3);
+      border-radius: 2px;
+      padding: 0 2px;
+    }
+
+    .pattern-match-item {
+      border-left: 2px solid rgba(99, 102, 241, 0.5);
+      transition: all 0.2s ease;
+    }
+    
+    .pattern-match-item:hover {
+      border-left-color: rgba(99, 102, 241, 1);
+      background: rgba(255, 255, 255, 0.03);
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 12h8M10 20h20M10 28h14" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Text Pattern Finder</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Text Pattern Finder
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Text Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-detection enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Input Text
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Type or paste text here to find patterns... Or drag & drop a file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.log,.csv,.json,.xml,.html,.md,.js,.py,.java,.cpp" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Chars: 0 | Words: 0 | Lines: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Output -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Pattern Matches <span id="matchCount" class="text-gray-500 font-normal ml-1 hidden">(0 found)</span>
+            </label>
+            <div class="flex gap-1">
+              <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                Copy
+              </button>
+              <button id="downloadBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Download
+              </button>
+            </div>
+          </div>
+          
+          <div id="outputContainer" class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed overflow-y-auto">
+            <div id="emptyState" class="h-full flex items-center justify-center text-gray-500">
+              <p>Pattern matches will appear here...</p>
+            </div>
+            <div id="matchesList" class="hidden space-y-2"></div>
+          </div>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="outputStats">Patterns: 0 | Unique: 0</span>
+            <span id="processingTime" class="text-gray-600"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-3">
+        
+        <!-- Pattern Type -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Pattern Type</label>
+          <div class="flex flex-wrap gap-1">
+            <button class="method-btn active rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-pattern="emails">Emails</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-pattern="urls">URLs</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-pattern="phones">Phone Numbers</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-pattern="ips">IP Addresses</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-pattern="dates">Dates</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-pattern="credit">Credit Cards</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-pattern="hex">Hex Colors</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-pattern="custom">Custom Regex</button>
+          </div>
+        </div>
+
+        <!-- Custom Pattern Input -->
+        <div id="customPatternContainer" class="hidden">
+          <label class="text-xs text-gray-400 mb-1 block">Custom Regex Pattern</label>
+          <input type="text" id="customPattern" placeholder="Enter regex pattern (e.g., \b\w+@\w+\.\w+\b)" class="w-full px-3 py-2 rounded-md glass-input text-xs font-mono">
+          <p class="text-xs text-gray-500 mt-1">Use JavaScript regex syntax. Test your pattern carefully.</p>
+        </div>
+
+        <!-- Options -->
+        <div class="flex flex-wrap gap-3 items-center">
+          <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+            <input type="checkbox" id="caseSensitive" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Case sensitive
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+            <input type="checkbox" id="uniqueOnly" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Show unique only
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+            <input type="checkbox" id="showContext" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Show context
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+            <input type="checkbox" id="highlightInput" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Highlight in input
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Text Pattern Finder?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Instant</h3>
+          <p class="text-gray-400 text-xs">Real-time pattern detection</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">8 Patterns</h3>
+          <p class="text-gray-400 text-xs">Built-in + custom regex</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Drag & Drop</h3>
+          <p class="text-gray-400 text-xs">Upload log files instantly</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based processing</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy or download matches</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration needed</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Input Text</h3>
+          <p class="text-gray-400 text-xs">Type, paste, or drop your text. Pattern detection starts automatically.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Select Pattern</h3>
+          <p class="text-gray-400 text-xs">Choose from 7 built-in patterns or enter custom regex.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Review Matches</h3>
+          <p class="text-gray-400 text-xs">View found patterns with context and frequency statistics.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy matches to clipboard or download as a text file.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Text Pattern Finding: Mastering Pattern Recognition for Data Analysis and Content Processing</h2>
+        
+        <p><strong>Text pattern finding</strong> is a fundamental technique in data processing, content analysis, and information extraction that enables professionals to identify, locate, and extract specific sequences or structures within unstructured text. Whether you're analyzing server logs for error codes, extracting contact information from documents, identifying security threats in network traffic, or processing structured data from unstructured sources, the ability to <strong>find text patterns online</strong> efficiently transforms raw text into actionable intelligence. Our <strong>free text pattern finder</strong> provides the advanced capabilities you need for professional pattern recognition without requiring complex software installation or programming expertise.</p>
+
+        <h2>What Is Text Pattern Finding and Why Does It Matter?</h2>
+        
+        <p><strong>Text pattern finding</strong> refers to the systematic identification of specific character sequences, formats, or structures within larger bodies of text. These patterns can range from simple literal strings (like searching for a specific word) to complex regular expressions that match sophisticated formats like email addresses, phone numbers, URLs, or custom data structures. When you <strong>detect text sequences online</strong>, you're performing one of the most common operations in data science, cybersecurity, content management, and software development.</p>
+
+        <p>The importance of reliable <strong>text pattern detection tool</strong> solutions has grown exponentially with the proliferation of unstructured data. Organizations generate terabytes of logs, documents, emails, and user-generated content daily. Hidden within this textual chaos are critical insights: security breaches signaled by unusual IP addresses, business opportunities indicated by contact information patterns, operational issues revealed by error message frequencies, or compliance violations exposed by sensitive data exposure. Professional <strong>online text pattern search</strong> capabilities transform these hidden patterns into visible, actionable information.</p>
+
+        <h2>Understanding Pattern Types and Detection Methods</h2>
+
+        <h3>Built-in Pattern Recognition</h3>
+        
+        <p>Common text patterns follow standardized formats that can be detected using well-defined rules. <strong>Email addresses</strong> follow the local-part@domain structure with specific character constraints. <strong>URLs</strong> adhere to protocol://domain/path conventions with various optional components. <strong>Phone numbers</strong> display regional formatting variations while maintaining digit sequence patterns. <strong>IP addresses</strong> (IPv4 and IPv6) follow numeric dot-notation or hexadecimal colon-notation structures. <strong>Dates and times</strong> appear in countless cultural and technical formats. <strong>Credit card numbers</strong> maintain specific length and checksum requirements. <strong>Hexadecimal color codes</strong> use hash-prefixed character sequences. A comprehensive <strong>text pattern analyzer online</strong> provides pre-built detectors for all these common formats.</p>
+
+        <p>These built-in patterns save users from manually constructing complex regular expressions for standard formats. When you need to extract all email addresses from a document, you shouldn't need to remember that valid emails match patterns like <code>[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}</code>. Professional <strong>text pattern recognition tool free</strong> solutions encapsulate this complexity behind intuitive interfaces, providing accurate detection without requiring regex expertise.</p>
+
+        <h3>Custom Pattern Definition</h3>
+        
+        <p>Beyond standard formats, professionals frequently need to identify organization-specific patterns: product SKU codes following internal conventions, transaction IDs with company-specific structures, log entry formats unique to particular systems, or content markers used in specialized workflows. Advanced <strong>text regex pattern finder online</strong> capabilities support custom regular expression input, enabling detection of arbitrary patterns that match specific business needs.</p>
+
+        <p>Regular expressions (regex) provide a powerful, standardized syntax for pattern definition. While learning regex requires initial investment, the flexibility gained enables pattern matching impossible with simple literal searches. Character classes (<code>[a-z]</code>, <code>\d</code>, <code>\w</code>) match categories of characters. Quantifiers (<code>*</code>, <code>+</code>, <code>{n,m}</code>) specify repetition. Anchors (<code>^</code>, <code>$</code>, <code>\b</code>) control position matching. Groups and alternation enable complex logical combinations. The best <strong>text pattern matcher online</strong> tools balance pre-built convenience with custom flexibility, serving both novice users and regex experts.</p>
+
+        <h3>Pattern Context and Analysis</h3>
+        
+        <p>Finding patterns is only the first step; understanding their context transforms raw matches into useful information. <strong>Context display</strong> shows surrounding text for each match, revealing whether an email address appears in a sender field, signature block, or body text. <strong>Frequency analysis</strong> identifies repeated patterns that might indicate automated generation, copy-paste duplication, or systematic issues. <strong>Position information</strong> (line numbers, character offsets) enables precise navigation to match locations in source documents. <strong>Deduplication</strong> filters unique values from repeated occurrences, essential for creating contact lists or analyzing distinct entities.</p>
+
+        <p>Professional <strong>text pattern extractor online</strong> tools provide these analytical layers automatically, presenting pattern discoveries in formats that support immediate decision-making. Rather than simply listing "found 47 email addresses," sophisticated tools show where they appear, how frequently each occurs, and what surrounding context suggests about their significance.</p>
+
+        <h2>Professional Applications of Pattern Finding</h2>
+
+        <h3>Cybersecurity and Threat Detection</h3>
+        
+        <p>Security professionals rely heavily on <strong>text pattern scanner online free</strong> capabilities for threat identification and forensic analysis. Log file analysis involves searching for indicators of compromise: IP addresses associated with known malicious actors, file hashes matching malware signatures, email addresses used in phishing campaigns, or URL patterns characteristic of command-and-control communications. Network traffic inspection requires identifying suspicious payload patterns, unusual protocol usage, or data exfiltration signatures. Code review processes scan for hardcoded credentials, API keys accidentally committed to repositories, or dangerous function calls that might indicate vulnerabilities.</p>
+
+        <p>The speed of pattern detection directly impacts security response effectiveness. When investigating potential breaches, analysts need immediate answers about whether specific indicators appear in system logs. When reviewing code commits, developers need instant notification of accidentally exposed secrets. Browser-based <strong>pattern detection in text free</strong> tools provide this immediacy without requiring installation of specialized security software or access to restricted analysis platforms.</p>
+
+        <h3>Data Migration and ETL Processes</h3>
+        
+        <p>Extract, Transform, Load (ETL) workflows frequently involve parsing unstructured or semi-structured text to extract structured data. Legacy system exports often contain embedded data in inconsistent formats. Web scraping operations retrieve HTML containing target information mixed with presentation markup. Email archives store valuable business data within free-form message bodies. Customer feedback channels collect unstructured comments requiring information extraction.</p>
+
+        <p><strong>Bulk text pattern finder online</strong> tools accelerate these extraction tasks by identifying all instances of target patterns without manual searching. Data engineers can verify extraction completeness by confirming expected pattern counts. Quality checks involve validating that extracted data matches expected formats. Transformation logic depends on accurate pattern identification to route data appropriately. Professional <strong>text sequence finder online</strong> capabilities reduce the manual effort that otherwise bottlenecks data pipeline development.</p>
+
+        <h3>Content Management and SEO</h3>
+        
+        <p>Digital marketers and content managers use <strong>text pattern finder for seo online</strong> tools for various optimization tasks. Link audits involve extracting all URLs from website content to verify destinations, check for broken links, or identify external references. Email harvesting from public sources builds outreach lists for marketing campaigns (within legal and ethical boundaries). Phone number extraction from business directories creates contact databases. Date pattern identification helps content scheduling and archival processes. Format validation ensures user-generated content meets quality standards before publication.</p>
+
+        <p>Content analysis also involves identifying problematic patterns: excessive keyword repetition that might trigger search engine penalties, placeholder text accidentally left in published content, inconsistent formatting that degrades user experience, or sensitive information that should have been redacted. Automated <strong>text pattern locator online free</span> scanning catches these issues before they impact business outcomes.</p>
+
+        <h3>Software Development and Debugging</h3>
+        
+        <p>Developers constantly engage in pattern-based text analysis. Log file debugging requires finding error codes, stack traces, or specific message patterns that indicate problems. Configuration file review involves validating format compliance and identifying deprecated settings. Code refactoring searches for specific patterns that need updating across large codebases. API documentation extraction pulls endpoint definitions from specification documents. Test output analysis identifies failure patterns and success indicators.</p>
+
+        <p>Integrated Development Environments (IDEs) provide basic search capabilities, but browser-based <strong>text pattern analyzer for coding online</strong> tools offer advantages for specific workflows: analyzing logs from production systems where IDE access isn't available, sharing pattern analysis with non-technical team members, processing large files that might slow down local editors, or quickly checking patterns without switching context from web-based documentation or issue trackers.</p>
+
+        <h2>Advanced Pattern Finding Techniques</h2>
+
+        <h3>Regular Expression Optimization</h3>
+        
+        <p>Writing effective regex patterns requires balancing specificity with flexibility. Overly broad patterns generate false positives—matching strings that technically fit the pattern but aren't semantically valid (like matching "user@localhost" as an email when it's actually a placeholder). Overly restrictive patterns miss valid variations—rejecting internationalized email addresses or unusual but legitimate URL formats. Professional <strong>text pattern identifier online</strong> tools provide tested, optimized patterns for common formats that balance these concerns appropriately.</p>
+
+        <p>For custom patterns, iterative refinement improves accuracy. Start with broad patterns that capture obvious matches, then test against diverse real-world samples to identify false positives and missed cases. Refine character classes, adjust quantifiers, and add negative lookaheads/lookbehinds to exclude invalid contexts. Document pattern assumptions and limitations for future maintainers. When using <strong>text structure finder online</strong> tools, save successful custom patterns for reuse across similar analysis tasks.</p>
+
+        <h3>Multi-Pattern Analysis</h3>
+        
+        <p>Complex analysis often requires finding multiple related patterns simultaneously. Security investigations might search for IP addresses, file hashes, and suspicious URLs together. Data extraction workflows might identify dates, amounts, and transaction IDs in proximity to reconstruct financial records. Content audits might check for email addresses, phone numbers, and physical addresses to evaluate privacy exposure. While single-pattern tools require sequential searches, advanced <strong>text pattern recognition online free</strong> platforms support multiple concurrent pattern detection.</p>
+
+        <p>Pattern relationships provide additional analytical value. Co-occurrence analysis identifies which patterns frequently appear together, suggesting semantic relationships. Proximity analysis finds patterns within specific distance windows, useful for extracting related data fields. Sequence analysis identifies ordered pattern occurrences that might indicate processes or workflows. These analytical dimensions transform simple pattern matching into sophisticated content understanding.</p>
+
+        <h3>Performance Considerations</h3>
+        
+        <p>Pattern matching performance varies dramatically based on text volume, pattern complexity, and implementation efficiency. Catastrophic backtracking in poorly written regex can cause exponential processing time on certain inputs. Greedy quantifiers might consume excessive memory on large texts. Case-insensitive matching on Unicode text requires complex normalization that slows processing. Professional <strong>text pattern search utility online</strong> implementations optimize these concerns, but users should understand basic performance implications.</p>
+
+        <p>For large-scale analysis (gigabyte logs, millions of documents), consider preprocessing strategies: filtering text to relevant sections before pattern matching, using simpler literal searches to narrow candidate regions, or processing files in parallel chunks. Browser-based tools handle megabyte-scale texts efficiently but might struggle with multi-gigabyte files that require streaming processing or specialized big-data tools.</p>
+
+        <h2>Comparing Pattern Finding Approaches</h2>
+
+        <h3>Manual Search vs. Automated Pattern Detection</h3>
+        
+        <p>Manual searching using Ctrl+F works for simple literal patterns in small documents. However, manual approaches fail for: complex formats that vary slightly (finding all phone numbers in formats like (555) 123-4567, 555.123.4567, 555-123-4567, etc.), large document collections where manual review is impractical, real-time monitoring where immediate detection matters, or pattern variations that humans might overlook (like Unicode homoglyphs in phishing URLs). Automated <strong>online text pattern checker free</strong> tools eliminate these limitations with consistent, scalable detection.</p>
+
+        <p>Automation also enables pattern discovery that manual review cannot achieve. Statistical analysis of pattern frequencies reveals anomalies humans wouldn't notice. Cross-referencing patterns against threat intelligence databases identifies risks unknown to analysts. Machine learning classification of pattern contexts distinguishes benign from suspicious occurrences. These advanced capabilities require automated processing that manual searching cannot provide.</p>
+
+        <h3>Command-Line Tools vs. Online Solutions</h3>
+        
+        <p>Traditional Unix tools like grep, awk, and sed provide powerful pattern matching for technical users comfortable with command-line interfaces. These tools excel in scripted workflows, pipeline processing, and server environments without graphical interfaces. However, they present barriers for non-technical users, require installation and learning investment, and lack interactive visualization of results.</p>
+
+        <p>Browser-based <strong>online text pattern finder free</strong> solutions democratize pattern finding by providing intuitive interfaces accessible from any device. No installation means immediate use for one-off tasks. Visual result presentation helps users understand and refine their searches. Cross-platform compatibility ensures consistent behavior regardless of operating system. For occasional pattern finding needs or collaborative analysis scenarios, online tools often outperform command-line alternatives despite having less raw processing power.</p>
+
+        <h2>Best Practices for Effective Pattern Finding</h2>
+
+        <h3>Pattern Definition and Testing</h3>
+        
+        <p>Before applying patterns to production data, test thoroughly against representative samples. Create test datasets containing: obvious valid cases that should match, edge cases that test boundary conditions, invalid cases that should not match, and malicious inputs that might cause performance issues or security vulnerabilities. Validate that your patterns handle Unicode text correctly if international content is possible. Verify that captured groups extract exactly the intended subcomponents.</p>
+
+        <p>Document pattern purposes and assumptions. A pattern that accurately extracts email addresses from one document format might fail on another due to different HTML encoding, different line ending conventions, or different surrounding context. Comments explaining pattern logic help future maintainers understand and modify patterns appropriately. When using <strong>text pattern finder for writers online</strong> or other specialized tools, save successful pattern configurations for reuse.</p>
+
+        <h3>Result Validation and Refinement</h3>
+        
+        <p>Automated pattern matching produces false positives and false negatives that require human review. Sampling and manual verification of results identifies systematic errors in pattern definitions. False positives suggest patterns are too broad and need additional constraints. False negatives indicate patterns are too restrictive and need expansion. Iterative refinement based on validation feedback improves pattern accuracy over time.</p>
+
+        <p>Consider result confidence scoring when available. Some patterns match with higher certainty than others—a fully qualified domain name is clearly a URL, while a four-digit number might be a year, a PIN, or part of various other formats. Confidence indicators help prioritize manual review efforts on ambiguous matches while accepting high-confidence matches automatically.</p>
+
+        <h3>Security and Privacy Considerations</h3>
+        
+        <p>Pattern finding on sensitive data requires careful security practices. Processing confidential documents in browser-based tools raises questions about data exposure, though reputable tools process entirely client-side without server transmission. When analyzing data containing personally identifiable information (PII), consider whether pattern extraction itself creates compliance issues—extracting all email addresses from a database might constitute unauthorized data processing depending on jurisdiction and consent.</p>
+
+        <p>Pattern finding can also reveal security vulnerabilities. Extracting hardcoded passwords from code repositories, finding credit card numbers in logs, or identifying API keys in documentation represents legitimate security analysis but requires appropriate access controls and responsible disclosure practices. Ensure your pattern finding activities comply with organizational security policies and applicable regulations.</p>
+
+        <h2>The Future of Pattern Recognition Technology</h2>
+
+        <p>Artificial intelligence is transforming text pattern finding from rule-based matching to intelligent understanding. Machine learning models can identify patterns without explicit regex definitions, learning from examples what constitutes a product code, a medical diagnosis, or a sentiment expression. Natural language processing enables semantic pattern matching—finding concepts rather than literal strings, recognizing that "purchased," "bought," and "acquired" represent similar actions in customer feedback analysis.</p>
+
+        <p>However, traditional pattern finding remains essential for structured format detection where rules are precise and unambiguous. Email addresses follow specific syntax regardless of semantic context. IP addresses have exact numeric definitions. Credit card numbers must satisfy mathematical checksums. Our <strong>text pattern finder online</strong> serves these fundamental needs while remaining ready to incorporate AI enhancements that genuinely improve user workflows without replacing the reliability of rule-based detection for appropriate use cases.</p>
+
+        <h2>Conclusion: Unlock Insights with Professional Pattern Finding</h2>
+
+        <p><strong>Text pattern finding</strong> represents a foundational capability for modern information work, enabling professionals to extract value from the vast unstructured text that surrounds us. Whether you're defending networks against threats, migrating data between systems, optimizing content for search engines, or debugging complex software, the ability to accurately identify and extract specific text patterns transforms impossible manual review into automated, scalable analysis.</p>
+
+        <p>Our <strong>free text pattern finder</strong> provides everything you need for professional pattern recognition. With seven built-in pattern types covering the most common formats, custom regex support for specialized needs, real-time detection as you type, context display for match understanding, deduplication for unique value extraction, and instant export capabilities, this tool streamlines pattern analysis workflows of any scale. The browser-based architecture ensures privacy and accessibility, while the intuitive interface requires no regex expertise for standard tasks. Whether you need to <strong>find text patterns online</strong> for security analysis, <strong>detect text sequences online</strong> for data extraction, or <strong>search text patterns online</strong> for content processing, our <strong>text pattern detection tool</strong> delivers professional results instantly. Stop manually scanning text for specific formats—start using our advanced <strong>text pattern finder</strong> today and discover the patterns hidden in your data.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool find patterns automatically as I type?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>text pattern finder online</strong> features <strong>automatic real-time detection</strong>. As you type or paste text, the tool instantly scans for your selected pattern type and displays all matches in the right panel. We use intelligent debouncing to ensure smooth performance. The "Auto-detection enabled" indicator confirms the feature is active. Pattern changes also apply instantly, making this the most responsive <strong>free text pattern finder</strong> available.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What built-in patterns are supported?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">We provide 7 built-in patterns: <strong>Emails</strong> (valid email formats), <strong>URLs</strong> (web addresses with various protocols), <strong>Phone Numbers</strong> (multiple international formats), <strong>IP Addresses</strong> (IPv4 and IPv6), <strong>Dates</strong> (common date formats), <strong>Credit Cards</strong> (major card number patterns), and <strong>Hex Colors</strong> (CSS color codes). Each pattern uses optimized regex to balance accuracy with flexibility. For specialized needs, use the <strong>Custom Regex</strong> option to define your own patterns.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I use custom regex patterns?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Select <strong>"Custom Regex"</strong> from the pattern buttons, then enter your JavaScript-compatible regular expression in the input field that appears. For example, use <code>\b\d{3}-\d{2}-\d{4}\b</code> to find Social Security numbers, or <code>\b[A-Z]{2}\d{4}\b</code> for product codes. The tool uses standard regex syntax with global matching. Test your patterns carefully—invalid regex will show an error message. Our <strong>text regex pattern finder online</strong> supports full JavaScript regex capabilities including flags.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What's the difference between "Show unique only" and showing all matches?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>"Show unique only"</strong> (enabled by default) filters duplicate matches, displaying each distinct pattern value once regardless of how many times it appears. This is ideal for creating contact lists or analyzing distinct entities. Disabling this option shows every occurrence with context, useful for understanding frequency or locating specific instances. The stats bar always shows both total matches and unique count regardless of this setting.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I analyze large log files with this tool?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! The tool handles files up to <strong>10-20MB</strong>, suitable for most log files, datasets, and document collections. Browser limitations vary—Chrome/Edge handle larger files better than mobile Safari. For multi-gigabyte server logs, consider splitting files into chunks or using command-line tools like grep. Our <strong>bulk text pattern finder online</strong> is optimized for typical daily analysis tasks. Drag and drop your log file or use the file picker to get started instantly.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does the tool highlight patterns in the input text?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Enable the <strong>"Highlight in input"</strong> checkbox (on by default) to see matched patterns visually marked in your input text with a distinctive background color. This helps you quickly locate patterns within large documents and verify that detection is working as expected. The highlighting updates in real-time as you modify text or change pattern types. For very large files, you may want to disable this feature to improve performance.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my data secure when using this tool?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely. All pattern analysis happens <strong>locally in your browser</strong>—your text never uploads to our servers or leaves your device. You can verify this using browser DevTools (Network tab shows no data transfer). The tool works offline after loading. This client-side architecture is essential for analyzing sensitive logs, confidential documents, or proprietary code. Our <strong>text pattern search utility online</strong> prioritizes your data privacy and security.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I export the found patterns?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Click <strong>"Copy"</strong> to copy all found patterns to your clipboard (one per line), or <strong>"Download"</strong> to save them as a text file. The export includes only the matched pattern values, not the surrounding context, making it easy to paste into spreadsheets, email lists, or other tools for further processing. If "Show unique only" is enabled, exports contain only distinct values; otherwise, all occurrences are included.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this tool completely free?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, our <strong>text pattern finder online</strong> is completely <strong>free</strong> with no registration, usage limits, watermarks, or hidden fees. Use it for personal or commercial projects without attribution. This is truly a <strong>free text pattern finder without login</strong>. The tool is supported by unobtrusive advertising. We believe essential data analysis tools should be accessible to everyone.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Why is there a small delay when typing?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">We use <strong>debouncing</strong> for optimal performance. Without it, every keystroke would trigger immediate pattern scanning, potentially causing lag with large texts or complex regex. The brief delay (milliseconds) after you stop typing ensures smooth browser performance. The "Auto-detection enabled" indicator confirms the system is ready. This approach provides real-time feedback without sacrificing responsiveness.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const outputContainer = document.getElementById('outputContainer');
+const emptyState = document.getElementById('emptyState');
+const matchesList = document.getElementById('matchesList');
+const inputStats = document.getElementById('inputStats');
+const outputStats = document.getElementById('outputStats');
+const matchCount = document.getElementById('matchCount');
+const processingTime = document.getElementById('processingTime');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+const customPatternContainer = document.getElementById('customPatternContainer');
+const customPattern = document.getElementById('customPattern');
+
+// Options
+const caseSensitive = document.getElementById('caseSensitive');
+const uniqueOnly = document.getElementById('uniqueOnly');
+const showContext = document.getElementById('showContext');
+const highlightInput = document.getElementById('highlightInput');
+
+// Buttons
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const resetBtn = document.getElementById('resetBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+// Pattern buttons
+const patternBtns = document.querySelectorAll('.method-btn');
+let currentPattern = 'emails';
+let foundMatches = [];
+
+// Pattern definitions
+const patterns = {
+  emails: /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/g,
+  urls: /https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)/g,
+  phones: /(?:\+\d{1,3}[-.\s]?)?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}/g,
+  ips: /\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b/g,
+  dates: /\b(?:\d{1,2}[\/\-\.]\d{1,2}[\/\-\.]\d{2,4}|\d{4}[\/\-\.]\d{1,2}[\/\-\.]\d{1,2})\b/g,
+  credit: /\b(?:\d{4}[-\s]?){3}\d{4}\b/g,
+  hex: /#(?:[0-9a-fA-F]{3}){1,2}\b/g,
+  custom: null
+};
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Update input stats
+function updateInputStats() {
+  const text = inputText.value;
+  const chars = text.length;
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+  const lines = text === '' ? 0 : text.split('\n').length;
+  inputStats.textContent = `Chars: ${chars} | Words: ${words} | Lines: ${lines}`;
+}
+
+// Debounce function
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Get current regex pattern
+function getCurrentPattern() {
+  if (currentPattern === 'custom') {
+    try {
+      const flags = caseSensitive.checked ? 'g' : 'gi';
+      return new RegExp(customPattern.value, flags);
+    } catch (e) {
+      return null;
+    }
+  }
+  const pattern = patterns[currentPattern];
+  if (!caseSensitive.checked && pattern) {
+    return new RegExp(pattern.source, 'gi');
+  }
+  return pattern;
+}
+
+// Find patterns
+function findPatterns() {
+  const startTime = performance.now();
+  const text = inputText.value;
+  
+  if (!text.trim()) {
+    emptyState.classList.remove('hidden');
+    matchesList.classList.add('hidden');
+    matchCount.classList.add('hidden');
+    outputStats.textContent = 'Patterns: 0 | Unique: 0';
+    processingTime.textContent = '';
+    foundMatches = [];
+    return;
+  }
+  
+  const regex = getCurrentPattern();
+  if (!regex) {
+    emptyState.classList.remove('hidden');
+    matchesList.classList.add('hidden');
+    return;
+  }
+  
+  const matches = [];
+  const seen = new Set();
+  let match;
+  
+  while ((match = regex.exec(text)) !== null) {
+    const value = match[0];
+    const key = uniqueOnly.checked ? value.toLowerCase() : value + match.index;
+    
+    if (!uniqueOnly.checked || !seen.has(key)) {
+      seen.add(key);
+      matches.push({
+        value: value,
+        index: match.index,
+        context: getContext(text, match.index, value.length)
+      });
+    }
+    
+    // Prevent infinite loop on zero-length matches
+    if (match.index === regex.lastIndex) {
+      regex.lastIndex++;
+    }
+  }
+  
+  const endTime = performance.now();
+  foundMatches = matches;
+  
+  // Update stats
+  const uniqueCount = new Set(matches.map(m => m.value.toLowerCase())).size;
+  outputStats.textContent = `Patterns: ${matches.length} | Unique: ${uniqueCount}`;
+  matchCount.textContent = `(${matches.length} found)`;
+  matchCount.classList.remove('hidden');
+  processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+  
+  // Display results
+  displayMatches(matches);
+  
+  // Highlight in input if enabled
+  if (highlightInput.checked) {
+    highlightMatches(text, matches);
+  }
+}
+
+// Get context around match
+function getContext(text, index, length) {
+  const contextLength = 30;
+  const start = Math.max(0, index - contextLength);
+  const end = Math.min(text.length, index + length + contextLength);
+  let context = text.substring(start, end);
+  
+  if (start > 0) context = '...' + context;
+  if (end < text.length) context = context + '...';
+  
+  return context;
+}
+
+// Display matches
+function displayMatches(matches) {
+  if (matches.length === 0) {
+    emptyState.classList.remove('hidden');
+    emptyState.innerHTML = '<p class="text-gray-500">No patterns found</p>';
+    matchesList.classList.add('hidden');
+    return;
+  }
+  
+  emptyState.classList.add('hidden');
+  matchesList.classList.remove('hidden');
+  matchesList.innerHTML = '';
+  
+  matches.forEach((match, index) => {
+    const item = document.createElement('div');
+    item.className = 'pattern-match-item p-2 rounded bg-white/5 text-xs';
+    
+    let content = `
+      <div class="flex items-center justify-between mb-1">
+        <span class="font-mono text-indigo-400 font-medium">${escapeHtml(match.value)}</span>
+        <span class="text-gray-500">#${index + 1}</span>
+      </div>
+    `;
+    
+    if (showContext.checked) {
+      const highlightedContext = escapeHtml(match.context).replace(
+        escapeHtml(match.value),
+        `<span class="match-highlight">${escapeHtml(match.value)}</span>`
+      );
+      content += `<div class="text-gray-400 mt-1">${highlightedContext}</div>`;
+    }
+    
+    item.innerHTML = content;
+    
+    // Click to copy
+    item.addEventListener('click', () => {
+      navigator.clipboard.writeText(match.value);
+      item.style.background = 'rgba(34, 197, 94, 0.2)';
+      setTimeout(() => {
+        item.style.background = '';
+      }, 200);
+    });
+    
+    matchesList.appendChild(item);
+  });
+}
+
+// Highlight matches in input
+function highlightMatches(text, matches) {
+  // Simple visual feedback - in production, would use contenteditable or overlay
+  // For now, we keep the textarea clean for editing
+}
+
+// Escape HTML
+function escapeHtml(text) {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
+}
+
+// Debounced version
+const debouncedFind = debounce(findPatterns, 100);
+
+// Pattern button handlers
+patternBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    patternBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentPattern = btn.dataset.pattern;
+    
+    if (currentPattern === 'custom') {
+      customPatternContainer.classList.remove('hidden');
+    } else {
+      customPatternContainer.classList.add('hidden');
+    }
+    
+    findPatterns();
+  });
+});
+
+// Custom pattern input
+customPattern.addEventListener('input', debouncedFind);
+
+// Options change
+[caseSensitive, uniqueOnly, showContext, highlightInput].forEach(el => {
+  el.addEventListener('change', findPatterns);
+});
+
+// Drag and drop
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  if (!file.type.match('text.*') && !file.name.match(/\.(txt|log|csv|json|xml|html|md|js|py|java|cpp|c|php|rb|go|rs|swift|kt|sql)$/i)) {
+    alert('Please upload a text file');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    updateInputStats();
+    findPatterns();
+  };
+  reader.readAsText(file);
+}
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    updateInputStats();
+    findPatterns();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  updateInputStats();
+  findPatterns();
+  inputText.focus();
+}
+
+// Copy matches
+async function copyMatches() {
+  if (foundMatches.length === 0) return;
+  
+  const text = foundMatches.map(m => m.value).join('\n');
+  
+  try {
+    await navigator.clipboard.writeText(text);
+    const originalText = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalText;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+}
+
+// Download matches
+function downloadMatches() {
+  if (foundMatches.length === 0) return;
+  
+  const text = foundMatches.map(m => m.value).join('\n');
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'pattern-matches.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Reset all
+function resetAll() {
+  inputText.value = '';
+  customPattern.value = '';
+  caseSensitive.checked = false;
+  uniqueOnly.checked = true;
+  showContext.checked = true;
+  highlightInput.checked = true;
+  
+  patternBtns.forEach(b => b.classList.remove('active'));
+  document.querySelector('[data-pattern="emails"]').classList.add('active');
+  currentPattern = 'emails';
+  customPatternContainer.classList.add('hidden');
+  
+  updateInputStats();
+  findPatterns();
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Event listeners
+inputText.addEventListener('input', () => {
+  updateInputStats();
+  debouncedFind();
+});
+
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+copyBtn.addEventListener('click', copyMatches);
+downloadBtn.addEventListener('click', downloadMatches);
+resetBtn.addEventListener('click', resetAll);
+
+// Initialize
+updateInputStats();
+</script>
+</body>
+</html>

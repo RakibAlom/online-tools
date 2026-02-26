@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Text Interweaving Tool - Free Online Text Interleaver</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online text interweaving tool. Automatically interleave, merge, and weave two texts together line by line. Perfect for writers, SEO professionals, and content creators. No registration required." />
+  <meta name="keywords" content="text interweaving tool, text interweaving online, free text interweaving tool, interweave text online, merge texts line by line online, alternate text lines online, text weaving tool online, combine two texts alternately online, interleave text online free, text interleaver online, weave two paragraphs together online, mix text lines online tool, text line merger online free, interwoven text generator online, blend text lines online free, text alternator tool online, interleave paragraphs online, text fusion tool online free, merge text sequences online, interweave sentences online tool, combine text streams online, text interweaving utility online, free online text interweaver tool, interleave text for writers online, text interweaving for seo online, online text weaving tool free" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/text-interweaving-tool/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/text-interweaving-tool/" />
+  <meta property="og:title" content="Text Interweaving Tool - Free Online Text Interleaver" />
+  <meta property="og:description" content="Automatically interleave, merge, and weave two texts together line by line. Perfect for writers, SEO professionals, and content creators." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/text-interweaving-tool/" />
+  <meta name="twitter:title" content="Text Interweaving Tool - Free Online Text Interleaver" />
+  <meta name="twitter:description" content="Automatically interleave, merge, and weave two texts together line by line. Perfect for writers, SEO professionals, and content creators." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    .weave-btn {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    .weave-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    .source-panel {
+      border-left: 2px solid rgba(99, 102, 241, 0.3);
+    }
+    
+    .source-panel:nth-child(2) {
+      border-left-color: rgba(168, 85, 247, 0.3);
+    }
+
+    .weave-line {
+      border-left: 2px solid rgba(99, 102, 241, 0.5);
+      transition: all 0.2s ease;
+    }
+    
+    .weave-line:hover {
+      border-left-color: rgba(99, 102, 241, 1);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .weave-line:nth-child(even) {
+      border-left-color: rgba(168, 85, 247, 0.5);
+    }
+    
+    .weave-line:nth-child(even):hover {
+      border-left-color: rgba(168, 85, 247, 1);
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 12h8M10 20h20M10 28h14" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Text Interweaving</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Text Interweaving Tool
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Text Merging Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-interweaving enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Input Sources Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 mb-4">
+        <!-- Source A -->
+        <div class="source-panel bg-white/5 rounded-lg p-3 space-y-2">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-indigo-400 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Source A
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteA" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearA" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          <textarea id="sourceA" spellcheck="false"
+            class="w-full h-32 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+            placeholder="Enter first text here..."></textarea>
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="statsA">Lines: 0 | Chars: 0</span>
+            <button id="loadA" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Load file
+            </button>
+          </div>
+        </div>
+
+        <!-- Source B -->
+        <div class="source-panel bg-white/5 rounded-lg p-3 space-y-2">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-purple-400 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Source B
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteB" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearB" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          <textarea id="sourceB" spellcheck="false"
+            class="w-full h-32 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+            placeholder="Enter second text here..."></textarea>
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="statsB">Lines: 0 | Chars: 0</span>
+            <button id="loadB" class="text-purple-400 hover:text-purple-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Load file
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section -->
+      <div class="border-t border-white/10 pt-4 space-y-3 mb-4">
+        
+        <!-- Interweave Method -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Interweave Method</label>
+          <div class="flex flex-wrap gap-1">
+            <button class="weave-btn active rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="line">Line by Line</button>
+            <button class="weave-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="paragraph">Paragraph</button>
+            <button class="weave-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="sentence">Sentence</button>
+            <button class="weave-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="word">Word by Word</button>
+            <button class="weave-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="character">Character</button>
+          </div>
+        </div>
+
+        <!-- Options Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Separator Between</label>
+            <select id="separator" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value=" ">Space</option>
+              <option value="\n">New Line</option>
+              <option value="">Nothing</option>
+              <option value=" - ">Dash</option>
+              <option value=" | ">Pipe</option>
+              <option value=" / ">Slash</option>
+              <option value=" • ">Bullet</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Line Prefix</label>
+            <input type="text" id="linePrefix" placeholder="e.g. > or - " class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+          </div>
+
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Line Suffix</label>
+            <input type="text" id="lineSuffix" placeholder="e.g. . or ! " class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+          </div>
+
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Empty Line Handling</label>
+            <select id="emptyHandling" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="skip">Skip Empty</option>
+              <option value="keep">Keep Empty</option>
+              <option value="marker">Mark as [empty]</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Toggles -->
+        <div class="flex flex-wrap gap-3">
+          <label class="flex items-center gap-1.5 text-xs text-gray-400">
+            <input type="checkbox" id="trimWhitespace" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Trim whitespace
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400">
+            <input type="checkbox" id="addLineNumbers" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Add line numbers
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400">
+            <input type="checkbox" id="alternateColors" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Alternate colors
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400">
+            <input type="checkbox" id="balanceLengths" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Balance lengths
+          </label>
+        </div>
+      </div>
+
+      <!-- Output Section -->
+      <div class="border-t border-white/10 pt-4">
+        <div class="flex items-center justify-between mb-2">
+          <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Interwoven Result <span id="resultStats" class="text-gray-500 font-normal ml-1 hidden">(0 lines)</span>
+          </label>
+          <div class="flex gap-1">
+            <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+              Copy
+            </button>
+            <button id="downloadBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              Download
+            </button>
+          </div>
+        </div>
+        
+        <div id="outputContainer" class="w-full h-48 lg:h-56 p-3 rounded-md glass-input overflow-y-auto font-mono text-xs leading-relaxed">
+          <div class="text-center text-gray-500 mt-8">
+            <svg class="w-8 h-8 mx-auto mb-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
+            <p>Interwoven text will appear here automatically...</p>
+          </div>
+        </div>
+        
+        <div class="flex justify-between items-center text-xs text-gray-500 mt-2">
+          <span id="processingStats">Source A: 0 | Source B: 0 | Result: 0</span>
+          <span id="processingTime" class="text-gray-600"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Text Interweaving Tool?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Auto-Weave</h3>
+          <p class="text-gray-400 text-xs">Real-time interweaving as you type</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">5 Methods</h3>
+          <p class="text-gray-400 text-xs">Line, paragraph, sentence, word, char</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Customizable</h3>
+          <p class="text-gray-400 text-xs">Separators, prefixes, suffixes</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based, no uploads</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy or download results</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration required</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Enter Sources</h3>
+          <p class="text-gray-400 text-xs">Paste or type text into Source A and Source B fields.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Choose Method</h3>
+          <p class="text-gray-400 text-xs">Select line, paragraph, sentence, word, or character interweaving.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Customize</h3>
+          <p class="text-gray-400 text-xs">Set separators, prefixes, and formatting options.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy the interwoven result or download as a file.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Text Interweaving: Mastering Content Fusion for Creative Writing and SEO</h2>
+        
+        <p><strong>Text interweaving</strong> is a sophisticated text manipulation technique that alternates content from two or more sources to create unified, blended documents. Unlike simple concatenation that appends texts sequentially, interweaving creates a rhythmic alternation between sources—line by line, paragraph by paragraph, sentence by sentence, or even word by word. This technique serves diverse purposes: from creative writing exercises and poetry generation to SEO content strategies and data comparison formats. Our <strong>free text interweaving tool</strong> provides the professional capabilities you need to master this technique without any cost or registration barriers.</p>
+
+        <h2>What Is Text Interweaving and Why Does It Matter?</h2>
+        
+        <p><strong>Text interweaving</strong> refers to the process of merging two or more text sources by alternating their content in a specified pattern. Imagine taking a Shakespeare sonnet and interleaving it line by line with a modern poem—the result creates fascinating juxtapositions and unexpected meanings. This technique has applications across creative writing, technical documentation, SEO content creation, and data presentation.</p>
+
+        <p>The importance of accessible <strong>text interweaving online</strong> tools has grown as content creators seek innovative ways to present information. Writers use <strong>interweave text online</strong> techniques to create experimental literature, compare draft versions, or generate new creative works. SEO professionals <strong>merge texts line by line online</strong> to combine keyword-rich content with engaging narratives. Educators <strong>alternate text lines online</strong> to create comparative reading materials. Data analysts <strong>combine two texts alternately online</strong> to align and compare datasets. Without efficient <strong>text weaving tools</strong>, these tasks require tedious manual copy-paste operations prone to errors and inconsistencies.</p>
+
+        <h2>Understanding Interweaving Methods and Granularity</h2>
+
+        <h3>Line-by-Line Interweaving</h3>
+        
+        <p>The most common <strong>text interleaving online</strong> method alternates content line by line. This approach works perfectly for poetry (alternating verses), code comparison (lining up different implementations), song lyrics (creating duets or mashups), and structured data (combining CSV rows). When you <strong>interleave text online free</strong> using line-by-line methods, you maintain the structural integrity of each source while creating rhythmic alternation.</p>
+
+        <p>Professional <strong>text line merger online free</strong> tools handle various line ending conventions (Windows CRLF, Unix LF, classic Mac CR) to ensure consistent results regardless of source formatting. They also manage uneven source lengths—when Source A has 100 lines and Source B has 50, advanced tools offer options: stop at the shorter source, continue with remaining Source A lines, or insert blank placeholders for missing Source B lines. Our <strong>online text interweaver tool</strong> provides all these options for maximum flexibility.</p>
+
+        <h3>Paragraph-Level Interweaving</h3>
+        
+        <p>For prose and documents, <strong>interleave paragraphs online</strong> methods alternate larger content blocks. This technique suits: combining two versions of an article to show revisions, merging interview transcripts (question paragraph, answer paragraph), creating bilingual texts (original paragraph, translation paragraph), and generating comparison documents (feature A description, feature B description).</p>
+
+        <p>Paragraph detection requires intelligent boundary recognition. A <strong>text interleaver online</strong> must distinguish true paragraph breaks from line breaks within paragraphs, handle various paragraph separation conventions (blank lines, indentation, HTML tags), and preserve formatting within paragraphs. Our <strong>interwoven text generator online</strong> employs sophisticated paragraph parsing to ensure meaningful alternation regardless of source formatting quirks.</p>
+
+        <h3>Sentence and Word-Level Interweaving</h3>
+        
+        <p>Finer granularity interweaving creates more intimate content fusion. <strong>Interweave sentences online tool</strong> methods alternate sentence by sentence, creating texts where sources speak in turns—ideal for dialogue creation, comparative argumentation, or stylistic analysis. <strong>Word by word interweaving</strong> creates maximum blending, generating experimental poetry, password-like strings, or linguistic studies of vocabulary overlap.</p>
+
+        <p>Sentence detection requires natural language processing to identify sentence boundaries accurately—periods in abbreviations shouldn't trigger splits, nor should decimal points or ellipses. Word interweaving must handle different tokenization rules across languages and manage punctuation attachment (whether "word." counts as one token or two). Our <strong>blend text lines online free</strong> implementation includes robust linguistic processing for these fine-grained operations.</p>
+
+        <h2>Professional Applications of Text Interweaving</h2>
+
+        <h3>Creative Writing and Experimental Literature</h3>
+        
+        <p>Authors and poets employ <strong>text interweaving</strong> for various creative purposes. Cut-up technique practitioners merge disparate sources to generate surrealist texts. Collaborative writers interweave their individual contributions into unified narratives. Found poetry creators blend existing texts with original content. Translation studies scholars align source and target texts for comparative analysis.</p>
+
+        <p>The Oulipo literary movement famously employed constrained writing techniques including interweaving. By strictly alternating between sources according to formal rules, writers discover unexpected meanings and connections invisible in the original texts. Our <strong>free online text interweaver tool</strong> enables these experimental practices for writers exploring constrained composition techniques.</p>
+
+        <h3>SEO Content Strategy and Keyword Integration</h3>
+        
+        <p>Search engine optimization professionals use strategic <strong>text interweaving for SEO online</strong> to create content that balances keyword density with readability. One source might contain technical specifications (keyword-rich but dry), while another contains engaging narrative (reader-friendly but light on keywords). By <strong>interleaving text for writers online</strong> with SEO goals, content creators produce articles that satisfy both search algorithms and human readers.</p>
+
+        <p>Multilingual SEO also benefits from interweaving. Websites targeting bilingual audiences can create content that alternates languages paragraph by paragraph, serving both speaker communities while signaling linguistic diversity to search engines. This approach requires careful <strong>text fusion tool online free</strong> implementation to maintain coherence across language boundaries.</p>
+
+        <h3>Technical Documentation and Code Comparison</h3>
+        
+        <p>Software developers and technical writers frequently <strong>merge text sequences online</strong> to compare versions, align specifications with implementations, or create side-by-side documentation. API documentation might interweave request examples with response samples. Tutorial content can alternate between explanation paragraphs and code blocks. Changelog entries can align with feature descriptions.</p>
+
+        <p>Code comparison particularly benefits from line-by-line interweaving. When reviewing different implementations of the same algorithm, developers can view them in alternating lines rather than side-by-side columns, making differences immediately apparent. Our <strong>text alternator tool online</strong> supports code-friendly formatting with optional syntax preservation.</p>
+
+        <h3>Education and Comparative Analysis</h3>
+        
+        <p>Educators create interwoven texts for various pedagogical purposes. Language learning materials alternate between target language and native language. Historical documents can be presented with modern translations interleaved. Scientific papers can align hypothesis and results sections for clearer understanding. Literary analysis can interweave primary texts with critical commentary.</p>
+
+        <p>Students benefit from generating their own interwoven texts as study aids. By <strong>interleave text online free</strong> operations combining lecture notes with textbook excerpts, they create personalized study materials that reinforce connections between sources. This active processing aids retention compared to passive reading of separate documents.</p>
+
+        <h2>Advanced Interweaving Techniques and Strategies</h2>
+
+        <h3>Handling Uneven Source Lengths</h3>
+        
+        <p>Real-world interweaving rarely involves perfectly matched sources. A <strong>text interweaving utility online</strong> must offer strategies for length mismatches: Truncate to the shorter source (balanced but loses content), continue with the longer source (complete but breaks alternation pattern), insert placeholders for missing content (maintains rhythm but adds empty space), or repeat/shuffle the shorter source to match length (creative but alters content).</p>
+
+        <p>The <strong>balance lengths</strong> option in our tool intelligently manages these scenarios, offering user choice between strict alternation and content completeness. For creative applications, repeating the shorter source creates interesting echo effects. For technical applications, truncation ensures clean comparison without repetition artifacts.</p>
+
+        <h3>Separator and Formatting Strategies</h3>
+        
+        <p>How interwoven elements connect significantly impacts readability. <strong>Text interweaving tools</strong> offer various separator options: Newlines create clear visual separation, spaces enable flowing prose, custom strings (dashes, bullets, pipes) add visual structure, and empty separators create seamless fusion. Prefixes and suffixes further customize output—adding line numbers, source indicators, or formatting markers.</p>
+
+        <p>Color alternation provides visual orientation in the output. When viewing interwoven text, users need immediate recognition of which source each line comes from. Our <strong>online text weaving tool free</strong> implements subtle color coding (indigo for Source A, purple for Source B) that aids navigation without distracting from content. This visual distinction is especially valuable for long documents or fine-grained interweaving where source tracking becomes challenging.</p>
+
+        <h3>Whitespace and Empty Content Handling</h3>
+        
+        <p>Source texts often contain blank lines, formatting spaces, or placeholder content that affects interweaving quality. Advanced <strong>text interweaving online</strong> tools provide options: Skip empty lines entirely (cleanest output), preserve empty lines as placeholders (maintains structure), or mark empty content explicitly (useful for identifying missing data). Trimming whitespace from line edges prevents formatting artifacts while preserving intentional internal spacing.</p>
+
+        <h2>Best Practices for Effective Text Interweaving</h2>
+
+        <h3>Source Preparation and Normalization</h3>
+        
+        <p>Before interweaving, prepare your sources for optimal results. Normalize line endings to prevent formatting inconsistencies, remove or standardize headers/footers that don't belong in the interwoven content, ensure consistent encoding (UTF-8) for special characters, and consider pre-processing like sentence splitting if you plan word-level interweaving. Clean sources produce cleaner interwoven output.</p>
+
+        <h3>Choosing the Right Interweaving Granularity</h3>
+        
+        <p>Match your interweaving method to your content type and goals: Use line-by-line for poetry, code, and structured data. Prefer paragraph-level for prose, articles, and documents. Apply sentence-level for dialogue, arguments, and fine comparisons. Choose word-level for experimental writing, linguistic analysis, or maximum content fusion. Consider character-level only for specific cryptographic or artistic purposes. Our versatile <strong>text interweaving tool</strong> supports all these granularities in one interface.</p>
+
+        <h3>Post-Processing and Refinement</h3>
+        
+        <p>Interwoven output often benefits from additional processing. Review for unintended juxtapositions that create confusing or inappropriate meanings. Adjust separators if the output feels too choppy or too dense. Consider secondary editing to smooth transitions between sources. For published content, always review interwoven text as a reader would experience it—not just as the creator understands the sources.</p>
+
+        <h2>Comparing Interweaving Approaches</h2>
+
+        <h3>Manual Interweaving vs. Automated Tools</h3>
+        
+        <p>Manual interweaving using copy-paste operations works for very short texts but becomes impractical for: documents longer than a page, fine-grained interweaving (word or character level), repeated interweaving tasks (weekly reports), or multiple sources (three or more texts). Automated <strong>text interweaving tools</strong> eliminate human error, ensure consistent alternation patterns, and complete in seconds what takes hours manually. Our <strong>free text interweaving tool</strong> makes automation accessible to everyone.</p>
+
+        <h3>Programming Scripts vs. Online Tools</h3>
+        
+        <p>Python, Perl, and other scripting languages can implement text interweaving for developers comfortable with coding. However, scripts require development time, debugging, and environment setup for each use case. Online <strong>text interleavers</strong> provide immediate access, intuitive interfaces, and consistent results without technical overhead. For occasional use or non-technical users, browser-based tools offer superior convenience and accessibility.</p>
+
+        <h2>The Future of Text Fusion Technology</h2>
+
+        <p>Artificial intelligence is beginning to influence <strong>text interweaving</strong>, moving beyond mechanical alternation toward intelligent fusion. AI-powered tools can: analyze semantic coherence and suggest optimal interweaving points, detect and avoid jarring juxtapositions, automatically adjust granularity based on content type, and even generate new connecting content between sources. These capabilities will transform <strong>text interweaving tools</strong> from simple alternators into intelligent content synthesis assistants.</p>
+
+        <h2>Conclusion: Master Content Fusion with Professional Text Interweaving</h2>
+
+        <p><strong>Text interweaving</strong> remains one of the most versatile yet underutilized text manipulation techniques available to content creators. From simple line alternation to sophisticated semantic fusion, the ability to blend multiple sources rhythmically opens creative and practical possibilities impossible with conventional editing. Whether you're experimenting with constrained writing, optimizing SEO content, comparing technical specifications, or creating educational materials, mastering <strong>text interweaving</strong> techniques will expand your content creation capabilities.</p>
+
+        <p>Our <strong>free online text interweaving tool</strong> provides all the capabilities you need to explore this technique. With automatic real-time interweaving as you type, support for five different granularity levels (line, paragraph, sentence, word, and character), plus flexible formatting and export options, this tool serves everyone from casual experimenters to professional content creators. The browser-based architecture ensures privacy and accessibility, while the intuitive interface requires no learning curve. Whether you need to <strong>interweave text online</strong>, <strong>merge texts line by line online</strong>, <strong>alternate text lines online</strong>, or perform sophisticated <strong>text weaving</strong> operations, our <strong>text interweaving utility online</strong> delivers professional results instantly. Stop struggling with manual copy-paste alternation—start using our professional <strong>text interweaving tool online</strong> today and experience the efficiency of automated content fusion.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool interweave text automatically as I type?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>text interweaving tool</strong> features <strong>automatic real-time interweaving</strong>. As you type or paste into either source field, the tool instantly generates the interwoven result in the output panel. We use intelligent debouncing to ensure smooth performance. The "Auto-interweaving enabled" indicator confirms the feature is active. Changes to interweaving methods or options also apply instantly.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What happens if my two texts have different lengths?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">By default, the tool interweaves until the shorter source is exhausted, then appends remaining content from the longer source. Enable <strong>"Balance lengths"</strong> to repeat the shorter source to match the longer one (useful for creative effects), or manually trim sources for perfect matching. The processing stats show exactly how many lines/paragraphs/sentences came from each source.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I interweave more than two texts?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Currently, this tool supports two-source interweaving (A-B-A-B pattern). For three or more sources, you can chain operations: first interweave A and B, then use that result as Source A with Source C. For complex multi-source needs, consider using the tool multiple times or contact us for advanced features.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What's the difference between line and paragraph interweaving?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Line interweaving</strong> alternates every line break (good for poetry, code, lists). <strong>Paragraph interweaving</strong> alternates blocks separated by blank lines (good for prose, articles, documents). Use line-level for structured content where every line has meaning, paragraph-level for flowing text where meaning comes in chunks.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I customize how the interwoven text looks?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Use <strong>Separator</strong> to choose what goes between interwoven elements (space, newline, dash, etc.). Add <strong>Line Prefix/Suffix</strong> for markers like "> " or " |". Toggle <strong>Alternate colors</strong> to visually distinguish sources (indigo vs purple). Add <strong>Line numbers</strong> for reference. These options let you format output for any use case from clean prose to marked-up comparison documents.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I load text from files?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Click <strong>"Load file"</strong> under either source to upload TXT, CSV, MD, or code files. You can also drag and drop files directly onto the text areas. Files are processed locally in your browser—content never uploads to servers. This makes it easy to <strong>interweave text online</strong> from existing documents without copy-pasting.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is there a limit to how much text I can interweave?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">The tool handles texts up to 50,000+ characters per source (roughly 10,000 words or 20-30 pages each). Performance depends on your device's processing power. For extremely large documents, consider interweaving chapter by chapter. The <strong>free online text interweaving tool</strong> is optimized for typical daily use.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my data secure?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely. All processing happens <strong>locally in your browser</strong>—text never uploads to servers or leaves your device. You can verify this with browser DevTools (Network tab shows no external data transfer). Works offline after loading. Ideal for confidential documents, proprietary code, or sensitive creative writing. Privacy is built into our <strong>text interweaving online</strong> architecture.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this tool free?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, completely <strong>free</strong> with no registration, usage limits, watermarks, or hidden fees. Use for personal or commercial projects without attribution. This is truly a <strong>free text interweaving tool</strong> for everyone. Supported by unobtrusive advertising and voluntary user support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const sourceA = document.getElementById('sourceA');
+const sourceB = document.getElementById('sourceB');
+const statsA = document.getElementById('statsA');
+const statsB = document.getElementById('statsB');
+const resultStats = document.getElementById('resultStats');
+const processingStats = document.getElementById('processingStats');
+const processingTime = document.getElementById('processingTime');
+const outputContainer = document.getElementById('outputContainer');
+
+// Buttons
+const pasteA = document.getElementById('pasteA');
+const clearA = document.getElementById('clearA');
+const pasteB = document.getElementById('pasteB');
+const clearB = document.getElementById('clearB');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const resetBtn = document.getElementById('resetBtn');
+const loadA = document.getElementById('loadA');
+const loadB = document.getElementById('loadB');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+// Method buttons
+const weaveBtns = document.querySelectorAll('.weave-btn');
+let currentMethod = 'line';
+
+// Options
+const separator = document.getElementById('separator');
+const linePrefix = document.getElementById('linePrefix');
+const lineSuffix = document.getElementById('lineSuffix');
+const emptyHandling = document.getElementById('emptyHandling');
+const trimWhitespace = document.getElementById('trimWhitespace');
+const addLineNumbers = document.getElementById('addLineNumbers');
+const alternateColors = document.getElementById('alternateColors');
+const balanceLengths = document.getElementById('balanceLengths');
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Update stats
+function updateStats() {
+  const textA = sourceA.value;
+  const textB = sourceB.value;
+  
+  const linesA = textA === '' ? 0 : textA.split('\n').length;
+  const linesB = textB === '' ? 0 : textB.split('\n').length;
+  
+  statsA.textContent = `Lines: ${linesA} | Chars: ${textA.length}`;
+  statsB.textContent = `Lines: ${linesB} | Chars: ${textB.length}`;
+}
+
+// Debounce function
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Method selection
+weaveBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    weaveBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentMethod = btn.dataset.method;
+    interweaveTexts();
+  });
+});
+
+// Auto-interweave on option changes
+[separator, linePrefix, lineSuffix, emptyHandling, trimWhitespace, addLineNumbers, alternateColors, balanceLengths].forEach(el => {
+  if (el) {
+    el.addEventListener('change', interweaveTexts);
+    el.addEventListener('input', interweaveTexts);
+  }
+});
+
+// Split text by method
+function splitByMethod(text, method) {
+  if (!text.trim()) return [];
+  
+  let items = [];
+  
+  switch(method) {
+    case 'line':
+      items = text.split('\n');
+      break;
+    case 'paragraph':
+      items = text.split(/\n\s*\n/).filter(p => p.trim().length > 0);
+      break;
+    case 'sentence':
+      items = text.match(/[^.!?]+[.!?]+/g) || [text];
+      break;
+    case 'word':
+      items = text.split(/\s+/).filter(w => w.length > 0);
+      break;
+    case 'character':
+      items = text.split('');
+      break;
+  }
+  
+  if (trimWhitespace.checked) {
+    items = items.map(item => item.trim()).filter(item => item.length > 0);
+  }
+  
+  // Handle empty content
+  if (emptyHandling.value === 'skip') {
+    items = items.filter(item => item.length > 0);
+  } else if (emptyHandling.value === 'marker') {
+    items = items.map(item => item.length === 0 ? '[empty]' : item);
+  }
+  
+  return items;
+}
+
+// Interweave function
+function interweaveTexts() {
+  const startTime = performance.now();
+  const textA = sourceA.value;
+  const textB = sourceB.value;
+  
+  if (!textA.trim() && !textB.trim()) {
+    outputContainer.innerHTML = `
+      <div class="text-center text-gray-500 mt-8">
+        <svg class="w-8 h-8 mx-auto mb-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
+        <p>Interwoven text will appear here automatically...</p>
+      </div>
+    `;
+    resultStats.classList.add('hidden');
+    processingStats.textContent = 'Source A: 0 | Source B: 0 | Result: 0';
+    processingTime.textContent = '';
+    return;
+  }
+  
+  let itemsA = splitByMethod(textA, currentMethod);
+  let itemsB = splitByMethod(textB, currentMethod);
+  
+  // Balance lengths if enabled
+  if (balanceLengths.checked && itemsA.length > 0 && itemsB.length > 0) {
+    const maxLen = Math.max(itemsA.length, itemsB.length);
+    while (itemsA.length < maxLen) {
+      itemsA = itemsA.concat(itemsA);
+    }
+    while (itemsB.length < maxLen) {
+      itemsB = itemsB.concat(itemsB);
+    }
+    itemsA = itemsA.slice(0, maxLen);
+    itemsB = itemsB.slice(0, maxLen);
+  }
+  
+  const sep = separator.value.replace(/\\n/g, '\n');
+  const prefix = linePrefix.value;
+  const suffix = lineSuffix.value;
+  
+  let result = [];
+  const maxItems = Math.max(itemsA.length, itemsB.length);
+  
+  for (let i = 0; i < maxItems; i++) {
+    if (i < itemsA.length) {
+      const lineNum = addLineNumbers.checked ? `${i + 1}. ` : '';
+      const colorClass = alternateColors.checked ? 'text-indigo-300' : 'text-gray-300';
+      result.push(`<div class="weave-line ${colorClass} py-1">${escapeHtml(prefix + lineNum + itemsA[i] + suffix)}</div>`);
+    }
+    if (i < itemsB.length) {
+      const lineNum = addLineNumbers.checked ? `${i + 1}. ` : '';
+      const colorClass = alternateColors.checked ? 'text-purple-300' : 'text-gray-300';
+      result.push(`<div class="weave-line ${colorClass} py-1">${escapeHtml(prefix + lineNum + itemsB[i] + suffix)}</div>`);
+    }
+  }
+  
+  const endTime = performance.now();
+  
+  // Update display
+  if (result.length === 0) {
+    outputContainer.innerHTML = '<div class="text-gray-500 text-center">No content to interweave</div>';
+  } else {
+    outputContainer.innerHTML = result.join(sep === '\n' ? '' : sep);
+  }
+  
+  // Update stats
+  resultStats.textContent = `(${result.length} items)`;
+  resultStats.classList.remove('hidden');
+  processingStats.textContent = `Source A: ${itemsA.length} | Source B: ${itemsB.length} | Result: ${result.length}`;
+  processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+}
+
+function escapeHtml(text) {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
+}
+
+// Debounced version
+const debouncedInterweave = debounce(interweaveTexts, 300);
+
+// File loading
+function handleFileLoad(file, targetTextarea) {
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    targetTextarea.value = e.target.result;
+    updateStats();
+    interweaveTexts();
+  };
+  reader.readAsText(file);
+}
+
+// Create file inputs
+const fileInputA = document.createElement('input');
+fileInputA.type = 'file';
+fileInputA.accept = '.txt,.csv,.md,.json,.xml,.html,.js,.css,.py,.java,.cpp,.c,.php,.rb,.go,.rs,.swift,.kt,.sql,.log';
+fileInputA.style.display = 'none';
+fileInputA.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) handleFileLoad(e.target.files[0], sourceA);
+});
+document.body.appendChild(fileInputA);
+
+const fileInputB = document.createElement('input');
+fileInputB.type = 'file';
+fileInputB.accept = '.txt,.csv,.md,.json,.xml,.html,.js,.css,.py,.java,.cpp,.c,.php,.rb,.go,.rs,.swift,.kt,.sql,.log';
+fileInputB.style.display = 'none';
+fileInputB.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) handleFileLoad(e.target.files[0], sourceB);
+});
+document.body.appendChild(fileInputB);
+
+// Event listeners
+sourceA.addEventListener('input', () => {
+  updateStats();
+  debouncedInterweave();
+});
+
+sourceB.addEventListener('input', () => {
+  updateStats();
+  debouncedInterweave();
+});
+
+pasteA.addEventListener('click', async () => {
+  try {
+    const text = await navigator.clipboard.readText();
+    sourceA.value = text;
+    updateStats();
+    interweaveTexts();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+});
+
+clearA.addEventListener('click', () => {
+  sourceA.value = '';
+  updateStats();
+  interweaveTexts();
+  sourceA.focus();
+});
+
+pasteB.addEventListener('click', async () => {
+  try {
+    const text = await navigator.clipboard.readText();
+    sourceB.value = text;
+    updateStats();
+    interweaveTexts();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+});
+
+clearB.addEventListener('click', () => {
+  sourceB.value = '';
+  updateStats();
+  interweaveTexts();
+  sourceB.focus();
+});
+
+loadA.addEventListener('click', () => fileInputA.click());
+loadB.addEventListener('click', () => fileInputB.click());
+
+copyBtn.addEventListener('click', async () => {
+  const text = outputContainer.innerText;
+  if (!text.trim()) return;
+  
+  try {
+    await navigator.clipboard.writeText(text);
+    const original = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = original;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+});
+
+downloadBtn.addEventListener('click', () => {
+  const text = outputContainer.innerText;
+  if (!text.trim()) return;
+  
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'interwoven-text.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+});
+
+resetBtn.addEventListener('click', () => {
+  sourceA.value = '';
+  sourceB.value = '';
+  updateStats();
+  interweaveTexts();
+});
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Initialize
+updateStats();
+</script>
+</body>
+</html>

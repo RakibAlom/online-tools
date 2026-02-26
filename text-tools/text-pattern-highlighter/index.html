@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Text Pattern Highlighter - Free Online Pattern Marker</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online text pattern highlighter tool. Instantly highlight, colorize, and visualize text patterns, sequences, and repetitions. Perfect for coding, writing, and SEO analysis." />
+  <meta name="keywords" content="text pattern highlighter, text pattern highlighter online, free text pattern highlighter, highlight text patterns online, text pattern marker online, online text pattern highlighting tool, highlight text sequences online, text pattern colorizer online free, text pattern visualizer online, text pattern emphasis tool online, mark text patterns online free, text pattern identifier and highlighter online, text pattern detection highlighter online, highlight regex patterns online, text sequence highlighter online free, text pattern spotlight tool online, bulk text pattern highlighter online, text pattern highlighting utility online, text pattern highlight editor online, highlight recurring text patterns online free, text pattern finder and highlighter online, text pattern accent tool online, text pattern highlighting for coding online, free online text pattern highlighter tool, online text pattern color coding free, highlight repeated text patterns online, text pattern highlighter for writers online, text pattern highlighter for seo online, instant text pattern highlighter online free" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/text-pattern-highlighter/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/text-pattern-highlighter/" />
+  <meta property="og:title" content="Text Pattern Highlighter - Free Online Pattern Marker" />
+  <meta property="og:description" content="Instantly highlight, colorize, and visualize text patterns, sequences, and repetitions. Perfect for coding, writing, and SEO analysis." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/text-pattern-highlighter/" />
+  <meta name="twitter:title" content="Text Pattern Highlighter - Free Online Pattern Marker" />
+  <meta name="twitter:description" content="Instantly highlight, colorize, and visualize text patterns, sequences, and repetitions. Perfect for coding, writing, and SEO analysis." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .highlight-output {
+      font-family: 'Inter', monospace;
+      line-height: 1.8;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    .pattern-highlight {
+      border-radius: 3px;
+      padding: 1px 3px;
+      font-weight: 500;
+    }
+
+    .color-0 { background: rgba(239, 68, 68, 0.3); color: #fca5a5; }
+    .color-1 { background: rgba(249, 115, 22, 0.3); color: #fdba74; }
+    .color-2 { background: rgba(234, 179, 8, 0.3); color: #fde047; }
+    .color-3 { background: rgba(34, 197, 94, 0.3); color: #86efac; }
+    .color-4 { background: rgba(6, 182, 212, 0.3); color: #67e8f9; }
+    .color-5 { background: rgba(59, 130, 246, 0.3); color: #93c5fd; }
+    .color-6 { background: rgba(168, 85, 247, 0.3); color: #d8b4fe; }
+    .color-7 { background: rgba(236, 72, 153, 0.3); color: #f9a8d4; }
+
+    .pattern-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.25rem 0.75rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 0.375rem;
+      font-size: 0.75rem;
+      margin: 0.25rem;
+    }
+
+    .pattern-tag .color-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    .stats-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 0.5rem;
+      padding: 0.75rem;
+      text-align: center;
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+
+    .highlight-btn {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    .highlight-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 12h20M10 20h14M10 28h20" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Pattern Highlighter</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Text Pattern Highlighter
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Pattern Visualization Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-highlighting enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Pattern Input Section -->
+      <div class="space-y-3 mb-4">
+        <div class="flex items-center justify-between">
+          <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
+            Patterns to Highlight <span class="text-gray-500 font-normal">(one per line or comma separated)</span>
+          </label>
+          <div class="flex gap-1">
+            <button id="addCommonPatterns" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated">
+              Common
+            </button>
+            <button id="clearPatterns" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+              Clear
+            </button>
+          </div>
+        </div>
+        <textarea id="patternInput" spellcheck="false"
+          class="w-full h-20 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+          placeholder="Enter patterns to highlight...&#10;e.g. error, warning, success&#10;or use regex: /error|warning/gi"></textarea>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Input Text
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Type or paste text here... Or drag & drop a file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.csv,.md,.json,.xml,.html,.log,.js,.css,.py,.java,.cpp,.c,.php,.rb,.go,.rs" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Chars: 0 | Words: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Highlighted Output -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Highlighted Result <span id="matchCount" class="text-gray-500 font-normal ml-1 hidden">(0 matches)</span>
+            </label>
+            <div class="flex gap-1">
+              <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                Copy
+              </button>
+              <button id="downloadBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Download
+              </button>
+            </div>
+          </div>
+          
+          <div id="outputContainer" class="w-full h-48 lg:h-64 p-3 rounded-md glass-input overflow-y-auto highlight-output text-xs">
+            <div class="text-center text-gray-500 mt-8">
+              <svg class="w-8 h-8 mx-auto mb-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+              <p>Highlighted patterns will appear here automatically...</p>
+            </div>
+          </div>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="outputStats">Patterns: 0 | Matches: 0</span>
+            <span id="processingTime" class="text-gray-600"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-3">
+        
+        <!-- Match Mode -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Match Mode</label>
+          <div class="flex flex-wrap gap-1">
+            <button class="highlight-btn active rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-mode="exact">Exact Match</button>
+            <button class="highlight-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-mode="case">Case Sensitive</button>
+            <button class="highlight-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-mode="word">Whole Word</button>
+            <button class="highlight-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-mode="regex">Regex</button>
+          </div>
+        </div>
+
+        <!-- Options Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Color Theme</label>
+            <select id="colorTheme" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="rainbow">Rainbow</option>
+              <option value="warm">Warm (Red-Orange)</option>
+              <option value="cool">Cool (Blue-Green)</option>
+              <option value="neon">Neon</option>
+              <option value="pastel">Pastel</option>
+              <option value="monochrome">Monochrome</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Max Matches/Pattern</label>
+            <input type="number" id="maxMatches" min="0" value="0" placeholder="0 = unlimited" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+          </div>
+
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Context Lines</label>
+            <input type="number" id="contextLines" min="0" value="0" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+          </div>
+
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Output Format</label>
+            <select id="outputFormat" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="html">HTML Highlighted</option>
+              <option value="text">Plain Text Markers</option>
+              <option value="json">JSON Export</option>
+              <option value="markdown">Markdown</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Toggles -->
+        <div class="flex flex-wrap gap-3">
+          <label class="flex items-center gap-1.5 text-xs text-gray-400">
+            <input type="checkbox" id="showLineNumbers" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Show line numbers
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400">
+            <input type="checkbox" id="countOverlapping" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Count overlapping matches
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400">
+            <input type="checkbox" id="preserveWhitespace" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Preserve whitespace
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400">
+            <input type="checkbox" id="showOnlyMatches" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Show only matches
+          </label>
+        </div>
+
+        <!-- Pattern Legend -->
+        <div id="patternLegend" class="hidden">
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Pattern Legend</label>
+          <div id="legendContainer" class="flex flex-wrap gap-1"></div>
+        </div>
+
+        <!-- Stats Display -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-3">
+          <div class="stats-card">
+            <div class="text-lg font-bold text-indigo-400" id="statTotalPatterns">0</div>
+            <div class="text-xs text-gray-500">Active Patterns</div>
+          </div>
+          <div class="stats-card">
+            <div class="text-lg font-bold text-purple-400" id="statTotalMatches">0</div>
+            <div class="text-xs text-gray-500">Total Matches</div>
+          </div>
+          <div class="stats-card">
+            <div class="text-lg font-bold text-pink-400" id="statUniqueMatches">0</div>
+            <div class="text-xs text-gray-500">Unique Matches</div>
+          </div>
+          <div class="stats-card">
+            <div class="text-lg font-bold text-orange-400" id="statCoverage">0%</div>
+            <div class="text-xs text-gray-500">Text Coverage</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Pattern Highlighter?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Instant</h3>
+          <p class="text-gray-400 text-xs">Real-time pattern highlighting</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Multi-Pattern</h3>
+          <p class="text-gray-400 text-xs">Highlight unlimited patterns</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">File Support</h3>
+          <p class="text-gray-400 text-xs">Drag & drop any text file</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Analytics</h3>
+          <p class="text-gray-400 text-xs">Detailed match statistics</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based processing</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration needed</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Define Patterns</h3>
+          <p class="text-gray-400 text-xs">Enter words or regex patterns to highlight, one per line.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Input Text</h3>
+          <p class="text-gray-400 text-xs">Paste your text or upload a file to analyze.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Configure</h3>
+          <p class="text-gray-400 text-xs">Choose match mode, colors, and display options.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy highlighted text or download results.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Text Pattern Highlighting: Mastering Visual Text Analysis for Coding, Writing, and Data Processing</h2>
+        
+        <p><strong>Text pattern highlighting</strong> is a powerful visual analysis technique that transforms how we interact with written content. By automatically identifying and colorizing specific sequences, words, or regular expressions within text, pattern highlighters reveal structures, repetitions, and anomalies invisible to casual reading. Whether you're a developer debugging code, an editor checking for overused phrases, a data analyst spotting trends in logs, or an SEO specialist optimizing keyword distribution, understanding how to effectively <strong>highlight text patterns online</strong> is essential for modern text processing workflows. Our <strong>free text pattern highlighter</strong> provides professional-grade visualization capabilities without any cost or registration barriers.</p>
+
+        <h2>What Is Text Pattern Highlighting and Why Does It Matter?</h2>
+        
+        <p><strong>Text pattern highlighting</strong> refers to the automated process of identifying specified character sequences within documents and applying visual formatting to make them stand out. Unlike simple find operations that jump between matches, highlighting displays all occurrences simultaneously, revealing patterns across entire documents at a glance. This visual approach leverages the brain's powerful pattern recognition capabilities, making it easier to spot trends, inconsistencies, and relationships in text data.</p>
+
+        <p>The importance of accessible <strong>text pattern highlighter online</strong> tools has grown exponentially with the explosion of digital text data. Developers need to <strong>highlight regex patterns online</strong> to analyze codebases and log files. Content creators use <strong>text pattern markers</strong> to check keyword density and avoid repetition. Data scientists employ <strong>text sequence highlighters</strong> to identify anomalies in datasets. Security analysts rely on <strong>pattern detection</strong> to spot suspicious entries in system logs. Without efficient <strong>online text pattern highlighting tools</strong>, these analyses require tedious manual scanning prone to human error and oversight.</p>
+
+        <h2>Understanding Pattern Matching Methods</h2>
+
+        <h3>Exact Match Highlighting</h3>
+        
+        <p>The simplest <strong>text pattern highlighter</strong> approach searches for literal string matches. When you specify "error" as a pattern, the tool highlights every occurrence of those five characters in sequence. This method requires no special syntax knowledge and provides predictable results. However, it can miss variations—"Error" with a capital E won't match a lowercase search unless case insensitivity is enabled.</p>
+
+        <p>Professional <strong>highlight text patterns online</strong> tools offer match mode options to control exact matching behavior. Case sensitive mode distinguishes "Apple" from "apple", important for programming languages where capitalization matters. Case insensitive mode treats them as identical, better for natural language analysis where case varies arbitrarily. Whole word mode prevents matching "error" inside "terror", ensuring only standalone occurrences highlight—crucial for precise text analysis.</p>
+
+        <h3>Regular Expression Pattern Matching</h3>
+        
+        <p>For sophisticated pattern detection, <strong>text pattern highlighters</strong> support regular expressions (regex)—specialized syntax for describing complex text patterns. A regex like <code>\b[A-Z]{2,}\b</code> matches any word consisting of two or more capital letters, perfect for finding acronyms. The pattern <code>\d{3}-\d{2}-\d{4}</code> matches Social Security number formats. <code>https?://\S+</code> finds URLs regardless of specific domain.</p>
+
+        <p>Regex capabilities transform simple <strong>text pattern colorizers</strong> into powerful text mining instruments. Linguists use regex to find all words ending in "-tion". Security analysts detect IP addresses with <code>\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}</code>. Developers identify function calls with patterns like <code>\w+\(</code>. While regex requires learning investment, the pattern description power justifies the effort for professional text analysis. Our <strong>text pattern finder and highlighter online</strong> supports full JavaScript regex syntax including flags for global search, case insensitivity, and multiline matching.</p>
+
+        <h3>Multi-Pattern Simultaneous Highlighting</h3>
+        
+        <p>Advanced <strong>bulk text pattern highlighters</strong> process multiple patterns simultaneously, each with distinct visual formatting. This capability proves invaluable when comparing different categories of matches—errors in red, warnings in yellow, successes in green. Code reviewers might highlight deprecated functions in orange, security-sensitive calls in red, and performance-critical sections in blue.</p>
+
+        <p>Color assignment strategies affect pattern perception effectiveness. Rainbow cycling (red, orange, yellow, green, blue, purple) provides maximum distinction between adjacent patterns. Semantic coloring (red for danger, green for success, yellow for caution) leverages learned associations. Intensity gradients can show frequency or severity. Our <strong>text pattern visualizer online</strong> implements multiple color themes optimized for different analysis scenarios.</p>
+
+        <h2>Professional Applications of Pattern Highlighting</h2>
+
+        <h3>Software Development and Code Review</h3>
+        
+        <p>Developers rely on <strong>text pattern highlighting for coding online</strong> for numerous tasks. Syntax highlighting—the foundation of modern code editors—is essentially pattern highlighting where keywords, strings, comments, and operators receive distinct colors. Beyond syntax, developers highlight specific patterns: TODO comments requiring attention, deprecated API calls needing replacement, security-sensitive functions requiring audit, or performance bottlenecks marked for optimization.</p>
+
+        <p>Log file analysis particularly benefits from <strong>pattern highlighting</strong>. Production systems generate thousands of log lines hourly; manually scanning for errors is impractical. By highlighting "ERROR", "EXCEPTION", "FAIL", and stack trace patterns in distinct colors, developers instantly spot problems amid informational noise. Our <strong>instant text pattern highlighter online free</strong> processes log files of any size, revealing error patterns across distributed system logs.</p>
+
+        <h3>Content Editing and Writing Enhancement</h3>
+        
+        <p>Writers and editors use <strong>text pattern highlighters</strong> to improve prose quality. Highlighting overused words (very, really, actually, basically) reveals repetitive habits. Identifying adverbs ending in "-ly" helps writers convert weak modifiers to strong verbs. Finding instances of passive voice ("was [verb]ed") suggests active alternatives. Spotting consecutive sentences starting with the same word prevents monotonous rhythm.</p>
+
+        <p>SEO content optimization requires strategic <strong>text pattern highlighting for SEO online</strong>. Writers must balance keyword density—enough mentions for search visibility, not so many that text reads unnaturally. By highlighting target keywords and their variations, content creators visualize distribution throughout articles, ensuring natural placement in headers, opening paragraphs, and throughout body text without awkward stuffing.</p>
+
+        <h3>Data Analysis and Quality Assurance</h3>
+        
+        <p>Data scientists and analysts employ <strong>text pattern highlighting</strong> for dataset exploration. Highlighting null values, outliers, or malformed entries in tabular data reveals data quality issues. Identifying date format inconsistencies (MM/DD/YYYY vs DD-MM-YYYY) prevents parsing errors. Spotting email pattern violations catches invalid contact information. Finding duplicate entries marked with subtle variations ("John Smith" vs "Jon Smith") enables deduplication.</p>
+
+        <p>Quality assurance teams use <strong>text pattern spotlights</strong> to validate output consistency. Software testing verifies that error messages follow templates, that API responses contain required fields, that generated reports include mandatory sections. Pattern highlighting automates these visual inspections, flagging deviations from expected formats instantly across thousands of output samples.</p>
+
+        <h3>Security Analysis and Forensics</h3>
+        
+        <p>Security professionals depend on <strong>text pattern detection highlighters</strong> for threat identification. Log analysis highlights suspicious IP addresses, user agents, or request patterns indicating attacks. Code review spots dangerous function calls (eval, exec, system) that might enable injection vulnerabilities. Network traffic analysis identifies data exfiltration patterns or command-and-control communications. Forensic document examination reveals hidden messages or steganographic content through statistical pattern anomalies.</p>
+
+        <h2>Advanced Pattern Highlighting Techniques</h2>
+
+        <h3>Context Preservation and Extraction</h3>
+        
+        <p>Raw pattern matching shows what matched but often hides why it matters. Advanced <strong>text pattern highlighters</strong> preserve or extract surrounding context—lines before and after matches, sentence boundaries, or paragraph context. This contextual framing helps analysts understand match significance without scrolling through entire documents.</p>
+
+        <p>Context extraction modes serve different analysis needs: Fixed line counts (show 3 lines before/after each match) work for log files where events cluster. Sentence boundaries preserve linguistic coherence for natural language analysis. Paragraph context maintains document structure for content review. Our <strong>text pattern highlighting utility online</strong> offers configurable context extraction to match your analysis requirements.</p>
+
+        <h3>Overlap Handling and Nested Patterns</h3>
+        
+        <p>Text often contains overlapping or nested patterns requiring sophisticated highlighting logic. Consider the text "error handler": should a search for "error" highlight the first five characters, or should "error handler" as a complete phrase take precedence? Should searching for both "handle" and "handler" highlight overlapping regions or prioritize the longer match?</p>
+
+        <p>Professional <strong>text pattern accent tools</strong> implement conflict resolution strategies. Longest-match priority prevents partial highlighting of larger patterns. Explicit priority ordering lets users specify which patterns take precedence when overlaps occur. Nested highlighting (different background colors for overlapping regions) preserves all match information though visual complexity increases. These advanced handling modes ensure accurate representation even in complex pattern scenarios.</p>
+
+        <h3>Statistical Analysis and Pattern Metrics</h3>
+        
+        <p>Beyond visual highlighting, quantitative pattern analysis reveals document characteristics. Match frequency statistics show which patterns dominate. Coverage percentages indicate what portion of text matches any pattern. Distribution analysis reveals whether matches cluster or spread evenly. Co-occurrence metrics show which patterns appear together, suggesting relationships.</p>
+
+        <p>Our <strong>text pattern highlighter</strong> provides comprehensive analytics: total patterns defined, total matches found, unique matches (distinct matching strings), and text coverage percentage. These metrics help analysts assess pattern relevance—if a pattern matches 80% of text, it's too broad to be meaningful; if it matches 0%, it may be misspelled or irrelevant. Statistical feedback guides iterative pattern refinement for optimal analysis.</p>
+
+        <h2>Best Practices for Effective Pattern Highlighting</h2>
+
+        <h3>Pattern Design and Refinement</h3>
+        
+        <p>Effective pattern highlighting begins with well-designed search patterns. Start specific then generalize—begin with exact matches, then expand to capture variations if needed. Test patterns against representative samples to verify they catch intended targets without excessive false positives. Use word boundaries (\b in regex) to prevent partial word matches unless specifically desired. Escape special characters (., *, +, ?) unless using their regex meanings.</p>
+
+        <p>Iterative refinement improves pattern accuracy. Review initial highlighting results, identify missed matches or false positives, adjust patterns accordingly, and re-highlight. This feedback loop quickly converges on optimal pattern sets. Save successful pattern combinations for reuse on similar document types—your "error log analysis" pattern set or "SEO keyword check" pattern set becomes a reusable analysis tool.</p>
+
+        <h3>Color Strategy and Visual Design</h3>
+        
+        <p>Color choices significantly impact pattern highlighting effectiveness. Limit simultaneous colors to 7±2 (Miller's Law of working memory) for optimal distinguishability. Use semantic colors when possible (red=error, yellow=warning, green=success) to leverage learned associations. Ensure sufficient contrast between highlighted text and background for readability. Consider colorblind-friendly palettes that distinguish via brightness and saturation, not just hue.</p>
+
+        <p>Our <strong>online text pattern color coding free</strong> tool provides multiple color themes: Rainbow for maximum distinction between many patterns, Warm for urgency-based highlighting (errors, warnings), Cool for informational patterns, Neon for dark environment visibility, Pastel for reduced visual intensity on long documents, and Monochrome for printer-friendly or accessibility-optimized output.</p>
+
+        <h3>Performance Optimization for Large Documents</h3>
+        
+        <p>Processing very large texts (megabytes or gigabytes) requires performance considerations. Regex complexity affects speed—avoid nested quantifiers and catastrophic backtracking patterns. Pattern count impacts memory—prioritize essential patterns when processing huge files. Streaming processing handles files larger than available RAM by processing chunks sequentially.</p>
+
+        <p>For routine large-file analysis, consider preprocessing: extract relevant sections before pattern matching, convert to efficient formats, or index for faster repeated searches. Our <strong>bulk text pattern highlighter online</strong> optimizes for typical document sizes (up to several megabytes); for extremely large files, command-line tools like grep or specialized log analysis platforms may be more appropriate.</p>
+
+        <h2>Comparing Pattern Highlighting Approaches</h2>
+
+        <h3>Manual Review vs. Automated Highlighting</h3>
+        
+        <p>Manual text review requires sustained attention and inevitably misses patterns, especially in long documents or when fatigue sets in. Studies show human reviewers miss 20-50% of target patterns in extended documents. Automated <strong>text pattern highlighters</strong> achieve near-perfect recall (finding all instances) with consistent precision (no fatigue-induced errors). For any non-trivial document analysis, automated highlighting proves faster, more thorough, and more reliable than manual review.</p>
+
+        <h3>Command-Line Tools vs. Online Highlighters</h3>
+        
+        <p>Grep, awk, and sed provide powerful command-line pattern matching for technical users comfortable with terminal interfaces. These tools excel in scripted pipelines and server environments. However, they require installation, command syntax knowledge, and output to plain text or files. Online <strong>text pattern highlighters</strong> provide immediate access, visual output, color formatting, and export options without installation or learning curve. For occasional use, collaborative sharing, or visual analysis needs, browser-based tools offer superior accessibility.</p>
+
+        <h2>The Future of Pattern Visualization Technology</h2>
+
+        <p>Machine learning is advancing <strong>text pattern highlighting</strong> beyond literal matching toward semantic pattern recognition. Future tools will highlight not just specific words but concepts—finding all mentions of "pricing" even when expressed as "cost", "fee", "rate", or "charge". They'll detect sentiment patterns, automatically highlighting negative expressions in customer feedback or positive achievements in performance reviews. They'll identify writing style patterns, marking passive voice, complex sentences, or jargon density without explicit pattern definition.</p>
+
+        <h2>Conclusion: Master Text Analysis with Professional Pattern Highlighting</h2>
+
+        <p><strong>Text pattern highlighting</strong> transforms how we analyze, edit, and understand written content. From simple word spotting to sophisticated regex pattern mining, the ability to visually emphasize specific text sequences accelerates analysis, improves accuracy, and reveals insights invisible to unaided reading. Whether you're debugging code, optimizing content, analyzing data, or reviewing documents, mastering <strong>pattern highlighting</strong> techniques will dramatically improve your text processing productivity.</p>
+
+        <p>Our <strong>free online text pattern highlighter tool</strong> provides all the capabilities you need for professional text analysis. With automatic real-time highlighting as you type, support for unlimited simultaneous patterns, multiple match modes (exact, case-sensitive, whole word, regex), flexible color themes, comprehensive statistics, and multiple export formats, this tool serves everyone from casual users to professional analysts. The browser-based architecture ensures privacy and accessibility, while the intuitive interface requires no technical training. Whether you need to <strong>highlight text patterns online</strong>, <strong>mark text patterns online free</strong>, <strong>identify and highlight text patterns</strong>, or perform sophisticated <strong>text pattern visualization</strong>, our <strong>text pattern highlighting utility online</strong> delivers professional results instantly. Stop manually scanning for patterns—start using our professional <strong>text pattern highlighter online</strong> today and experience the efficiency of automated visual text analysis.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool highlight patterns automatically as I type?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>text pattern highlighter online</strong> features <strong>automatic real-time highlighting</strong>. As you type patterns or input text, the tool instantly finds and highlights all matches with distinct colors. We use intelligent debouncing to ensure smooth performance. The "Auto-highlighting enabled" indicator confirms the feature is active. Changes to match modes or colors apply instantly.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I use regular expressions (regex) for pattern matching?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Select <strong>"Regex"</strong> match mode, then enter patterns using JavaScript regex syntax. Use <code>/pattern/flags</code> format (e.g., <code>/error|warning/gi</code>) or plain patterns. Common patterns: <code>\d+</code> for numbers, <code>\b\w+@+\w+\.\w+\b</code> for emails, <code>https?://\S+</code> for URLs. The tool supports all standard regex features including character classes, quantifiers, and capture groups.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I highlight multiple patterns at once?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Enter unlimited patterns in the pattern input box, one per line or comma-separated. Each pattern gets assigned a distinct color automatically. The pattern legend shows which color corresponds to which pattern. Use the color theme selector to change the overall palette (Rainbow, Warm, Cool, Neon, Pastel, or Monochrome).</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What's the difference between match modes?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Exact Match</strong>: Case-insensitive literal match. <strong>Case Sensitive</strong>: Exact capitalization required. <strong>Whole Word</strong>: Matches complete words only (won't match "error" inside "terror"). <strong>Regex</strong>: Pattern matching using regular expressions. Choose based on precision needs—use Whole Word for specific terms, Regex for complex patterns like emails or dates.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I export the highlighted results?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Use the <strong>Output Format</strong> selector: <strong>HTML</strong> preserves colors for web use, <strong>Plain Text</strong> uses markers like [pattern], <strong>JSON</strong> exports structured data with match positions, <strong>Markdown</strong> uses code blocks and emphasis. Click <strong>Download</strong> to save files, or <strong>Copy</strong> to clipboard. The statistics panel shows total patterns, matches, unique matches, and text coverage percentage.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I analyze log files or code?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Drag and drop log files or code files onto the input area, or click <strong>Select file</strong>. Define patterns like "ERROR", "WARNING", "Exception" for logs, or function names, TODO comments for code. Use <strong>Show line numbers</strong> for reference. Enable <strong>Context lines</strong> to see surrounding content for each match. The tool handles files up to several megabytes efficiently.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is there a limit to file size or pattern count?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">The tool handles texts up to ~10MB and unlimited patterns (though more than 20 patterns becomes visually cluttered). For very large files (100MB+), consider splitting into chunks or using command-line tools. Performance depends on pattern complexity—simple literal matches are faster than complex regex. The <strong>free online text pattern highlighter tool</strong> is optimized for typical document analysis tasks.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my text data secure?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely. All processing happens <strong>locally in your browser</strong>—text never uploads to servers or leaves your device. You can verify this with browser DevTools (Network tab shows no data transfer). Works offline after loading. Ideal for sensitive logs, proprietary code, confidential documents, or personal writing. Privacy is built into our <strong>text pattern highlighter online</strong> architecture.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this tool free?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, completely <strong>free</strong> with no registration, usage limits, watermarks, or hidden fees. Use for personal or commercial projects without attribution. This is truly a <strong>free text pattern highlighter</strong> for everyone. Supported by unobtrusive advertising and voluntary user support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const patternInput = document.getElementById('patternInput');
+const inputText = document.getElementById('inputText');
+const inputStats = document.getElementById('inputStats');
+const outputContainer = document.getElementById('outputContainer');
+const outputStats = document.getElementById('outputStats');
+const matchCount = document.getElementById('matchCount');
+const processingTime = document.getElementById('processingTime');
+const patternLegend = document.getElementById('patternLegend');
+const legendContainer = document.getElementById('legendContainer');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+
+// Stats elements
+const statTotalPatterns = document.getElementById('statTotalPatterns');
+const statTotalMatches = document.getElementById('statTotalMatches');
+const statUniqueMatches = document.getElementById('statUniqueMatches');
+const statCoverage = document.getElementById('statCoverage');
+
+// Buttons
+const addCommonPatterns = document.getElementById('addCommonPatterns');
+const clearPatterns = document.getElementById('clearPatterns');
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const resetBtn = document.getElementById('resetBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+// Mode buttons
+const highlightBtns = document.querySelectorAll('.highlight-btn');
+let currentMode = 'exact';
+
+// Options
+const colorTheme = document.getElementById('colorTheme');
+const maxMatches = document.getElementById('maxMatches');
+const contextLines = document.getElementById('contextLines');
+const outputFormat = document.getElementById('outputFormat');
+const showLineNumbers = document.getElementById('showLineNumbers');
+const countOverlapping = document.getElementById('countOverlapping');
+const preserveWhitespace = document.getElementById('preserveWhitespace');
+const showOnlyMatches = document.getElementById('showOnlyMatches');
+
+// Color themes
+const colorThemes = {
+  rainbow: ['#ef4444', '#f97316', '#eab308', '#22c55e', '#06b6d4', '#3b82f6', '#a855f7', '#ec4899'],
+  warm: ['#ef4444', '#f97316', '#fbbf24', '#f59e0b', '#d97706', '#b45309', '#92400e', '#78350f'],
+  cool: ['#06b6d4', '#3b82f6', '#6366f1', '#8b5cf6', '#a855f7', '#d946ef', '#ec4899', '#f43f5e'],
+  neon: ['#ff0080', '#ff4000', '#ffbf00', '#80ff00', '#00ffbf', '#00bfff', '#4000ff', '#bf00ff'],
+  pastel: ['#fca5a5', '#fdba74', '#fde047', '#86efac', '#67e8f9', '#93c5fd', '#d8b4fe', '#f9a8d4'],
+  monochrome: ['#ffffff', '#e5e5e5', '#d4d4d4', '#a3a3a3', '#737373', '#525252', '#404040', '#262626']
+};
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Update input stats
+function updateInputStats() {
+  const text = inputText.value;
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+  inputStats.textContent = `Chars: ${text.length} | Words: ${words}`;
+}
+
+// Debounce function
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Mode selection
+highlightBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    highlightBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentMode = btn.dataset.mode;
+    highlightPatterns();
+  });
+});
+
+// Auto-highlight on option changes
+[colorTheme, maxMatches, contextLines, outputFormat, showLineNumbers, countOverlapping, preserveWhitespace, showOnlyMatches].forEach(el => {
+  if (el) {
+    el.addEventListener('change', highlightPatterns);
+  }
+});
+
+// Parse patterns from input
+function getPatterns() {
+  const raw = patternInput.value.trim();
+  if (!raw) return [];
+  
+  // Split by newline or comma
+  const lines = raw.split(/[\n,]+/).map(p => p.trim()).filter(p => p.length > 0);
+  
+  return lines.map((pattern, index) => {
+    // Check if regex format /pattern/flags
+    const regexMatch = pattern.match(/^\/(.+)\/([gimuy]*)$/);
+    if (regexMatch) {
+      try {
+        return {
+          text: pattern,
+          regex: new RegExp(regexMatch[1], regexMatch[2] || 'gi'),
+          isRegex: true,
+          colorIndex: index % 8
+        };
+      } catch (e) {
+        return null;
+      }
+    }
+    
+    // Regular pattern
+    let regexPattern = pattern.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    
+    if (currentMode === 'word') {
+      regexPattern = '\\b' + regexPattern + '\\b';
+    }
+    
+    const flags = currentMode === 'case' ? 'g' : 'gi';
+    
+    return {
+      text: pattern,
+      regex: new RegExp(regexPattern, flags),
+      isRegex: false,
+      colorIndex: index % 8
+    };
+  }).filter(p => p !== null);
+}
+
+// Highlight patterns function
+function highlightPatterns() {
+  const startTime = performance.now();
+  const text = inputText.value;
+  const patterns = getPatterns();
+  
+  if (!text.trim() || patterns.length === 0) {
+    outputContainer.innerHTML = `
+      <div class="text-center text-gray-500 mt-8">
+        <svg class="w-8 h-8 mx-auto mb-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+        <p>Highlighted patterns will appear here automatically...</p>
+      </div>
+    `;
+    matchCount.classList.add('hidden');
+    outputStats.textContent = 'Patterns: 0 | Matches: 0';
+    processingTime.textContent = '';
+    patternLegend.classList.add('hidden');
+    updateStats(0, 0, 0, 0);
+    return;
+  }
+  
+  const theme = colorThemes[colorTheme.value] || colorThemes.rainbow;
+  const max = parseInt(maxMatches.value) || 0;
+  
+  let totalMatches = 0;
+  let uniqueMatches = new Set();
+  let highlightedText = text;
+  
+  // Track all matches for statistics
+  const allMatches = [];
+  
+  patterns.forEach((pattern, idx) => {
+    const matches = text.match(pattern.regex) || [];
+    totalMatches += matches.length;
+    matches.forEach(m => uniqueMatches.add(m.toLowerCase()));
+    
+    // Store match info
+    let match;
+    while ((match = pattern.regex.exec(text)) !== null) {
+      allMatches.push({
+        index: match.index,
+        length: match[0].length,
+        text: match[0],
+        pattern: pattern.text,
+        colorIndex: pattern.colorIndex
+      });
+      if (!countOverlapping.checked) {
+        pattern.regex.lastIndex = match.index + 1;
+      }
+    }
+    pattern.regex.lastIndex = 0;
+  });
+  
+  // Sort matches by position
+  allMatches.sort((a, b) => a.index - b.index);
+  
+  // Build highlighted HTML
+  let result = '';
+  let lastIndex = 0;
+  
+  if (showOnlyMatches.checked) {
+    // Show only matching lines
+    const lines = text.split('\n');
+    const matchingLines = new Set();
+    
+    allMatches.forEach(match => {
+      let lineStart = text.lastIndexOf('\n', match.index) + 1;
+      let lineNum = text.substring(0, lineStart).split('\n').length - 1;
+      matchingLines.add(lineNum);
+      
+      // Add context lines
+      const ctx = parseInt(contextLines.value) || 0;
+      for (let i = Math.max(0, lineNum - ctx); i <= Math.min(lines.length - 1, lineNum + ctx); i++) {
+        matchingLines.add(i);
+      }
+    });
+    
+    const sortedLines = Array.from(matchingLines).sort((a, b) => a - b);
+    sortedLines.forEach(lineNum => {
+      if (showLineNumbers.checked) {
+        result += `<span class="text-gray-600 mr-3 select-none">${(lineNum + 1).toString().padStart(4, ' ')}</span>`;
+      }
+      result += escapeHtml(lines[lineNum]) + '\n';
+    });
+  } else {
+    // Full text with highlights
+    const lines = text.split('\n');
+    lines.forEach((line, lineNum) => {
+      if (showLineNumbers.checked) {
+        result += `<span class="text-gray-600 mr-3 select-none">${(lineNum + 1).toString().padStart(4, ' ')}</span>`;
+      }
+      
+      // Find matches in this line
+      let lineResult = '';
+      let lineLastIndex = 0;
+      
+      const lineMatches = allMatches.filter(m => {
+        const lineStart = text.split('\n').slice(0, lineNum).join('\n').length + (lineNum > 0 ? 1 : 0);
+        const lineEnd = lineStart + line.length;
+        return m.index >= lineStart && m.index < lineEnd;
+      });
+      
+      if (lineMatches.length === 0) {
+        lineResult = escapeHtml(line);
+      } else {
+        lineMatches.forEach(match => {
+          const lineStart = text.split('\n').slice(0, lineNum).join('\n').length + (lineNum > 0 ? 1 : 0);
+          const relativeIndex = match.index - lineStart;
+          
+          lineResult += escapeHtml(line.substring(lineLastIndex, relativeIndex));
+          const color = theme[match.colorIndex % theme.length];
+          lineResult += `<span class="pattern-highlight" style="background: ${color}33; color: ${color}; border: 1px solid ${color}66;">${escapeHtml(match.text)}</span>`;
+          lineLastIndex = relativeIndex + match.length;
+        });
+        lineResult += escapeHtml(line.substring(lineLastIndex));
+      }
+      
+      result += lineResult + '\n';
+    });
+  }
+  
+  const endTime = performance.now();
+  
+  // Update display
+  outputContainer.innerHTML = result;
+  
+  // Update stats
+  matchCount.textContent = `(${totalMatches} matches)`;
+  matchCount.classList.remove('hidden');
+  outputStats.textContent = `Patterns: ${patterns.length} | Matches: ${totalMatches}`;
+  processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+  
+  // Update legend
+  updateLegend(patterns, theme);
+  
+  // Update statistics
+  const coverage = text.length > 0 ? Math.round((allMatches.reduce((sum, m) => sum + m.length, 0) / text.length) * 100) : 0;
+  updateStats(patterns.length, totalMatches, uniqueMatches.size, coverage);
+}
+
+function updateLegend(patterns, theme) {
+  if (patterns.length === 0) {
+    patternLegend.classList.add('hidden');
+    return;
+  }
+  
+  patternLegend.classList.remove('hidden');
+  legendContainer.innerHTML = patterns.map((p, i) => `
+    <div class="pattern-tag">
+      <span class="color-dot" style="background: ${theme[i % theme.length]}"></span>
+      <span class="text-gray-300">${escapeHtml(p.text)}</span>
+    </div>
+  `).join('');
+}
+
+function updateStats(patterns, matches, unique, coverage) {
+  statTotalPatterns.textContent = patterns;
+  statTotalMatches.textContent = matches;
+  statUniqueMatches.textContent = unique;
+  statCoverage.textContent = coverage + '%';
+}
+
+function escapeHtml(text) {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
+}
+
+// Debounced version
+const debouncedHighlight = debounce(highlightPatterns, 300);
+
+// Drag and drop handlers
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    updateInputStats();
+    highlightPatterns();
+  };
+  reader.readAsText(file);
+}
+
+// Add common patterns
+addCommonPatterns.addEventListener('click', () => {
+  const common = `error
+warning
+success
+info
+debug
+TODO
+FIXME
+NOTE`;
+  patternInput.value = patternInput.value ? patternInput.value + '\n' + common : common;
+  highlightPatterns();
+});
+
+// Clear patterns
+clearPatterns.addEventListener('click', () => {
+  patternInput.value = '';
+  highlightPatterns();
+});
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    updateInputStats();
+    highlightPatterns();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  updateInputStats();
+  highlightPatterns();
+  inputText.focus();
+}
+
+// Copy output
+async function copyOutput() {
+  const format = outputFormat.value;
+  let textToCopy = '';
+  
+  if (format === 'html') {
+    textToCopy = outputContainer.innerHTML;
+  } else if (format === 'json') {
+    const patterns = getPatterns();
+    const matches = [];
+    patterns.forEach(p => {
+      let match;
+      while ((match = p.regex.exec(inputText.value)) !== null) {
+        matches.push({
+          pattern: p.text,
+          match: match[0],
+          index: match.index
+        });
+      }
+      p.regex.lastIndex = 0;
+    });
+    textToCopy = JSON.stringify(matches, null, 2);
+  } else if (format === 'markdown') {
+    textToCopy = '```\n' + outputContainer.innerText + '\n```';
+  } else {
+    textToCopy = outputContainer.innerText;
+  }
+  
+  if (!textToCopy.trim()) return;
+  
+  try {
+    await navigator.clipboard.writeText(textToCopy);
+    const originalText = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalText;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+}
+
+// Download output
+function downloadOutput() {
+  const format = outputFormat.value;
+  let content = '';
+  let extension = 'txt';
+  
+  if (format === 'html') {
+    content = `<!DOCTYPE html>
+<html>
+<head><title>Highlighted Patterns</title>
+<style>
+body { font-family: monospace; background: #1a1a1a; color: #e5e5e5; padding: 20px; line-height: 1.8; }
+.pattern-highlight { border-radius: 3px; padding: 1px 3px; }
+${colorThemes[colorTheme.value].map((c, i) => `.color-${i} { background: ${c}33; color: ${c}; border: 1px solid ${c}66; }`).join('\n')}
+</style>
+</head>
+<body>${outputContainer.innerHTML}</body>
+</html>`;
+    extension = 'html';
+  } else if (format === 'json') {
+    const patterns = getPatterns();
+    const matches = [];
+    patterns.forEach(p => {
+      let match;
+      while ((match = p.regex.exec(inputText.value)) !== null) {
+        matches.push({
+          pattern: p.text,
+          match: match[0],
+          index: match.index
+        });
+      }
+      p.regex.lastIndex = 0;
+    });
+    content = JSON.stringify(matches, null, 2);
+    extension = 'json';
+  } else if (format === 'markdown') {
+    content = '```\n' + outputContainer.innerText + '\n```';
+    extension = 'md';
+  } else {
+    content = outputContainer.innerText;
+  }
+  
+  if (!content.trim()) return;
+  
+  const blob = new Blob([content], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `highlighted-patterns.${extension}`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Reset all
+function resetAll() {
+  patternInput.value = '';
+  inputText.value = '';
+  updateInputStats();
+  highlightPatterns();
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Event listeners
+patternInput.addEventListener('input', debouncedHighlight);
+inputText.addEventListener('input', () => {
+  updateInputStats();
+  debouncedHighlight();
+});
+
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+copyBtn.addEventListener('click', copyOutput);
+downloadBtn.addEventListener('click', downloadOutput);
+resetBtn.addEventListener('click', resetAll);
+
+// Initialize
+updateInputStats();
+</script>
+</body>
+</html>

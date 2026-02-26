@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Text Structure Visualizer - Free Online Text Mapping Tool</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online text structure visualizer tool. Instantly analyze, map, and visualize document hierarchy, paragraph flow, and text organization. Perfect for writers and editors." />
+  <meta name="keywords" content="text structure visualizer, text structure visualizer online, free text structure visualizer, visualize text structure online, text layout visualizer online, online text structure tool, text hierarchy visualizer online, text formatting visualizer online free, text outline visualizer online, text structure mapping tool online, text flow visualizer online, text organization visualizer online free, paragraph structure visualizer online, sentence structure visualizer online, text structure analyzer online free, text formatting analyzer online, bulk text structure visualizer online, text structure inspection tool online, text structure diagram tool online free, text structure checker online, visualize document structure online free, text structure viewer online, free online text structure visualizer tool, text structure explorer online, text structure visualizer for writers online, text structure visualizer for seo online, online text structure mapping tool free, instant text structure visualizer online, text structure visualizer editor online free" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/text-structure-visualizer/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/text-structure-visualizer/" />
+  <meta property="og:title" content="Text Structure Visualizer - Free Online Text Mapping Tool" />
+  <meta property="og:description" content="Instantly analyze, map, and visualize document hierarchy, paragraph flow, and text organization. Perfect for writers and editors." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/text-structure-visualizer/" />
+  <meta name="twitter:title" content="Text Structure Visualizer - Free Online Text Mapping Tool" />
+  <meta name="twitter:description" content="Instantly analyze, map, and visualize document hierarchy, paragraph flow, and text organization. Perfect for writers and editors." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .method-btn {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    .method-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+
+    .structure-node {
+      border-left: 2px solid rgba(99, 102, 241, 0.3);
+      transition: all 0.2s ease;
+    }
+    
+    .structure-node:hover {
+      border-left-color: rgba(99, 102, 241, 0.8);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .depth-0 { border-left-color: rgba(99, 102, 241, 0.9); }
+    .depth-1 { border-left-color: rgba(99, 102, 241, 0.7); }
+    .depth-2 { border-left-color: rgba(99, 102, 241, 0.5); }
+    .depth-3 { border-left-color: rgba(99, 102, 241, 0.3); }
+
+    .stat-bar {
+      background: rgba(99, 102, 241, 0.2);
+      border-radius: 2px;
+      height: 4px;
+      margin-top: 4px;
+    }
+    
+    .stat-bar-fill {
+      background: rgba(99, 102, 241, 0.8);
+      height: 100%;
+      border-radius: 2px;
+      transition: width 0.3s ease;
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 12h8M10 20h20M10 28h14" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Text Structure Visualizer</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Text Structure Visualizer
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Text Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-visualization enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Input Text
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Type or paste text here to visualize its structure... Or drag & drop a file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.md,.doc,.docx,.html,.xml,.json" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Chars: 0 | Words: 0 | Paragraphs: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Visualization -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+              Structure Map
+            </label>
+            <div class="flex gap-1">
+              <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                Copy
+              </button>
+              <button id="downloadBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Download
+              </button>
+            </div>
+          </div>
+          
+          <div id="outputContainer" class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed overflow-y-auto">
+            <div id="emptyState" class="h-full flex items-center justify-center text-gray-500">
+              <p>Structure visualization will appear here...</p>
+            </div>
+            <div id="structureTree" class="hidden space-y-1"></div>
+          </div>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="outputStats">Sections: 0 | Depth: 0</span>
+            <span id="processingTime" class="text-gray-600"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-3">
+        
+        <!-- Visualization Mode -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Visualization Mode</label>
+          <div class="flex flex-wrap gap-1">
+            <button class="method-btn active rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-mode="hierarchy">Hierarchy</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-mode="outline">Outline</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-mode="flow">Flow</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-mode="stats">Statistics</button>
+          </div>
+        </div>
+
+        <!-- Detection Options -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Heading Detection</label>
+            <select id="headingDetection" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="auto" selected>Auto (Markdown/HTML)</option>
+              <option value="markdown">Markdown (# ## ###)</option>
+              <option value="html">HTML (H1-H6)</option>
+              <option value="caps">ALL CAPS Lines</option>
+              <option value="indent">Indentation</option>
+              <option value="none">None (Paragraphs only)</option>
+            </select>
+          </div>
+          
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Max Depth</label>
+            <select id="maxDepth" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="2">2 Levels</option>
+              <option value="3" selected>3 Levels</option>
+              <option value="4">4 Levels</option>
+              <option value="6">6 Levels</option>
+              <option value="unlimited">Unlimited</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Line Limit</label>
+            <select id="lineLimit" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="50">50 chars</option>
+              <option value="80" selected>80 chars</option>
+              <option value="120">120 chars</option>
+              <option value="full">Full text</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Display Style</label>
+            <select id="displayStyle" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="compact" selected>Compact</option>
+              <option value="detailed">Detailed</option>
+              <option value="minimal">Minimal</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Options -->
+        <div class="flex flex-wrap gap-3 items-center">
+          <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+            <input type="checkbox" id="showNumbers" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Show line numbers
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+            <input type="checkbox" id="showStats" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Show word counts
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+            <input type="checkbox" id="collapseEmpty" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Collapse empty sections
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+            <input type="checkbox" id="colorCode" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Color-code levels
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Text Structure Visualizer?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Instant</h3>
+          <p class="text-gray-400 text-xs">Real-time structure mapping</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">4 Modes</h3>
+          <p class="text-gray-400 text-xs">Hierarchy, outline, flow, stats</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Drag & Drop</h3>
+          <p class="text-gray-400 text-xs">Upload documents instantly</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based processing</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy or download maps</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration needed</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Input Text</h3>
+          <p class="text-gray-400 text-xs">Type, paste, or drop your document. Visualization starts automatically.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Select Mode</h3>
+          <p class="text-gray-400 text-xs">Choose hierarchy, outline, flow, or statistics view.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Configure</h3>
+          <p class="text-gray-400 text-xs">Set heading detection, depth limits, and display options.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy structure map or download as text file.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Text Structure Visualization: Mastering Document Architecture for Better Writing and Editing</h2>
+        
+        <p><strong>Text structure visualization</strong> is a powerful analytical technique that transforms opaque documents into transparent, navigable maps. Whether you're editing a complex report, planning a content strategy, refactoring documentation, or teaching writing skills, the ability to <strong>visualize text structure online</strong> provides insights impossible to gain from reading alone. Our <strong>free text structure visualizer</strong> offers professional-grade structural analysis that helps writers, editors, developers, and content strategists understand, evaluate, and improve document organization instantly.</p>
+
+        <h2>What Is Text Structure Visualization and Why Does It Matter?</h2>
+        
+        <p><strong>Text structure visualization</strong> refers to the process of analyzing a document's hierarchical organization—its sections, subsections, paragraphs, and semantic relationships—and presenting that architecture in a graphical, easily comprehensible format. Unlike simple word counting or readability scoring, structural visualization reveals how ideas connect, how information flows, and whether the document's organization supports its communicative goals. When you <strong>visualize text structure online</strong>, you're essentially creating a blueprint of the document's information architecture.</p>
+
+        <p>The importance of structural analysis has grown with the complexity of modern content ecosystems. Long-form articles, technical documentation, legal contracts, academic papers, and policy documents often span thousands of words across dozens of sections. Without structural visualization, understanding how these pieces fit together requires reading the entire document—impractical for time-constrained professionals evaluating multiple documents. A <strong>text layout visualizer online</strong> compresses this analysis into seconds, revealing organizational patterns at a glance.</p>
+
+        <h2>Understanding Text Structure Components</h2>
+
+        <h3>Hierarchical Organization</h3>
+        
+        <p>Most structured documents follow hierarchical patterns: chapters contain sections, sections contain subsections, subsections contain paragraphs, and paragraphs contain sentences. This hierarchy creates a tree-like structure that can be visualized as nested levels. Professional <strong>text hierarchy visualizer online</strong> tools detect these levels through various signals—heading markers in Markdown or HTML, capitalization patterns, indentation, font size indicators, or explicit numbering schemes (1, 1.1, 1.1.1, etc.).</p>
+
+        <p>The depth of this hierarchy significantly impacts document usability. Shallow structures (2-3 levels) work well for short articles and blog posts. Deep structures (4-6 levels) support complex technical documentation and legal texts. However, excessive depth creates navigation challenges; readers lose context when buried in deeply nested subsections. <strong>Text structure mapping tool online</strong> solutions reveal these depth patterns, helping authors identify when restructuring would improve clarity.</p>
+
+        <h3>Heading Detection and Classification</h3>
+        
+        <p>Headings serve as signposts that guide readers through document structure. Different formats use different heading conventions: Markdown uses hash symbols (# ## ###), HTML uses H1-H6 tags, academic papers use numbered sections, business documents often use ALL CAPS or title case. Advanced <strong>text formatting visualizer online free</strong> tools automatically detect these various heading formats, creating accurate structural maps regardless of source format.</p>
+
+        <p>Beyond detection, heading analysis evaluates consistency and completeness. Are heading levels skipped (jumping from H2 to H4)? Are parallel sections formatted identically? Do headings accurately describe their content? These quality indicators, visible in structural visualization, distinguish professional documents from amateur efforts. Writers use <strong>text outline visualizer online</strong> feedback to refine heading strategies before publication.</p>
+
+        <h3>Flow and Sequence Analysis</h3>
+        
+        <p>While hierarchy shows vertical relationships (containment), flow shows horizontal relationships (sequence). How does the document progress from introduction to conclusion? Does the argument build logically? Are prerequisite concepts presented before dependent concepts? <strong>Text flow visualizer online</strong> modes reveal these sequential patterns, helping authors evaluate whether their document's journey makes sense for intended readers.</p>
+
+        <p>Flow visualization particularly helps with complex documents containing multiple parallel threads. Technical documentation might alternate between conceptual explanations and procedural instructions. Legal documents might interweave general principles with specific applications. Educational content might spiral between introduction, elaboration, and assessment. Understanding these flow patterns enables strategic reorganization for specific audience needs.</p>
+
+        <h2>Professional Applications of Structure Visualization</h2>
+
+        <h3>Content Strategy and Information Architecture</h3>
+        
+        <p>Content strategists use <strong>text organization visualizer online free</strong> tools to audit existing content libraries. By visualizing dozens or hundreds of documents, patterns emerge: which topics have excessive coverage, which have insufficient depth, where content overlaps create redundancy, and where gaps leave user needs unaddressed. This bird's-eye view supports strategic decisions about content creation, consolidation, and retirement.</p>
+
+        <p>Website information architecture benefits similarly. Before migrating content to new platforms or restructuring navigation, architects visualize existing page structures to understand current state. Comparison of visualizations across similar pages reveals inconsistencies in content models. Structural analysis of competitor websites identifies industry-standard organization patterns. These insights inform taxonomy development, menu design, and content template creation.</p>
+
+        <h3>Technical Writing and Documentation</h3>
+        
+        <p>Technical writers face unique structural challenges. API documentation must balance reference completeness with tutorial progression. User manuals must support both linear reading and random access. Troubleshooting guides must map problems to solutions efficiently. <strong>Paragraph structure visualizer online</strong> tools help technical writers evaluate whether their structures support these diverse use cases.</p>
+
+        <p>Documentation refactoring—reorganizing existing content—relies heavily on structural visualization. When consolidating multiple documents, writers must understand how sources overlap and complement each other. When splitting monolithic documents, writers must identify natural break points that preserve context. When updating legacy documentation, writers must map old structures to new templates. Automated <strong>text structure analyzer online free</strong> tools accelerate these analyses that would otherwise require tedious manual review.</p>
+
+        <h3>Academic and Research Writing</h3>
+        
+        <p>Academic writing follows strict structural conventions: IMRAD format (Introduction, Methods, Results, and Discussion) for scientific papers, thesis structures with specific chapter requirements, literature reviews with particular organizational logic. <strong>Text formatting analyzer online</strong> tools verify compliance with these conventions, identifying missing sections or improper sequencing before submission.</p>
+
+        <p>Beyond compliance, structural visualization supports argumentation quality. Does the introduction actually introduce all major sections? Does the conclusion address all threads raised in the body? Are methods described before they're referenced in results? Are limitations acknowledged appropriately? These logical relationship checks, visible in structural maps, strengthen academic rigor.</p>
+
+        <h3>Legal and Compliance Documentation</h3>
+        
+        <p>Legal documents require precise structural control. Contracts must maintain clear hierarchy between general terms and specific clauses. Regulations must cross-reference accurately between sections. Policies must map consistently across organizational levels. <strong>Text structure inspection tool online</strong> capabilities help legal professionals verify these critical structural requirements.</p>
+
+        <p>Compliance auditing involves comparing document structures against regulatory templates. Do required sections appear in required order? Are mandatory disclosures positioned appropriately? Do amendment clauses reference modifiable sections correctly? Automated structural comparison identifies compliance risks invisible to standard proofreading.</p>
+
+        <h2>Advanced Visualization Techniques</h2>
+
+        <h3>Multiple Visualization Modes</h3>
+        
+        <p>Different analytical goals require different visualization approaches. <strong>Hierarchy mode</strong> emphasizes containment relationships, showing how sections nest within each other—ideal for evaluating depth and balance. <strong>Outline mode</strong> emphasizes sequence, presenting structure as a traditional indented list—ideal for reviewing logical flow. <strong>Flow mode</strong> emphasizes transitions, showing how sections connect through references and callbacks—ideal for evaluating coherence. <strong>Statistics mode</strong> emphasizes quantitative metrics, displaying word counts, section lengths, and distribution patterns—ideal for identifying imbalances.</p>
+
+        <p>Professional <strong>text structure diagram tool online free</strong> solutions offer all these modes, allowing users to switch perspectives based on analytical needs. A document might appear well-balanced in hierarchy view but reveal problematic length concentration in statistics view. Multiple perspectives ensure comprehensive structural understanding.</p>
+
+        <h3>Semantic Structure Detection</h3>
+        
+        <p>Beyond formatting-based structure detection, advanced tools identify semantic structure—the functional roles of document sections. Introductions typically preview content and establish context. Methods sections describe procedures. Results sections present findings. Discussions interpret significance. Conclusions summarize and recommend. <strong>Text structure checker online</strong> capabilities can flag when sections appear to serve unexpected functions, suggesting structural misalignment.</p>
+
+        <p>Semantic detection relies on linguistic patterns: introduction markers ("This paper examines..."), transition phrases ("Furthermore," "In contrast"), conclusion indicators ("In summary," "Therefore"). While imperfect, these automated semantic hints help authors verify that section content matches section headings and structural position.</p>
+
+        <h3>Comparative Structural Analysis</h3>
+        
+        <p>Understanding one document's structure provides limited insight; comparing multiple structures reveals patterns. How does this article's structure compare to others in the same journal? How does this policy's organization differ from industry standards? How has this document's structure evolved across versions? <strong>Visualize document structure online free</strong> tools support these comparisons through standardized visualization formats that enable side-by-side evaluation.</p>
+
+        <p>Comparative analysis supports template development. By visualizing high-performing content in a category, strategists identify common structural patterns that might constitute best practices. New content can then follow these proven structures while adapting to specific needs. This data-driven approach to template design replaces guesswork with evidence.</p>
+
+        <h2>Best Practices for Structure Optimization</h2>
+
+        <h3>Balanced Depth and Breadth</h3>
+        
+        <p>Optimal document structure balances vertical depth (hierarchy levels) with horizontal breadth (sections per level). Too shallow, and documents become unwieldy lists of unrelated topics. Too deep, and readers lose orientation in nested complexity. General guidelines suggest: 2-3 levels for articles under 2,000 words, 3-4 levels for reports and white papers, 4-6 levels for books and comprehensive documentation. <strong>Bulk text structure visualizer online</strong> tools reveal when documents violate these guidelines.</p>
+
+        <p>Balance also applies to section lengths. Sections of wildly varying length suggest organizational problems—perhaps combining disparate topics or subdividing unnecessarily. Visual length indicators in structural maps make these imbalances immediately visible, prompting reorganization before readers encounter jarring transitions.</p>
+
+        <h3>Consistent Parallel Structure</h3>
+        
+        <p>Parallel sections should follow parallel structures. If Section 1 has three subsections, and Section 2 covers similar scope, it should also have roughly three subsections—not twelve or one. If subsection titles use verb phrases ("Installing the Software"), they shouldn't switch to noun phrases ("Software Installation") elsewhere. These consistency principles, visible in structural visualization, professionalize documents and reduce reader cognitive load.</p>
+
+        <p>Automated <strong>text structure explorer online</strong> tools flag inconsistencies: varying depths between parallel sections, mismatched heading formats, unbalanced length distributions. These automated checks catch issues that manual review often misses, especially in lengthy documents where maintaining consistency across dozens of sections challenges human memory.</p>
+
+        <h3>Strategic Information Placement</h3>
+        
+        <p>Not all content deserves equal prominence. Critical information should appear in high-level sections easily discoverable through scanning. Supporting details can reside in deeper nesting. Background context belongs in introductions or appendices depending on reader need. <strong>Text structure visualizer for writers online</strong> tools help authors evaluate whether their information hierarchy matches their rhetorical priorities.</p>
+
+        <p>Placement analysis also considers reader behavior. Web readers scan; important information needs prominent positioning. Print readers follow linear progression; sequential logic matters more. Mobile readers encounter limited screen space; shallow structures work better. Structural visualization helps authors optimize for their specific delivery context.</p>
+
+        <h2>The Future of Structural Analysis</h2>
+
+        <p>Artificial intelligence is expanding structural analysis capabilities beyond formatting detection to semantic understanding. Machine learning models can identify argumentation structures—claims, evidence, warrants, qualifiers—regardless of explicit heading markers. They can detect narrative structures—exposition, rising action, climax, resolution—in creative writing. They can map question-answer pairs in FAQ documents or problem-solution patterns in troubleshooting guides.</p>
+
+        <p>These AI capabilities will transform <strong>text structure visualizer for seo online</strong> and other specialized tools from passive visualization to active advisory systems, suggesting structural improvements based on genre conventions, readability research, and content goals. However, the fundamental need for clear structural visualization—seeing what currently exists—remains essential regardless of how analysis capabilities advance.</p>
+
+        <h2>Conclusion: See Your Text Clearly</h2>
+
+        <p><strong>Text structure visualization</strong> transforms the invisible architecture of documents into visible, analyzable, improvable forms. Whether you're crafting a blog post or managing a content library, understanding structure is essential for effective communication. Poor structure undermines even brilliant content; excellent structure elevates ordinary ideas into compelling narratives.</p>
+
+        <p>Our <strong>free online text structure visualizer tool</strong> provides everything you need for professional structural analysis. With four visualization modes, automatic heading detection, configurable depth and display options, real-time updates as you edit, and instant export capabilities, this tool fits naturally into any writing or editing workflow. The browser-based architecture ensures privacy and accessibility; the intuitive interface requires no training. Whether you need to <strong>visualize text structure online</strong> for a single article or audit an entire content library, our <strong>text structure mapping tool online</strong> delivers instant insight. Stop guessing about your document's organization—start seeing it clearly today.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool visualize structure automatically as I type?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>text structure visualizer online</strong> features <strong>automatic real-time visualization</strong>. As you type or paste text, the tool instantly analyzes document structure and updates the visualization panel. We use intelligent debouncing to ensure smooth performance. The "Auto-visualization enabled" indicator confirms the feature is active. Changes to visualization mode or detection settings apply instantly, making this the most responsive <strong>free text structure visualizer</strong> available.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What visualization modes are available?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">We offer 4 visualization modes: <strong>Hierarchy</strong> shows nested containment relationships with tree-like indentation. <strong>Outline</strong> presents traditional indented list format familiar from word processors. <strong>Flow</strong> emphasizes sequential reading order and transitions between sections. <strong>Statistics</strong> displays quantitative metrics including word counts, section lengths, and depth distribution. Each mode reveals different aspects of document structure; switch between them to gain comprehensive understanding.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How does heading detection work?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">The tool supports multiple heading detection methods: <strong>Auto</strong> intelligently detects Markdown (# ## ###), HTML (H1-H6), ALL CAPS lines, and indentation patterns. You can also force specific detection: <strong>Markdown</strong> for hash-based headers, <strong>HTML</strong> for heading tags, <strong>ALL CAPS</strong> for capitalized lines, or <strong>Indentation</strong> for whitespace-based hierarchy. For documents without headings, select <strong>None</strong> to visualize paragraphs only. The detection method can be changed anytime to optimize for your specific document format.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What's the difference between the display styles?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Compact</strong> shows minimal information—just headings and basic stats—ideal for large documents overview. <strong>Detailed</strong> includes word counts, line numbers, and preview text for each section. <strong>Minimal</strong> shows only section titles without any metadata, useful for clean outline exports. The display style affects only the visualization output, not the underlying analysis. Choose based on your current need: quick overview, detailed analysis, or clean export.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I analyze long documents or books?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! The tool handles documents up to <strong>10-20MB</strong>, suitable for full-length books, comprehensive reports, and large documentation sets. Browser limitations vary—Chrome/Edge handle larger files than mobile Safari. For multi-megabyte documents, the "Compact" display style improves performance. Very deep hierarchies (6+ levels) can be limited using the "Max Depth" setting to maintain readability. Our <strong>bulk text structure visualizer online</strong> is optimized for professional document analysis.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does the tool show word counts for each section?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Enable <strong>"Show word counts"</strong> (on by default) to see character and word counts for every section in the visualization. This helps identify structural imbalances—sections that are disproportionately long or short compared to siblings. Visual bars also indicate relative length at a glance. These metrics are invaluable for editing: they reveal when topics receive inadequate or excessive coverage, when sections need splitting or combining, and when overall document balance needs adjustment.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my document content secure?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely. All analysis happens <strong>locally in your browser</strong>—your document content never uploads to our servers or leaves your device. You can verify this using browser DevTools (Network tab shows no data transfer). The tool works offline after initial loading. This client-side architecture is essential for analyzing confidential manuscripts, proprietary documentation, or sensitive legal texts. Our <strong>online text structure mapping tool free</strong> prioritizes your data privacy.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I export the structure map?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Click <strong>"Copy"</strong> to copy the current structure visualization to your clipboard (formatted as indented text), or <strong>"Download"</strong> to save it as a .txt file. These exports preserve the hierarchy and can be pasted into documents, emails, or project management tools. The export uses the current display settings—compact exports for overviews, detailed exports for comprehensive documentation. Exported structure maps serve as documentation, planning aids, or communication tools with editors and collaborators.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this tool completely free?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, our <strong>text structure visualizer online</strong> is completely <strong>free</strong> with no registration, usage limits, watermarks, or hidden fees. Use it for personal writing, commercial projects, or educational purposes without attribution. This is truly a <strong>free online text structure visualizer tool</strong>. The tool is supported by unobtrusive advertising. We believe structural analysis should be accessible to all writers and content creators.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Why is there a small delay when typing?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">We use <strong>debouncing</strong> for optimal performance. Without it, every keystroke would trigger immediate re-analysis, potentially causing lag with large documents. The brief delay (milliseconds) after you stop typing ensures smooth browser performance while processing your document structure. The "Auto-visualization enabled" indicator confirms the system is ready. This approach provides real-time feedback without sacrificing responsiveness, even for complex hierarchical analysis.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const outputContainer = document.getElementById('outputContainer');
+const emptyState = document.getElementById('emptyState');
+const structureTree = document.getElementById('structureTree');
+const inputStats = document.getElementById('inputStats');
+const outputStats = document.getElementById('outputStats');
+const processingTime = document.getElementById('processingTime');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+
+// Settings
+const headingDetection = document.getElementById('headingDetection');
+const maxDepth = document.getElementById('maxDepth');
+const lineLimit = document.getElementById('lineLimit');
+const displayStyle = document.getElementById('displayStyle');
+const showNumbers = document.getElementById('showNumbers');
+const showStats = document.getElementById('showStats');
+const collapseEmpty = document.getElementById('collapseEmpty');
+const colorCode = document.getElementById('colorCode');
+
+// Buttons
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const resetBtn = document.getElementById('resetBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+// Mode buttons
+const modeBtns = document.querySelectorAll('.method-btn');
+let currentMode = 'hierarchy';
+let currentStructure = [];
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Update input stats
+function updateInputStats() {
+  const text = inputText.value;
+  const chars = text.length;
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+  const paragraphs = text === '' ? 0 : text.split(/\n\s*\n/).filter(p => p.trim().length > 0).length;
+  inputStats.textContent = `Chars: ${chars} | Words: ${words} | Paragraphs: ${paragraphs}`;
+}
+
+// Debounce function
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Detect if line is a heading
+function isHeading(line, method, prevLine = '') {
+  const trimmed = line.trim();
+  if (!trimmed) return { isHeading: false, level: 0 };
+  
+  switch(method) {
+    case 'markdown':
+      const match = trimmed.match(/^(#{1,6})\s/);
+      if (match) {
+        return { isHeading: true, level: match[1].length, text: trimmed.replace(/^#+\s*/, '') };
+      }
+      break;
+    case 'html':
+      const htmlMatch = trimmed.match(/^<h([1-6])[>\s]/i);
+      if (htmlMatch) {
+        return { isHeading: true, level: parseInt(htmlMatch[1]), text: trimmed.replace(/<[^>]+>/g, '') };
+      }
+      break;
+    case 'caps':
+      if (trimmed.length > 3 && trimmed === trimmed.toUpperCase() && !trimmed.match(/^[\d\s\W]+$/)) {
+        return { isHeading: true, level: 2, text: trimmed };
+      }
+      break;
+    case 'indent':
+      const indent = line.match(/^(\s*)/)[1].length;
+      if (indent > 0 && trimmed.length < 100) {
+        return { isHeading: true, level: Math.min(Math.floor(indent / 2) + 1, 6), text: trimmed };
+      }
+      break;
+    case 'auto':
+      // Try markdown first
+      const mdMatch = trimmed.match(/^(#{1,6})\s/);
+      if (mdMatch) return { isHeading: true, level: mdMatch[1].length, text: trimmed.replace(/^#+\s*/, '') };
+      // Then HTML
+      const hMatch = trimmed.match(/^<h([1-6])[>\s]/i);
+      if (hMatch) return { isHeading: true, level: parseInt(hMatch[1]), text: trimmed.replace(/<[^>]+>/g, '') };
+      // Then caps
+      if (trimmed.length > 3 && trimmed.length < 80 && trimmed === trimmed.toUpperCase() && !trimmed.match(/^[\d\s\W]+$/)) {
+        return { isHeading: true, level: 2, text: trimmed };
+      }
+      break;
+  }
+  return { isHeading: false, level: 0 };
+}
+
+// Parse structure
+function parseStructure(text) {
+  const method = headingDetection.value;
+  const lines = text.split('\n');
+  const structure = [];
+  const stack = [{ level: 0, children: structure }];
+  let lineNum = 0;
+  
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    lineNum++;
+    const headingInfo = isHeading(line, method, i > 0 ? lines[i-1] : '');
+    
+    if (headingInfo.isHeading) {
+      const maxD = maxDepth.value === 'unlimited' ? 10 : parseInt(maxDepth.value);
+      let level = Math.min(headingInfo.level, maxD);
+      
+      // Find parent
+      while (stack.length > 1 && stack[stack.length - 1].level >= level) {
+        stack.pop();
+      }
+      
+      const node = {
+        type: 'heading',
+        level: level,
+        text: headingInfo.text,
+        line: lineNum,
+        wordCount: 0,
+        children: []
+      };
+      
+      stack[stack.length - 1].children.push(node);
+      stack.push({ level: level, children: node.children, node: node });
+    } else if (line.trim()) {
+      // Content line
+      if (stack.length > 1) {
+        stack[stack.length - 1].node.wordCount += line.trim().split(/\s+/).length;
+      } else {
+        // Root level content
+        if (structure.length === 0 || structure[structure.length - 1].type !== 'content') {
+          structure.push({
+            type: 'content',
+            level: 0,
+            text: 'Introduction',
+            line: lineNum,
+            wordCount: 0,
+            children: []
+          });
+        }
+        structure[structure.length - 1].wordCount += line.trim().split(/\s+/).length;
+      }
+    }
+  }
+  
+  // If no structure found, create paragraph-based structure
+  if (structure.length === 0 && text.trim()) {
+    const paragraphs = text.split(/\n\s*\n/).filter(p => p.trim());
+    paragraphs.forEach((para, idx) => {
+      structure.push({
+        type: 'paragraph',
+        level: 0,
+        text: para.trim().substring(0, 50) + (para.length > 50 ? '...' : ''),
+        line: idx + 1,
+        wordCount: para.trim().split(/\s+/).length,
+        children: []
+      });
+    });
+  }
+  
+  return structure;
+}
+
+// Calculate total words recursively
+function calculateTotalWords(node) {
+  let total = node.wordCount || 0;
+  if (node.children) {
+    node.children.forEach(child => {
+      total += calculateTotalWords(child);
+    });
+  }
+  return total;
+}
+
+// Get max depth
+function getMaxDepth(nodes, currentDepth = 0) {
+  let max = currentDepth;
+  nodes.forEach(node => {
+    if (node.children && node.children.length > 0) {
+      max = Math.max(max, getMaxDepth(node.children, currentDepth + 1));
+    }
+  });
+  return max;
+}
+
+// Render structure node
+function renderNode(node, index, totalSiblings, parentPrefix = '') {
+  const isLast = index === totalSiblings - 1;
+  const prefix = parentPrefix + (isLast ? '└── ' : '├── ');
+  const childPrefix = parentPrefix + (isLast ? '    ' : '│   ');
+  
+  let displayText = node.text || 'Untitled';
+  const limit = lineLimit.value === 'full' ? 1000 : parseInt(lineLimit.value);
+  if (displayText.length > limit) {
+    displayText = displayText.substring(0, limit) + '...';
+  }
+  
+  let stats = '';
+  if (showStats.checked) {
+    const totalWords = calculateTotalWords(node);
+    stats = ` [${totalWords}w]`;
+  }
+  
+  let lineNum = '';
+  if (showNumbers.checked && node.line) {
+    lineNum = ` L${node.line}`;
+  }
+  
+  const depth = node.level || 0;
+  const depthClass = `depth-${Math.min(depth, 3)}`;
+  
+  let result = '';
+  if (displayStyle.value !== 'minimal') {
+    result = `<div class="structure-node ${depthClass} pl-2 py-1 font-mono text-xs text-gray-300 hover:text-white cursor-pointer" onclick="navigator.clipboard.writeText('${escapeHtml(node.text || '')}'); this.style.background='rgba(34,197,94,0.2)'; setTimeout(()=>this.style.background='', 200)">${prefix}${escapeHtml(displayText)}<span class="text-gray-500">${stats}${lineNum}</span></div>`;
+  } else {
+    result = `<div class="structure-node ${depthClass} pl-2 py-0.5 font-mono text-xs text-gray-300">${prefix}${escapeHtml(displayText)}</div>`;
+  }
+  
+  if (node.children && node.children.length > 0 && (!collapseEmpty.checked || calculateTotalWords(node) > 0)) {
+    node.children.forEach((child, idx) => {
+      result += renderNode(child, idx, node.children.length, childPrefix);
+    });
+  }
+  
+  return result;
+}
+
+// Render flow view
+function renderFlow(structure) {
+  let result = '<div class="space-y-2">';
+  let sectionNum = 1;
+  
+  function renderFlowNode(node, depth = 0) {
+    const indent = '  '.repeat(depth);
+    const totalWords = calculateTotalWords(node);
+    const barWidth = Math.min((totalWords / 1000) * 100, 100);
+    
+    let html = `<div class="structure-node depth-${Math.min(depth, 3)} pl-${Math.min(depth * 2, 8)} py-2">`;
+    html += `<div class="flex items-center gap-2 text-xs">`;
+    html += `<span class="text-indigo-400 font-mono">${sectionNum++}.</span>`;
+    html += `<span class="text-gray-300">${escapeHtml(node.text || 'Untitled')}</span>`;
+    if (showStats.checked) {
+      html += `<span class="text-gray-500">(${totalWords} words)</span>`;
+    }
+    html += `</div>`;
+    
+    if (showStats.checked && barWidth > 5) {
+      html += `<div class="stat-bar w-32"><div class="stat-bar-fill" style="width: ${barWidth}%"></div></div>`;
+    }
+    html += `</div>`;
+    
+    if (node.children) {
+      node.children.forEach(child => {
+        html += renderFlowNode(child, depth + 1);
+      });
+    }
+    return html;
+  }
+  
+  structure.forEach(node => {
+    result += renderFlowNode(node);
+  });
+  
+  result += '</div>';
+  return result;
+}
+
+// Render statistics view
+function renderStats(structure) {
+  const totalNodes = structure.length;
+  const maxDepth = getMaxDepth(structure);
+  let totalWords = 0;
+  const levelCounts = {};
+  
+  function countStats(nodes) {
+    nodes.forEach(node => {
+      const words = calculateTotalWords(node);
+      totalWords += words;
+      const level = node.level || 0;
+      levelCounts[level] = (levelCounts[level] || 0) + 1;
+      if (node.children) countStats(node.children);
+    });
+  }
+  countStats(structure);
+  
+  let html = '<div class="space-y-4 text-xs">';
+  html += `<div class="glass-panel p-3 rounded"><div class="text-gray-400 mb-1">Total Sections</div><div class="text-xl font-bold text-white">${totalNodes}</div></div>`;
+  html += `<div class="glass-panel p-3 rounded"><div class="text-gray-400 mb-1">Maximum Depth</div><div class="text-xl font-bold text-white">${maxDepth} levels</div></div>`;
+  html += `<div class="glass-panel p-3 rounded"><div class="text-gray-400 mb-1">Total Words</div><div class="text-xl font-bold text-white">${totalWords.toLocaleString()}</div></div>`;
+  
+  html += '<div class="glass-panel p-3 rounded"><div class="text-gray-400 mb-2">Distribution by Level</div>';
+  Object.keys(levelCounts).sort().forEach(level => {
+    const count = levelCounts[level];
+    const pct = (count / totalNodes * 100).toFixed(1);
+    html += `<div class="flex items-center gap-2 mb-1"><span class="text-gray-500 w-16">Level ${level}</span><div class="flex-1 stat-bar"><div class="stat-bar-fill" style="width: ${pct}%"></div></div><span class="text-gray-400 w-12 text-right">${count}</span></div>`;
+  });
+  html += '</div>';
+  
+  html += '</div>';
+  return html;
+}
+
+// Escape HTML
+function escapeHtml(text) {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
+}
+
+// Visualize structure
+function visualizeStructure() {
+  const startTime = performance.now();
+  const text = inputText.value;
+  
+  if (!text.trim()) {
+    emptyState.classList.remove('hidden');
+    structureTree.classList.add('hidden');
+    outputStats.textContent = 'Sections: 0 | Depth: 0';
+    processingTime.textContent = '';
+    currentStructure = [];
+    return;
+  }
+  
+  currentStructure = parseStructure(text);
+  const maxD = getMaxDepth(currentStructure);
+  
+  let html = '';
+  if (currentMode === 'flow') {
+    html = renderFlow(currentStructure);
+  } else if (currentMode === 'stats') {
+    html = renderStats(currentStructure);
+  } else {
+    // hierarchy and outline modes
+    html = '<div class="font-mono text-xs">';
+    currentStructure.forEach((node, idx) => {
+      html += renderNode(node, idx, currentStructure.length);
+    });
+    html += '</div>';
+  }
+  
+  const endTime = performance.now();
+  
+  structureTree.innerHTML = html;
+  structureTree.classList.remove('hidden');
+  emptyState.classList.add('hidden');
+  
+  outputStats.textContent = `Sections: ${currentStructure.length} | Depth: ${maxD}`;
+  processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+}
+
+// Debounced version
+const debouncedVisualize = debounce(visualizeStructure, 100);
+
+// Mode button handlers
+modeBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    modeBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentMode = btn.dataset.mode;
+    visualizeStructure();
+  });
+});
+
+// Settings change handlers
+[headingDetection, maxDepth, lineLimit, displayStyle, showNumbers, showStats, collapseEmpty, colorCode].forEach(el => {
+  el.addEventListener('change', visualizeStructure);
+});
+
+// Drag and drop
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  if (!file.type.match('text.*') && !file.name.match(/\.(txt|md|doc|docx|html|xml|json)$/i)) {
+    alert('Please upload a text file');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    updateInputStats();
+    visualizeStructure();
+  };
+  reader.readAsText(file);
+}
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    updateInputStats();
+    visualizeStructure();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  updateInputStats();
+  visualizeStructure();
+  inputText.focus();
+}
+
+// Copy structure
+async function copyStructure() {
+  if (currentStructure.length === 0) return;
+  
+  const text = structureTree.innerText;
+  
+  try {
+    await navigator.clipboard.writeText(text);
+    const originalText = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalText;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+}
+
+// Download structure
+function downloadStructure() {
+  if (currentStructure.length === 0) return;
+  
+  const text = structureTree.innerText;
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'structure-map.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Reset all
+function resetAll() {
+  inputText.value = '';
+  headingDetection.value = 'auto';
+  maxDepth.value = '3';
+  lineLimit.value = '80';
+  displayStyle.value = 'compact';
+  showNumbers.checked = true;
+  showStats.checked = true;
+  collapseEmpty.checked = true;
+  colorCode.checked = true;
+  
+  modeBtns.forEach(b => b.classList.remove('active'));
+  document.querySelector('[data-mode="hierarchy"]').classList.add('active');
+  currentMode = 'hierarchy';
+  
+  updateInputStats();
+  visualizeStructure();
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Event listeners
+inputText.addEventListener('input', () => {
+  updateInputStats();
+  debouncedVisualize();
+});
+
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+copyBtn.addEventListener('click', copyStructure);
+downloadBtn.addEventListener('click', downloadStructure);
+resetBtn.addEventListener('click', resetAll);
+
+// Initialize
+updateInputStats();
+</script>
+</body>
+</html>

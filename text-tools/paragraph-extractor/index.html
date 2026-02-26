@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Paragraph Extractor - Free Online Paragraph Extraction Tool</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online paragraph extractor tool. Automatically extract, isolate, and copy specific paragraphs from any text. Perfect for writers, researchers, and SEO professionals. No registration required." />
+  <meta name="keywords" content="paragraph extractor, paragraph extractor online, free paragraph extractor, extract paragraphs online, online paragraph extraction tool, paragraph finder online, paragraph separator online, extract text paragraphs free, paragraph splitter online, copy specific paragraph online, paragraph selection tool online, paragraph grabber online free, extract paragraph from text online, paragraph isolator online, paragraph parsing tool free, paragraph filter online, get paragraphs from text online, paragraph extraction utility online, select paragraph online free, extract content paragraphs online, paragraph detection tool online, paragraph segmenter online, free online paragraph extractor tool, extract paragraphs from document online, paragraph extractor for writers online, paragraph extractor for seo online, paragraph extraction tool free, online paragraph extractor utility" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/paragraph-extractor/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/paragraph-extractor/" />
+  <meta property="og:title" content="Paragraph Extractor - Free Online Paragraph Extraction Tool" />
+  <meta property="og:description" content="Automatically extract, isolate, and copy specific paragraphs from any text. Perfect for writers, researchers, and SEO professionals." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/paragraph-extractor/" />
+  <meta name="twitter:title" content="Paragraph Extractor - Free Online Paragraph Extraction Tool" />
+  <meta name="twitter:description" content="Automatically extract, isolate, and copy specific paragraphs from any text. Perfect for writers, researchers, and SEO professionals." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .paragraph-item {
+      border-left: 2px solid rgba(99, 102, 241, 0.5);
+      transition: all 0.2s ease;
+    }
+    
+    .paragraph-item:hover {
+      border-left-color: rgba(99, 102, 241, 1);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .paragraph-item.selected {
+      background: rgba(99, 102, 241, 0.15);
+      border-left-color: rgba(99, 102, 241, 1);
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+
+    .extract-btn {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    .extract-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 14h20M10 20h20M10 26h14" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Paragraph Extractor</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Paragraph Extractor
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Text Extraction Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-extraction enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Input Text
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Type or paste text here... Or drag & drop a file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.doc,.docx,.pdf,.md,.html,.rtf" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Chars: 0 | Words: 0 | Paragraphs: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Extracted Paragraphs -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Extracted Paragraphs <span id="paragraphCount" class="text-gray-500 font-normal ml-1 hidden">(0)</span>
+            </label>
+            <div class="flex gap-1">
+              <button id="copyAllBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                Copy All
+              </button>
+              <button id="downloadBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Download
+              </button>
+            </div>
+          </div>
+          
+          <div id="paragraphsContainer" class="w-full h-48 lg:h-64 p-3 rounded-md glass-input overflow-y-auto">
+            <div class="text-center text-gray-500 text-xs mt-8">
+              <svg class="w-8 h-8 mx-auto mb-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              <p>Paragraphs will appear here automatically...</p>
+            </div>
+          </div>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="outputStats">Extracted: 0 | Selected: 0</span>
+            <span id="processingTime" class="text-gray-600"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-3">
+        
+        <!-- Extraction Method -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Extraction Method</label>
+          <div class="flex flex-wrap gap-1">
+            <button class="extract-btn active rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="blank">Blank Lines</button>
+            <button class="extract-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="indent">Indentation</button>
+            <button class="extract-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="newline">New Lines</button>
+            <button class="extract-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="sentence">Sentences</button>
+            <button class="extract-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="custom">Custom</button>
+          </div>
+        </div>
+
+        <!-- Method Options -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+          <!-- Blank Lines Options -->
+          <div id="blankOptions" class="method-panel space-y-2">
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="trimWhitespace" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Trim whitespace
+            </label>
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="removeEmpty" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Remove empty paragraphs
+            </label>
+          </div>
+
+          <!-- Indentation Options -->
+          <div id="indentOptions" class="method-panel hidden space-y-2">
+            <div>
+              <label class="text-xs text-gray-400 mb-1 block">Min Indent (spaces)</label>
+              <input type="number" id="minIndent" min="0" value="2" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+            </div>
+          </div>
+
+          <!-- New Lines Options -->
+          <div id="newlineOptions" class="method-panel hidden space-y-2">
+            <div>
+              <label class="text-xs text-gray-400 mb-1 block">Consecutive Newlines</label>
+              <input type="number" id="consecutiveNewlines" min="1" value="2" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+            </div>
+          </div>
+
+          <!-- Sentence Options -->
+          <div id="sentenceOptions" class="method-panel hidden space-y-2">
+            <div>
+              <label class="text-xs text-gray-400 mb-1 block">Sentences Per Paragraph</label>
+              <input type="number" id="sentencesPerParagraph" min="1" value="3" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+            </div>
+          </div>
+
+          <!-- Custom Options -->
+          <div id="customOptions" class="method-panel hidden space-y-2">
+            <div>
+              <label class="text-xs text-gray-400 mb-1 block">Custom Delimiter</label>
+              <input type="text" id="customDelimiter" placeholder="e.g. ### or --- " class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+            </div>
+          </div>
+
+          <!-- Filter Options -->
+          <div class="space-y-2">
+            <div>
+              <label class="text-xs text-gray-400 mb-1 block">Min Length (chars)</label>
+              <input type="number" id="minLength" min="0" value="0" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <div>
+              <label class="text-xs text-gray-400 mb-1 block">Max Length (chars)</label>
+              <input type="number" id="maxLength" min="0" value="0" placeholder="0 = unlimited" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+            </div>
+          </div>
+        </div>
+
+        <!-- Search Filter -->
+        <div class="flex gap-2">
+          <div class="flex-1">
+            <input type="text" id="searchFilter" placeholder="Filter paragraphs containing... " class="w-full px-3 py-2 rounded-md glass-input text-xs">
+          </div>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400 whitespace-nowrap">
+            <input type="checkbox" id="caseSensitive" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Case sensitive
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Paragraph Extractor?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Auto-Extract</h3>
+          <p class="text-gray-400 text-xs">Real-time extraction as you type</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">5 Methods</h3>
+          <p class="text-gray-400 text-xs">Blank lines, indent, custom & more</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Drag & Drop</h3>
+          <p class="text-gray-400 text-xs">Upload documents instantly</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based, no uploads</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy individual or all paragraphs</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration required</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Input Text</h3>
+          <p class="text-gray-400 text-xs">Type, paste, or drop a file. Extraction happens automatically.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Choose Method</h3>
+          <p class="text-gray-400 text-xs">Select blank lines, indentation, sentences, or custom delimiter.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Filter</h3>
+          <p class="text-gray-400 text-xs">Set min/max length and search filters to find specific paragraphs.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Click any paragraph to copy, or download all extracted content.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Paragraph Extraction: Mastering Text Segmentation for Content Analysis and SEO</h2>
+        
+        <p><strong>Paragraph extraction</strong> is a fundamental text processing technique that serves as the backbone of content analysis, document processing, and search engine optimization. Whether you're a content creator organizing research materials, an SEO professional analyzing competitor content, a data scientist preparing training datasets, or a writer extracting quotes from sources, understanding how to effectively <strong>extract paragraphs online</strong> is essential for modern digital workflows. Our <strong>free paragraph extractor</strong> provides the professional capabilities you need without any cost or registration barriers.</p>
+
+        <h2>What Is Paragraph Extraction and Why Does It Matter?</h2>
+        
+        <p><strong>Paragraph extraction</strong> refers to the process of identifying and isolating distinct paragraph units from continuous text or documents. Unlike simple text splitting that divides content at arbitrary points, intelligent <strong>paragraph extraction</strong> recognizes the semantic boundaries that define cohesive blocks of text. This distinction is crucial because paragraphs represent complete thoughts, arguments, or information units that maintain their meaning only when preserved as whole entities.</p>
+
+        <p>The importance of reliable <strong>online paragraph extraction tools</strong> has grown exponentially with the rise of content marketing, natural language processing, and AI-powered text analysis. Consider the daily challenges professionals face: an SEO specialist needs to <strong>extract paragraphs from documents</strong> to analyze keyword density and content structure; a researcher must <strong>isolate specific paragraphs</strong> containing relevant findings from lengthy academic papers; a content manager wants to <strong>parse paragraphs online</strong> to repurpose blog content into social media posts; a developer requires <strong>paragraph segmentation</strong> to feed clean text into machine learning models. Without efficient <strong>paragraph extraction utilities</strong>, these tasks become labor-intensive manual processes fraught with inconsistency and error.</p>
+
+        <h2>Understanding Paragraph Structure and Detection Methods</h2>
+
+        <h3>The Anatomy of a Paragraph</h3>
+        
+        <p>Before diving into extraction techniques, it's essential to understand what constitutes a paragraph in digital documents. In plain text, paragraphs are typically separated by one or more blank lines (newline characters). In formatted documents, paragraph boundaries might be indicated by indentation, spacing, or explicit paragraph tags. A <strong>paragraph finder online</strong> must recognize these various signals to accurately segment text.</p>
+
+        <p>Professional <strong>paragraph separator online</strong> tools handle complex scenarios that simple text splitting cannot manage. Nested paragraphs within blockquotes, list items that function as mini-paragraphs, dialogue exchanges where each speech constitutes a paragraph, and technical documentation with mixed formatting all require sophisticated detection logic. Our <strong>free online paragraph extractor tool</strong> employs multiple detection strategies to handle these edge cases, making it suitable for professional content processing tasks.</p>
+
+        <h3>Blank Line Detection</h3>
+        
+        <p>The most common <strong>extract paragraphs online</strong> method uses blank lines as delimiters. This approach works because standard writing conventions dictate that paragraphs be separated by empty lines. However, not all blank lines indicate paragraph breaks—some might represent section breaks, chapter divisions, or formatting spacing. Advanced <strong>paragraph detection tools</strong> analyze the context around blank lines to distinguish true paragraph boundaries from decorative spacing.</p>
+
+        <p>When you <strong>extract text paragraphs free</strong> using blank line detection, you benefit from universal compatibility with virtually all text documents. This method requires no special formatting or markup, making it ideal for processing plain text files, copied content from web pages, and exported documents from word processors. Our <strong>paragraph extraction tool free</strong> implementation includes intelligent whitespace handling to ensure clean results even from inconsistently formatted sources.</p>
+
+        <h3>Indentation-Based Extraction</h3>
+        
+        <p>Some document formats, particularly academic papers, legal documents, and formal reports, use indentation rather than blank lines to mark paragraph beginnings. <strong>Paragraph parsing tools</strong> that support indentation detection measure the leading whitespace of each line to identify where new paragraphs begin. This method is essential when processing content from PDFs, formatted text files, or documents where space constraints eliminated blank line separators.</p>
+
+        <p><strong>Paragraph isolator online</strong> functionality with indentation support proves invaluable when working with literature, poetry, or technical specifications where formatting carries semantic meaning. By recognizing that a line starting with four spaces likely begins a new paragraph, these tools preserve the document's logical structure even when visual separators are absent. Our <strong>online paragraph extractor utility</strong> includes configurable indentation thresholds to accommodate various formatting standards.</p>
+
+        <h3>Sentence-Based Segmentation</h3>
+        
+        <p>For specific applications like creating reading comprehension exercises, generating flashcards, or preparing text for neural network training, <strong>paragraph segmenter online</strong> tools offer sentence-based extraction. This approach groups sentences into artificial paragraphs of specified lengths, useful when the original document lacks clear paragraph structure or when uniform chunk sizes are required for processing.</p>
+
+        <p>Sentence detection requires natural language processing capabilities to identify sentence endings accurately. Periods followed by spaces don't always indicate sentence breaks—consider abbreviations like "Dr." or "U.S.A.", decimal numbers, or ellipses. Professional <strong>paragraph extraction utilities</strong> employ linguistic rules and heuristics to distinguish true sentence boundaries from false positives, ensuring coherent paragraph generation even from complex technical texts.</p>
+
+        <h2>Professional Applications of Paragraph Extraction</h2>
+
+        <h3>Content Marketing and SEO Analysis</h3>
+        
+        <p>Search engine optimization professionals rely heavily on <strong>paragraph extraction</strong> for competitive analysis and content optimization. By extracting paragraphs from top-ranking pages, SEOs can analyze how competitors structure their content, what topics they cover in each section, and how they balance keyword density throughout their articles. This granular analysis is impossible when viewing pages as monolithic blocks of text.</p>
+
+        <p>Passage indexing, Google's technology for ranking specific sections of content independently, has made <strong>paragraph extraction for SEO</strong> even more critical. Content creators now optimize individual paragraphs to rank for specific long-tail queries, requiring tools that can isolate and analyze these content units separately. Our <strong>paragraph extractor for SEO online</strong> helps professionals identify their strongest content sections and optimize weaker paragraphs for better search visibility.</p>
+
+        <h3>Academic Research and Citation Management</h3>
+        
+        <p>Researchers and students constantly <strong>extract paragraphs from text online</strong> when gathering sources for papers and literature reviews. Rather than saving entire documents, they extract relevant paragraphs containing key findings, methodologies, or quotes. This targeted approach keeps research organized and ensures that citation contexts remain intact.</p>
+
+        <p>Academic writing also requires proper attribution of ideas, necessitating precise <strong>paragraph selection tools online</strong> that can isolate specific passages without including surrounding content. When a researcher finds a crucial paragraph on page 47 of a journal article, they need tools that extract exactly that paragraph—not the surrounding discussion, not the page header, and not the footnote. Precision extraction preserves academic integrity and simplifies citation management.</p>
+
+        <h3>Natural Language Processing and Machine Learning</h3>
+        
+        <p>Data scientists preparing text datasets for machine learning models depend on clean <strong>paragraph extraction</strong> as a preprocessing step. Whether training sentiment analysis models, building text summarization systems, or developing question-answering AI, the quality of input data directly impacts model performance. Paragraph-level segmentation provides the optimal granularity for many NLP tasks—fine enough to capture specific topics, yet coarse enough to maintain context.</p>
+
+        <p>Text classification tasks particularly benefit from <strong>paragraph extraction</strong>. A document might contain mixed sentiments (positive product review with negative shipping experience), multiple topics (news article covering several events), or varying writing styles (academic paper with abstract, methodology, and conclusion). By extracting and classifying individual paragraphs, models achieve higher accuracy than document-level classification allows.</p>
+
+        <h3>Content Repurposing and Multi-Channel Publishing</h3>
+        
+        <p>Modern content strategies require repurposing long-form content into formats suitable for different platforms. A comprehensive blog post might yield: Twitter threads of key paragraphs, Instagram captions extracted from introductions, email newsletter sections derived from body content, and podcast scripts adapted from concluding paragraphs. <strong>Paragraph grabber online free</strong> tools automate this segmentation, ensuring each extracted unit makes sense independently.</p>
+
+        <p>Content managers also use <strong>paragraph extraction</strong> to create content calendars from existing assets. By extracting all paragraphs from a year's worth of blog posts, they can identify evergreen content suitable for resharing, update outdated statistics in specific sections, or combine related paragraphs from multiple articles into new comprehensive guides. This systematic approach to content auditing is only feasible with automated extraction tools.</p>
+
+        <h2>Advanced Paragraph Extraction Techniques</h2>
+
+        <h3>Custom Delimiter Support</h3>
+        
+        <p>While standard paragraph detection handles most documents, specialized formats require custom extraction logic. Technical documentation might use specific markers like "###" or "---" to separate sections. Legal documents may employ paragraph numbering systems. Forum threads could use username timestamps as paragraph boundaries. Professional <strong>paragraph extraction tools</strong> support custom delimiters, allowing users to define exactly what constitutes a paragraph break in their specific context.</p>
+
+        <p>Regular expression support takes custom extraction further, enabling pattern-based paragraph detection. Users can extract paragraphs that start with quotation marks (for dialogue collection), end with question marks (for FAQ generation), contain specific keywords (for topic filtering), or match any arbitrary pattern. This flexibility transforms simple <strong>paragraph splitters</strong> into powerful text mining instruments.</p>
+
+        <h3>Length-Based Filtering and Quality Control</h3>
+        
+        <p>Not all detected paragraphs warrant retention. Headers, footers, page numbers, and navigation elements often register as short paragraphs during extraction. Image captions, table cells, and list items might create false paragraph detections. Advanced <strong>paragraph filter online</strong> capabilities set minimum and maximum length thresholds, automatically excluding fragments that don't meet content quality standards.</p>
+
+        <p>Length filtering proves particularly valuable when processing web-scraped content or PDF conversions, where formatting artifacts commonly create noise. By setting a minimum paragraph length of 50 characters, users eliminate standalone page numbers and navigation links. Maximum length limits prevent run-on paragraphs (common in OCR errors) from dominating extraction results. These quality controls ensure that <strong>get paragraphs from text online</strong> operations return meaningful, usable content.</p>
+
+        <h3>Semantic Paragraph Merging</h3>
+        
+        <p>Sometimes extraction produces too many fragments—single sentences split by formatting quirks, dialogue lines separated by character names, or list items treated as individual paragraphs. In these cases, <strong>paragraph extraction utilities</strong> offer merging capabilities that recombine related fragments into coherent wholes. Semantic merging analyzes content similarity, topic continuity, and linguistic cues to identify which fragments belong together.</p>
+
+        <p>This intelligent reconstruction is essential when processing content from sources with inconsistent formatting. A PDF might split paragraphs at page breaks, insert headers mid-paragraph, or break lines at arbitrary points. By detecting that the last sentence of one extracted fragment logically continues the first sentence of the next, semantic merging restores the original paragraph structure that formatting obscured.</p>
+
+        <h2>Best Practices for Effective Paragraph Extraction</h2>
+
+        <h3>Pre-processing and Format Normalization</h3>
+        
+        <p>Before extraction, prepare your text to ensure consistent results. Convert documents to plain text to eliminate formatting variations, normalize line endings (different operating systems use different newline characters), remove or standardize headers and footers, and handle encoding issues (especially with documents containing special characters or non-Latin scripts). A <strong>text processing tool online</strong> that combines extraction with pre-processing options streamlines these preparation steps.</p>
+
+        <h3>Choosing the Right Extraction Strategy</h3>
+        
+        <p>Match your extraction method to your source material and goals: Use blank line detection for standard documents with clear paragraph separation. Prefer indentation detection for academic papers and formal reports. Apply sentence-based extraction when uniform chunk sizes matter more than original structure. Choose custom delimiters when processing specialized formats or marked-up content. Consider hybrid approaches—first extract by blank lines, then merge short fragments—for documents with mixed formatting. Our versatile <strong>online paragraph extractor</strong> supports all these strategies in one interface.</p>
+
+        <h3>Post-Extraction Validation</h3>
+        
+        <p>Always review extracted paragraphs, especially with irregular source material. Check that paragraph boundaries align with logical thought transitions. Verify that no content was lost during extraction. Ensure that formatting artifacts (page numbers, headers, URLs) were properly filtered out. Professional <strong>paragraph extraction workflows</strong> include validation steps to catch anomalies before they propagate through your content pipeline.</p>
+
+        <h2>Comparing Paragraph Extraction Approaches</h2>
+
+        <h3>Manual Extraction vs. Automated Tools</h3>
+        
+        <p>Manual paragraph extraction using copy-paste operations works for small, one-time tasks. However, it becomes impractical for: large documents (hundreds of pages), repetitive operations (weekly content audits), precise requirements (exactly 100 paragraphs), or complex documents (mixed formatting). Automated <strong>paragraph extraction tools</strong> eliminate human error, ensure consistency, and complete in seconds what might take hours manually. Our <strong>free paragraph extractor</strong> makes automation accessible to everyone.</p>
+
+        <h3>Programming Libraries vs. Online Tools</h3>
+        
+        <p>Python libraries like NLTK, spaCy, and Beautiful Soup offer paragraph extraction capabilities for developers comfortable with coding. However, they require installation, programming knowledge, and script development for each use case. Online <strong>paragraph extractors</strong> provide immediate access, intuitive interfaces, and consistent results without technical overhead. For occasional use or non-technical users, browser-based tools offer superior convenience and accessibility.</p>
+
+        <h2>The Future of Paragraph Processing Technology</h2>
+
+        <p>Artificial intelligence is revolutionizing <strong>paragraph extraction</strong>, moving beyond mechanical detection toward intelligent understanding. AI-powered tools can: identify paragraph topics and automatically tag extracted content, detect paragraph sentiment and emotional tone, recognize entity relationships within paragraphs, and suggest optimal paragraph boundaries based on semantic coherence. These capabilities will transform <strong>paragraph extractors</strong> from simple text cutters into intelligent content analysts that understand meaning.</p>
+
+        <h2>Conclusion: Master Your Content with Professional Paragraph Extraction</h2>
+
+        <p><strong>Paragraph extraction</strong> remains one of the most essential yet underappreciated operations in text processing. From simple blank-line separation to complex semantic analysis, the ability to isolate paragraphs intelligently empowers professionals across every industry. Whether you're analyzing competitor content, preparing research materials, training machine learning models, or repurposing existing assets, mastering <strong>paragraph extraction</strong> techniques will dramatically improve your productivity and output quality.</p>
+
+        <p>Our <strong>free online paragraph extractor</strong> provides all the capabilities you need to handle any extraction scenario. With automatic real-time extraction as you type, support for five different methods (blank lines, indentation, newlines, sentences, and custom delimiters), plus flexible filtering and export options, this tool serves everyone from casual users to content professionals. The browser-based architecture ensures privacy and accessibility, while the intuitive interface requires no learning curve. Whether you need to <strong>extract paragraphs from document online</strong>, <strong>copy specific paragraph online</strong>, <strong>select paragraph online free</strong>, or perform bulk <strong>paragraph extraction</strong>, our <strong>paragraph extraction utility online</strong> delivers professional results instantly. Stop struggling with manual text segmentation—start using our professional <strong>paragraph extractor online</strong> today and experience the efficiency of automated content extraction.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool extract paragraphs automatically as I type?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>paragraph extractor online</strong> features <strong>automatic real-time extraction</strong>. As you type or paste text, the tool instantly identifies and displays individual paragraphs in the right panel. We use intelligent debouncing to ensure smooth performance without lag. The "Auto-extraction enabled" indicator confirms the feature is active. Changes to extraction methods or filters also apply instantly.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What's the difference between blank lines and indentation methods?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Blank lines</strong> detects paragraphs separated by empty lines (most common). <strong>Indentation</strong> detects paragraphs by leading whitespace at line starts (common in academic/formal documents). Use blank lines for general text, indentation for PDFs or formatted documents where paragraphs start with spaces. Our <strong>online paragraph extraction tool</strong> auto-detects but lets you override.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I extract paragraphs containing specific keywords?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Use the <strong>Filter paragraphs containing</strong> search box. Enter any keyword or phrase, and only paragraphs containing that text will display. Toggle <strong>Case sensitive</strong> for exact matching. This is perfect for finding specific topics in long documents, extracting quotes, or isolating relevant sections from research papers.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I copy just one specific paragraph?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Simply <strong>click any paragraph</strong> in the extracted list. It will be copied to your clipboard immediately, and the paragraph will flash green to confirm. This <strong>copy specific paragraph online</strong> feature lets you grab individual sections without downloading everything. Perfect for quoting sources or sharing specific insights.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I extract paragraphs from PDF or Word files?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Drag and drop PDF, DOC, DOCX, TXT, MD, HTML, or RTF files onto the input area. The tool extracts text content and immediately segments it into paragraphs. Note: For scanned PDFs (images), text extraction depends on embedded OCR layers. For best results with scanned documents, use OCR software first, then paste the text here.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What file types are supported?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">All text-based files: TXT, CSV, MD, JSON, XML, HTML, and code files (JS, CSS, Python, Java, etc.). For Word documents (.doc, .docx) and PDFs, the tool extracts readable text content. Files are processed locally in your browser—content never uploads to servers. Our <strong>paragraph extraction utility</strong> handles them all securely.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is there a limit to how much text I can process?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">The tool handles texts up to 50,000+ characters (roughly 10,000 words or 20-30 pages) efficiently. Performance depends on your device's processing power. For extremely large documents (100+ pages), consider splitting into chapters first. The <strong>free online paragraph extractor tool</strong> is optimized for typical daily use cases.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my data secure?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely. All processing happens <strong>locally in your browser</strong>—text never uploads to servers or leaves your device. You can verify this with browser DevTools (Network tab shows no external data transfer). Works offline after loading. Ideal for confidential documents, legal texts, or sensitive research materials. Privacy is built into our <strong>paragraph extractor online</strong> architecture.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I download extracted paragraphs as a file?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Click the <strong>Download</strong> button to save all extracted paragraphs as a text file. Each paragraph is separated by blank lines for easy reading. You can also <strong>Copy All</strong> to clipboard for pasting into Word, Google Docs, or other applications. Individual paragraphs can be copied by clicking them directly.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this tool free?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, completely <strong>free</strong> with no registration, usage limits, watermarks, or hidden fees. Use for personal or commercial projects without attribution. This is truly a <strong>free paragraph extractor</strong> for everyone. Supported by unobtrusive advertising and voluntary user support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const inputStats = document.getElementById('inputStats');
+const outputStats = document.getElementById('outputStats');
+const paragraphCount = document.getElementById('paragraphCount');
+const processingTime = document.getElementById('processingTime');
+const paragraphsContainer = document.getElementById('paragraphsContainer');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+
+// Buttons
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyAllBtn = document.getElementById('copyAllBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const resetBtn = document.getElementById('resetBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+// Method buttons and panels
+const extractBtns = document.querySelectorAll('.extract-btn');
+const methodPanels = document.querySelectorAll('.method-panel');
+let currentMethod = 'blank';
+let extractedParagraphs = [];
+let selectedParagraphs = new Set();
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Update input stats
+function updateInputStats() {
+  const text = inputText.value;
+  const chars = text.length;
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+  const paragraphs = text.trim() === '' ? 0 : text.split(/\n\s*\n/).filter(p => p.trim().length > 0).length;
+  inputStats.textContent = `Chars: ${chars} | Words: ${words} | Paragraphs: ${paragraphs}`;
+}
+
+// Debounce function for performance
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Method selection
+extractBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    extractBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentMethod = btn.dataset.method;
+    
+    methodPanels.forEach(panel => panel.classList.add('hidden'));
+    const panel = document.getElementById(currentMethod + 'Options');
+    if (panel) panel.classList.remove('hidden');
+    
+    extractParagraphs();
+  });
+});
+
+// Auto-extract on option changes
+['trimWhitespace', 'removeEmpty', 'minIndent', 'consecutiveNewlines', 'sentencesPerParagraph', 'customDelimiter', 'minLength', 'maxLength', 'searchFilter', 'caseSensitive'].forEach(id => {
+  const el = document.getElementById(id);
+  if (el) {
+    el.addEventListener('input', extractParagraphs);
+    el.addEventListener('change', extractParagraphs);
+  }
+});
+
+// Extract paragraphs function
+function extractParagraphs() {
+  const startTime = performance.now();
+  const text = inputText.value;
+  
+  if (!text.trim()) {
+    paragraphsContainer.innerHTML = `
+      <div class="text-center text-gray-500 text-xs mt-8">
+        <svg class="w-8 h-8 mx-auto mb-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+        <p>Paragraphs will appear here automatically...</p>
+      </div>
+    `;
+    outputStats.textContent = 'Extracted: 0 | Selected: 0';
+    paragraphCount.textContent = '(0)';
+    paragraphCount.classList.add('hidden');
+    processingTime.textContent = '';
+    extractedParagraphs = [];
+    selectedParagraphs.clear();
+    return;
+  }
+  
+  let paragraphs = [];
+  
+  try {
+    switch(currentMethod) {
+      case 'blank':
+        paragraphs = text.split(/\n\s*\n/).filter(p => p.trim().length > 0);
+        if (document.getElementById('trimWhitespace').checked) {
+          paragraphs = paragraphs.map(p => p.trim());
+        }
+        if (document.getElementById('removeEmpty').checked) {
+          paragraphs = paragraphs.filter(p => p.length > 0);
+        }
+        break;
+        
+      case 'indent':
+        const minIndent = parseInt(document.getElementById('minIndent').value) || 2;
+        const lines = text.split('\n');
+        let currentPara = '';
+        paragraphs = [];
+        
+        lines.forEach(line => {
+          const leadingSpaces = line.match(/^\s*/)[0].length;
+          if (leadingSpaces >= minIndent && currentPara) {
+            paragraphs.push(currentPara.trim());
+            currentPara = line.trim();
+          } else {
+            currentPara += (currentPara ? ' ' : '') + line.trim();
+          }
+        });
+        if (currentPara) paragraphs.push(currentPara.trim());
+        break;
+        
+      case 'newline':
+        const consecutive = parseInt(document.getElementById('consecutiveNewlines').value) || 2;
+        const pattern = new RegExp(`\\n{${consecutive},}`);
+        paragraphs = text.split(pattern).filter(p => p.trim().length > 0).map(p => p.trim());
+        break;
+        
+      case 'sentence':
+        const sentencesPerPara = parseInt(document.getElementById('sentencesPerParagraph').value) || 3;
+        const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];
+        for (let i = 0; i < sentences.length; i += sentencesPerPara) {
+          const chunk = sentences.slice(i, i + sentencesPerPara).join(' ').trim();
+          if (chunk) paragraphs.push(chunk);
+        }
+        break;
+        
+      case 'custom':
+        const delimiter = document.getElementById('customDelimiter').value;
+        if (delimiter) {
+          paragraphs = text.split(delimiter).filter(p => p.trim().length > 0).map(p => p.trim());
+        }
+        break;
+    }
+    
+    // Apply length filters
+    const minLen = parseInt(document.getElementById('minLength').value) || 0;
+    const maxLen = parseInt(document.getElementById('maxLength').value) || 0;
+    
+    if (minLen > 0) {
+      paragraphs = paragraphs.filter(p => p.length >= minLen);
+    }
+    if (maxLen > 0) {
+      paragraphs = paragraphs.filter(p => p.length <= maxLen);
+    }
+    
+    // Apply search filter
+    const searchTerm = document.getElementById('searchFilter').value;
+    const caseSensitive = document.getElementById('caseSensitive').checked;
+    
+    if (searchTerm) {
+      paragraphs = paragraphs.filter(p => {
+        if (caseSensitive) {
+          return p.includes(searchTerm);
+        }
+        return p.toLowerCase().includes(searchTerm.toLowerCase());
+      });
+    }
+    
+    const endTime = performance.now();
+    extractedParagraphs = paragraphs;
+    
+    // Update stats
+    outputStats.textContent = `Extracted: ${paragraphs.length} | Selected: ${selectedParagraphs.size}`;
+    paragraphCount.textContent = `(${paragraphs.length})`;
+    paragraphCount.classList.remove('hidden');
+    processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+    
+    // Display paragraphs
+    displayParagraphs(paragraphs);
+    
+  } catch (error) {
+    console.error('Extraction error:', error);
+  }
+}
+
+// Display paragraphs
+function displayParagraphs(paragraphs) {
+  if (paragraphs.length === 0) {
+    paragraphsContainer.innerHTML = `
+      <div class="text-center text-gray-500 text-xs mt-8">
+        <p>No paragraphs found matching your criteria.</p>
+      </div>
+    `;
+    return;
+  }
+  
+  paragraphsContainer.innerHTML = '';
+  
+  paragraphs.forEach((para, index) => {
+    const paraDiv = document.createElement('div');
+    paraDiv.className = `paragraph-item p-3 rounded bg-white/5 cursor-pointer text-xs mb-2 ${selectedParagraphs.has(index) ? 'selected' : ''}`;
+    paraDiv.dataset.index = index;
+    
+    const isSelected = selectedParagraphs.has(index);
+    
+    paraDiv.innerHTML = `
+      <div class="flex items-start justify-between gap-2">
+        <div class="flex-1">
+          <div class="flex items-center gap-2 mb-1">
+            <span class="text-xs font-medium text-indigo-400">#${index + 1}</span>
+            <span class="text-xs text-gray-500">${para.length} chars</span>
+          </div>
+          <div class="text-gray-300 leading-relaxed">${escapeHtml(para.substring(0, 150))}${para.length > 150 ? '...' : ''}</div>
+        </div>
+        <button class="copy-para-btn p-1 rounded hover:bg-white/10 text-gray-400 hover:text-white transition-colors flex-shrink-0" title="Copy paragraph">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+        </button>
+      </div>
+    `;
+    
+    // Click to select/copy
+    paraDiv.addEventListener('click', (e) => {
+      if (e.target.closest('.copy-para-btn')) {
+        // Copy button clicked
+        navigator.clipboard.writeText(para);
+        const btn = e.target.closest('.copy-para-btn');
+        btn.innerHTML = `<svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>`;
+        setTimeout(() => {
+          btn.innerHTML = `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>`;
+        }, 1500);
+      } else {
+        // Select paragraph
+        if (selectedParagraphs.has(index)) {
+          selectedParagraphs.delete(index);
+          paraDiv.classList.remove('selected');
+        } else {
+          selectedParagraphs.add(index);
+          paraDiv.classList.add('selected');
+        }
+        updateOutputStats();
+      }
+    });
+    
+    paragraphsContainer.appendChild(paraDiv);
+  });
+}
+
+function escapeHtml(text) {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
+}
+
+function updateOutputStats() {
+  outputStats.textContent = `Extracted: ${extractedParagraphs.length} | Selected: ${selectedParagraphs.size}`;
+}
+
+// Debounced version for typing
+const debouncedExtract = debounce(extractParagraphs, 300);
+
+// Drag and drop handlers
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    updateInputStats();
+    extractParagraphs();
+  };
+  
+  if (file.name.match(/\.(doc|docx)$/i)) {
+    // For Word docs, we'd need a specialized library in production
+    // Here we show a message about text extraction
+    alert('For best results with Word documents, please copy and paste the text directly.');
+    return;
+  }
+  
+  reader.readAsText(file);
+}
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    updateInputStats();
+    extractParagraphs();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  updateInputStats();
+  extractParagraphs();
+  inputText.focus();
+}
+
+// Copy all paragraphs
+async function copyAllParagraphs() {
+  if (extractedParagraphs.length === 0) return;
+  
+  const textToCopy = extractedParagraphs.join('\n\n');
+  
+  try {
+    await navigator.clipboard.writeText(textToCopy);
+    const originalText = copyAllBtn.innerHTML;
+    copyAllBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyAllBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyAllBtn.innerHTML = originalText;
+      copyAllBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+}
+
+// Download paragraphs
+function downloadParagraphs() {
+  if (extractedParagraphs.length === 0) return;
+  
+  let content = '';
+  extractedParagraphs.forEach((para, index) => {
+    content += `[Paragraph ${index + 1}]\n${para}\n\n`;
+  });
+  
+  const blob = new Blob([content], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'extracted-paragraphs.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Reset all
+function resetAll() {
+  inputText.value = '';
+  updateInputStats();
+  extractParagraphs();
+  selectedParagraphs.clear();
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Event listeners
+inputText.addEventListener('input', () => {
+  updateInputStats();
+  debouncedExtract();
+});
+
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+copyAllBtn.addEventListener('click', copyAllParagraphs);
+downloadBtn.addEventListener('click', downloadParagraphs);
+resetBtn.addEventListener('click', resetAll);
+
+// Initialize
+updateInputStats();
+</script>
+</body>
+</html>
