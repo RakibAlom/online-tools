@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Paragraph Sorter - Free Online Paragraph Sorting Tool</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online paragraph sorter tool. Sort paragraphs alphabetically, by length, word count, or shuffle. Remove duplicates, reverse order, and organize text instantly. No registration required." />
+  <meta name="keywords" content="paragraph sorter, paragraph sorter online, free paragraph sorter, sort paragraphs online, online paragraph sorting tool, sort paragraphs alphabetically online, sort paragraphs by length online, sort paragraphs by word count online, paragraph organizer tool online, text paragraph sorter online free, arrange paragraphs online free, paragraph rearranger tool online, bulk paragraph sorter online, sort text paragraphs free tool, paragraph sorting utility online, paragraph order changer online free, automatic paragraph sorter online, online paragraph organizer free, sort paragraphs ascending online, sort paragraphs descending online, paragraph sorting editor online, sort duplicate paragraphs online free, text paragraph management tool online, instant paragraph sorter online free, paragraph sorting software online free, paragraph sorter without login online, free online paragraph rearranger tool, online text paragraph sorter free, seo paragraph sorter online free" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/paragraph-sorter/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/paragraph-sorter/" />
+  <meta property="og:title" content="Paragraph Sorter - Free Online Paragraph Sorting Tool" />
+  <meta property="og:description" content="Sort paragraphs alphabetically, by length, word count, or shuffle. Remove duplicates and organize text instantly with our free online tool." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/paragraph-sorter/" />
+  <meta name="twitter:title" content="Paragraph P Sorter - Free Online Paragraph Sorting Tool" />
+  <meta name="twitter:description" content="Sort paragraphs alphabetically, by length, word count, or shuffle. Remove duplicates and organize text instantly with our free online tool." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .sort-btn {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    .sort-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .paragraph-item {
+      border-left: 2px solid rgba(99, 102, 241, 0.5);
+      transition: all 0.2s ease;
+    }
+    
+    .paragraph-item:hover {
+      border-left-color: rgba(99, 102, 241, 1);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+
+    .order-btn {
+      padding: 0.375rem 0.625rem;
+      font-size: 0.7rem;
+    }
+    
+    .order-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 12h20M10 20h20M10 28h20" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Paragraph Sorter</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Paragraph Sorter
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Text Organization Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-sorting enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Input Text
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Type or paste text here... Paragraphs will be automatically detected and sorted. Or drag & drop a file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.csv,.md,.json,.xml,.html,.js,.css,.py,.java,.cpp,.c,.php,.rb,.go,.rs,.swift,.kt,.sql,.log,.doc,.docx" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Paragraphs: 0 | Words: 0 | Chars: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Output -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Sorted Result <span id="paragraphsCount" class="text-gray-500 font-normal ml-1 hidden">(0 paragraphs)</span>
+            </label>
+            <div class="flex gap-1">
+              <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                Copy
+              </button>
+              <button id="downloadBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Download
+              </button>
+            </div>
+          </div>
+          
+          <textarea id="outputText" readonly spellcheck="false"
+            class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+            placeholder="Sorted paragraphs appear here automatically..."></textarea>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="outputStats">Paragraphs: 0 | Unique: 0</span>
+            <span id="processingTime" class="text-gray-600"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-3">
+        
+        <!-- Sort Method -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Sort Method</label>
+          <div class="flex flex-wrap gap-1">
+            <button class="sort-btn active rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="alphabetical">Alphabetical</button>
+            <button class="sort-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="length">By Length</button>
+            <button class="sort-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="words">By Word Count</button>
+            <button class="sort-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="sentences">By Sentences</button>
+            <button class="sort-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="shuffle">Shuffle</button>
+            <button class="sort-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="reverse">Reverse</button>
+          </div>
+        </div>
+
+        <!-- Options Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+          <!-- Order Options -->
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Order</label>
+            <div class="flex gap-1">
+              <button id="orderAsc" class="order-btn active flex-1 rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all">A-Z / 1-9</button>
+              <button id="orderDesc" class="order-btn flex-1 rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all">Z-A / 9-1</button>
+            </div>
+          </div>
+
+          <!-- Paragraph Detection -->
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Split By</label>
+            <select id="splitBySelect" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="blankline">Blank Lines (Standard)</option>
+              <option value="newline">Single New Line</option>
+              <option value="indent">Indented Lines</option>
+              <option value="custom">Custom Delimiter...</option>
+            </select>
+          </div>
+
+          <!-- Custom Delimiter (hidden by default) -->
+          <div id="customDelimiterContainer" class="hidden">
+            <label class="text-xs text-gray-400 mb-1 block">Custom Delimiter</label>
+            <input type="text" id="customDelimiter" placeholder="e.g. ### or |||" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+          </div>
+
+          <!-- Output Format -->
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Output Format</label>
+            <select id="outputFormat" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="blankline">Blank Line Separated</option>
+              <option value="newline">Single Spacing</option>
+              <option value="numbered">Numbered (1., 2., 3.)</option>
+              <option value="html">HTML Paragraphs</option>
+            </select>
+          </div>
+
+          <!-- Filters -->
+          <div class="flex items-end">
+            <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+              <input type="checkbox" id="removeDuplicates" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Remove duplicates
+            </label>
+          </div>
+
+          <div class="flex items-end">
+            <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+              <input type="checkbox" id="trimWhitespace" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Trim whitespace
+            </label>
+          </div>
+
+          <div class="flex items-end">
+            <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+              <input type="checkbox" id="ignoreCase" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Ignore case (A=a)
+            </label>
+          </div>
+
+          <div class="flex items-end">
+            <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+              <input type="checkbox" id="removeEmpty" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Remove empty
+            </label>
+          </div>
+        </div>
+
+        <!-- Paragraphs Preview -->
+        <div id="paragraphsPreview" class="hidden">
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-xs font-medium text-gray-300">Individual Paragraphs <span class="text-gray-500 font-normal">(click to copy)</span></label>
+            <span id="previewCount" class="text-xs text-gray-500"></span>
+          </div>
+          <div id="paragraphsList" class="max-h-32 overflow-y-auto space-y-1 pr-1">
+            <!-- Paragraphs will be inserted here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Paragraph Sorter?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">6 Sort Methods</h3>
+          <p class="text-gray-400 text-xs">Alphabetical, length, words, sentences & more</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Drag & Drop</h3>
+          <p class="text-gray-400 text-xs">Upload text files instantly</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based, no uploads</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy or download results</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Auto-Sort</h3>
+          <p class="text-gray-400 text-xs">Real-time processing</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration required</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Input Text</h3>
+          <p class="text-gray-400 text-xs">Type, paste, or drop a text file. Paragraphs are auto-detected.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Choose Method</h3>
+          <p class="text-gray-400 text-xs">Select alphabetical, length, word count, sentences, shuffle, or reverse.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Configure</h3>
+          <p class="text-gray-400 text-xs">Set order, remove duplicates, choose output format. Changes apply instantly.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy sorted text or download as file. Click any paragraph to copy individually.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Paragraph Sorting: Master Text Organization for Professional Results</h2>
+        
+        <p><strong>Paragraph sorting</strong> is an essential text organization technique that transforms unstructured, chaotic documents into logically arranged, professionally formatted content. Whether you're a writer restructuring an article, a student organizing research notes, a developer managing documentation, or a content creator optimizing blog posts, mastering paragraph organization can dramatically improve your workflow efficiency and output quality. Our <strong>paragraph sorter online</strong> solution provides enterprise-grade text restructuring capabilities completely free, with no registration or usage limitations.</p>
+
+        <p>In today's content-driven digital landscape, the ability to quickly <strong>sort paragraphs online</strong> has become indispensable across numerous professions. Academic researchers need to <strong>sort paragraphs alphabetically</strong> when organizing literature reviews; SEO specialists <strong>sort paragraphs by length</strong> to optimize content structure for search engines; technical writers rearrange documentation paragraphs to improve logical flow; editors reorganize manuscript sections for better narrative progression. Without an efficient <strong>online paragraph sorting tool</strong>, these restructuring tasks become tedious manual processes consuming hours of valuable time.</p>
+
+        <h2>Understanding Paragraph Sorting: Core Methods and Applications</h2>
+
+        <h3>Alphabetical Paragraph Organization</h3>
+        
+        <p><strong>Sort paragraphs alphabetically online</strong> represents the most fundamental reorganization method, arranging text blocks from A to Z (or Z to A) based on their opening content. This approach serves countless practical applications: creating alphabetical indexes from random notes, organizing bibliography sections, sorting glossary entries, arranging FAQ sections, alphabetizing procedural steps, or organizing any collection of text blocks for quick reference scanning. When you <strong>arrange paragraphs online free</strong> alphabetically, you create predictable, scannable structures that make information retrieval instantaneous.</p>
+
+        <p>Professional <strong>paragraph organizer tool online</strong> implementations offer sophisticated alphabetical sorting options. Case-sensitive sorting maintains distinction between uppercase and lowercase letters, while case-insensitive options treat "Introduction" and "introduction" as equivalent for sorting purposes. Natural sort ordering intelligently handles numbers within paragraphs, ensuring "Section 2" appears before "Section 10" rather than after it (which would occur with strict ASCII sorting). Our <strong>free paragraph sorter</strong> provides these advanced options, ensuring professional-grade results regardless of your specific organizational requirements. Whether you need to <strong>sort paragraphs ascending online</strong> for A-Z organization or <strong>sort paragraphs descending online</strong> for reverse Z-A order, our tool handles both with precision.</p>
+
+        <h3>Length-Based Paragraph Sorting</h3>
+        
+        <p><strong>Sort paragraphs by length online</strong> offers unique organizational benefits impossible with alphabetical methods. Content strategists use length-based sorting to structure articles with rhythmic variation—alternating short, punchy paragraphs with longer, detailed explanations. SEO professionals analyze content by sorting paragraphs to ensure optimal length distribution for search engine readability algorithms. Technical writers organize documentation by paragraph length to create visual hierarchy and emphasize key points through strategic placement of concise statements.</p>
+
+        <p>Our <strong>text paragraph sorter online free</strong> tool provides both ascending and descending length sorting capabilities. <strong>Sort paragraphs</strong> from shortest to longest to build complexity progressively in educational materials, or longest to shortest to front-load comprehensive information in technical documentation. This flexibility makes our <strong>paragraph rearranger tool online</strong> invaluable for content architecture and information design. Writers can quickly identify overly long paragraphs requiring simplification or discover opportunities to combine short, fragmented blocks into more cohesive units.</p>
+
+        <h3>Word Count and Sentence-Based Organization</h3>
+        
+        <p>Beyond simple character length, sophisticated paragraph analysis considers semantic units. <strong>Sort paragraphs by word count online</strong> organizes content by meaningful vocabulary units rather than raw character metrics. This method proves particularly valuable for writers working with strict word count constraints: journalists fitting content into column inches, students meeting essay length requirements, or marketers optimizing email newsletter lengths.</p>
+
+        <p><strong>Sort paragraphs by sentences online</strong> provides yet another organizational dimension, arranging text blocks by their internal complexity. A paragraph containing three sentences receives different treatment than one containing ten sentences, regardless of total word count. This sentence-based sorting helps identify overly complex paragraphs needing subdivision or overly simple paragraphs requiring expansion. Our <strong>automatic paragraph sorter online</strong> intelligently counts sentences using proper punctuation analysis, handling abbreviations and decimal numbers correctly.</p>
+
+        <h3>Creative Organization: Shuffle and Reverse</h3>
+        
+        <p>Not all paragraph organization follows logical patterns. Creative professionals often require randomization or reversal capabilities. <strong>Paragraph order changer online free</strong> shuffle functionality serves writers seeking inspiration through unexpected paragraph combinations, teachers creating randomized test questions from question banks, or researchers ensuring unbiased presentation of findings. Our shuffle algorithm employs Fisher-Yates randomization to ensure truly random distribution, eliminating predictable patterns that could introduce bias.</p>
+
+        <p>Reverse order sorting—simply flipping the sequence of paragraphs—proves surprisingly useful in specific contexts. Creative writers use reversal to create new meanings from existing text structures. Analysts reverse chronological lists to view newest-first instead of oldest-first. Educators reverse lesson progression for review purposes. Our <strong>instant paragraph sorter online free</strong> includes these creative options alongside traditional sorting methods, providing a complete toolkit for text experimentation.</p>
+
+        <h2>Advanced Features for Professional Document Management</h2>
+
+        <h3>Intelligent Paragraph Boundary Detection</h3>
+        
+        <p>Accurate paragraph sorting requires precise boundary detection. Our <strong>paragraph sorter</strong> employs multiple detection strategies to identify where one paragraph ends and another begins. Standard detection uses blank lines (double line breaks) between paragraphs—the most common formatting convention across document types. Single line break detection treats each line as a separate paragraph, useful for poetry, lists, or structured data. Indentation detection identifies paragraphs by their leading whitespace, common in formatted documents and manuscripts.</p>
+
+        <p>For specialized formats, custom delimiter detection allows users to define specific character sequences that mark paragraph boundaries. Whether your document uses "###" between sections, "---" as dividers, or any other custom separator, our <strong>bulk paragraph sorter online</strong> adapts to your specific formatting requirements. This flexibility ensures accurate processing regardless of source document conventions.</p>
+
+        <h3>Duplicate Detection and Removal</h3>
+        
+        <p>Real-world document collections frequently contain unintentional duplications: copy-paste errors in compiled reports, repeated content in merged documents, or redundant entries in aggregated notes. Our <strong>sort duplicate paragraphs online free</strong> feature identifies and eliminates identical text blocks automatically. The system offers flexible duplicate detection: exact matching for precise removal, or normalized matching that ignores whitespace variations and minor formatting differences.</p>
+
+        <p>The deduplication process preserves the first occurrence of each unique paragraph while removing subsequent duplicates. Users control whether to apply duplicate removal before or after sorting, enabling workflows like "remove duplicates then sort alphabetically" or "sort by length then remove duplicates" depending on specific organizational needs. This flexibility makes our <strong>text paragraph management tool online</strong> suitable for complex document cleaning tasks.</p>
+
+        <h3>Flexible Output Formatting Options</h3>
+        
+        <p>Once paragraphs are sorted, presentation format significantly impacts usability. Our <strong>online paragraph organizer free</strong> tool offers multiple output formats: blank line separation maintains standard paragraph spacing for documents and articles; single spacing creates compact lists suitable for spreadsheets or databases; numbered formatting (1., 2., 3.) supports procedural content and ordered instructions; HTML paragraph tags generate web-ready markup for direct website integration.</p>
+
+        <p>Each format serves distinct professional purposes. Blank line separation produces publication-ready documents immediately. Single spacing facilitates data import into analytical tools. Numbered lists support instructional design and legal documentation. HTML output enables direct content management system integration without manual markup addition. The ability to switch between these formats instantly—without reprocessing—makes our <strong>paragraph sorter without login online</strong> exceptionally versatile for multi-stage publishing workflows.</p>
+
+        <h2>Professional Applications and Use Cases</h2>
+
+        <h3>Academic Research and Writing</h3>
+        
+        <p>Researchers and students leverage <strong>paragraph sorter online</strong> capabilities to organize complex documents efficiently. Literature reviews require alphabetical organization of source summaries. Research findings sort by relevance, methodology, or chronological discovery. Thesis chapters reorganize based on advisor feedback or logical flow improvements. Dissertation sections arrange and rearrange as arguments develop. The ability to quickly restructure large documents without manual copy-pasting saves countless hours during the writing process.</p>
+
+        <p>Students particularly benefit from <strong>free online paragraph rearranger tool</strong> functionality when organizing study materials. Lecture notes can be sorted by topic alphabetically or by importance (length/word count). Research quotes arrange by source, theme, or chronological order. Essay outlines reorganize as thesis statements evolve. Study guides structure by difficulty level or concept dependency. These organizational capabilities transform raw notes into structured learning resources.</p>
+
+        <h3>Content Creation and Digital Publishing</h3>
+        
+        <p>Professional content creators apply <strong>seo paragraph sorter online free</strong> techniques to optimize digital content. Blog posts reorganize with the most important paragraphs first for better reader engagement. Articles sort by SEO keyword density for search engine optimization. Newsletter content arranges by reader interest metrics or engagement data. Social media content calendars organize by platform requirements or posting schedules. E-books and whitepapers restructure based on reader feedback or conversion analytics.</p>
+
+        <p>Copywriters specifically utilize <strong>paragraph sorting editor online</strong> features for persuasive content optimization. Sales letters reorganize with the strongest value propositions first. Landing pages sort paragraphs by conversion impact. Email sequences arrange by engagement metrics. Advertisement copy reorganizes for A/B testing variations. These data-driven organizational approaches significantly improve content performance metrics.</p>
+
+        <h3>Technical Documentation and Knowledge Management</h3>
+        
+        <p>Technical writers and documentation specialists rely on <strong>paragraph sorting software online free</strong> for maintaining complex information systems. API documentation sorts endpoints alphabetically or by functional category. User manuals reorganize procedures by complexity or frequency of use. Knowledge base articles arrange by search popularity or user ratings. FAQ sections sort by question frequency or alphabetical organization. Troubleshooting guides reorganize by solution effectiveness or problem severity.</p>
+
+        <p>Software developers use paragraph sorting for code documentation and comment organization. Function documentation comments sort alphabetically to create quick-reference indexes. Changelog entries organize by version, date, or impact severity. Release notes arrange by feature category or user impact. Error message documentation sorts by error code or frequency of occurrence. These organizational practices improve code maintainability and team collaboration efficiency.</p>
+
+        <h3>Legal and Business Documentation</h3>
+        
+        <p>Legal professionals and business analysts apply <strong>paragraph sorting utility online</strong> capabilities to complex document management. Contract clauses organize by topic, importance, or negotiation priority. Policy documents sort by department, compliance requirement, or effective date. Meeting minutes arrange by agenda item, decision type, or action required. Proposal sections reorganize by client priority or competitive advantage. Report content sorts by data significance or executive summary priority.</p>
+
+        <h2>Best Practices for Effective Paragraph Organization</h2>
+
+        <h3>Pre-processing and Document Preparation</h3>
+        
+        <p>Before sorting, prepare your document to ensure clean, predictable results. Verify consistent paragraph formatting throughout the document. Remove or standardize special formatting that might interfere with boundary detection. Normalize whitespace using the tool's built-in trim options. Ensure consistent paragraph delimiters if using custom separation. For mixed-format documents, consider preprocessing sections separately. These preparation steps, handled automatically by our <strong>text paragraph sorter online free</strong>, ensure professional-quality output.</p>
+
+        <h3>Selecting Appropriate Sort Methods</h3>
+        
+        <p>Match your sorting strategy to your organizational objectives: Use alphabetical sorting for reference materials, indexes, glossaries, and lookup documents. Apply length-based sorting for readability optimization and visual rhythm creation. Choose word count sorting when working with specific length constraints or vocabulary analysis. Select sentence-based sorting for complexity analysis and structural balance. Apply shuffle for creative inspiration and unbiased presentation. Use reverse order for chronological inversion or creative reinterpretation. Combine multiple sorts sequentially for sophisticated multi-dimensional organization.</p>
+
+        <h3>Validation and Quality Assurance</h3>
+        
+        <p>Always review sorted results to ensure they meet your expectations. Verify that paragraph boundaries were detected correctly, especially with unusual formatting. Confirm that duplicates were handled appropriately for your use case. Check that sorting produced the expected order (watch for case-sensitivity issues with alphabetical sorts). Our tool provides real-time preview with individual paragraph inspection to facilitate this validation. The preview section displays each paragraph with click-to-copy functionality, enabling easy extraction of specific sections without reprocessing entire documents.</p>
+
+        <h2>Technical Architecture and Privacy Protection</h2>
+
+        <p>Our <strong>paragraph sorter online</strong> tool operates entirely within your web browser using advanced client-side JavaScript processing. This architecture guarantees that your documents never upload to external servers, ensuring complete confidentiality for sensitive materials. All processing occurs instantly on your local device, eliminating network latency and enabling offline functionality after initial page load. The system handles large documents (up to 10-20MB) efficiently using optimized algorithms and intelligent input debouncing to maintain responsive performance even with substantial text volumes.</p>
+
+        <p>The tool supports comprehensive file format compatibility including plain text, Markdown, HTML, XML, JSON, CSV, and all major programming source code formats. Character encoding detection ensures proper handling of UTF-8, ASCII, and Unicode documents from any international source. Drag-and-drop functionality works seamlessly across desktop and mobile devices with touch-optimized interfaces. The responsive design adapts automatically from large desktop monitors to small smartphone screens, maintaining full functionality across all device categories.</p>
+
+        <h2>Conclusion: Transform Your Document Organization</h2>
+
+        <p><strong>Paragraph sorting</strong> represents a fundamental yet powerful technique for document organization that benefits professionals across every industry. From straightforward alphabetical arrangement to sophisticated multi-dimensional sorting by length, word count, and sentence complexity, the ability to reorganize paragraphs intelligently transforms how we work with written documents. Whether you're restructuring academic papers, optimizing web content, managing technical documentation, or organizing business materials, mastering <strong>paragraph sorting</strong> techniques will elevate your productivity and document quality.</p>
+
+        <p>Our <strong>free paragraph sorter</strong> provides comprehensive capabilities for professional document organization. With six distinct sorting methods (alphabetical, length, word count, sentence count, shuffle, reverse), intelligent paragraph detection, duplicate removal, flexible output formatting, and real-time processing, this tool serves everyone from casual users to professional content creators. The browser-based architecture ensures privacy and universal accessibility, while the intuitive interface requires no learning curve. Stop struggling with manual document reorganization—start using our professional <strong>paragraph sorter online</strong> today and experience the efficiency of automated paragraph sorting.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool sort paragraphs automatically as I type?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>paragraph sorter online</strong> features <strong>automatic real-time sorting</strong>. As you type or paste text, the tool instantly detects paragraphs (separated by blank lines) and displays sorted results immediately. We use intelligent debouncing to ensure smooth performance without lag. Changes to sort methods, order, or options apply instantly. The "Auto-sorting enabled" indicator at the top confirms the feature is active. This makes our tool the most responsive <strong>free paragraph sorter</strong> available for instant document organization.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How does the tool detect paragraph boundaries?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Our <strong>online paragraph sorting tool</strong> offers multiple boundary detection methods. "Blank Lines (Standard)" detects paragraphs separated by empty lines—the most common format. "Single New Line" treats each line as a paragraph. "Indented Lines" identifies paragraphs by leading whitespace. "Custom Delimiter" lets you define specific separators like "###" or "---". This flexibility ensures accurate <strong>text paragraph sorter online free</strong> processing regardless of your document's formatting conventions.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I sort paragraphs by word count?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely! Select "By Word Count" method to <strong>sort paragraphs by word count online</strong>. Choose ascending order (fewest words first) to identify short, concise paragraphs, or descending (most words first) to find your longest, most detailed sections. This is perfect for SEO optimization, meeting word count requirements, balancing article length, or identifying paragraphs that need expansion or condensation. Writers and content creators use this feature daily.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What's the difference between sorting by length and by word count?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Sort paragraphs by length online</strong> uses total character count including spaces and punctuation. <strong>Sort paragraphs by word count online</strong> counts only words (sequences separated by whitespace). Character length affects visual space and reading time, while word count represents semantic content volume. Use character length for layout and formatting decisions, word count for content analysis and vocabulary assessment. Our <strong>paragraph organizer tool online</strong> provides both metrics for comprehensive analysis.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I remove duplicate paragraphs automatically?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Check the "Remove duplicates" option to automatically eliminate identical paragraphs. The tool preserves the first occurrence and removes subsequent duplicates. This works with any sort method—<strong>sort duplicate paragraphs online free</strong> before alphabetical sorting, or remove duplicates after arranging by length. Combined with "Trim whitespace" and "Ignore case" options, it handles variations in spacing and capitalization for thorough deduplication. Perfect for cleaning up merged documents or compiled notes.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What file types are supported?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">All text-based files: TXT, CSV, JSON, XML, HTML, Markdown, Word documents (DOC, DOCX), and code files (JS, CSS, Python, Java, C/C++, PHP, Ruby, Go, Rust, Swift, Kotlin, SQL, LOG). Files are read as plain text, so any text file works regardless of extension. Drag and drop files directly onto the input area or use the file picker. Our <strong>bulk paragraph sorter online</strong> handles files up to 10-20MB efficiently in your browser without uploading to servers.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my data secure and private?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">100% secure. All processing happens <strong>locally in your browser</strong>—your text never uploads to servers or leaves your device. You can verify this using browser DevTools (Network tab shows no external data transfer). Works offline after initial page load. Ideal for confidential documents, proprietary content, sensitive research, or personal writing. Our <strong>paragraph sorter without login online</strong> architecture prioritizes your privacy and data security above all else.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I export to HTML format?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Select "HTML Paragraphs" from the Output Format dropdown to wrap each paragraph in &lt;p&gt; tags. This generates web-ready markup that you can paste directly into content management systems, blog posts, or website code. Combined with alphabetical or length sorting, this feature streamlines web publishing workflows. The HTML output maintains proper tag structure and escaping for valid markup.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I copy individual paragraphs from the preview?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! The "Individual Paragraphs" preview section displays each paragraph separately with its word count and character count. Click any paragraph to copy it instantly to your clipboard—the item will briefly highlight green to confirm. This is perfect for extracting specific sections, creating custom compilations, or building new documents from sorted content. The preview shows up to 50 paragraphs with a count indicator for larger documents.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this tool really free?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, completely <strong>free</strong> with no registration, usage limits, watermarks, or hidden fees. Use for personal or commercial projects without attribution. This is truly a <strong>free online paragraph rearranger tool</strong> for everyone. Supported by unobtrusive advertising. All features—including all six sorting methods, duplicate removal, multiple output formats, and file upload—are available immediately without premium tiers or paid upgrades.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const outputText = document.getElementById('outputText');
+const inputStats = document.getElementById('inputStats');
+const outputStats = document.getElementById('outputStats');
+const paragraphsCount = document.getElementById('paragraphsCount');
+const processingTime = document.getElementById('processingTime');
+const paragraphsPreview = document.getElementById('paragraphsPreview');
+const paragraphsList = document.getElementById('paragraphsList');
+const previewCount = document.getElementById('previewCount');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+
+// Buttons
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const resetBtn = document.getElementById('resetBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+// Sort controls
+const sortBtns = document.querySelectorAll('.sort-btn');
+const orderAsc = document.getElementById('orderAsc');
+const orderDesc = document.getElementById('orderDesc');
+const splitBySelect = document.getElementById('splitBySelect');
+const customDelimiterContainer = document.getElementById('customDelimiterContainer');
+const customDelimiter = document.getElementById('customDelimiter');
+const outputFormat = document.getElementById('outputFormat');
+const removeDuplicates = document.getElementById('removeDuplicates');
+const trimWhitespace = document.getElementById('trimWhitespace');
+const ignoreCase = document.getElementById('ignoreCase');
+const removeEmpty = document.getElementById('removeEmpty');
+
+// State
+let currentMethod = 'alphabetical';
+let currentOrder = 'asc';
+let currentParagraphs = [];
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Update input stats
+function updateInputStats() {
+  const text = inputText.value;
+  const chars = text.length;
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+  const paragraphs = text.trim() === '' ? 0 : splitIntoParagraphs(text).length;
+  inputStats.textContent = `Paragraphs: ${paragraphs} | Words: ${words} | Chars: ${chars}`;
+}
+
+// Debounce function
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Split text into paragraphs
+function splitIntoParagraphs(text) {
+  const splitBy = splitBySelect.value;
+  let paragraphs = [];
+  
+  if (splitBy === 'blankline') {
+    // Split by blank lines (standard)
+    paragraphs = text.split(/\n\s*\n/);
+  } else if (splitBy === 'newline') {
+    // Split by single newlines
+    paragraphs = text.split(/\n/);
+  } else if (splitBy === 'indent') {
+    // Split by indented lines
+    const lines = text.split('\n');
+    let currentPara = '';
+    paragraphs = [];
+    
+    lines.forEach((line, index) => {
+      if (line.match(/^\s+/) || index === 0) {
+        currentPara += (currentPara ? '\n' : '') + line;
+      } else {
+        if (currentPara) paragraphs.push(currentPara);
+        currentPara = line;
+      }
+    });
+    if (currentPara) paragraphs.push(currentPara);
+  } else if (splitBy === 'custom') {
+    const delimiter = customDelimiter.value;
+    if (delimiter) {
+      paragraphs = text.split(delimiter);
+    } else {
+      paragraphs = [text];
+    }
+  }
+  
+  // Process paragraphs
+  if (trimWhitespace.checked) {
+    paragraphs = paragraphs.map(p => p.trim());
+  }
+  
+  if (removeEmpty.checked) {
+    paragraphs = paragraphs.filter(p => p.length > 0);
+  }
+  
+  return paragraphs;
+}
+
+// Count sentences in paragraph
+function countSentences(paragraph) {
+  const sentences = paragraph.match(/[^.!?]+[.!?]+/g);
+  return sentences ? sentences.length : 0;
+}
+
+// Shuffle array (Fisher-Yates)
+function shuffleArray(array) {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
+// Sort paragraphs
+function sortParagraphs() {
+  const startTime = performance.now();
+  const text = inputText.value;
+  
+  if (!text.trim()) {
+    outputText.value = '';
+    outputStats.textContent = 'Paragraphs: 0 | Unique: 0';
+    paragraphsCount.textContent = '(0 paragraphs)';
+    paragraphsCount.classList.add('hidden');
+    paragraphsPreview.classList.add('hidden');
+    processingTime.textContent = '';
+    currentParagraphs = [];
+    return;
+  }
+  
+  try {
+    let paragraphs = splitIntoParagraphs(text);
+    const originalCount = paragraphs.length;
+    
+    // Remove duplicates if enabled
+    if (removeDuplicates.checked) {
+      const seen = new Set();
+      paragraphs = paragraphs.filter(p => {
+        const key = ignoreCase.checked ? p.toLowerCase() : p;
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      });
+    }
+    
+    // Sort based on method
+    switch(currentMethod) {
+      case 'alphabetical':
+        paragraphs.sort((a, b) => {
+          const compareA = ignoreCase.checked ? a.toLowerCase() : a;
+          const compareB = ignoreCase.checked ? b.toLowerCase() : b;
+          return currentOrder === 'asc' 
+            ? compareA.localeCompare(compareB)
+            : compareB.localeCompare(compareA);
+        });
+        break;
+        
+      case 'length':
+        paragraphs.sort((a, b) => {
+          return currentOrder === 'asc'
+            ? a.length - b.length
+            : b.length - a.length;
+        });
+        break;
+        
+      case 'words':
+        paragraphs.sort((a, b) => {
+          const wordsA = a.trim().split(/\s+/).length;
+          const wordsB = b.trim().split(/\s+/).length;
+          return currentOrder === 'asc'
+            ? wordsA - wordsB
+            : wordsB - wordsA;
+        });
+        break;
+        
+      case 'sentences':
+        paragraphs.sort((a, b) => {
+          const sentA = countSentences(a);
+          const sentB = countSentences(b);
+          return currentOrder === 'asc'
+            ? sentA - sentB
+            : sentB - sentA;
+        });
+        break;
+        
+      case 'shuffle':
+        paragraphs = shuffleArray(paragraphs);
+        break;
+        
+      case 'reverse':
+        paragraphs.reverse();
+        break;
+    }
+    
+    currentParagraphs = paragraphs;
+    
+    // Format output
+    let output = '';
+    const format = outputFormat.value;
+    
+    switch(format) {
+      case 'blankline':
+        output = paragraphs.join('\n\n');
+        break;
+      case 'newline':
+        output = paragraphs.join('\n');
+        break;
+      case 'numbered':
+        output = paragraphs.map((p, i) => `${i + 1}. ${p}`).join('\n\n');
+        break;
+      case 'html':
+        output = paragraphs.map(p => `<p>${p}</p>`).join('\n');
+        break;
+    }
+    
+    outputText.value = output;
+    
+    // Update stats
+    const endTime = performance.now();
+    const uniqueCount = removeDuplicates.checked ? paragraphs.length : originalCount;
+    outputStats.textContent = `Paragraphs: ${paragraphs.length} | Unique: ${uniqueCount}`;
+    paragraphsCount.textContent = `(${paragraphs.length} paragraphs)`;
+    paragraphsCount.classList.remove('hidden');
+    processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+    
+    // Update preview
+    displayParagraphsPreview(paragraphs);
+    
+  } catch (error) {
+    console.error('Sort error:', error);
+  }
+}
+
+// Debounced sort
+const debouncedSort = debounce(sortParagraphs, 50);
+
+// Display paragraphs preview
+function displayParagraphsPreview(paragraphs) {
+  if (paragraphs.length === 0) {
+    paragraphsPreview.classList.add('hidden');
+    return;
+  }
+  
+  paragraphsPreview.classList.remove('hidden');
+  paragraphsList.innerHTML = '';
+  previewCount.textContent = `Showing ${Math.min(paragraphs.length, 50)} of ${paragraphs.length}`;
+  
+  paragraphs.slice(0, 50).forEach((paragraph, index) => {
+    const wordCount = paragraph.trim().split(/\s+/).length;
+    const div = document.createElement('div');
+    div.className = 'paragraph-item p-2 rounded bg-white/5 cursor-pointer text-xs';
+    div.innerHTML = `
+      <div class="flex items-center justify-between mb-0.5">
+        <span class="text-xs font-medium text-indigo-400">Para ${index + 1}</span>
+        <span class="text-xs text-gray-500">${wordCount}w · ${paragraph.length}c</span>
+      </div>
+      <div class="text-gray-300 truncate">${paragraph.substring(0, 80)}${paragraph.length > 80 ? '...' : ''}</div>
+    `;
+    
+    div.addEventListener('click', () => {
+      navigator.clipboard.writeText(paragraph);
+      div.style.background = 'rgba(34, 197, 94, 0.2)';
+      setTimeout(() => {
+        div.style.background = '';
+      }, 200);
+    });
+    
+    paragraphsList.appendChild(div);
+  });
+}
+
+// Event listeners for controls
+sortBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    sortBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentMethod = btn.dataset.method;
+    sortParagraphs();
+  });
+});
+
+orderAsc.addEventListener('click', () => {
+  orderAsc.classList.add('active');
+  orderDesc.classList.remove('active');
+  currentOrder = 'asc';
+  sortParagraphs();
+});
+
+orderDesc.addEventListener('click', () => {
+  orderDesc.classList.add('active');
+  orderAsc.classList.remove('active');
+  currentOrder = 'desc';
+  sortParagraphs();
+});
+
+splitBySelect.addEventListener('change', () => {
+  if (splitBySelect.value === 'custom') {
+    customDelimiterContainer.classList.remove('hidden');
+  } else {
+    customDelimiterContainer.classList.add('hidden');
+  }
+  sortParagraphs();
+});
+
+[customDelimiter, outputFormat, removeDuplicates, trimWhitespace, ignoreCase, removeEmpty].forEach(el => {
+  el.addEventListener('change', sortParagraphs);
+});
+
+// Drag and drop
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  if (!file.type.match('text.*') && !file.name.match(/\.(txt|csv|json|xml|html?|md|js|css|py|java|cpp|c|php|rb|go|rs|swift|kt|sql|log|doc|docx)$/i)) {
+    alert('Please upload a text file');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    updateInputStats();
+    sortParagraphs();
+  };
+  reader.readAsText(file);
+}
+
+// Button functions
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    updateInputStats();
+    sortParagraphs();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+function clearInput() {
+  inputText.value = '';
+  updateInputStats();
+  sortParagraphs();
+  inputText.focus();
+}
+
+async function copyOutput() {
+  if (!outputText.value) return;
+  
+  try {
+    await navigator.clipboard.writeText(outputText.value);
+    const originalText = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalText;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+}
+
+function downloadOutput() {
+  const text = outputText.value;
+  if (!text.trim()) return;
+  
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'sorted-paragraphs.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+function resetAll() {
+  inputText.value = '';
+  outputText.value = '';
+  updateInputStats();
+  outputStats.textContent = 'Paragraphs: 0 | Unique: 0';
+  paragraphsCount.classList.add('hidden');
+  paragraphsPreview.classList.add('hidden');
+  processingTime.textContent = '';
+  currentParagraphs = [];
+  
+  // Reset controls
+  sortBtns.forEach(b => b.classList.remove('active'));
+  document.querySelector('[data-method="alphabetical"]').classList.add('active');
+  currentMethod = 'alphabetical';
+  orderAsc.classList.add('active');
+  orderDesc.classList.remove('active');
+  currentOrder = 'asc';
+  splitBySelect.value = 'blankline';
+  customDelimiterContainer.classList.add('hidden');
+  outputFormat.value = 'blankline';
+  removeDuplicates.checked = false;
+  trimWhitespace.checked = true;
+  ignoreCase.checked = false;
+  removeEmpty.checked = true;
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Event listeners
+inputText.addEventListener('input', () => {
+  updateInputStats();
+  debouncedSort();
+});
+
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+copyBtn.addEventListener('click', copyOutput);
+downloadBtn.addEventListener('click', downloadOutput);
+resetBtn.addEventListener('click', resetAll);
+
+// Initialize
+updateInputStats();
+</script>
+</body>
+</html>

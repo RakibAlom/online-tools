@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Letter Sorter - Free Online Letter Sorting Tool</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online letter sorter tool. Sort letters alphabetically, by frequency, or randomly. Arrange characters in ascending or descending order instantly. No registration required." />
+  <meta name="keywords" content="letter sorter, letter sorter online, free letter sorter, sort letters online, online letter sorting tool, alphabetize letters online free, sort letters alphabetically online, arrange letters in alphabetical order online, text letter sorter online free, letter organizer tool online, sort characters online free, character sorter online, alphabetical order generator online free, letter rearranger tool online, sort letters ascending online, sort letters descending online, automatic letter sorter online free, string letter sorter online, word letter sorter online free, sort letters in word online, bulk letter sorter online free, text character sorting tool online, instant letter sorter online free, letter sorting utility online, sort letters a to z online free, sort letters z to a online free, online alphabetical letter sorter free, no login letter sorter online free, simple letter sorter tool online, free online character alphabetizer" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/letter-sorter/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/letter-sorter/" />
+  <meta property="og:title" content="Letter Sorter - Free Online Letter Sorting Tool" />
+  <meta property="og:description" content="Sort letters alphabetically, by frequency, or randomly. Arrange characters in ascending or descending order instantly. No registration required." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/letter-sorter/" />
+  <meta name="twitter:title" content="Letter Sorter - Free Online Letter Sorting Tool" />
+  <meta name="twitter:description" content="Sort letters alphabetically, by frequency, or randomly. Arrange characters in ascending or descending order instantly. No registration required." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .method-btn {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    .method-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .letter-tile {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      margin: 0.125rem;
+      background: rgba(99, 102, 241, 0.15);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      border-radius: 0.375rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #c7d2fe;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    
+    .letter-tile:hover {
+      background: rgba(99, 102, 241, 0.25);
+      transform: translateY(-2px);
+    }
+
+    .letter-tile.removed {
+      opacity: 0.3;
+      text-decoration: line-through;
+      background: rgba(239, 68, 68, 0.15);
+      border-color: rgba(239, 68, 68, 0.3);
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+
+    .freq-bar {
+      height: 4px;
+      background: rgba(99, 102, 241, 0.5);
+      border-radius: 2px;
+      margin-top: 2px;
+      transition: width 0.3s ease;
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M12 20h16M12 14h16M12 26h16" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Letter Sorter</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Letter Sorter
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Character Organization Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-sorting enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Input Text
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Type or paste text here... Or drag & drop a file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.csv,.md,.json,.xml,.html,.js,.css,.py,.java,.cpp,.c,.php,.rb,.go,.rs,.swift,.kt,.sql,.log" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Letters: 0 | Unique: 0 | Words: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Output -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Sorted Letters <span id="sortStats" class="text-gray-500 font-normal ml-1 hidden">(0 letters)</span>
+            </label>
+            <div class="flex gap-1">
+              <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                Copy
+              </button>
+              <button id="downloadBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Download
+              </button>
+            </div>
+          </div>
+          
+          <textarea id="outputText" readonly spellcheck="false"
+            class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+            placeholder="Sorted letters appear here automatically..."></textarea>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="outputStats">Letters: 0 | Time: 0ms</span>
+            <span id="processingTime" class="text-gray-600"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-3">
+        
+        <!-- Sort Method -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Sort Method</label>
+          <div class="flex flex-wrap gap-1">
+            <button class="method-btn active rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="alphabetical">Alphabetical</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="frequency">By Frequency</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="type">By Type</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="random">Random</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="reverse">Reverse</button>
+          </div>
+        </div>
+
+        <!-- Options Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+          <!-- Order Toggle -->
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Order</label>
+            <select id="sortOrder" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="asc">Ascending (A→Z)</option>
+              <option value="desc">Descending (Z→A)</option>
+            </select>
+          </div>
+
+          <!-- Case Handling -->
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Case Handling</label>
+            <select id="caseHandling" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="sensitive">Case Sensitive</option>
+              <option value="insensitive">Case Insensitive</option>
+              <option value="lower">Convert to Lower</option>
+              <option value="upper">Convert to Upper</option>
+            </select>
+          </div>
+
+          <!-- Character Filter -->
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Filter Characters</label>
+            <select id="charFilter" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="all">All Characters</option>
+              <option value="letters">Letters Only (A-Z)</option>
+              <option value="digits">Digits Only (0-9)</option>
+              <option value="alphanumeric">Alphanumeric</option>
+              <option value="vowels">Vowels Only</option>
+              <option value="consonants">Consonants Only</option>
+            </select>
+          </div>
+
+          <!-- Output Format -->
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Output Format</label>
+            <select id="outputFormat" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="continuous">Continuous String</option>
+              <option value="spaced">Space Separated</option>
+              <option value="comma">Comma Separated</option>
+              <option value="newline">One Per Line</option>
+              <option value="grouped">Grouped by Type</option>
+              <option value="json">JSON Array</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Additional Options -->
+        <div class="flex flex-wrap gap-3 items-center">
+          <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+            <input type="checkbox" id="removeDuplicates" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Remove Duplicates
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+            <input type="checkbox" id="removeSpaces" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3" checked>
+            Remove Spaces
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+            <input type="checkbox" id="removePunctuation" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Remove Punctuation
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+            <input type="checkbox" id="preserveCase" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Preserve Original Case
+          </label>
+        </div>
+
+        <!-- Letter Preview -->
+        <div id="letterPreview" class="hidden">
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-xs font-medium text-gray-300">Letter Visualization <span class="text-gray-500 font-normal">(click to remove)</span></label>
+            <span id="previewCount" class="text-xs text-gray-500">Showing first 100</span>
+          </div>
+          <div id="letterGrid" class="max-h-32 overflow-y-auto p-2 rounded-md bg-black/30 border border-white/10 flex flex-wrap">
+            <!-- Letters will be inserted here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Letter Sorter?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Auto-Sort</h3>
+          <p class="text-gray-400 text-xs">Real-time sorting as you type</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">5 Sort Methods</h3>
+          <p class="text-gray-400 text-xs">Alphabetical, frequency, type & more</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Drag & Drop</h3>
+          <p class="text-gray-400 text-xs">Upload text files instantly</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based, no uploads</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Multiple output formats</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration required</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Input Text</h3>
+          <p class="text-gray-400 text-xs">Type, paste, or drop a file. Sorting happens automatically.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Choose Method</h3>
+          <p class="text-gray-400 text-xs">Select alphabetical, frequency, by type, random, or reverse.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Configure</h3>
+          <p class="text-gray-400 text-xs">Set order, case handling, and filters. Changes apply instantly.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy result or download as file. Click letters to remove.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Letter Sorting: Mastering Character Organization for Text Manipulation</h2>
+        
+        <p><strong>Letter sorting</strong> is a fundamental yet powerful text processing operation that serves as the cornerstone of data organization, linguistic analysis, cryptography, and creative wordplay. Whether you're a puzzle enthusiast creating anagrams, a data analyst normalizing strings, a student studying language patterns, or a developer processing character arrays, understanding how to effectively <strong>sort letters alphabetically</strong> or by other criteria is essential for modern text manipulation. Our <strong>letter sorter online</strong> solution provides everything you need for professional character organization without any cost or registration barriers.</p>
+
+        <h2>What Is Letter Sorting and Why Does It Matter?</h2>
+        
+        <p><strong>Letter sorting</strong> refers to the systematic arrangement of individual characters from a text string into a specific order based on defined criteria—most commonly alphabetical order from A to Z (ascending) or Z to A (descending). This seemingly simple operation underlies countless professional workflows, educational activities, programming functions, and recreational pursuits. At its core, letter sorting transforms chaotic character sequences into organized patterns that reveal structure, enable analysis, or create new meaningful arrangements.</p>
+
+        <p>The importance of reliable <strong>online letter sorting tool</strong> capabilities extends across numerous domains. Consider the daily applications: a word game player needs to <strong>arrange letters in alphabetical order</strong> to find anagrams; a data entry specialist must <strong>sort characters online</strong> to normalize database fields; a linguistics student wants to <strong>alphabetize letters online free</strong> to study phoneme distribution; an enthusiast uses <strong>letter rearranger tool online</strong> capabilities for simple ciphers. Without efficient <strong>text letter sorter online free</strong> tools, these tasks become tedious manual processes prone to error.</p>
+
+        <h2>Understanding Letter Sorting Methods and Applications</h2>
+
+        <h3>Alphabetical Sorting: The Foundation of Character Organization</h3>
+        
+        <p>The most common <strong>sort letters online</strong> method arranges characters according to standard alphabetical sequence. This approach leverages the natural ordering of the alphabet to create intuitive, scannable character sequences. When you <strong>sort letters alphabetically online</strong>, you're applying the same organizational principle that underlies dictionaries, indexes, and reference materials—but at the character level rather than the word level.</p>
+
+        <p>Advanced <strong>free letter sorter</strong> tools handle the complexities that simple sorting overlooks. Case sensitivity determines whether uppercase letters sort before lowercase (ASCII order) or together (case-insensitive). Locale-aware sorting respects language-specific character ordering for non-English alphabets. Unicode normalization ensures consistent handling of accented characters, ligatures, and special symbols. Our <strong>free online character alphabetizer</strong> provides these sophisticated options, making it suitable for international text processing and professional data normalization.</p>
+
+        <h3>Frequency-Based Sorting: Analyzing Character Distribution</h3>
+        
+        <p><strong>Sort letters by frequency</strong> methods arrange characters based on how often they appear in the input text. This statistical approach reveals patterns invisible in alphabetical lists: which letters dominate a text (often E, T, A in English), which are rare (Q, X, Z), and how distribution varies across different text types. Frequency analysis serves cryptography (identifying substitution cipher patterns), linguistics (studying language characteristics), and data compression (optimizing encoding schemes).</p>
+
+        <p>Our <strong>text character sorting tool online</strong> provides frequency sorting with visual indicators showing relative occurrence rates. This makes it invaluable for: cryptogram solving where high-frequency letters likely represent E or T; handwriting analysis where letter frequency patterns indicate authorship; keyboard layout optimization based on finger movement efficiency; and educational demonstrations of language statistics.</p>
+
+        <h3>Type-Based Sorting: Organizing by Character Category</h3>
+        
+        <p><strong>Sort letters by type</strong> methods group characters by their Unicode category before ordering: uppercase letters, lowercase letters, digits, punctuation, symbols, and whitespace. This categorical approach helps developers validate input formats, assists data cleaning by separating meaningful content from formatting characters, and enables specific analysis of text composition (what percentage are letters vs. numbers vs. symbols).</p>
+
+        <p>For programming and data processing workflows, type sorting ensures that <strong>sort characters online free</strong> operations produce predictable, structured output. Extract just the alphabetic content from mixed alphanumeric strings. Separate vowels from consonants for linguistic analysis. Isolate digits for numeric extraction. Our <strong>automatic letter sorter online free</strong> tool handles these categorical operations with precision.</p>
+
+        <h2>Professional and Recreational Applications</h2>
+
+        <h3>Word Games and Puzzles</h3>
+        
+        <p>Letter sorting transforms word game performance. Anagram solvers <strong>sort letters in word online</strong> to compare against dictionary entries—"listen" and "silent" both sort to "eilnst", revealing their anagram relationship. Scrabble players sort rack tiles alphabetically to spot combinations faster. Crossword constructors use sorted letter patterns to verify word uniqueness. Cryptogram enthusiasts analyze frequency-sorted ciphertext letters to map substitution ciphers.</p>
+
+        <p>Our <strong>instant letter sorter online free</strong> tool serves these recreational needs with immediate results. Puzzle creators can verify that their anagram pairs truly contain identical letter sets. Game developers can use the API-friendly JSON output to integrate letter sorting into their applications. Competitive players can process letter racks during timed rounds without manual sorting delays.</p>
+
+        <h3>Data Processing and String Normalization</h3>
+        
+        <p>Developers and data professionals rely on <strong>string letter sorter online</strong> capabilities for database maintenance and API development. String comparison often requires normalized forms—two strings with the same letters in different orders should match in certain contexts (permutation checking, multiset equivalence). Sorting both strings enables O(n log n) comparison rather than O(n²) character-by-character checking.</p>
+
+        <p>Data cleaning workflows use <strong>bulk letter sorter online free</strong> operations to: detect duplicate entries that differ only in character order; normalize user input for consistent storage; generate sort keys for fuzzy matching algorithms; and create checksums or fingerprints for text comparison. Our browser-based tool handles large datasets that would be cumbersome to process manually or via command-line utilities.</p>
+
+        <h3>Education and Linguistic Analysis</h3>
+        
+        <p>Students and researchers employ <strong>word letter sorter online free</strong> tools for academic work. Linguistics students analyze phoneme distribution by sorting and counting letters in corpus samples. Cryptography students study substitution patterns through frequency-sorted ciphertext. Elementary students learn alphabetical order through interactive letter manipulation. Foreign language learners practice new alphabets by sorting unfamiliar characters.</p>
+
+        <p>Teachers create sorted letter sequences for classroom activities: alphabetizing exercises, letter frequency worksheets, anagram discovery tasks, and pattern recognition drills. Our <strong>simple letter sorter tool online</strong> requires no installation or technical expertise, making it accessible for educational environments with limited IT resources.</p>
+
+        <h3>Creative Writing and Typography</h3>
+        
+        <p>Writers and designers use <strong>letter sorting utility online</strong> features for creative projects. Concrete poets create visual arrangements from sorted character sets. Graphic designers generate typographic patterns from alphabetized letters. Font reviewers analyze character sets by sorting and displaying glyph coverage. Brand name developers check letter uniqueness and distribution for proposed product names.</p>
+
+        <h2>Advanced Letter Sorting Techniques</h2>
+
+        <h3>Multi-Stage Sorting and Complex Ordering</h3>
+        
+        <p>Sophisticated sorting scenarios require multiple criteria applied sequentially. Primary sort by character type (letters before numbers), secondary sort alphabetically within each type. Primary sort by frequency, secondary by alphabetical order for ties. Primary sort by case (uppercase first), secondary by letter value. Our <strong>online alphabetical letter sorter free</strong> tool supports these complex multi-key sorts through chained processing options.</p>
+
+        <h3>Handling Special Characters and Encodings</h3>
+        
+        <p>Real-world text contains characters beyond basic ASCII that require careful handling. Accented letters (é, ñ, ü) may sort with their base letter or separately based on locale. Ligatures (æ, œ) may be treated as single characters or decomposed. Mathematical symbols, currency signs, and emoji require Unicode-aware comparison. Right-to-left scripts (Arabic, Hebrew) introduce directional complexity.</p>
+
+        <p>Professional <strong>no login letter sorter online free</strong> implementations provide Unicode normalization options that ensure consistent handling of these special cases. Whether you're processing English text, European languages with diacritics, or multilingual content, the tool produces predictable, culturally-appropriate sorting results.</p>
+
+        <h3>Deduplication and Unique Character Extraction</h3>
+        
+        <p>Beyond simple reordering, <strong>sort letters a to z online free</strong> functionality often includes duplicate removal. Extracting unique characters from text creates compact alphabets showing exactly which symbols appear in a document. This serves font subsetting (including only used characters), alphabet learning (focusing on relevant letters), and data compression (encoding repetitive sequences).</p>
+
+        <p>Our deduplication preserves first occurrence order or applies additional sorting, depending on workflow needs. Combine with case normalization to treat "A" and "a" as identical, or preserve case sensitivity for distinct handling.</p>
+
+        <h2>Best Practices for Effective Letter Sorting</h2>
+
+        <h3>Pre-processing and Text Preparation</h3>
+        
+        <p>Before sorting, prepare your text to ensure meaningful results. Remove or preserve whitespace based on whether spaces are significant content or mere separators. Strip punctuation if focusing on alphabetic analysis, or preserve it for complete character inventory. Normalize Unicode to composed form (NFC) to prevent accent representation issues. Consider whether digits, symbols, and control characters should be included or filtered.</p>
+
+        <h3>Choosing Appropriate Sort Strategies</h3>
+        
+        <p>Match your sorting method to your analytical goals: Use alphabetical sorting for reference lists, dictionary creation, and visual scanning. Prefer frequency sorting for cryptographic analysis, linguistic study, and data pattern recognition. Apply type-based sorting for data cleaning, validation, and structured extraction. Consider random sorting for shuffling, game randomization, and statistical sampling.</p>
+
+        <h3>Output Format Selection</h3>
+        
+        <p>The format of sorted output significantly impacts usability. Continuous strings work best for anagram comparison and checksum generation. Space-separated formats improve readability for human review. One-per-line outputs facilitate processing by line-oriented tools and spreadsheet import. JSON arrays serve API integration and programmatic consumption. Grouped-by-type outputs provide immediate visual categorization.</p>
+
+        <h2>Comparing Letter Sorting Approaches</h2>
+
+        <h3>Manual vs. Automated Sorting</h3>
+        
+        <p>Manual letter sorting using paper or basic text editors works for very short strings but fails for: long texts (hundreds or thousands of characters), repetitive operations (batch processing multiple strings), precise requirements (exact alphabetical ordering of mixed cases), and time-sensitive applications (game timers, live demos). Automated <strong>instant letter sorter online free</strong> tools eliminate human error, ensure consistency, and complete in milliseconds what takes minutes manually.</p>
+
+        <h3>Programming vs. Web-Based Tools</h3>
+        
+        <p>Developers can sort letters using Python (sorted()), JavaScript (split().sort().join()), or other languages. However, web-based <strong>online letter sorting tool</strong> solutions offer advantages: no code environment setup required, immediate visual feedback, interactive parameter adjustment, file drag-and-drop support, and accessibility from any device. Our tool bridges the gap between programming power and user-friendly interface.</p>
+
+        <h2>The Future of Character Organization Technology</h2>
+
+        <p>Artificial intelligence is beginning to influence <strong>letter sorting</strong>, moving beyond mechanical ordering toward intelligent character analysis. AI-enhanced tools can: recognize and preserve meaningful character sequences while sorting (keeping "th" together as a common digraph); suggest optimal sort orders based on content type and user goals; identify anagram relationships automatically without explicit sorting; and adapt to user preferences through machine learning.</p>
+
+        <h2>Conclusion: Master Your Text with Professional Letter Sorting</h2>
+
+        <p><strong>Letter sorting</strong> remains one of the most fundamental yet versatile operations in text manipulation. From simple alphabetical arrangement to complex frequency-based analysis, the ability to organize characters systematically empowers professionals, students, gamers, and creatives across every domain. Whether you're solving puzzles, normalizing data, studying language, or creating art, mastering <strong>letter sorting</strong> techniques will dramatically improve your productivity and analytical capabilities.</p>
+
+        <p>Our <strong>free online letter sorter</strong> provides all the capabilities you need to handle any character sorting scenario. With automatic real-time sorting as you type, support for five different methods (alphabetical, frequency, type, random, and reverse), plus flexible output formatting and character filtering options, this tool serves everyone from casual users to data professionals. The browser-based architecture ensures privacy and accessibility, while the intuitive interface requires no learning curve. Whether you need to <strong>sort letters alphabetically</strong>, <strong>sort letters by frequency</strong>, <strong>sort letters a to z</strong>, <strong>sort letters z to a</strong>, or perform any other character organization task, our <strong>online letter sorting utility</strong> delivers professional results instantly. Stop struggling with manual character arrangement—start using our professional <strong>letter sorter online</strong> today and experience the efficiency of automated letter sorting.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool sort letters automatically as I type?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>letter sorter online</strong> features <strong>automatic real-time sorting</strong>. As you type or paste text, the tool instantly extracts and sorts all characters, displaying results immediately in the output area. We use intelligent debouncing to ensure smooth performance even with large texts. The "Auto-sorting enabled" indicator confirms the feature is active. Changes to sort methods, order, or filters apply instantly without requiring manual refresh.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I sort letters from a file without copying and pasting?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely! Use our <strong>drag-and-drop feature</strong> to upload text files directly. Drop TXT, CSV, JSON, HTML, code files, or any text document onto the input area. The tool reads the file automatically and sorts all characters immediately. You can also click "Select file" to browse your computer. This <strong>bulk letter sorter online free</strong> capability handles files up to several megabytes, processing thousands of characters instantly without browser lag.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What's the difference between sorting by alphabetical and by frequency?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Alphabetical sorting</strong> arranges letters from A to Z (or Z to A) based on their position in the alphabet, creating standard dictionary order. <strong>Frequency sorting</strong> arranges letters by how often they appear in your text—most common letters first (like E, T, A in English) or rarest first. Frequency sorting is essential for cryptanalysis, linguistic analysis, and understanding text composition. Our <strong>online letter sorting tool</strong> provides both methods with visual frequency bars in the preview.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I remove duplicate letters and keep only unique characters?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Check the "Remove Duplicates" option in the settings. This eliminates repeated characters, leaving only unique letters from your text. Combined with alphabetical sorting, this creates a compact alphabet showing exactly which characters appear in your document. Useful for font subsetting, alphabet learning, and creating character inventories. You can also combine with case-insensitive sorting to treat "A" and "a" as the same character.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I sort only vowels or only consonants from my text?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Use the "Filter Characters" dropdown and select either "Vowels Only" (A, E, I, O, U) or "Consonants Only" (all other letters). The tool automatically filters your input before sorting, showing only the requested character type in the output. This is perfect for linguistic analysis, phonics exercises, and studying letter distribution patterns in different word types. The preview visualization shows the filtered characters as interactive tiles.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I use this tool to solve anagrams or find hidden words?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Anagram solving is a primary use case for our <strong>letter rearranger tool online</strong>. Input your scrambled letters, sort them alphabetically, and compare against dictionary words sorted the same way. For example, both "listen" and "silent" sort to "eilnst", revealing they're anagrams. For Scrabble or Words with Friends, sort your rack tiles alphabetically to spot combinations faster. The instant sorting helps during timed games and puzzles.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is there a limit to how many letters I can sort?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">The tool handles up to 100,000 characters or several megabytes of text, depending on your browser and device. Chrome and Edge typically handle larger datasets than Safari or mobile browsers. The processing time indicator shows how long each sort takes—most operations complete in under 50ms even for thousands of characters. For extremely large files, the tool may process in chunks to maintain responsiveness.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my text data secure when using this tool?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Completely secure. All processing happens <strong>locally in your browser</strong>—your text never uploads to any server or leaves your device. You can verify this by checking the Network tab in browser DevTools (no data transfer occurs). The tool works offline after initial loading. This makes it ideal for sensitive documents, personal messages, or proprietary content. Privacy is fundamental to our <strong>no login letter sorter online free</strong> design philosophy.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I remove specific letters from the sorted result?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! The Letter Visualization section displays your sorted characters as interactive tiles. Click any letter to remove it from the output—the tile will fade and show a strikethrough. Click again to restore it. This is perfect for manually curating character sets, removing unwanted symbols, or experimenting with different letter combinations. Removed letters are excluded from the final output but your original input remains unchanged.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this letter sorter tool free to use?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, completely <strong>free</strong> with no registration, usage limits, watermarks, or hidden fees. Use for personal or commercial projects without attribution. This is truly a <strong>free letter sorter</strong> for everyone. We support development through unobtrusive advertising, but the tool functionality is entirely free and unrestricted. No account creation, no email required, no premium tiers—just instant letter sorting whenever you need it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const outputText = document.getElementById('outputText');
+const inputStats = document.getElementById('inputStats');
+const outputStats = document.getElementById('outputStats');
+const sortStats = document.getElementById('sortStats');
+const processingTime = document.getElementById('processingTime');
+const letterPreview = document.getElementById('letterPreview');
+const letterGrid = document.getElementById('letterGrid');
+const previewCount = document.getElementById('previewCount');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+
+// Buttons
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const resetBtn = document.getElementById('resetBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+// Method buttons
+const methodBtns = document.querySelectorAll('.method-btn');
+let currentMethod = 'alphabetical';
+let currentLetters = [];
+let removedLetters = new Set();
+
+// Options
+const sortOrder = document.getElementById('sortOrder');
+const caseHandling = document.getElementById('caseHandling');
+const charFilter = document.getElementById('charFilter');
+const outputFormat = document.getElementById('outputFormat');
+const removeDuplicates = document.getElementById('removeDuplicates');
+const removeSpaces = document.getElementById('removeSpaces');
+const removePunctuation = document.getElementById('removePunctuation');
+const preserveCase = document.getElementById('preserveCase');
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Update input stats
+function updateInputStats() {
+  const text = inputText.value;
+  const letters = text.replace(/[^a-zA-Z]/g, '').length;
+  const unique = new Set(text.split('')).size;
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+  inputStats.textContent = `Letters: ${letters} | Unique: ${unique} | Words: ${words}`;
+}
+
+// Extract and filter letters
+function extractLetters(text) {
+  let chars = text.split('');
+  
+  // Apply filters
+  if (removeSpaces.checked) {
+    chars = chars.filter(c => !/\s/.test(c));
+  }
+  
+  if (removePunctuation.checked) {
+    chars = chars.filter(c => /[a-zA-Z0-9]/.test(c));
+  }
+  
+  switch(charFilter.value) {
+    case 'letters':
+      chars = chars.filter(c => /[a-zA-Z]/.test(c));
+      break;
+    case 'digits':
+      chars = chars.filter(c => /[0-9]/.test(c));
+      break;
+    case 'alphanumeric':
+      chars = chars.filter(c => /[a-zA-Z0-9]/.test(c));
+      break;
+    case 'vowels':
+      chars = chars.filter(c => /[aeiouAEIOU]/.test(c));
+      break;
+    case 'consonants':
+      chars = chars.filter(c => /[bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ]/.test(c));
+      break;
+  }
+  
+  return chars;
+}
+
+// Debounce function
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Method selection
+methodBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    methodBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentMethod = btn.dataset.method;
+    sortLetters();
+  });
+});
+
+// Sort function
+function sortLetters() {
+  const startTime = performance.now();
+  const text = inputText.value;
+  
+  if (!text) {
+    outputText.value = '';
+    outputStats.textContent = 'Letters: 0 | Time: 0ms';
+    sortStats.classList.add('hidden');
+    letterPreview.classList.add('hidden');
+    processingTime.textContent = '';
+    currentLetters = [];
+    return;
+  }
+  
+  let letters = extractLetters(text);
+  
+  // Remove duplicates if enabled
+  if (removeDuplicates.checked) {
+    const seen = new Set();
+    letters = letters.filter(c => {
+      const key = caseHandling.value === 'sensitive' ? c : c.toLowerCase();
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+  }
+  
+  // Apply case handling
+  const originalLetters = [...letters];
+  switch(caseHandling.value) {
+    case 'lower':
+      letters = letters.map(c => c.toLowerCase());
+      break;
+    case 'upper':
+      letters = letters.map(c => c.toUpperCase());
+      break;
+    case 'insensitive':
+      // Sort by lowercase but preserve original if preserveCase is checked
+      break;
+  }
+  
+  // Sort based on method
+  const isAsc = sortOrder.value === 'asc';
+  
+  switch(currentMethod) {
+    case 'alphabetical':
+      letters.sort((a, b) => {
+        const charA = caseHandling.value === 'sensitive' ? a : a.toLowerCase();
+        const charB = caseHandling.value === 'sensitive' ? b : b.toLowerCase();
+        return isAsc ? charA.localeCompare(charB) : charB.localeCompare(charA);
+      });
+      break;
+      
+    case 'frequency':
+      const freq = {};
+      letters.forEach(c => {
+        const key = caseHandling.value === 'sensitive' ? c : c.toLowerCase();
+        freq[key] = (freq[key] || 0) + 1;
+      });
+      letters.sort((a, b) => {
+        const keyA = caseHandling.value === 'sensitive' ? a : a.toLowerCase();
+        const keyB = caseHandling.value === 'sensitive' ? b : b.toLowerCase();
+        return isAsc ? freq[keyA] - freq[keyB] : freq[keyB] - freq[keyA];
+      });
+      break;
+      
+    case 'type':
+      const typeOrder = { 'upper': 0, 'lower': 1, 'digit': 2, 'other': 3 };
+      const getType = (c) => {
+        if (/[A-Z]/.test(c)) return 'upper';
+        if (/[a-z]/.test(c)) return 'lower';
+        if (/[0-9]/.test(c)) return 'digit';
+        return 'other';
+      };
+      letters.sort((a, b) => {
+        const typeA = getType(a);
+        const typeB = getType(b);
+        if (typeA !== typeB) {
+          return isAsc ? typeOrder[typeA] - typeOrder[typeB] : typeOrder[typeB] - typeOrder[typeA];
+        }
+        return isAsc ? a.localeCompare(b) : b.localeCompare(a);
+      });
+      break;
+      
+    case 'random':
+      letters.sort(() => Math.random() - 0.5);
+      break;
+      
+    case 'reverse':
+      letters.reverse();
+      break;
+  }
+  
+  // Filter out removed letters
+  letters = letters.filter(c => !removedLetters.has(c));
+  currentLetters = letters;
+  
+  // Format output
+  let output = '';
+  switch(outputFormat.value) {
+    case 'spaced':
+      output = letters.join(' ');
+      break;
+    case 'comma':
+      output = letters.join(',');
+      break;
+    case 'newline':
+      output = letters.join('\n');
+      break;
+    case 'grouped':
+      const groups = {};
+      letters.forEach(c => {
+        const type = /[A-Z]/.test(c) ? 'Uppercase' : /[a-z]/.test(c) ? 'Lowercase' : /[0-9]/.test(c) ? 'Digits' : 'Other';
+        if (!groups[type]) groups[type] = [];
+        groups[type].push(c);
+      });
+      output = Object.entries(groups).map(([type, chars]) => `${type}: ${chars.join('')}`).join('\n');
+      break;
+    case 'json':
+      output = JSON.stringify(letters, null, 2);
+      break;
+    default:
+      output = letters.join('');
+  }
+  
+  const endTime = performance.now();
+  
+  outputText.value = output;
+  outputStats.textContent = `Letters: ${letters.length} | Time: ${(endTime - startTime).toFixed(1)}ms`;
+  sortStats.textContent = `(${letters.length} letters)`;
+  sortStats.classList.remove('hidden');
+  processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+  
+  displayLetterPreview(letters);
+}
+
+// Display letter preview
+function displayLetterPreview(letters) {
+  if (letters.length === 0) {
+    letterPreview.classList.add('hidden');
+    return;
+  }
+  
+  letterPreview.classList.remove('hidden');
+  letterGrid.innerHTML = '';
+  
+  const displayLetters = letters.slice(0, 100);
+  previewCount.textContent = letters.length > 100 ? `Showing first 100 of ${letters.length}` : `Showing all ${letters.length}`;
+  
+  // Calculate frequencies for visualization
+  const freq = {};
+  letters.forEach(c => {
+    freq[c] = (freq[c] || 0) + 1;
+  });
+  const maxFreq = Math.max(...Object.values(freq));
+  
+  displayLetters.forEach(char => {
+    const tile = document.createElement('div');
+    tile.className = 'letter-tile';
+    tile.textContent = char;
+    tile.title = `Frequency: ${freq[char] || 1}`;
+    
+    // Add frequency bar
+    if (currentMethod === 'frequency' && freq[char]) {
+      const bar = document.createElement('div');
+      bar.className = 'freq-bar';
+      bar.style.width = `${(freq[char] / maxFreq) * 100}%`;
+      tile.appendChild(bar);
+    }
+    
+    tile.addEventListener('click', () => {
+      if (removedLetters.has(char)) {
+        removedLetters.delete(char);
+        tile.classList.remove('removed');
+      } else {
+        removedLetters.add(char);
+        tile.classList.add('removed');
+      }
+      sortLetters();
+    });
+    
+    letterGrid.appendChild(tile);
+  });
+}
+
+// Debounced sort
+const debouncedSort = debounce(sortLetters, 100);
+
+// Event listeners for options
+[sortOrder, caseHandling, charFilter, outputFormat, removeDuplicates, removeSpaces, removePunctuation, preserveCase].forEach(el => {
+  el.addEventListener('change', sortLetters);
+});
+
+// Drag and drop handlers
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  if (!file.type.match('text.*') && !file.name.match(/\.(txt|csv|json|xml|html?|md|js|css|py|java|cpp|c|php|rb|go|rs|swift|kt|sql|log)$/i)) {
+    alert('Please upload a text file');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    updateInputStats();
+    removedLetters.clear();
+    sortLetters();
+  };
+  reader.readAsText(file);
+}
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    updateInputStats();
+    removedLetters.clear();
+    sortLetters();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  updateInputStats();
+  removedLetters.clear();
+  sortLetters();
+  inputText.focus();
+}
+
+// Copy output
+async function copyOutput() {
+  if (!outputText.value) return;
+  
+  try {
+    await navigator.clipboard.writeText(outputText.value);
+    const originalText = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalText;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+}
+
+// Download output
+function downloadOutput() {
+  const text = outputText.value;
+  if (!text.trim()) return;
+  
+  let extension = 'txt';
+  if (outputFormat.value === 'json') extension = 'json';
+  
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `sorted-letters.${extension}`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Reset all
+function resetAll() {
+  inputText.value = '';
+  outputText.value = '';
+  removedLetters.clear();
+  updateInputStats();
+  sortLetters();
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Event listeners
+inputText.addEventListener('input', () => {
+  updateInputStats();
+  debouncedSort();
+});
+
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+copyBtn.addEventListener('click', copyOutput);
+downloadBtn.addEventListener('click', downloadOutput);
+resetBtn.addEventListener('click', resetAll);
+
+// Initialize
+updateInputStats();
+</script>
+</body>
+</html>

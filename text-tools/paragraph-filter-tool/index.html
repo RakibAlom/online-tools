@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Paragraph Filter Tool - Free Online Text Filtering</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online paragraph filter tool. Filter paragraphs by keywords, length, duplicates, or regex patterns. Remove or keep specific paragraphs instantly. No registration required." />
+  <meta name="keywords" content="paragraph filter tool, paragraph filter tool online, free paragraph filter tool, online paragraph filter tool, filter paragraphs from text online, text paragraph filter online free, remove specific paragraphs online, keep specific paragraphs online, paragraph selector tool online, text paragraph sorter and filter online, filter text by paragraph online, paragraph removal tool online free, include exclude paragraphs online tool, bulk paragraph filter online, filter duplicate paragraphs online free, text paragraph cleaner and filter online, advanced paragraph filter tool online, regex paragraph filter online free, text paragraph processing tool online, paragraph extraction and filter tool online, free online paragraph filter utility, filter long paragraphs online free, filter short paragraphs online free, filter paragraphs by keyword online, online text paragraph filtering tool free, paragraph filter for writers online, paragraph filter for seo online, instant paragraph filter tool online free, paragraph filter tool without login online" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/paragraph-filter-tool/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/paragraph-filter-tool/" />
+  <meta property="og:title" content="Paragraph Filter Tool - Free Online Text Filtering" />
+  <meta property="og:description" content="Filter paragraphs by keywords, length, duplicates, or regex patterns. Remove or keep specific paragraphs instantly with our free online tool." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/paragraph-filter-tool/" />
+  <meta name="twitter:title" content="Paragraph Filter Tool - Free Online Text Filtering" />
+  <meta name="twitter:description" content="Filter paragraphs by keywords, length, duplicates, or regex patterns. Remove or keep specific paragraphs instantly with our free online tool." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .method-btn {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    .method-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .paragraph-item {
+      border-left: 2px solid rgba(99, 102, 241, 0.5);
+      transition: all 0.2s ease;
+    }
+    
+    .paragraph-item:hover {
+      border-left-color: rgba(99, 102, 241, 1);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .paragraph-item.removed {
+      border-left-color: rgba(239, 68, 68, 0.5);
+      opacity: 0.6;
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+
+    .stats-badge {
+      background: rgba(99, 102, 241, 0.15);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      color: #818cf8;
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 12h20M10 20h14M10 28h20" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Paragraph Filter</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Paragraph Filter Tool
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Text Processing Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-filtering enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Input Text
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Type or paste text here... Or drag & drop a file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.csv,.md,.json,.xml,.html,.js,.css,.py,.java,.cpp,.c,.php,.rb,.go,.rs,.swift,.kt,.sql,.log,.docx" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Paragraphs: 0 | Chars: 0 | Words: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Output -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Filtered Result <span id="filteredCount" class="text-gray-500 font-normal ml-1 hidden">(0 paragraphs)</span>
+            </label>
+            <div class="flex gap-1">
+              <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                Copy
+              </button>
+              <button id="downloadBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Download
+              </button>
+            </div>
+          </div>
+          
+          <textarea id="outputText" readonly spellcheck="false"
+            class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+            placeholder="Filtered paragraphs appear here automatically..."></textarea>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="outputStats">Kept: 0 | Removed: 0</span>
+            <span id="processingTime" class="text-gray-600"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-3">
+        
+        <!-- Filter Mode -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Filter Mode</label>
+          <div class="flex flex-wrap gap-1">
+            <button class="method-btn active rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-mode="keyword">Keywords</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-mode="length">Length</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-mode="duplicates">Duplicates</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-mode="regex">Regex</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-mode="empty">Empty Lines</button>
+          </div>
+        </div>
+
+        <!-- Action Type -->
+        <div class="flex items-center gap-2">
+          <span class="text-xs text-gray-400">Action:</span>
+          <div class="flex gap-1">
+            <button id="actionKeep" class="compact-btn rounded-md bg-green-500/20 border border-green-500/30 text-green-400 transition-all active">
+              Keep Matching
+            </button>
+            <button id="actionRemove" class="compact-btn rounded-md bg-white/5 border border-white/10 text-gray-300 transition-all">
+              Remove Matching
+            </button>
+          </div>
+        </div>
+
+        <!-- Method Options -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+          <!-- Keyword Options -->
+          <div id="keywordOptions" class="mode-panel space-y-2">
+            <div>
+              <label class="text-xs text-gray-400 mb-1 block">Keywords (one per line or comma-separated)</label>
+              <textarea id="keywordsInput" rows="3" class="w-full px-2 py-1.5 rounded-md glass-input text-xs font-mono" placeholder="e.g.&#10;important&#10;urgent&#10;note"></textarea>
+            </div>
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="caseSensitive" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Case sensitive
+            </label>
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="wholeWord" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Whole word only
+            </label>
+          </div>
+
+          <!-- Length Options -->
+          <div id="lengthOptions" class="mode-panel hidden space-y-2">
+            <div class="flex gap-2">
+              <div class="flex-1">
+                <label class="text-xs text-gray-400 mb-1 block">Min Length</label>
+                <input type="number" id="minLength" min="0" value="0" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              </div>
+              <div class="flex-1">
+                <label class="text-xs text-gray-400 mb-1 block">Max Length</label>
+                <input type="number" id="maxLength" min="0" value="10000" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              </div>
+            </div>
+            <div>
+              <label class="text-xs text-gray-400 mb-1 block">Unit</label>
+              <select id="lengthUnit" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+                <option value="chars">Characters</option>
+                <option value="words">Words</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Duplicates Options -->
+          <div id="duplicatesOptions" class="mode-panel hidden space-y-2">
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="removeDuplicates" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Remove duplicate paragraphs
+            </label>
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="ignoreCaseDup" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Ignore case when comparing
+            </label>
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="ignoreWhitespace" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Ignore extra whitespace
+            </label>
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="keepFirst" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Keep first occurrence
+            </label>
+          </div>
+
+          <!-- Regex Options -->
+          <div id="regexOptions" class="mode-panel hidden space-y-2">
+            <div>
+              <label class="text-xs text-gray-400 mb-1 block">Regex Pattern</label>
+              <input type="text" id="regexPattern" placeholder="e.g. ^Chapter \d+ or contains.*text" class="w-full px-2 py-1.5 rounded-md glass-input text-xs font-mono">
+            </div>
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="regexCaseSensitive" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Case sensitive
+            </label>
+            <p class="text-xs text-gray-500">Use JavaScript regex syntax</p>
+          </div>
+
+          <!-- Empty Lines Options -->
+          <div id="emptyOptions" class="mode-panel hidden space-y-2">
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="removeEmpty" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Remove empty paragraphs
+            </label>
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="removeWhitespace" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Remove whitespace-only paragraphs
+            </label>
+          </div>
+
+          <!-- Output Options -->
+          <div class="space-y-2">
+            <label class="text-xs text-gray-400 mb-1 block">Paragraph Separator</label>
+            <select id="separatorSelect" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="\n\n">Double New Line</option>
+              <option value="\n">Single New Line</option>
+              <option value=" ">Space</option>
+              <option value=" - ">- (dash)</option>
+              <option value=" | ">| (pipe)</option>
+            </select>
+            <label class="flex items-center gap-1.5 text-xs text-gray-400 mt-2">
+              <input type="checkbox" id="showPreview" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Show paragraph preview
+            </label>
+          </div>
+        </div>
+
+        <!-- Paragraphs Preview -->
+        <div id="paragraphsPreview" class="hidden">
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-xs font-medium text-gray-300">Paragraphs <span class="text-gray-500 font-normal">(click to toggle include/exclude)</span></label>
+            <div class="flex gap-1">
+              <button id="selectAllBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all text-xs">Select All</button>
+              <button id="deselectAllBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all text-xs">Deselect All</button>
+            </div>
+          </div>
+          <div id="paragraphsList" class="max-h-40 overflow-y-auto space-y-1 pr-1">
+            <!-- Paragraphs will be inserted here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Paragraph Filter?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Auto-Filter</h3>
+          <p class="text-gray-400 text-xs">Real-time filtering as you type</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">5 Methods</h3>
+          <p class="text-gray-400 text-xs">Keywords, length, duplicates & more</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Drag & Drop</h3>
+          <p class="text-gray-400 text-xs">Upload text files instantly</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based, no uploads</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy or download results</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration required</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Input Text</h3>
+          <p class="text-gray-400 text-xs">Type, paste, or drop a file containing your text.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Choose Filter</h3>
+          <p class="text-gray-400 text-xs">Select keywords, length, duplicates, regex, or empty lines.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Configure</h3>
+          <p class="text-gray-400 text-xs">Set your criteria and choose to keep or remove matching paragraphs.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy filtered result or download as file. Toggle individual paragraphs.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Paragraph Filtering: Mastering Text Organization and Content Curation</h2>
+        
+        <p><strong>Paragraph filtering</strong> is an essential text processing technique that enables writers, editors, data analysts, and content managers to quickly organize, clean, and structure large volumes of text. Whether you need to <strong>filter paragraphs from text online</strong>, <strong>remove specific paragraphs</strong> that don't meet certain criteria, or <strong>keep specific paragraphs</strong> that contain important information, a reliable <strong>paragraph filter tool</strong> can transform hours of manual editing into seconds of automated processing. Our <strong>free paragraph filter tool</strong> provides professional-grade capabilities without any cost or registration barriers.</p>
+
+        <h2>What Is Paragraph Filtering and Why Is It Essential?</h2>
+        
+        <p><strong>Paragraph filtering</strong> refers to the process of selectively including or excluding paragraphs from a text document based on specific criteria such as keywords, length, duplicates, or pattern matching. Unlike simple find-and-replace operations, <strong>text paragraph filter</strong> tools work at the structural level, treating each paragraph as a discrete unit that can be independently evaluated and either preserved or discarded. This approach is invaluable when working with structured documents, logs, transcripts, or any text where paragraph-level organization matters.</p>
+
+        <p>The importance of <strong>online paragraph filter tool</strong> solutions has grown exponentially with the explosion of digital content. Content creators need to <strong>filter paragraphs by keyword</strong> to extract relevant sections from research materials. Data analysts must <strong>filter duplicate paragraphs</strong> to clean datasets. Writers want to <strong>filter long paragraphs</strong> or <strong>filter short paragraphs</strong> to achieve consistent pacing. SEO specialists <strong>filter text by paragraph</strong> to optimize content structure. Without efficient <strong>paragraph filter tool online</strong> capabilities, these tasks require tedious manual review of potentially thousands of paragraphs.</p>
+
+        <h2>Understanding Paragraph Filtering Methods and Techniques</h2>
+
+        <h3>Keyword-Based Filtering</h3>
+        
+        <p>The most common <strong>paragraph filter online</strong> method uses keywords or phrases to identify relevant content. When you <strong>filter paragraphs by keyword online</strong>, the tool scans each paragraph for specified terms and either keeps or removes paragraphs based on presence or absence of those terms. This method is particularly useful for content curation, where you might want to <strong>keep specific paragraphs</strong> containing "pricing," "features," or "contact" information while filtering out irrelevant sections.</p>
+
+        <p>Advanced <strong>paragraph selector tool online</strong> implementations offer sophisticated keyword matching options. Case sensitivity controls whether "Important" matches "important." Whole word matching prevents partial matches where "cat" would match "category." Multiple keywords can be combined with AND/OR logic—keeping paragraphs that contain ANY of several keywords (broad filtering) or requiring ALL keywords (strict filtering). Our <strong>advanced paragraph filter tool online</strong> supports these variations, making it suitable for professional content processing workflows.</p>
+
+        <h3>Length-Based Filtering</h3>
+        
+        <p><strong>Filter long paragraphs online free</strong> capabilities address common editorial needs. Long paragraphs often hurt readability, especially on mobile devices or when scanning content quickly. By setting maximum length thresholds, you can identify paragraphs that need breaking into smaller chunks. Conversely, <strong>filter short paragraphs online free</strong> functions help eliminate fragments, headers mistakenly formatted as paragraphs, or single-line breaks that should be merged with adjacent content.</p>
+
+        <p>Length filtering can measure characters (including spaces) or words. Character counts are essential when working with strict field limits—database imports, SMS messages, or form fields. Word counts better reflect semantic content and reading time. Professional <strong>text paragraph sorter and filter online</strong> tools provide both metrics, allowing you to <strong>filter text by paragraph</strong> length with precision. This dual approach ensures your content meets both technical constraints and readability standards.</p>
+
+        <h3>Duplicate Detection and Removal</h3>
+        
+        <p>Duplicate content plagues many text processing workflows. Copied-and-pasted sections, template repetitions, or merged documents often contain identical or near-identical paragraphs. <strong>Filter duplicate paragraphs online free</strong> functionality identifies these redundancies and removes them, streamlining your document while preserving unique content. This is crucial for SEO (search engines penalize duplicate content), academic writing (plagiarism concerns), and data integrity (removing redundant records).</p>
+
+        <p>Duplicate filtering isn't always straightforward. Exact matching misses paragraphs that differ only by whitespace, punctuation, or capitalization. Fuzzy matching identifies near-duplicates with minor variations but risks false positives. Smart <strong>paragraph removal tool online free</strong> implementations offer configurable sensitivity—ignoring case differences, normalizing whitespace, or even using similarity algorithms for intelligent deduplication. Our <strong>bulk paragraph filter online</strong> system handles these complexities automatically.</p>
+
+        <h3>Regular Expression Filtering</h3>
+        
+        <p>For technical users, <strong>regex paragraph filter online free</strong> capabilities unlock unlimited filtering potential. Regular expressions (regex) allow pattern-based matching that goes far beyond simple keywords. You can <strong>filter paragraphs from text online</strong> using patterns like: email addresses, phone numbers, URLs, dates in specific formats, numbered lists, quoted text, code blocks, or any custom pattern your data requires.</p>
+
+        <p>Regex filtering excels at processing structured logs, extracting specific data formats, or cleaning technical documentation. A developer might use <code>^Error:</code> to <strong>keep specific paragraphs</strong> starting with error messages. A marketer could use <code>\$\d+</code> to find paragraphs containing dollar amounts. An editor might use <code>^\s*[\*\-\•]</code> to identify bulleted list items. While regex requires learning investment, it makes our <strong>text paragraph processing tool online</strong> infinitely adaptable to specialized needs.</p>
+
+        <h2>Professional Applications of Paragraph Filtering</h2>
+
+        <h3>Content Management and Publishing</h3>
+        
+        <p>Publishers and content managers constantly <strong>filter text by paragraph</strong> to prepare content for different platforms. A long-form article might be filtered to extract summary paragraphs for social media. Product descriptions could be filtered by length to fit template constraints. User-generated content requires filtering to remove empty paragraphs, duplicates, or inappropriate content before publication. <strong>Paragraph filter for SEO online</strong> tools help optimize content structure for search engines by ensuring proper paragraph distribution and keyword placement.</p>
+
+        <p>Multi-channel publishing amplifies these needs. The same source content might need different paragraph filtering for: blog posts (longer, detailed paragraphs), email newsletters (shorter, scannable paragraphs), mobile apps (concise, single-topic paragraphs), and print materials (formally structured paragraphs). An <strong>instant paragraph filter tool online free</strong> enables rapid adaptation of content across these channels without manual rewriting.</p>
+
+        <h3>Data Cleaning and Preparation</h3>
+        
+        <p>Data scientists and analysts spend significant time preparing text data for analysis. Survey responses need <strong>filter empty paragraphs online</strong> operations to remove blank submissions. Customer feedback requires <strong>filter duplicate paragraphs</strong> to eliminate copy-paste responses. Log files need <strong>filter paragraphs by keyword</strong> to isolate error messages or specific events. Legal documents might need <strong>filter long paragraphs</strong> to break dense text into analyzable chunks.</p>
+
+        <p>ETL (Extract, Transform, Load) pipelines particularly benefit from automated paragraph filtering. Raw data extraction often produces messy text with inconsistent formatting. Before loading into databases or analysis tools, this text must be cleaned and standardized. <strong>Text paragraph cleaner and filter online</strong> tools serve as crucial preprocessing steps, ensuring data quality and consistency. Our <strong>free online paragraph filter utility</strong> handles these tasks without requiring complex software installations.</p>
+
+        <h3>Academic and Research Work</h3>
+        
+        <p>Researchers frequently <strong>filter paragraphs from text online</strong> when processing literature reviews, interview transcripts, or survey data. A literature review might require extracting paragraphs containing methodology descriptions from dozens of papers. Interview transcripts need filtering to remove interviewer questions and keep only subject responses. Survey open-ends require <strong>filter short paragraphs</strong> to eliminate "don't know" responses while keeping substantive feedback.</p>
+
+        <p>Citation management also benefits from paragraph filtering. Bibliographic entries often mix formats and require cleaning. Reference lists might need <strong>filter paragraphs by keyword</strong> to separate journal articles from books. Footnotes and endnotes require extraction from main text. These tasks, when done manually, consume countless hours that <strong>paragraph filter tool without login online</strong> solutions can reduce to minutes.</p>
+
+        <h3>Software Development and Technical Writing</h3>
+        
+        <p>Technical documentation and code comments often require paragraph-level processing. API documentation might need <strong>filter paragraphs by keyword</code> to extract deprecated sections. Code comments could be filtered by length to identify overly verbose explanations. Changelog entries require <strong>filter duplicate paragraphs</strong> when merging updates from multiple sources. Error message databases need <strong>filter text by paragraph</strong> to categorize by severity or component.</p>
+
+        <p>Documentation generation tools frequently output redundant or empty paragraphs that must be filtered before publication. Automated API docs might create placeholder paragraphs for undocumented parameters. Merged documentation from multiple versions contains duplicate content. Template-based docs include conditional paragraphs that should be removed when not applicable. <strong>Paragraph extraction and filter tool online</strong> capabilities clean these artifacts efficiently.</p>
+
+        <h2>Advanced Paragraph Filtering Strategies</h2>
+
+        <h3>Cascading Filters</h3>
+        
+        <p>Complex filtering scenarios often require multiple passes. First, <strong>filter empty paragraphs online</strong> to remove whitespace. Then, <strong>filter duplicate paragraphs</strong> to eliminate redundancy. Next, <strong>filter paragraphs by keyword</strong> to isolate relevant topics. Finally, <strong>filter long paragraphs</strong> to ensure readability. This cascading approach produces cleaner results than any single filter could achieve alone.</p>
+
+        <p>Our <strong>advanced paragraph filter tool online</strong> supports this workflow through sequential operations. Apply one filter, copy the results back to input, then apply the next filter. While this requires multiple steps, it provides maximum control over complex filtering requirements. For bulk operations, the consistency of automated filtering far outweighs the multi-step process, especially compared to manual alternatives.</p>
+
+        <h3>Include vs. Exclude Logic</h3>
+        
+        <p>Understanding when to keep versus remove paragraphs is crucial for effective filtering. "Keep matching" mode (inclusive filtering) is safest when you want to preserve specific content types—you're explicitly selecting what matters. "Remove matching" mode (exclusive filtering) works best when eliminating known problems—removing disclaimers, headers, or boilerplate text while keeping everything else.</p>
+
+        <p>The choice affects workflow efficiency. If 90% of paragraphs are relevant and 10% contain keywords you want to eliminate, "remove matching" requires fewer specifications. If only 10% of paragraphs contain the valuable content you need, "keep matching" is more efficient. Professional <strong>include exclude paragraphs online tool</strong> implementations like ours provide both modes, letting you choose the approach that minimizes your specification effort.</p>
+
+        <h3>Context Preservation</h3>
+        
+        <p>Paragraph filtering must consider context to maintain document coherence. Removing paragraphs can break narrative flow, eliminate necessary transitions, or destroy document structure. When using <strong>paragraph removal tool online free</strong> capabilities, review the output to ensure remaining paragraphs still make sense in sequence. Sometimes keeping a short transitional paragraph is better than strict adherence to length filters.</p>
+
+        <p>Context-aware filtering might consider paragraph position (keeping introductions and conclusions regardless of other criteria), surrounding content (not removing paragraphs that bridge two kept sections), or structural role (preserving headers that organize content). While automated tools can't fully understand context, careful filter selection and manual review ensure coherent results.</p>
+
+        <h2>Best Practices for Effective Paragraph Filtering</h2>
+
+        <h3>Pre-processing Preparation</h3>
+        
+        <p>Before filtering, prepare your text to ensure consistent paragraph detection. Normalize line endings (convert Windows \r\n to Unix \n). Ensure consistent paragraph separation (double newlines between paragraphs). Remove or standardize indentation that might confuse paragraph boundaries. Check for special characters that might affect keyword matching. These preparation steps ensure your <strong>text paragraph filter online free</strong> operations work as expected.</p>
+
+        <h3>Testing and Validation</h3>
+        
+        <p>Always test filters on sample data before processing large documents. Apply your filter criteria to a representative subset, manually verify the results, then proceed with the full document. This prevents accidental data loss from overly aggressive filters or missed content from overly restrictive criteria. Save different filter configurations for recurring tasks—your future self will thank you.</p>
+
+        <h3>Backup and Version Control</h3>
+        
+        <p>Keep original documents before filtering. While our <strong>free paragraph filter tool</strong> processes text in your browser without uploading to servers, maintaining backups ensures you can recover if filtering produces unexpected results. Version control systems (Git, Google Docs history) or simple file naming conventions (document-v1.txt, document-v2-filtered.txt) preserve your ability to backtrack.</p>
+
+        <h2>The Future of Text Filtering Technology</h2>
+
+        <p>Artificial intelligence is revolutionizing <strong>paragraph filter tool online</strong> capabilities. Machine learning models can now understand semantic content, not just pattern matching. Future tools will filter based on meaning—keeping paragraphs about specific topics regardless of exact keywords, identifying sentiment (positive/negative paragraphs), or recognizing writing style (formal vs. casual). These AI-powered filters will understand context, nuance, and intent in ways that current keyword and regex methods cannot match.</p>
+
+        <p>Natural language processing (NLP) advances will enable intelligent summarization that preserves key information while dramatically reducing length. Instead of simply removing long paragraphs, AI could automatically rewrite them concisely. Duplicate detection will improve to identify paraphrased content, not just exact matches. These innovations will make <strong>paragraph filter for writers online</strong> tools even more powerful assistants in content creation and curation workflows.</p>
+
+        <h2>Conclusion: Master Your Content with Professional Paragraph Filtering</h2>
+
+        <p><strong>Paragraph filtering</strong> remains one of the most practical and widely applicable text processing techniques available. From simple keyword extraction to complex regex pattern matching, the ability to selectively include or exclude paragraphs empowers professionals across every industry. Whether you're cleaning data, curating content, preparing research materials, or optimizing documents for specific platforms, mastering <strong>paragraph filter tool</strong> techniques will dramatically improve your productivity and output quality.</p>
+
+        <p>Our <strong>free online paragraph filter tool</strong> provides all the capabilities you need for professional text filtering. With automatic real-time processing as you type, support for five different filtering methods (keywords, length, duplicates, regex, and empty lines), flexible include/exclude logic, and detailed paragraph preview, this tool serves everyone from casual users to data professionals. The browser-based architecture ensures complete privacy—your text never leaves your device—while the intuitive interface requires no learning curve. Whether you need to <strong>filter paragraphs by keyword online</strong>, <strong>filter duplicate paragraphs online free</strong>, <strong>filter long paragraphs online free</strong>, <strong>filter short paragraphs online free</strong>, or perform complex <strong>regex paragraph filter online free</strong> operations, our <strong>text paragraph processing tool online</strong> delivers professional results instantly. Stop manually reviewing paragraphs one by one—start using our <strong>paragraph filter tool without login online</strong> today and experience the efficiency of automated text filtering.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool filter paragraphs automatically as I type?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>paragraph filter tool online</strong> features <strong>automatic real-time filtering</strong>. As you type or paste text, the tool instantly analyzes your input and displays filtered results. Changes to filter criteria, keywords, or options apply immediately. The "Auto-filtering enabled" indicator at the top confirms the feature is active. This makes it the most responsive <strong>free paragraph filter tool</strong> available for instant text processing.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I filter paragraphs containing specific keywords?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Select "Keywords" mode, enter your keywords (one per line or comma-separated), then choose whether to keep or remove matching paragraphs. Enable "Case sensitive" for exact matching or "Whole word only" to avoid partial matches. This lets you <strong>filter paragraphs by keyword online</strong> with precision, keeping only paragraphs containing "pricing," "features," or any terms you specify.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I remove duplicate paragraphs from my text?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely! Select "Duplicates" mode and check "Remove duplicate paragraphs." The tool automatically identifies and removes repeated paragraphs, keeping only the first occurrence. Enable "Ignore case" and "Ignore extra whitespace" for smarter matching that catches duplicates even with formatting differences. This <strong>filter duplicate paragraphs online free</strong> feature is perfect for cleaning lists, logs, or merged documents.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I filter paragraphs by length?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Choose "Length" mode and set minimum and maximum values. Select "Characters" to <strong>filter long paragraphs</strong> or <strong>filter short paragraphs</strong> by character count, or choose "Words" for word-based filtering. Use "Keep Matching" to preserve paragraphs within your desired length range, or "Remove Matching" to eliminate paragraphs that are too long or too short. Ideal for standardizing content or meeting field length requirements.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+      <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+        <span class="text-sm font-medium text-gray-200 pr-4">Can I use regular expressions for advanced filtering?</span>
+        <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
+      <div class="faq-content px-3">
+        <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Select "Regex" mode to unlock pattern-based filtering. Use JavaScript regex syntax to match complex patterns like email addresses, phone numbers, dates, or custom formats. For example, use <code>^\d+\.</code> to match numbered paragraphs, or <code>error|warning|critical</code> to find paragraphs containing any of those terms. This <strong>regex paragraph filter online free</strong> feature provides unlimited filtering possibilities for technical users.</p>
+      </div>
+    </div>
+
+    <div class="glass-panel rounded-lg overflow-hidden">
+      <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+        <span class="text-sm font-medium text-gray-200 pr-4">How do I manually select which paragraphs to keep?</span>
+        <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
+      <div class="faq-content px-3">
+        <p class="text-gray-400 text-xs pb-3 leading-relaxed">Enable "Show paragraph preview" in the settings, then click individual paragraphs in the preview list to toggle them on/off. Paragraphs with a green border will be included; those with a red border will be excluded. Use "Select All" or "Deselect All" buttons for bulk operations, then fine-tune individual paragraphs. This manual <strong>paragraph selector tool online</strong> feature gives you complete control over the filtering process.</p>
+      </div>
+    </div>
+
+    <div class="glass-panel rounded-lg overflow-hidden">
+      <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+        <span class="text-sm font-medium text-gray-200 pr-4">Is there a file size limit?</span>
+        <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
+      <div class="faq-content px-3">
+        <p class="text-gray-400 text-xs pb-3 leading-relaxed">The tool handles files up to 10-20MB (several million characters), roughly 3,000-5,000 pages depending on formatting. Browser performance varies—Chrome and Edge typically handle larger files better than Safari or mobile browsers. For extremely large files (100MB+), consider splitting the file into smaller chunks first. Our <strong>bulk paragraph filter online</strong> capabilities are optimized for typical daily use cases.</p>
+      </div>
+    </div>
+
+    <div class="glass-panel rounded-lg overflow-hidden">
+      <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+        <span class="text-sm font-medium text-gray-200 pr-4">Is my data secure and private?</span>
+        <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
+      <div class="faq-content px-3">
+        <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely. All processing happens <strong>locally in your browser</strong>—your text never uploads to our servers or leaves your device. You can verify this by checking your browser's Network tab (no external data transfer occurs). The tool works offline after initial loading. This makes it ideal for processing confidential documents, personal information, or sensitive business data. Privacy is fundamental to our <strong>paragraph filter tool without login online</strong> architecture.</p>
+      </div>
+    </div>
+
+    <div class="glass-panel rounded-lg overflow-hidden">
+      <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+        <span class="text-sm font-medium text-gray-200 pr-4">Is this tool completely free to use?</span>
+        <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
+      <div class="faq-content px-3">
+        <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, completely <strong>free</strong> with no registration required, no usage limits, no watermarks, and no hidden fees. Use it for personal or commercial projects without attribution. This is truly a <strong>free paragraph filter tool</strong> available to everyone. The service is supported by unobtrusive advertising and voluntary user support. Start filtering your text instantly without creating accounts or providing any personal information.</p>
+      </div>
+    </div>
+  </div>
+</section>
+  </main>
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const outputText = document.getElementById('outputText');
+const inputStats = document.getElementById('inputStats');
+const outputStats = document.getElementById('outputStats');
+const filteredCount = document.getElementById('filteredCount');
+const processingTime = document.getElementById('processingTime');
+const paragraphsPreview = document.getElementById('paragraphsPreview');
+const paragraphsList = document.getElementById('paragraphsList');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+
+// Buttons
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const resetBtn = document.getElementById('resetBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const selectAllBtn = document.getElementById('selectAllBtn');
+const deselectAllBtn = document.getElementById('deselectAllBtn');
+const actionKeep = document.getElementById('actionKeep');
+const actionRemove = document.getElementById('actionRemove');
+
+// Mode buttons and panels
+const methodBtns = document.querySelectorAll('.method-btn');
+const modePanels = document.querySelectorAll('.mode-panel');
+let currentMode = 'keyword';
+let actionMode = 'keep'; // 'keep' or 'remove'
+
+// Paragraph storage
+let allParagraphs = [];
+let filteredParagraphs = [];
+let manualSelections = new Set();
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Update input stats
+function updateInputStats() {
+  const text = inputText.value;
+  const paragraphs = text.trim() === '' ? 0 : text.split(/\n\s*\n/).filter(p => p.trim().length > 0).length;
+  const chars = text.length;
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+  inputStats.textContent = `Paragraphs: ${paragraphs} | Chars: ${chars} | Words: ${words}`;
+}
+
+// Debounce function for performance
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Mode selection
+methodBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    methodBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentMode = btn.dataset.mode;
+    
+    modePanels.forEach(panel => panel.classList.add('hidden'));
+    document.getElementById(currentMode + 'Options').classList.remove('hidden');
+    
+    // Auto-filter when mode changes
+    filterParagraphs();
+  });
+});
+
+// Action mode toggle
+actionKeep.addEventListener('click', () => {
+  actionMode = 'keep';
+  actionKeep.classList.add('active', 'bg-green-500/20', 'border-green-500/30', 'text-green-400');
+  actionKeep.classList.remove('bg-white/5', 'border-white/10', 'text-gray-300');
+  actionRemove.classList.remove('active', 'bg-red-500/20', 'border-red-500/30', 'text-red-400');
+  actionRemove.classList.add('bg-white/5', 'border-white/10', 'text-gray-300');
+  filterParagraphs();
+});
+
+actionRemove.addEventListener('click', () => {
+  actionMode = 'remove';
+  actionRemove.classList.add('active', 'bg-red-500/20', 'border-red-500/30', 'text-red-400');
+  actionRemove.classList.remove('bg-white/5', 'border-white/10', 'text-gray-300');
+  actionKeep.classList.remove('active', 'bg-green-500/20', 'border-green-500/30', 'text-green-400');
+  actionKeep.classList.add('bg-white/5', 'border-white/10', 'text-gray-300');
+  filterParagraphs();
+});
+
+// Separator change
+document.getElementById('separatorSelect').addEventListener('change', () => {
+  filterParagraphs();
+});
+
+// Show preview toggle
+document.getElementById('showPreview').addEventListener('change', () => {
+  filterParagraphs();
+});
+
+// Auto-filter on option changes
+['keywordsInput', 'caseSensitive', 'wholeWord', 'minLength', 'maxLength', 'lengthUnit', 
+ 'removeDuplicates', 'ignoreCaseDup', 'ignoreWhitespace', 'keepFirst',
+ 'regexPattern', 'regexCaseSensitive', 'removeEmpty', 'removeWhitespace'].forEach(id => {
+  const el = document.getElementById(id);
+  if (el) {
+    el.addEventListener('input', () => filterParagraphs());
+    el.addEventListener('change', () => filterParagraphs());
+  }
+});
+
+// Split text into paragraphs
+function splitIntoParagraphs(text) {
+  if (!text.trim()) return [];
+  // Split by double newlines or multiple newlines
+  return text.split(/\n\s*\n/).map(p => p.trim()).filter(p => p.length > 0);
+}
+
+// Check if paragraph matches keyword filter
+function matchesKeywordFilter(paragraph, keywords, caseSensitive, wholeWord) {
+  if (!keywords.length) return true;
+  
+  let text = paragraph;
+  let searchKeywords = keywords;
+  
+  if (!caseSensitive) {
+    text = text.toLowerCase();
+    searchKeywords = keywords.map(k => k.toLowerCase());
+  }
+  
+  return searchKeywords.some(keyword => {
+    if (wholeWord) {
+      const regex = new RegExp(`\\b${keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, caseSensitive ? '' : 'i');
+      return regex.test(paragraph);
+    } else {
+      return text.includes(keyword);
+    }
+  });
+}
+
+// Check if paragraph matches length filter
+function matchesLengthFilter(paragraph, min, max, unit) {
+  let length = unit === 'chars' ? paragraph.length : paragraph.split(/\s+/).filter(w => w.length > 0).length;
+  return length >= min && length <= max;
+}
+
+// Check for duplicates
+function isDuplicate(paragraph, index, allPars, ignoreCase, ignoreWhitespace) {
+  let normalized = paragraph;
+  if (ignoreCase) normalized = normalized.toLowerCase();
+  if (ignoreWhitespace) normalized = normalized.replace(/\s+/g, ' ').trim();
+  
+  for (let i = 0; i < index; i++) {
+    let other = allPars[i];
+    if (ignoreCase) other = other.toLowerCase();
+    if (ignoreWhitespace) other = other.replace(/\s+/g, ' ').trim();
+    
+    if (normalized === other) return true;
+  }
+  return false;
+}
+
+// Check if paragraph matches regex
+function matchesRegexFilter(paragraph, pattern, caseSensitive) {
+  if (!pattern) return true;
+  try {
+    const flags = caseSensitive ? 'g' : 'gi';
+    const regex = new RegExp(pattern, flags);
+    return regex.test(paragraph);
+  } catch (e) {
+    return false;
+  }
+}
+
+// Check if paragraph is empty
+function isEmptyParagraph(paragraph, removeWhitespace) {
+  if (!paragraph.trim()) return true;
+  if (removeWhitespace && !paragraph.replace(/\s/g, '').length) return true;
+  return false;
+}
+
+// Main filter function
+function filterParagraphs() {
+  const startTime = performance.now();
+  const text = inputText.value;
+  
+  if (!text.trim()) {
+    outputText.value = '';
+    outputStats.textContent = 'Kept: 0 | Removed: 0';
+    filteredCount.textContent = '(0 paragraphs)';
+    filteredCount.classList.add('hidden');
+    paragraphsPreview.classList.add('hidden');
+    processingTime.textContent = '';
+    allParagraphs = [];
+    filteredParagraphs = [];
+    return;
+  }
+  
+  allParagraphs = splitIntoParagraphs(text);
+  let kept = [];
+  let removed = [];
+  
+  try {
+    switch(currentMode) {
+      case 'keyword':
+        const keywordsRaw = document.getElementById('keywordsInput').value;
+        const keywords = keywordsRaw.split(/[\n,]/).map(k => k.trim()).filter(k => k.length > 0);
+        const caseSens = document.getElementById('caseSensitive').checked;
+        const wholeW = document.getElementById('wholeWord').checked;
+        
+        allParagraphs.forEach((para, idx) => {
+          const matches = matchesKeywordFilter(para, keywords, caseSens, wholeW);
+          const shouldKeep = actionMode === 'keep' ? matches : !matches;
+          
+          if (shouldKeep) {
+            kept.push({ text: para, index: idx, included: true });
+          } else {
+            removed.push({ text: para, index: idx, included: false });
+          }
+        });
+        break;
+        
+      case 'length':
+        const minLen = parseInt(document.getElementById('minLength').value) || 0;
+        const maxLen = parseInt(document.getElementById('maxLength').value) || 10000;
+        const unit = document.getElementById('lengthUnit').value;
+        
+        allParagraphs.forEach((para, idx) => {
+          const matches = matchesLengthFilter(para, minLen, maxLen, unit);
+          const shouldKeep = actionMode === 'keep' ? matches : !matches;
+          
+          if (shouldKeep) {
+            kept.push({ text: para, index: idx, included: true });
+          } else {
+            removed.push({ text: para, index: idx, included: false });
+          }
+        });
+        break;
+        
+      case 'duplicates':
+        const removeDups = document.getElementById('removeDuplicates').checked;
+        const ignoreCase = document.getElementById('ignoreCaseDup').checked;
+        const ignoreWhite = document.getElementById('ignoreWhitespace').checked;
+        const keepFirst = document.getElementById('keepFirst').checked;
+        
+        allParagraphs.forEach((para, idx) => {
+          const isDup = isDuplicate(para, idx, allParagraphs, ignoreCase, ignoreWhite);
+          let shouldKeep;
+          
+          if (removeDups) {
+            if (keepFirst) {
+              shouldKeep = !isDup;
+            } else {
+              shouldKeep = true; // Keep all, mark duplicates
+            }
+          } else {
+            shouldKeep = true;
+          }
+          
+          if (shouldKeep) {
+            kept.push({ text: para, index: idx, included: true, isDuplicate: isDup });
+          } else {
+            removed.push({ text: para, index: idx, included: false });
+          }
+        });
+        break;
+        
+      case 'regex':
+        const pattern = document.getElementById('regexPattern').value;
+        const regexCase = document.getElementById('regexCaseSensitive').checked;
+        
+        allParagraphs.forEach((para, idx) => {
+          const matches = matchesRegexFilter(para, pattern, regexCase);
+          const shouldKeep = actionMode === 'keep' ? matches : !matches;
+          
+          if (shouldKeep) {
+            kept.push({ text: para, index: idx, included: true });
+          } else {
+            removed.push({ text: para, index: idx, included: false });
+          }
+        });
+        break;
+        
+      case 'empty':
+        const removeEmpty = document.getElementById('removeEmpty').checked;
+        const removeWhite = document.getElementById('removeWhitespace').checked;
+        
+        allParagraphs.forEach((para, idx) => {
+          const isEmpty = isEmptyParagraph(para, removeWhite);
+          let shouldKeep;
+          
+          if (removeEmpty) {
+            shouldKeep = !isEmpty;
+          } else {
+            shouldKeep = true;
+          }
+          
+          if (shouldKeep) {
+            kept.push({ text: para, index: idx, included: true });
+          } else {
+            removed.push({ text: para, index: idx, included: false, isEmpty: true });
+          }
+        });
+        break;
+    }
+    
+    const endTime = performance.now();
+    filteredParagraphs = kept;
+    
+    // Apply manual selections if they exist
+    if (manualSelections.size > 0) {
+      kept = kept.map(p => ({
+        ...p,
+        included: manualSelections.has(p.index) ? true : p.included
+      }));
+      removed = removed.map(p => ({
+        ...p,
+        included: manualSelections.has(p.index) ? true : false
+      }));
+    }
+    
+    // Update output
+    const separator = document.getElementById('separatorSelect').value.replace(/\\n/g, '\n');
+    const finalKept = kept.filter(p => p.included);
+    outputText.value = finalKept.map(p => p.text).join(separator);
+    
+    // Update stats
+    outputStats.textContent = `Kept: ${finalKept.length} | Removed: ${removed.length}`;
+    filteredCount.textContent = `(${finalKept.length} paragraphs)`;
+    filteredCount.classList.remove('hidden');
+    processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+    
+    // Update preview
+    if (document.getElementById('showPreview').checked) {
+      displayParagraphsPreview([...kept, ...removed].sort((a, b) => a.index - b.index));
+    } else {
+      paragraphsPreview.classList.add('hidden');
+    }
+    
+  } catch (error) {
+    console.error('Filter error:', error);
+  }
+}
+
+// Display paragraphs preview
+function displayParagraphsPreview(paragraphs) {
+  if (paragraphs.length === 0) {
+    paragraphsPreview.classList.add('hidden');
+    return;
+  }
+  
+  paragraphsPreview.classList.remove('hidden');
+  paragraphsList.innerHTML = '';
+  
+  paragraphs.slice(0, 100).forEach((para) => { // Limit to 100 for performance
+    const paraDiv = document.createElement('div');
+    const isIncluded = manualSelections.has(para.index) ? true : para.included;
+    paraDiv.className = `paragraph-item p-2 rounded cursor-pointer text-xs ${isIncluded ? '' : 'removed'}`;
+    paraDiv.dataset.index = para.index;
+    
+    let badge = '';
+    if (para.isDuplicate) badge = '<span class="text-xs text-yellow-400 ml-1">[Dup]</span>';
+    if (para.isEmpty) badge = '<span class="text-xs text-red-400 ml-1">[Empty]</span>';
+    
+    paraDiv.innerHTML = `
+      <div class="flex items-center justify-between mb-0.5">
+        <span class="text-xs font-medium ${isIncluded ? 'text-indigo-400' : 'text-red-400'}">Para ${para.index + 1}</span>
+        <span class="text-xs text-gray-500">${para.text.length}c ${badge}</span>
+      </div>
+      <div class="text-gray-300 truncate">${para.text.substring(0, 80)}${para.text.length > 80 ? '...' : ''}</div>
+    `;
+    
+    paraDiv.addEventListener('click', () => {
+      const currentlyIncluded = !paraDiv.classList.contains('removed');
+      if (currentlyIncluded) {
+        paraDiv.classList.add('removed');
+        manualSelections.delete(para.index);
+      } else {
+        paraDiv.classList.remove('removed');
+        manualSelections.add(para.index);
+      }
+      // Re-run filter to update output
+      filterParagraphs();
+    });
+    
+    paragraphsList.appendChild(paraDiv);
+  });
+  
+  if (paragraphs.length > 100) {
+    const moreDiv = document.createElement('div');
+    moreDiv.className = 'text-xs text-gray-500 text-center py-1';
+    moreDiv.textContent = `... and ${paragraphs.length - 100} more paragraphs`;
+    paragraphsList.appendChild(moreDiv);
+  }
+}
+
+// Select/Deselect all
+selectAllBtn.addEventListener('click', () => {
+  allParagraphs.forEach((_, idx) => manualSelections.add(idx));
+  filterParagraphs();
+});
+
+deselectAllBtn.addEventListener('click', () => {
+  manualSelections.clear();
+  filterParagraphs();
+});
+
+// Debounced version for typing
+const debouncedFilter = debounce(filterParagraphs, 100);
+
+// Drag and drop handlers
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  if (!file.type.match('text.*') && !file.name.match(/\.(txt|csv|json|xml|html?|md|js|css|py|java|cpp|c|php|rb|go|rs|swift|kt|sql|log|docx)$/i)) {
+    alert('Please upload a text file');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    updateInputStats();
+    filterParagraphs();
+  };
+  reader.readAsText(file);
+}
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    updateInputStats();
+    filterParagraphs();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  updateInputStats();
+  filterParagraphs();
+  inputText.focus();
+}
+
+// Copy output
+async function copyOutput() {
+  if (!outputText.value) return;
+  
+  try {
+    await navigator.clipboard.writeText(outputText.value);
+    const originalText = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalText;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+}
+
+// Download output
+function downloadOutput() {
+  const text = outputText.value;
+  if (!text.trim()) return;
+  
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'filtered-text.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Reset all
+function resetAll() {
+  inputText.value = '';
+  outputText.value = '';
+  updateInputStats();
+  outputStats.textContent = 'Kept: 0 | Removed: 0';
+  filteredCount.classList.add('hidden');
+  paragraphsPreview.classList.add('hidden');
+  processingTime.textContent = '';
+  allParagraphs = [];
+  filteredParagraphs = [];
+  manualSelections.clear();
+  
+  // Reset inputs
+  document.getElementById('keywordsInput').value = '';
+  document.getElementById('regexPattern').value = '';
+  document.getElementById('minLength').value = '0';
+  document.getElementById('maxLength').value = '10000';
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Event listeners
+inputText.addEventListener('input', () => {
+  updateInputStats();
+  debouncedFilter();
+});
+
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+copyBtn.addEventListener('click', copyOutput);
+downloadBtn.addEventListener('click', downloadOutput);
+resetBtn.addEventListener('click', resetAll);
+
+// Initialize
+updateInputStats();
+</script>
+</body>
+</html>

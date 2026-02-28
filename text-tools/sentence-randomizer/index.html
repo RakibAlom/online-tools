@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sentence Randomizer - Free Online Sentence Shuffling Tool</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online sentence randomizer tool. Instantly shuffle, randomize, and rearrange sentences in your text. Perfect for writers, teachers, SEO, and content creation. No registration required." />
+  <meta name="keywords" content="sentence randomizer, sentence randomizer online, free sentence randomizer, randomize sentences online, online sentence randomizer tool, shuffle sentences online free, sentence shuffler online, random sentence generator online free, sentence rearranger tool online, instant sentence randomizer online free, bulk sentence randomizer online, automatic sentence shuffler online free, text sentence randomizer tool online, random sentence order generator online free, mix sentences online free tool, scramble sentences online free, sentence permutation generator online free, random sentence organizer online, sentence randomizer without login online free, web based sentence randomizer tool free, custom sentence randomizer online free, advanced sentence shuffle tool online free, seo sentence randomizer tool online free, classroom sentence randomizer online free, writing sentence randomizer online free, simple sentence randomizer tool online free, online sentence shuffling tool free" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/sentence-randomizer/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/sentence-randomizer/" />
+  <meta property="og:title" content="Sentence Randomizer - Free Online Sentence Shuffling Tool" />
+  <meta property="og:description" content="Instantly shuffle, randomize, and rearrange sentences in your text. Perfect for writers, teachers, SEO, and content creation. No registration required." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/sentence-randomizer/" />
+  <meta name="twitter:title" content="Sentence Randomizer - Free Online Sentence Shuffling Tool" />
+  <meta name="twitter:description" content="Instantly shuffle, randomize, and rearrange sentences in your text. Perfect for writers, teachers, SEO, and content creation. No registration required." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .method-btn {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    .method-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .sentence-tag {
+      display: block;
+      padding: 0.5rem 0.75rem;
+      margin: 0.25rem 0;
+      background: rgba(99, 102, 241, 0.1);
+      border: 1px solid rgba(99, 102, 241, 0.2);
+      border-radius: 0.375rem;
+      font-size: 0.75rem;
+      color: #c7d2fe;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      text-align: left;
+      line-height: 1.4;
+    }
+    
+    .sentence-tag:hover {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.4);
+    }
+
+    .sentence-number {
+      display: inline-block;
+      width: 1.25rem;
+      height: 1.25rem;
+      background: rgba(99, 102, 241, 0.3);
+      border-radius: 50%;
+      font-size: 0.625rem;
+      line-height: 1.25rem;
+      text-align: center;
+      margin-right: 0.5rem;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 15h20M10 25h20M15 10v20M25 10v20" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Sentence Randomizer</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Sentence Randomizer
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Text Processing Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-randomization enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Input Text
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Type or paste text here... Or drag & drop a file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.csv,.md,.json,.xml,.html,.js,.css,.py,.java,.cpp,.c,.php,.rb,.go,.rs,.swift,.kt,.sql,.log" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Sentences: 0 | Words: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Output -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Randomized Result
+            </label>
+            <div class="flex gap-1">
+              <button id="shuffleBtn" class="compact-btn rounded-md bg-indigo-500/20 hover:bg-indigo-500/30 border border-indigo-500/30 text-indigo-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                Shuffle Again
+              </button>
+              <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                Copy
+              </button>
+              <button id="downloadBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Download
+              </button>
+            </div>
+          </div>
+          
+          <textarea id="outputText" readonly spellcheck="false"
+            class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+            placeholder="Randomized sentences will appear here automatically..."></textarea>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="outputStats">Sentences: 0</span>
+            <span id="processingTime" class="text-gray-600"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-3">
+        
+        <!-- Randomization Method -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Randomization Method</label>
+          <div class="flex flex-wrap gap-1">
+            <button class="method-btn active rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="shuffle">Full Shuffle</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="pick">Random Pick</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="paragraph">Paragraph Shuffle</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="reverse">Reverse Order</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="alternate">Alternate Sort</button>
+          </div>
+        </div>
+
+        <!-- Method Options -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+          <!-- Full Shuffle Options -->
+          <div id="shuffleOptions" class="method-panel space-y-2">
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="preserveParagraphs" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Keep sentences within paragraphs
+            </label>
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="removeDuplicates" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Remove duplicate sentences
+            </label>
+          </div>
+
+          <!-- Random Pick Options -->
+          <div id="pickOptions" class="method-panel hidden space-y-2">
+            <div>
+              <label class="text-xs text-gray-400 mb-1 block">Number of Sentences to Pick</label>
+              <input type="number" id="pickCount" min="1" value="5" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+            </div>
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="allowRepeats" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Allow repeated picks
+            </label>
+          </div>
+
+          <!-- Paragraph Shuffle Options -->
+          <div id="paragraphOptions" class="method-panel hidden space-y-2">
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="shuffleWithinParagraphs" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Shuffle sentences within paragraphs
+            </label>
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="keepEmptyLines" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Preserve paragraph spacing
+            </label>
+          </div>
+
+          <!-- Reverse Options -->
+          <div id="reverseOptions" class="method-panel hidden space-y-2">
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="reverseBySentence" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Reverse sentence order
+            </label>
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="maintainParagraphs" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Maintain paragraph boundaries
+            </label>
+          </div>
+
+          <!-- Alternate Sort Options -->
+          <div id="alternateOptions" class="method-panel hidden space-y-2">
+            <div>
+              <label class="text-xs text-gray-400 mb-1 block">Sort By</label>
+              <select id="sortCriteria" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+                <option value="length">Sentence Length</option>
+                <option value="alphabetical">Alphabetical (A-Z)</option>
+                <option value="reverseAlpha">Alphabetical (Z-A)</option>
+                <option value="words">Word Count</option>
+              </select>
+            </div>
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="caseSensitive" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Case-sensitive sorting
+            </label>
+          </div>
+
+          <!-- Output Join Options -->
+          <div class="">
+            <label class="text-xs text-gray-400 mb-1 block">Join Sentences With</label>
+            <select id="joinSelect" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value=" ">Space + Period</option>
+              <option value="\n">New Line</option>
+              <option value="\n\n">Double Line (Paragraphs)</option>
+              <option value="  ">Two Spaces</option>
+              <option value=" | ">Pipe (|)</option>
+              <option value=" • ">Bullet (•)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Sentence Preview -->
+        <div id="sentencePreview" class="hidden">
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-xs font-medium text-gray-300">Sentence Preview <span class="text-gray-500 font-normal">(click to remove)</span></label>
+            <span id="sentenceCountBadge" class="text-xs text-indigo-400"></span>
+          </div>
+          <div id="sentenceList" class="max-h-40 overflow-y-auto p-2 rounded-md bg-black/20 border border-white/5 space-y-1">
+            <!-- Sentences will be inserted here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Sentence Randomizer?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Instant Shuffle</h3>
+          <p class="text-gray-400 text-xs">Real-time sentence randomization</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">5 Methods</h3>
+          <p class="text-gray-400 text-xs">Shuffle, pick, sort & more</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Drag & Drop</h3>
+          <p class="text-gray-400 text-xs">Upload text files instantly</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based, no uploads</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy or download results</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration required</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Input Text</h3>
+          <p class="text-gray-400 text-xs">Type, paste, or drop a file. Randomization happens automatically.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Choose Method</h3>
+          <p class="text-gray-400 text-xs">Select shuffle, pick, paragraph, reverse, or alternate sort mode.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Configure</h3>
+          <p class="text-gray-400 text-xs">Adjust options like paragraph preservation or sentence count.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy result or download as file. Click Shuffle Again for new variations.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Sentence Randomization: Transforming Text Structure for Creative and Professional Success</h2>
+        
+        <p><strong>Sentence randomization</strong> is a sophisticated text manipulation technique that rearranges the order of sentences within a document, paragraph, or text block to create new structural arrangements while preserving the semantic integrity of each individual sentence. Whether you're a writer seeking to overcome creative blocks, an educator designing reading comprehension exercises, a developer testing natural language processing algorithms, or an SEO professional generating content variations, understanding how to effectively <strong>randomize sentences online</strong> can significantly enhance your productivity and open new avenues for content creation. Our <strong>free sentence randomizer</strong> provides instant, browser-based sentence shuffling capabilities that require no registration, downloads, or technical expertise.</p>
+
+        <h2>Understanding Sentence Randomization: Definition and Importance</h2>
+        
+        <p><strong>Sentence randomization</strong> refers to the algorithmic process of taking a collection of sentences and rearranging them into a random or pseudo-random sequence, breaking away from the original narrative flow while maintaining grammatical correctness and meaning at the sentence level. Unlike word-level shuffling which can destroy readability, <strong>sentence randomizer online</strong> tools preserve the internal structure of each sentence, ensuring that randomized text remains comprehensible even as the overall organization changes dramatically.</p>
+
+        <p>The importance of reliable <strong>online sentence randomizer tool</strong> solutions has grown exponentially in our content-saturated digital landscape. Consider the professional challenges that necessitate <strong>shuffle sentences online free</strong> capabilities: content creators need to generate multiple versions of articles for A/B testing without rewriting from scratch; educators must create varied reading materials to prevent cheating and encourage genuine comprehension; software developers require diverse text datasets to train machine learning models; legal professionals need to anonymize documents by rearranging clauses while preserving contractual meaning. Without efficient <strong>automatic sentence shuffler online free</strong> solutions, these professionals resort to manual copy-paste operations that consume hours of valuable time.</p>
+
+        <h2>Core Methods of Sentence Randomization</h2>
+
+        <h3>Full Sentence Shuffling</h3>
+        
+        <p>The most straightforward <strong>sentence shuffler online</strong> method involves extracting all sentences from the input text and rearranging them using cryptographic randomization algorithms. This approach treats the entire document as a flat collection of sentences, ignoring paragraph boundaries and original sequence. When you use our <strong>instant sentence randomizer online free</strong>, the full shuffle mode ensures each sentence has equal probability of appearing in any position, creating truly unpredictable arrangements ideal for brainstorming, creative writing exercises, and data anonymization.</p>
+
+        <p>Advanced <strong>bulk sentence randomizer online</strong> implementations handle complex edge cases that simple splitting cannot manage. Sentence boundary detection must distinguish between periods that end sentences versus those used in abbreviations (Mr., Dr., etc.), decimal numbers, or ellipses. Quotation marks and parentheses must be properly tracked to ensure sentences aren't split mid-quote. Our <strong>text sentence randomizer tool online</strong> employs sophisticated natural language processing heuristics to identify true sentence boundaries with high accuracy, handling even complex literary texts and technical documentation.</p>
+
+        <h3>Selective Sentence Extraction</h3>
+        
+        <p>Rather than shuffling everything, the <strong>random sentence generator online free</strong> approach allows users to specify exactly how many sentences to extract from the source text. This method serves numerous practical applications: creating summary excerpts from long documents, generating random writing prompts from source material, selecting test questions from a question bank, or creating flashcards from educational content. The <strong>sentence randomizer</strong> supports both sampling with replacement (allowing the same sentence to appear multiple times) and without replacement (each sentence appears at most once).</p>
+
+        <p>This <strong>random sentence order generator online free</strong> functionality proves particularly valuable for content marketers who need to create social media post series from blog articles, teachers developing varied quiz versions from a master question set, and researchers selecting random samples from corpora for linguistic analysis. The ability to specify exact quantities ensures you get precisely the amount of content needed without manual counting or selection.</p>
+
+        <h3>Paragraph-Aware Randomization</h3>
+        
+        <p>While pure randomization scatters sentences across the entire document, <strong>paragraph shuffle</strong> modes respect document organization by keeping sentences within their original paragraph containers. This method randomly rearranges sentence order within each paragraph while maintaining the paragraph sequence, or alternatively shuffles paragraph order while keeping internal sentence structure intact. These constrained randomization approaches prove essential when some level of topical organization must be preserved.</p>
+
+        <p>The <strong>sentence rearranger tool online</strong> offers granular control over paragraph handling: shuffle sentences within paragraphs only, shuffle paragraph order only, or apply different randomization strategies at different structural levels. This hierarchical approach maintains document coherence while still providing the benefits of rearrangement, making it ideal for academic writing, technical documentation, and legal texts where complete chaos would be counterproductive.</p>
+
+        <h3>Deterministic Reordering Methods</h3>
+        
+        <p>Beyond pure randomization, deterministic sorting methods provide predictable transformations that complement <strong>scramble sentences online free</strong> operations. Reversing sentence order (last sentence becomes first) creates mirror-image text useful for cryptographic applications and puzzle creation. Sorting by sentence length organizes content from shortest to longest or vice versa, useful for creating reading progression exercises or analyzing writing style. Alphabetical sorting enables quick reference arrangements and dictionary-style organization.</p>
+
+        <p>These <strong>mix sentences online free tool</strong> alternatives to randomization serve specific use cases where predictability is preferred over chaos. SEO professionals use alphabetical sorting to create glossary-style content; educators use length-based sorting to scaffold reading difficulty; puzzle creators use reversal for cryptographic challenges. Our <strong>sentence permutation generator online free</strong> includes these deterministic methods alongside true randomization.</p>
+
+        <h2>Professional Applications of Sentence Randomization</h2>
+
+        <h3>Education and Assessment</h3>
+        
+        <p>Teachers and educational content developers represent a primary user base for <strong>classroom sentence randomizer online free</strong> tools. Reading comprehension assessments benefit enormously from <strong>sentence randomizer</strong> capabilities—by presenting the same content in different orders, educators can test genuine understanding rather than memorization. Students cannot simply recall that "the third sentence mentions the main character" when sentence order varies between test versions.</p>
+
+        <p>Language learning applications leverage <strong>scramble sentences online free</strong> functionality to create reconstruction exercises where learners must arrange jumbled sentences into logical paragraphs. This active reconstruction process engages deeper cognitive processing than passive reading. ESL teachers particularly value <strong>simple sentence randomizer tool online free</strong> solutions for creating varied grammar exercises from the same source material, ensuring students master syntactic patterns rather than memorizing specific sequences.</p>
+
+        <h3>Content Creation and Marketing</h3>
+        
+        <p>Digital marketers and content creators employ <strong>seo sentence randomizer tool online free</code> techniques to generate multiple content variations for A/B testing, social media scheduling, and multi-channel distribution. A single blog post can be transformed into dozens of unique social media updates by extracting and rearranging sentences. Email marketers use <strong>random sentence generator online free</strong> tools to create varied newsletter intros from a pool of evergreen content.</p>
+
+        <p>However, responsible use of <strong>sentence randomizer online</strong> tools for SEO requires understanding search engine algorithms. While randomized content can supplement original creation, pure sentence shuffling without editorial oversight may trigger quality penalties. The best practice involves using <strong>writing sentence randomizer online free</strong> tools as brainstorming aids and starting points for human writers who add value, context, and coherence to the rearranged material.</p>
+
+        <h3>Software Development and Testing</h3>
+        
+        <p>Developers and quality assurance professionals utilize <strong>web based sentence randomizer tool free</strong> solutions to generate test data for natural language processing applications. Chatbot training requires varied sentence arrangements to ensure responses remain coherent regardless of input phrasing. Text-to-speech systems must handle sentences in any order without prosodic discontinuities. Machine learning models for document classification need randomized training data to prevent sequence-based overfitting.</p>
+
+        <p>The <strong>automatic sentence shuffler online free</strong> capabilities enable rapid generation of edge case test scenarios. What happens when a document's conclusion appears first? Can a user interface handle paragraphs that start with questions rather than statements? By systematically randomizing content, developers identify assumptions about text structure that might otherwise cause production failures.</p>
+
+        <h3>Data Privacy and Anonymization</h3>
+        
+        <p>In regulated industries handling sensitive information, <strong>sentence randomizer without login online free</strong> tools contribute to data anonymization strategies. Medical records, legal documents, and proprietary research can be discussed and analyzed in randomized form—where sentence order provides no identifying information about the source case—while preserving the linguistic patterns and terminology for legitimate research purposes. This technique, known as syntactic anonymization, protects privacy without destroying data utility.</p>
+
+        <p>Our browser-based <strong>sentence randomizer online</strong> ensures that sensitive text never leaves the user's device, providing additional security beyond server-based alternatives. For professionals handling confidential materials, this local processing architecture eliminates data transmission risks and compliance complications.</p>
+
+        <h3>Creative Writing and Literature</h3>
+        
+        <p>Authors and poets have long employed cut-up and rearrangement techniques to break creative blocks and discover unexpected juxtapositions. The Dadaists, William S. Burroughs, and contemporary electronic literature practitioners all explored the creative potential of randomized text. Modern <strong>advanced sentence shuffle tool online free</strong> solutions make these avant-garde techniques accessible to all writers.</p>
+
+        <p>Randomized sentence arrangements can spark new narrative structures, reveal hidden thematic connections, or simply provide fresh perspectives on familiar material. Writers use <strong>custom sentence randomizer online free</strong> tools to generate plot outlines from scene descriptions, create dialogue variations, or discover unexpected transitions between story beats.</p>
+
+        <h2>Technical Implementation and Best Practices</h2>
+
+        <h3>Sentence Boundary Detection</h3>
+        
+        <p>The foundation of any <strong>sentence randomizer</strong> is accurate sentence segmentation. While periods typically indicate sentence endings, they also appear in abbreviations, decimal numbers, ellipses, and URLs. Professional <strong>text sentence randomizer tool online</strong> implementations use multi-factor heuristics: checking capitalization of the following word, maintaining lists of common abbreviations, tracking quotation mark parity, and recognizing decimal patterns. These sophisticated algorithms ensure that "Dr. Smith arrived at 3.45 p.m." is treated as one sentence rather than four.</p>
+
+        <h3>Preservation of Document Structure</h3>
+        
+        <p>Effective <strong>sentence randomizer online</strong> tools offer configurable preservation of document elements. Users can choose to maintain paragraph boundaries, preserve heading hierarchy, keep list item groupings, or protect block quotations from shuffling. These options ensure that randomized output remains structurally navigable and semantically coherent at the macro level even as micro-level sentence order changes.</p>
+
+        <h3>Handling Special Content Types</h3>
+        
+        <p>Technical documents present unique challenges for <strong>sentence rearranger tool online</strong> applications. Code blocks should typically be excluded from randomization. Mathematical equations must remain in sequence to maintain logical derivations. Table cells and figure captions have structural relationships that pure sentence shuffling might disrupt. Professional tools provide exclusion zones and content-type detection to handle these special cases appropriately.</p>
+
+        <h2>Comparing Sentence Randomization Approaches</h2>
+
+        <h3>Manual vs. Automated Rearrangement</h3>
+        
+        <p>Manual sentence rearrangement using word processors involves extensive copy-paste operations, cursor positioning, and format adjustment. This approach becomes impractical for documents longer than a few paragraphs, repetitive operations, and scenarios requiring true randomness (humans are notoriously poor at generating random sequences, typically introducing patterns unconsciously). Automated <strong>sentence shuffler online</strong> tools eliminate these limitations, processing thousands of sentences in milliseconds with statistical randomness.</p>
+
+        <h3>Desktop Software vs. Browser-Based Tools</h3>
+        
+        <p>While word processors offer basic text manipulation, dedicated <strong>sentence randomizer online</strong> tools provide superior functionality: multiple randomization modes, batch processing of multiple files, preservation rules, and instant accessibility across devices. Browser-based solutions require no installation, work on mobile devices, and receive continuous updates without user intervention. Our <strong>free sentence randomizer</strong> combines desktop-grade functionality with web convenience.</p>
+
+        <h2>The Future of Text Manipulation Technology</h2>
+
+        <p>Artificial intelligence is beginning to influence <strong>sentence randomization</strong>, moving beyond mechanical rearrangement toward intelligent variation. Emerging AI-powered tools can: maintain narrative coherence even with randomized order by adjusting transitional phrases, identify semantically related sentences that should remain proximal, suggest optimal randomization strategies based on content type, and generate context-aware variations rather than pure random shuffles. These capabilities will transform <strong>sentence randomizer</strong> tools from simple shufflers into intelligent writing assistants.</p>
+
+        <h2>Conclusion: Master Your Content with Professional Sentence Randomization</h2>
+
+        <p><strong>Sentence randomization</strong> represents one of the most versatile yet underutilized techniques in text processing. From pure shuffling to constrained paragraph-aware rearrangement, the ability to reorganize sentences intelligently empowers professionals across education, marketing, software development, and creative industries. Whether you're preparing varied assessments, generating content variations, testing NLP systems, or seeking creative inspiration, mastering <strong>sentence randomization</strong> techniques will dramatically improve your workflow efficiency.</p>
+
+        <p>Our <strong>free online sentence randomizer</strong> provides all the capabilities you need to handle any sentence rearrangement scenario. With automatic real-time processing as you type, support for five different methods (full shuffle, random pick, paragraph shuffle, reverse order, and alternate sorting), plus flexible output options, this tool serves everyone from casual users to professionals. The browser-based architecture ensures privacy and accessibility, while the intuitive interface requires no learning curve. Whether you need to <strong>shuffle sentences online free</strong>, <strong>randomize sentences online</strong>, <strong>scramble sentences online free</strong>, or <strong>mix sentences online free tool</strong>, our <strong>sentence randomizer online</strong> delivers professional results instantly. Stop struggling with manual text manipulation—start using our professional <strong>sentence randomizer</strong> today and experience the power of automated sentence rearrangement.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool randomize sentences automatically as I type?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>sentence randomizer online</strong> features <strong>automatic real-time randomization</strong>. As you type or paste text, the tool instantly detects sentences, shuffles them, and displays results in the right column. We use intelligent debouncing to ensure smooth performance without lag. The "Auto-randomization enabled" indicator confirms the feature is active. You can also click "Shuffle Again" anytime for a new random arrangement.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How does the tool identify sentence boundaries?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Our <strong>online sentence randomizer tool</strong> uses advanced heuristics to detect sentence boundaries accurately. It recognizes periods, exclamation marks, and question marks as sentence endings, but intelligently ignores periods in abbreviations (like Dr., Mr., Mrs.), decimal numbers, URLs, and ellipses. The algorithm checks capitalization of following words and maintains quotation mark parity to ensure "She said 'Hello.' Then left." is treated as two sentences, not three.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What's the difference between Full Shuffle and Paragraph Shuffle?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Full Shuffle</strong> treats all sentences as a single pool and rearranges them completely, potentially moving sentences between paragraphs. <strong>Paragraph Shuffle</strong> respects paragraph boundaries—either shuffling sentence order within each paragraph while keeping paragraph sequence, or shuffling paragraph order while maintaining internal sentence structure. Use Full Shuffle for maximum randomness, Paragraph Shuffle when topical organization matters.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I pick a specific number of random sentences?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Select <strong>Random Pick</strong> mode and specify how many sentences you want to extract. The tool will randomly select that many sentences from your text. By default, each sentence is picked only once, but you can enable "Allow repeated picks" to sample with replacement (useful for creating emphasis or when your source text is shorter than your desired output). This is perfect for creating summaries, social media threads, or test questions.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does the tool handle quotes and parentheses correctly?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely. Our <strong>advanced sentence shuffle tool online free</strong> tracks quotation marks, parentheses, brackets, and other paired delimiters to ensure sentences aren't split mid-quote. A sentence like She said, "Hello world. How are you?" remains intact as one sentence, not split at the internal period. This preservation of quoted material and parenthetical asides ensures randomized output remains grammatically valid and semantically coherent.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What file types are supported?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">All text-based files: TXT, CSV, JSON, XML, HTML, Markdown, and code files (JS, CSS, Python, Java, C/C++, PHP, Ruby, Go, Rust, Swift, Kotlin, SQL, LOG). Files are read as plain text, so any text file works regardless of extension. Our <strong>bulk sentence randomizer online</strong> handles large files efficiently, processing up to 100,000 sentences in most modern browsers.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is there a limit to how many sentences I can randomize?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">The tool handles up to 100,000 sentences (roughly 3,000-5,000 pages) in most modern browsers. Performance depends on your device's memory and processing power. For extremely large texts (1M+ sentences), consider processing in chapters or sections. The <strong>automatic sentence shuffler online free</strong> is optimized for typical documents including books, research papers, and extensive reports.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my text data secure?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely. All processing happens <strong>locally in your browser</strong>—text never uploads to servers or leaves your device. You can verify this with browser DevTools (Network tab shows no external data transfer). Works offline after loading. Ideal for confidential documents, proprietary research, legal texts, or sensitive personal content. Privacy is built into our <strong>sentence randomizer without login online free</strong> architecture.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I use this for commercial projects?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, completely free for both personal and commercial use with no attribution required. Use it for client work, published content, marketing materials, educational products, or any commercial application. This is truly a <strong>free sentence randomizer</strong> for everyone. Supported by unobtrusive advertising.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Why do I get different results each time I shuffle?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">True randomization means each shuffle produces a unique arrangement based on cryptographic randomness. This ensures unbiased, unpredictable results every time. If you need to reproduce a specific arrangement, copy and save the output immediately—there's no "seed" feature to recreate previous randomizations. This unpredictability is essential for fair random sentence selection and creative applications requiring genuine randomness.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const outputText = document.getElementById('outputText');
+const inputStats = document.getElementById('inputStats');
+const outputStats = document.getElementById('outputStats');
+const processingTime = document.getElementById('processingTime');
+const sentencePreview = document.getElementById('sentencePreview');
+const sentenceList = document.getElementById('sentenceList');
+const sentenceCountBadge = document.getElementById('sentenceCountBadge');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+
+// Buttons
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const shuffleBtn = document.getElementById('shuffleBtn');
+const resetBtn = document.getElementById('resetBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+// Method buttons and panels
+const methodBtns = document.querySelectorAll('.method-btn');
+const methodPanels = document.querySelectorAll('.method-panel');
+let currentMethod = 'shuffle';
+let currentJoin = ' ';
+
+// Sentence storage
+let sentencesArray = [];
+let originalText = '';
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Smart sentence segmentation
+function extractSentences(text) {
+  if (!text.trim()) return [];
+  
+  // Regex that handles abbreviations, decimals, and quotes
+  // Matches sentence-ending punctuation followed by space and capital letter, or end of string
+  const sentenceRegex = /[^.!?]+[.!?]+(?:\s+(?=[A-Z])|$)|[^.!?]+$/g;
+  
+  let matches = text.match(sentenceRegex) || [];
+  
+  // Clean up matches
+  matches = matches.map(s => s.trim()).filter(s => s.length > 0);
+  
+  // Handle edge cases: abbreviations like Dr., Mr., Mrs., etc.
+  const abbreviations = /\b(Dr|Mr|Mrs|Ms|Prof|Sr|Jr|vs|Vol|vol|pp|et|al|etc|i\.e|e\.g|Fig|fig|Inc|Ltd|Corp)\.$/i;
+  
+  const result = [];
+  let currentSentence = '';
+  
+  for (let i = 0; i < matches.length; i++) {
+    const match = matches[i];
+    currentSentence += match;
+    
+    // Check if this ends with an abbreviation (but not end of text)
+    if (abbreviations.test(match) && i < matches.length - 1) {
+      continue; // Combine with next match
+    }
+    
+    result.push(currentSentence.trim());
+    currentSentence = '';
+  }
+  
+  if (currentSentence) {
+    result.push(currentSentence.trim());
+  }
+  
+  return result.filter(s => s.length > 0);
+}
+
+// Extract paragraphs
+function extractParagraphs(text) {
+  return text.split(/\n\s*\n/).filter(p => p.trim().length > 0);
+}
+
+// Update input stats
+function updateInputStats() {
+  const text = inputText.value;
+  const sentences = extractSentences(text).length;
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).filter(w => w.length > 0).length;
+  inputStats.textContent = `Sentences: ${sentences} | Words: ${words}`;
+}
+
+// Debounce function for performance
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Fisher-Yates shuffle algorithm
+function shuffleArray(array) {
+  const arr = [...array];
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+// Method selection
+methodBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    methodBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentMethod = btn.dataset.method;
+    
+    methodPanels.forEach(panel => panel.classList.add('hidden'));
+    document.getElementById(currentMethod + 'Options').classList.remove('hidden');
+    
+    randomizeSentences();
+  });
+});
+
+// Join selection
+document.getElementById('joinSelect').addEventListener('change', (e) => {
+  currentJoin = e.target.value;
+  randomizeSentences();
+});
+
+// Auto-randomize on option changes
+['preserveParagraphs', 'removeDuplicates', 'pickCount', 'allowRepeats', 'shuffleWithinParagraphs', 'keepEmptyLines', 'reverseBySentence', 'maintainParagraphs', 'sortCriteria', 'caseSensitive'].forEach(id => {
+  const el = document.getElementById(id);
+  if (el) {
+    el.addEventListener('change', randomizeSentences);
+    el.addEventListener('input', debounce(randomizeSentences, 300));
+  }
+});
+
+// Randomize function
+function randomizeSentences() {
+  const startTime = performance.now();
+  const text = inputText.value;
+  
+  if (!text.trim()) {
+    outputText.value = '';
+    outputStats.textContent = 'Sentences: 0';
+    sentencePreview.classList.add('hidden');
+    processingTime.textContent = '';
+    sentencesArray = [];
+    return;
+  }
+  
+  let result = '';
+  let processedSentences = [];
+  
+  try {
+    switch(currentMethod) {
+      case 'shuffle':
+        let sentences = extractSentences(text);
+        
+        if (document.getElementById('removeDuplicates').checked) {
+          sentences = [...new Set(sentences)];
+        }
+        
+        if (document.getElementById('preserveParagraphs').checked) {
+          // Shuffle within paragraphs
+          const paragraphs = extractParagraphs(text);
+          processedSentences = paragraphs.flatMap(para => {
+            const paraSentences = extractSentences(para);
+            return shuffleArray(paraSentences);
+          });
+        } else {
+          processedSentences = shuffleArray(sentences);
+        }
+        
+        result = formatOutput(processedSentences);
+        break;
+        
+      case 'pick':
+        const allSentences = extractSentences(text);
+        const pickCount = parseInt(document.getElementById('pickCount').value) || 5;
+        const allowRepeats = document.getElementById('allowRepeats').checked;
+        
+        processedSentences = [];
+        if (allowRepeats) {
+          for (let i = 0; i < pickCount; i++) {
+            const randomIndex = Math.floor(Math.random() * allSentences.length);
+            processedSentences.push(allSentences[randomIndex]);
+          }
+        } else {
+          const shuffled = shuffleArray(allSentences);
+          processedSentences = shuffled.slice(0, Math.min(pickCount, shuffled.length));
+        }
+        result = formatOutput(processedSentences);
+        break;
+        
+      case 'paragraph':
+        const paragraphs = extractParagraphs(text);
+        const shuffleWithinParagraphs = document.getElementById('shuffleWithinParagraphs').checked;
+        const keepEmptyLines = document.getElementById('keepEmptyLines').checked;
+        
+        let processedParagraphs = paragraphs.map(para => {
+          if (!shuffleWithinParagraphs) return para;
+          
+          const paraSentences = extractSentences(para);
+          return shuffleArray(paraSentences).join(' ');
+        });
+        
+        processedParagraphs = shuffleArray(processedParagraphs);
+        result = processedParagraphs.join(keepEmptyLines ? '\n\n' : '\n');
+        processedSentences = processedParagraphs.flatMap(p => extractSentences(p));
+        break;
+        
+      case 'reverse':
+        const reverseSentences = extractSentences(text);
+        const reverseBySentence = document.getElementById('reverseBySentence').checked;
+        const maintainParagraphs = document.getElementById('maintainParagraphs').checked;
+        
+        if (maintainParagraphs) {
+          const paras = extractParagraphs(text);
+          processedSentences = paras.flatMap(p => {
+            const sents = extractSentences(p);
+            return reverseBySentence ? sents.reverse() : sents;
+          }).reverse(); // Reverse paragraph order too
+        } else {
+          processedSentences = reverseBySentence ? [...reverseSentences].reverse() : reverseSentences;
+        }
+        
+        result = formatOutput(processedSentences);
+        break;
+        
+      case 'alternate':
+        const sortSentences = extractSentences(text);
+        const criteria = document.getElementById('sortCriteria').value;
+        const caseSensitive = document.getElementById('caseSensitive').checked;
+        
+        processedSentences = [...sortSentences];
+        
+        switch(criteria) {
+          case 'length':
+            processedSentences.sort((a, b) => a.length - b.length);
+            break;
+          case 'alphabetical':
+            processedSentences.sort((a, b) => {
+              const aText = caseSensitive ? a : a.toLowerCase();
+              const bText = caseSensitive ? b : b.toLowerCase();
+              return aText.localeCompare(bText);
+            });
+            break;
+          case 'reverseAlpha':
+            processedSentences.sort((a, b) => {
+              const aText = caseSensitive ? a : a.toLowerCase();
+              const bText = caseSensitive ? b : b.toLowerCase();
+              return bText.localeCompare(aText);
+            });
+            break;
+          case 'words':
+            processedSentences.sort((a, b) => {
+              const aCount = a.split(/\s+/).length;
+              const bCount = b.split(/\s+/).length;
+              return aCount - bCount;
+            });
+            break;
+        }
+        
+        result = formatOutput(processedSentences);
+        break;
+    }
+    
+    const endTime = performance.now();
+    sentencesArray = processedSentences;
+    
+    outputText.value = result;
+    outputStats.textContent = `Sentences: ${processedSentences.length}`;
+    processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+    
+    // Update sentence preview
+    displaySentencePreview(processedSentences);
+    
+  } catch (error) {
+    console.error('Randomization error:', error);
+  }
+}
+
+// Format output based on join selection
+function formatOutput(sentences) {
+  const joiner = currentJoin.replace(/\\n/g, '\n');
+  
+  if (currentJoin === ' ') {
+    // Add period if missing and space between
+    return sentences.map(s => {
+      s = s.trim();
+      if (!s.match(/[.!?]$/)) s += '.';
+      return s;
+    }).join(' ');
+  }
+  
+  return sentences.join(joiner);
+}
+
+// Debounced version for typing
+const debouncedRandomize = debounce(randomizeSentences, 300);
+
+// Display sentence preview
+function displaySentencePreview(sentences) {
+  if (sentences.length === 0) {
+    sentencePreview.classList.add('hidden');
+    return;
+  }
+  
+  sentencePreview.classList.remove('hidden');
+  sentenceList.innerHTML = '';
+  sentenceCountBadge.textContent = `${sentences.length} sentences`;
+  
+  // Show first 50 sentences
+  sentences.slice(0, 50).forEach((sentence, index) => {
+    const tag = document.createElement('div');
+    tag.className = 'sentence-tag';
+    
+    const num = document.createElement('span');
+    num.className = 'sentence-number';
+    num.textContent = index + 1;
+    
+    const text = document.createElement('span');
+    text.textContent = sentence.length > 100 ? sentence.substring(0, 100) + '...' : sentence;
+    
+    tag.appendChild(num);
+    tag.appendChild(text);
+    tag.title = `Click to remove this sentence`;
+    
+    tag.addEventListener('click', () => {
+      sentencesArray.splice(index, 1);
+      outputText.value = formatOutput(sentencesArray);
+      outputStats.textContent = `Sentences: ${sentencesArray.length}`;
+      displaySentencePreview(sentencesArray);
+    });
+    
+    sentenceList.appendChild(tag);
+  });
+  
+  if (sentences.length > 50) {
+    const moreDiv = document.createElement('div');
+    moreDiv.className = 'text-xs text-gray-500 text-center py-2';
+    moreDiv.textContent = `+${sentences.length - 50} more sentences`;
+    sentenceList.appendChild(moreDiv);
+  }
+}
+
+// Drag and drop handlers
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  if (!file.type.match('text.*') && !file.name.match(/\.(txt|csv|json|xml|html?|md|js|css|py|java|cpp|c|php|rb|go|rs|swift|kt|sql|log)$/i)) {
+    alert('Please upload a text file');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    updateInputStats();
+    randomizeSentences();
+  };
+  reader.readAsText(file);
+}
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    updateInputStats();
+    randomizeSentences();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  updateInputStats();
+  randomizeSentences();
+  inputText.focus();
+}
+
+// Copy output
+async function copyOutput() {
+  if (!outputText.value) return;
+  
+  try {
+    await navigator.clipboard.writeText(outputText.value);
+    const originalText = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalText;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+}
+
+// Download output
+function downloadOutput() {
+  const text = outputText.value;
+  if (!text.trim()) return;
+  
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'randomized-sentences.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Reset all
+function resetAll() {
+  inputText.value = '';
+  outputText.value = '';
+  updateInputStats();
+  outputStats.textContent = 'Sentences: 0';
+  sentencePreview.classList.add('hidden');
+  processingTime.textContent = '';
+  sentencesArray = [];
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Event listeners
+inputText.addEventListener('input', () => {
+  updateInputStats();
+  debouncedRandomize();
+});
+
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+copyBtn.addEventListener('click', copyOutput);
+downloadBtn.addEventListener('click', downloadOutput);
+shuffleBtn.addEventListener('click', randomizeSentences);
+resetBtn.addEventListener('click', resetAll);
+
+// Initialize
+updateInputStats();
+</script>
+</body>
+</html>

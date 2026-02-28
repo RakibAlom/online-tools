@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sentence Sorter - Free Online Sentence Sorting Tool</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online sentence sorter tool. Sort sentences alphabetically, by length, numerically, or shuffle. Remove duplicates, reverse order, and organize text instantly. No registration required." />
+  <meta name="keywords" content="sentence sorter, sentence sorter online, free sentence sorter, sort sentences online, online sentence sorting tool, text sentence sorter online free, sort sentences alphabetically online, sort sentences by length online, sort sentences numerically online, sentence organizer tool online, bulk sentence sorter online, sort text sentences free tool, sentence arrangement tool online, sort sentences in paragraph online, text sentence management tool free, online sentence sorting utility, sort duplicate sentences online free, text sentence sorter editor online, sentence sorter for writers online, sentence sorter for seo online, instant sentence sorter online free, text sentence sorting tool online, sort sentences ascending online, sort sentences descending online, free online sentence sorter tool, online text sentence organizer free, sentence sorter without login online, text sentence rearranger online, online sentence sorting tool free" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/sentence-sorter/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/sentence-sorter/" />
+  <meta property="og:title" content="Sentence Sorter - Free Online Sentence Sorting Tool" />
+  <meta property="og:description" content="Sort sentences alphabetically, by length, numerically, or shuffle. Remove duplicates and organize text instantly with our free online tool." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/sentence-sorter/" />
+  <meta name="twitter:title" content="Sentence Sorter - Free Online Sentence Sorting Tool" />
+  <meta name="twitter:description" content="Sort sentences alphabetically, by length, numerically, or shuffle. Remove duplicates and organize text instantly with our free online tool." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .sort-btn {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    .sort-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .sentence-item {
+      border-left: 2px solid rgba(99, 102, 241, 0.5);
+      transition: all 0.2s ease;
+    }
+    
+    .sentence-item:hover {
+      border-left-color: rgba(99, 102, 241, 1);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+
+    .order-btn {
+      padding: 0.375rem 0.625rem;
+      font-size: 0.7rem;
+    }
+    
+    .order-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 12h20M10 20h14M10 28h20" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Sentence Sorter</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Sentence Sorter
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Text Organization Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-sorting enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Input Text
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Type or paste text here... Sentences will be automatically detected and sorted. Or drag & drop a file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.csv,.md,.json,.xml,.html,.js,.css,.py,.java,.cpp,.c,.php,.rb,.go,.rs,.swift,.kt,.sql,.log" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Sentences: 0 | Words: 0 | Chars: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Output -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Sorted Result <span id="sentencesCount" class="text-gray-500 font-normal ml-1 hidden">(0 sentences)</span>
+            </label>
+            <div class="flex gap-1">
+              <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                Copy
+              </button>
+              <button id="downloadBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Download
+              </button>
+            </div>
+          </div>
+          
+          <textarea id="outputText" readonly spellcheck="false"
+            class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+            placeholder="Sorted sentences appear here automatically..."></textarea>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="outputStats">Sentences: 0 | Unique: 0</span>
+            <span id="processingTime" class="text-gray-600"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-3">
+        
+        <!-- Sort Method -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Sort Method</label>
+          <div class="flex flex-wrap gap-1">
+            <button class="sort-btn active rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="alphabetical">Alphabetical</button>
+            <button class="sort-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="length">By Length</button>
+            <button class="sort-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="numeric">Numerically</button>
+            <button class="sort-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="shuffle">Shuffle</button>
+            <button class="sort-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="reverse">Reverse</button>
+          </div>
+        </div>
+
+        <!-- Options Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+          <!-- Order Options -->
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Order</label>
+            <div class="flex gap-1">
+              <button id="orderAsc" class="order-btn active flex-1 rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all">A-Z / 1-9</button>
+              <button id="orderDesc" class="order-btn flex-1 rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all">Z-A / 9-1</button>
+            </div>
+          </div>
+
+          <!-- Sentence Detection -->
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Split By</label>
+            <select id="splitBySelect" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="auto">Auto-detect (.!?)</option>
+              <option value="period">Period (.) only</option>
+              <option value="newline">New Line</option>
+              <option value="custom">Custom...</option>
+            </select>
+          </div>
+
+          <!-- Custom Delimiter (hidden by default) -->
+          <div id="customDelimiterContainer" class="hidden">
+            <label class="text-xs text-gray-400 mb-1 block">Custom Delimiter</label>
+            <input type="text" id="customDelimiter" placeholder="e.g. | or ##" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+          </div>
+
+          <!-- Output Format -->
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Output Format</label>
+            <select id="outputFormat" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="newline">One per line</option>
+              <option value="paragraph">Paragraph</option>
+              <option value="numbered">Numbered list</option>
+              <option value="bulleted">Bulleted list</option>
+            </select>
+          </div>
+
+          <!-- Filters -->
+          <div class="flex items-end">
+            <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+              <input type="checkbox" id="removeDuplicates" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Remove duplicates
+            </label>
+          </div>
+
+          <div class="flex items-end">
+            <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+              <input type="checkbox" id="trimWhitespace" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Trim whitespace
+            </label>
+          </div>
+
+          <div class="flex items-end">
+            <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+              <input type="checkbox" id="ignoreCase" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Ignore case (A=a)
+            </label>
+          </div>
+
+          <div class="flex items-end">
+            <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+              <input type="checkbox" id="removeEmpty" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Remove empty
+            </label>
+          </div>
+        </div>
+
+        <!-- Sentences Preview -->
+        <div id="sentencesPreview" class="hidden">
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-xs font-medium text-gray-300">Individual Sentences <span class="text-gray-500 font-normal">(click to copy)</span></label>
+            <span id="previewCount" class="text-xs text-gray-500"></span>
+          </div>
+          <div id="sentencesList" class="max-h-32 overflow-y-auto space-y-1 pr-1">
+            <!-- Sentences will be inserted here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Sentence Sorter?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">5 Sort Methods</h3>
+          <p class="text-gray-400 text-xs">Alphabetical, length, numeric, shuffle, reverse</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Drag & Drop</h3>
+          <p class="text-gray-400 text-xs">Upload text files instantly</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based, no uploads</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy or download results</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Auto-Sort</h3>
+          <p class="text-gray-400 text-xs">Real-time processing</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration required</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Input Text</h3>
+          <p class="text-gray-400 text-xs">Type, paste, or drop a text file. Sentences are auto-detected.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Choose Method</h3>
+          <p class="text-gray-400 text-xs">Select alphabetical, length, numeric, shuffle, or reverse sort.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Configure</h3>
+          <p class="text-gray-400 text-xs">Set order, remove duplicates, choose output format. Changes apply instantly.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy sorted text or download as file. Click any sentence to copy individually.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Sentence Sorting: Organize Your Text Like a Pro</h2>
+        
+        <p><strong>Sentence sorting</strong> is a powerful text organization technique that transforms chaotic, unstructured writing into logically arranged, easily digestible content. Whether you're a writer organizing research notes, a student arranging study materials, a developer managing code comments, or a content creator structuring articles, mastering the art of sorting sentences can dramatically improve your productivity and output quality. Our <strong>sentence sorter online</strong> solution provides professional-grade text organization capabilities without any cost or registration barriers, making it accessible to everyone who works with text.</p>
+
+        <p>In today's information-rich environment, the ability to quickly <strong>sort sentences online</strong> has become an essential skill. Consider the challenges modern professionals face: journalists need to <strong>sort sentences chronologically</strong> when organizing interview transcripts; SEO specialists must <strong>sort sentences by length</strong> to optimize content structure; writers want to <strong>sort sentences alphabetically</strong> to create glossaries or indexes; data analysts need to <strong>sort sentences numerically</strong> when processing numbered lists. Without an efficient <strong>online sentence sorting tool</strong>, these organizational tasks become tedious manual processes that consume valuable time.</p>
+
+        <h2>Understanding Sentence Sorting: Methods and Applications</h2>
+
+        <h3>Alphabetical Sorting: The Foundation of Text Organization</h3>
+        
+        <p><strong>Sort sentences alphabetically online</strong> represents the most fundamental organization method, arranging text from A to Z (or Z to A) based on the first character of each sentence. This approach serves countless practical purposes: creating alphabetical indexes from random notes, organizing bibliography entries, sorting glossary terms, arranging contact lists, or alphabetizing any collection of statements for quick reference. When you <strong>sort text sentences free tool</strong> alphabetically, you create a predictable structure that makes information retrieval instantaneous.</p>
+
+        <p>Advanced <strong>sentence organizer tool online</strong> implementations offer nuanced alphabetical sorting options. Case-sensitive sorting distinguishes between uppercase and lowercase letters, while case-insensitive options treat "Apple" and "apple" as equivalent. Natural sort ordering handles numbers within sentences intelligently, so "Item 2" appears before "Item 10" rather than after it (as would happen with strict ASCII sorting). Our <strong>free sentence sorter</strong> provides these sophisticated options, ensuring professional results regardless of your specific requirements. Whether you need to <strong>sort sentences ascending online</strong> for A-Z organization or <strong>sort sentences descending online</strong> for Z-A reverse order, our tool handles both with equal precision.</p>
+
+        <h3>Length-Based Sorting: Optimizing for Readability and Impact</h3>
+        
+        <p><strong>Sort sentences by length online</strong> offers unique organizational benefits that alphabetical sorting cannot provide. Content creators use length-based sorting to structure paragraphs with rhythmic variation—alternating short punchy statements with longer explanatory sentences. SEO professionals analyze content by sorting sentences to ensure optimal length distribution for search engine algorithms. Public speakers organize talking points by length to create natural speech cadence and emphasize key messages through strategic placement of short, impactful statements.</p>
+
+        <p>Our <strong>text sentence sorter online free</strong> tool provides both ascending and descending length sorting options. <strong>Sort sentences</strong> from shortest to longest to build complexity gradually in educational materials, or longest to shortest to front-load detailed information in technical documentation. This flexibility makes our <strong>sentence arrangement tool online</strong> invaluable for content strategy and information architecture. Writers can quickly identify overly long sentences that need simplification or find opportunities to combine short, choppy statements into more fluid prose.</p>
+
+        <h3>Numeric Sorting: Handling Numbered Content with Precision</h3>
+        
+        <p>When content contains numerical data—whether explicit numbers at the start of sentences or numeric values embedded within text—<strong>sort sentences numerically online</strong> becomes essential. This method extracts numeric values from sentences and arranges them in numerical order, handling integers, decimals, percentages, and even written numbers (converting "five" to 5). Applications include organizing numbered procedures, sorting statistical findings, arranging chronological events, or prioritizing ranked recommendations.</p>
+
+        <p>The challenge with numeric sorting lies in correctly identifying and parsing numbers within free-form text. Our <strong>online sentence sorting utility</strong> employs sophisticated regular expressions and parsing algorithms to detect numeric patterns accurately. It handles various formats: "1. First step", "Step 2: Action", "Priority #3", "4th quarter results", or "Five important factors". This intelligence ensures that when you <strong>sort sentences in paragraph online</strong> numerically, the results match human expectations rather than simple string comparison that would place "10" before "2".</p>
+
+        <h3>Shuffle and Reverse: Creative Organization Techniques</h3>
+        
+        <p>Beyond logical sorting methods, creative text manipulation often requires randomization or reversal. <strong>Text sentence rearranger online</strong> shuffle functionality serves writers seeking inspiration through random sentence combinations, teachers creating randomized quiz questions, or researchers ensuring unbiased presentation of findings. The shuffle algorithm uses Fisher-Yates randomization to ensure truly random distribution, not pseudo-random patterns that could introduce bias.</p>
+
+        <p>Reverse order sorting—simply flipping the sequence of sentences—proves surprisingly useful in specific contexts. Poets and creative writers use reversal to create new meanings from existing text. Analysts reverse chronological lists to view newest-first instead of oldest-first. Developers reverse log entries to see the most recent events at the top. Our <strong>instant sentence sorter online free</strong> includes these creative options alongside traditional sorting methods, providing a complete toolkit for text organization.</p>
+
+        <h2>Advanced Features for Professional Text Management</h2>
+
+        <h3>Duplicate Detection and Removal</h3>
+        
+        <p>Real-world text collections often contain unintentional duplicates: copy-paste errors, repeated statements in compiled notes, or redundant entries in merged documents. Our <strong>sort duplicate sentences online free</strong> feature identifies and removes identical sentences automatically. The system offers flexible duplicate detection: exact matching for precise removal, or normalized matching that ignores whitespace variations and punctuation differences. This cleanup capability ensures that when you <strong>bulk sentence sorter online</strong> operations, the results are clean and professional.</p>
+
+        <p>The duplicate removal process preserves the first occurrence of each unique sentence while eliminating subsequent duplicates. Users can choose whether to apply duplicate removal before or after sorting, allowing workflows like "remove duplicates then sort alphabetically" or "sort by length then remove duplicates" depending on specific organizational needs. This flexibility makes our <strong>text sentence management tool free</strong> suitable for complex data cleaning tasks.</p>
+
+        <h3>Intelligent Sentence Detection</h3>
+        
+        <p>Accurate sentence sorting requires precise sentence boundary detection. Our <strong>sentence sorter</strong> employs multiple detection strategies: standard punctuation marks (periods, exclamation points, question marks) with intelligent handling of abbreviations (Dr., Mr., Mrs., etc.); newline characters for lists or poetry; custom delimiters for specialized formats like CSV or pipe-separated values; and regex patterns for complex boundary definitions.</p>
+
+        <p>The auto-detect mode analyzes your text to determine the most appropriate splitting strategy, handling edge cases like ellipses (...), decimal numbers (3.14), and file extensions (document.txt) that could be mistaken for sentence endings. This intelligence ensures that <strong>text sentence sorting tool online</strong> operations preserve the semantic integrity of your content rather than blindly splitting at every period.</p>
+
+        <h3>Flexible Output Formatting</h3>
+        
+        <p>Once sentences are sorted, presentation matters. Our <strong>online text sentence organizer free</strong> tool offers multiple output formats: one sentence per line for easy scanning and further processing; paragraph format that joins sentences with proper spacing for readable prose; numbered lists (1., 2., 3.) for procedural content or ranked items; and bulleted lists (•, -, *) for unordered collections or brainstorming results.</p>
+
+        <p>Each format serves distinct purposes. Line-by-line output facilitates copy-pasting into spreadsheets or databases. Paragraph format produces publication-ready text. Numbered lists support instructional content creation. Bulleted lists enhance presentation slides or quick-reference guides. The ability to switch between these formats instantly—without re-sorting—makes our <strong>sentence sorter without login online</strong> exceptionally versatile for multi-stage workflows.</p>
+
+        <h2>Professional Use Cases and Applications</h2>
+
+        <h3>Content Creation and Copywriting</h3>
+        
+        <p>Professional writers leverage <strong>sentence sorter for writers online</strong> capabilities to streamline their creative process. When drafting long-form content, writers often brain-dump ideas in random order, then use alphabetical sorting to group related concepts, length sorting to balance paragraph rhythm, or shuffle to overcome writer's block through unexpected combinations. Copywriters sort headline variations alphabetically to ensure comprehensive coverage of angles, or by length to fit specific character limits for ads and social media.</p>
+
+        <p>SEO content specialists particularly benefit from <strong>sentence sorter for SEO online</strong> features. Sorting sentences by length helps identify content that meets optimal readability scores. Alphabetical organization ensures comprehensive keyword coverage without duplication. Removing duplicates prevents cannibalization issues when merging content from multiple sources. These capabilities transform raw research into polished, search-optimized content efficiently.</p>
+
+        <h3>Academic Research and Study</h3>
+        
+        <p>Students and researchers use <strong>free online sentence sorter tool</strong> functionality to organize study materials and research findings. When reviewing literature, researchers collect relevant quotes and findings in random order, then sort alphabetically by author or topic for bibliography creation. Study notes can be sorted by concept, chronologically for historical events, or by complexity for progressive learning. The ability to quickly reorganize the same content in multiple ways supports different learning and analysis modes.</p>
+
+        <h3>Data Processing and Analysis</h3>
+        
+        <p>Data professionals apply <strong>bulk sentence sorter online</strong> operations to clean and structure text datasets. Customer feedback can be sorted by sentiment keywords, length, or alphabetical order for pattern analysis. Survey responses organize alphabetically to group similar answers. Log files sort chronologically or by severity level when converted to sentence format. The tool's client-side processing ensures sensitive data never leaves the local machine, maintaining privacy compliance for confidential information.</p>
+
+        <h3>Software Development and Documentation</h3>
+        
+        <p>Developers utilize sentence sorting for code documentation, comment organization, and log analysis. Function documentation comments can be sorted alphabetically to create quick-reference indexes. TODO lists organize by priority (numeric sorting) or module (alphabetical). Error logs, when converted to sentence format, sort by timestamp, severity, or error type for debugging efficiency. The tool's support for code file formats (.js, .py, .java, etc.) enables direct processing of source files.</p>
+
+        <h2>Best Practices for Effective Sentence Sorting</h2>
+
+        <h3>Pre-processing for Optimal Results</h3>
+        
+        <p>Before sorting, prepare your text to ensure clean results. Remove or standardize special characters that might interfere with sorting algorithms. Normalize whitespace (our tool offers automatic trim options). Ensure consistent sentence punctuation if using auto-detect mode. For numeric sorting, verify that numbers are in consistent format (digits vs. written words). These preparation steps, handled automatically by our <strong>text sentence sorter editor online</strong>, ensure professional-quality output.</p>
+
+        <h3>Choosing the Right Sort Strategy</h3>
+        
+        <p>Match your sorting method to your organizational goals: Use alphabetical sorting for reference materials, indexes, and glossaries. Apply length sorting for readability optimization and rhythmic writing. Choose numeric sorting for chronological data, ranked lists, and procedural content. Select shuffle for creative inspiration and unbiased presentation. Apply reverse order for newest-first displays or creative reinterpretation. Combine multiple sorts sequentially—alphabetical then by length within each letter group—for sophisticated organization.</p>
+
+        <h3>Validation and Refinement</h3>
+        
+        <p>Always review sorted results to ensure they meet your expectations. Check that sentence boundaries were detected correctly. Verify that duplicates were handled appropriately. Confirm that numeric values sorted in the expected order (watch for text-vs-number mixing). Our tool provides real-time preview and individual sentence inspection to facilitate this validation. The preview section shows each sentence with click-to-copy functionality, enabling easy extraction of specific items without reprocessing the entire text.</p>
+
+        <h2>Technical Implementation and Privacy</h2>
+
+        <p>Our <strong>sentence sorter online</strong> tool operates entirely within your browser using client-side JavaScript. This architecture means your text never uploads to external servers, ensuring complete privacy for sensitive content. The processing happens instantly on your device, eliminating network latency and enabling offline usage after initial page load. Large files (up to 10-20MB) process efficiently using optimized algorithms and debounced input handling to maintain responsive performance even with substantial text volumes.</p>
+
+        <p>The tool supports all major text file formats and encoding standards (UTF-8, ASCII, Unicode), ensuring compatibility with content from any source. Drag-and-drop functionality works across desktop and mobile devices, with touch-optimized interfaces for smartphone and tablet users. The responsive design adapts seamlessly from large desktop monitors to small mobile screens, maintaining full functionality regardless of device.</p>
+
+        <h2>Conclusion: Master Text Organization with Professional Sorting</h2>
+
+        <p><strong>Sentence sorting</strong> represents a fundamental yet powerful technique for text organization that benefits professionals across every industry. From simple alphabetical arrangement to sophisticated numeric parsing and creative shuffling, the ability to reorganize sentences intelligently transforms how we work with written content. Whether you're organizing research, optimizing content for SEO, preparing educational materials, or cleaning data for analysis, mastering <strong>sentence sorting</strong> techniques will elevate your productivity and output quality.</p>
+
+        <p>Our <strong>free sentence sorter</strong> provides all the capabilities you need for professional text organization. With five distinct sorting methods (alphabetical, length, numeric, shuffle, reverse), intelligent sentence detection, duplicate removal, flexible output formatting, and real-time processing, this tool serves everyone from casual users to professional content creators. The browser-based architecture ensures privacy and accessibility, while the intuitive interface requires no learning curve. Stop struggling with manual text organization—start using our professional <strong>sentence sorter online</strong> today and experience the efficiency of automated sentence sorting.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool sort sentences automatically as I type?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>sentence sorter online</strong> features <strong>automatic real-time sorting</strong>. As you type or paste text, the tool instantly detects sentences and displays sorted results. We use intelligent debouncing to ensure smooth performance. Changes to sort methods, order, or options apply immediately. The "Auto-sorting enabled" indicator confirms the feature is active. This makes our tool the most responsive <strong>free sentence sorter</strong> available for instant text organization.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How does the tool detect sentence boundaries?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Our <strong>online sentence sorting tool</strong> uses intelligent boundary detection with multiple strategies. Auto-detect mode recognizes periods, exclamation marks, and question marks while ignoring abbreviations like "Dr." or "Mr." You can also choose specific delimiters: periods only, new lines, or custom characters. The tool handles edge cases like ellipses (...), decimal numbers, and file extensions correctly, ensuring accurate <strong>text sentence sorter online free</strong> results every time.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I remove duplicate sentences automatically?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Check the "Remove duplicates" option to automatically eliminate identical sentences. The tool preserves the first occurrence and removes subsequent duplicates. This works with any sort method—<strong>sort duplicate sentences online free</strong> before alphabetical sorting, or remove duplicates after arranging by length. Combined with the "Trim whitespace" option, it handles variations in spacing and punctuation for thorough deduplication.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What's the difference between alphabetical and numeric sorting?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Sort sentences alphabetically online</strong> arranges text A-Z based on the first character of each sentence. <strong>Sort sentences numerically online</strong> extracts numbers from sentences (at the start or within text) and sorts by those values. Use alphabetical for general organization, glossaries, and indexes. Use numeric for chronological events, ranked lists, numbered procedures, or any content containing quantities. Our <strong>sentence organizer tool online</strong> handles both methods with ascending and descending options.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I sort by sentence length?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely! Select "By Length" method to <strong>sort sentences by length online</strong>. Choose ascending order (shortest to longest) to build complexity gradually, or descending (longest to shortest) to front-load detailed information. This is perfect for SEO optimization, creating rhythmic writing patterns, identifying sentences that need simplification, or balancing paragraph structure. Writers and content creators use this feature daily for professional <strong>text sentence management tool free</strong> workflows.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What file types are supported?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">All text-based files: TXT, CSV, JSON, XML, HTML, Markdown, and code files (JS, CSS, Python, Java, C/C++, PHP, Ruby, Go, Rust, Swift, Kotlin, SQL, LOG). Files are read as plain text, so any text file works regardless of extension. Drag and drop files directly onto the input area or use the file picker. Our <strong>bulk sentence sorter online</strong> handles files up to 10-20MB efficiently in your browser.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my data secure and private?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">100% secure. All processing happens <strong>locally in your browser</strong>—text never uploads to servers or leaves your device. You can verify this using browser DevTools (Network tab shows no data transfer). Works offline after loading. Ideal for confidential documents, proprietary code, sensitive research, or personal writing. Our <strong>sentence sorter without login online</strong> architecture prioritizes your privacy above all else.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I copy individual sentences from the preview?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! The "Individual Sentences" preview section displays each sentence separately. Click any sentence to copy it instantly to your clipboard—the item will briefly highlight green to confirm. This is perfect for extracting specific quotes, creating custom selections, or building new documents from sorted content. The preview shows up to 50 sentences with a count indicator for larger sets.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this tool really free?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, completely <strong>free</strong> with no registration, usage limits, watermarks, or hidden fees. Use for personal or commercial projects without attribution. This is truly a <strong>free online sentence sorter tool</strong> for everyone. Supported by unobtrusive advertising. All features are available immediately—no premium tiers or paid upgrades required.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I sort sentences in a specific paragraph?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Paste your paragraph into the input field—the tool automatically detects sentences using periods, exclamation marks, and question marks. Select your preferred sort method (alphabetical, length, numeric, shuffle, or reverse), choose ascending or descending order, then select "Paragraph" output format to recombine sentences into a coherent paragraph. This <strong>sort sentences in paragraph online</strong> workflow maintains your content flow while organizing it logically.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const outputText = document.getElementById('outputText');
+const inputStats = document.getElementById('inputStats');
+const outputStats = document.getElementById('outputStats');
+const sentencesCount = document.getElementById('sentencesCount');
+const processingTime = document.getElementById('processingTime');
+const sentencesPreview = document.getElementById('sentencesPreview');
+const sentencesList = document.getElementById('sentencesList');
+const previewCount = document.getElementById('previewCount');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+
+// Buttons
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const resetBtn = document.getElementById('resetBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+// Sort controls
+const sortBtns = document.querySelectorAll('.sort-btn');
+const orderAsc = document.getElementById('orderAsc');
+const orderDesc = document.getElementById('orderDesc');
+const splitBySelect = document.getElementById('splitBySelect');
+const customDelimiterContainer = document.getElementById('customDelimiterContainer');
+const customDelimiter = document.getElementById('customDelimiter');
+const outputFormat = document.getElementById('outputFormat');
+const removeDuplicates = document.getElementById('removeDuplicates');
+const trimWhitespace = document.getElementById('trimWhitespace');
+const ignoreCase = document.getElementById('ignoreCase');
+const removeEmpty = document.getElementById('removeEmpty');
+
+// State
+let currentMethod = 'alphabetical';
+let currentOrder = 'asc';
+let currentSentences = [];
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Update input stats
+function updateInputStats() {
+  const text = inputText.value;
+  const chars = text.length;
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+  const sentences = text.trim() === '' ? 0 : splitIntoSentences(text).length;
+  inputStats.textContent = `Sentences: ${sentences} | Words: ${words} | Chars: ${chars}`;
+}
+
+// Debounce function
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Split text into sentences
+function splitIntoSentences(text) {
+  const splitBy = splitBySelect.value;
+  let sentences = [];
+  
+  if (splitBy === 'newline') {
+    sentences = text.split(/\n+/);
+  } else if (splitBy === 'custom') {
+    const delimiter = customDelimiter.value;
+    if (delimiter) {
+      sentences = text.split(delimiter);
+    } else {
+      sentences = [text];
+    }
+  } else if (splitBy === 'period') {
+    sentences = text.match(/[^.!?]+[.!?]+/g) || [text];
+  } else {
+    // Auto-detect: split by sentence endings, handling abbreviations
+    const abbreviationPattern = /\b(?:Mr|Mrs|Ms|Dr|Prof|Sr|Jr|vs|etc|i\.e|e\.g|Inc|Ltd|Corp)\./gi;
+    let tempText = text.replace(abbreviationPattern, match => match.replace('.', '\x00'));
+    
+    // Split by sentence terminators
+    const rawSentences = tempText.match(/[^.!?]+[.!?]+/g) || [tempText];
+    
+    sentences = rawSentences.map(s => s.replace(/\x00/g, '.').trim());
+    
+    // Handle any remaining text
+    const remaining = tempText.replace(/[^.!?]+[.!?]+/g, '').replace(/\x00/g, '.').trim();
+    if (remaining && remaining.length > 0) {
+      sentences.push(remaining);
+    }
+  }
+  
+  // Process sentences
+  if (trimWhitespace.checked) {
+    sentences = sentences.map(s => s.trim());
+  }
+  
+  if (removeEmpty.checked) {
+    sentences = sentences.filter(s => s.length > 0);
+  }
+  
+  return sentences;
+}
+
+// Extract number from sentence for numeric sorting
+function extractNumber(sentence) {
+  // Look for number at start
+  const startMatch = sentence.match(/^\s*(\d+(?:\.\d+)?)/);
+  if (startMatch) return parseFloat(startMatch[1]);
+  
+  // Look for written numbers
+  const writtenNumbers = {
+    'zero': 0, 'one': 1, 'two': 2, 'three': 3, 'four': 4,
+    'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9, 'ten': 10
+  };
+  
+  const lower = sentence.toLowerCase();
+  for (const [word, num] of Object.entries(writtenNumbers)) {
+    if (lower.startsWith(word)) return num;
+  }
+  
+  // Look for any number in sentence
+  const anyMatch = sentence.match(/(\d+(?:\.\d+)?)/);
+  if (anyMatch) return parseFloat(anyMatch[1]);
+  
+  return 0;
+}
+
+// Shuffle array (Fisher-Yates)
+function shuffleArray(array) {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
+// Sort sentences
+function sortSentences() {
+  const startTime = performance.now();
+  const text = inputText.value;
+  
+  if (!text.trim()) {
+    outputText.value = '';
+    outputStats.textContent = 'Sentences: 0 | Unique: 0';
+    sentencesCount.textContent = '(0 sentences)';
+    sentencesCount.classList.add('hidden');
+    sentencesPreview.classList.add('hidden');
+    processingTime.textContent = '';
+    currentSentences = [];
+    return;
+  }
+  
+  try {
+    let sentences = splitIntoSentences(text);
+    const originalCount = sentences.length;
+    
+    // Remove duplicates if enabled
+    if (removeDuplicates.checked) {
+      const seen = new Set();
+      sentences = sentences.filter(s => {
+        const key = ignoreCase.checked ? s.toLowerCase() : s;
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      });
+    }
+    
+    // Sort based on method
+    switch(currentMethod) {
+      case 'alphabetical':
+        sentences.sort((a, b) => {
+          const compareA = ignoreCase.checked ? a.toLowerCase() : a;
+          const compareB = ignoreCase.checked ? b.toLowerCase() : b;
+          return currentOrder === 'asc' 
+            ? compareA.localeCompare(compareB)
+            : compareB.localeCompare(compareA);
+        });
+        break;
+        
+      case 'length':
+        sentences.sort((a, b) => {
+          return currentOrder === 'asc'
+            ? a.length - b.length
+            : b.length - a.length;
+        });
+        break;
+        
+      case 'numeric':
+        sentences.sort((a, b) => {
+          const numA = extractNumber(a);
+          const numB = extractNumber(b);
+          return currentOrder === 'asc'
+            ? numA - numB
+            : numB - numA;
+        });
+        break;
+        
+      case 'shuffle':
+        sentences = shuffleArray(sentences);
+        break;
+        
+      case 'reverse':
+        sentences.reverse();
+        break;
+    }
+    
+    currentSentences = sentences;
+    
+    // Format output
+    let output = '';
+    const format = outputFormat.value;
+    
+    switch(format) {
+      case 'newline':
+        output = sentences.join('\n');
+        break;
+      case 'paragraph':
+        output = sentences.join(' ');
+        break;
+      case 'numbered':
+        output = sentences.map((s, i) => `${i + 1}. ${s}`).join('\n');
+        break;
+      case 'bulleted':
+        output = sentences.map(s => `• ${s}`).join('\n');
+        break;
+    }
+    
+    outputText.value = output;
+    
+    // Update stats
+    const endTime = performance.now();
+    const uniqueCount = removeDuplicates.checked ? sentences.length : originalCount;
+    outputStats.textContent = `Sentences: ${sentences.length} | Unique: ${uniqueCount}`;
+    sentencesCount.textContent = `(${sentences.length} sentences)`;
+    sentencesCount.classList.remove('hidden');
+    processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+    
+    // Update preview
+    displaySentencesPreview(sentences);
+    
+  } catch (error) {
+    console.error('Sort error:', error);
+  }
+}
+
+// Debounced sort
+const debouncedSort = debounce(sortSentences, 50);
+
+// Display sentences preview
+function displaySentencesPreview(sentences) {
+  if (sentences.length === 0) {
+    sentencesPreview.classList.add('hidden');
+    return;
+  }
+  
+  sentencesPreview.classList.remove('hidden');
+  sentencesList.innerHTML = '';
+  previewCount.textContent = `Showing ${Math.min(sentences.length, 50)} of ${sentences.length}`;
+  
+  sentences.slice(0, 50).forEach((sentence, index) => {
+    const div = document.createElement('div');
+    div.className = 'sentence-item p-2 rounded bg-white/5 cursor-pointer text-xs';
+    div.innerHTML = `
+      <div class="flex items-center justify-between mb-0.5">
+        <span class="text-xs font-medium text-indigo-400">#${index + 1}</span>
+        <span class="text-xs text-gray-500">${sentence.length}c</span>
+      </div>
+      <div class="text-gray-300 truncate">${sentence.substring(0, 80)}${sentence.length > 80 ? '...' : ''}</div>
+    `;
+    
+    div.addEventListener('click', () => {
+      navigator.clipboard.writeText(sentence);
+      div.style.background = 'rgba(34, 197, 94, 0.2)';
+      setTimeout(() => {
+        div.style.background = '';
+      }, 200);
+    });
+    
+    sentencesList.appendChild(div);
+  });
+}
+
+// Event listeners for controls
+sortBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    sortBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentMethod = btn.dataset.method;
+    sortSentences();
+  });
+});
+
+orderAsc.addEventListener('click', () => {
+  orderAsc.classList.add('active');
+  orderDesc.classList.remove('active');
+  currentOrder = 'asc';
+  sortSentences();
+});
+
+orderDesc.addEventListener('click', () => {
+  orderDesc.classList.add('active');
+  orderAsc.classList.remove('active');
+  currentOrder = 'desc';
+  sortSentences();
+});
+
+splitBySelect.addEventListener('change', () => {
+  if (splitBySelect.value === 'custom') {
+    customDelimiterContainer.classList.remove('hidden');
+  } else {
+    customDelimiterContainer.classList.add('hidden');
+  }
+  sortSentences();
+});
+
+[customDelimiter, outputFormat, removeDuplicates, trimWhitespace, ignoreCase, removeEmpty].forEach(el => {
+  el.addEventListener('change', sortSentences);
+});
+
+// Drag and drop
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  if (!file.type.match('text.*') && !file.name.match(/\.(txt|csv|json|xml|html?|md|js|css|py|java|cpp|c|php|rb|go|rs|swift|kt|sql|log)$/i)) {
+    alert('Please upload a text file');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    updateInputStats();
+    sortSentences();
+  };
+  reader.readAsText(file);
+}
+
+// Button functions
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    updateInputStats();
+    sortSentences();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+function clearInput() {
+  inputText.value = '';
+  updateInputStats();
+  sortSentences();
+  inputText.focus();
+}
+
+async function copyOutput() {
+  if (!outputText.value) return;
+  
+  try {
+    await navigator.clipboard.writeText(outputText.value);
+    const originalText = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalText;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+}
+
+function downloadOutput() {
+  const text = outputText.value;
+  if (!text.trim()) return;
+  
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'sorted-sentences.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+function resetAll() {
+  inputText.value = '';
+  outputText.value = '';
+  updateInputStats();
+  outputStats.textContent = 'Sentences: 0 | Unique: 0';
+  sentencesCount.classList.add('hidden');
+  sentencesPreview.classList.add('hidden');
+  processingTime.textContent = '';
+  currentSentences = [];
+  
+  // Reset controls
+  sortBtns.forEach(b => b.classList.remove('active'));
+  document.querySelector('[data-method="alphabetical"]').classList.add('active');
+  currentMethod = 'alphabetical';
+  orderAsc.classList.add('active');
+  orderDesc.classList.remove('active');
+  currentOrder = 'asc';
+  splitBySelect.value = 'auto';
+  customDelimiterContainer.classList.add('hidden');
+  outputFormat.value = 'newline';
+  removeDuplicates.checked = false;
+  trimWhitespace.checked = true;
+  ignoreCase.checked = false;
+  removeEmpty.checked = true;
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Event listeners
+inputText.addEventListener('input', () => {
+  updateInputStats();
+  debouncedSort();
+});
+
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+copyBtn.addEventListener('click', copyOutput);
+downloadBtn.addEventListener('click', downloadOutput);
+resetBtn.addEventListener('click', resetAll);
+
+// Initialize
+updateInputStats();
+</script>
+</body>
+</html>

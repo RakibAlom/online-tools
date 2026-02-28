@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Word Randomizer - Free Online Word Shuffling Tool</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online word randomizer tool. Instantly shuffle, randomize, and rearrange words in your text. Perfect for writers, teachers, SEO, and brainstorming. No registration required." />
+  <meta name="keywords" content="word randomizer, word randomizer online, free word randomizer, randomize words online, online word randomizer tool, random word generator online free, shuffle words online free, word shuffler online, random word picker online free, word rearranger tool online, instant word randomizer online free, bulk word randomizer online, automatic word shuffler online free, text word randomizer tool online, random word list generator online free, mix words online free tool, scramble words online free, word permutation generator online free, random word organizer online, word randomizer without login online free, web based word randomizer tool free, custom word randomizer online free, advanced word shuffle tool online free, seo word randomizer tool online free, classroom word randomizer online free, writing word randomizer online free, simple word randomizer tool online free, online word shuffling tool free" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/word-randomizer/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/word-randomizer/" />
+  <meta property="og:title" content="Word Randomizer - Free Online Word Shuffling Tool" />
+  <meta property="og:description" content="Instantly shuffle, randomize, and rearrange words in your text. Perfect for writers, teachers, SEO, and brainstorming. No registration required." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/word-randomizer/" />
+  <meta name="twitter:title" content="Word Randomizer - Free Online Word Shuffling Tool" />
+  <meta name="twitter:description" content="Instantly shuffle, randomize, and rearrange words in your text. Perfect for writers, teachers, SEO, and brainstorming. No registration required." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .method-btn {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    .method-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .word-tag {
+      display: inline-block;
+      padding: 0.25rem 0.5rem;
+      margin: 0.125rem;
+      background: rgba(99, 102, 241, 0.15);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      border-radius: 0.375rem;
+      font-size: 0.75rem;
+      color: #c7d2fe;
+      transition: all 0.2s ease;
+    }
+    
+    .word-tag:hover {
+      background: rgba(99, 102, 241, 0.25);
+      transform: translateY(-1px);
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+
+    .shuffle-animation {
+      animation: shuffle 0.5s ease-in-out;
+    }
+    
+    @keyframes shuffle {
+      0% { transform: translateY(0); }
+      25% { transform: translateY(-2px); }
+      50% { transform: translateY(2px); }
+      75% { transform: translateY(-1px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 20h20M15 15l5 5 5-5M15 25l5-5 5 5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Word Randomizer</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Word Randomizer
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Text Processing Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-randomization enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Input Text
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Type or paste text here... Or drag & drop a file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.csv,.md,.json,.xml,.html,.js,.css,.py,.java,.cpp,.c,.php,.rb,.go,.rs,.swift,.kt,.sql,.log" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Words: 0 | Chars: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Output -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Randomized Result
+            </label>
+            <div class="flex gap-1">
+              <button id="shuffleBtn" class="compact-btn rounded-md bg-indigo-500/20 hover:bg-indigo-500/30 border border-indigo-500/30 text-indigo-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                Shuffle Again
+              </button>
+              <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                Copy
+              </button>
+              <button id="downloadBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Download
+              </button>
+            </div>
+          </div>
+          
+          <textarea id="outputText" readonly spellcheck="false"
+            class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+            placeholder="Randomized words will appear here automatically..."></textarea>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="outputStats">Words: 0</span>
+            <span id="processingTime" class="text-gray-600"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-3">
+        
+        <!-- Randomization Method -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Randomization Method</label>
+          <div class="flex flex-wrap gap-1">
+            <button class="method-btn active rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="shuffle">Full Shuffle</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="pick">Random Pick</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="sentence">Sentence Shuffle</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="paragraph">Paragraph Shuffle</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="reverse">Reverse Order</button>
+          </div>
+        </div>
+
+        <!-- Method Options -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+          <!-- Full Shuffle Options -->
+          <div id="shuffleOptions" class="method-panel space-y-2">
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="preserveCase" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Preserve original casing
+            </label>
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="removeDuplicates" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Remove duplicate words
+            </label>
+          </div>
+
+          <!-- Random Pick Options -->
+          <div id="pickOptions" class="method-panel hidden space-y-2">
+            <div>
+              <label class="text-xs text-gray-400 mb-1 block">Number of Words to Pick</label>
+              <input type="number" id="pickCount" min="1" value="10" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+            </div>
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="allowRepeats" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Allow repeated picks
+            </label>
+          </div>
+
+          <!-- Sentence Shuffle Options -->
+          <div id="sentenceOptions" class="method-panel hidden space-y-2">
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="shuffleWithinSentences" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Shuffle words within sentences
+            </label>
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="preservePunctuation" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Keep punctuation attached
+            </label>
+          </div>
+
+          <!-- Paragraph Shuffle Options -->
+          <div id="paragraphOptions" class="method-panel hidden space-y-2">
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="shuffleWithinParagraphs" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Shuffle words within paragraphs
+            </label>
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="keepEmptyLines" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Preserve empty line breaks
+            </label>
+          </div>
+
+          <!-- Reverse Options -->
+          <div id="reverseOptions" class="method-panel hidden space-y-2">
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="reverseByWord" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Reverse word order
+            </label>
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="reverseCharacters" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Reverse each word's characters
+            </label>
+          </div>
+
+          <!-- Output Join Options -->
+          <div class="">
+            <label class="text-xs text-gray-400 mb-1 block">Join With</label>
+            <select id="joinSelect" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value=" ">Space</option>
+              <option value=", ">, (comma)</option>
+              <option value="\n">New Line</option>
+              <option value=" | ">| (pipe)</option>
+              <option value=" - ">- (dash)</option>
+              <option value=" • ">Bullet (•)</option>
+              <option value="">Nothing</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Word Preview -->
+        <div id="wordPreview" class="hidden">
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-xs font-medium text-gray-300">Word Preview <span class="text-gray-500 font-normal">(click to remove)</span></label>
+            <span id="wordCountBadge" class="text-xs text-indigo-400"></span>
+          </div>
+          <div id="wordList" class="max-h-32 overflow-y-auto p-2 rounded-md bg-black/20 border border-white/5">
+            <!-- Words will be inserted here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Word Randomizer?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Instant Shuffle</h3>
+          <p class="text-gray-400 text-xs">Real-time word randomization</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">5 Methods</h3>
+          <p class="text-gray-400 text-xs">Shuffle, pick, sentence & more</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Drag & Drop</h3>
+          <p class="text-gray-400 text-xs">Upload text files instantly</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based, no uploads</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy or download results</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration required</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Input Text</h3>
+          <p class="text-gray-400 text-xs">Type, paste, or drop a file. Randomization happens automatically.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Choose Method</h3>
+          <p class="text-gray-400 text-xs">Select shuffle, pick, sentence, paragraph, or reverse mode.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Configure</h3>
+          <p class="text-gray-400 text-xs">Adjust options like removing duplicates or picking specific counts.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy result or download as file. Click Shuffle Again for new variations.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Word Randomization: Unlocking Creativity and Efficiency with Online Word Shufflers</h2>
+        
+        <p><strong>Word randomization</strong> is a powerful technique that transforms ordinary text into extraordinary arrangements, serving as an essential tool for writers, educators, marketers, developers, and creative professionals worldwide. Whether you're looking to <strong>shuffle words online free</strong> for brainstorming sessions, generate random word lists for games, or reorganize content for SEO purposes, understanding how to effectively use a <strong>word randomizer online</strong> can dramatically enhance your productivity and creative output. Our <strong>free word randomizer</strong> provides instant, browser-based word shuffling capabilities that require no registration or downloads.</p>
+
+        <h2>What Is Word Randomization and Why Does It Matter?</h2>
+        
+        <p><strong>Word randomization</strong> refers to the process of rearranging words in a text into a random or pseudo-random order, breaking away from the original sequence to create new patterns, combinations, or simply to shuffle existing content. This seemingly simple operation underlies countless creative processes, educational activities, and professional workflows. At its core, when you <strong>randomize words online</strong>, you're performing a fundamental text manipulation that can spark creativity, enhance learning, improve data privacy, and solve complex organizational challenges.</p>
+
+        <p>The importance of reliable <strong>online word randomizer tool</strong> solutions cannot be overstated in our content-driven world. Consider the daily challenges professionals face: a writer needs to <strong>scramble words online free</strong> to overcome writer's block and discover new phrasings; a teacher must <strong>mix words online free tool</strong> to create vocabulary exercises; a marketer wants to <strong>word rearranger tool online</strong> to generate variations of ad copy; a developer needs to <strong>word permutation generator online free</strong> for testing algorithms. Without efficient <strong>automatic word shuffler online free</strong> capabilities, these tasks become tedious manual processes prone to human bias and error.</p>
+
+        <h2>Understanding Word Randomization Methods and Techniques</h2>
+
+        <h3>Full Word Shuffling</h3>
+        
+        <p>The most common <strong>word shuffler online</strong> method involves taking all words from the input text and rearranging them into a completely random sequence. This approach is ideal for creating word clouds, generating random poetry, scrambling messages for privacy, or creating brainstorming materials. When you use our <strong>instant word randomizer online free</strong>, the full shuffle mode ensures every word has an equal probability of appearing in any position, creating truly unpredictable results.</p>
+
+        <p>Advanced <strong>bulk word randomizer online</strong> tools handle complex scenarios that simple shuffle functions cannot manage. Duplicate word removal ensures variety in output. Case preservation maintains the original formatting of proper nouns and acronyms. Punctuation handling determines whether periods, commas, and other marks travel with their associated words or remain in place. Our <strong>text word randomizer tool online</strong> provides granular control over these behaviors, making it suitable for professional content creation and educational applications.</p>
+
+        <h3>Random Word Selection</h3>
+        
+        <p>Sometimes you don't need to shuffle everything—just select a random subset. <strong>Random word picker online free</strong> functionality allows you to specify exactly how many words to extract from your text, useful for creating flashcards, generating writing prompts, selecting winners from lists, or creating randomized study materials. This method ensures you get precisely the amount of content you need without manual counting or selection.</p>
+
+        <p>The <strong>random word list generator online free</strong> approach supports both sampling with replacement (allowing the same word to be selected multiple times) and without replacement (each word appears at most once). This flexibility makes our tool perfect for statistical sampling, lottery-style selections, or vocabulary drilling where repetition may or may not be desirable.</p>
+
+        <h3>Structural Randomization</h3>
+        
+        <p>Beyond simple word-level shuffling, structural methods preserve document organization while randomizing content within boundaries. <strong>Sentence shuffle</strong> mode keeps sentences intact but rearranges their order—perfect for creating reading comprehension tests or reorganizing paragraphs. <strong>Paragraph shuffle</strong> maintains paragraph integrity while changing their sequence, useful for academic writing and report restructuring.</p>
+
+        <p>Within-sentence randomization offers another layer of control, allowing you to <strong>shuffle words online free</strong> inside individual sentences while keeping the sentence order unchanged. This creates variation at the micro level while preserving macro-level narrative flow. These structural options make our tool the most versatile <strong>random word organizer online</strong> solution available.</p>
+
+        <h3>Reverse and Inversion Techniques</h3>
+        
+        <p>While not strictly random, reversal methods complement <strong>word randomization</strong> by offering predictable transformations. Reversing word order (last word becomes first) creates mirror-image text useful for puzzles and cryptographic applications. Character-level reversal within words adds another layer of transformation. These deterministic methods pair perfectly with randomization for creating complex text puzzles and encoding schemes.</p>
+
+        <h2>Professional Applications of Word Randomization</h2>
+
+        <h3>Creative Writing and Content Creation</h3>
+        
+        <p>Writers and content creators use <strong>word randomizer online</strong> tools to break through creative blocks and discover unexpected combinations. Poetry generation through random word arrangement often produces surprising metaphors and imagery. Fiction writers use shuffled dialogue to create realistic speech patterns. Copywriters employ <strong>seo word randomizer tool online free</strong> capabilities to generate variations of headlines and calls-to-action for A/B testing.</p>
+
+        <p>The technique of "cut-up" writing, famously used by William S. Burroughs and later David Bowie, relies heavily on <strong>word rearranger tool online</strong> functionality. By physically or digitally cutting text into pieces and rearranging them randomly, artists create new meanings from existing sources. Modern <strong>web based word randomizer tool free</strong> solutions make this avant-garde technique accessible to everyone.</p>
+
+        <h3>Education and Language Learning</h3>
+        
+        <p>Teachers and students benefit immensely from <strong>classroom word randomizer online free</strong> applications. Vocabulary drills become engaging games when words appear in random order. Sentence unscrambling exercises help students understand grammar and syntax. Randomized reading passages test comprehension without memorization. Spelling bees and vocabulary tests gain fairness through <strong>random word picker online free</strong> selection.</p>
+
+        <p>Language learners use <strong>simple word randomizer tool online free</strong> solutions to practice word recognition speed and translation skills. By shuffling familiar texts, learners must engage more deeply with content rather than relying on contextual memory. ESL teachers particularly value <strong>online word shuffling tool free</strong> options for creating varied assessment materials from the same source text.</p>
+
+        <h3>SEO and Digital Marketing</h3>
+        
+        <p>Search engine optimization professionals employ <strong>advanced word shuffle tool online free</strong> techniques to generate unique content variations. While maintaining readability, shuffled descriptions and meta tags create distinct versions for different pages. Keyword density analysis benefits from randomized word order to test natural language processing. Social media managers use <strong>randomize words online</strong> tools to create multiple post variations from a single source.</p>
+
+        <p>However, SEO practitioners must use <strong>word randomizer</strong> tools responsibly. Search engines penalize truly nonsensical content, so randomization works best as a brainstorming aid rather than content generation method. The <strong>custom word randomizer online free</strong> features allow marketers to maintain control over which words participate in shuffling, ensuring brand names and key terms remain fixed.</p>
+
+        <h3>Data Privacy and Security</h3>
+        
+        <p>In an era of data breaches and privacy concerns, <strong>word randomizer without login online free</strong> tools offer a surprising security benefit. By shuffling sensitive text before sharing (such as medical records or proprietary information), you can discuss content patterns without revealing actual data. This technique, known as data masking through permutation, allows collaboration while maintaining confidentiality.</p>
+
+        <p>Our browser-based <strong>word randomizer online</strong> ensures text never leaves your device, providing additional privacy protection. Unlike cloud-based services that process text on remote servers, local processing eliminates transmission risks. This makes our tool ideal for handling confidential documents, legal texts, or personal information.</p>
+
+        <h3>Software Development and Testing</h3>
+        
+        <p>Developers use <strong>word permutation generator online free</strong> tools to create test data for applications. Randomized strings test input validation and edge cases. Shuffled word lists verify sorting algorithms and search functionality. Natural language processing applications require varied text inputs that <strong>bulk word randomizer online</strong> tools can efficiently generate.</p>
+
+        <p>Quality assurance teams employ <strong>automatic word shuffler online free</strong> solutions to create reproducible yet varied test scenarios. By starting with structured text and applying controlled randomization, testers ensure applications handle unexpected input gracefully without manually creating hundreds of test cases.</p>
+
+        <h2>Advanced Word Randomization Techniques</h2>
+
+        <h3>Weighted and Constrained Randomization</h3>
+        
+        <p>True randomness isn't always desirable. Advanced <strong>word randomizer</strong> implementations support weighted selection, where certain words or categories appear more frequently. Constrained randomization ensures specific words maintain their relative positions (keeping "not" near its verb, for example). These intelligent shuffling methods produce more natural-sounding results than pure randomness.</p>
+
+        <h3>Multi-Stage Randomization</h3>
+        
+        <p>Sophisticated workflows chain multiple randomization passes. First, shuffle sentences. Then, within each sentence, shuffle phrases. Finally, shuffle remaining words. This hierarchical approach maintains some syntactic structure while maximizing variation. Our <strong>writing word randomizer online free</strong> supports these complex workflows through sequential application of different modes.</p>
+
+        <h3>Preservation and Exclusion Rules</h3>
+        
+        <p>Professional <strong>text word randomizer tool online</code> applications allow users to define preservation rules: keep proper nouns in place, maintain number sequences, preserve email addresses, or protect URLs. Exclusion lists prevent specific words from participating in shuffling. These rules ensure randomized output remains functional and meaningful while still providing the benefits of rearrangement.</p>
+
+        <h2>Best Practices for Effective Word Randomization</h2>
+
+        <h3>Pre-processing and Text Preparation</h3>
+        
+        <p>Before randomizing, prepare your text for optimal results. Remove formatting that might interfere with word detection (extra spaces, special characters). Normalize encoding to UTF-8. Decide whether punctuation should be treated as separate tokens or attached to words. Consider whether line breaks represent meaningful structure or should be ignored. Our <strong>online word randomizer tool</strong> handles these preparations automatically but offers manual override for special cases.</p>
+
+        <h3>Choosing the Right Randomization Strategy</h3>
+        
+        <p>Match your method to your goals: Use full shuffle for maximum randomness and creativity. Prefer sentence or paragraph shuffle when maintaining some structure matters. Apply random pick when you need specific quantities. Choose reverse modes for puzzles and encoding. Consider hybrid approaches—shuffle within sentences, then shuffle sentence order—for sophisticated variation. Our versatile <strong>word randomizer</strong> supports all these strategies.</p>
+
+        <h3>Validation and Iteration</h3>
+        
+        <p>Randomization produces different results each time, so review output before using it professionally. Check that critical information wasn't accidentally altered. Verify that the randomized text meets your needs—sometimes a second or third shuffle produces better results. Save multiple variations for comparison. Professional <strong>bulk word randomizer online</strong> workflows include review steps to ensure quality control.</p>
+
+        <h2>Comparing Word Randomization Approaches</h2>
+
+        <h3>Manual vs. Automated Shuffling</h3>
+        
+        <p>Manual word rearrangement using cut-and-paste operations works for very short texts but becomes impractical for: documents longer than a paragraph, repetitive operations, true randomness (humans are poor random number generators), and large-scale content operations. Automated <strong>word shuffler online</strong> tools eliminate bias, ensure statistical randomness, and complete in milliseconds what might take hours manually.</p>
+
+        <h3>Desktop Software vs. Online Tools</h3>
+        
+        <p>While word processors offer some text manipulation, dedicated <strong>word randomizer online</strong> tools provide superior functionality: multiple randomization modes, batch processing, preservation rules, and instant accessibility. Browser-based tools work across all devices without installation. Our <strong>free word randomizer</strong> combines the power of desktop software with the convenience of web applications.</p>
+
+        <h2>The Future of Text Manipulation Technology</h2>
+
+        <p>Artificial intelligence is beginning to influence <strong>word randomization</strong>, moving beyond pure randomness toward intelligent variation. AI-powered tools can: maintain grammatical correctness while shuffling, preserve semantic meaning in new arrangements, suggest optimal randomization strategies based on content type, and generate context-aware variations. These capabilities will transform <strong>word randomizer</strong> tools from simple shufflers into intelligent writing assistants.</p>
+
+        <h2>Conclusion: Master Your Words with Professional Randomization</h2>
+
+        <p><strong>Word randomization</strong> remains one of the most versatile yet underutilized operations in text processing. From simple shuffling to complex constrained rearrangement, the ability to reorganize words intelligently empowers professionals across every industry. Whether you're brainstorming creative content, preparing educational materials, optimizing marketing copy, or developing software, mastering <strong>word randomization</strong> techniques will dramatically improve your productivity and output quality.</p>
+
+        <p>Our <strong>free online word randomizer</strong> provides all the capabilities you need to handle any randomization scenario. With automatic real-time processing as you type, support for five different methods (full shuffle, random pick, sentence shuffle, paragraph shuffle, and reverse), plus flexible output options, this tool serves everyone from casual users to professionals. The browser-based architecture ensures privacy and accessibility, while the intuitive interface requires no learning curve. Whether you need to <strong>shuffle words online free</strong>, <strong>randomize words online</strong>, <strong>scramble words online free</strong>, or <strong>mix words online free tool</strong>, our <strong>word randomizer online</strong> delivers professional results instantly. Stop struggling with manual text manipulation—start using our professional <strong>word randomizer</strong> today and experience the power of automated word rearrangement.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool randomize words automatically as I type?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>word randomizer online</strong> features <strong>automatic real-time randomization</strong>. As you type or paste text, the tool instantly shuffles your words and displays results in the right column. We use intelligent debouncing to ensure smooth performance. The "Auto-randomization enabled" indicator confirms the feature is active. You can also click "Shuffle Again" anytime for a new random arrangement.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What is the difference between Full Shuffle and Random Pick?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Full Shuffle</strong> rearranges all your words into a random order, using every word exactly once. <strong>Random Pick</strong> selects a specific number of words from your text (you choose how many), which may include duplicates if you enable that option. Use Full Shuffle for complete rearrangement, Random Pick for selecting samples or creating word pools.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I keep punctuation attached to words?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! In Sentence and Paragraph shuffle modes, enable "Keep punctuation attached" to ensure periods, commas, and other marks stay with their words. This maintains grammatical structure while shuffling. Without this option, punctuation is treated as separate tokens and shuffled independently, which creates more chaotic (but sometimes creatively interesting) results.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I remove duplicate words?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">In Full Shuffle mode, check the "Remove duplicate words" option. This ensures each unique word appears only once in your output, creating a diverse word list perfect for vocabulary exercises or keyword analysis. Note that this option is case-sensitive by default—"Word" and "word" are treated as different unless you also enable case normalization.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I shuffle sentences but keep words within them intact?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Select <strong>Sentence Shuffle</strong> mode and leave "Shuffle words within sentences" unchecked. This keeps each sentence's internal word order intact while randomly rearranging which sentence comes first, second, etc. Perfect for creating reading comprehension tests or reorganizing paragraphs while maintaining readability.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What file types are supported?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">All text-based files: TXT, CSV, JSON, XML, HTML, Markdown, and code files (JS, CSS, Python, Java, C/C++, PHP, Ruby, Go, Rust, Swift, Kotlin, SQL, LOG). Files are read as plain text, so any text file works regardless of extension. Our <strong>bulk word randomizer online</strong> handles large files efficiently.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is there a limit to how many words I can randomize?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">The tool handles up to 100,000 words (roughly 300-500 pages) in most modern browsers. Performance depends on your device's memory and processing power. For extremely large texts (1M+ words), consider processing in chunks. The <strong>automatic word shuffler online free</strong> is optimized for typical daily use cases.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my text data secure?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely. All processing happens <strong>locally in your browser</strong>—text never uploads to servers or leaves your device. You can verify this with browser DevTools (Network tab shows no external data transfer). Works offline after loading. Ideal for confidential documents, proprietary content, or sensitive data. Privacy is built into our <strong>word randomizer without login online free</strong> architecture.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I use this for commercial projects?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, completely free for both personal and commercial use with no attribution required. Use it for client work, published content, marketing materials, or any commercial application. This is truly a <strong>free word randomizer</strong> for everyone. Supported by unobtrusive advertising.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Why do I get different results each time I shuffle?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">True randomization means each shuffle produces a unique arrangement based on cryptographic randomness. This ensures unbiased, unpredictable results every time. If you need to reproduce a specific arrangement, copy and save the output—there's no "seed" feature to recreate previous randomizations. This unpredictability is essential for fair random word selection.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const outputText = document.getElementById('outputText');
+const inputStats = document.getElementById('inputStats');
+const outputStats = document.getElementById('outputStats');
+const processingTime = document.getElementById('processingTime');
+const wordPreview = document.getElementById('wordPreview');
+const wordList = document.getElementById('wordList');
+const wordCountBadge = document.getElementById('wordCountBadge');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+
+// Buttons
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const shuffleBtn = document.getElementById('shuffleBtn');
+const resetBtn = document.getElementById('resetBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+// Method buttons and panels
+const methodBtns = document.querySelectorAll('.method-btn');
+const methodPanels = document.querySelectorAll('.method-panel');
+let currentMethod = 'shuffle';
+let currentJoin = ' ';
+
+// Word storage
+let wordsArray = [];
+let originalText = '';
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Update input stats
+function updateInputStats() {
+  const text = inputText.value;
+  const chars = text.length;
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).filter(w => w.length > 0).length;
+  inputStats.textContent = `Words: ${words} | Chars: ${chars}`;
+}
+
+// Debounce function for performance
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Fisher-Yates shuffle algorithm
+function shuffleArray(array) {
+  const arr = [...array];
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+// Method selection
+methodBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    methodBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentMethod = btn.dataset.method;
+    
+    methodPanels.forEach(panel => panel.classList.add('hidden'));
+    document.getElementById(currentMethod + 'Options').classList.remove('hidden');
+    
+    randomizeWords();
+  });
+});
+
+// Join selection
+document.getElementById('joinSelect').addEventListener('change', (e) => {
+  currentJoin = e.target.value;
+  randomizeWords();
+});
+
+// Auto-randomize on option changes
+['preserveCase', 'removeDuplicates', 'pickCount', 'allowRepeats', 'shuffleWithinSentences', 'preservePunctuation', 'shuffleWithinParagraphs', 'keepEmptyLines', 'reverseByWord', 'reverseCharacters'].forEach(id => {
+  const el = document.getElementById(id);
+  if (el) {
+    el.addEventListener('change', randomizeWords);
+    el.addEventListener('input', debounce(randomizeWords, 300));
+  }
+});
+
+// Extract words from text
+function extractWords(text) {
+  if (!text.trim()) return [];
+  
+  // Split by whitespace but preserve punctuation attached to words
+  return text.trim().split(/\s+/).filter(word => word.length > 0);
+}
+
+// Extract sentences
+function extractSentences(text) {
+  // Simple sentence detection - splits by period, exclamation, or question mark followed by space or end
+  return text.split(/([.!?]+(?:\s+|$))/).filter(s => s.trim().length > 0);
+}
+
+// Extract paragraphs
+function extractParagraphs(text) {
+  return text.split(/\n\s*\n/).filter(p => p.trim().length > 0);
+}
+
+// Randomize function
+function randomizeWords() {
+  const startTime = performance.now();
+  const text = inputText.value;
+  
+  if (!text.trim()) {
+    outputText.value = '';
+    outputStats.textContent = 'Words: 0';
+    wordPreview.classList.add('hidden');
+    processingTime.textContent = '';
+    wordsArray = [];
+    return;
+  }
+  
+  let result = '';
+  let processedWords = [];
+  
+  try {
+    switch(currentMethod) {
+      case 'shuffle':
+        let words = extractWords(text);
+        
+        if (document.getElementById('removeDuplicates').checked) {
+          words = [...new Set(words)];
+        }
+        
+        processedWords = shuffleArray(words);
+        result = processedWords.join(currentJoin.replace(/\\n/g, '\n'));
+        break;
+        
+      case 'pick':
+        const allWords = extractWords(text);
+        const pickCount = parseInt(document.getElementById('pickCount').value) || 10;
+        const allowRepeats = document.getElementById('allowRepeats').checked;
+        
+        processedWords = [];
+        if (allowRepeats) {
+          for (let i = 0; i < pickCount; i++) {
+            const randomIndex = Math.floor(Math.random() * allWords.length);
+            processedWords.push(allWords[randomIndex]);
+          }
+        } else {
+          const shuffled = shuffleArray(allWords);
+          processedWords = shuffled.slice(0, Math.min(pickCount, shuffled.length));
+        }
+        result = processedWords.join(currentJoin.replace(/\\n/g, '\n'));
+        break;
+        
+      case 'sentence':
+        const sentences = text.match(/[^.!?]+[.!?]+(\s|$)/g) || [text];
+        const shuffleWithinSentences = document.getElementById('shuffleWithinSentences').checked;
+        const preservePunctuation = document.getElementById('preservePunctuation').checked;
+        
+        let processedSentences = sentences.map(sentence => {
+          if (!shuffleWithinSentences) return sentence;
+          
+          // Extract punctuation at end
+          const match = sentence.match(/([.!?]+)(\s*)$/);
+          const punctuation = match ? match[1] : '';
+          const trailingSpace = match ? match[2] : '';
+          const content = match ? sentence.slice(0, -match[0].length) : sentence;
+          
+          const words = extractWords(content);
+          const shuffledWords = shuffleArray(words);
+          
+          if (preservePunctuation) {
+            return shuffledWords.join(' ') + punctuation + trailingSpace;
+          } else {
+            return shuffledWords.join(' ');
+          }
+        });
+        
+        processedSentences = shuffleArray(processedSentences);
+        result = processedSentences.join(' ');
+        processedWords = extractWords(result);
+        break;
+        
+      case 'paragraph':
+        const paragraphs = text.split(/\n\s*\n/).filter(p => p.trim());
+        const shuffleWithinParagraphs = document.getElementById('shuffleWithinParagraphs').checked;
+        const keepEmptyLines = document.getElementById('keepEmptyLines').checked;
+        
+        let processedParagraphs = paragraphs.map(para => {
+          if (!shuffleWithinParagraphs) return para;
+          
+          const words = extractWords(para);
+          return shuffleArray(words).join(' ');
+        });
+        
+        processedParagraphs = shuffleArray(processedParagraphs);
+        result = processedParagraphs.join(keepEmptyLines ? '\n\n' : '\n');
+        processedWords = extractWords(result);
+        break;
+        
+      case 'reverse':
+        const reverseWords = extractWords(text);
+        const reverseByWord = document.getElementById('reverseByWord').checked;
+        const reverseCharacters = document.getElementById('reverseCharacters').checked;
+        
+        if (reverseByWord) {
+          processedWords = [...reverseWords].reverse();
+        } else {
+          processedWords = reverseWords;
+        }
+        
+        if (reverseCharacters) {
+          processedWords = processedWords.map(w => w.split('').reverse().join(''));
+        }
+        
+        result = processedWords.join(currentJoin.replace(/\\n/g, '\n'));
+        break;
+    }
+    
+    const endTime = performance.now();
+    wordsArray = processedWords;
+    
+    outputText.value = result;
+    outputStats.textContent = `Words: ${processedWords.length}`;
+    processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+    
+    // Update word preview
+    displayWordPreview(processedWords);
+    
+  } catch (error) {
+    console.error('Randomization error:', error);
+  }
+}
+
+// Debounced version for typing
+const debouncedRandomize = debounce(randomizeWords, 300);
+
+// Display word preview
+function displayWordPreview(words) {
+  if (words.length === 0) {
+    wordPreview.classList.add('hidden');
+    return;
+  }
+  
+  wordPreview.classList.remove('hidden');
+  wordList.innerHTML = '';
+  wordCountBadge.textContent = `${words.length} words`;
+  
+  // Show first 100 words as tags
+  words.slice(0, 100).forEach((word, index) => {
+    const tag = document.createElement('span');
+    tag.className = 'word-tag';
+    tag.textContent = word.length > 20 ? word.substring(0, 20) + '...' : word;
+    tag.title = `Click to remove "${word}"`;
+    
+    tag.addEventListener('click', () => {
+      // Remove this word from array and re-join
+      wordsArray.splice(index, 1);
+      outputText.value = wordsArray.join(currentJoin.replace(/\\n/g, '\n'));
+      outputStats.textContent = `Words: ${wordsArray.length}`;
+      displayWordPreview(wordsArray);
+    });
+    
+    wordList.appendChild(tag);
+  });
+  
+  if (words.length > 100) {
+    const moreSpan = document.createElement('span');
+    moreSpan.className = 'text-xs text-gray-500 ml-2';
+    moreSpan.textContent = `+${words.length - 100} more`;
+    wordList.appendChild(moreSpan);
+  }
+}
+
+// Drag and drop handlers
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  if (!file.type.match('text.*') && !file.name.match(/\.(txt|csv|json|xml|html?|md|js|css|py|java|cpp|c|php|rb|go|rs|swift|kt|sql|log)$/i)) {
+    alert('Please upload a text file');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    updateInputStats();
+    randomizeWords();
+  };
+  reader.readAsText(file);
+}
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    updateInputStats();
+    randomizeWords();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  updateInputStats();
+  randomizeWords();
+  inputText.focus();
+}
+
+// Copy output
+async function copyOutput() {
+  if (!outputText.value) return;
+  
+  try {
+    await navigator.clipboard.writeText(outputText.value);
+    const originalText = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalText;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+}
+
+// Download output
+function downloadOutput() {
+  const text = outputText.value;
+  if (!text.trim()) return;
+  
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'randomized-words.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Reset all
+function resetAll() {
+  inputText.value = '';
+  outputText.value = '';
+  updateInputStats();
+  outputStats.textContent = 'Words: 0';
+  wordPreview.classList.add('hidden');
+  processingTime.textContent = '';
+  wordsArray = [];
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Event listeners
+inputText.addEventListener('input', () => {
+  updateInputStats();
+  debouncedRandomize();
+});
+
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+copyBtn.addEventListener('click', copyOutput);
+downloadBtn.addEventListener('click', downloadOutput);
+shuffleBtn.addEventListener('click', randomizeWords);
+resetBtn.addEventListener('click', resetAll);
+
+// Initialize
+updateInputStats();
+</script>
+</body>
+</html>

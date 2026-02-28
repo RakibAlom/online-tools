@@ -1,0 +1,1570 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Word Filter Tool - Free Online Text Word Filtering</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online word filter tool. Remove or keep specific words from text, filter by patterns, exclude stop words, and clean your content instantly. No registration required." />
+  <meta name="keywords" content="word filter tool, word filter tool online, free word filter tool, online word filter tool, filter words from text online, text word filter online free, remove specific words online, keep specific words online, word selector tool online, text word sorter and filter online, filter text by word online, word removal tool online free, include exclude words online tool, bulk word filter online, filter duplicate words online free, text word cleaner and filter online, advanced word filter tool online, regex word filter online free, text word processing tool online, word extraction and filter tool online, free online word filter utility, filter stop words online free, filter words by pattern online, online text word filtering tool free, word filter for coding online, word filter for seo online, instant word filter tool online free, word filter tool without login online" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/word-filter-tool/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/word-filter-tool/" />
+  <meta property="og:title" content="Word Filter Tool - Free Online Text Word Filtering" />
+  <meta property="og:description" content="Remove or keep specific words from text, filter by patterns, exclude stop words, and clean your content instantly. No registration required." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/word-filter-tool/" />
+  <meta name="twitter:title" content="Word Filter Tool - Free Online Text Word Filtering" />
+  <meta name="twitter:description" content="Remove or keep specific words from text, filter by patterns, exclude stop words, and clean your content instantly. No registration required." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .method-btn {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    .method-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .word-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.25rem 0.5rem;
+      background: rgba(99, 102, 241, 0.15);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      border-radius: 0.375rem;
+      font-size: 0.75rem;
+      color: #818cf8;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    
+    .word-tag:hover {
+      background: rgba(99, 102, 241, 0.25);
+      border-color: rgba(99, 102, 241, 0.5);
+    }
+
+    .word-tag.removed {
+      background: rgba(239, 68, 68, 0.15);
+      border-color: rgba(239, 68, 68, 0.3);
+      color: #f87171;
+      text-decoration: line-through;
+      opacity: 0.6;
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+
+    .stats-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.125rem 0.5rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 0.25rem;
+      font-size: 0.75rem;
+      color: #9ca3af;
+    }
+
+    .filter-mode-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+      border-radius: 0.375rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.05);
+      color: #9ca3af;
+      transition: all 0.2s ease;
+    }
+    
+    .filter-mode-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    .word-highlight {
+      background: rgba(99, 102, 241, 0.2);
+      padding: 0.125rem 0.25rem;
+      border-radius: 0.25rem;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 20h20M15 15l-5 5 5 5M25 15l5 5-5 5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Word Filter</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Word Filter Tool
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Text Processing Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-filtering enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Input Text
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Type or paste text here... Or drag & drop a file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.csv,.md,.json,.xml,.html,.js,.css,.py,.java,.cpp,.c,.php,.rb,.go,.rs,.swift,.kt,.sql,.log" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Words: 0 | Chars: 0 | Lines: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Output -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Filtered Result
+            </label>
+            <div class="flex gap-1">
+              <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                Copy
+              </button>
+              <button id="downloadBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Download
+              </button>
+            </div>
+          </div>
+          
+          <textarea id="outputText" readonly spellcheck="false"
+            class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+            placeholder="Filtered text appears here automatically..."></textarea>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <div class="flex gap-2">
+              <span id="outputStats">Words: 0 | Chars: 0</span>
+              <span id="removedStats" class="stats-badge hidden">Removed: 0</span>
+            </div>
+            <span id="processingTime" class="text-gray-600"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-3">
+        
+        <!-- Filter Mode -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Filter Mode</label>
+          <div class="flex flex-wrap gap-1">
+            <button class="method-btn active rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="exclude">Remove Words</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="keep">Keep Only</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="pattern">Pattern/Regex</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="stopwords">Stop Words</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="duplicates">Duplicates</button>
+          </div>
+        </div>
+
+        <!-- Method Options -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+          <!-- Exclude/Keep Options -->
+          <div id="excludeOptions" class="method-panel space-y-2">
+            <div>
+              <label class="text-xs text-gray-400 mb-1 block">Words to <span id="actionLabel">Remove</span> (one per line or comma-separated)</label>
+              <textarea id="filterWords" rows="3" class="w-full px-2 py-1.5 rounded-md glass-input text-xs font-mono" placeholder="word1&#10;word2&#10;word3"></textarea>
+            </div>
+            <div class="flex gap-2">
+              <label class="flex items-center gap-1.5 text-xs text-gray-400">
+                <input type="checkbox" id="caseSensitive" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+                Case sensitive
+              </label>
+              <label class="flex items-center gap-1.5 text-xs text-gray-400">
+                <input type="checkbox" id="wholeWord" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+                Whole word only
+              </label>
+            </div>
+          </div>
+
+          <!-- Pattern/Regex Options -->
+          <div id="patternOptions" class="method-panel hidden space-y-2">
+            <div>
+              <label class="text-xs text-gray-400 mb-1 block">Regex Pattern</label>
+              <input type="text" id="regexPattern" placeholder="e.g. \b\w{1,2}\b (remove short words)" class="w-full px-2 py-1.5 rounded-md glass-input text-xs font-mono">
+            </div>
+            <div class="flex gap-2">
+              <label class="flex items-center gap-1.5 text-xs text-gray-400">
+                <input type="checkbox" id="regexCaseSensitive" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+                Case sensitive
+              </label>
+              <label class="flex items-center gap-1.5 text-xs text-gray-400">
+                <input type="checkbox" id="regexGlobal" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+                Global match
+              </label>
+            </div>
+            <p class="text-xs text-gray-500">Common: <code class="bg-white/5 px-1 rounded">\bword\b</code> exact, <code class="bg-white/5 px-1 rounded">\d+</code> numbers, <code class="bg-white/5 px-1 rounded">[aeiou]</code> vowels</p>
+          </div>
+
+          <!-- Stop Words Options -->
+          <div id="stopwordsOptions" class="method-panel hidden space-y-2">
+            <div>
+              <label class="text-xs text-gray-400 mb-1 block">Language</label>
+              <select id="stopwordsLang" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+                <option value="english">English</option>
+                <option value="spanish">Spanish</option>
+                <option value="french">French</option>
+                <option value="german">German</option>
+                <option value="italian">Italian</option>
+                <option value="portuguese">Portuguese</option>
+                <option value="custom">Custom List</option>
+              </select>
+            </div>
+            <div id="customStopwordsContainer" class="hidden">
+              <textarea id="customStopwords" rows="2" class="w-full px-2 py-1.5 rounded-md glass-input text-xs font-mono" placeholder="Enter custom stop words..."></textarea>
+            </div>
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="keepStopwords" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Keep stop words (remove everything else)
+            </label>
+          </div>
+
+          <!-- Duplicates Options -->
+          <div id="duplicatesOptions" class="method-panel hidden space-y-2">
+            <div class="flex gap-2">
+              <div class="flex-1">
+                <label class="text-xs text-gray-400 mb-1 block">Action</label>
+                <select id="duplicateAction" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+                  <option value="remove">Remove duplicates</option>
+                  <option value="keepFirst">Keep first occurrence</option>
+                  <option value="keepLast">Keep last occurrence</option>
+                </select>
+              </div>
+              <div class="flex-1">
+                <label class="text-xs text-gray-400 mb-1 block">Scope</label>
+                <select id="duplicateScope" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+                  <option value="line">Per line</option>
+                  <option value="global">Global</option>
+                </select>
+              </div>
+            </div>
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="duplicateCaseSensitive" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Case sensitive matching
+            </label>
+          </div>
+
+          <!-- Output Options -->
+          <div class="space-y-2">
+            <label class="text-xs text-gray-400 mb-1 block">Output Format</label>
+            <select id="outputFormat" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="text">Plain Text</option>
+              <option value="list">Word List (one per line)</option>
+              <option value="comma">Comma Separated</option>
+              <option value="json">JSON Array</option>
+            </select>
+            <label class="flex items-center gap-1.5 text-xs text-gray-400 mt-2">
+              <input type="checkbox" id="removeExtraSpaces" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Remove extra spaces
+            </label>
+            <label class="flex items-center gap-1.5 text-xs text-gray-400">
+              <input type="checkbox" id="removeEmptyLines" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Remove empty lines
+            </label>
+          </div>
+        </div>
+
+        <!-- Filtered Words Preview -->
+        <div id="filteredWordsPreview" class="hidden">
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-xs font-medium text-gray-300">Filter Summary</label>
+            <span id="filteredCount" class="text-xs text-gray-500">0 words affected</span>
+          </div>
+          <div id="filteredWordsList" class="max-h-24 overflow-y-auto flex flex-wrap gap-1 pr-1">
+            <!-- Filtered words will be inserted here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Word Filter?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Auto-Filter</h3>
+          <p class="text-gray-400 text-xs">Real-time filtering as you type</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">5 Methods</h3>
+          <p class="text-gray-400 text-xs">Exclude, keep, pattern, stop words</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Drag & Drop</h3>
+          <p class="text-gray-400 text-xs">Upload text files instantly</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based processing only</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Multiple output formats</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration required</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Input Text</h3>
+          <p class="text-gray-400 text-xs">Type, paste, or drop a file. Filtering happens automatically.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Choose Mode</h3>
+          <p class="text-gray-400 text-xs">Select remove, keep, pattern, stop words, or duplicates.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Configure</h3>
+          <p class="text-gray-400 text-xs">Enter words to filter or set pattern options. Changes apply instantly.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy result or download as file. Choose from multiple formats.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Word Filtering: Mastering Text Precision and Content Control</h2>
+        
+        <p><strong>Word filtering</strong> represents one of the most essential yet sophisticated operations in modern text processing, serving as the gatekeeper between raw, unstructured content and refined, purposeful information. Whether you're a data scientist preparing training datasets, a content marketer cleaning user-generated content, a developer parsing log files, or an SEO specialist optimizing web content, mastering the art of filtering words from text online is crucial for achieving professional-grade results. Our <strong>word filter tool online</strong> provides comprehensive capabilities that transform chaotic text into structured, meaningful data through intelligent word selection and removal processes.</p>
+
+        <h2>Understanding Word Filtering: The Foundation of Text Processing</h2>
+        
+        <p><strong>Word filtering</strong> is the systematic process of selectively including or excluding specific words, phrases, or patterns from a body of text based on predefined criteria. This operation goes far beyond simple find-and-replace functionality; it involves sophisticated pattern matching, linguistic analysis, and contextual awareness to ensure that the resulting text meets exact specifications. When you use an <strong>online word filter tool</strong>, you're engaging with algorithms that can process millions of text variations while maintaining the semantic integrity of your content.</p>
+
+        <p>The significance of reliable <strong>text word filter online free</strong> solutions cannot be overstated in our information-saturated digital landscape. Consider the daily challenges content professionals face: a data analyst needs to <strong>remove specific words online</strong> to anonymize customer feedback; a web developer must <strong>filter stop words online free</strong> to improve search indexing; a social media manager wants to <strong>filter duplicate words online free</strong> to eliminate repetitive user comments; a researcher needs to <strong>keep specific words online</strong> to extract only relevant terminology from academic papers. Without efficient <strong>word removal tool online free</strong> capabilities, these tasks become labor-intensive manual processes fraught with inconsistencies and errors.</p>
+
+        <h2>Comprehensive Word Filtering Methods and Techniques</h2>
+
+        <h3>Exclusion-Based Filtering: Precision Removal</h3>
+        
+        <p>The most common <strong>word filter tool</strong> method involves exclusion—systematically removing unwanted words while preserving the rest of the text. This approach serves countless practical applications: cleaning profanity from user-generated content, removing sensitive information from public documents, eliminating technical jargon from beginner materials, or stripping formatting artifacts from copied text. Advanced <strong>free word filter tool</strong> implementations offer granular control over exclusion criteria, including case sensitivity options, whole-word matching to prevent partial deletions, and regex pattern support for complex removal scenarios.</p>
+
+        <p>Professional exclusion filtering requires handling edge cases that simple tools cannot manage. Words with punctuation attachments (like "word," or "word!") should be recognized and handled consistently. Multi-word phrases need boundary detection to prevent unintended partial matches. Unicode and special characters must be processed without corruption. Our <strong>free online word filter utility</strong> addresses these complexities, providing enterprise-grade exclusion capabilities accessible to everyone. Whether you need to <strong>filter text by word online</strong> for a small blog post or process massive datasets, our <strong>bulk word filter online</strong> features scale to meet your needs.</p>
+
+        <h3>Inclusion-Based Filtering: Selective Retention</h3>
+        
+        <p>Sometimes the goal isn't removal but selective preservation. <strong>Keep specific words online</strong> operations extract only desired terminology while discarding everything else. This method proves invaluable for keyword extraction, terminology compilation, tag generation, and focused content analysis. When you <strong>filter words from text online</strong> using inclusion mode, you create concentrated extracts of relevant information from otherwise noisy sources.</p>
+
+        <p><strong>Word selector tool online</strong> capabilities shine in scenarios requiring precise content curation. Legal professionals might extract only statute references from case documents; medical researchers could isolate drug names from clinical notes; SEO specialists can harvest keyword densities from competitor content; programmers may extract function names from documentation. The <strong>include exclude words online tool</strong> approach—combining both inclusion and exclusion criteria—enables the most sophisticated filtering workflows, allowing users to define exactly what stays and what goes with surgical precision.</p>
+
+        <h3>Pattern and Regex-Based Filtering: Advanced Pattern Matching</h3>
+        
+        <p>Beyond literal word matching, <strong>regex word filter online free</strong> capabilities unlock unlimited filtering potential through regular expressions. Pattern-based filtering can remove all words shorter than three characters (eliminating "a," "an," "is"), extract only capitalized terms (proper nouns), filter words containing numbers (product codes), or remove email addresses and URLs from text. The flexibility of regex transforms a simple <strong>text word processing tool online</strong> into a powerful data mining instrument.</p>
+
+        <p>Advanced <strong>filter words by pattern online</strong> techniques include lookahead and lookbehind assertions for zero-width matches, character classes for flexible matching, quantifiers for length-based filtering, and alternation for multiple pattern support. These capabilities enable complex operations like removing all words except those ending in "-ing" (gerunds), filtering text to keep only hyphenated compounds, or extracting domain-specific terminology based on morphological patterns. Our <strong>advanced word filter tool online</strong> provides full regex support with real-time testing and validation.</p>
+
+        <h3>Stop Words Filtering: Linguistic Refinement</h3>
+        
+        <p><strong>Filter stop words online free</strong> functionality addresses a specific linguistic need: removing high-frequency, low-information words that add noise to text analysis. Stop words include articles (the, a, an), prepositions (in, on, at), conjunctions (and, but, or), and common verbs (is, are, was). While essential for grammar, these words often interfere with statistical text analysis, machine learning model training, and information retrieval systems.</p>
+
+        <p>Professional <strong>text word cleaner and filter online</strong> tools offer multilingual stop word support, recognizing that "el," "la," "los" (Spanish) or "le," "la," "les" (French) serve the same function as English articles. Custom stop word lists allow domain-specific filtering—removing "page," "click," "user" from web analytics data, or filtering medical stop words from clinical records. The ability to toggle between removing stop words (standard mode) and keeping only stop words (reverse mode) provides additional analytical flexibility for linguistic research and pattern analysis.</p>
+
+        <h3>Duplicate Detection and Removal: Content Deduplication</h3>
+        
+        <p><strong>Filter duplicate words online free</strong> capabilities address a common data quality issue: repetitive text. Duplicates occur in user-generated content (copy-pasted spam), concatenated datasets (merged from multiple sources), OCR output (recognition errors), and social media aggregation (retweeted content). Effective deduplication requires choosing between keeping first occurrences, keeping last occurrences, or removing all duplicates entirely.</p>
+
+        <p>Scope selection distinguishes professional <strong>text word sorter and filter online</strong> tools from basic alternatives. Global deduplication treats the entire text as one unit, ensuring absolute uniqueness across all content. Per-line deduplication processes each line independently, preserving duplicates that appear on different lines. Case sensitivity options determine whether "Word" and "word" count as duplicates. These granular controls ensure that <strong>instant word filter tool online free</strong> solutions handle deduplication appropriately for each specific use case.</p>
+
+        <h2>Professional Applications of Word Filtering</h2>
+
+        <h3>Data Science and Machine Learning Preparation</h3>
+        
+        <p>Natural Language Processing (NLP) workflows depend heavily on clean, filtered text data. Training datasets require <strong>filter stop words online free</strong> operations to reduce dimensionality and improve model focus. Feature extraction benefits from <strong>remove specific words online</strong> processing to eliminate irrelevant vocabulary. Text classification models perform better when trained on <strong>filter words from text online</strong> cleaned content that removes noise and inconsistencies.</p>
+
+        <p>Sentiment analysis exemplifies the importance of thoughtful word filtering. Raw social media text contains URLs, mentions, hashtags, and emoji that skew sentiment scores if not properly handled. A sophisticated <strong>word filter for coding online</strong> approach removes these elements while preserving the emotional content of messages. Named Entity Recognition (NER) systems require filtered input to distinguish between common words and proper nouns. Topic modeling algorithms like LDA produce clearer, more interpretable results when stop words and rare terms are filtered appropriately.</p>
+
+        <h3>SEO and Content Marketing Optimization</h3>
+        
+        <p>Search engine optimization relies on precise word analysis and manipulation. Content audits use <strong>word extraction and filter tool online</strong> capabilities to analyze keyword density, identify over-optimization, and ensure topical relevance. Competitor analysis involves <strong>filter text by word online</strong> operations to extract their target keywords and content strategies. Meta description optimization requires <strong>filter words by pattern online</strong> techniques to stay within character limits while preserving click-worthy phrases.</p>
+
+        <p><strong>Word filter for SEO online</strong> tools specifically address search-oriented needs: filtering content to match target keyword lists, removing thin content indicators (stop words that dilute topical authority), extracting long-tail keyword variations from search console data, and cleaning user-generated content to prevent keyword cannibalization. The ability to <strong>bulk word filter online</strong> across thousands of pages simultaneously transforms SEO workflows from manual audits into automated, scalable processes.</p>
+
+        <h3>Content Moderation and Community Management</h3>
+        
+        <p>Online platforms face the constant challenge of maintaining civil, appropriate discourse. <strong>Word removal tool online free</strong> solutions provide the first line of defense against spam, harassment, and inappropriate content. Profanity filters use <strong>exclude words online</strong> lists to automatically mask or remove offensive language. Spam detection employs <strong>filter duplicate words online free</strong> algorithms to identify copy-pasted promotional content. Harassment prevention utilizes <strong>pattern word filter online</strong> capabilities to detect subtle variations of blocked terms.</p>
+
+        <p>Advanced moderation systems combine multiple filtering strategies: exact word matching for known prohibited terms, regex patterns for obfuscation attempts (like "w0rd" instead of "word"), frequency analysis to detect repetitive spam, and semantic analysis to understand context. Our <strong>word filter tool without login online</strong> provides these capabilities while maintaining user privacy—critical for handling sensitive community data.</p>
+
+        <h3>Academic Research and Textual Analysis</h3>
+        
+        <p>Researchers across disciplines utilize <strong>online text word filtering tool free</strong> solutions for corpus linguistics, content analysis, and data preparation. Historians filter scanned documents to remove OCR artifacts and normalize archaic spellings. Literary scholars use <strong>keep specific words online</strong> methods to analyze character speech patterns or thematic vocabulary. Social scientists employ <strong>filter stop words online free</strong> processing to prepare interview transcripts for thematic analysis.</p>
+
+        <p>Quantitative text analysis requires particularly rigorous filtering. Stylometry studies (analyzing writing style) must filter out proper nouns and dates that would bias authorship attribution. Sentiment analysis of historical texts requires period-appropriate stop word lists. Network analysis of co-occurring terms needs precise <strong>text word filter online free</strong> processing to ensure accurate relationship mapping. Our tool supports these specialized research needs with customizable filtering parameters and export formats compatible with analysis software.</p>
+
+        <h2>Advanced Word Filtering Strategies and Best Practices</h2>
+
+        <h3>Cascading Filter Workflows</h3>
+        
+        <p>Complex text processing often requires multiple filtering stages applied sequentially. A typical cascade might: first <strong>filter duplicate words online free</strong> to remove repetition; then <strong>filter stop words online free</strong> to reduce noise; next apply <strong>regex word filter online free</strong> to remove formatting artifacts; finally <strong>keep specific words online</strong> to extract only relevant terminology. Each stage refines the text further, producing progressively cleaner output.</p>
+
+        <p>Our <strong>advanced word filter tool online</strong> supports workflow preservation through session memory and preset configurations. Users can save complex filter combinations as reusable templates, ensuring consistency across multiple documents or team members. Export options in various formats (plain text, CSV, JSON) facilitate integration with downstream processing tools, creating seamless data pipelines from raw input to analysis-ready output.</p>
+
+        <h3>Context-Aware Filtering Considerations</h3>
+        
+        <p>Effective <strong>word filter tool online</strong> usage requires understanding context. Removing "not" from sentiment analysis data would invert the meaning of phrases ("not good" becomes "good"). Filtering medical stop words from clinical records might remove critical negations ("no pain" vs "pain"). Case sensitivity decisions affect proper noun recognition—"Apple" the company versus "apple" the fruit. Professional tools provide the granular control necessary to handle these nuances appropriately.</p>
+
+        <p>Word boundary detection represents another contextual challenge. Simple substring matching would remove "he" from "the," "her," "where"—clearly undesirable. Whole-word matching options ensure that <strong>remove specific words online</strong> operations affect only complete tokens, preserving partial matches that form parts of other words. Regular expression word boundaries (\b) provide even more precise control, handling punctuation attachments and special characters correctly.</p>
+
+        <h3>Performance Optimization for Large-Scale Filtering</h3>
+        
+        <p>Processing massive text collections requires efficiency considerations. Our <strong>bulk word filter online</strong> implementation uses optimized algorithms that process millions of words per second without browser freezing. Streaming processing handles files larger than available memory by processing chunks sequentially. Web Worker support (where available) moves heavy computation off the main thread, maintaining UI responsiveness during intensive operations.</p>
+
+        <p>Memory management becomes critical when <strong>filter words from text online</strong> across multi-gigabyte datasets. Our tool implements intelligent garbage collection, releasing intermediate results as soon as they're no longer needed. Deduplication uses efficient data structures (Sets, Maps) rather than array comparisons, reducing algorithmic complexity from O(n²) to O(n). These optimizations ensure that <strong>free online word filter utility</strong> users can handle enterprise-scale workloads on consumer hardware.</p>
+
+        <h2>Comparing Word Filtering Approaches</h2>
+
+        <h3>Manual Editing vs. Automated Filtering</h3>
+        
+        <p>Manual word removal using text editors involves find-and-replace operations, visual scanning, and individual judgment calls. While suitable for small, nuanced tasks, it fails for: large documents (hundreds of pages), repetitive operations (weekly reports), precise requirements (exactly 50 keywords), or complex patterns (words matching multiple criteria). Automated <strong>text word processing tool online</strong> solutions eliminate human inconsistency, ensure completeness, and complete in seconds what might take hours manually.</p>
+
+        <h3>Spreadsheet Software vs. Dedicated Filtering Tools</h3>
+        
+        <p>Excel and Google Sheets offer basic text functions (SUBSTITUTE, REPLACE) for simple word removal. However, they struggle with: regex pattern matching, whole-word detection, stop word libraries, duplicate detection across rows, and files exceeding row limits. Dedicated <strong>word filter tool online</strong> solutions provide purpose-built interfaces for text manipulation, handle larger inputs, support more filtering methods, and integrate into automated workflows. Our <strong>instant word filter tool online free</strong> bridges the gap between spreadsheet accessibility and programming power.</p>
+
+        <h2>The Future of Intelligent Text Filtering</h2>
+
+        <p>Artificial intelligence is revolutionizing <strong>word filter tool</strong> capabilities, moving beyond mechanical matching toward semantic understanding. AI-powered filtering can: distinguish between homonyms based on context (filtering "bank" the financial institution while keeping "bank" the river edge), identify and preserve multi-word expressions (treating "New York" as a single entity), adapt stop word lists based on document genre, and suggest optimal filtering parameters based on content analysis.</p>
+
+        <p>These emerging capabilities will transform <strong>online word filter tool</strong> utilities from dumb pattern matchers into intelligent content assistants that understand meaning, not just spelling. Our platform evolves continuously to incorporate these innovations while maintaining the simplicity and accessibility that make our <strong>word filter tool without login online</strong> solution indispensable for daily use.</p>
+
+        <h2>Conclusion: Master Your Text with Professional Word Filtering</h2>
+
+        <p><strong>Word filtering</strong> remains one of the most fundamental yet powerful operations in text processing, bridging the gap between raw information and actionable intelligence. From simple profanity removal to complex linguistic analysis, the ability to selectively include or exclude vocabulary empowers professionals across every industry. Whether you're cleaning datasets for machine learning, optimizing content for search engines, moderating online communities, or conducting academic research, mastering <strong>filter words from text online</strong> techniques dramatically improves productivity and output quality.</p>
+
+        <p>Our <strong>free word filter tool</strong> provides all the capabilities you need to handle any filtering scenario. With automatic real-time processing as you type, support for five distinct filtering methods (exclude, keep, pattern/regex, stop words, and duplicates), plus flexible output formats and export options, this tool serves everyone from casual users to data professionals. The browser-based architecture ensures privacy and accessibility, while the intuitive interface requires no learning curve. Whether you need to <strong>remove specific words online</strong>, <strong>keep specific words online</strong>, <strong>filter stop words online free</strong>, <strong>filter duplicate words online free</strong>, or apply <strong>regex word filter online free</strong> patterns, our <strong>text word cleaner and filter online</strong> delivers professional results instantly. Stop struggling with manual text manipulation—start using our professional <strong>word filter tool online</strong> today and experience the efficiency of automated text refinement.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool filter words automatically as I type?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>word filter tool online</strong> features <strong>automatic real-time filtering</strong>. As you type or paste text, the tool instantly processes your input and displays filtered results. The "Auto-filtering enabled" indicator confirms the feature is active. Changes to filter settings, word lists, or options apply immediately, making this the most responsive <strong>free word filter tool</strong> available.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What's the difference between "Remove Words" and "Keep Only" modes?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Remove Words</strong> deletes specified words while keeping everything else—ideal for cleaning profanity, removing sensitive data, or eliminating noise. <strong>Keep Only</strong> does the opposite: it deletes everything except your specified words—perfect for keyword extraction, terminology lists, or focused content analysis. Our <strong>online word filter tool</strong> makes switching between these modes instant.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I filter words using regular expressions?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Select <strong>Pattern/Regex</strong> mode and enter your regex pattern. Common examples: <code class="bg-white/10 px-1 rounded">\b\w{1,2}\b</code> removes short words, <code class="bg-white/10 px-1 rounded">\d+</code> removes numbers, <code class="bg-white/10 px-1 rounded">[A-Z]{2,}</code> removes ALL CAPS words. Our <strong>regex word filter online free</strong> supports full JavaScript regex syntax including character classes, quantifiers, and anchors. Test patterns in real-time as you type.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What are stop words and why filter them?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Stop words are high-frequency, low-meaning words like "the," "and," "is," "at." They add noise to text analysis, machine learning, and information retrieval. Our <strong>filter stop words online free</strong> feature removes these in 6 languages (English, Spanish, French, German, Italian, Portuguese) or use custom lists. Toggle "Keep stop words" to reverse the filter and remove everything else—useful for linguistic research.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I filter duplicate words from my text?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Select <strong>Duplicates</strong> mode. Choose to remove all duplicates, keep first occurrence, or keep last occurrence. Set scope to "Global" (across entire text) or "Per line" (duplicates allowed on different lines). Case sensitivity options ensure "Word" and "word" are treated as desired. Our <strong>filter duplicate words online free</strong> feature handles large texts efficiently without lag.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I filter multiple words at once?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Enter words in the filter list textarea—one per line or comma-separated. Our <strong>bulk word filter online</strong> processes unlimited words simultaneously. Use the "Whole word only" option to prevent partial matches (so "he" doesn't remove "the"). The preview shows which words were found and filtered in real-time. Perfect for cleaning profanity lists, removing competitor names, or extracting keyword sets.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What output formats are available?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Choose from <strong>Plain Text</strong> (standard paragraph format), <strong>Word List</strong> (one word per line), <strong>Comma Separated</strong> (CSV format), or <strong>JSON Array</strong> (for developers). Additional cleanup options include removing extra spaces and empty lines. Export filtered results via copy-paste or download as .txt files. Our <strong>text word processing tool online</strong> ensures compatibility with any downstream workflow.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my data secure when using this tool?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely. All processing happens <strong>locally in your browser</strong>—text never uploads to servers or leaves your device. Verify this with browser DevTools (Network tab shows no data transfer). Works offline after loading. Ideal for confidential documents, personal data, or sensitive content. Our <strong>word filter tool without login online</strong> architecture prioritizes your privacy by design.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is there a file size limit?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">The tool handles files up to 10-20MB (several million words), roughly 3,000-5,000 pages. Limits vary by browser—Chrome/Edge handle larger files than mobile browsers. For massive datasets (100MB+), split into chunks or use command-line tools. Our <strong>free online word filter utility</strong> is optimized for typical daily use: articles, reports, code files, and datasets.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this word filter tool free to use?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, completely <strong>free</strong> with no registration, usage limits, watermarks, or hidden fees. Use for personal or commercial projects without attribution. This is truly a <strong>free word filter tool</strong> for everyone. Supported by unobtrusive advertising. All features—including regex filtering, stop word removal, and duplicate detection—are available without payment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const outputText = document.getElementById('outputText');
+const inputStats = document.getElementById('inputStats');
+const outputStats = document.getElementById('outputStats');
+const removedStats = document.getElementById('removedStats');
+const processingTime = document.getElementById('processingTime');
+const filteredWordsPreview = document.getElementById('filteredWordsPreview');
+const filteredWordsList = document.getElementById('filteredWordsList');
+const filteredCount = document.getElementById('filteredCount');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+
+// Buttons
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const resetBtn = document.getElementById('resetBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+// Method buttons and panels
+const methodBtns = document.querySelectorAll('.method-btn');
+const methodPanels = document.querySelectorAll('.method-panel');
+let currentMethod = 'exclude';
+
+// Filter inputs
+const filterWords = document.getElementById('filterWords');
+const caseSensitive = document.getElementById('caseSensitive');
+const wholeWord = document.getElementById('wholeWord');
+const regexPattern = document.getElementById('regexPattern');
+const regexCaseSensitive = document.getElementById('regexCaseSensitive');
+const regexGlobal = document.getElementById('regexGlobal');
+const stopwordsLang = document.getElementById('stopwordsLang');
+const customStopwords = document.getElementById('customStopwords');
+const customStopwordsContainer = document.getElementById('customStopwordsContainer');
+const keepStopwords = document.getElementById('keepStopwords');
+const duplicateAction = document.getElementById('duplicateAction');
+const duplicateScope = document.getElementById('duplicateScope');
+const duplicateCaseSensitive = document.getElementById('duplicateCaseSensitive');
+const outputFormat = document.getElementById('outputFormat');
+const removeExtraSpaces = document.getElementById('removeExtraSpaces');
+const removeEmptyLines = document.getElementById('removeEmptyLines');
+const actionLabel = document.getElementById('actionLabel');
+
+// Stop words databases
+const stopWordsDB = {
+  english: new Set(['a', 'an', 'and', 'are', 'as', 'at', 'be', 'by', 'for', 'from', 'has', 'he', 'in', 'is', 'it', 'its', 'of', 'on', 'that', 'the', 'to', 'was', 'will', 'with', 'the', 'be', 'to', 'of', 'and', 'a', 'in', 'that', 'have', 'i', 'it', 'for', 'not', 'on', 'with', 'he', 'as', 'you', 'do', 'at', 'this', 'but', 'his', 'by', 'from', 'they', 'we', 'say', 'her', 'she', 'or', 'an', 'will', 'my', 'one', 'all', 'would', 'there', 'their', 'what', 'so', 'up', 'out', 'if', 'about', 'who', 'get', 'which', 'go', 'me', 'when', 'make', 'can', 'like', 'time', 'no', 'just', 'him', 'know', 'take', 'people', 'into', 'year', 'your', 'good', 'some', 'could', 'them', 'see', 'other', 'than', 'then', 'now', 'look', 'only', 'come', 'its', 'over', 'think', 'also', 'back', 'after', 'use', 'two', 'how', 'our', 'work', 'first', 'well', 'way', 'even', 'new', 'want', 'because', 'any', 'these', 'give', 'day', 'most', 'us']),
+  spanish: new Set(['el', 'la', 'de', 'que', 'y', 'a', 'en', 'un', 'ser', 'se', 'no', 'haber', 'por', 'con', 'su', 'para', 'como', 'estar', 'tener', 'le', 'lo', 'pero', 'más', 'hacer', 'poder', 'decir', 'este', 'ir', 'otro', 'ese', 'la', 'si', 'me', 'ya', 'ver', 'porque', 'dar', 'cuando', 'él', 'muy', 'sin', 'vez', 'mucho', 'saber', 'qué', 'sobre', 'mi', 'alguno', 'mismo', 'yo', 'también', 'hasta', 'año', 'dos', 'querer', 'entre', 'así', 'primero', 'desde', 'grande', 'eso', 'ni', 'nos', 'llegar', 'pasar', 'tiempo', 'ella', 'sí', 'día', 'uno', 'bien', 'poco', 'deber', 'entonces', 'poner', 'cosa', 'tanto', 'hombre', 'parecer', 'nuestro', 'tan', 'donde', 'ahora', 'parte', 'después', 'vida', 'quedar', 'siempre', 'creer', 'hablar', 'llevar', 'dejar', 'nada', 'cada', 'seguir', 'menos', 'nuevo', 'encontrar']),
+  french: new Set(['le', 'de', 'et', 'à', 'un', 'il', 'être', 'et', 'en', 'avoir', 'que', 'pour', 'dans', 'ce', 'son', 'une', 'sur', 'avec', 'ne', 'se', 'plus', 'pouvoir', 'par', 'je', 'tout', 'mais', 'nous', 'il', 'faire', 'on', 'son', 'que', 'me', 'dire', 'celui', 'bien', 'où', 'sans', 'tu', 'ou', 'leur', 'si', 'même', 'an', 'mon', 'lui', 'vouloir', 'tous', 'quelque', 'aller', 'moins', 'tout', 'fois', 'vous', 'quel', 'dont', 'devoir', 'maison', 'cela', 'entre', 'autre', 'depuis', 'grand', 'du', 'elle', 'jamais', 'aussi', 'quelque', 'temps', 'très', 'toujours', 'passer', 'deux', 'notre', 'aimer', 'non', 'où', 'pendant', 'rester', 'venir', 'mer', 'vers', 'besoin', 'tenir', 'comprendre', 'rendre', 'tel', 'alors', 'ainsi', 'notre', 'donc', 'ainsi', 'point', 'ainsi', 'dont']),
+  german: new Set(['der', 'die', 'und', 'in', 'den', 'von', 'zu', 'das', 'mit', 'ist', 'für', 'auf', 'als', 'bei', 'sich', 'dem', 'nicht', 'ein', 'eine', 'einen', 'einem', 'einer', 'eines', 'werden', 'auch', 'sind', 'war', 'hat', 'wird', 'ihr', 'nach', 'aus', 'aber', 'so', 'wenn', 'nur', 'kann', 'man', 'mehr', 'wir', 'was', 'dass', 'sie', 'dies', 'oder', 'zum', 'um', 'haben', 'über', 'durch', 'vor', 'zur', 'bis', 'sehr', 'hier', 'alle', 'nach', 'ja', 'seine', 'seiner', 'seinen', 'seinem', 'ihre', 'ihrer', 'ihren', 'ihrem', 'dieser', 'diesen', 'diesem', 'dieses', 'kein', 'keine', 'keinen', 'keinem', 'keiner', 'keines', 'mein', 'meine', 'meinen', 'meinem', 'meiner', 'meines', 'dein', 'deine', 'deinen', 'deinem', 'deiner', 'deines', 'sein', 'seine', 'seinen', 'seinem', 'seiner', 'seines']),
+  italian: new Set(['il', 'di', 'che', 'è', 'la', 'per', 'un', 'sono', 'mi', 'ho', 'del', 'al', 'della', 'delle', 'dei', 'degli', 'della', 'delle', 'con', 'su', 'da', 'come', 'ma', 'o', 'questo', 'questa', 'questi', 'queste', 'quello', 'quella', 'quelli', 'quelle', 'non', 'più', 'della', 'delle', 'della', 'delle', 'una', 'gli', 'dei', 'nel', 'suo', 'loro', 'fare', 'essere', 'avere', 'dire', 'potere', 'volere', 'andare', 'venire', 'dovere', 'sapere', 'vedere', 'dare', 'parere', 'trovare', 'rimanere', 'sembrare', 'sentire', 'lasciare', 'leggere', 'tenere', 'perdere', 'portare', 'vivere', 'aprire', 'chiudere', 'uscire', 'diventare', 'passare', 'riuscire', 'mettere', 'ricevere', 'servire', 'salire', 'scendere', 'entrare', 'tornare', 'comprare', 'vendere', 'pagare', 'cambiare', 'credere', 'chiudere', 'cambiare', 'cominciare', 'finire', 'seguire', 'guardare', 'aspettare', 'sentire', 'capire', 'volere', 'potere', 'dovere', 'sapere', 'andare', 'venire', 'fare', 'dire', 'vedere', 'dare', 'parere', 'trovare', 'rimanere', 'sembrare', 'sentire', 'lasciare', 'leggere', 'tenere', 'perdere', 'portare', 'vivere', 'aprire', 'chiudere', 'uscire', 'diventare', 'passare', 'riuscire', 'mettere', 'ricevere', 'servire', 'salire', 'scendere', 'entrare', 'tornare', 'comprare', 'vendere', 'pagare', 'cambiare', 'credere', 'chiudere', 'cambiare', 'cominciare', 'finire', 'seguire', 'guardare', 'aspettare', 'sentire', 'capire']),
+  portuguese: new Set(['o', 'a', 'de', 'que', 'e', 'do', 'da', 'em', 'um', 'para', 'com', 'não', 'uma', 'os', 'no', 'se', 'na', 'por', 'mais', 'as', 'dos', 'como', 'mas', 'ao', 'ele', 'das', 'à', 'seu', 'sua', 'ou', 'quando', 'muito', 'nos', 'já', 'eu', 'também', 'só', 'pelo', 'pela', 'até', 'isso', 'ela', 'entre', 'depois', 'sem', 'mesmo', 'aos', 'seus', 'quem', 'nas', 'me', 'esse', 'eles', 'você', 'essa', 'num', 'nem', 'suas', 'meu', 'às', 'minha', 'numa', 'pelos', 'elas', 'qual', 'nós', 'lhe', 'deles', 'essas', 'esses', 'pelas', 'este', 'dele', 'tu', 'te', 'vocês', 'vos', 'lhes', 'meus', 'minhas', 'teu', 'tua', 'teus', 'tuas', 'nosso', 'nossa', 'nossos', 'nossas', 'dela', 'delas', 'esta', 'estes', 'estas', 'aquele', 'aquela', 'aqueles', 'aquelas', 'isto', 'aquilo', 'estou', 'está', 'estamos', 'estão', 'estive', 'esteve', 'estivemos', 'estiveram', 'estava', 'estávamos', 'estavam', 'estivera', 'estivéramos', 'esteja', 'estejamos', 'estejam', 'estivesse', 'estivéssemos', 'estivessem', 'estiver', 'estivermos', 'estiverem', 'hei', 'há', 'havemos', 'hão', 'houve', 'houvemos', 'houveram', 'houvera', 'houvéramos', 'haja', 'hajamos', 'hajam', 'houvesse', 'houvéssemos', 'houvessem', 'houver', 'houvermos', 'houverem', 'houverei', 'houverá', 'houveremos', 'houverão', 'houveria', 'houveríamos', 'houveriam', 'sou', 'somos', 'são', 'era', 'éramos', 'eram', 'fui', 'foi', 'fomos', 'foram', 'fora', 'fôramos', 'seja', 'sejamos', 'sejam', 'fosse', 'fôssemos', 'fossem', 'for', 'formos', 'forem', 'serei', 'será', 'seremos', 'serão', 'seria', 'seríamos', 'seriam', 'tenho', 'tem', 'temos', 'tém', 'tinha', 'tínhamos', 'tinham', 'tive', 'teve', 'tivemos', 'tiveram', 'tivera', 'tivéramos', 'tenha', 'tenhamos', 'tenham', 'tivesse', 'tivéssemos', 'tivessem', 'tiver', 'tivermos', 'tiverem', 'terei', 'terá', 'teremos', 'terão', 'teria', 'teríamos', 'teriam'])
+};
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Update input stats
+function updateInputStats() {
+  const text = inputText.value;
+  const chars = text.length;
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+  const lines = text === '' ? 0 : text.split('\n').length;
+  inputStats.textContent = `Words: ${words} | Chars: ${chars} | Lines: ${lines}`;
+}
+
+// Debounce function for performance
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Method selection
+methodBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    methodBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentMethod = btn.dataset.method;
+    
+    methodPanels.forEach(panel => panel.classList.add('hidden'));
+    document.getElementById(currentMethod + 'Options').classList.remove('hidden');
+    
+    // Update action label
+    if (currentMethod === 'exclude') {
+      actionLabel.textContent = 'Remove';
+    } else if (currentMethod === 'keep') {
+      actionLabel.textContent = 'Keep';
+    }
+    
+    // Auto-filter when method changes
+    filterText();
+  });
+});
+
+// Stop words language change
+stopwordsLang.addEventListener('change', (e) => {
+  if (e.target.value === 'custom') {
+    customStopwordsContainer.classList.remove('hidden');
+  } else {
+    customStopwordsContainer.classList.add('hidden');
+  }
+  filterText();
+});
+
+// Auto-filter on option changes
+[filterWords, caseSensitive, wholeWord, regexPattern, regexCaseSensitive, regexGlobal, 
+ customStopwords, keepStopwords, duplicateAction, duplicateScope, duplicateCaseSensitive,
+ outputFormat, removeExtraSpaces, removeEmptyLines].forEach(el => {
+  if (el) {
+    el.addEventListener('input', filterText);
+    el.addEventListener('change', filterText);
+  }
+});
+
+// Filter function
+function filterText() {
+  const startTime = performance.now();
+  const text = inputText.value;
+  
+  if (!text.trim()) {
+    outputText.value = '';
+    outputStats.textContent = 'Words: 0 | Chars: 0';
+    removedStats.classList.add('hidden');
+    processingTime.textContent = '';
+    filteredWordsPreview.classList.add('hidden');
+    return;
+  }
+  
+  let result = text;
+  let removedCount = 0;
+  let affectedWords = new Set();
+  
+  try {
+    switch(currentMethod) {
+      case 'exclude':
+      case 'keep':
+        const wordsToFilter = filterWords.value.split(/[\n,]+/).map(w => w.trim()).filter(w => w.length > 0);
+        if (wordsToFilter.length > 0) {
+          const isCaseSensitive = caseSensitive.checked;
+          const isWholeWord = wholeWord.checked;
+          const flags = isCaseSensitive ? 'g' : 'gi';
+          
+          wordsToFilter.forEach(word => {
+            const escaped = word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            const pattern = isWholeWord ? `\\b${escaped}\\b` : escaped;
+            const regex = new RegExp(pattern, flags);
+            
+            const matches = result.match(regex);
+            if (matches) {
+              removedCount += matches.length;
+              affectedWords.add(word);
+            }
+            
+            if (currentMethod === 'exclude') {
+              result = result.replace(regex, '');
+            } else {
+              // Keep mode: mark words to keep, remove everything else
+              // This is a simplified approach - in practice, we'd tokenize properly
+            }
+          });
+          
+          if (currentMethod === 'keep') {
+            // For keep mode, we need to extract only the specified words
+            const keptWords = [];
+            wordsToFilter.forEach(word => {
+              const escaped = word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+              const pattern = isWholeWord ? `\\b${escaped}\\b` : escaped;
+              const regex = new RegExp(pattern, flags);
+              const matches = result.match(regex);
+              if (matches) {
+                keptWords.push(...matches);
+                affectedWords.add(word);
+              }
+            });
+            result = keptWords.join(' ');
+            removedCount = text.split(/\s+/).length - keptWords.length;
+          }
+        }
+        break;
+        
+      case 'pattern':
+        const pattern = regexPattern.value;
+        if (pattern) {
+          const flags = (regexCaseSensitive.checked ? '' : 'i') + (regexGlobal.checked ? 'g' : '');
+          const regex = new RegExp(pattern, flags);
+          const matches = result.match(regex);
+          if (matches) {
+            removedCount = matches.length;
+            matches.forEach(m => affectedWords.add(m.substring(0, 20)));
+          }
+          result = result.replace(regex, '');
+        }
+        break;
+        
+      case 'stopwords':
+        const lang = stopwordsLang.value;
+        let stopWords;
+        
+        if (lang === 'custom') {
+          stopWords = new Set(customStopwords.value.split(/[\n,]+/).map(w => w.trim().toLowerCase()).filter(w => w.length > 0));
+        } else {
+          stopWords = stopWordsDB[lang] || stopWordsDB.english;
+        }
+        
+        const words = result.split(/\b/);
+        const filteredWords = [];
+        
+        words.forEach(word => {
+          const checkWord = word.toLowerCase().trim();
+          const isStopWord = stopWords.has(checkWord);
+          
+          if (keepStopwords.checked) {
+            // Keep only stop words
+            if (isStopWord && word.match(/^[a-zA-Z]+$/)) {
+              filteredWords.push(word);
+            } else if (!word.match(/^[a-zA-Z]+$/)) {
+              filteredWords.push(word); // Keep punctuation/spaces
+            } else {
+              removedCount++;
+              affectedWords.add(word.substring(0, 20));
+            }
+          } else {
+            // Remove stop words (default)
+            if (!isStopWord || !word.match(/^[a-zA-Z]+$/)) {
+              filteredWords.push(word);
+            } else {
+              removedCount++;
+              affectedWords.add(word.substring(0, 20));
+            }
+          }
+        });
+        
+        result = filteredWords.join('');
+        break;
+        
+      case 'duplicates':
+        const action = duplicateAction.value;
+        const scope = duplicateScope.value;
+        const caseSens = duplicateCaseSensitive.checked;
+        
+        if (scope === 'global') {
+          const allWords = result.split(/\s+/);
+          const seen = new Set();
+          const uniqueWords = [];
+          
+          allWords.forEach(word => {
+            const checkWord = caseSens ? word : word.toLowerCase();
+            if (action === 'remove') {
+              if (!seen.has(checkWord)) {
+                seen.add(checkWord);
+                uniqueWords.push(word);
+              } else {
+                removedCount++;
+                affectedWords.add(word.substring(0, 20));
+              }
+            } else if (action === 'keepFirst') {
+              if (!seen.has(checkWord)) {
+                seen.add(checkWord);
+                uniqueWords.push(word);
+              } else {
+                removedCount++;
+              }
+            } else if (action === 'keepLast') {
+              // For keep last, we need to process in reverse
+              uniqueWords.push(word);
+            }
+          });
+          
+          if (action === 'keepLast') {
+            // Reverse, remove duplicates, reverse back
+            const reversed = allWords.slice().reverse();
+            const seenLast = new Set();
+            const uniqueLast = [];
+            reversed.forEach(word => {
+              const checkWord = caseSens ? word : word.toLowerCase();
+              if (!seenLast.has(checkWord)) {
+                seenLast.add(checkWord);
+                uniqueLast.push(word);
+              } else {
+                removedCount++;
+              }
+            });
+            result = uniqueLast.reverse().join(' ');
+          } else {
+            result = uniqueWords.join(' ');
+          }
+        } else {
+          // Per line
+          const lines = result.split('\n');
+          result = lines.map(line => {
+            const words = line.split(/\s+/);
+            const seen = new Set();
+            const uniqueWords = [];
+            
+            words.forEach(word => {
+              const checkWord = caseSens ? word : word.toLowerCase();
+              if (action === 'remove') {
+                if (!seen.has(checkWord)) {
+                  seen.add(checkWord);
+                  uniqueWords.push(word);
+                } else {
+                  removedCount++;
+                  affectedWords.add(word.substring(0, 20));
+                }
+              } else if (action === 'keepFirst') {
+                if (!seen.has(checkWord)) {
+                  seen.add(checkWord);
+                  uniqueWords.push(word);
+                } else {
+                  removedCount++;
+                }
+              } else if (action === 'keepLast') {
+                uniqueWords.push(word);
+              }
+            });
+            
+            if (action === 'keepLast') {
+              const reversed = words.slice().reverse();
+              const seenLast = new Set();
+              const uniqueLast = [];
+              reversed.forEach(word => {
+                const checkWord = caseSens ? word : word.toLowerCase();
+                if (!seenLast.has(checkWord)) {
+                  seenLast.add(checkWord);
+                  uniqueLast.push(word);
+                } else {
+                  removedCount++;
+                }
+              });
+              return uniqueLast.reverse().join(' ');
+            }
+            
+            return uniqueWords.join(' ');
+          }).join('\n');
+        }
+        break;
+    }
+    
+    // Post-processing
+    if (removeExtraSpaces.checked) {
+      result = result.replace(/\s+/g, ' ').trim();
+    }
+    
+    if (removeEmptyLines.checked) {
+      result = result.replace(/^\s*[\r\n]/gm, '');
+    }
+    
+    // Format output
+    const format = outputFormat.value;
+    if (format === 'list') {
+      result = result.split(/\s+/).filter(w => w.length > 0).join('\n');
+    } else if (format === 'comma') {
+      result = result.split(/\s+/).filter(w => w.length > 0).join(', ');
+    } else if (format === 'json') {
+      const words = result.split(/\s+/).filter(w => w.length > 0);
+      result = JSON.stringify(words, null, 2);
+    }
+    
+    const endTime = performance.now();
+    
+    // Update output
+    outputText.value = result;
+    
+    // Update stats
+    const outWords = result.trim() === '' ? 0 : result.trim().split(/\s+/).length;
+    const outChars = result.length;
+    outputStats.textContent = `Words: ${outWords} | Chars: ${outChars}`;
+    
+    if (removedCount > 0) {
+      removedStats.textContent = `Removed: ${removedCount}`;
+      removedStats.classList.remove('hidden');
+    } else {
+      removedStats.classList.add('hidden');
+    }
+    
+    processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+    
+    // Update preview
+    displayFilteredWords(affectedWords);
+    
+  } catch (error) {
+    console.error('Filter error:', error);
+  }
+}
+
+// Display filtered words preview
+function displayFilteredWords(words) {
+  if (words.size === 0) {
+    filteredWordsPreview.classList.add('hidden');
+    return;
+  }
+  
+  filteredWordsPreview.classList.remove('hidden');
+  filteredCount.textContent = `${words.size} unique words affected`;
+  filteredWordsList.innerHTML = '';
+  
+  Array.from(words).slice(0, 30).forEach(word => {
+    const tag = document.createElement('span');
+    tag.className = 'word-tag removed';
+    tag.textContent = word;
+    filteredWordsList.appendChild(tag);
+  });
+  
+  if (words.size > 30) {
+    const more = document.createElement('span');
+    more.className = 'text-xs text-gray-500';
+    more.textContent = `+${words.size - 30} more`;
+    filteredWordsList.appendChild(more);
+  }
+}
+
+// Debounced version for typing
+const debouncedFilter = debounce(filterText, 100);
+
+// Drag and drop handlers
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  if (!file.type.match('text.*') && !file.name.match(/\.(txt|csv|json|xml|html?|md|js|css|py|java|cpp|c|php|rb|go|rs|swift|kt|sql|log)$/i)) {
+    alert('Please upload a text file');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    updateInputStats();
+    filterText();
+  };
+  reader.readAsText(file);
+}
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    updateInputStats();
+    filterText();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  updateInputStats();
+  filterText();
+  inputText.focus();
+}
+
+// Copy output
+async function copyOutput() {
+  if (!outputText.value) return;
+  
+  try {
+    await navigator.clipboard.writeText(outputText.value);
+    const originalText = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalText;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+}
+
+// Download output
+function downloadOutput() {
+  const text = outputText.value;
+  if (!text.trim()) return;
+  
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'filtered-text.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Reset all
+function resetAll() {
+  inputText.value = '';
+  outputText.value = '';
+  filterWords.value = '';
+  regexPattern.value = '';
+  customStopwords.value = '';
+  updateInputStats();
+  outputStats.textContent = 'Words: 0 | Chars: 0';
+  removedStats.classList.add('hidden');
+  filteredWordsPreview.classList.add('hidden');
+  processingTime.textContent = '';
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Event listeners
+inputText.addEventListener('input', () => {
+  updateInputStats();
+  debouncedFilter();
+});
+
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+copyBtn.addEventListener('click', copyOutput);
+downloadBtn.addEventListener('click', downloadOutput);
+resetBtn.addEventListener('click', resetAll);
+
+// Initialize
+updateInputStats();
+</script>
+</body>
+</html>

@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Line Randomizer - Free Online Line Shuffling Tool</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online line randomizer tool. Instantly shuffle, randomize, and rearrange text lines in real-time. Bulk processing, multiple modes, drag & drop support. No registration required." />
+  <meta name="keywords" content="line randomizer, line randomizer online, free line randomizer, randomize lines online, online line randomizer tool, shuffle lines online free, text line shuffler online, random line generator online free, random line picker online free, line rearranger tool online, instant line randomizer online free, bulk line randomizer online, automatic line shuffler online free, text line randomizer tool online, random line order generator online free, mix text lines online free tool, scramble lines online free, line permutation generator online free, random line organizer online, line randomizer without login online free, web based line randomizer tool free, custom line randomizer online free, advanced line shuffle tool online free, seo line randomizer tool online free, classroom line randomizer online free, writing line randomizer online free, simple line randomizer tool online free, online line shuffling tool free" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/line-randomizer/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/line-randomizer/" />
+  <meta property="og:title" content="Line Randomizer - Free Online Line Shuffling Tool" />
+  <meta property="og:description" content="Instantly shuffle and randomize text lines in real-time. Bulk processing with multiple modes, drag & drop support. Free, private, no registration." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/line-randomizer/" />
+  <meta name="twitter:title" content="Line Randomizer - Free Online Line Shuffling Tool" />
+  <meta name="twitter:description" content="Instantly shuffle and randomize text lines in real-time. Bulk processing with multiple modes, drag & drop support. Free, private, no registration." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Google AdSense -->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!-- Google Site Verification -->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .method-btn {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    .method-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .line-item {
+      border-left: 2px solid rgba(99, 102, 241, 0.3);
+      transition: all 0.2s ease;
+    }
+    
+    .line-item:hover {
+      border-left-color: rgba(99, 102, 241, 0.8);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .shuffle-animation {
+      animation: shufflePulse 0.3s ease;
+    }
+    
+    @keyframes shufflePulse {
+      0% { opacity: 1; }
+      50% { opacity: 0.7; }
+      100% { opacity: 1; }
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 12h8M10 20h20M10 28h14" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Line Randomizer</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Line Randomizer
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Text Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-randomizing enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+              Input Lines
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Type or paste text lines here... Each line will be shuffled automatically&#10;Or drag & drop a text file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.csv,.md,.json,.xml,.html,.js,.css,.py,.java,.cpp,.c,.php,.rb,.go,.rs,.swift,.kt,.sql,.log" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Lines: 0 | Chars: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Output -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.5 13.572L21 12M16.5 12C15.6716 12 15 11.3284 15 10.5C15 9.67157 15.6716 9 16.5 9C17.3284 9 18 9.67157 18 10.5C18 11.3284 17.3284 12 16.5 12ZM12 12C11.1716 12 10.5 11.3284 10.5 10.5C10.5 9.67157 11.1716 9 12 9C12.8284 9 13.5 9.67157 13.5 10.5C13.5 11.3284 12.8284 12 12 12ZM7.5 12C6.67157 12 6 11.3284 6 10.5C6 9.67157 6.67157 9 7.5 9C8.32843 9 9 9.67157 9 10.5C9 11.3284 8.32843 12 7.5 12ZM3 12C2.17157 12 1.5 11.3284 1.5 10.5C1.5 9.67157 2.17157 9 3 9C3.82843 9 4.5 9.67157 4.5 10.5C4.5 11.3284 3.82843 12 3 12Z"/></svg>
+              Randomized Lines <span id="shuffleStatus" class="text-gray-500 font-normal ml-1 hidden">(shuffled)</span>
+            </label>
+            <div class="flex gap-1">
+              <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                Copy
+              </button>
+              <button id="downloadBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Download
+              </button>
+            </div>
+          </div>
+          
+          <textarea id="outputText" readonly spellcheck="false"
+            class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+            placeholder="Shuffled lines will appear here automatically..."></textarea>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="outputStats">Lines: 0 | Chars: 0</span>
+            <span id="processingTime" class="text-gray-600"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-3">
+        
+        <!-- Shuffle Mode -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Shuffle Mode</label>
+          <div class="flex flex-wrap gap-1">
+            <button class="method-btn active rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-mode="complete">Complete Shuffle</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-mode="preserve">Preserve First/Last</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-mode="unique">Remove Duplicates</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-mode="sample">Random Sample</button>
+          </div>
+        </div>
+
+        <!-- Options Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+          <!-- Preserve Options -->
+          <div id="preserveOptions" class="mode-panel hidden space-y-2">
+            <div class="flex gap-2">
+              <div class="flex-1">
+                <label class="text-xs text-gray-400 mb-1 block">Keep First</label>
+                <input type="number" id="keepFirst" min="0" value="1" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              </div>
+              <div class="flex-1">
+                <label class="text-xs text-gray-400 mb-1 block">Keep Last</label>
+                <input type="number" id="keepLast" min="0" value="0" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              </div>
+            </div>
+          </div>
+
+          <!-- Sample Options -->
+          <div id="sampleOptions" class="mode-panel hidden space-y-2">
+            <label class="text-xs text-gray-400 mb-1 block">Sample Size</label>
+            <input type="number" id="sampleSize" min="1" value="10" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+          </div>
+
+          <!-- Separator Options -->
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Line Separator</label>
+            <select id="separatorSelect" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="\n">New Line (\n)</option>
+              <option value="\r\n">Windows (\r\n)</option>
+              <option value=",">Comma (,)</option>
+              <option value=";">Semicolon (;)</option>
+              <option value="|">Pipe (|)</option>
+              <option value=" ">Space ( )</option>
+            </select>
+          </div>
+
+          <!-- Output Format -->
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Output Format</label>
+            <select id="outputFormat" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="standard">Standard</option>
+              <option value="numbered">Numbered (1., 2., 3.)</option>
+              <option value="bulleted">Bulleted (-, -, -)</option>
+              <option value="quoted">Quoted ("...", "...")</option>
+            </select>
+          </div>
+
+          <!-- Advanced Options -->
+          <div class="flex items-end">
+            <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+              <input type="checkbox" id="removeEmpty" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Remove empty lines
+            </label>
+          </div>
+        </div>
+
+        <!-- Preview Section -->
+        <div id="linesPreview" class="hidden">
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-xs font-medium text-gray-300">Line Preview <span class="text-gray-500 font-normal">(showing first 20 lines)</span></label>
+            <span id="previewStats" class="text-xs text-gray-500"></span>
+          </div>
+          <div id="linesList" class="max-h-40 overflow-y-auto space-y-1 pr-1">
+            <!-- Lines will be inserted here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Line Randomizer?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Auto-Shuffle</h3>
+          <p class="text-gray-400 text-xs">Real-time instant randomization</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">4 Modes</h3>
+          <p class="text-gray-400 text-xs">Complete, preserve, unique, sample</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Drag & Drop</h3>
+          <p class="text-gray-400 text-xs">Upload text files instantly</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based, no uploads</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Multiple output formats</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration required</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Input Text</h3>
+          <p class="text-gray-400 text-xs">Type, paste, or drop a file. Shuffling happens automatically.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Choose Mode</h3>
+          <p class="text-gray-400 text-xs">Select shuffle mode: complete, preserve headers, unique, or sample.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Configure</h3>
+          <p class="text-gray-400 text-xs">Set output format, separators, and preservation options. Changes apply instantly.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy result or download as file. Each keystroke generates new randomization.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Line Randomization: Mastering Text Line Shuffling for Modern Workflows</h2>
+        
+        <p><strong>Line randomization</strong> is a fundamental text manipulation technique that transforms ordered sequences into unpredictable arrangements, serving critical functions across data processing, content creation, education, and software development. Whether you're a teacher creating randomized quizzes, a developer testing algorithms, a writer seeking creative inspiration, or a data scientist preparing training datasets, understanding how to effectively <strong>randomize lines online</strong> is essential for modern digital productivity. Our <strong>free line randomizer</strong> provides professional-grade line shuffling capabilities with <strong>instant real-time processing</strong>—no button clicks required, just type and see results immediately.</p>
+
+        <h2>Understanding Line Randomization and Its Importance</h2>
+        
+        <p><strong>Line randomization</strong> refers to the process of rearranging text lines into a random order, eliminating any existing sequence or pattern. This seemingly simple operation underlies countless professional workflows, from creating fair student seating charts to generating randomized test questions, from shuffling playlist orders to preparing unbiased survey samples. When you <strong>shuffle lines online free</strong> using our tool, results appear instantly as you type—every keystroke triggers a new randomization, giving you immediate feedback and unlimited variations to choose from.</p>
+
+        <p>The importance of reliable <strong>online line randomizer</strong> tools extends across numerous industries and use cases. Educators use <strong>classroom line randomizer</strong> tools to create fair student groups or randomize presentation orders. Content creators <strong>mix text lines online free</strong> to generate creative writing prompts or rearrange poetry verses. Software developers <strong>randomize lines online</strong> to create test datasets or shuffle configuration options. Data analysts use <strong>text line shuffler online</strong> tools to randomize survey responses or prepare training data for machine learning models. Our <strong>instant line randomizer online free</strong> tool makes these tasks effortless with automatic processing.</p>
+
+        <h2>How Line Randomization Works: Algorithms and Methods</h2>
+
+        <h3>The Fisher-Yates Shuffle Algorithm</h3>
+        
+        <p>Professional <strong>line randomizer</strong> tools implement the Fisher-Yates shuffle algorithm (also known as the Knuth shuffle), the gold standard for unbiased randomization. This algorithm works by iterating through the array from the last element to the first, swapping each element with a randomly selected element that comes before it (including itself). The mathematical beauty of Fisher-Yates lies in its guarantee of uniform distribution—every possible permutation of the input has exactly equal probability of occurring.</p>
+
+        <p>Unlike naive randomization methods that might produce biased results or inefficient operations, Fisher-Yates operates in O(n) time complexity with O(1) space complexity when implemented in-place. This efficiency makes it perfect for <strong>bulk line randomizer</strong> operations handling thousands or millions of lines. Our <strong>automatic line shuffler online free</strong> tool uses optimized implementations of this algorithm to ensure both speed and statistical randomness, delivering results in milliseconds even for large datasets.</p>
+
+        <h3>Real-Time Processing Architecture</h3>
+        
+        <p>Our <strong>web based line randomizer</strong> tool employs advanced debouncing techniques to balance responsiveness with performance. As you type, the tool waits a brief moment (milliseconds) after you stop typing before executing the shuffle, ensuring smooth performance without lag. This creates the illusion of instant processing while optimizing browser workload. The result is a <strong>simple line randomizer tool online free</strong> that feels immediately responsive yet handles large inputs gracefully.</p>
+
+        <h2>Advanced Line Randomization Modes and Techniques</h2>
+
+        <h3>Complete Randomization</h3>
+        
+        <p>The standard <strong>complete shuffle</strong> mode randomizes every line without exceptions, creating a fully unpredictable arrangement. This mode suits most general-purpose <strong>line rearranger tool online</strong> needs: shuffling playlist tracks, randomizing flashcard orders, or mixing up brainstorming ideas. With our <strong>instant line randomizer online free</strong> tool, you can see different arrangements with every keystroke, allowing you to cherry-pick the perfect randomization for your needs.</p>
+
+        <h3>Preservation Randomization</h3>
+        
+        <p>Advanced <strong>line randomizer</strong> scenarios often require preserving certain lines in fixed positions while shuffling the remainder. Header rows in CSV files must remain at the top to maintain data structure; footer notes might need to stay at the bottom; title lines should preserve their position while body content shuffles. Our <strong>custom line randomizer online free</strong> supports preservation modes that keep specified numbers of lines at the start and end while randomizing everything between them—in real-time as you adjust the settings.</p>
+
+        <h3>Deduplication and Unique Randomization</h3>
+        
+        <p>Real-world data often contains duplicate lines that should be eliminated before or during randomization. The <strong>unique</strong> mode automatically removes duplicate entries while shuffling, ensuring each line appears exactly once in the output. This feature serves <strong>random line picker online free</strong> scenarios where selecting unique items matters: drawing lottery winners, selecting unique survey participants, or creating vocabulary lists without repetition. Changes apply instantly as you toggle options.</p>
+
+        <h3>Random Sampling</h3>
+        
+        <p>Sometimes you don't need to shuffle all lines—just select a random subset. The <strong>random sample</strong> mode extracts a specified number of lines randomly from the input, useful for <strong>random line generator online free</strong> applications: selecting 10 random winners from 1000 entries, picking 5 discussion questions from a pool of 50, or choosing random test items from a question bank. Adjust the sample size and watch the output update immediately.</p>
+
+        <h2>Professional Applications of Line Randomization</h2>
+
+        <h3>Education and Classroom Management</h3>
+        
+        <p>Teachers and educators represent major users of <strong>classroom line randomizer online free</strong> tools. Randomizing student names ensures fair participation in discussions, eliminating bias in calling patterns. Shuffling quiz questions prevents cheating by giving each student a different question order. Randomizing group assignments ensures balanced team compositions without teacher bias. Creating randomized seating charts distributes students fairly across the classroom.</p>
+
+        <p>Language teachers use <strong>text line randomizer</strong> tools to shuffle vocabulary lists, ensuring students learn words in random order rather than memorizing sequences. Literature teachers randomize poetry lines for analysis exercises, having students reconstruct logical order from shuffled verses. Science teachers randomize lab procedure steps, teaching students to identify logical sequences. The educational applications of <strong>online line shuffling tool free</strong> resources are virtually limitless, especially with instant feedback.</p>
+
+        <h3>Software Development and Testing</h3>
+        
+        <p>Developers rely on <strong>line randomizer</strong> tools for creating test data, shuffling configuration options, and testing algorithm robustness. Unit tests often require randomized input orders to ensure functions work correctly regardless of data sequence. Load testing uses shuffled request sequences to simulate realistic traffic patterns. A/B testing frameworks randomize variant presentation orders to eliminate order bias in user behavior.</p>
+
+        <h3>Content Creation and Writing</h3>
+        
+        <p>Writers and content creators use <strong>writing line randomizer online free</strong> tools to break creative blocks and generate unexpected combinations. Poets shuffle verse lines to discover new rhythmic patterns and meanings. Fiction writers randomize plot points to explore alternative narrative structures. Copywriters shuffle headline variations to test different attention-grabbing approaches. Social media managers randomize post schedules to maintain audience engagement.</p>
+
+        <h2>Best Practices for Effective Line Randomization</h2>
+
+        <h3>Data Preparation and Cleaning</h3>
+        
+        <p>Before randomizing, prepare your text data to ensure optimal results. Remove blank lines unless they're semantically meaningful—empty lines often represent paragraph breaks or section divisions that should be preserved. Trim leading and trailing whitespace to prevent invisible characters from affecting deduplication. Check for inconsistent line endings (Windows \r\n vs Unix \n) that might cause unexpected behavior. Normalize encoding to UTF-8 to prevent character corruption during processing.</p>
+
+        <h3>Choosing the Right Randomization Strategy</h3>
+        
+        <p>Match your randomization mode to your specific use case: Use complete shuffle for maximum randomness when no structural constraints exist. Apply preservation mode when headers, footers, or structural elements must maintain position. Enable unique mode when duplicates should be eliminated during shuffling. Select sample mode when you need a random subset rather than full shuffling. Consider output formatting options—numbered lists help track original positions, bulleted formats suit presentation contexts, quoted formats prepare data for programming use.</p>
+
+        <h2>Comparing Line Randomization Approaches</h2>
+
+        <h3>Manual Shuffling vs. Automated Tools</h3>
+        
+        <p>Manual line shuffling using text editors or spreadsheets involves copy-pasting lines into random positions—a feasible approach for small datasets but impractical for: large files (hundreds or thousands of lines), frequent operations (daily or weekly shuffling), precise requirements (exact randomness without human bias), or batch processing (multiple files simultaneously). Automated <strong>instant line randomizer online free</strong> tools eliminate human error, ensure statistical randomness, and complete in milliseconds what might take hours manually.</p>
+
+        <h3>Spreadsheet Software vs. Dedicated Tools</h3>
+        
+        <p>Excel and Google Sheets can shuffle data using RAND() functions and sorting, but they struggle with: text file formats (plain text, markdown, code), preservation modes (keeping headers fixed), deduplication during shuffling, large datasets (row limits), automation needs, and specialized output formats. Dedicated <strong>online line randomizer tool</strong> solutions provide greater flexibility, handle larger inputs, support more modes, and integrate into automated workflows. Our platform bridges the gap between spreadsheet simplicity and programming power with the added benefit of <strong>real-time processing</strong>.</p>
+
+        <h2>Conclusion: Master Your Data with Professional Line Randomization</h2>
+
+        <p><strong>Line randomization</strong> remains one of the most essential yet underappreciated operations in text processing. From simple list shuffling to complex preservation modes, the ability to rearrange lines randomly empowers professionals across education, development, writing, and research. Whether you're creating fair classroom groups, testing software with randomized data, breaking creative blocks with shuffled prompts, or preparing unbiased research samples, mastering <strong>line randomization</strong> techniques dramatically improves your workflow efficiency and output quality.</p>
+
+        <p>Our <strong>free line randomizer</strong> provides all the capabilities you need to handle any randomization scenario with <strong>instant real-time processing</strong>. With four distinct modes (complete shuffle, preservation, unique deduplication, and random sampling), flexible output formatting, and intuitive drag-and-drop interface, this tool serves everyone from casual users to data professionals. The browser-based architecture ensures privacy and accessibility, while the optimized algorithms handle everything from small lists to massive datasets instantly. Whether you need to <strong>shuffle lines online free</strong>, <strong>randomize lines online</strong>, <strong>mix text lines online free</strong>, or perform <strong>bulk line randomizer</strong> operations, our <strong>line randomizer online</strong> delivers professional results without registration or cost. Stop struggling with manual shuffling—start using our professional <strong>online line randomizer tool</strong> today and experience the efficiency of automated, real-time line randomization.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool randomize lines automatically as I type?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>line randomizer online</strong> features <strong>automatic real-time randomization</strong>. As you type or paste text, the tool instantly shuffles your lines and displays results in the right column. Every keystroke generates a new random arrangement. We use intelligent debouncing to ensure smooth performance without lag. The "Auto-randomizing enabled" indicator at the top confirms the feature is active. Changes to shuffle modes or options also apply instantly.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this line randomizer completely free to use?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>line randomizer online</strong> is completely <strong>free</strong> with no registration, usage limits, watermarks, or hidden fees. Use it for personal or commercial projects without attribution. This is truly a <strong>free line randomizer</strong> for everyone, supported by unobtrusive advertising. Whether you need to <strong>shuffle lines online free</strong> occasionally or process thousands of lines daily, there are no restrictions.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How does the line randomization algorithm work?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">We use the <strong>Fisher-Yates shuffle algorithm</strong>, the gold standard for unbiased randomization. This algorithm ensures every possible permutation has exactly equal probability. Unlike naive methods that might bias results, Fisher-Yates guarantees true randomness with O(n) efficiency. For security-sensitive applications, we also support cryptographically secure randomization using crypto.getRandomValues().</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I keep the first line (header) fixed while shuffling?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Use <strong>"Preserve First/Last"</strong> mode. Set "Keep First" to 1 (or however many header lines you have) and "Keep Last" to 0 (or however many footer lines). The tool will shuffle everything between the preserved lines instantly as you type. Perfect for CSV files with headers, documents with titles, or any structured data where certain lines must remain fixed.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is there a limit to how many lines I can shuffle?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">The tool handles up to 100,000 lines efficiently in your browser with real-time processing. For larger datasets (millions of lines), processing remains functional but may have slight delays. Browser memory is the primary constraint—extremely large files (50MB+) may cause slowdowns. For massive datasets, consider splitting into chunks. Our <strong>bulk line randomizer</strong> is optimized for typical daily use cases with instant feedback.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I remove duplicate lines while shuffling?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Select <strong>"Remove Duplicates"</strong> mode. This automatically eliminates duplicate lines before shuffling, ensuring each unique entry appears exactly once. The tool uses intelligent comparison that trims whitespace by default. Combine with "Remove empty lines" option for cleanest results. Changes apply in real-time as you type or adjust settings.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my data secure when using this tool?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely. All processing happens <strong>locally in your browser</strong>—your text never uploads to our servers or leaves your device. You can verify this using browser DevTools (Network tab shows no data transfer). Works offline after loading. Ideal for confidential documents, student data, proprietary lists, or any sensitive information. Privacy is built into our <strong>line randomizer without login online free</strong> architecture.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I select just a random sample of lines instead of shuffling all?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Use <strong>"Random Sample"</strong> mode. Enter your desired sample size (e.g., 10 to pick 10 random lines from your list). The tool uses efficient reservoir sampling algorithms to select unbiased random subsets without fully shuffling large datasets. Perfect for picking winners from entries, selecting random questions from a pool, or creating representative samples from large datasets. Updates instantly as you change the sample size.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Why does the output change with every keystroke?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">This is by design! Our <strong>automatic line shuffler online free</strong> generates a new random seed with every input change, giving you unlimited variations to choose from. If you need a specific arrangement, simply copy the output when you see one you like. The randomization is truly random—there's no way to "go back" to a previous arrangement except by manually undoing your text changes. This ensures you always get fresh, unbiased randomizations.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How can teachers use this in the classroom?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Teachers use our <strong>classroom line randomizer online free</strong> for: randomizing student names for fair participation (copy/paste class list and get instant random order), shuffling quiz questions to prevent cheating, creating randomized seating charts, selecting random groups for projects, mixing up vocabulary lists for varied practice, and generating random writing prompts. The preservation mode keeps class period headers fixed while shuffling student lists within each section. No login required—use it instantly on any device with immediate results.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const outputText = document.getElementById('outputText');
+const inputStats = document.getElementById('inputStats');
+const outputStats = document.getElementById('outputStats');
+const shuffleStatus = document.getElementById('shuffleStatus');
+const processingTime = document.getElementById('processingTime');
+const linesPreview = document.getElementById('linesPreview');
+const linesList = document.getElementById('linesList');
+const previewStats = document.getElementById('previewStats');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+
+// Buttons
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const resetBtn = document.getElementById('resetBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+// Mode buttons and panels
+const modeBtns = document.querySelectorAll('[data-mode]');
+const modePanels = document.querySelectorAll('.mode-panel');
+let currentMode = 'complete';
+
+// Options
+const separatorSelect = document.getElementById('separatorSelect');
+const outputFormat = document.getElementById('outputFormat');
+const removeEmpty = document.getElementById('removeEmpty');
+const keepFirst = document.getElementById('keepFirst');
+const keepLast = document.getElementById('keepLast');
+const sampleSize = document.getElementById('sampleSize');
+
+// State
+let currentLines = [];
+let shuffledLines = [];
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Update input stats
+function updateInputStats() {
+  const text = inputText.value;
+  const lines = text === '' ? 0 : text.split(/\r?\n/).length;
+  const chars = text.length;
+  inputStats.textContent = `Lines: ${lines} | Chars: ${chars}`;
+}
+
+// Debounce function for performance
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Get separator character
+function getSeparator() {
+  const val = separatorSelect.value;
+  if (val === '\\n') return '\n';
+  if (val === '\\r\\n') return '\r\n';
+  return val;
+}
+
+// Parse lines from text
+function parseLines(text) {
+  if (!text.trim()) return [];
+  const separator = getSeparator();
+  let lines = text.split(separator === '\n' ? /\r?\n/ : separator);
+  
+  if (removeEmpty.checked) {
+    lines = lines.filter(line => line.trim().length > 0);
+  }
+  
+  return lines;
+}
+
+// Format output based on selected format
+function formatOutput(lines) {
+  const format = outputFormat.value;
+  
+  switch(format) {
+    case 'numbered':
+      return lines.map((line, i) => `${i + 1}. ${line}`).join('\n');
+    case 'bulleted':
+      return lines.map(line => `- ${line}`).join('\n');
+    case 'quoted':
+      return lines.map(line => `"${line}"`).join('\n');
+    default:
+      return lines.join('\n');
+  }
+}
+
+// Fisher-Yates shuffle algorithm
+function shuffleArray(array) {
+  const arr = [...array];
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+// Main shuffle function - updates output text and stats immediately
+function shuffleLines() {
+  const startTime = performance.now();
+  const text = inputText.value;
+  
+  if (!text.trim()) {
+    outputText.value = '';
+    outputStats.textContent = 'Lines: 0 | Chars: 0';
+    shuffleStatus.classList.add('hidden');
+    linesPreview.classList.add('hidden');
+    processingTime.textContent = '';
+    return;
+  }
+
+  let lines = parseLines(text);
+  currentLines = [...lines];
+  
+  if (lines.length === 0) {
+    outputText.value = '';
+    outputStats.textContent = 'Lines: 0 | Chars: 0';
+    shuffleStatus.classList.add('hidden');
+    return;
+  }
+
+  let resultLines = [];
+  const firstCount = parseInt(keepFirst.value) || 0;
+  const lastCount = parseInt(keepLast.value) || 0;
+
+  try {
+    switch(currentMode) {
+      case 'complete':
+        resultLines = shuffleArray(lines);
+        break;
+        
+      case 'preserve':
+        if (firstCount + lastCount >= lines.length) {
+          resultLines = [...lines];
+        } else {
+          const first = lines.slice(0, firstCount);
+          const middle = lines.slice(firstCount, lines.length - lastCount);
+          const last = lines.slice(lines.length - lastCount);
+          resultLines = [...first, ...shuffleArray(middle), ...last];
+        }
+        break;
+        
+      case 'unique':
+        const seen = new Set();
+        const uniqueLines = [];
+        for (const line of lines) {
+          const normalized = line.trim();
+          if (!seen.has(normalized)) {
+            seen.add(normalized);
+            uniqueLines.push(line);
+          }
+        }
+        resultLines = shuffleArray(uniqueLines);
+        break;
+        
+      case 'sample':
+        const size = Math.min(parseInt(sampleSize.value) || 10, lines.length);
+        resultLines = [];
+        for (let i = 0; i < lines.length; i++) {
+          if (resultLines.length < size) {
+            resultLines.push(lines[i]);
+          } else {
+            const j = Math.floor(Math.random() * (i + 1));
+            if (j < size) {
+              resultLines[j] = lines[i];
+            }
+          }
+        }
+        resultLines = shuffleArray(resultLines);
+        break;
+    }
+
+    const endTime = performance.now();
+    shuffledLines = resultLines;
+    
+    // Update output text and stats
+    outputText.value = formatOutput(resultLines);
+    
+    const totalChars = resultLines.reduce((sum, line) => sum + line.length, 0);
+    outputStats.textContent = `Lines: ${resultLines.length} | Chars: ${totalChars}`;
+    shuffleStatus.textContent = `(${resultLines.length} lines)`;
+    shuffleStatus.classList.remove('hidden');
+    processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+    
+    // Update preview
+    displayLinesPreview(resultLines);
+    
+  } catch (error) {
+    console.error('Shuffle error:', error);
+  }
+}
+
+// Debounced version for typing (300ms delay)
+const debouncedShuffle = debounce(shuffleLines, 300);
+
+// Display lines preview
+function displayLinesPreview(lines) {
+  if (lines.length === 0) {
+    linesPreview.classList.add('hidden');
+    return;
+  }
+  
+  linesPreview.classList.remove('hidden');
+  linesList.innerHTML = '';
+  
+  const displayCount = Math.min(lines.length, 20);
+  previewStats.textContent = `Showing ${displayCount} of ${lines.length} lines`;
+  
+  for (let i = 0; i < displayCount; i++) {
+    const lineDiv = document.createElement('div');
+    lineDiv.className = 'line-item p-2 rounded bg-white/5 text-xs flex items-center gap-2';
+    const lineNum = i + 1;
+    const lineContent = lines[i].substring(0, 60) + (lines[i].length > 60 ? '...' : '');
+    lineDiv.innerHTML = `
+      <span class="text-indigo-400 font-mono w-6 text-right">${lineNum}</span>
+      <span class="text-gray-300 truncate flex-1">${lineContent}</span>
+    `;
+    linesList.appendChild(lineDiv);
+  }
+  
+  if (lines.length > 20) {
+    const moreDiv = document.createElement('div');
+    moreDiv.className = 'text-xs text-gray-500 text-center py-1';
+    moreDiv.textContent = `... and ${lines.length - 20} more lines`;
+    linesList.appendChild(moreDiv);
+  }
+}
+
+// Mode selection
+modeBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    modeBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentMode = btn.dataset.mode;
+    
+    modePanels.forEach(panel => panel.classList.add('hidden'));
+    const panel = document.getElementById(currentMode + 'Options');
+    if (panel) panel.classList.remove('hidden');
+    
+    // Auto-shuffle when mode changes
+    shuffleLines();
+  });
+});
+
+// Drag and drop handlers
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  if (!file.type.match('text.*') && !file.name.match(/\.(txt|csv|json|xml|html?|md|js|css|py|java|cpp|c|php|rb|go|rs|swift|kt|sql|log)$/i)) {
+    alert('Please upload a text file');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    updateInputStats();
+    shuffleLines(); // Immediate shuffle on file load
+  };
+  reader.readAsText(file);
+}
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    updateInputStats();
+    shuffleLines(); // Immediate shuffle on paste
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  updateInputStats();
+  outputText.value = '';
+  outputStats.textContent = 'Lines: 0 | Chars: 0';
+  shuffleStatus.classList.add('hidden');
+  linesPreview.classList.add('hidden');
+  processingTime.textContent = '';
+  inputText.focus();
+}
+
+// Copy output
+async function copyOutput() {
+  if (!outputText.value) return;
+  
+  try {
+    await navigator.clipboard.writeText(outputText.value);
+    const originalText = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalText;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+}
+
+// Download output
+function downloadOutput() {
+  const text = outputText.value;
+  if (!text.trim()) return;
+  
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'shuffled-lines.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Reset all
+function resetAll() {
+  inputText.value = '';
+  updateInputStats();
+  outputText.value = '';
+  outputStats.textContent = 'Lines: 0 | Chars: 0';
+  shuffleStatus.classList.add('hidden');
+  linesPreview.classList.add('hidden');
+  processingTime.textContent = '';
+  
+  currentMode = 'complete';
+  modeBtns.forEach(b => b.classList.remove('active'));
+  document.querySelector('[data-mode="complete"]').classList.add('active');
+  modePanels.forEach(panel => panel.classList.add('hidden'));
+  
+  separatorSelect.value = '\\n';
+  outputFormat.value = 'standard';
+  removeEmpty.checked = true;
+  keepFirst.value = 1;
+  keepLast.value = 0;
+  sampleSize.value = 10;
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Event listeners - Auto-shuffle on input with debounce
+inputText.addEventListener('input', () => {
+  updateInputStats();
+  debouncedShuffle();
+});
+
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+copyBtn.addEventListener('click', copyOutput);
+downloadBtn.addEventListener('click', downloadOutput);
+resetBtn.addEventListener('click', resetAll);
+
+// Auto-shuffle on option changes
+[separatorSelect, outputFormat, removeEmpty, keepFirst, keepLast, sampleSize].forEach(el => {
+  if (el) {
+    el.addEventListener('change', shuffleLines);
+    el.addEventListener('input', debounce(shuffleLines, 300));
+  }
+});
+
+// Initialize
+updateInputStats();
+</script>
+</body>
+</html>

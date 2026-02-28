@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Word Sorter - Free Online Word Sorting Tool</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online word sorter tool. Sort words alphabetically, by length, numerically, or randomly. Real-time processing with drag-drop support. No registration required." />
+  <meta name="keywords" content="word sorter, word sorter online, free word sorter, sort words online, online word sorting tool, text word sorter online free, sort words alphabetically online, sort words by length online, sort words numerically online, word organizer tool online, bulk word sorter online, sort text words free tool, word arrangement tool online, sort words in paragraph online, text word management tool free, online word sorting utility, sort duplicate words online free, text word sorter editor online, word sorter for writers online, word sorter for seo online, instant word sorter online free, text word sorting tool online, sort words ascending online, sort words descending online, free online word sorter tool, online text word organizer free, word sorter without login online, text word rearranger online, online word sorting tool free" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/word-sorter/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/word-sorter/" />
+  <meta property="og:title" content="Word Sorter - Free Online Word Sorting Tool" />
+  <meta property="og:description" content="Sort words alphabetically, by length, numerically, or randomly. Real-time processing with drag-drop support. No registration required." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/word-sorter/" />
+  <meta name="twitter:title" content="Word Sorter - Free Online Word Sorting Tool" />
+  <meta name="twitter:description" content="Sort words alphabetically, by length, numerically, or randomly. Real-time processing with drag-drop support. No registration required." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .method-btn {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    .method-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .word-tag {
+      display: inline-block;
+      padding: 0.25rem 0.5rem;
+      margin: 0.125rem;
+      background: rgba(99, 102, 241, 0.15);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      border-radius: 0.375rem;
+      font-size: 0.75rem;
+      color: #c7d2fe;
+      transition: all 0.2s ease;
+    }
+    
+    .word-tag:hover {
+      background: rgba(99, 102, 241, 0.25);
+      transform: translateY(-1px);
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+
+    .sort-anim {
+      animation: sortFlash 0.3s ease;
+    }
+    
+    @keyframes sortFlash {
+      0% { background: rgba(99, 102, 241, 0.3); }
+      100% { background: transparent; }
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 20h20M15 15l-5 5 5 5M25 15l5 5-5 5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Word Sorter</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Word Sorter
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Text Organization Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-sorting enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Input Text
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Type or paste text here... Or drag & drop a file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.csv,.md,.json,.xml,.html,.js,.css,.py,.java,.cpp,.c,.php,.rb,.go,.rs,.swift,.kt,.sql,.log" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Words: 0 | Unique: 0 | Chars: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Output -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Sorted Result <span id="sortStats" class="text-gray-500 font-normal ml-1 hidden">(0 words)</span>
+            </label>
+            <div class="flex gap-1">
+              <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                Copy
+              </button>
+              <button id="downloadBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Download
+              </button>
+            </div>
+          </div>
+          
+          <textarea id="outputText" readonly spellcheck="false"
+            class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+            placeholder="Sorted words appear here automatically..."></textarea>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="outputStats">Words: 0 | Time: 0ms</span>
+            <span id="processingTime" class="text-gray-600"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-3">
+        
+        <!-- Sort Method -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Sort Method</label>
+          <div class="flex flex-wrap gap-1">
+            <button class="method-btn active rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="alphabetical">Alphabetical</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="length">By Length</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="numeric">Numerically</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="frequency">By Frequency</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="random">Random</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="reverse">Reverse</button>
+          </div>
+        </div>
+
+        <!-- Options Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+          <!-- Order Toggle -->
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Order</label>
+            <select id="sortOrder" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="asc">Ascending (A→Z)</option>
+              <option value="desc">Descending (Z→A)</option>
+            </select>
+          </div>
+
+          <!-- Case Handling -->
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Case Handling</label>
+            <select id="caseHandling" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="sensitive">Case Sensitive</option>
+              <option value="insensitive">Case Insensitive</option>
+              <option value="lower">Convert to Lower</option>
+              <option value="upper">Convert to Upper</option>
+              <option value="capitalize">Capitalize Words</option>
+            </select>
+          </div>
+
+          <!-- Separator -->
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Word Separator</label>
+            <select id="wordSeparator" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="whitespace">Whitespace</option>
+              <option value="comma">Comma (,)</option>
+              <option value="newline">New Line</option>
+              <option value="semicolon">Semicolon (;)</option>
+              <option value="pipe">Pipe (|)</option>
+              <option value="tab">Tab</option>
+            </select>
+          </div>
+
+          <!-- Output Format -->
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Output Format</label>
+            <select id="outputFormat" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="list">List (one per line)</option>
+              <option value="comma">Comma Separated</option>
+              <option value="space">Space Separated</option>
+              <option value="numbered">Numbered List</option>
+              <option value="bulleted">Bulleted List</option>
+              <option value="json">JSON Array</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Additional Options -->
+        <div class="flex flex-wrap gap-3 items-center">
+          <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+            <input type="checkbox" id="removeDuplicates" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Remove Duplicates
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+            <input type="checkbox" id="removePunctuation" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Remove Punctuation
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+            <input type="checkbox" id="removeEmpty" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Remove Empty
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+            <input type="checkbox" id="trimWhitespace" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Trim Whitespace
+          </label>
+        </div>
+
+        <!-- Word Preview -->
+        <div id="wordPreview" class="hidden">
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-xs font-medium text-gray-300">Word Preview <span class="text-gray-500 font-normal">(click to remove)</span></label>
+            <span id="previewCount" class="text-xs text-gray-500">Showing first 50</span>
+          </div>
+          <div id="wordList" class="max-h-32 overflow-y-auto p-2 rounded-md bg-black/30 border border-white/10">
+            <!-- Words will be inserted here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Word Sorter?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Auto-Sort</h3>
+          <p class="text-gray-400 text-xs">Real-time sorting as you type</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">6 Sort Methods</h3>
+          <p class="text-gray-400 text-xs">Alphabetical, length, numeric & more</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Drag & Drop</h3>
+          <p class="text-gray-400 text-xs">Upload text files instantly</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based, no uploads</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Multiple output formats</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration required</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Input Text</h3>
+          <p class="text-gray-400 text-xs">Type, paste, or drop a file. Sorting happens automatically.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Choose Method</h3>
+          <p class="text-gray-400 text-xs">Select alphabetical, length, numeric, frequency, or random.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Configure</h3>
+          <p class="text-gray-400 text-xs">Set order, case handling, and output format. Changes apply instantly.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy result or download as file. Click words in preview to remove.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Word Sorting: Mastering Text Organization for Modern Workflows</h2>
+        
+        <p><strong>Word sorting</strong> is one of the most fundamental yet powerful operations in text processing, serving as the cornerstone of data organization, content management, and information architecture. Whether you're a writer organizing vocabulary lists, a developer processing data arrays, a student studying language patterns, or a data analyst cleaning datasets, understanding how to effectively sort words alphabetically, by length, numerically, or by frequency is essential for modern digital productivity. Our <strong>word sorter online</strong> solution provides everything you need for professional word organization without any cost or registration barriers.</p>
+
+        <h2>What Is Word Sorting and Why Does It Matter?</h2>
+        
+        <p><strong>Word sorting</strong> refers to the systematic arrangement of words or text tokens into a specific order based on defined criteria. This seemingly simple operation underlies countless professional workflows, programming functions, and content management tasks. At its core, word sorting transforms chaotic, unstructured text into organized, actionable data that can be analyzed, processed, stored, or presented more effectively. When you <strong>sort words online</strong>, you're performing one of the most common data preparation tasks used across virtually every industry and discipline.</p>
+
+        <p>The importance of reliable <strong>online word sorting tool</strong> capabilities cannot be overstated in our information-driven world. Consider the daily challenges professionals face: a copywriter needs to <strong>sort words alphabetically</strong> to organize keyword research; a programmer must <strong>sort text words</strong> to normalize database entries; a linguist wants to <strong>sort words by length</strong> to analyze language patterns; a marketer needs to <strong>sort duplicate words</strong> to clean email lists. Without efficient <strong>text word sorter</strong> capabilities, these tasks become time-consuming manual processes prone to human error and inconsistency.</p>
+
+        <h2>Understanding Word Sorting Methods and Techniques</h2>
+
+        <h3>Alphabetical Sorting: The Foundation of Text Organization</h3>
+        
+        <p>The most common <strong>sort words online</strong> method uses alphabetical ordering—arranging words from A to Z (ascending) or Z to A (descending). This approach leverages the natural ordering of the alphabet to create intuitive, scannable lists that humans can navigate easily. Alphabetical sorting serves as the backbone of dictionaries, glossaries, indexes, and reference materials across all languages and writing systems.</p>
+
+        <p>Advanced <strong>free word sorter</strong> tools handle the complexities that simple sorting algorithms cannot manage. Case sensitivity determines whether "Apple" comes before or after "apple"—professional tools offer case-insensitive options that treat variants as identical. Locale-aware sorting respects language-specific rules where certain characters have special ordering (e.g., accented letters in French, Spanish ñ, German umlauts). Unicode normalization ensures that different representations of the same character (composed vs. decomposed accents) sort consistently. Our <strong>free online word sorter tool</strong> provides these sophisticated options, making it suitable for international content and professional data processing.</p>
+
+        <h3>Length-Based Sorting: Organizing by Size</h3>
+        
+        <p><strong>Sort words by length</strong> operations arrange text by character count, from shortest to longest or vice versa. This method reveals patterns invisible in alphabetical lists: short words often function as grammatical glue (the, and, of), while longer words typically carry specific semantic content. Writers use length sorting to analyze writing style—average word length correlates with text complexity and readability scores. Crossword puzzle creators rely on length-sorted word lists to find candidates for specific grid positions. Password generators use length sorting to categorize candidates by security strength.</p>
+
+        <p>Our <strong>text word sorting tool</strong> handles length sorting with precision, counting characters accurately regardless of writing system. Whether you're processing English text, CJK characters where a single glyph may represent a complete word, or mixed multilingual content, the tool provides consistent, predictable results that professionals can rely on for analysis and processing workflows.</p>
+
+        <h3>Numeric and Natural Sorting: When Words Contain Numbers</h3>
+        
+        <p><strong>Sort words numerically</strong> methods handle the common scenario where text includes numerical components: version numbers (v1, v2, v10), chapter headings (Chapter 1, Chapter 2, Chapter 10), product codes (Item001, Item002, Item010), or any alphanumeric identifiers. Standard alphabetical sorting fails here—"Item10" comes before "Item2" because "1" precedes "2" in character code order, creating logical nonsense.</p>
+
+        <p>Natural sorting algorithms parse embedded numbers and sort them numerically while preserving surrounding text. This creates intuitive ordering where "Item2" precedes "Item10", "Version 1.9" comes before "Version 1.10", and "Chapter 2" appears before "Chapter 10". Our <strong>online word sorting utility</strong> implements intelligent natural sorting that recognizes numeric patterns within words, ensuring human-logical ordering regardless of text padding or number position.</p>
+
+        <h3>Frequency and Statistical Sorting</h3>
+        
+        <p><strong>Sort words by frequency</strong> methods arrange text based on occurrence count within a corpus. This statistical approach reveals the most common and rare words in a dataset, supporting linguistic analysis, keyword research, and data cleaning. Frequency sorting helps identify: stop words that may need removal from search indexes, rare terms that might be typos or specialized vocabulary, keyword density for SEO optimization, and vocabulary richness indicators for readability analysis.</p>
+
+        <p>Our <strong>word organizer tool online</strong> provides frequency sorting with duplicate detection capabilities. Users can identify unique words, count total occurrences, and export frequency-ranked lists suitable for further analysis in spreadsheet or statistical software. This makes the tool invaluable for corpus linguistics, content analysis, and data science preprocessing workflows.</p>
+
+        <h2>Professional Applications of Word Sorting</h2>
+
+        <h3>Content Creation and Writing Workflows</h3>
+        
+        <p>Writers and editors use <strong>word sorter for writers</strong> capabilities throughout the creative process. Vocabulary lists for fiction writing get organized alphabetically for quick reference. Keyword collections for SEO articles are sorted by priority or frequency. Glossary terms for technical documentation are arranged for logical presentation. Style guide word lists (preferred spellings, forbidden terms) are maintained in sorted order for easy scanning.</p>
+
+        <p>Poets and lyricists employ <strong>sort words by length</strong> to find rhymes and rhythm patterns. Words of similar length often share stress patterns that work well in metered verse. Palindrome hunters sort letter sequences to find anagram candidates. Constrained writing practitioners (lipograms, pangrams) use sorted word lists to verify constraint compliance efficiently.</p>
+
+        <h3>Search Engine Optimization and Digital Marketing</h3>
+        
+        <p>SEO professionals rely heavily on <strong>word sorter for SEO</strong> functionality. Keyword research generates hundreds or thousands of terms that must be organized for analysis: alphabetical sorting groups related terms (all "best..." queries together); frequency sorting identifies high-volume search targets; length sorting separates short-tail from long-tail opportunities; duplicate removal ensures clean, non-redundant targeting lists.</p>
+
+        <p>Content audits involve extracting all words from existing pages, sorting and deduplicating to create comprehensive keyword inventories. Competitor analysis requires processing rival content into sorted word frequency lists to identify gaps and opportunities. Our <strong>instant word sorter online free</strong> tool handles these marketing workflows with the speed and reliability professionals demand.</p>
+
+        <h3>Programming and Data Processing</h3>
+        
+        <p>Developers constantly interact with <strong>text word sorting</strong> in code and through tooling. Database queries return unsorted results that need ordering before display. API responses contain arrays requiring normalization. Configuration files list options alphabetically for maintainability. Log files aggregate terms that need frequency analysis for debugging.</p>
+
+        <p>Version control systems use sorted word lists for ignore patterns and attribute files. Build systems sort file lists for deterministic output. Testing frameworks sort assertion results for consistent reporting. Our <strong>bulk word sorter online</strong> capabilities support these development workflows, handling large datasets that would choke simple text editors or command-line tools.</p>
+
+        <h3>Education and Research</h3>
+        
+        <p>Students and researchers employ <strong>text word rearranger</strong> tools for academic work. Vocabulary study lists are sorted for flashcard creation and memorization. Linguistic corpora are organized for pattern analysis and statistical study. Bibliographic references are normalized and sorted for citation management. Survey responses are processed into sorted frequency distributions for reporting.</p>
+
+        <p>Language learners use <strong>sort words alphabetically online</strong> to create personalized dictionaries from reading materials. Teachers generate sorted vocabulary lists from literature for classroom instruction. Researchers preparing manuscripts sort terminology to ensure consistent usage throughout documents. Our <strong>online text word organizer free</strong> tool serves these educational needs without requiring software installation or technical expertise.</p>
+
+        <h2>Advanced Word Sorting Techniques and Strategies</h2>
+
+        <h3>Multi-Criteria and Hierarchical Sorting</h3>
+        
+        <p>Sophisticated sorting scenarios require multiple ordering criteria applied sequentially. Primary sort by frequency (most common first), secondary sort alphabetically for ties. Primary sort by length, secondary by alphabetical order within each length group. Primary sort by category tag, secondary by importance score. Our <strong>word arrangement tool online</strong> supports these complex multi-key sorts through chained processing and customizable output formatting.</p>
+
+        <h3>Handling Special Characters and Encodings</h3>
+        
+        <p>Real-world text contains imperfections that sorting algorithms must handle gracefully. Punctuation attached to words (word, word. word!) should optionally be stripped or ignored. Special characters (emojis, mathematical symbols, currency signs) need consistent ordering rules. Mixed encodings (UTF-8, Latin-1, Windows-1252) must be normalized before comparison. Whitespace variations (spaces, tabs, non-breaking spaces) require standardization.</p>
+
+        <p>Professional <strong>text word management tool free</strong> implementations provide preprocessing options that clean and normalize text before sorting. Remove punctuation, standardize case, trim whitespace, and handle encoding issues automatically. These preparation steps ensure that "word," "Word," and " word " sort as identical entries when appropriate, while preserving original formatting in output when needed.</p>
+
+        <h3>Deduplication and Uniqueness Operations</h3>
+        
+        <p>Beyond simple sorting, <strong>sort duplicate words online free</strong> functionality addresses data quality needs. Exact duplicates are easily identified and removed. Fuzzy duplicates (typos, variant spellings) require similarity algorithms like Levenshtein distance or phonetic matching (Soundex, Metaphone). Near-duplicate detection groups similar terms for manual review. Our tool provides exact deduplication with case-sensitivity options, ensuring clean output lists suitable for database imports and analysis workflows.</p>
+
+        <h2>Best Practices for Effective Word Sorting</h2>
+
+        <h3>Pre-processing and Text Normalization</h3>
+        
+        <p>Before sorting, prepare your text to ensure consistent results. Normalize Unicode to composed form (NFC) to prevent accent representation issues. Standardize line endings (LF vs CRLF) for predictable splitting. Define word boundaries clearly—should hyphenated terms be one word or two? Should contractions (don't, can't) be split or preserved? Should email addresses, URLs, or hashtags be treated as single tokens?</p>
+
+        <p>A <strong>text word sorter editor online</strong> that combines sorting with preprocessing options streamlines these preparation steps. Configure word separation rules, handle special cases, and preview tokenization before committing to the sort operation. Our tool provides visual feedback showing exactly how input text will be split and processed.</p>
+
+        <h3>Choosing the Right Sort Strategy</h3>
+        
+        <p>Match your sorting method to your data characteristics and goals: Use alphabetical sorting for reference lists, indexes, and human-readable output. Prefer length sorting for pattern analysis and constrained writing. Apply numeric sorting for identifiers, version numbers, and sequential data. Choose frequency sorting for statistical analysis and keyword research. Consider random sorting for shuffling, sampling, and game applications.</p>
+
+        <h3>Validation and Quality Assurance</h3>
+        
+        <p>Always validate sorted results, especially with large or messy datasets. Spot-check boundary conditions (first and last items) for correct ordering. Verify that expected items appear in the output—missing entries may indicate tokenization errors. Check for unexpected duplicates that suggest case or whitespace issues. Review special characters and symbols for correct handling. Professional <strong>online word sorting tool</strong> workflows include these validation steps to catch anomalies before they propagate to downstream processes.</p>
+
+        <h2>Comparing Word Sorting Approaches</h2>
+
+        <h3>Manual Sorting vs. Automated Tools</h3>
+        
+        <p>Manual sorting using spreadsheet software involves copy-pasting, text-to-columns conversion, sorting dialogs, and copy-pasting back. While feasible for small lists, this becomes impractical for: large datasets (thousands of words), repetitive operations (weekly reports), complex multi-criteria sorts, or real-time processing needs. Automated <strong>instant word sorter online free</strong> tools eliminate human error, ensure consistency, and complete in milliseconds what might take hours manually.</p>
+
+        <h3>Spreadsheet Software vs. Dedicated Tools</h3>
+        
+        <p>Excel and Google Sheets offer sorting features but struggle with: text containing mixed delimiters, natural numeric ordering, case-insensitive options, duplicate detection with fuzzy matching, and large file handling (row limits). Dedicated <strong>text word sorting tool online</strong> solutions provide greater flexibility, handle larger inputs, support more methods, and offer better text-specific options. Our browser-based tool bridges the gap between spreadsheet convenience and programming power.</p>
+
+        <h2>The Future of Text Organization Technology</h2>
+
+        <p>Artificial intelligence is beginning to influence <strong>word sorting</strong>, moving beyond mechanical ordering toward intelligent organization. AI-powered tools can: sort words by semantic similarity rather than alphabetical order, group terms by conceptual category automatically, suggest optimal sort orders based on content type, and learn from user preferences to predict desired organization. These capabilities will transform <strong>word sorter</strong> tools from simple utilities into intelligent assistants that understand content meaning and user intent.</p>
+
+        <h2>Conclusion: Master Your Text with Professional Word Sorting</h2>
+
+        <p><strong>Word sorting</strong> remains one of the most essential yet underappreciated operations in digital text work. From simple alphabetical arrangement to complex multi-criteria sorting, the ability to organize words intelligently empowers professionals across every industry. Whether you're preparing keyword lists, analyzing linguistic patterns, cleaning datasets, or organizing creative content, mastering <strong>word sorting</strong> techniques will dramatically improve your productivity and output quality.</p>
+
+        <p>Our <strong>free online word sorter</strong> provides all the capabilities you need to handle any sorting scenario. With automatic real-time sorting as you type, support for six different methods (alphabetical, length, numeric, frequency, random, and reverse), plus flexible output formatting and deduplication options, this tool serves everyone from casual users to data professionals. The browser-based architecture ensures privacy and accessibility, while the intuitive interface requires no learning curve. Whether you need to <strong>sort words alphabetically</strong>, <strong>sort words by length</strong>, <strong>sort words numerically</strong>, <strong>sort duplicate words</strong>, or <strong>sort text words</strong> in any configuration, our <strong>online word sorting utility</strong> delivers professional results instantly. Stop struggling with manual text organization—start using our professional <strong>word sorter online</strong> today and experience the efficiency of automated word sorting.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool sort words automatically as I type?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>word sorter online</strong> features <strong>automatic real-time sorting</strong>. As you type or paste text, the tool instantly processes your input and displays sorted results in the right column. We use intelligent debouncing to ensure smooth performance without lag. The "Auto-sorting enabled" indicator at the top confirms the feature is active. Changes to sort methods or options also apply instantly, making this the most responsive <strong>free word sorter</strong> available.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I sort words by length or other criteria besides alphabetical?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely! Our <strong>online word sorting tool</strong> supports six different methods: <strong>Alphabetical</strong> (A-Z or Z-A), <strong>By Length</strong> (shortest to longest or reverse), <strong>Numerically</strong> (handles numbers within words naturally), <strong>By Frequency</strong> (most common words first), <strong>Random</strong> (shuffled order), and <strong>Reverse</strong> (original order reversed). Each method supports both ascending and descending order, giving you complete control over word organization.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I remove duplicate words from my list?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Simply check the "Remove Duplicates" option in the settings area. Our <strong>sort duplicate words online free</strong> feature eliminates repeated entries while preserving your chosen sort order. You can combine this with case-insensitive sorting to treat "Word" and "word" as duplicates. The tool shows you the count of unique vs. total words in the stats display, so you know exactly how many duplicates were removed.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I sort words from a file without copying and pasting?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Use our <strong>drag-and-drop feature</strong> to upload text files directly. Drop TXT, CSV, JSON, HTML, code files, or any text document onto the input area. The tool reads the file automatically and sorts the contents immediately. You can also click "Select file" to browse your computer. This <strong>bulk word sorter online</strong> capability handles files up to several megabytes, processing thousands of words instantly.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What output formats are available for sorted words?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">We offer six output formats: <strong>List</strong> (one word per line), <strong>Comma Separated</strong> (CSV style), <strong>Space Separated</strong> (for paragraphs), <strong>Numbered List</strong> (1. word, 2. word), <strong>Bulleted List</strong> (• word), and <strong>JSON Array</strong> (for developers). Each format can be copied to clipboard or downloaded as a file. The preview section shows words as interactive tags you can click to remove before finalizing output.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is there a limit to how many words I can sort?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">The tool handles up to 100,000 words or several megabytes of text, depending on your browser and device memory. Chrome and Edge typically handle larger datasets than Safari or mobile browsers. For extremely large files (millions of words), we recommend splitting into chunks or using command-line tools. The processing time indicator shows how long each sort takes—most operations complete in under 100ms even for thousands of words.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my data secure when using this tool?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Completely. All processing happens <strong>locally in your browser</strong>—your text never uploads to servers or leaves your device. You can verify this by checking the Network tab in browser DevTools (no data transfer occurs). The tool works offline after loading. This makes it ideal for sensitive documents, confidential data, or proprietary content. Privacy is fundamental to our <strong>word sorter without login online</strong> architecture.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I sort words containing numbers naturally (so Item2 comes before Item10)?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Use the <strong>Numerically</strong> sort method for natural ordering. Unlike simple alphabetical sorting that places "Item10" before "Item2", our numeric sort recognizes embedded numbers and orders them correctly: Item1, Item2, Item10. This works for version numbers (v1.9 before v1.10), chapter headings, product codes, and any alphanumeric identifiers. It's essential for logical ordering of mixed text-number content.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this word sorter tool free to use?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, completely <strong>free</strong> with no registration, usage limits, watermarks, or hidden fees. Use for personal or commercial projects without attribution. This is truly a <strong>free online word sorter tool</strong> for everyone. We support development through unobtrusive advertising and voluntary user support, but the tool functionality is entirely free and unrestricted.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I remove specific words from the sorted list?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! The Word Preview section displays your sorted words as interactive tags. Click any word to remove it from the list before copying or downloading. This is perfect for manually cleaning up keyword lists, removing unwanted terms, or curating vocabulary sets. The preview shows the first 50 words with a count indicator if there are more. Removed words are excluded from the final output but remain in your original input if you need to start over.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const outputText = document.getElementById('outputText');
+const inputStats = document.getElementById('inputStats');
+const outputStats = document.getElementById('outputStats');
+const sortStats = document.getElementById('sortStats');
+const processingTime = document.getElementById('processingTime');
+const wordPreview = document.getElementById('wordPreview');
+const wordList = document.getElementById('wordList');
+const previewCount = document.getElementById('previewCount');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+
+// Buttons
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const resetBtn = document.getElementById('resetBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+// Method buttons
+const methodBtns = document.querySelectorAll('.method-btn');
+let currentMethod = 'alphabetical';
+let currentWords = [];
+let removedWords = new Set();
+
+// Options
+const sortOrder = document.getElementById('sortOrder');
+const caseHandling = document.getElementById('caseHandling');
+const wordSeparator = document.getElementById('wordSeparator');
+const outputFormat = document.getElementById('outputFormat');
+const removeDuplicates = document.getElementById('removeDuplicates');
+const removePunctuation = document.getElementById('removePunctuation');
+const removeEmpty = document.getElementById('removeEmpty');
+const trimWhitespace = document.getElementById('trimWhitespace');
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Update input stats
+function updateInputStats() {
+  const text = inputText.value;
+  const words = extractWords(text);
+  const unique = new Set(words.map(w => w.toLowerCase())).size;
+  const chars = text.length;
+  inputStats.textContent = `Words: ${words.length} | Unique: ${unique} | Chars: ${chars}`;
+}
+
+// Extract words based on separator setting
+function extractWords(text) {
+  let separator = wordSeparator.value;
+  let splitRegex;
+  
+  switch(separator) {
+    case 'comma':
+      splitRegex = /,/;
+      break;
+    case 'newline':
+      splitRegex = /\n/;
+      break;
+    case 'semicolon':
+      splitRegex = /;/;
+      break;
+    case 'pipe':
+      splitRegex = /\|/;
+      break;
+    case 'tab':
+      splitRegex = /\t/;
+      break;
+    default:
+      splitRegex = /\s+/;
+  }
+  
+  let words = text.split(splitRegex);
+  
+  if (trimWhitespace.checked) {
+    words = words.map(w => w.trim());
+  }
+  
+  if (removeEmpty.checked) {
+    words = words.filter(w => w.length > 0);
+  }
+  
+  if (removePunctuation.checked) {
+    words = words.map(w => w.replace(/[^\w\s-]/g, ''));
+  }
+  
+  return words;
+}
+
+// Debounce function
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Method selection
+methodBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    methodBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentMethod = btn.dataset.method;
+    sortWords();
+  });
+});
+
+// Sort function
+function sortWords() {
+  const startTime = performance.now();
+  const text = inputText.value;
+  
+  if (!text.trim()) {
+    outputText.value = '';
+    outputStats.textContent = 'Words: 0 | Time: 0ms';
+    sortStats.classList.add('hidden');
+    wordPreview.classList.add('hidden');
+    processingTime.textContent = '';
+    currentWords = [];
+    return;
+  }
+  
+  let words = extractWords(text);
+  
+  // Remove duplicates if enabled
+  if (removeDuplicates.checked) {
+    const seen = new Set();
+    words = words.filter(w => {
+      const key = caseHandling.value === 'sensitive' ? w : w.toLowerCase();
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+  }
+  
+  // Apply case handling
+  switch(caseHandling.value) {
+    case 'lower':
+      words = words.map(w => w.toLowerCase());
+      break;
+    case 'upper':
+      words = words.map(w => w.toUpperCase());
+      break;
+    case 'capitalize':
+      words = words.map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase());
+      break;
+  }
+  
+  // Sort based on method
+  const isAsc = sortOrder.value === 'asc';
+  
+  switch(currentMethod) {
+    case 'alphabetical':
+      words.sort((a, b) => {
+        if (caseHandling.value === 'sensitive') {
+          return isAsc ? a.localeCompare(b) : b.localeCompare(a);
+        } else {
+          return isAsc ? a.toLowerCase().localeCompare(b.toLowerCase()) : b.toLowerCase().localeCompare(a.toLowerCase());
+        }
+      });
+      break;
+      
+    case 'length':
+      words.sort((a, b) => isAsc ? a.length - b.length : b.length - a.length);
+      break;
+      
+    case 'numeric':
+      words.sort((a, b) => {
+        const extractNum = (str) => {
+          const match = str.match(/\d+/);
+          return match ? parseInt(match[0]) : 0;
+        };
+        const numA = extractNum(a);
+        const numB = extractNum(b);
+        if (numA !== numB) {
+          return isAsc ? numA - numB : numB - numA;
+        }
+        return isAsc ? a.localeCompare(b) : b.localeCompare(a);
+      });
+      break;
+      
+    case 'frequency':
+      const freq = {};
+      words.forEach(w => {
+        const key = caseHandling.value === 'sensitive' ? w : w.toLowerCase();
+        freq[key] = (freq[key] || 0) + 1;
+      });
+      words.sort((a, b) => {
+        const keyA = caseHandling.value === 'sensitive' ? a : a.toLowerCase();
+        const keyB = caseHandling.value === 'sensitive' ? b : b.toLowerCase();
+        return isAsc ? freq[keyA] - freq[keyB] : freq[keyB] - freq[keyA];
+      });
+      break;
+      
+    case 'random':
+      words.sort(() => Math.random() - 0.5);
+      break;
+      
+    case 'reverse':
+      words.reverse();
+      break;
+  }
+  
+  // Filter out removed words
+  words = words.filter(w => !removedWords.has(w));
+  currentWords = words;
+  
+  // Format output
+  let output = '';
+  switch(outputFormat.value) {
+    case 'comma':
+      output = words.join(', ');
+      break;
+    case 'space':
+      output = words.join(' ');
+      break;
+    case 'numbered':
+      output = words.map((w, i) => `${i + 1}. ${w}`).join('\n');
+      break;
+    case 'bulleted':
+      output = words.map(w => `• ${w}`).join('\n');
+      break;
+    case 'json':
+      output = JSON.stringify(words, null, 2);
+      break;
+    default:
+      output = words.join('\n');
+  }
+  
+  const endTime = performance.now();
+  
+  outputText.value = output;
+  outputStats.textContent = `Words: ${words.length} | Time: ${(endTime - startTime).toFixed(1)}ms`;
+  sortStats.textContent = `(${words.length} words)`;
+  sortStats.classList.remove('hidden');
+  processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+  
+  displayWordPreview(words);
+}
+
+// Display word preview
+function displayWordPreview(words) {
+  if (words.length === 0) {
+    wordPreview.classList.add('hidden');
+    return;
+  }
+  
+  wordPreview.classList.remove('hidden');
+  wordList.innerHTML = '';
+  
+  const displayWords = words.slice(0, 50);
+  previewCount.textContent = words.length > 50 ? `Showing first 50 of ${words.length}` : `Showing all ${words.length}`;
+  
+  displayWords.forEach(word => {
+    const tag = document.createElement('span');
+    tag.className = 'word-tag cursor-pointer';
+    tag.textContent = word;
+    tag.title = 'Click to remove';
+    tag.addEventListener('click', () => {
+      removedWords.add(word);
+      tag.style.opacity = '0.3';
+      tag.style.textDecoration = 'line-through';
+      sortWords();
+    });
+    wordList.appendChild(tag);
+  });
+}
+
+// Debounced sort
+const debouncedSort = debounce(sortWords, 100);
+
+// Event listeners for options
+[sortOrder, caseHandling, wordSeparator, outputFormat, removeDuplicates, removePunctuation, removeEmpty, trimWhitespace].forEach(el => {
+  el.addEventListener('change', sortWords);
+});
+
+// Drag and drop handlers
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  if (!file.type.match('text.*') && !file.name.match(/\.(txt|csv|json|xml|html?|md|js|css|py|java|cpp|c|php|rb|go|rs|swift|kt|sql|log)$/i)) {
+    alert('Please upload a text file');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    updateInputStats();
+    removedWords.clear();
+    sortWords();
+  };
+  reader.readAsText(file);
+}
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    updateInputStats();
+    removedWords.clear();
+    sortWords();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  updateInputStats();
+  removedWords.clear();
+  sortWords();
+  inputText.focus();
+}
+
+// Copy output
+async function copyOutput() {
+  if (!outputText.value) return;
+  
+  try {
+    await navigator.clipboard.writeText(outputText.value);
+    const originalText = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalText;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+}
+
+// Download output
+function downloadOutput() {
+  const text = outputText.value;
+  if (!text.trim()) return;
+  
+  let extension = 'txt';
+  if (outputFormat.value === 'json') extension = 'json';
+  if (outputFormat.value === 'csv' || wordSeparator.value === 'comma') extension = 'csv';
+  
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `sorted-words.${extension}`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Reset all
+function resetAll() {
+  inputText.value = '';
+  outputText.value = '';
+  removedWords.clear();
+  updateInputStats();
+  sortWords();
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Event listeners
+inputText.addEventListener('input', () => {
+  updateInputStats();
+  debouncedSort();
+});
+
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+copyBtn.addEventListener('click', copyOutput);
+downloadBtn.addEventListener('click', downloadOutput);
+resetBtn.addEventListener('click', resetAll);
+
+// Initialize
+updateInputStats();
+</script>
+</body>
+</html>
