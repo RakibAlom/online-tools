@@ -1,0 +1,1845 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Text Statistics Dashboard - Free Online Text Analytics Tool</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online text statistics dashboard. Analyze word count, character count, readability, keyword density, and more. Real-time text analytics with visual insights. No registration required." />
+  <meta name="keywords" content="free text statistics dashboard, online text statistics tool, text statistics dashboard online free, free online text analyzer, online text analysis tool free, text analysis dashboard free, free online text metrics tool, online word count and stats free, free text statistics generator online, online text stats checker free, free web text statistics tool, text statistics tool for seo, online text analytic dashboard free, free online text statistics panel, online text data dashboard free, text stats generator free online, free online text insights tool, online text metrics dashboard free, free online string statistics tool, text statistics utility online free, online text characters count free, free online word and character counter, online text breakdown tool free, free online text summary stats" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/text-statistics-dashboard/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/text-statistics-dashboard/" />
+  <meta property="og:title" content="Text Statistics Dashboard - Free Online Text Analytics Tool" />
+  <meta property="og:description" content="Analyze word count, character count, readability, keyword density, and more. Real-time text analytics with visual insights. No registration required." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/text-statistics-dashboard/" />
+  <meta name="twitter:title" content="Text Statistics Dashboard - Free Online Text Analytics Tool" />
+  <meta name="twitter:description" content="Analyze word count, character count, readability, keyword density, and more. Real-time text analytics with visual insights. No registration required." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+    <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+
+    <!--Google Site Verification-->
+    <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-4D39CLDW58');
+    </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .method-btn {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    .method-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .stat-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.2s ease;
+    }
+    
+    .stat-card:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.12);
+    }
+
+    .stat-value {
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .progress-bar {
+      height: 3px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #6366f1, #8b5cf6);
+      border-radius: 2px;
+      transition: width 0.3s ease;
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+
+    .keyword-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.25rem 0.5rem;
+      background: rgba(99, 102, 241, 0.15);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      border-radius: 0.375rem;
+      font-size: 0.75rem;
+      margin: 0.125rem;
+    }
+
+    .ngram-tabs {
+      display: flex;
+      gap: 0.25rem;
+      margin-bottom: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .ngram-tab {
+      padding: 0.25rem 0.5rem;
+      font-size: 0.7rem;
+      border-radius: 0.25rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.05);
+      color: #9ca3af;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .ngram-tab.active {
+      background: rgba(99, 102, 241, 0.3);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    .ngram-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 0.5rem;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+
+    .ngram-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 0.375rem;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .stats-grid-compact {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .stats-grid-compact {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .mini-stat {
+      padding: 0.5rem;
+    }
+
+    .mini-stat .stat-value {
+      font-size: 1rem;
+    }
+
+    .mini-stat .stat-label {
+      font-size: 0.6rem;
+    }
+
+    .readability-gauge {
+      position: relative;
+      height: 4px;
+      background: linear-gradient(to right, #22c55e, #facc15, #fb923c, #ef4444);
+      border-radius: 2px;
+      margin-top: 0.5rem;
+    }
+
+    .readability-marker {
+      position: absolute;
+      top: -3px;
+      width: 10px;
+      height: 10px;
+      background: white;
+      border-radius: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 12h20M10 20h20M10 28h20" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Text Statistics Dashboard</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Text Statistics Dashboard
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Text Analytics Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-analyzing enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Input Text
+            </label>
+            <div class="flex gap-1">
+              <button id="sampleBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                Sample
+              </button>
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Type or paste text here to analyze statistics... Or drag & drop a file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.csv,.md,.json,.xml,.html,.js,.css,.py,.java,.cpp,.c,.php,.rb,.go,.rs,.swift,.kt,.sql,.log" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputQuickStats">Ready to analyze</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Statistics Dashboard (Compact Grid Layout) -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+              Statistics Dashboard
+            </label>
+            <button id="exportBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              Export
+            </button>
+          </div>
+          
+          <!-- Compact Stats Grid - All Visible Without Scroll -->
+          <div class="stats-grid-compact" id="statsContainer">
+            <!-- Basic Stats -->
+            <div class="stat-card mini-stat rounded-lg p-2">
+              <div class="stat-label text-gray-400 mb-1">Characters</div>
+              <div class="stat-value text-indigo-400" id="statChars">0</div>
+              <div class="progress-bar mt-1">
+                <div class="progress-fill" id="progressChars" style="width: 0%"></div>
+              </div>
+            </div>
+            
+            <div class="stat-card mini-stat rounded-lg p-2">
+              <div class="stat-label text-gray-400 mb-1">Words</div>
+              <div class="stat-value text-emerald-400" id="statWords">0</div>
+              <div class="text-xs text-gray-500 mt-1" id="statWordsDetail">avg 0</div>
+            </div>
+            
+            <div class="stat-card mini-stat rounded-lg p-2">
+              <div class="stat-label text-gray-400 mb-1">Sentences</div>
+              <div class="stat-value text-amber-400" id="statSentences">0</div>
+              <div class="text-xs text-gray-500 mt-1" id="statSentencesDetail">avg 0</div>
+            </div>
+            
+            <div class="stat-card mini-stat rounded-lg p-2">
+              <div class="stat-label text-gray-400 mb-1">Paragraphs</div>
+              <div class="stat-value text-rose-400" id="statParagraphs">0</div>
+            </div>
+            
+            <div class="stat-card mini-stat rounded-lg p-2">
+              <div class="stat-label text-gray-400 mb-1">Reading</div>
+              <div class="stat-value text-cyan-400" id="statReadingTime">0s</div>
+              <div class="text-xs text-gray-500 mt-1">200 wpm</div>
+            </div>
+            
+            <div class="stat-card mini-stat rounded-lg p-2">
+              <div class="stat-label text-gray-400 mb-1">Speaking</div>
+              <div class="stat-value text-violet-400" id="statSpeakingTime">0s</div>
+              <div class="text-xs text-gray-500 mt-1">130 wpm</div>
+            </div>
+            
+            <!-- Readability Score - Spans 3 columns on desktop, 2 on mobile -->
+            <div class="stat-card rounded-lg p-2 col-span-2 md:col-span-3">
+              <div class="flex justify-between items-center mb-1">
+                <div class="stat-label text-gray-400">Readability Score</div>
+                <div class="text-xs font-medium px-2 py-0.5 rounded-full bg-white/10" id="statReadabilityLabel">N/A</div>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="text-2xl font-bold" id="statReadability">--</div>
+                <div class="flex-1">
+                  <div class="readability-gauge">
+                    <div class="readability-marker" id="readabilityMarker" style="left: 0%"></div>
+                  </div>
+                  <div class="flex justify-between text-xs text-gray-500 mt-1">
+                    <span>Easy</span>
+                    <span>Hard</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Character Breakdown -->
+          <div class="grid grid-cols-4 gap-1 mt-2">
+            <div class="text-center p-1.5 rounded bg-white/5">
+              <div class="text-xs font-bold text-white" id="statLetters">0</div>
+              <div class="text-[10px] text-gray-500">Letters</div>
+            </div>
+            <div class="text-center p-1.5 rounded bg-white/5">
+              <div class="text-xs font-bold text-white" id="statNumbers">0</div>
+              <div class="text-[10px] text-gray-500">Numbers</div>
+            </div>
+            <div class="text-center p-1.5 rounded bg-white/5">
+              <div class="text-xs font-bold text-white" id="statSpaces">0</div>
+              <div class="text-[10px] text-gray-500">Spaces</div>
+            </div>
+            <div class="text-center p-1.5 rounded bg-white/5">
+              <div class="text-xs font-bold text-white" id="statPunctuation">0</div>
+              <div class="text-[10px] text-gray-500">Punct</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Detailed Analysis Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-3">
+        
+        <!-- Analysis Tabs -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Detailed Analysis</label>
+          <div class="flex flex-wrap gap-1">
+            <button class="method-btn active rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-tab="characters">Characters</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-tab="words">Top Words</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-tab="density">Keyword Density</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-tab="structure">Structure</button>
+          </div>
+        </div>
+
+        <!-- Tab Content -->
+        <div id="tabCharacters" class="tab-content">
+          <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-2">
+            <div class="stat-card rounded-lg p-2 text-center">
+              <div class="text-xs text-gray-400">Letters</div>
+              <div class="text-lg font-bold text-white" id="statLettersDetail">0</div>
+            </div>
+            <div class="stat-card rounded-lg p-2 text-center">
+              <div class="text-xs text-gray-400">Numbers</div>
+              <div class="text-lg font-bold text-white" id="statNumbersDetail">0</div>
+            </div>
+            <div class="stat-card rounded-lg p-2 text-center">
+              <div class="text-xs text-gray-400">Spaces</div>
+              <div class="text-lg font-bold text-white" id="statSpacesDetail">0</div>
+            </div>
+            <div class="stat-card rounded-lg p-2 text-center">
+              <div class="text-xs text-gray-400">Punctuation</div>
+              <div class="text-lg font-bold text-white" id="statPunctuationDetail">0</div>
+            </div>
+            <div class="stat-card rounded-lg p-2 text-center">
+              <div class="text-xs text-gray-400">Uppercase</div>
+              <div class="text-lg font-bold text-white" id="statUppercase">0</div>
+            </div>
+            <div class="stat-card rounded-lg p-2 text-center">
+              <div class="text-xs text-gray-400">Lowercase</div>
+              <div class="text-lg font-bold text-white" id="statLowercase">0</div>
+            </div>
+          </div>
+          
+          <!-- Character Distribution Bar -->
+          <div class="mt-3">
+            <div class="text-xs text-gray-400 mb-2">Character Type Distribution</div>
+            <div class="flex h-6 rounded-md overflow-hidden" id="charDistribution">
+              <div class="bg-indigo-500/60 flex items-center justify-center text-xs text-white font-medium" id="distLetters" style="width: 0%">0%</div>
+              <div class="bg-emerald-500/60 flex items-center justify-center text-xs text-white font-medium" id="distNumbers" style="width: 0%">0%</div>
+              <div class="bg-amber-500/60 flex items-center justify-center text-xs text-white font-medium" id="distSpaces" style="width: 0%">0%</div>
+              <div class="bg-rose-500/60 flex items-center justify-center text-xs text-white font-medium" id="distPunctuation" style="width: 0%">0%</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="tabWords" class="tab-content hidden">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2" id="topWordsContainer">
+            <!-- Top words will be populated here -->
+            <div class="text-center text-gray-500 text-xs py-4">Enter text to see top words</div>
+          </div>
+        </div>
+
+        <div id="tabDensity" class="tab-content hidden">
+          <!-- N-gram Tabs -->
+          <div class="ngram-tabs">
+            <button class="ngram-tab active" data-ngram="1">Single Words</button>
+            <button class="ngram-tab" data-ngram="2">2-Word Phrases</button>
+            <button class="ngram-tab" data-ngram="3">3-Word Phrases</button>
+            <button class="ngram-tab" data-ngram="4">4-Word Phrases</button>
+            <button class="ngram-tab" data-ngram="5">Long-tail (5+)</button>
+          </div>
+          
+          <!-- N-gram Stats Summary -->
+          <div class="flex gap-4 mb-3 text-xs text-gray-400">
+            <span id="ngramTotal">Total phrases: 0</span>
+            <span id="ngramUnique">Unique: 0</span>
+            <span id="ngramTop">Most frequent: -</span>
+          </div>
+          
+          <!-- N-gram List -->
+          <div class="ngram-list" id="ngramList">
+            <!-- Populated by JS -->
+          </div>
+          
+          <div class="text-xs text-gray-500 mt-2" id="densityInfo">
+            Select a tab above to view keyword phrases by length. Stop words are filtered for meaningful results.
+          </div>
+        </div>
+
+        <div id="tabStructure" class="tab-content hidden">
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2">
+            <div class="stat-card rounded-lg p-2 text-center">
+              <div class="text-xs text-gray-400">Avg Word Length</div>
+              <div class="text-lg font-bold text-white" id="statAvgWordLen">0</div>
+            </div>
+            <div class="stat-card rounded-lg p-2 text-center">
+              <div class="text-xs text-gray-400">Avg Sentence Len</div>
+              <div class="text-lg font-bold text-white" id="statAvgSentenceLen">0</div>
+            </div>
+            <div class="stat-card rounded-lg p-2 text-center">
+              <div class="text-xs text-gray-400">Longest Word</div>
+              <div class="text-lg font-bold text-white truncate px-1" id="statLongestWord">-</div>
+            </div>
+            <div class="stat-card rounded-lg p-2 text-center">
+              <div class="text-xs text-gray-400">Unique Words</div>
+              <div class="text-lg font-bold text-white" id="statUniqueWords">0</div>
+            </div>
+            <div class="stat-card rounded-lg p-2 text-center">
+              <div class="text-xs text-gray-400">Lexical Density</div>
+              <div class="text-lg font-bold text-white" id="statLexicalDensity">0%</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Processing Time -->
+        <div class="flex justify-end">
+          <span id="processingTime" class="text-xs text-gray-600"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Text Statistics Dashboard?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Real-time Stats</h3>
+          <p class="text-gray-400 text-xs">Instant analysis as you type or paste</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Visual Analytics</h3>
+          <p class="text-gray-400 text-xs">Charts, progress bars & distributions</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Drag & Drop</h3>
+          <p class="text-gray-400 text-xs">Upload files for instant analysis</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based, no data uploads</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Download full statistics report</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration required</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Enter Text</h3>
+          <p class="text-gray-400 text-xs">Type, paste, or upload a text file. Analysis happens automatically.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">View Stats</h3>
+          <p class="text-gray-400 text-xs">See real-time word count, characters, reading time, and readability scores.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Explore Details</h3>
+          <p class="text-gray-400 text-xs">Switch tabs to see character breakdown, top words, and keyword density.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Download a complete statistics report for your records or sharing.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Text Statistics Analysis: Mastering Content Metrics for Better Writing</h2>
+        
+        <p><strong>Text statistics analysis</strong> has become an essential practice for writers, editors, SEO professionals, and content creators seeking to optimize their work. Whether you're crafting blog posts, academic papers, marketing copy, or social media content, understanding the quantitative aspects of your text through a comprehensive <strong>free text statistics dashboard</strong> can dramatically improve readability, engagement, and search performance. This guide explores everything you need to know about leveraging <strong>online text statistics tools</strong> to enhance your writing workflow.</p>
+
+        <h2>What Is Text Statistics Analysis and Why Does It Matter?</h2>
+        
+        <p><strong>Text statistics analysis</strong> refers to the systematic examination of written content through quantitative metrics. Unlike subjective editing that relies on intuition, statistical analysis provides objective data about your text's characteristics: word count, sentence length, vocabulary diversity, readability scores, and keyword distribution. A professional-grade <strong>text statistics dashboard online free</strong> platform transforms raw text into actionable insights that guide revision and optimization decisions.</p>
+
+        <p>The importance of <strong>online text analysis tool free</strong> platforms extends across multiple disciplines. Journalists use word counts to meet publication requirements. SEO specialists analyze keyword density to optimize search rankings. Educators evaluate text complexity to ensure appropriate reading levels. Marketers measure content length against engagement metrics. Technical writers verify consistency across documentation. Each application benefits from the precise, immediate feedback that automated <strong>text analysis dashboard free</strong> tools provide.</p>
+
+        <h2>Understanding Core Text Metrics and Their Applications</h2>
+
+        <h3>Basic Count Metrics: Foundation of Text Analysis</h3>
+        
+        <p>The fundamental metrics provided by any <strong>free online text metrics tool</strong> include character count, word count, sentence count, and paragraph count. While seemingly simple, these statistics serve crucial practical purposes. Character counts ensure compliance with platform limits—Twitter's former 280-character restriction, SMS message limits, or meta description length guidelines. Word counts satisfy academic assignment requirements, editorial guidelines, and SEO best practices that correlate content length with search performance.</p>
+
+        <p>Beyond raw counts, sophisticated <strong>online word count and stats free</strong> platforms calculate derived metrics like average word length, average sentence length, and words per paragraph. These secondary statistics reveal writing style characteristics that raw counts cannot convey. Short average word lengths suggest accessible, readable prose suitable for general audiences. Longer averages indicate technical or academic writing targeting specialized readers. Professional <strong>free text statistics generator online</strong> tools present these metrics in context, helping writers understand whether their style matches their intended audience.</p>
+
+        <h3>Readability Scoring: Measuring Text Accessibility</h3>
+        
+        <p>Readability formulas transform structural metrics into grade-level equivalents that predict comprehension difficulty. The Flesch Reading Ease score, perhaps the most widely recognized metric, calculates difficulty based on average sentence length and syllables per word. Scores range from 0-100, with higher values indicating easier reading. Professional <strong>online text stats checker free</strong> platforms typically implement multiple readability formulas—Flesch-Kincaid, Gunning Fog, SMOG, Coleman-Liau—providing consensus estimates rather than relying on single metrics.</p>
+
+        <p>Readability analysis through <strong>free web text statistics tool</strong> platforms serves diverse applications. Educational publishers ensure textbooks match grade-level expectations. Government agencies verify public communications meet plain language standards. Marketing teams optimize copy for target demographic literacy levels. Healthcare providers confirm patient materials remain comprehensible to general audiences. The <strong>text statistics tool for SEO</strong> application ensures content accessibility directly impacts search rankings, as Google evaluates readability as a user experience signal.</p>
+
+        <h3>Time Estimation: Practical Content Planning</h3>
+        
+        <p>Reading time and speaking time calculations help content planners set appropriate expectations and structure presentations effectively. Standard reading speed estimates range from 200-250 words per minute for casual reading to 300+ for focused technical consumption. Speaking time, typically calculated at 130-150 words per minute, assists speechwriters, podcasters, and video script creators in timing their content accurately.</p>
+
+        <p>Advanced <strong>online text analytic dashboard free</strong> implementations adjust time estimates based on text complexity. Technical documentation with dense terminology receives longer time allocations than conversational blog posts of equivalent word counts. Visual <strong>free online text statistics panel</strong> presentations might display time estimates alongside progress bars or clock icons, making the temporal dimension of content immediately comprehensible at a glance.</p>
+
+        <h2>Advanced Text Analysis Techniques</h2>
+
+        <h3>Character Distribution and Composition Analysis</h3>
+        
+        <p>Beyond simple character counts, professional <strong>online text data dashboard free</strong> tools analyze character composition—distinguishing letters from numbers, spaces, punctuation, and special symbols. This breakdown serves technical applications like password strength evaluation, code analysis, and data validation. Writers benefit from understanding their punctuation density; excessive exclamation points or question marks may undermine professional tone, while insufficient variety creates monotonous rhythm.</p>
+
+        <p>Case distribution analysis (uppercase versus lowercase percentages) helps identify formatting inconsistencies or SHOUTING PROBLEMS in social media monitoring applications. The <strong>text stats generator free online</strong> visualization of character types through color-coded bar charts or pie diagrams makes composition patterns immediately visible, highlighting anomalies that warrant attention.</p>
+
+        <h3>Vocabulary Analysis and Keyword Density</h3>
+        
+        <p>Word frequency analysis identifies the most commonly used terms in your text, revealing unconscious repetition or confirming intentional keyword emphasis. SEO-focused <strong>free online text insights tool</strong> platforms calculate keyword density—the percentage of total words occupied by specific terms—to prevent over-optimization penalties while ensuring sufficient topical relevance. Optimal density typically ranges from 1-3% for primary keywords, though modern search algorithms prioritize natural language over mechanical keyword placement.</p>
+
+        <p>Lexical diversity measures vocabulary richness by comparing unique words to total words. Academic writing typically achieves 15-25% lexical diversity, while creative fiction may exceed 30%. Low diversity scores indicate repetitive language that may bore readers; extremely high diversity in technical contexts may indicate unnecessary jargon. The <strong>online text metrics dashboard free</strong> presentation of these metrics helps writers balance variety with clarity.</p>
+
+        <h3>Structural Pattern Recognition</h3>
+        
+        <p>Sophisticated <strong>free online string statistics tool</strong> implementations analyze structural patterns: sentence length variation, paragraph consistency, and transition word usage. Writing quality often correlates with rhythmic variation—mixing short punchy sentences with longer complex constructions maintains reader engagement. Monotonous structures, whether consistently short (choppy) or long (dense), reduce comprehension and interest.</p>
+
+        <p>Paragraph length analysis through <strong>text statistics utility online free</strong> tools helps maintain visual scannability in digital content. Online readers prefer paragraphs of 2-4 sentences; walls of text trigger abandonment. Structural analysis might also identify passive voice frequency, transition word usage, or subheading distribution—each contributing to overall content quality and reader experience.</p>
+
+        <h2>Practical Applications Across Industries</h2>
+
+        <h3>Search Engine Optimization and Content Marketing</h3>
+        
+        <p>SEO professionals rely heavily on <strong>online text characters count free</strong> and comprehensive statistics analysis to optimize content for search visibility. Title tag and meta description character limits must be carefully managed to prevent truncation in search results. Content length correlates with ranking potential, with longer comprehensive guides typically outperforming brief posts for competitive keywords. However, length alone insufficient—readability, structure, and engagement metrics determine whether visitors actually consume the content.</p>
+
+        <p>Keyword distribution analysis through <strong>free online word and character counter</strong> tools ensures topical coverage breadth. Rather than repeating the same phrase, modern SEO requires semantic variety—related terms, synonyms, and contextual phrases that demonstrate comprehensive topic understanding. Advanced <strong>online text breakdown tool free</strong> platforms identify content gaps by comparing your keyword distribution against competitor benchmarks or topical authority models.</p>
+
+        <h3>Academic and Educational Writing</h3>
+        
+        <p>Educational institutions employ <strong>free online text summary stats</strong> analysis for multiple purposes. Assignment length requirements ensure appropriate depth of research and analysis. Plagiarism detection systems use statistical fingerprinting to identify suspicious similarity patterns. Reading level analysis ensures textbooks match student capabilities without being condescending or impossibly difficult. Writing instruction benefits from concrete metrics that help students understand abstract concepts like "wordiness" or "sentence variety."</p>
+
+        <p>Research publication involves strict formatting requirements where <strong>online text statistics tool</strong> automation proves essential. Abstract word limits, manuscript page counts, and figure caption lengths must be precisely managed. Statistical analysis of one's own writing over time can identify improvement trends or persistent habits requiring intervention.</p>
+
+        <h3>Professional and Technical Communication</h3>
+        
+        <p>Business communication increasingly relies on data-driven editing to ensure clarity and efficiency. Email subject line character optimization maximizes mobile display. Report executive summaries respect executive time constraints through precise length management. Proposal writing balances comprehensiveness with readability to maintain evaluator engagement through lengthy competitive documents.</p>
+
+        <p>Technical documentation benefits from consistency analysis that ensures uniform terminology, structure, and complexity across large documentation sets. Style guide compliance checking through automated <strong>free text statistics dashboard</strong> tools reduces editorial burden while maintaining brand voice standards across multiple authors and content pieces.</p>
+
+        <h2>Best Practices for Text Statistics Utilization</h2>
+
+        <h3>Establishing Baseline Metrics</h3>
+        
+        <p>Effective use of <strong>online text statistics tool</strong> platforms begins with understanding your baseline. Analyze your previous successful content to establish typical ranges for your writing: average word lengths, preferred sentence structures, typical lexical diversity scores. These personal benchmarks help identify when a particular piece deviates significantly from your effective style, warranting revision or confirming intentional stylistic variation.</p>
+
+        <p>Competitive analysis extends this approach to industry benchmarking. Analyze top-performing content in your niche to understand successful patterns. If high-ranking articles average 1,500 words with 18% lexical diversity and 8th-grade readability, your 800-word piece with 35% diversity and college-level complexity may need adjustment—or may represent a differentiation opportunity if the niche tolerates variety.</p>
+
+        <h3>Balancing Metrics with Creativity</h3>
+        
+        <p>While <strong>text statistics dashboard online free</strong> tools provide valuable guidance, rigid adherence to metrics produces mechanical, soulless writing. The best content balances statistical optimization with authentic voice, emotional resonance, and creative expression. Use statistics to identify potential problems—excessive length, poor readability, repetitive vocabulary—but don't let metrics override judgment about when to break rules for effect.</p>
+
+        <p>Context determines metric importance. A technical whitepaper prioritizes precision over reading ease; a children's story embraces simple vocabulary and short sentences as features, not limitations. Professional <strong>online text analysis tool free</strong> users develop nuanced interpretation skills, recognizing when metrics indicate genuine problems versus appropriate stylistic choices.</p>
+
+        <h3>Iterative Improvement Through Measurement</h3>
+        
+        <p>Treat text analysis as an iterative process rather than a one-time check. Initial drafts typically exceed target lengths, requiring compression that improves density and impact. Readability analysis of draft sections identifies passages requiring simplification or expansion. Keyword distribution review ensures topical coverage without awkward repetition. Multiple analysis cycles, each followed by targeted revision, progressively refine content quality.</p>
+
+        <p>Longitudinal tracking through <strong>text analysis dashboard free</strong> tools helps writers improve over time. Maintaining records of your typical metrics, revision patterns, and outcome correlations (engagement, rankings, conversions) builds personal expertise about what works for your specific audience and goals. This data-driven approach to skill development accelerates improvement beyond trial-and-error learning.</p>
+
+        <h2>Comparing Text Analysis Approaches</h2>
+
+        <h3>Manual Analysis vs. Automated Tools</h3>
+        
+        <p>Manual text analysis using word processor features or simple counting proves tedious and error-prone. Calculating readability scores by hand requires counting syllables, sentences, and words—impractical for lengthy documents or frequent analysis. Automated <strong>free online text metrics tool</strong> platforms complete comprehensive analysis in milliseconds, enabling real-time feedback during writing rather than post-hoc review.</p>
+
+        <p>The speed advantage of automation enables analysis integration into writing workflows rather than treating it as a separate editing phase. Real-time word count displays, common in modern writing applications, represent minimal automation. Comprehensive <strong>online word count and stats free</strong> dashboards extend this immediacy to readability, structure, and vocabulary analysis, providing continuous guidance during composition.</p>
+
+        <h3>Simple Counters vs. Comprehensive Dashboards</h3>
+        
+        <p>Basic word counters provide limited utility beyond simple length verification. Comprehensive <strong>free text statistics generator online</strong> dashboards offer integrated analysis that reveals relationships between metrics—how sentence length affects readability, how vocabulary diversity correlates with engagement, how keyword density distributes across content sections. These relational insights exceed the sum of individual metric values.</p>
+
+        <p>Visualization quality distinguishes professional <strong>online text stats checker free</strong> tools from basic implementations. Progress bars, distribution charts, color-coded alerts, and comparative benchmarks transform numerical data into immediately actionable visual intelligence. The best platforms present complex statistics through intuitive interfaces that require no statistical training to interpret effectively.</p>
+
+        <h2>The Future of Text Analytics Technology</h2>
+
+        <p>Artificial intelligence is revolutionizing <strong>free web text statistics tool</strong> capabilities beyond simple counting and formula application. Machine learning models now predict content performance—engagement likelihood, ranking potential, conversion probability—based on statistical patterns learned from millions of content pieces. These predictive analytics guide optimization priorities, helping writers focus revision efforts where statistical impact will be greatest.</p>
+
+        <p>Natural language processing advances enable semantic analysis that supplements structural statistics. AI-powered <strong>text statistics tool for SEO</strong> platforms evaluate topical authority, sentiment distribution, and entity relationships alongside traditional metrics. The integration of structural statistics with semantic understanding represents the next evolution in content optimization—quantitative precision combined with qualitative relevance.</p>
+
+        <h2>Conclusion: Embracing Data-Driven Writing Excellence</h2>
+
+        <p><strong>Text statistics analysis</strong> has transitioned from specialized editorial practice to essential writing competency. The availability of sophisticated <strong>free text statistics dashboard</strong> tools democratizes access to professional-grade content analysis, enabling writers at all levels to optimize their work with precision previously available only through expensive software or expert consultants. Understanding and applying text metrics separates effective digital communicators from those relying solely on intuition.</p>
+
+        <p>Our <strong>online text statistics tool</strong> provides comprehensive analysis capabilities that support every stage of the writing process—from initial planning through final optimization. With real-time metrics, visual analytics, readability scoring, and exportable reports, this platform serves bloggers, students, marketers, educators, and professionals seeking to elevate their writing through data-informed refinement. Whether you need quick <strong>online text characters count free</strong> verification or deep <strong>free online text statistics panel</strong> analysis, our tool delivers professional results instantly. Stop guessing about your content quality—start measuring, understanding, and improving with precision today.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does the analysis update automatically as I type?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>free text statistics dashboard</strong> provides <strong>real-time analysis</strong> as you type or paste text. Every keystroke updates word count, character count, reading time, and all other metrics instantly. The "Auto-analyzing enabled" indicator confirms live updates are active. For large documents, there's a brief debounce delay to ensure smooth performance.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What's a good readability score?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Readability depends on your audience. <strong>Flesch Reading Ease</strong> scores: 90-100 (very easy, 5th grade), 60-70 (standard, 8th-9th grade), 30-50 (college level), 0-30 (very difficult). General web content should aim for 60-70. Technical documentation might target 30-50. The <strong>online text statistics tool</strong> shows both the score and grade level interpretation.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How accurate is the reading time estimate?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Our <strong>online text analysis tool free</strong> uses standard reading speed benchmarks: 200 words per minute for reading, 130 words per minute for speaking. These are averages—actual speeds vary by content complexity and reader familiarity. Technical content may take 50% longer; casual content may read 20% faster. Use estimates as guidelines rather than precise predictions.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What's keyword density and why does it matter?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Keyword density</strong> is the percentage of times a word appears relative to total word count. For SEO, optimal density is typically 1-3% for primary keywords—enough to signal relevance without "keyword stuffing" that triggers search penalties. Our <strong>text statistics tool for SEO</strong> highlights your most frequent words to help optimize naturally.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I export the statistics report?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Click the <strong>Export</strong> button to download a complete text statistics report as a text file. The report includes all metrics: character counts, word analysis, readability scores, reading times, and keyword frequency data. Perfect for sharing with editors, clients, or keeping records of your content optimization efforts.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What's lexical density and why is it important?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Lexical density</strong> measures vocabulary richness: unique words divided by total words, expressed as a percentage. Higher density (20%+) indicates varied vocabulary and potentially more engaging content. Very low density suggests repetitive language. However, technical topics naturally have lower density due to necessary term repetition. The <strong>online text metrics dashboard free</strong> helps you find the right balance.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool count characters with or without spaces?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Our <strong>free online text analyzer</strong> shows both! The main "Total Characters" includes spaces and punctuation. The Characters tab breaks down letters, numbers, spaces, and punctuation separately. This dual reporting satisfies different needs: social media limits usually include spaces, while some academic or technical requirements specify "characters without spaces."</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my text data secure?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely. All analysis happens <strong>locally in your browser</strong>—your text never uploads to servers or leaves your device. You can verify this using browser DevTools (Network tab shows no data transmission). Works offline after loading. Ideal for confidential documents, unpublished manuscripts, or sensitive business content. Privacy is built into our <strong>free online text statistics panel</strong> architecture.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this tool free?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, completely <strong>free</strong> with no registration, usage limits, watermarks, or hidden fees. Use for personal or commercial projects without attribution. This is truly a <strong>free online text statistics dashboard</strong> for everyone. Supported by unobtrusive advertising and voluntary user support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// Global variables
+let currentTab = 'characters';
+let currentNgram = 1;
+let debounceTimer = null;
+let ngramData = {};
+let hasAnalyzed = false;
+
+// Common English stop words to filter out
+const stopWords = new Set([
+  'a', 'an', 'the', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by',
+  'from', 'up', 'about', 'into', 'through', 'during', 'before', 'after', 'above', 'below',
+  'between', 'among', 'is', 'are', 'was', 'were', 'be', 'been', 'being', 'have', 'has', 'had',
+  'do', 'does', 'did', 'will', 'would', 'could', 'should', 'may', 'might', 'must', 'shall',
+  'can', 'need', 'dare', 'ought', 'used', 'it', 'its', 'itself', 'this', 'that', 'these', 'those',
+  'i', 'me', 'my', 'myself', 'we', 'our', 'ours', 'ourselves', 'you', 'your', 'yours', 'yourself',
+  'yourselves', 'he', 'him', 'his', 'himself', 'she', 'her', 'hers', 'herself', 'they', 'them',
+  'their', 'theirs', 'themselves', 'what', 'which', 'who', 'whom', 'whose', 'where', 'when',
+  'why', 'how', 'all', 'any', 'both', 'each', 'few', 'more', 'most', 'other', 'some', 'such',
+  'no', 'nor', 'not', 'only', 'own', 'same', 'so', 'than', 'too', 'very', 'just', 'now', 'then',
+  'also', 'as', 'if', 'unless', 'while', 'because', 'since', 'until', 'although', 'though',
+  'once', 'whether', 'however', 'therefore', 'thus', 'hence', 'moreover', 'furthermore',
+  'nevertheless', 'nonetheless', 'otherwise', 'instead', 'meanwhile', 'afterwards', 'ago',
+  'ahead', 'anyway', 'besides', 'beyond', 'despite', 'except', 'regarding', 'plus', 'minus',
+  'via', 'per', 'amongst', 'amid', 'amidst', 'beneath', 'beside', 'concerning', 'considering',
+  'despite', 'except', 'following', 'like', 'near', 'past', 'round', 'save', 'till', 'upon',
+  'within', 'without', 'here', 'there', 'everywhere', 'anywhere', 'somewhere', 'elsewhere',
+  'nowhere', 'everyone', 'someone', 'anyone', 'noone', 'everybody', 'somebody', 'anybody',
+  'nobody', 'everything', 'something', 'anything', 'nothing', 'one', 'two', 'three', 'four',
+  'five', 'six', 'seven', 'eight', 'nine', 'ten', 'first', 'second', 'third', 'last', 'next',
+  'previous', 'such', 'many', 'much', 'more', 'most', 'some', 'any', 'enough', 'several', 'various',
+  'certain', 'own', 'same', 'different', 'other', 'another', 'else', 'various', 'either', 'neither',
+  'both', 'all', 'none', 'nobody', 'nothing', 'nowhere', 'everywhere', 'somewhere', 'anywhere'
+]);
+
+// DOM Ready function
+document.addEventListener('DOMContentLoaded', function() {
+  // Set current year
+  document.getElementById('currentYear').textContent = new Date().getFullYear();
+  
+  // Initialize event listeners
+  initializeEventListeners();
+  
+  // Initial analysis
+  analyzeText();
+});
+
+// Debounce function
+function debounce(func, wait) {
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(debounceTimer);
+      func(...args);
+    };
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(later, wait);
+  };
+}
+
+// Initialize all event listeners
+function initializeEventListeners() {
+  // Mobile menu
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  
+  if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+    });
+    
+    document.addEventListener('click', (e) => {
+      if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+        mobileMenu.classList.remove('open');
+      }
+    });
+  }
+  
+  // Main buttons
+  const sampleBtn = document.getElementById('sampleBtn');
+  const pasteBtn = document.getElementById('pasteBtn');
+  const clearBtn = document.getElementById('clearBtn');
+  const exportBtn = document.getElementById('exportBtn');
+  const resetBtn = document.getElementById('resetBtn');
+  const fileSelectBtn = document.getElementById('fileSelectBtn');
+  
+  if (sampleBtn) sampleBtn.addEventListener('click', loadSampleText);
+  if (pasteBtn) pasteBtn.addEventListener('click', pasteFromClipboard);
+  if (clearBtn) clearBtn.addEventListener('click', clearInput);
+  if (exportBtn) exportBtn.addEventListener('click', exportStats);
+  if (resetBtn) resetBtn.addEventListener('click', resetAll);
+  if (fileSelectBtn) fileSelectBtn.addEventListener('click', () => {
+    const fileInput = document.getElementById('fileInput');
+    if (fileInput) fileInput.click();
+  });
+  
+  // Input textarea
+  const inputText = document.getElementById('inputText');
+  if (inputText) {
+    inputText.addEventListener('input', debounce(analyzeText, 100));
+  }
+  
+  // Tab buttons
+  document.querySelectorAll('.method-btn[data-tab]').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.method-btn[data-tab]').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      currentTab = this.dataset.tab;
+      
+      // Show/hide tab content
+      document.querySelectorAll('.tab-content').forEach(content => {
+        content.classList.add('hidden');
+      });
+      const selectedTab = document.getElementById('tab' + currentTab.charAt(0).toUpperCase() + currentTab.slice(1));
+      if (selectedTab) {
+        selectedTab.classList.remove('hidden');
+      }
+      
+      // If density tab is selected, display ngrams immediately
+      if (currentTab === 'density') {
+        displayNgrams();
+      }
+    });
+  });
+  
+  // N-gram tabs
+  document.querySelectorAll('.ngram-tab').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.ngram-tab').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      currentNgram = parseInt(this.dataset.ngram);
+      displayNgrams();
+    });
+  });
+  
+  // File input
+  const fileInput = document.getElementById('fileInput');
+  if (fileInput) {
+    fileInput.addEventListener('change', handleFileSelect);
+  }
+  
+  // Drag and drop
+  const dropZone = document.getElementById('dropZone');
+  const dropOverlay = document.getElementById('dropOverlay');
+  
+  if (dropZone && dropOverlay) {
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+      dropZone.addEventListener(eventName, preventDefaults, false);
+    });
+    
+    function preventDefaults(e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    
+    ['dragenter', 'dragover'].forEach(eventName => {
+      dropZone.addEventListener(eventName, () => {
+        dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+      }, false);
+    });
+    
+    ['dragleave', 'drop'].forEach(eventName => {
+      dropZone.addEventListener(eventName, () => {
+        dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+      }, false);
+    });
+    
+    dropZone.addEventListener('drop', handleDrop, false);
+  }
+}
+
+// Generate n-grams from text
+function generateNgrams(text, n) {
+  const words = text.toLowerCase()
+    .replace(/[^\w\s]/g, ' ')
+    .split(/\s+/)
+    .filter(w => w.length > 0 && (n === 1 ? !stopWords.has(w) : true));
+  
+  const ngrams = {};
+  
+  for (let i = 0; i <= words.length - n; i++) {
+    const ngram = words.slice(i, i + n).join(' ');
+    
+    // Skip if contains only stop words for n > 1
+    if (n > 1) {
+      const ngramWords = ngram.split(' ');
+      const meaningfulWords = ngramWords.filter(w => !stopWords.has(w));
+      if (meaningfulWords.length === 0) continue;
+    }
+    
+    ngrams[ngram] = (ngrams[ngram] || 0) + 1;
+  }
+  
+  return ngrams;
+}
+
+// Display n-grams in the UI
+function displayNgrams() {
+  const container = document.getElementById('ngramList');
+  const totalEl = document.getElementById('ngramTotal');
+  const uniqueEl = document.getElementById('ngramUnique');
+  const topEl = document.getElementById('ngramTop');
+  
+  if (!container) return;
+  
+  // Check if we have data
+  if (!hasAnalyzed || !ngramData[currentNgram]) {
+    container.innerHTML = '<div class="text-center text-gray-500 text-xs py-4 col-span-full">Enter text to analyze keyword phrases</div>';
+    if (totalEl) totalEl.textContent = 'Total phrases: 0';
+    if (uniqueEl) uniqueEl.textContent = 'Unique: 0';
+    if (topEl) topEl.textContent = 'Most frequent: -';
+    return;
+  }
+  
+  const data = ngramData[currentNgram];
+  const sorted = Object.entries(data).sort((a, b) => b[1] - a[1]).slice(0, 20);
+  
+  if (sorted.length === 0) {
+    container.innerHTML = '<div class="text-center text-gray-500 text-xs py-4 col-span-full">No phrases found for this length</div>';
+    if (totalEl) totalEl.textContent = 'Total phrases: 0';
+    if (uniqueEl) uniqueEl.textContent = 'Unique: 0';
+    if (topEl) topEl.textContent = 'Most frequent: -';
+    return;
+  }
+  
+  const maxCount = sorted[0][1];
+  const total = Object.values(data).reduce((a, b) => a + b, 0);
+  
+  if (totalEl) totalEl.textContent = `Total phrases: ${total}`;
+  if (uniqueEl) uniqueEl.textContent = `Unique: ${sorted.length}`;
+  if (topEl) topEl.textContent = `Most frequent: "${sorted[0][0]}" (${sorted[0][1]})`;
+  
+  container.innerHTML = sorted.map(([phrase, count]) => {
+    const percentage = ((count / maxCount) * 100).toFixed(0);
+    const density = ((count / total) * 100).toFixed(1);
+    return `
+      <div class="ngram-item">
+        <div class="flex-1 min-w-0">
+          <div class="text-sm text-gray-300" title="${escapeHtml(phrase)}">${escapeHtml(phrase)}</div>
+          <div class="w-full bg-white/10 rounded-full h-1.5 mt-1">
+            <div class="bg-indigo-500 h-1.5 rounded-full" style="width: ${percentage}%"></div>
+          </div>
+        </div>
+        <div class="text-right ml-2 flex-shrink-0">
+          <div class="text-sm font-bold text-white">${count}</div>
+          <div class="text-xs text-gray-500">${density}%</div>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+// Load sample text
+function loadSampleText() {
+  const sampleText = `The quick brown fox jumps over the lazy dog. This pangram contains every letter of the English alphabet at least once. 
+
+Text analysis tools help writers improve their content by providing objective metrics about readability, word choice, and structure. Modern content creation requires balancing creativity with data-driven optimization.
+
+Search engines evaluate hundreds of factors when ranking content, but user engagement metrics often correlate with readability scores. Content that matches audience expectations for complexity and length tends to perform better than arbitrarily long or dense writing.
+
+Effective communication requires understanding your audience. Technical documentation for engineers differs fundamentally from marketing copy for consumers, and text statistics help ensure your writing matches your readers' needs.`;
+  
+  const inputText = document.getElementById('inputText');
+  if (inputText) {
+    inputText.value = sampleText;
+    analyzeText();
+  }
+}
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    const inputText = document.getElementById('inputText');
+    if (inputText) {
+      inputText.value = text;
+      analyzeText();
+    }
+  } catch (err) {
+    console.error('Failed to read clipboard:', err);
+  }
+}
+
+// Clear input
+function clearInput() {
+  const inputText = document.getElementById('inputText');
+  if (inputText) {
+    inputText.value = '';
+    analyzeText();
+  }
+}
+
+// Handle file select
+function handleFileSelect(e) {
+  const file = e.target.files[0];
+  if (file) {
+    readFile(file);
+  }
+}
+
+// Handle drop
+function handleDrop(e) {
+  const dt = e.dataTransfer;
+  const files = dt.files;
+  
+  if (files.length > 0) {
+    readFile(files[0]);
+  }
+}
+
+// Read file
+function readFile(file) {
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const inputText = document.getElementById('inputText');
+    if (inputText) {
+      inputText.value = e.target.result;
+      analyzeText();
+    }
+  };
+  reader.readAsText(file);
+}
+
+// Main analysis function
+function analyzeText() {
+  const startTime = performance.now();
+  
+  const inputText = document.getElementById('inputText');
+  if (!inputText) return;
+  
+  const text = inputText.value;
+  
+  // Update quick stats
+  const inputQuickStats = document.getElementById('inputQuickStats');
+  if (inputQuickStats) {
+    if (text.length === 0) {
+      inputQuickStats.textContent = 'Ready to analyze';
+      hasAnalyzed = false;
+    } else {
+      inputQuickStats.textContent = `${text.length} characters loaded`;
+      hasAnalyzed = true;
+    }
+  }
+  
+  if (text.length === 0) {
+    resetStats();
+    return;
+  }
+  
+  // Basic counts
+  const chars = text.length;
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+  const sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 0).length;
+  const paragraphs = text.split(/\n\s*\n/).filter(p => p.trim().length > 0).length;
+  
+  // Character types
+  const letters = (text.match(/[a-zA-Z]/g) || []).length;
+  const numbers = (text.match(/[0-9]/g) || []).length;
+  const spaces = (text.match(/\s/g) || []).length;
+  const punctuation = (text.match(/[^\w\s]/g) || []).length;
+  const uppercase = (text.match(/[A-Z]/g) || []).length;
+  const lowercase = (text.match(/[a-z]/g) || []).length;
+  
+  // Word analysis
+  const wordArray = text.toLowerCase().match(/\b[a-z]+\b/g) || [];
+  const uniqueWords = [...new Set(wordArray)];
+  const wordFreq = {};
+  wordArray.forEach(word => {
+    wordFreq[word] = (wordFreq[word] || 0) + 1;
+  });
+  
+  // Top words
+  const sortedWords = Object.entries(wordFreq)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 10);
+  
+  // Longest word
+  const longestWord = wordArray.reduce((longest, current) => 
+    current.length > longest.length ? current : longest, '');
+  
+  // Averages
+  const avgWordLength = wordArray.length > 0 ? 
+    (wordArray.reduce((sum, word) => sum + word.length, 0) / wordArray.length).toFixed(1) : 0;
+  const avgSentenceLength = sentences > 0 ? (words / sentences).toFixed(1) : 0;
+  
+  // Lexical density
+  const lexicalDensity = wordArray.length > 0 ? 
+    ((uniqueWords.length / wordArray.length) * 100).toFixed(1) : 0;
+  
+  // Reading time (200 wpm) and speaking time (130 wpm)
+  const readingTimeSeconds = Math.ceil((words / 200) * 60);
+  const speakingTimeSeconds = Math.ceil((words / 130) * 60);
+  
+  // Readability (Flesch Reading Ease)
+  const syllables = countSyllables(text);
+  const readability = calculateFleschReadingEase(words, sentences, syllables);
+  
+  // Generate n-grams for keyword density
+  ngramData[1] = generateNgrams(text, 1);
+  ngramData[2] = generateNgrams(text, 2);
+  ngramData[3] = generateNgrams(text, 3);
+  ngramData[4] = generateNgrams(text, 4);
+  ngramData[5] = generateNgrams(text, 5);
+  
+  // Update DOM
+  updateStat('statChars', chars);
+  updateStat('statWords', words);
+  updateStat('statSentences', sentences);
+  updateStat('statParagraphs', paragraphs);
+  updateStat('statReadingTime', formatTime(readingTimeSeconds));
+  updateStat('statSpeakingTime', formatTime(speakingTimeSeconds));
+  
+  // Update details
+  const statWordsDetail = document.getElementById('statWordsDetail');
+  if (statWordsDetail) statWordsDetail.textContent = `avg ${avgWordLength}`;
+  
+  const statSentencesDetail = document.getElementById('statSentencesDetail');
+  if (statSentencesDetail) statSentencesDetail.textContent = `avg ${avgSentenceLength}`;
+  
+  // Readability
+  const statReadability = document.getElementById('statReadability');
+  const statReadabilityLabel = document.getElementById('statReadabilityLabel');
+  const readabilityMarker = document.getElementById('readabilityMarker');
+  
+  if (statReadability) {
+    statReadability.textContent = readability.score.toFixed(0);
+    statReadability.style.color = readability.color;
+  }
+  if (statReadabilityLabel) {
+    statReadabilityLabel.textContent = readability.label;
+    statReadabilityLabel.style.color = readability.color;
+    statReadabilityLabel.style.background = readability.color + '20';
+  }
+  if (readabilityMarker) {
+    const position = Math.min(Math.max(readability.score, 0), 100);
+    readabilityMarker.style.left = position + '%';
+    readabilityMarker.style.background = readability.color;
+  }
+  
+  // Character stats (both main and detailed)
+  updateStat('statLetters', letters);
+  updateStat('statNumbers', numbers);
+  updateStat('statSpaces', spaces);
+  updateStat('statPunctuation', punctuation);
+  updateStat('statLettersDetail', letters);
+  updateStat('statNumbersDetail', numbers);
+  updateStat('statSpacesDetail', spaces);
+  updateStat('statPunctuationDetail', punctuation);
+  updateStat('statUppercase', uppercase);
+  updateStat('statLowercase', lowercase);
+  
+  // Character distribution
+  const totalChars = letters + numbers + spaces + punctuation;
+  if (totalChars > 0) {
+    updateDistribution('distLetters', letters, totalChars, 'bg-indigo-500/60');
+    updateDistribution('distNumbers', numbers, totalChars, 'bg-emerald-500/60');
+    updateDistribution('distSpaces', spaces, totalChars, 'bg-amber-500/60');
+    updateDistribution('distPunctuation', punctuation, totalChars, 'bg-rose-500/60');
+  }
+  
+  // Structure stats
+  updateStat('statAvgWordLen', avgWordLength);
+  updateStat('statAvgSentenceLen', avgSentenceLength);
+  
+  const statLongestWord = document.getElementById('statLongestWord');
+  if (statLongestWord) statLongestWord.textContent = longestWord || '-';
+  
+  updateStat('statUniqueWords', uniqueWords.length);
+  updateStat('statLexicalDensity', lexicalDensity + '%');
+  
+  // Top words
+  const topWordsContainer = document.getElementById('topWordsContainer');
+  if (topWordsContainer) {
+    if (sortedWords.length > 0) {
+      topWordsContainer.innerHTML = sortedWords.map(([word, count], index) => `
+        <div class="flex items-center justify-between p-2 rounded bg-white/5">
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-gray-500 w-5">${index + 1}.</span>
+            <span class="text-sm text-gray-300">${escapeHtml(word)}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="w-16 h-1.5 bg-white/10 rounded-full overflow-hidden">
+              <div class="h-full bg-indigo-500/60 rounded-full" style="width: ${(count / sortedWords[0][1]) * 100}%"></div>
+            </div>
+            <span class="text-xs text-gray-400 w-8 text-right">${count}</span>
+          </div>
+        </div>
+      `).join('');
+    } else {
+      topWordsContainer.innerHTML = '<div class="text-center text-gray-500 text-xs py-4">Enter text to see top words</div>';
+    }
+  }
+  
+  // Update n-gram display if density tab is active
+  if (currentTab === 'density') {
+    displayNgrams();
+  }
+  
+  // Processing time
+  const endTime = performance.now();
+  const processingTime = document.getElementById('processingTime');
+  if (processingTime) {
+    processingTime.textContent = `Analyzed in ${(endTime - startTime).toFixed(1)}ms`;
+  }
+}
+
+// Update single stat
+function updateStat(id, value) {
+  const element = document.getElementById(id);
+  if (element) {
+    element.textContent = value;
+  }
+}
+
+// Update distribution bar
+function updateDistribution(id, count, total, colorClass) {
+  const element = document.getElementById(id);
+  if (element) {
+    const percentage = total > 0 ? ((count / total) * 100).toFixed(0) : 0;
+    element.style.width = percentage + '%';
+    element.textContent = percentage > 10 ? percentage + '%' : '';
+    element.className = `${colorClass} flex items-center justify-center text-xs text-white font-medium transition-all duration-300`;
+  }
+}
+
+// Count syllables (simplified)
+function countSyllables(text) {
+  const words = text.toLowerCase().match(/\b[a-z]+\b/g) || [];
+  return words.reduce((count, word) => {
+    return count + Math.max(1, (word.match(/[aeiouy]{1,2}/g) || []).length);
+  }, 0);
+}
+
+// Calculate Flesch Reading Ease
+function calculateFleschReadingEase(words, sentences, syllables) {
+  if (words === 0 || sentences === 0) {
+    return { score: 0, label: 'N/A', color: '#9ca3af' };
+  }
+  
+  const score = 206.835 - (1.015 * (words / sentences)) - (84.6 * (syllables / words));
+  
+  let label, color;
+  if (score >= 90) {
+    label = 'Very Easy';
+    color = '#22c55e';
+  } else if (score >= 80) {
+    label = 'Easy';
+    color = '#4ade80';
+  } else if (score >= 70) {
+    label = 'Fairly Easy';
+    color = '#a3e635';
+  } else if (score >= 60) {
+    label = 'Standard';
+    color = '#facc15';
+  } else if (score >= 50) {
+    label = 'Fairly Difficult';
+    color = '#fb923c';
+  } else if (score >= 30) {
+    label = 'Difficult';
+    color = '#f87171';
+  } else {
+    label = 'Very Difficult';
+    color = '#ef4444';
+  }
+  
+  return { score: Math.max(0, score), label, color };
+}
+
+// Format time
+function formatTime(seconds) {
+  if (seconds < 60) return seconds + 's';
+  const minutes = Math.floor(seconds / 60);
+  const remainingSeconds = seconds % 60;
+  if (minutes < 60) return `${minutes}m ${remainingSeconds}s`;
+  const hours = Math.floor(minutes / 60);
+  const remainingMinutes = minutes % 60;
+  return `${hours}h ${remainingMinutes}m`;
+}
+
+// Reset stats
+function resetStats() {
+  hasAnalyzed = false;
+  ngramData = {};
+  
+  const stats = ['statChars', 'statWords', 'statSentences', 'statParagraphs', 'statReadingTime', 'statSpeakingTime'];
+  stats.forEach(id => updateStat(id, '0'));
+  
+  const details = ['statWordsDetail', 'statSentencesDetail'];
+  details.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = id === 'statWordsDetail' ? 'avg 0' : 'avg 0';
+  });
+  
+  const statReadability = document.getElementById('statReadability');
+  const statReadabilityLabel = document.getElementById('statReadabilityLabel');
+  const readabilityMarker = document.getElementById('readabilityMarker');
+  
+  if (statReadability) {
+    statReadability.textContent = '--';
+    statReadability.style.color = '';
+  }
+  if (statReadabilityLabel) {
+    statReadabilityLabel.textContent = 'N/A';
+    statReadabilityLabel.style.color = '';
+    statReadabilityLabel.style.background = '';
+  }
+  if (readabilityMarker) {
+    readabilityMarker.style.left = '0%';
+    readabilityMarker.style.background = '';
+  }
+  
+  ['statLetters', 'statNumbers', 'statSpaces', 'statPunctuation', 'statLettersDetail', 'statNumbersDetail', 'statSpacesDetail', 'statPunctuationDetail', 'statUppercase', 'statLowercase'].forEach(id => {
+    updateStat(id, '0');
+  });
+  
+  ['distLetters', 'distNumbers', 'distSpaces', 'distPunctuation'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.style.width = '0%';
+      el.textContent = '0%';
+    }
+  });
+  
+  ['statAvgWordLen', 'statAvgSentenceLen', 'statUniqueWords', 'statLexicalDensity'].forEach(id => {
+    updateStat(id, id === 'statLexicalDensity' ? '0%' : '0');
+  });
+  
+  const statLongestWord = document.getElementById('statLongestWord');
+  if (statLongestWord) statLongestWord.textContent = '-';
+  
+  const topWordsContainer = document.getElementById('topWordsContainer');
+  if (topWordsContainer) {
+    topWordsContainer.innerHTML = '<div class="text-center text-gray-500 text-xs py-4">Enter text to see top words</div>';
+  }
+  
+  const ngramList = document.getElementById('ngramList');
+  if (ngramList) {
+    ngramList.innerHTML = '<div class="text-center text-gray-500 text-xs py-4 col-span-full">Enter text to analyze keyword phrases</div>';
+  }
+  
+  const ngramTotal = document.getElementById('ngramTotal');
+  const ngramUnique = document.getElementById('ngramUnique');
+  const ngramTop = document.getElementById('ngramTop');
+  if (ngramTotal) ngramTotal.textContent = 'Total phrases: 0';
+  if (ngramUnique) ngramUnique.textContent = 'Unique: 0';
+  if (ngramTop) ngramTop.textContent = 'Most frequent: -';
+  
+  const processingTime = document.getElementById('processingTime');
+  if (processingTime) processingTime.textContent = '';
+}
+
+// Export stats
+function exportStats() {
+  const inputText = document.getElementById('inputText');
+  if (!inputText || !inputText.value.trim()) {
+    alert('Please enter some text to export statistics');
+    return;
+  }
+  
+  const text = inputText.value;
+  
+  // Gather all stats
+  const stats = {
+    timestamp: new Date().toISOString(),
+    textLength: text.length,
+    wordCount: text.trim() === '' ? 0 : text.trim().split(/\s+/).length,
+    sentenceCount: text.split(/[.!?]+/).filter(s => s.trim().length > 0).length,
+    paragraphCount: text.split(/\n\s*\n/).filter(p => p.trim().length > 0).length,
+    characterBreakdown: {
+      letters: (text.match(/[a-zA-Z]/g) || []).length,
+      numbers: (text.match(/[0-9]/g) || []).length,
+      spaces: (text.match(/\s/g) || []).length,
+      punctuation: (text.match(/[^\w\s]/g) || []).length
+    }
+  };
+  
+  const report = `TEXT STATISTICS REPORT
+Generated: ${new Date().toLocaleString()}
+================================
+
+BASIC STATISTICS
+----------------
+Total Characters: ${stats.textLength}
+Words: ${stats.wordCount}
+Sentences: ${stats.sentenceCount}
+Paragraphs: ${stats.paragraphCount}
+
+CHARACTER BREAKDOWN
+-------------------
+Letters: ${stats.characterBreakdown.letters}
+Numbers: ${stats.characterBreakdown.numbers}
+Spaces: ${stats.characterBreakdown.spaces}
+Punctuation: ${stats.characterBreakdown.punctuation}
+
+================================
+Report generated by EasyPro Tools Text Statistics Dashboard
+https://easyprotools.com/text-statistics-dashboard/`;
+  
+  const blob = new Blob([report], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'text-statistics-report.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Reset all
+function resetAll() {
+  const inputText = document.getElementById('inputText');
+  if (inputText) inputText.value = '';
+  resetStats();
+}
+
+// Escape HTML
+function escapeHtml(text) {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  if (content && icon) {
+    content.classList.toggle('open');
+    icon.classList.toggle('open');
+  }
+}
+</script>
+</body>
+</html>

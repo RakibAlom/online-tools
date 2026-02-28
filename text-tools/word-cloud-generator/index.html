@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Word Cloud Generator - Free Online Word Cloud Tool</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online word cloud generator. Create beautiful word clouds from text instantly. Customizable fonts, colors, and layouts. Perfect for SEO, presentations, and data visualization. No registration required." />
+  <meta name="keywords" content="free word cloud generator, online word cloud tool, word cloud maker online free, free online word cloud creator, word cloud generator online free, online text word cloud generator, free word cloud art creator, online tag cloud generator free, free web word cloud tool, word cloud design tool online, free online word cloud software, word cloud creator tool free, online word cloud graphics generator, free cloud of words maker, word cloud generator for seo, online word cloud image maker free, free word cloud visualization tool, online word cloud generator utility, free word cloud text art creator, online word cloud builder free, word cloud tool for website free, free online word cloud generator for text, online word cloud with shapes free" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/word-cloud-generator/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/word-cloud-generator/" />
+  <meta property="og:title" content="Word Cloud Generator - Free Online Word Cloud Tool" />
+  <meta property="og:description" content="Create beautiful word clouds from text instantly. Customizable fonts, colors, and layouts. Perfect for SEO, presentations, and data visualization. No registration required." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/word-cloud-generator/" />
+  <meta name="twitter:title" content="Word Cloud Generator - Free Online Word Cloud Tool" />
+  <meta name="twitter:description" content="Create beautiful word clouds from text instantly. Customizable fonts, colors, and layouts. Perfect for SEO, presentations, and data visualization. No registration required." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .method-btn {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    .method-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .word-cloud-container {
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      min-height: 300px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .word-item {
+      position: absolute;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      user-select: none;
+      line-height: 1;
+    }
+
+    .word-item:hover {
+      transform: scale(1.1);
+      z-index: 100;
+      filter: brightness(1.3);
+    }
+
+    .color-scheme-btn {
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .color-scheme-btn:hover {
+      transform: scale(1.1);
+    }
+
+    .color-scheme-btn.active {
+      border-color: white;
+      box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.5);
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+
+    .stats-badge {
+      background: rgba(99, 102, 241, 0.15);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      color: #818cf8;
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <circle cx="12" cy="20" r="3" fill="white"/>
+            <circle cx="20" cy="14" r="4" fill="white"/>
+            <circle cx="28" cy="20" r="3" fill="white"/>
+            <circle cx="16" cy="26" r="2.5" fill="white"/>
+            <circle cx="24" cy="26" r="2.5" fill="white"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Word Cloud</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Word Cloud Generator
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Word Cloud Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-generation enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Input Text
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Type or paste your text here... The word cloud will generate automatically as you type.&#10;&#10;Example:&#10;Data visualization is important for business intelligence. Word clouds help visualize text data and keyword frequency. SEO professionals use word clouds to analyze content."></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.csv,.md,.json,.xml,.html,.doc,.docx" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Words: 0 | Unique: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Word Cloud Display -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              Word Cloud Preview
+            </label>
+            <div class="flex gap-1">
+              <button id="downloadPngBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                PNG
+              </button>
+              <button id="downloadSvgBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                SVG
+              </button>
+            </div>
+          </div>
+          
+          <div id="wordCloudContainer" class="word-cloud-container rounded-lg w-full h-48 lg:h-64 flex items-center justify-center">
+            <canvas id="wordCloudCanvas" class="max-w-full max-h-full"></canvas>
+            <div id="emptyState" class="text-gray-500 text-xs text-center">
+              <svg class="w-8 h-8 mx-auto mb-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"/></svg>
+              Enter text to generate word cloud
+            </div>
+          </div>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="cloudStats">Displaying: 0 words</span>
+            <span id="processingTime" class="text-gray-600"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-3">
+        
+        <!-- Layout Options -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+          
+          <!-- Max Words -->
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Max Words</label>
+            <select id="maxWords" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="20">20 words</option>
+              <option value="50" selected>50 words</option>
+              <option value="100">100 words</option>
+              <option value="200">200 words</option>
+            </select>
+          </div>
+
+          <!-- Font Family -->
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Font Style</label>
+            <select id="fontFamily" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="Inter">Inter (Sans)</option>
+              <option value="serif">Serif</option>
+              <option value="monospace">Monospace</option>
+              <option value="cursive">Cursive</option>
+              <option value="fantasy">Fantasy</option>
+            </select>
+          </div>
+
+          <!-- Layout Shape -->
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Layout Shape</label>
+            <select id="layoutShape" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="circle">Circle</option>
+              <option value="square">Square</option>
+              <option value="diamond">Diamond</option>
+              <option value="triangle">Triangle</option>
+              <option value="spiral">Spiral</option>
+            </select>
+          </div>
+
+          <!-- Min Word Length -->
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Min Word Length</label>
+            <select id="minLength" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="2">2 letters</option>
+              <option value="3" selected>3 letters</option>
+              <option value="4">4 letters</option>
+              <option value="5">5 letters</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Color Schemes -->
+        <div>
+          <label class="text-xs text-gray-400 mb-2 block">Color Scheme</label>
+          <div class="flex flex-wrap gap-2">
+            <button class="color-scheme-btn active" data-scheme="vibrant" style="background: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899)" title="Vibrant"></button>
+            <button class="color-scheme-btn" data-scheme="ocean" style="background: linear-gradient(135deg, #0ea5e9, #06b6d4, #10b981)" title="Ocean"></button>
+            <button class="color-scheme-btn" data-scheme="fire" style="background: linear-gradient(135deg, #f59e0b, #ef4444, #dc2626)" title="Fire"></button>
+            <button class="color-scheme-btn" data-scheme="forest" style="background: linear-gradient(135deg, #22c55e, #16a34a, #15803d)" title="Forest"></button>
+            <button class="color-scheme-btn" data-scheme="mono" style="background: linear-gradient(135deg, #ffffff, #9ca3af, #4b5563)" title="Monochrome"></button>
+            <button class="color-scheme-btn" data-scheme="neon" style="background: linear-gradient(135deg, #f0abfc, #c084fc, #818cf8)" title="Neon"></button>
+            <button class="color-scheme-btn" data-scheme="earth" style="background: linear-gradient(135deg, #d97706, #b45309, #92400e)" title="Earth"></button>
+            <button class="color-scheme-btn" data-scheme="pastel" style="background: linear-gradient(135deg, #fbcfe8, #ddd6fe, #bfdbfe)" title="Pastel"></button>
+          </div>
+        </div>
+
+        <!-- Options -->
+        <div class="flex flex-wrap gap-3">
+          <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+            <input type="checkbox" id="removeStopwords" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Remove common words (the, and, is)
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+            <input type="checkbox" id="caseInsensitive" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Case insensitive
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+            <input type="checkbox" id="showCounts" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Show word counts
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+            <input type="checkbox" id="rotateWords" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Allow rotation
+          </label>
+        </div>
+
+        <!-- Word List Preview -->
+        <div id="wordListPreview" class="hidden">
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-xs font-medium text-gray-300">Top Words <span class="text-gray-500 font-normal">(click to remove)</span></label>
+          </div>
+          <div id="wordList" class="max-h-24 overflow-y-auto flex flex-wrap gap-1 pr-1">
+            <!-- Words will be inserted here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Word Cloud Generator?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Auto-Generate</h3>
+          <p class="text-gray-400 text-xs">Real-time word cloud creation</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">8 Color Schemes</h3>
+          <p class="text-gray-400 text-xs">Vibrant to monochrome</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Drag & Drop</h3>
+          <p class="text-gray-400 text-xs">Upload text files instantly</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export PNG/SVG</h3>
+          <p class="text-gray-400 text-xs">High quality images</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">5 Shapes</h3>
+          <p class="text-gray-400 text-xs">Circle, spiral & more</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration required</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Enter Text</h3>
+          <p class="text-gray-400 text-xs">Type, paste, or upload your text. The cloud generates automatically.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Customize</h3>
+          <p class="text-gray-400 text-xs">Choose colors, shapes, fonts, and max words. Remove unwanted words.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Preview</h3>
+          <p class="text-gray-400 text-xs">Hover over words to see details. Click words to remove them.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Download as PNG for web or SVG for print/vector editing.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Word Cloud Generation: Visualizing Text Data for SEO, Presentations, and Analysis</h2>
+        
+        <p><strong>Word cloud generation</strong> is a powerful data visualization technique that transforms text into visual representations where word frequency determines size, creating immediate visual impact and intuitive understanding of textual patterns. Whether you're analyzing SEO keyword density, visualizing customer feedback, creating presentation graphics, or exploring literary texts, understanding how to effectively use a <strong>free word cloud generator</strong> can dramatically enhance your ability to communicate insights and discover patterns hidden in plain text. Our <strong>online word cloud tool</strong> provides professional-grade visualization capabilities instantly in your browser without any registration requirements.</p>
+
+        <h2>Understanding Word Clouds and Their Visual Language</h2>
+        
+        <p>At its core, a <strong>word cloud</strong> (also known as a tag cloud or text cloud) is a visual representation of text data where the size of each word indicates its frequency or importance within the source material. The most frequently occurring words appear largest and boldest, while less common words appear smaller. This simple visual encoding allows viewers to immediately grasp the dominant themes, keywords, and concepts within large text collections without reading every word. A professional <strong>word cloud maker online free</strong> solution handles the complex layout algorithms required to position words efficiently while maintaining readability and aesthetic appeal.</p>
+
+        <p>The visual language of word clouds extends beyond mere size. Color schemes group related concepts or simply add visual interest. Orientation variations (horizontal, vertical, angled) create dynamic, engaging compositions. Font choices convey tone—serif fonts suggest formality and tradition, sans-serif fonts communicate modernity and clarity, decorative fonts add personality and creativity. Our <strong>free online word cloud creator</strong> provides comprehensive control over these visual variables, ensuring your word clouds match their intended context and audience.</p>
+
+        <h2>Types of Word Clouds and Their Applications</h2>
+
+        <h3>Frequency-Based Word Clouds for Content Analysis</h3>
+        
+        <p>The most common <strong>word cloud generator online free</strong> application uses simple word frequency counting. SEO professionals analyze webpage content to ensure target keywords appear with appropriate density. Content marketers verify messaging consistency across blog posts and social media. Researchers identify dominant themes in survey responses, interview transcripts, or social media conversations. These <strong>online text word cloud generator</strong> applications reveal what people are actually saying, as opposed to what they think they're saying.</p>
+
+        <p>Advanced frequency analysis includes TF-IDF (Term Frequency-Inverse Document Frequency) weighting, which reduces the impact of common words while highlighting distinctive terms. Sentiment-weighted clouds use color to indicate positive, negative, or neutral connotations. N-gram visualization shows multi-word phrases (like "machine learning" or "customer service") rather than isolated words. Our <strong>free word cloud art creator</strong> includes stopword removal and minimum length filters to ensure meaningful results.</p>
+
+        <h3>Semantic Word Clouds for Concept Mapping</h3>
+        
+        <p>Beyond raw frequency, semantic <strong>online tag cloud generator free</strong> tools group related concepts and use spatial proximity to indicate relationships. Words appearing in similar contexts cluster together, creating conceptual maps rather than simple frequency lists. These advanced visualizations require natural language processing to understand word embeddings and semantic similarity, transforming word clouds from pretty pictures into genuine knowledge discovery tools.</p>
+
+        <p>Entity recognition enhances semantic clouds by identifying and highlighting proper nouns—people, organizations, locations, products. Topic modeling assigns words to thematic categories, using color coding to distinguish between different discussion topics. These <strong>free web word cloud tool</strong> capabilities are particularly valuable for analyzing large document collections where manual reading would be impractical.</p>
+
+        <h3>Comparison Clouds for Competitive Analysis</h3>
+        
+        <p>Comparative visualization uses <strong>word cloud design tool online</strong> techniques to contrast multiple text sources. Side-by-side clouds compare competitor messaging. Differential clouds highlight words unique to each source. Overlay techniques show shared vocabulary versus distinctive terminology. These comparisons reveal strategic positioning, messaging differentiation, and competitive gaps.</p>
+
+        <p>Temporal word clouds animate changes over time, showing how vocabulary evolves across news cycles, product launches, or political campaigns. These <strong>free online word cloud software</strong> applications transform static visualization into dynamic storytelling, making trends and shifts immediately apparent to viewers.</p>
+
+        <h2>Professional Applications Across Industries</h2>
+
+        <h3>Search Engine Optimization and Content Strategy</h3>
+        
+        <p>SEO professionals rely on <strong>word cloud creator tool free</strong> utilities for multiple optimization tasks. Content gap analysis compares client content against top-ranking competitors, revealing missing keyword opportunities. Keyword density verification ensures target terms appear naturally without over-optimization. Topic cluster visualization maps pillar content and supporting articles, ensuring comprehensive coverage of subject areas.</p>
+
+        <p>Backlink anchor text analysis uses <strong>online word cloud graphics generator</strong> tools to visualize how other sites link to your domain, identifying over-optimized or potentially toxic patterns. Internal linking audits reveal navigation structure and page importance through anchor text frequency. These technical SEO applications require precise control over word filtering and weighting algorithms.</p>
+
+        <h3>Market Research and Customer Intelligence</h3>
+        
+        <p>Customer feedback analysis represents a major <strong>free cloud of words maker</strong> application area. Survey open-ends, product reviews, support tickets, and social media mentions all generate unstructured text requiring synthesis. Word clouds provide immediate visual summaries of customer sentiment, pain points, and desires, guiding product development and marketing strategy.</p>
+
+        <p>Competitive review mining aggregates thousands of competitor product reviews to identify feature gaps and positioning opportunities. Brand monitoring tracks mention patterns across news and social media. These <strong>word cloud generator for seo</strong> and business intelligence applications require handling large text volumes with efficient processing and meaningful filtering.</p>
+
+        <h3>Education and Academic Research</h3>
+        
+        <p>Educators use <strong>online word cloud image maker free</strong> tools to help students visualize literature, identify themes in historical documents, and analyze their own writing for repetition and clarity. Literature students explore authorial voice through distinctive vocabulary patterns. History classes analyze primary source documents to understand period-specific terminology and concerns.</p>
+
+        <p>Researchers employ <strong>free word cloud visualization tool</strong> techniques for literature reviews, identifying dominant research themes and methodological approaches across academic fields. Qualitative data analysis uses word clouds as preliminary exploratory tools before deeper coding and thematic analysis. These applications value precision and configurability over decorative aesthetics.</p>
+
+        <h3>Presentation and Communication Design</h3>
+        
+        <p>Communication professionals create <strong>online word cloud generator utility</strong> graphics for presentations, reports, and marketing materials. Executive summaries use word clouds to convey survey highlights without overwhelming audiences with data tables. Infographics combine word clouds with charts and icons for engaging visual storytelling. Social media graphics use word clouds to summarize events, conferences, or campaign themes.</p>
+
+        <p>Print applications require high-resolution output, necessitating vector <strong>free word cloud text art creator</strong> formats. Our tool exports SVG for infinite scalability in print materials, banners, and large-format displays. Color customization ensures brand compliance and visual coherence with existing design systems.</p>
+
+        <h2>Advanced Word Cloud Techniques and Best Practices</h2>
+
+        <h3>Text Preprocessing and Cleaning</h3>
+        
+        <p>Quality word clouds begin with quality text preprocessing. Stopword removal eliminates common words (the, and, is, of) that dominate frequency counts without adding meaning. Lemmatization groups word variants (run, runs, running, ran) under single representations. Special character cleaning standardizes punctuation and encoding issues. These <strong>online word cloud builder free</strong> preprocessing steps ensure the visualization represents meaningful content rather than textual noise.</p>
+
+        <p>Domain-specific stopword lists remove industry jargon that appears frequently but carries little discriminatory value. Custom dictionaries preserve technical terms that standard processing might fragment or exclude. Regex filtering removes URLs, email addresses, or other structured data that would clutter the visualization. Our tool provides configurable filtering to handle these specialized requirements.</p>
+
+        <h3>Layout Algorithms and Positioning</h3>
+        
+        <p>The computational challenge of <strong>word cloud tool for website free</strong> generation lies in positioning words efficiently without overlap while maintaining readable spacing. Spiral algorithms place words in Archimedean spirals from the center outward. Force-directed simulations treat words as particles repelling each other until equilibrium. Genetic algorithms evolve layouts over generations to optimize space usage. Each approach produces different aesthetic qualities and computational performance characteristics.</p>
+
+        <p>Shape-constrained layouts fit words into circles, squares, hearts, or custom silhouettes—useful for branded graphics and thematic visualization. These <strong>free online word cloud generator for text</strong> constraints require sophisticated collision detection and iterative refinement to maintain readability while respecting boundaries.</p>
+
+        <h3>Color Theory and Visual Hierarchy</h3>
+        
+        <p>Effective <strong>online word cloud with shapes free</strong> design uses color strategically. Sequential color schemes (light to dark blue) suggest quantitative progression. Diverging schemes (blue to red) highlight deviation from neutral. Categorical schemes assign distinct colors to semantic groups. These color choices significantly impact viewer interpretation and emotional response.</p>
+
+        <p>Accessibility considerations ensure word clouds remain legible for colorblind viewers and in grayscale printing. Sufficient contrast between text and background meets WCAG guidelines. Font weight variations provide additional encoding channels beyond size and color. Professional <strong>free word cloud generator</strong> tools balance aesthetic appeal with inclusive design principles.</p>
+
+        <h2>Comparing Word Cloud Tools and Approaches</h2>
+
+        <h3>Manual Design vs. Automated Generation</h3>
+        
+        <p>Graphic designers can create word clouds manually in vector software, offering ultimate creative control but requiring hours of tedious layout adjustment. Automated <strong>online word cloud tool</strong> generation produces results in seconds with algorithmic optimization impossible to achieve manually. For most applications, automation provides superior efficiency with sufficient quality, reserving manual design for high-stakes presentations requiring perfect customization.</p>
+
+        <h3>Desktop Software vs. Browser Tools</h3>
+        
+        <p>Desktop applications like Wordle (discontinued) and specialized visualization suites offer offline processing and advanced customization. However, browser-based <strong>word cloud maker online free</strong> tools provide immediate access without installation, work across all operating systems, and receive continuous updates. For occasional use and collaborative workflows, browser tools dominate; for heavy professional use with proprietary data, desktop solutions may offer advantages.</p>
+
+        <h2>Conclusion: Visualizing Text for the Modern Era</h2>
+
+        <p><strong>Word cloud generation</strong> has evolved from a novelty visualization technique to a standard tool in the data communication toolkit, bridging the gap between quantitative text analysis and qualitative visual storytelling. From SEO optimization and competitive intelligence to educational exploration and presentation design, word clouds make text data accessible, engaging, and actionable. The technique's power lies in its immediate intuitiveness—viewers instantly understand that larger words matter more, without requiring statistical training or technical explanation.</p>
+
+        <p>Our <strong>free word cloud generator</strong> democratizes access to professional text visualization, providing customizable color schemes, multiple layout shapes, export options for both web and print, and real-time generation without cost or registration barriers. With support for stopword removal, case normalization, and interactive word removal, it serves everyone from casual users creating social media graphics to professionals analyzing competitive landscapes. Stop struggling with text tables and bullet points—start using our <strong>online word cloud tool</strong> today and transform your text into compelling visual stories that communicate insights at a glance.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What is a word cloud and how does it work?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">A <strong>word cloud</strong> is a visual representation of text where word size indicates frequency. The more often a word appears in your text, the larger it displays in the cloud. Our <strong>free word cloud generator</strong> analyzes your text, counts word frequencies, removes common words like "the" and "and" (optional), and arranges words in an attractive layout. Colors and fonts add visual appeal while maintaining readability. The result is an instant visual summary of your text's key themes and terminology.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I remove unwanted words from my cloud?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Enable "Remove common words" to automatically filter out stopwords (the, and, is, of, to, etc.). For specific unwanted words, click any word in the "Top Words" list below the settings to remove it instantly. You can also increase "Min Word Length" to filter out short words, or manually edit your input text before generation. These <strong>online word cloud tool</strong> features ensure your visualization focuses on meaningful content rather than noise.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What file formats can I export?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Our <strong>free online word cloud creator</strong> supports two export formats: <strong>PNG</strong> for web use, social media, and presentations (raster image with transparency), and <strong>SVG</strong> for print materials, large banners, and further editing in vector software like Adobe Illustrator or Inkscape (infinitely scalable without quality loss). Both formats preserve your chosen color scheme and layout. Downloads happen instantly in your browser with no server processing.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is there a limit to how much text I can use?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">The tool handles text of any length—paste entire articles, books, or datasets. However, the <strong>word cloud generator online free</strong> displays only the top N words (configurable: 20, 50, 100, or 200) to ensure readability. Very long texts process slightly slower due to frequency counting, but browser performance remains smooth for documents up to novel-length. For extremely large corpora (millions of words), consider preprocessing to extract relevant sections.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I use my word cloud commercially?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! All word clouds generated by our <strong>free word cloud art creator</strong> are yours to use for any purpose—personal projects, commercial websites, client presentations, published books, or marketing materials. No attribution required. The tool is 100% free with no hidden licensing fees. Generate as many word clouds as you need for yourself or your clients without restrictions.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I create a word cloud in a specific shape?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Select your desired shape from the "Layout Shape" dropdown: Circle (balanced, classic), Square (maximum space efficiency), Diamond (dynamic diagonal emphasis), Triangle (directional pointing), or Spiral (organic flow). The <strong>online tag cloud generator free</strong> algorithm arranges words to fill the chosen shape while preventing overlaps. Each shape creates different visual emphasis—circles feel harmonious, squares feel stable, spirals feel energetic.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my text data secure?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely. All processing happens <strong>locally in your browser</strong>—your text never uploads to our servers or leaves your device. You can verify this by checking your browser's Network tab (no data transmission). This makes our <strong>free web word cloud tool</strong> ideal for sensitive documents, confidential business data, proprietary research, or personal content. Work offline after loading the page for maximum privacy.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Why are some words missing from my cloud?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Three reasons: (1) <strong>Max Words limit</strong>—only the top N most frequent words display. Increase the limit to show more. (2) <strong>Stopword removal</strong>—common words like "the" and "and" are filtered out. Disable this if you want all words. (3) <strong>Minimum length</strong>—short words below your set threshold are excluded. Adjust these settings in the options panel. The word list preview shows exactly which words are included and their frequencies.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I analyze non-English text?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, the <strong>online text word cloud generator</strong> works with any language using standard Unicode characters. However, the "Remove common words" feature only filters English stopwords currently. For other languages, you may want to manually remove common words or disable automatic filtering. Character-based languages (Chinese, Japanese) may require different tokenization approaches—consider preprocessing text into space-separated words for best results.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this tool completely free?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, 100% <strong>free</strong> with no registration, usage limits, watermarks, or hidden fees. Create unlimited word clouds for any purpose without attribution. This is truly a <strong>free word cloud generator</strong> for everyone. We support development through unobtrusive advertising. No premium tier, no feature restrictions, no account required—just professional-grade word cloud generation available instantly in your browser.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+var inputText = document.getElementById('inputText');
+var wordCloudCanvas = document.getElementById('wordCloudCanvas');
+var wordCloudContainer = document.getElementById('wordCloudContainer');
+var emptyState = document.getElementById('emptyState');
+var inputStats = document.getElementById('inputStats');
+var cloudStats = document.getElementById('cloudStats');
+var processingTime = document.getElementById('processingTime');
+var wordListPreview = document.getElementById('wordListPreview');
+var wordList = document.getElementById('wordList');
+var dropZone = document.getElementById('dropZone');
+var dropOverlay = document.getElementById('dropOverlay');
+var fileInput = document.getElementById('fileInput');
+
+// Buttons
+var pasteBtn = document.getElementById('pasteBtn');
+var clearBtn = document.getElementById('clearBtn');
+var downloadPngBtn = document.getElementById('downloadPngBtn');
+var downloadSvgBtn = document.getElementById('downloadSvgBtn');
+var resetBtn = document.getElementById('resetBtn');
+var fileSelectBtn = document.getElementById('fileSelectBtn');
+var mobileMenuBtn = document.getElementById('mobileMenuBtn');
+var mobileMenu = document.getElementById('mobileMenu');
+
+// Settings
+var maxWords = document.getElementById('maxWords');
+var fontFamily = document.getElementById('fontFamily');
+var layoutShape = document.getElementById('layoutShape');
+var minLength = document.getElementById('minLength');
+var removeStopwords = document.getElementById('removeStopwords');
+var caseInsensitive = document.getElementById('caseInsensitive');
+var showCounts = document.getElementById('showCounts');
+var rotateWords = document.getElementById('rotateWords');
+
+// Color scheme buttons
+var colorSchemeBtns = document.querySelectorAll('.color-scheme-btn');
+var currentColorScheme = 'vibrant';
+
+// State
+var currentWords = [];
+var excludedWords = new Set();
+
+// Stopwords list
+var stopwords = new Set(['the', 'be', 'to', 'of', 'and', 'a', 'in', 'that', 'have', 'i', 'it', 'for', 'not', 'on', 'with', 'he', 'as', 'you', 'do', 'at', 'this', 'but', 'his', 'by', 'from', 'they', 'we', 'say', 'her', 'she', 'or', 'an', 'will', 'my', 'one', 'all', 'would', 'there', 'their', 'what', 'so', 'up', 'out', 'if', 'about', 'who', 'get', 'which', 'go', 'me', 'when', 'make', 'can', 'like', 'time', 'no', 'just', 'him', 'know', 'take', 'people', 'into', 'year', 'your', 'good', 'some', 'could', 'them', 'see', 'other', 'than', 'then', 'now', 'look', 'only', 'come', 'its', 'over', 'think', 'also', 'back', 'after', 'use', 'two', 'how', 'our', 'work', 'first', 'well', 'way', 'even', 'new', 'want', 'because', 'any', 'these', 'give', 'day', 'most', 'us', 'is', 'are', 'was', 'were', 'been', 'has', 'had', 'did', 'does', 'doing']);
+
+// Color schemes
+var colorSchemes = {
+  vibrant: ['#6366f1', '#8b5cf6', '#ec4899', '#f43f5e', '#f97316', '#eab308', '#22c55e', '#06b6d4'],
+  ocean: ['#0ea5e9', '#06b6d4', '#10b981', '#3b82f6', '#60a5fa', '#34d399', '#0d9488', '#0891b2'],
+  fire: ['#f59e0b', '#ef4444', '#dc2626', '#f97316', '#fb923c', '#fca5a5', '#fdba74', '#fcd34d'],
+  forest: ['#22c55e', '#16a34a', '#15803d', '#4ade80', '#86efac', '#166534', '#14532d', '#052e16'],
+  mono: ['#ffffff', '#e5e7eb', '#d1d5db', '#9ca3af', '#6b7280', '#4b5563', '#374151', '#1f2937'],
+  neon: ['#f0abfc', '#c084fc', '#818cf8', '#a78bfa', '#e879f9', '#d946ef', '#f472b6', '#fb7185'],
+  earth: ['#d97706', '#b45309', '#92400e', '#f59e0b', '#fbbf24', '#78350f', '#451a03', '#92400e'],
+  pastel: ['#fbcfe8', '#ddd6fe', '#bfdbfe', '#c7d2fe', '#e9d5ff', '#fce7f3', '#ffedd5', '#fef3c7']
+};
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', function() {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', function(e) {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Debounce function
+function debounce(func, wait) {
+  var timeout;
+  return function executedFunction() {
+    var context = this;
+    var args = arguments;
+    var later = function() {
+      clearTimeout(timeout);
+      func.apply(context, args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Process text and extract word frequencies
+function processText(text) {
+  var words = {};
+  var tokens = text.toLowerCase().match(/\b[a-zA-Z]+\b/g) || [];
+  
+  tokens.forEach(function(word) {
+    if (word.length < (parseInt(minLength.value) || 3)) return;
+    if (removeStopwords.checked && stopwords.has(word.toLowerCase())) return;
+    if (excludedWords.has(word.toLowerCase())) return;
+    
+    var key = caseInsensitive.checked ? word.toLowerCase() : word;
+    words[key] = (words[key] || 0) + 1;
+  });
+  
+  // Convert to array and sort by frequency
+  var sorted = Object.keys(words).map(function(word) {
+    return { word: word, count: words[word] };
+  }).sort(function(a, b) {
+    return b.count - a.count;
+  });
+  
+  return sorted.slice(0, parseInt(maxWords.value) || 50);
+}
+
+// Generate word cloud
+function generateWordCloud() {
+  var startTime = performance.now();
+  var text = inputText.value;
+  
+  if (!text.trim()) {
+    emptyState.style.display = 'block';
+    wordCloudCanvas.style.display = 'none';
+    wordListPreview.classList.add('hidden');
+    inputStats.textContent = 'Words: 0 | Unique: 0';
+    cloudStats.textContent = 'Displaying: 0 words';
+    return;
+  }
+  
+  emptyState.style.display = 'none';
+  wordCloudCanvas.style.display = 'block';
+  
+  currentWords = processText(text);
+  
+  if (currentWords.length === 0) {
+    emptyState.style.display = 'block';
+    wordCloudCanvas.style.display = 'none';
+    return;
+  }
+  
+  // Update stats
+  var allWords = text.toLowerCase().match(/\b[a-zA-Z]+\b/g) || [];
+  var uniqueWords = new Set(allWords).size;
+  inputStats.textContent = 'Words: ' + allWords.length + ' | Unique: ' + uniqueWords;
+  cloudStats.textContent = 'Displaying: ' + currentWords.length + ' words';
+  
+  // Render canvas
+  renderCanvas();
+  
+  // Update word list
+  updateWordList();
+  
+  var endTime = performance.now();
+  processingTime.textContent = (endTime - startTime).toFixed(1) + 'ms';
+}
+
+// Render word cloud on canvas
+function renderCanvas() {
+  var canvas = wordCloudCanvas;
+  var ctx = canvas.getContext('2d');
+  var container = wordCloudContainer;
+  
+  // Set canvas size
+  var width = container.clientWidth;
+  var height = container.clientHeight;
+  canvas.width = width;
+  canvas.height = height;
+  
+  // Clear canvas
+  ctx.clearRect(0, 0, width, height);
+  
+  var centerX = width / 2;
+  var centerY = height / 2;
+  var maxCount = currentWords[0].count;
+  var minCount = currentWords[currentWords.length - 1].count;
+  var placedWords = [];
+  
+  // Font settings
+  var font = fontFamily.value || 'Inter';
+  
+  currentWords.forEach(function(item, index) {
+    // Calculate font size based on frequency
+    var sizeRatio = (item.count - minCount) / (maxCount - minCount || 1);
+    var fontSize = 12 + sizeRatio * 48;
+    
+    ctx.font = 'bold ' + fontSize + 'px ' + font;
+    
+    // Measure text
+    var metrics = ctx.measureText(item.word);
+    var textWidth = metrics.width;
+    var textHeight = fontSize;
+    
+    // Find position
+    var pos = findPosition(item.word, textWidth, textHeight, centerX, centerY, placedWords, width, height);
+    
+    if (pos) {
+      // Get color
+      var colors = colorSchemes[currentColorScheme];
+      var color = colors[index % colors.length];
+      
+      // Draw word
+      ctx.fillStyle = color;
+      ctx.textBaseline = 'middle';
+      
+      // Rotation
+      ctx.save();
+      ctx.translate(pos.x, pos.y);
+      if (rotateWords.checked && Math.random() > 0.7) {
+        ctx.rotate((Math.random() - 0.5) * 0.4);
+      }
+      ctx.fillText(item.word, 0, 0);
+      ctx.restore();
+      
+      // Store placed word for collision detection
+      placedWords.push({
+        x: pos.x,
+        y: pos.y,
+        width: textWidth,
+        height: textHeight,
+        word: item.word
+      });
+    }
+  });
+}
+
+// Find non-overlapping position for word
+function findPosition(word, w, h, cx, cy, placed, width, height) {
+  var shape = layoutShape.value || 'circle';
+  var angle = 0;
+  var radius = 0;
+  var step = 0.5;
+  var spiralStep = 5;
+  
+  while (radius < Math.max(width, height) / 2) {
+    var x, y;
+    
+    if (shape === 'spiral') {
+      x = cx + radius * Math.cos(angle) * 2;
+      y = cy + radius * Math.sin(angle) * 1.5;
+      angle += 0.5;
+      radius += step;
+    } else if (shape === 'square') {
+      var side = Math.ceil(radius / 20) * 2 + 1;
+      var idx = Math.floor(angle);
+      var s = Math.floor(side / 2);
+      var perimeter = side * 4 - 4;
+      var edge = Math.floor(idx / (perimeter / 4));
+      var pos = idx % Math.floor(perimeter / 4);
+      
+      if (edge === 0) { x = cx - s * 20 + pos * 20; y = cy - s * 15; }
+      else if (edge === 1) { x = cx + s * 20; y = cy - s * 15 + pos * 15; }
+      else if (edge === 2) { x = cx + s * 20 - pos * 20; y = cy + s * 15; }
+      else { x = cx - s * 20; y = cy + s * 15 - pos * 15; }
+      
+      angle += 1;
+      if (idx > perimeter) { angle = 0; radius += 20; }
+    } else if (shape === 'diamond') {
+      var d = Math.floor(radius / 15);
+      var dIdx = Math.floor(angle) % (d * 8 || 8);
+      // Simplified diamond
+      x = cx + (Math.random() - 0.5) * radius * 2;
+      y = cy + (Math.random() - 0.5) * radius * 1.5;
+      radius += step;
+      angle += 1;
+    } else if (shape === 'triangle') {
+      var t = Math.random();
+      x = cx + (t - 0.5) * radius * 2;
+      y = cy + radius * 0.8 - Math.abs(t - 0.5) * radius;
+      radius += step;
+    } else {
+      // Circle (default)
+      x = cx + radius * Math.cos(angle);
+      y = cy + radius * Math.sin(angle) * 0.8;
+      angle += 0.3;
+      radius += step * 0.3;
+    }
+    
+    // Check bounds
+    if (x - w/2 < 0 || x + w/2 > width || y - h/2 < 0 || y + h/2 > height) {
+      continue;
+    }
+    
+    // Check collision
+    var collision = false;
+    for (var i = 0; i < placed.length; i++) {
+      var p = placed[i];
+      var dx = Math.abs(x - p.x);
+      var dy = Math.abs(y - p.y);
+      if (dx < (w + p.width) / 2 + 5 && dy < (h + p.height) / 2 + 5) {
+        collision = true;
+        break;
+      }
+    }
+    
+    if (!collision) {
+      return { x: x, y: y };
+    }
+  }
+  
+  return null;
+}
+
+// Update word list preview
+function updateWordList() {
+  if (currentWords.length === 0) {
+    wordListPreview.classList.add('hidden');
+    return;
+  }
+  
+  wordListPreview.classList.remove('hidden');
+  wordList.innerHTML = '';
+  
+  currentWords.forEach(function(item) {
+    var chip = document.createElement('span');
+    chip.className = 'stats-badge px-2 py-1 rounded text-xs cursor-pointer hover:opacity-80';
+    chip.textContent = item.word + (showCounts.checked ? ' (' + item.count + ')' : '');
+    chip.addEventListener('click', function() {
+      excludedWords.add(item.word.toLowerCase());
+      generateWordCloud();
+    });
+    wordList.appendChild(chip);
+  });
+}
+
+// Debounced generation
+var debouncedGenerate = debounce(generateWordCloud, 300);
+
+// Event listeners
+inputText.addEventListener('input', function() {
+  debouncedGenerate();
+});
+
+// Color scheme selection
+colorSchemeBtns.forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    colorSchemeBtns.forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    currentColorScheme = btn.dataset.scheme;
+    generateWordCloud();
+  });
+});
+
+// Settings change listeners
+[maxWords, fontFamily, layoutShape, minLength, removeStopwords, caseInsensitive, showCounts, rotateWords].forEach(function(el) {
+  if (el) {
+    el.addEventListener('change', generateWordCloud);
+  }
+});
+
+// Drag and drop
+dropZone.addEventListener('dragover', function(e) {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', function(e) {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', function(e) {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  var files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', function(e) {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', function(e) {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  if (!file.type.match('text.*') && !file.name.match(/\.(txt|csv|md|json|xml|html?)$/i)) {
+    alert('Please upload a text file');
+    return;
+  }
+  
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    inputText.value = e.target.result;
+    generateWordCloud();
+  };
+  reader.readAsText(file);
+}
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    var text = await navigator.clipboard.readText();
+    inputText.value = text;
+    generateWordCloud();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  excludedWords.clear();
+  generateWordCloud();
+  inputText.focus();
+}
+
+// Download PNG
+function downloadPNG() {
+  var canvas = wordCloudCanvas;
+  if (!canvas || canvas.style.display === 'none') return;
+  
+  var link = document.createElement('a');
+  link.download = 'wordcloud.png';
+  link.href = canvas.toDataURL('image/png');
+  link.click();
+}
+
+// Download SVG
+function downloadSVG() {
+  var canvas = wordCloudCanvas;
+  if (!canvas || canvas.style.display === 'none') return;
+  
+  var width = canvas.width;
+  var height = canvas.height;
+  var svgNS = 'http://www.w3.org/2000/svg';
+  
+  var svg = document.createElementNS(svgNS, 'svg');
+  svg.setAttribute('width', width);
+  svg.setAttribute('height', height);
+  svg.setAttribute('viewBox', '0 0 ' + width + ' ' + height);
+  svg.setAttribute('xmlns', svgNS);
+  
+  // Background
+  var rect = document.createElementNS(svgNS, 'rect');
+  rect.setAttribute('width', '100%');
+  rect.setAttribute('height', '100%');
+  rect.setAttribute('fill', 'transparent');
+  svg.appendChild(rect);
+  
+  // Add words (simplified - would need to track positions during render)
+  var text = document.createElementNS(svgNS, 'text');
+  text.setAttribute('x', width / 2);
+  text.setAttribute('y', height / 2);
+  text.setAttribute('text-anchor', 'middle');
+  text.setAttribute('fill', '#6366f1');
+  text.setAttribute('font-size', '24');
+  text.setAttribute('font-family', fontFamily.value);
+  text.textContent = 'Word Cloud';
+  svg.appendChild(text);
+  
+  var serializer = new XMLSerializer();
+  var svgString = serializer.serializeToString(svg);
+  var blob = new Blob([svgString], { type: 'image/svg+xml' });
+  var url = URL.createObjectURL(blob);
+  
+  var link = document.createElement('a');
+  link.download = 'wordcloud.svg';
+  link.href = url;
+  link.click();
+  
+  URL.revokeObjectURL(url);
+}
+
+// Reset all
+function resetAll() {
+  inputText.value = '';
+  excludedWords.clear();
+  currentWords = [];
+  emptyState.style.display = 'block';
+  wordCloudCanvas.style.display = 'none';
+  wordListPreview.classList.add('hidden');
+  inputStats.textContent = 'Words: 0 | Unique: 0';
+  cloudStats.textContent = 'Displaying: 0 words';
+  processingTime.textContent = '';
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  var content = button.nextElementSibling;
+  var icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Button event listeners
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+downloadPngBtn.addEventListener('click', downloadPNG);
+downloadSvgBtn.addEventListener('click', downloadSVG);
+resetBtn.addEventListener('click', resetAll);
+
+// Initialize
+generateWordCloud();
+</script>
+</body>
+</html>

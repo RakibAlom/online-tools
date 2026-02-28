@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Text Permutation Tool - Free Online Text Permutation Generator</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online text permutation tool. Generate all permutations of words, characters, or lines instantly. Perfect for SEO, content creation, and text analysis. No registration required." />
+  <meta name="keywords" content="free text permutation tool, online text permutation tool, text permutation generator free, free online permutation generator, text permutation tool online free, free text permute tool, online text shuffle tool, free text combination tool, online text rearranger, text permutation seo keywords, free online text mixer, text permutation utility free, online text permutation generator tool, free word permutation tool, text rearrange online free, text permutation maker online, free online string permutation, online text algorithm tool, free permutation creator online, text permutation software free, online text tools permutation, free online text utilities, text permutation tool for seo, free online text pattern generator, online word combination tool free, free text rearranging tool online, online permutation text tester, text permutation conversion free, free text order changer tool online" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/text-permutation-tool/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/text-permutation-tool/" />
+  <meta property="og:title" content="Text Permutation Tool - Free Online Text Permutation Generator" />
+  <meta property="og:description" content="Generate all permutations of words, characters, or lines instantly. Perfect for SEO, content creation, and text analysis. No registration required." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/text-permutation-tool/" />
+  <meta name="twitter:title" content="Text Permutation Tool - Free Online Text Permutation Generator" />
+  <meta name="twitter:description" content="Generate all permutations of words, characters, or lines instantly. Perfect for SEO, content creation, and text analysis. No registration required." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .method-btn {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    .method-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .permutation-item {
+      border-left: 2px solid rgba(99, 102, 241, 0.5);
+      transition: all 0.2s ease;
+    }
+    
+    .permutation-item:hover {
+      border-left-color: rgba(99, 102, 241, 1);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+
+    .warning-badge {
+      background: rgba(234, 179, 8, 0.1);
+      border: 1px solid rgba(234, 179, 8, 0.3);
+      color: #eab308;
+    }
+
+    .permutation-limit-warning {
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      color: #ef4444;
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 20h20M15 15l5-5 5 5M15 25l5 5 5-5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Text Permutation</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Text Permutation Tool
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Text Permutation Generator
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-generation enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Input Text
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Enter words separated by spaces, commas, or new lines... Or drag & drop a file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.csv,.md,.json,.xml,.html,.js,.css,.py,.java,.cpp,.c,.php,.rb,.go,.rs,.swift,.kt,.sql,.log" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Items: 0 | Chars: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Output -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Permutations <span id="permutationsCount" class="text-gray-500 font-normal ml-1 hidden">(0 results)</span>
+            </label>
+            <div class="flex gap-1">
+              <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                Copy
+              </button>
+              <button id="downloadBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Download
+              </button>
+            </div>
+          </div>
+          
+          <textarea id="outputText" readonly spellcheck="false"
+            class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+            placeholder="Permutations appear here automatically..."></textarea>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="outputStats">Total: 0 | Generated: 0</span>
+            <span id="processingTime" class="text-gray-600"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-3">
+        
+        <!-- Permutation Method -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Permutation Mode</label>
+          <div class="flex flex-wrap gap-1">
+            <button class="method-btn active rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="words">Words</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="lines">Lines</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="chars">Characters</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="pairs">Pairs</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="circular">Circular</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="partial">Partial (k-permutations)</button>
+          </div>
+        </div>
+
+        <!-- Options Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+          <!-- Separator Options -->
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Input Separator</label>
+            <select id="separatorSelect" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="space">Space</option>
+              <option value=",">Comma (,)</option>
+              <option value="\n">New Line</option>
+              <option value="\t">Tab</option>
+              <option value=";">Semicolon (;)</option>
+              <option value="|">Pipe (|)</option>
+              <option value="-">Hyphen (-)</option>
+              <option value="custom">Custom...</option>
+            </select>
+            <input type="text" id="customSeparator" placeholder="Custom separator..." class="w-full px-2 py-1.5 rounded-md glass-input text-xs mt-1 hidden">
+          </div>
+
+          <!-- Output Join Options -->
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Output Join With</label>
+            <select id="joinSelect" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="\n">New Line</option>
+              <option value=", ">, (comma)</option>
+              <option value=" | ">| (pipe)</option>
+              <option value=" ">Space</option>
+              <option value=" - ">- (dash)</option>
+              <option value="\n\n">Double Line</option>
+              <option value="">Nothing (concatenated)</option>
+            </select>
+          </div>
+
+          <!-- Limit Options -->
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Max Results Limit</label>
+            <select id="limitSelect" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="10">10 results</option>
+              <option value="50">50 results</option>
+              <option value="100" selected>100 results</option>
+              <option value="500">500 results</option>
+              <option value="1000">1,000 results</option>
+              <option value="5000">5,000 results</option>
+              <option value="10000">10,000 results</option>
+            </select>
+          </div>
+
+          <!-- Partial Permutation Size -->
+          <div id="partialOptions" class="hidden">
+            <label class="text-xs text-gray-400 mb-1 block">Permutation Size (k)</label>
+            <input type="number" id="partialSize" min="2" value="2" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+          </div>
+
+          <!-- Unique Options -->
+          <div class="flex items-center gap-2">
+            <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+              <input type="checkbox" id="uniqueOnly" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Remove duplicates
+            </label>
+          </div>
+
+          <!-- Case Options -->
+          <div class="flex items-center gap-2">
+            <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+              <input type="checkbox" id="preserveCase" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+              Preserve case
+            </label>
+          </div>
+        </div>
+
+        <!-- Warning Messages -->
+        <div id="limitWarning" class="hidden warning-badge rounded-md p-2 text-xs flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+          <span>Large input detected. Results limited to prevent browser freeze.</span>
+        </div>
+
+        <div id="permutationLimitWarning" class="hidden permutation-limit-warning rounded-md p-2 text-xs flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <span>Factorial explosion! Input too large for full permutations. Use partial mode or increase limit.</span>
+        </div>
+
+        <!-- Permutations Preview -->
+        <div id="permutationsPreview" class="hidden">
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-xs font-medium text-gray-300">Individual Permutations <span class="text-gray-500 font-normal">(click to copy)</span></label>
+            <span id="showingCount" class="text-xs text-gray-500"></span>
+          </div>
+          <div id="permutationsList" class="max-h-32 overflow-y-auto space-y-1 pr-1">
+            <!-- Permutations will be inserted here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Text Permutation Tool?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Auto-Generate</h3>
+          <p class="text-gray-400 text-xs">Real-time permutation generation</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">6 Modes</h3>
+          <p class="text-gray-400 text-xs">Words, lines, chars & more</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Drag & Drop</h3>
+          <p class="text-gray-400 text-xs">Upload text files instantly</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based, no uploads</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy or download results</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration required</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Input Items</h3>
+          <p class="text-gray-400 text-xs">Type or paste words, lines, or characters. Use spaces, commas, or new lines to separate.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Select Mode</h3>
+          <p class="text-gray-400 text-xs">Choose permutation mode: words, lines, characters, pairs, circular, or partial.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Configure</h3>
+          <p class="text-gray-400 text-xs">Set separator, output format, and result limit. Changes apply instantly.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy all results or download as file. Click any permutation to copy individually.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Text Permutation: Mastering Text Rearrangement for SEO, Content Creation, and Data Analysis</h2>
+        
+        <p><strong>Text permutation</strong> is a powerful computational technique that generates all possible arrangements of a given set of text elements, opening up endless possibilities for content creators, SEO specialists, data analysts, and developers. Whether you're looking to create keyword variations for search engine optimization, generate unique username combinations, test password strength, or explore linguistic patterns, understanding how to effectively use a <strong>free text permutation tool</strong> can dramatically enhance your productivity and creative output. Our <strong>online text permutation tool</strong> provides instant access to advanced permutation algorithms without requiring any registration or technical expertise.</p>
+
+        <h2>What Is Text Permutation and How Does It Work?</h2>
+        
+        <p>At its core, <strong>text permutation</strong> refers to the mathematical process of rearranging elements of a set into all possible sequences. When applied to text, this means taking a collection of words, characters, or lines and generating every conceivable ordering. For example, permuting the words "quick brown fox" would produce sequences like "quick fox brown," "brown quick fox," "brown fox quick," "fox quick brown," and "fox brown quick." A professional <strong>text permutation generator free</strong> solution handles this computationally intensive task instantly, saving hours of manual work.</p>
+
+        <p>The mathematical foundation of permutations is factorial-based. If you have n distinct items, there are n! (n factorial) possible permutations. This means 3 items yield 6 permutations, 4 items produce 24, 5 items create 120, and the numbers grow exponentially. This explosive growth is why a sophisticated <strong>free online permutation generator</strong> must include safety limits and intelligent algorithms to prevent browser crashes while still delivering comprehensive results. Our tool balances thoroughness with performance, making it the ideal <strong>text permutation tool online free</strong> solution for both casual and professional use.</p>
+
+        <h2>Understanding Different Permutation Modes and Applications</h2>
+
+        <h3>Word-Level Permutations for SEO and Content Marketing</h3>
+        
+        <p>The most common application of <strong>online text permutation</strong> is at the word level, particularly for SEO keyword generation. Digital marketers constantly need variations of target phrases to avoid keyword stuffing while maintaining semantic relevance. By inputting core terms into a <strong>free text permute tool</strong>, you can generate dozens of natural-sounding variations that search engines recognize as distinct yet topically related phrases. This technique is invaluable for creating diverse meta descriptions, ad copy variations, and blog post titles that capture long-tail search traffic.</p>
+
+        <p>Beyond SEO, word permutations serve content creators brainstorming article structures, poets exploring line arrangements, and social media managers crafting varied post captions. The <strong>online text shuffle tool</strong> functionality helps break creative blocks by presenting unexpected word combinations that spark new ideas. Writers use these rearrangements to find more engaging openings, better flow between paragraphs, or more impactful closing statements. With our <strong>free text combination tool</strong>, you can explore hundreds of arrangements in seconds rather than struggling with manual rearrangement.</p>
+
+        <h3>Character-Level Permutations for Cryptography and Security</h3>
+        
+        <p>At the character level, <strong>text permutation</strong> becomes a powerful tool for cryptography, password security testing, and data encoding. Security professionals use <strong>online text rearranger</strong> tools to generate all possible character combinations when testing password strength or analyzing encryption vulnerabilities. While full character permutation of long strings is computationally prohibitive (10 characters yield 3.6 million permutations), partial permutations and controlled character sets make this approach practical for specific security applications.</p>
+
+        <p>Developers working on captcha systems, unique identifier generation, or randomized token creation benefit from <strong>text permutation SEO keywords</strong> generation at the character level. By permuting specific character sets, you can create URL-safe strings, verification codes, or temporary passwords that maintain security while remaining user-friendly. Our <strong>free online text mixer</strong> includes safeguards against factorial explosion, ensuring you can explore character permutations without crashing your browser.</p>
+
+        <h3>Line and Paragraph Permutations for Document Structuring</h3>
+        
+        <p>Working with larger text units, <strong>text permutation utility free</strong> tools excel at reorganizing document structures. Authors can experiment with different chapter orders, essayists can test argument sequencing, and technical writers can optimize procedure steps. This macro-level permutation maintains semantic coherence while exploring structural variations that might better serve the reader's understanding or engagement.</p>
+
+        <p>Data processing workflows frequently require <strong>online text permutation generator tool</strong> capabilities to handle CSV columns, database fields, or API response reordering. When importing data between systems with different field requirements, permuting column orders before mapping can simplify transformation logic. Similarly, A/B testing different content arrangements becomes effortless when you can generate all structural variations automatically using a <strong>free word permutation tool</strong>.</p>
+
+        <h2>Advanced Permutation Techniques and Strategies</h2>
+
+        <h3>Partial Permutations and k-Permutations</h3>
+        
+        <p>Full factorial permutations become impractical with larger input sets, which is why advanced <strong>text rearrange online free</strong> tools offer partial permutation modes. k-permutations generate all possible arrangements of k items selected from a larger set of n items. For example, selecting 2-word permutations from a 5-word set yields 20 results rather than the full 120, making the output manageable while still providing substantial variation.</p>
+
+        <p>This approach is particularly valuable for <strong>text permutation maker online</strong> applications in marketing and testing. When you need headline variations, you might only want 2-3 word permutations from a pool of 10 descriptive terms. When testing UI button labels, pairwise permutations of action words (Buy, Get, Claim, Download) with product descriptors (Now, Today, Instantly, Free) generate focused, testable variations without overwhelming output. Our <strong>free online string permutation</strong> tool includes configurable k-permutation settings for these precise use cases.</p>
+
+        <h3>Circular and Cyclic Permutations</h3>
+        
+        <p>Circular permutations treat arrangements as rotating cycles rather than linear sequences, useful for round-robin scheduling, rotational content display, and cyclic data encoding. In a circular permutation of team members for meeting facilitation, each person eventually leads without the artificial "start" and "end" of linear arrangements. This <strong>online text algorithm tool</strong> mode considers rotational equivalents as single permutations, reducing redundancy in cyclical applications.</p>
+
+        <p>Content management systems use circular <strong>free permutation creator online</strong> logic for rotating banners, testimonial displays, or feature highlights. Rather than random selection which might repeat recently shown items, circular permutation ensures systematic coverage of all content before returning to the start. This approach guarantees equitable exposure across large content libraries while maintaining predictable, debuggable behavior.</p>
+
+        <h3>Handling Duplicates and Unique Filtering</h3>
+        
+        <p>Real-world text often contains duplicate elements that would produce redundant permutations if treated as distinct. Advanced <strong>text permutation software free</strong> implementations detect and handle duplicates intelligently, either by treating identical items as indistinguishable (reducing permutation count accordingly) or by filtering duplicate results from the output. This distinction matters significantly for applications like lottery number generation versus username creation.</p>
+
+        <p>When using an <strong>online text tools permutation</strong> solution for data cleaning, unique filtering ensures you don't waste time reviewing identical outputs. For creative applications, preserving duplicates might be intentional—permuting "love love love" produces meaningful variations in poetic contexts where repetition emphasizes emotion. Our <strong>free online text utilities</strong> provide toggle controls for duplicate handling, giving you full control over output uniqueness.</p>
+
+        <h2>Professional Applications Across Industries</h2>
+
+        <h3>Search Engine Optimization and Digital Marketing</h3>
+        
+        <p>SEO professionals rely heavily on <strong>text permutation tool for SEO</strong> capabilities to dominate search rankings through semantic coverage. Modern search algorithms understand topic clusters and entity relationships, rewarding content that addresses subjects from multiple angles. By permuting seed keywords into question formats, comparison phrases, and instructional queries, marketers create comprehensive content calendars that capture the full spectrum of search intent.</p>
+
+        <p>Pay-per-click advertising benefits similarly from <strong>free online text pattern generator</strong> tools. Google Ads and similar platforms reward ad relevance through Quality Score metrics, which improve when ads closely match search queries. Generating permutations of value propositions ("Free Shipping," "Fast Delivery," "Best Price") with product categories creates tightly targeted ad groups that boost relevance scores while reducing cost-per-click. This systematic variation outperforms manual brainstorming in both speed and coverage.</p>
+
+        <h3>Software Development and Testing</h3>
+        
+        <p>Developers utilize <strong>online word combination tool free</strong> resources for test case generation, mock data creation, and algorithm verification. When testing sorting algorithms, permuted input sets verify correctness across all possible orderings. When generating test databases, permuted name components create realistic yet distinct records for performance testing. When validating form inputs, permuted special character combinations ensure robust sanitization logic.</p>
+
+        <p>API development particularly benefits from <strong>free text rearranging tool online</strong> automation. Testing parameter order sensitivity, query string variations, and header combinations requires systematic permutation coverage that manual testing cannot achieve. Automated permutation generation feeds into CI/CD pipelines, providing comprehensive test matrices that catch edge cases before production deployment.</p>
+
+        <h3>Linguistics and Natural Language Processing</h3>
+        
+        <p>Researchers in computational linguistics apply <strong>online permutation text tester</strong> methodologies to analyze language structure, word order flexibility, and syntactic variation. Different languages permit different word orders—English is relatively strict, while Latin or Russian allow extensive permutation without losing grammatical correctness. Studying these permutations reveals underlying syntactic rules and cross-linguistic universals.</p>
+
+        <p>Natural language processing pipelines use <strong>text permutation conversion free</strong> techniques for data augmentation. Training machine learning models on permuted sentence variations improves robustness to word order changes, enhancing performance on real-world text that may not follow standard patterns. This augmentation is particularly valuable for low-resource languages where training data is scarce and every variation must be maximally utilized.</p>
+
+        <h2>Best Practices for Effective Permutation Workflows</h2>
+
+        <h3>Input Preparation and Normalization</h3>
+        
+        <p>Quality output begins with quality input. Before using any <strong>free text order changer tool online</strong>, clean your source text by removing extra whitespace, standardizing case (if case-insensitive permutations are desired), and filtering out empty entries. Consistent delimiters ensure accurate element parsing—mixed separators (commas in some places, spaces in others) require preprocessing or careful separator selection.</p>
+
+        <p>For large-scale <strong>text permutation</strong> projects, consider hierarchical processing. Rather than permuting 20 items at once (producing 2.4 quintillion theoretical results), break into logical subgroups. Permute related terms within categories first, then permute category representatives. This approach maintains semantic coherence while still generating substantial variation, making the output usable rather than overwhelming.</p>
+
+        <h3>Performance Optimization and Browser Limits</h3>
+        
+        <p>Understanding computational limits is essential when working with <strong>online text permutation</strong> tools. Browser-based JavaScript can comfortably handle thousands of results but struggles with millions. Factorial growth means 10 items produce 3.6 million permutations—manageable with optimization but potentially freezing with naive implementations. Our tool includes intelligent limiting and Web Worker support where available to maintain responsiveness.</p>
+
+        <p>When processing large datasets, use the result limiting features progressively. Start with 100 results to verify output format, increase to 1,000 for sampling, and only expand to maximum limits after confirming the approach works. For truly massive permutation requirements (cryptographic applications, extensive test matrices), consider server-side processing or specialized tools rather than browser-based solutions.</p>
+
+        <h3>Output Integration and Post-Processing</h3>
+        
+        <p>Raw permutation output rarely meets final use requirements directly. Plan for post-processing steps: removing permutations that violate grammar rules, filtering results that exceed length limits, selecting subsets for A/B testing, or formatting for specific platform requirements. Exporting to spreadsheet software enables sorting, filtering, and collaborative review that browser interfaces cannot provide.</p>
+
+        <p>Automation integration maximizes <strong>text permutation generator free</strong> value. Most tools offer CSV or plain text export suitable for importing into marketing platforms, testing frameworks, or content management systems. API access (where available) enables direct integration into workflows, generating permutations on-demand as part of automated pipelines rather than manual copy-paste operations.</p>
+
+        <h2>Comparing Permutation Tools and Methods</h2>
+
+        <h3>Manual vs. Automated Permutation</h3>
+        
+        <p>Manual permutation through spreadsheets or text editors works for very small sets (under 5 items) but becomes error-prone and tedious quickly. Humans struggle to systematically generate all combinations without repetition or omission, and manual processes don't scale. Automated <strong>free text permutation tool</strong> solutions eliminate human error, handle larger inputs, and complete in seconds what takes hours manually.</p>
+
+        <h3>Spreadsheet Formulas vs. Dedicated Tools</h3>
+        
+        <p>Excel and Google Sheets offer permutation functions through complex formula combinations, but these are limited, slow, and difficult to customize. Dedicated <strong>online text permutation tool</strong> solutions provide intuitive interfaces, multiple permutation modes, instant preview, and export options that spreadsheet software cannot match. For professional use, specialized tools justify the minimal learning curve through superior output quality and time savings.</p>
+
+        <h2>Conclusion: Unlocking Creative and Analytical Potential</h2>
+
+        <p><strong>Text permutation</strong> represents one of the most versatile techniques in the modern digital toolkit, bridging creative content generation with rigorous analytical testing. From SEO marketers dominating search results through semantic variation to developers ensuring software quality through comprehensive test coverage, the applications span every industry and use case. The mathematical elegance of permutation—systematically exploring all possible arrangements—translates directly into practical value when implemented through user-friendly tools.</p>
+
+        <p>Our <strong>free online text permutation</strong> tool democratizes access to this powerful technique, providing professional-grade capabilities without cost or registration barriers. With six permutation modes, configurable separators, intelligent limiting, and instant browser-based processing, it serves everyone from casual users exploring wordplay to professionals automating large-scale content workflows. Whether you need to <strong>text rearrange online free</strong> for creative writing, generate SEO keyword variations, test software permutations, or explore linguistic patterns, our <strong>text permutation utility free</strong> delivers reliable, high-performance results. Stop struggling with manual rearrangement—start using our professional <strong>online text permutation generator tool</strong> today and experience the efficiency of automated text permutation.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What is text permutation and how does it work?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Text permutation</strong> generates all possible arrangements of your input items. If you enter "A B C", the tool creates "A B C", "A C B", "B A C", "B C A", "C A B", and "C B A". Our <strong>free text permutation tool</strong> handles this instantly using mathematical algorithms. The number of results grows factorially—3 items make 6 permutations, 4 items make 24, 5 items make 120, etc. We include safety limits to prevent browser crashes with large inputs.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Why is there a limit on the number of results?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Factorial growth makes large permutations computationally explosive. Just 10 items produce 3.6 million permutations, which could freeze your browser. Our <strong>online text permutation tool</strong> includes configurable limits (10 to 10,000 results) to ensure responsive performance. For most practical applications—SEO keywords, content variations, testing scenarios—you rarely need more than a few hundred permutations. Use the "Partial" mode for controlled sampling of large sets.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What's the difference between Words, Lines, and Characters mode?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Words mode</strong> permutes space-separated tokens—ideal for SEO keywords, headlines, and creative writing. <strong>Lines mode</strong> permutes by newlines—perfect for reordering list items, paragraphs, or code blocks. <strong>Characters mode</strong> permutes individual letters—useful for cryptography, anagrams, and security testing. Choose based on your data structure and desired output granularity. Our <strong>free online permutation generator</strong> handles all three with the same interface.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I use partial permutations (k-permutations)?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Select "Partial (k-permutations)" mode, then specify your desired permutation size (k). For example, with 5 input words and k=2, you get all 2-word combinations (20 results) rather than all 5-word arrangements (120 results). This <strong>text permutation tool online free</strong> feature is essential for managing large input sets. Use it for pairwise testing, headline variations, or when exploring subsets of a large keyword pool without overwhelming output.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I remove duplicate permutations?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Check the "Remove duplicates" option to filter identical items before permutation. If your input contains "word word" (intentional repetition), uncheck this to preserve duplicates in permutations. For most <strong>free text permute tool</strong> use cases—SEO keywords, unique identifiers, test data—you want duplicates removed. For creative applications like poetry or rhythmic text, preserving duplicates might be intentional. The toggle gives you full control.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my data secure when using this tool?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely. All processing happens <strong>locally in your browser</strong>—your text never uploads to our servers or leaves your device. You can verify this using browser DevTools (Network tab shows no data transmission). The tool works offline after initial page load. This makes our <strong>online text rearranger</strong> ideal for sensitive content, confidential keywords, proprietary data, or any text requiring privacy. No account, no tracking, no data retention.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What file types are supported for drag-and-drop?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">All text-based files: TXT, CSV, JSON, XML, HTML, Markdown (MD), and code files (JS, CSS, Python, Java, C/C++, PHP, Ruby, Go, Rust, Swift, Kotlin, SQL, LOG). Files are read as plain text, so any text file works regardless of extension. For CSV files, the tool respects your selected separator setting—choose comma for standard CSV or custom for tab/pipe delimited files. Our <strong>text permutation utility free</strong> handles them all seamlessly.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How can I use this for SEO keyword generation?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Input your core keywords (e.g., "best running shoes"), select Words mode, and generate permutations. Use <strong>text permutation SEO keywords</strong> output for: meta title variations, ad copy A/B tests, blog post title ideas, long-tail keyword discovery, and content cluster planning. The <strong>free online text mixer</strong> helps you discover keyword combinations you might not have considered manually. Export results to CSV for import into SEO tools like Ahrefs, SEMrush, or Google Keyword Planner.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Why does the tool slow down with large inputs?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Permutation algorithms have O(n!) time complexity—mathematically explosive growth. We use <strong>debouncing</strong> (slight delay after typing) and <strong>result limiting</strong> to maintain responsiveness. For inputs over 8-10 items, use Partial mode or accept truncated results. The browser's JavaScript engine, while fast, cannot overcome factorial mathematics. For industrial-scale permutation needs (millions+ results), consider server-side tools or specialized software rather than browser-based solutions.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this tool completely free?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, 100% <strong>free</strong> with no registration, usage limits, watermarks, or hidden fees. Use for personal projects, commercial work, client deliverables, or educational purposes without attribution. This is truly a <strong>free text permutation tool</strong> for everyone. We support development through unobtrusive advertising and user donations. No premium tier, no feature restrictions, no account required—just professional-grade text permutation available instantly in your browser.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const outputText = document.getElementById('outputText');
+const inputStats = document.getElementById('inputStats');
+const outputStats = document.getElementById('outputStats');
+const permutationsCount = document.getElementById('permutationsCount');
+const processingTime = document.getElementById('processingTime');
+const permutationsPreview = document.getElementById('permutationsPreview');
+const permutationsList = document.getElementById('permutationsList');
+const showingCount = document.getElementById('showingCount');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+const limitWarning = document.getElementById('limitWarning');
+const permutationLimitWarning = document.getElementById('permutationLimitWarning');
+
+// Buttons
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const resetBtn = document.getElementById('resetBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+// Method buttons and panels
+const methodBtns = document.querySelectorAll('.method-btn');
+let currentMethod = 'words';
+
+// Settings
+const separatorSelect = document.getElementById('separatorSelect');
+const customSeparator = document.getElementById('customSeparator');
+const joinSelect = document.getElementById('joinSelect');
+const limitSelect = document.getElementById('limitSelect');
+const partialOptions = document.getElementById('partialOptions');
+const partialSize = document.getElementById('partialSize');
+const uniqueOnly = document.getElementById('uniqueOnly');
+const preserveCase = document.getElementById('preserveCase');
+
+// State
+let currentPermutations = [];
+let currentJoin = '\n';
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Update input stats
+function updateInputStats() {
+  const text = inputText.value;
+  const separator = getSeparator();
+  let items = [];
+  
+  if (text.trim()) {
+    if (currentMethod === 'chars') {
+      items = text.split('');
+    } else if (currentMethod === 'lines') {
+      items = text.split('\n').filter(item => item.trim());
+    } else {
+      items = text.split(separator).filter(item => item.trim());
+    }
+  }
+  
+  const chars = text.length;
+  inputStats.textContent = `Items: ${items.length} | Chars: ${chars}`;
+  return items;
+}
+
+// Get separator value
+function getSeparator() {
+  const val = separatorSelect.value;
+  if (val === 'custom') {
+    return customSeparator.value || ' ';
+  }
+  if (val === '\\n') return '\n';
+  if (val === '\\t') return '\t';
+  return val;
+}
+
+// Debounce function
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Method selection
+methodBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    methodBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentMethod = btn.dataset.method;
+    
+    // Show/hide partial options
+    if (currentMethod === 'partial') {
+      partialOptions.classList.remove('hidden');
+    } else {
+      partialOptions.classList.add('hidden');
+    }
+    
+    generatePermutations();
+  });
+});
+
+// Separator change
+separatorSelect.addEventListener('change', (e) => {
+  if (e.target.value === 'custom') {
+    customSeparator.classList.remove('hidden');
+  } else {
+    customSeparator.classList.add('hidden');
+  }
+  generatePermutations();
+});
+
+customSeparator.addEventListener('input', generatePermutations);
+
+// Other settings
+joinSelect.addEventListener('change', (e) => {
+  currentJoin = e.target.value;
+  generatePermutations();
+});
+
+limitSelect.addEventListener('change', generatePermutations);
+partialSize.addEventListener('input', generatePermutations);
+uniqueOnly.addEventListener('change', generatePermutations);
+preserveCase.addEventListener('change', generatePermutations);
+
+// Factorial calculation
+function factorial(n) {
+  if (n <= 1) return 1;
+  let result = 1;
+  for (let i = 2; i <= n; i++) {
+    result *= i;
+  }
+  return result;
+}
+
+// Heap's algorithm for efficient permutation generation
+function* heapPermutation(arr, k) {
+  const c = new Array(k).fill(0);
+  yield arr.slice(0, k);
+  
+  let i = 0;
+  while (i < k) {
+    if (c[i] < i) {
+      if (i % 2 === 0) {
+        [arr[0], arr[i]] = [arr[i], arr[0]];
+      } else {
+        [arr[c[i]], arr[i]] = [arr[i], arr[c[i]]];
+      }
+      yield arr.slice(0, k);
+      c[i] += 1;
+      i = 0;
+    } else {
+      c[i] = 0;
+      i += 1;
+    }
+  }
+}
+
+// Generate k-permutations (partial permutations)
+function* kPermutations(arr, k) {
+  const n = arr.length;
+  if (k > n) return;
+  
+  const c = new Array(k).fill(0);
+  const result = arr.slice(0, k);
+  yield [...result];
+  
+  let i = 0;
+  while (i < k) {
+    if (c[i] < i) {
+      if (i % 2 === 0) {
+        [result[0], result[i]] = [result[i], result[0]];
+      } else {
+        [result[c[i]], result[i]] = [result[i], result[c[i]]];
+      }
+      yield [...result];
+      c[i] += 1;
+      i = 0;
+    } else {
+      c[i] = 0;
+      i += 1;
+    }
+  }
+}
+
+// Circular permutations (rotations)
+function* circularPermutations(arr) {
+  const n = arr.length;
+  for (let i = 0; i < n; i++) {
+    yield [...arr.slice(i), ...arr.slice(0, i)];
+  }
+}
+
+// Pair permutations (adjacent swaps)
+function* pairPermutations(arr) {
+  const n = arr.length;
+  yield [...arr];
+  for (let i = 0; i < n - 1; i++) {
+    const swapped = [...arr];
+    [swapped[i], swapped[i + 1]] = [swapped[i + 1], swapped[i]];
+    yield swapped;
+  }
+}
+
+// Main permutation function
+function generatePermutations() {
+  const startTime = performance.now();
+  const text = inputText.value;
+  
+  if (!text.trim()) {
+    outputText.value = '';
+    outputStats.textContent = 'Total: 0 | Generated: 0';
+    permutationsCount.textContent = '(0 results)';
+    permutationsCount.classList.add('hidden');
+    permutationsPreview.classList.add('hidden');
+    processingTime.textContent = '';
+    limitWarning.classList.add('hidden');
+    permutationLimitWarning.classList.add('hidden');
+    currentPermutations = [];
+    return;
+  }
+  
+  // Get items based on mode
+  let items = [];
+  const separator = getSeparator();
+  
+  try {
+    switch(currentMethod) {
+      case 'chars':
+        items = text.split('');
+        break;
+      case 'lines':
+        items = text.split('\n').filter(item => item.trim());
+        break;
+      case 'words':
+      case 'partial':
+      case 'circular':
+      case 'pairs':
+      default:
+        items = text.split(separator).filter(item => item.trim());
+    }
+    
+    // Remove duplicates if requested
+    if (uniqueOnly.checked) {
+      items = [...new Set(items)];
+    }
+    
+    // Case handling
+    if (!preserveCase.checked) {
+      items = items.map(item => item.toLowerCase());
+    }
+    
+    const n = items.length;
+    let permutations = [];
+    let totalPossible = 0;
+    const limit = parseInt(limitSelect.value) || 100;
+    
+    // Calculate total possible and check limits
+    if (currentMethod === 'partial') {
+      const k = Math.min(parseInt(partialSize.value) || 2, n);
+      totalPossible = factorial(n) / factorial(n - k);
+    } else if (currentMethod === 'circular') {
+      totalPossible = n;
+    } else if (currentMethod === 'pairs') {
+      totalPossible = n;
+    } else {
+      totalPossible = factorial(n);
+    }
+    
+    // Show warnings
+    if (n > 8 && currentMethod !== 'partial' && currentMethod !== 'circular' && currentMethod !== 'pairs') {
+      permutationLimitWarning.classList.remove('hidden');
+    } else {
+      permutationLimitWarning.classList.add('hidden');
+    }
+    
+    if (totalPossible > limit) {
+      limitWarning.classList.remove('hidden');
+    } else {
+      limitWarning.classList.add('hidden');
+    }
+    
+    // Generate permutations based on mode
+    let count = 0;
+    
+    if (currentMethod === 'partial') {
+      const k = Math.min(parseInt(partialSize.value) || 2, n);
+      for (const perm of kPermutations([...items], k)) {
+        if (count >= limit) break;
+        permutations.push(perm);
+        count++;
+      }
+    } else if (currentMethod === 'circular') {
+      for (const perm of circularPermutations(items)) {
+        if (count >= limit) break;
+        permutations.push(perm);
+        count++;
+      }
+    } else if (currentMethod === 'pairs') {
+      for (const perm of pairPermutations(items)) {
+        if (count >= limit) break;
+        permutations.push(perm);
+        count++;
+      }
+    } else {
+      // Full permutation with limit
+      for (const perm of heapPermutation([...items], n)) {
+        if (count >= limit) break;
+        permutations.push(perm);
+        count++;
+      }
+    }
+    
+    const endTime = performance.now();
+    currentPermutations = permutations;
+    
+    // Format output
+    const joinStr = currentJoin.replace(/\\n/g, '\n');
+    const output = permutations.map(perm => perm.join(joinStr)).join('\n');
+    outputText.value = output;
+    
+    // Update stats
+    outputStats.textContent = `Total: ${totalPossible.toLocaleString()} | Generated: ${permutations.length}`;
+    permutationsCount.textContent = `(${permutations.length.toLocaleString()} results)`;
+    permutationsCount.classList.remove('hidden');
+    processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+    
+    // Update preview
+    displayPermutationsPreview(permutations);
+    
+  } catch (error) {
+    console.error('Permutation error:', error);
+    outputText.value = 'Error generating permutations. Try reducing input size or using Partial mode.';
+  }
+}
+
+// Debounced version
+const debouncedGenerate = debounce(generatePermutations, 300);
+
+// Display preview
+function displayPermutationsPreview(permutations) {
+  if (permutations.length === 0) {
+    permutationsPreview.classList.add('hidden');
+    return;
+  }
+  
+  permutationsPreview.classList.remove('hidden');
+  permutationsList.innerHTML = '';
+  showingCount.textContent = `Showing ${Math.min(permutations.length, 50)} of ${permutations.length}`;
+  
+  const joinStr = currentJoin.replace(/\\n/g, ' ');
+  
+  permutations.slice(0, 50).forEach((perm, index) => {
+    const permText = perm.join(joinStr);
+    const itemDiv = document.createElement('div');
+    itemDiv.className = 'permutation-item p-2 rounded bg-white/5 cursor-pointer text-xs';
+    itemDiv.innerHTML = `
+      <div class="flex items-center justify-between mb-0.5">
+        <span class="text-xs font-medium text-indigo-400">#${index + 1}</span>
+        <span class="text-xs text-gray-500">${perm.length} items</span>
+      </div>
+      <div class="text-gray-300 truncate">${permText.substring(0, 60)}${permText.length > 60 ? '...' : ''}</div>
+    `;
+    
+    itemDiv.addEventListener('click', () => {
+      navigator.clipboard.writeText(permText);
+      itemDiv.style.background = 'rgba(34, 197, 94, 0.2)';
+      setTimeout(() => {
+        itemDiv.style.background = '';
+      }, 200);
+    });
+    
+    permutationsList.appendChild(itemDiv);
+  });
+  
+  if (permutations.length > 50) {
+    const moreDiv = document.createElement('div');
+    moreDiv.className = 'text-xs text-gray-500 text-center py-1';
+    moreDiv.textContent = `... and ${permutations.length - 50} more`;
+    permutationsList.appendChild(moreDiv);
+  }
+}
+
+// Drag and drop handlers
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  if (!file.type.match('text.*') && !file.name.match(/\.(txt|csv|json|xml|html?|md|js|css|py|java|cpp|c|php|rb|go|rs|swift|kt|sql|log)$/i)) {
+    alert('Please upload a text file');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    updateInputStats();
+    generatePermutations();
+  };
+  reader.readAsText(file);
+}
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    updateInputStats();
+    generatePermutations();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  updateInputStats();
+  generatePermutations();
+  inputText.focus();
+}
+
+// Copy output
+async function copyOutput() {
+  if (!outputText.value) return;
+  
+  try {
+    await navigator.clipboard.writeText(outputText.value);
+    const originalText = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalText;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+}
+
+// Download output
+function downloadOutput() {
+  const text = outputText.value;
+  if (!text.trim()) return;
+  
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'permutations.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Reset all
+function resetAll() {
+  inputText.value = '';
+  outputText.value = '';
+  updateInputStats();
+  outputStats.textContent = 'Total: 0 | Generated: 0';
+  permutationsCount.classList.add('hidden');
+  permutationsPreview.classList.add('hidden');
+  limitWarning.classList.add('hidden');
+  permutationLimitWarning.classList.add('hidden');
+  processingTime.textContent = '';
+  currentPermutations = [];
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Event listeners
+inputText.addEventListener('input', () => {
+  updateInputStats();
+  debouncedGenerate();
+});
+
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+copyBtn.addEventListener('click', copyOutput);
+downloadBtn.addEventListener('click', downloadOutput);
+resetBtn.addEventListener('click', resetAll);
+
+// Initialize
+updateInputStats();
+</script>
+</body>
+</html>
