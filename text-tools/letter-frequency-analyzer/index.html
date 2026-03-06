@@ -1,0 +1,1640 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Letter Frequency Analyzer - Free Online Text Analysis Tool</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online letter frequency analyzer tool. Analyze character distribution, count letter occurrences, and generate detailed alphabet statistics. Real-time text analysis with no registration required." />
+  <meta name="keywords" content="letter frequency analyzer online, letter frequency analyzer tool free, online letter frequency counter, free text letter frequency tool, letter frequency checker online, letter frequency analysis tool, online text analysis tool free, free online text analyzer, free character frequency counter, letter count online free, free online letter count tool, text letter distribution analyzer, free letter frequency statistics, online alphabet frequency tool, letter frequency calculator free, free text frequency analyzer online, online letter frequency analysis tool, free online character count and frequency, letter frequency tool for writers, free letter frequency checker, letter frequency reports online, online letter usage analysis free, free online linguistic tools, free text analyzer with letter frequency, letter frequency finder online, free browser text analysis tool" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/letter-frequency-analyzer/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/letter-frequency-analyzer/" />
+  <meta property="og:title" content="Letter Frequency Analyzer - Free Online Text Analysis Tool" />
+  <meta property="og:description" content="Analyze character distribution, count letter occurrences, and generate detailed alphabet statistics. Real-time text analysis with no registration required." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/letter-frequency-analyzer/" />
+  <meta name="twitter:title" content="Letter Frequency Analyzer - Free Online Text Analysis Tool" />
+  <meta name="twitter:description" content="Analyze character distribution, count letter occurrences, and generate detailed alphabet statistics. Real-time text analysis with no registration required." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .method-btn {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    .method-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .stat-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.2s ease;
+    }
+    
+    .stat-card:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.12);
+    }
+
+    .stat-value {
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .progress-bar {
+      height: 3px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #6366f1, #8b5cf6);
+      border-radius: 2px;
+      transition: width 0.3s ease;
+    }
+
+    .letter-bar {
+      height: 100%;
+      border-radius: 2px;
+      transition: width 0.3s ease;
+    }
+
+    .ngram-tabs {
+      display: flex;
+      gap: 0.25rem;
+      margin-bottom: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .ngram-tab {
+      padding: 0.25rem 0.5rem;
+      font-size: 0.7rem;
+      border-radius: 0.25rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.05);
+      color: #9ca3af;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .ngram-tab.active {
+      background: rgba(99, 102, 241, 0.3);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    .stats-grid-compact {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .stats-grid-compact {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .mini-stat {
+      padding: 0.5rem;
+    }
+
+    .mini-stat .stat-value {
+      font-size: 1rem;
+    }
+
+    .mini-stat .stat-label {
+      font-size: 0.6rem;
+    }
+
+    .alphabet-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+      gap: 0.5rem;
+    }
+
+    .letter-cell {
+      aspect-ratio: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 0.375rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .letter-cell:hover {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      transform: scale(1.05);
+    }
+
+    .letter-count {
+      font-size: 0.65rem;
+      color: #9ca3af;
+      margin-top: 0.125rem;
+    }
+
+    .distribution-bar {
+      height: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-top: 0.5rem;
+    }
+
+    .distribution-fill {
+      height: 100%;
+      border-radius: 4px;
+      transition: width 0.5s ease;
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+
+    .tab-content {
+      display: none;
+    }
+    
+    .tab-content.active {
+      display: block;
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 12h8M10 20h20M10 28h14" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Letter Frequency Analyzer</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Analysis Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Letter Frequency Analyzer
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Text Analysis Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-analysis enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Input Text
+            </label>
+            <div class="flex gap-1">
+              <button id="sampleBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                Sample
+              </button>
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Type or paste text here... Or drag & drop a file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.csv,.md,.json,.xml,.html,.js,.css,.py,.java,.cpp,.c,.php,.rb,.go,.rs,.swift,.kt,.sql,.log" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Chars: 0 | Words: 0 | Lines: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Analysis Dashboard -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+              Analysis Dashboard
+            </label>
+            <div class="flex gap-1">
+              <button id="exportBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Export CSV
+              </button>
+            </div>
+          </div>
+          
+          <!-- Compact Stats Grid -->
+          <div class="stats-grid-compact" id="statsContainer">
+            <div class="stat-card mini-stat rounded-lg p-2 text-center">
+              <div class="stat-label text-gray-400 mb-1">Total Letters</div>
+              <div class="stat-value text-indigo-400" id="totalLetters">0</div>
+              <div class="progress-bar mt-1">
+                <div class="progress-fill" id="progressTotal" style="width: 0%"></div>
+              </div>
+            </div>
+            
+            <div class="stat-card mini-stat rounded-lg p-2 text-center">
+              <div class="stat-label text-gray-400 mb-1">Unique Letters</div>
+              <div class="stat-value text-emerald-400" id="uniqueLetters">0</div>
+              <div class="text-xs text-gray-500 mt-1" id="uniquePercent">0%</div>
+            </div>
+            
+            <div class="stat-card mini-stat rounded-lg p-2 text-center">
+              <div class="stat-label text-gray-400 mb-1">Most Frequent</div>
+              <div class="stat-value text-amber-400" id="topLetter">-</div>
+              <div class="text-xs text-gray-500 mt-1" id="topCount">0</div>
+            </div>
+            
+            <div class="stat-card mini-stat rounded-lg p-2 text-center">
+              <div class="stat-label text-gray-400 mb-1">Least Frequent</div>
+              <div class="stat-value text-rose-400" id="bottomLetter">-</div>
+              <div class="text-xs text-gray-500 mt-1" id="bottomCount">0</div>
+            </div>
+            
+            <div class="stat-card mini-stat rounded-lg p-2 text-center">
+              <div class="stat-label text-gray-400 mb-1">Uppercase</div>
+              <div class="stat-value text-cyan-400" id="uppercaseCount">0</div>
+              <div class="text-xs text-gray-500 mt-1" id="uppercasePercent">0%</div>
+            </div>
+            
+            <div class="stat-card mini-stat rounded-lg p-2 text-center">
+              <div class="stat-label text-gray-400 mb-1">Lowercase</div>
+              <div class="stat-value text-violet-400" id="lowercaseCount">0</div>
+              <div class="text-xs text-gray-500 mt-1" id="lowercasePercent">0%</div>
+            </div>
+          </div>
+
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="analysisStats">Processing: 0ms</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Analysis Tabs -->
+          <div>
+            <div class="flex flex-wrap gap-1 mb-2 mt-2">
+              <button class="method-btn active rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-tab="alphabet">Alphabet Grid</button>
+              <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-tab="distribution">Distribution</button>
+              <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-tab="pairs">Letter Pairs</button>
+            </div>
+          </div>
+
+          <!-- Tab Content -->
+          <div id="tabAlphabet" class="tab-content active">
+            <div class="alphabet-grid" id="alphabetGrid">
+              <!-- Letters will be populated here -->
+            </div>
+          </div>
+
+          <div id="tabDistribution" class="tab-content">
+            <div class="space-y-2 max-h-64 overflow-y-auto pr-1" id="distributionList">
+              <!-- Distribution bars will be populated here -->
+            </div>
+          </div>
+
+          <div id="tabPairs" class="tab-content">
+            <div class="ngram-tabs">
+              <button class="ngram-tab active" data-pair="2">2-Letter</button>
+              <button class="ngram-tab" data-pair="3">3-Letter</button>
+              <button class="ngram-tab" data-pair="digraphs">Digraphs</button>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 max-h-48 overflow-y-auto" id="pairsList">
+              <!-- Letter pairs will be populated here -->
+            </div>
+          </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-3">
+        
+        <!-- Analysis Options -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Case Sensitivity</label>
+            <select id="caseSelect" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="insensitive">Ignore Case (Default)</option>
+              <option value="sensitive">Case Sensitive</option>
+            </select>
+          </div>
+          
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Alphabet Type</label>
+            <select id="alphabetSelect" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="latin">Latin (A-Z)</option>
+              <option value="extended">Extended (with accents)</option>
+              <option value="all">All Unicode Letters</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Include Numbers</label>
+            <select id="numbersSelect" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="exclude">Exclude Numbers</option>
+              <option value="include">Include (0-9)</option>
+              <option value="only">Numbers Only</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Sort By</label>
+            <select id="sortSelect" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="frequency">Frequency (High-Low)</option>
+              <option value="alphabetical">Alphabetical (A-Z)</option>
+              <option value="rare">Rarity (Low-High)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Advanced Options -->
+        <div class="flex flex-wrap gap-2 items-center">
+          <label class="flex items-center gap-1.5 text-xs text-gray-400">
+            <input type="checkbox" id="showPercentages" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Show Percentages
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400">
+            <input type="checkbox" id="highlightExtremes" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Highlight Most/Least
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400">
+            <input type="checkbox" id="ignoreWhitespace" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Ignore Whitespace
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Letter Frequency Analyzer?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Real-Time Analysis</h3>
+          <p class="text-gray-400 text-xs">Instant letter counting as you type</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Visual Grid</h3>
+          <p class="text-gray-400 text-xs">Interactive alphabet heatmap</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Drag & Drop</h3>
+          <p class="text-gray-400 text-xs">Upload files instantly</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based processing</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Download CSV reports</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration needed</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Enter Text</h3>
+          <p class="text-gray-400 text-xs">Type, paste, or drop a file. Analysis starts automatically.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">View Grid</h3>
+          <p class="text-gray-400 text-xs">See letter frequency in the interactive alphabet grid.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Explore</h3>
+          <p class="text-gray-400 text-xs">Switch tabs to see distribution charts and letter pairs.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Download CSV data for further analysis.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Letter Frequency Analysis: Understanding Character Distribution in Text</h2>
+        
+        <p><strong>Letter frequency analysis</strong> represents one of the most fundamental yet profoundly insightful techniques in text analysis, cryptography, linguistics, and data science. Whether you're a cryptographer breaking simple substitution ciphers, a linguist studying language patterns, a writer analyzing your stylistic tendencies, or a programmer optimizing text processing algorithms, understanding how to effectively use a <strong>letter frequency analyzer online</strong> is essential for extracting meaningful insights from textual data. Our <strong>free text letter frequency tool</strong> provides comprehensive capabilities that reveal the hidden statistical structure of written language.</p>
+
+        <h2>Understanding Letter Frequency Analysis and Its Foundations</h2>
+        
+        <p><strong>Letter frequency analysis</strong> is the systematic process of counting how often each letter of the alphabet appears within a given text or corpus. This seemingly simple operation unlocks deep insights into language structure, writing patterns, cryptographic vulnerabilities, and textual characteristics that remain invisible to casual reading. When you use an <strong>online letter frequency counter</strong>, you're engaging with a methodology that has applications spanning from ancient cryptography to modern computational linguistics.</p>
+
+        <p>The significance of reliable <strong>letter frequency analysis tools</strong> cannot be overstated across multiple disciplines. Cryptographers use frequency patterns to break substitution ciphers—knowing that 'e' is the most common letter in English allows systematic decryption attempts. Linguists employ <strong>free online text analyzers</strong> to compare language characteristics, track linguistic evolution, and identify authorship patterns. Writers utilize <strong>letter frequency checkers online</strong> to analyze their stylistic tendencies and ensure consistency across large works. Data scientists apply frequency analysis to optimize compression algorithms, train machine learning models, and preprocess text for natural language processing pipelines.</p>
+
+        <h2>The Science of Letter Distribution: Historical Context and Modern Applications</h2>
+
+        <h3>Historical Origins in Cryptography</h3>
+        
+        <p>The systematic study of letter frequencies dates back centuries, with early cryptographers recognizing that language possesses predictable statistical properties. In English, the letter 'e' typically constitutes approximately 12.7% of all letters, followed by 't' at 9.1%, 'a' at 8.1%, and 'o' at 7.5%. This uneven distribution, discovered through manual counting in the 19th century and refined through computational analysis in the 20th, forms the foundation of frequency analysis cryptanalysis techniques.</p>
+
+        <p>Before computers, cryptanalysts like those at Bletchley Park during World War II performed manual letter counting to break enemy codes. Today, a <strong>letter frequency calculator free</strong> tool performs in milliseconds what once required hours of tedious work. Modern <strong>online alphabet frequency tools</strong> not only count letters but visualize distributions, compare against language baselines, and identify anomalies that might indicate coded messages or artificial text generation.</p>
+
+        <h3>Language Identification and Verification</h3>
+        
+        <p>Different languages exhibit distinct letter frequency signatures. German features high 'e' usage but also prominent 'n' and 'i'; Spanish shows elevated 'a' and 'e' with distinctive 'ñ'; French emphasizes 'e', 'a', and 'i' with characteristic accent patterns. A sophisticated <strong>text letter distribution analyzer</strong> can identify language based solely on letter frequencies, even without understanding the vocabulary.</p>
+
+        <p>Beyond identification, frequency analysis verifies text authenticity. Machine-generated text, translated content, or artificially simplified writing often shows frequency patterns that deviate from natural language baselines. Professional <strong>free letter frequency statistics</strong> tools can flag such deviations, assisting editors, forensic linguists, and quality assurance specialists in detecting problematic content.</p>
+
+        <h2>Core Concepts in Letter Frequency Analysis</h2>
+
+        <h3>Absolute vs. Relative Frequency</h3>
+        
+        <p><strong>Absolute frequency</strong> measures raw counts—how many times the letter 'a' appears in a text. While straightforward, absolute frequencies make comparing texts of different lengths impossible. A 1,000-word essay and a 100,000-word novel will show dramatically different absolute counts for every letter.</p>
+
+        <p><strong>Relative frequency</strong> expresses letter counts as percentages of total letters, enabling meaningful comparisons across documents of varying lengths. When using a <strong>free online character count and frequency</strong> tool, relative frequencies reveal whether your text overuses or underuses specific letters compared to language norms. This normalization is essential for cryptographic analysis, stylistic comparison, and linguistic research.</p>
+
+        <h3>Case Sensitivity and Character Classification</h3>
+        
+        <p>Modern <strong>letter frequency analysis tools</strong> must handle character classification decisions that affect results. Should uppercase and lowercase letters be counted separately or combined? Most general-purpose analysis treats them as identical (case-insensitive), but case-sensitive mode proves valuable for analyzing proper noun density, programming code, or texts where capitalization carries semantic weight.</p>
+
+        <p>Beyond basic letters, comprehensive <strong>free text frequency analyzers online</strong> handle extended character sets: accented letters (é, ñ, ü), digraphs (ch, ll, rr in various languages), numbers, punctuation, and whitespace. The decision to include or exclude these categories depends on analytical goals. Cryptographers typically focus solely on alphabetic characters; computational linguists might include everything; code analysts could prioritize symbols and numbers.</p>
+
+        <h3>Positional and Contextual Frequency</h3>
+        
+        <p>Advanced <strong>online letter frequency analysis tools</strong> extend beyond simple counting to examine where letters appear within words and sentences. Initial letter frequencies differ dramatically from overall distributions—words rarely start with 'x' but commonly begin with 't', 'a', 'o', and 's'. Final letter patterns show their own regularities, with 'e', 's', 'd', and 't' dominating word endings in English.</p>
+
+        <p>Our <strong>letter frequency analyzer tool free</strong> includes digraph and trigraph analysis—examining two-letter and three-letter combinations. Common English digraphs include 'th', 'he', 'in', 'er', and 'an'; frequent trigraphs comprise 'the', 'and', 'ing', 'ion', and 'tio'. These patterns prove even more distinctive than single-letter frequencies for language identification, cryptanalysis, and text generation detection.</p>
+
+        <h2>Practical Applications Across Disciplines</h2>
+
+        <h3>Cryptography and Code Breaking</h3>
+        
+        <p>The most famous application of letter frequency analysis appears in cryptography. Simple substitution ciphers, where each letter is consistently replaced by another, crumble before frequency analysis because they preserve underlying statistical patterns. If 'x' appears most frequently in ciphertext and comprises 12% of all characters, it almost certainly represents 'e'.</p>
+
+        <p>Modern <strong>free letter frequency checkers</strong> assist both code creators and breakers. Cipher designers use frequency data to evaluate encryption strength—strong systems produce output with uniform letter distributions that resist statistical analysis. Security researchers employ frequency tools to test random number generators, evaluate password strength, and detect information leakage in supposedly secure communications.</p>
+
+        <h3>Computational Linguistics and NLP</h3>
+        
+        <p>Natural Language Processing (NLP) systems rely heavily on letter and character frequency data. Text compression algorithms like Huffman coding assign shorter bit sequences to frequent letters, achieving optimal compression based on frequency statistics. Machine learning models for text classification, sentiment analysis, and language translation use frequency features as input signals.</p>
+
+        <p>Training data quality assessment represents another crucial application. Biased or corrupted datasets often show anomalous letter frequencies. A <strong>free online linguistic tool</strong> that reveals unexpectedly high 'z' usage or missing vowels might indicate data contamination, OCR errors, or preprocessing problems that would compromise model performance.</p>
+
+        <h3>Writing Analysis and Stylistics</h3>
+        
+        <p>Authors develop distinctive letter usage patterns that forensic linguists can identify. Some writers favor short words with common letters; others employ lengthy vocabulary with unusual character distributions. These patterns remain consistent across an author's works, enabling attribution of anonymous or disputed texts.</p>
+
+        <p>Genre analysis also benefits from frequency study. Technical documentation shows different patterns than creative fiction; poetry differs from prose; formal academic writing contrasts with casual blogging. Writers use <strong>letter frequency tools for writers</strong> to analyze their own habits, identify overused constructions, and maintain consistency across long-form projects.</p>
+
+        <h3>Font Design and Typography</h3>
+        
+        <p>Typeface designers consider letter frequency when optimizing character spacing, kerning pairs, and glyph design. Frequently combined letter pairs like 'th' require careful spacing adjustments; common letters deserve refined design attention; rare characters can occupy more complex shapes without significantly impacting rendering performance.</p>
+
+        <p>Keyboard layout optimization similarly relies on frequency data. The QWERTY layout, designed to prevent typewriter jamming by separating frequently used letter pairs, differs dramatically from the Dvorak layout, which optimizes for typing efficiency by placing common letters on home row positions. Modern ergonomic keyboard designs continue using frequency analysis to minimize finger movement and reduce repetitive strain injuries.</p>
+
+        <h2>Advanced Letter Frequency Analysis Techniques</h2>
+
+        <h3>Comparative Frequency Analysis</h3>
+        
+        <p>Comparing letter frequencies between texts reveals relationships invisible to individual analysis. Plagiarism detection systems compare frequency signatures to identify copied content; stylometry studies measure authorial similarity; translation quality assessment compares source and target language distributions to identify awkward conversions.</p>
+
+        <p>Our <strong>online letter usage analysis free</strong> tool enables baseline comparisons—contrasting your text against standard English frequencies to identify unusual patterns. Significant deviations might indicate: technical vocabulary specialization, foreign language influence, artificial text generation, cipher encryption, or simply the author's unique stylistic fingerprint.</p>
+
+        <h3>Entropy and Randomness Measurement</h3>
+        
+        <p>Information theory applies frequency analysis to measure text entropy—a quantitative measure of unpredictability or information content. Highly predictable text (repetitive content, simple vocabulary) shows low entropy; diverse, unpredictable text shows high entropy. Compression algorithms exploit entropy differences, achieving better ratios on predictable content.</p>
+
+        <p>Randomness testing uses frequency analysis to evaluate pseudo-random number generators, cryptographic keys, and shuffle algorithms. Truly random sequences show uniform letter distributions; patterns indicate generator flaws. Quality assurance teams employ <strong>free browser text analysis tools</strong> to verify that supposedly random systems actually produce unpredictable output.</p>
+
+        <h3>Positional Frequency and N-gram Analysis</h3>
+        
+        <p>Examining letter frequencies at specific word positions (initial, medial, final) provides additional analytical dimensions. English words rarely end in 'j', 'q', 'v', or 'z'; initial 'x' is uncommon except in words like 'xylophone' and 'xenophobia'. These positional constraints assist spell-checking algorithms, password strength evaluators, and text prediction systems.</p>
+
+        <p>N-gram analysis extends frequency counting to letter sequences. Bigrams (two-letter combinations), trigrams (three-letter), and longer n-grams capture contextual patterns that single-letter analysis misses. The sequence 'qu' appears frequently in English; 'qx' essentially never occurs. Our <strong>letter frequency finder online</strong> includes comprehensive n-gram analysis to reveal these structural patterns.</p>
+
+        <h2>Best Practices for Effective Letter Frequency Analysis</h2>
+
+        <h3>Sample Size Considerations</h3>
+        
+        <p>Reliable frequency analysis requires adequate sample sizes. Short texts (tweets, headlines, product names) show high variance—an 'x' in "Xylophone" constitutes 10% of letters in that word but would be negligible in a novel. Statistically significant patterns emerge only with hundreds or thousands of characters. Our <strong>free online letter count tool</strong> indicates confidence levels based on text length, helping users interpret results appropriately.</p>
+
+        <h3>Preprocessing and Normalization</h3>
+        
+        <p>Consistent preprocessing ensures comparable results. Decisions about handling: whitespace (spaces, tabs, newlines), punctuation (include, exclude, or count separately), numbers (as digits or spelled out), and special characters (emojis, symbols, mathematical notation) dramatically affect frequency distributions. Professional <strong>letter frequency reports online</strong> clearly document preprocessing choices to ensure reproducibility.</p>
+
+        <h3>Contextual Interpretation</h3>
+        
+        <p>Raw frequency data requires contextual interpretation. High 'k' frequency in a medical text likely reflects "skin", "kidney", and "skull" terminology; in a knitting blog, it might indicate "knit", "knack", and "knitting". The same statistical signature carries different meanings in different contexts. Effective analysis combines quantitative frequency data with qualitative domain knowledge.</p>
+
+        <h2>Comparing Letter Frequency Analysis Approaches</h2>
+
+        <h3>Manual Counting vs. Automated Tools</h3>
+        
+        <p>Manual letter counting, while educational, proves impractical for texts beyond a few paragraphs. Human counters make errors, tire quickly, and cannot easily calculate percentages or visualize distributions. Automated <strong>letter frequency analyzers online</strong> process thousands of characters instantly, eliminate human error, and provide comprehensive statistical summaries impossible to generate manually.</p>
+
+        <h3>Simple Counters vs. Comprehensive Analyzers</h3>
+        
+        <p>Basic letter counters provide raw counts but lack analytical depth. Comprehensive <strong>free character frequency counter</strong> tools offer relative frequencies, visualizations, baseline comparisons, n-gram analysis, and export capabilities. For casual curiosity, simple tools suffice; for professional applications—cryptography, linguistics, data science—comprehensive analysis platforms deliver necessary insights.</p>
+
+        <h2>The Future of Character-Level Text Analysis</h2>
+
+        <p>Artificial intelligence is transforming letter frequency analysis from descriptive statistics toward predictive modeling. Neural networks learn complex character patterns for text generation, handwriting recognition, and anomaly detection. However, even advanced AI systems rely on fundamental frequency analysis as a preprocessing step and validation mechanism.</p>
+
+        <p>Unicode expansion and multilingual text processing present new challenges. Modern <strong>free online text analyzers</strong> must handle hundreds of writing systems, each with distinct frequency characteristics. Cross-lingual frequency comparison, once limited to major European languages, now spans global linguistic diversity.</p>
+
+        <h2>Conclusion: Mastering Character-Level Text Intelligence</h2>
+
+        <p><strong>Letter frequency analysis</strong> remains one of the most accessible yet powerful techniques in text analytics. From breaking simple ciphers to optimizing keyboard layouts, from verifying data quality to identifying authorial style, character-level statistical analysis provides foundational insights that complement word-level and semantic approaches.</p>
+
+        <p>Our <strong>free letter frequency analyzer online</strong> provides professional-grade analysis capabilities that serve cryptographers, linguists, writers, programmers, and curious learners alike. With real-time analysis, interactive visualizations, comprehensive n-gram support, and flexible export options, this tool transforms raw text into actionable statistical intelligence. Whether you're analyzing a suspicious ciphertext, optimizing your novel's prose, or simply exploring the mathematical beauty of language, our <strong>online letter frequency analysis tool</strong> delivers precise, immediate, and insightful results. Stop guessing about character distributions—start measuring, comparing, and understanding with data-driven precision today.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does the analysis update automatically as I type?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>letter frequency analyzer online</strong> provides <strong>real-time analysis</strong> as you type or paste text. Every keystroke updates the letter counts, percentages, and visualizations instantly. The "Auto-analysis enabled" indicator confirms live updates are active. For large documents, there's a brief debounce delay to ensure smooth performance.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What is the most common letter in English?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">The letter <strong>'e'</strong> is the most common in English, appearing approximately 12.7% of the time in typical texts. It's followed by 't' (9.1%), 'a' (8.1%), 'o' (7.5%), and 'i' (7.0%). Our <strong>online alphabet frequency tool</strong> highlights these baseline expectations and shows how your text compares to standard English distributions.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How can letter frequency analysis help with cryptography?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Simple substitution ciphers preserve letter frequency patterns, making them vulnerable to frequency analysis. If 'x' appears most often in ciphertext (12% of characters), it likely represents 'e'. By comparing ciphertext frequencies against known language baselines, cryptographers can systematically decode messages. Our <strong>free letter frequency checker</strong> provides the statistical foundation for this classic cryptanalytic technique.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What are letter pairs (digraphs) and why analyze them?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Digraphs</strong> are two-letter combinations that appear frequently together. Common English digraphs include 'th', 'he', 'in', 'er', and 'an'. Analyzing these pairs provides stronger statistical signals than single letters, improving language identification, cryptanalysis, and text generation detection. Our <strong>letter frequency analysis tool</strong> includes comprehensive digraph and trigraph analysis.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I analyze non-English text?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Select "Extended" or "All Unicode" in the Alphabet Type dropdown to analyze text in any language. Different languages show distinct frequency signatures—German emphasizes 'e', 'n', and 'i'; Spanish shows high 'a' and 'e' usage. Our <strong>free online text analyzer</strong> handles accents, special characters, and non-Latin scripts for comprehensive multilingual analysis.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I export the analysis results?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Click the <strong>Export CSV</strong> button to download a complete letter frequency report. The CSV includes each letter, its count, percentage of total, and case breakdown (if applicable). Perfect for spreadsheet analysis, academic research, or cryptographic documentation. Our <strong>letter frequency reports online</strong> feature makes data export seamless.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What file types are supported?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">All text-based files: TXT, CSV, JSON, XML, HTML, Markdown, and code files (JS, CSS, Python, Java, C/C++, PHP, Ruby, Go, Rust, Swift, Kotlin, SQL, LOG). Files are read as UTF-8 text, preserving international characters and emojis. Our <strong>free text analyzer with letter frequency</strong> handles them all with drag-and-drop simplicity.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my text data secure?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely. All analysis happens <strong>locally in your browser</strong>—text never uploads to servers or leaves your device. You can verify this with browser DevTools (Network tab shows no data transmission). Works offline after loading. Ideal for analyzing confidential documents, encrypted messages, or sensitive research materials. Privacy is built into our <strong>free browser text analysis tool</strong> architecture.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this tool free?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, completely <strong>free</strong> with no registration, usage limits, watermarks, or hidden fees. Use for personal or commercial projects without attribution. This is truly a <strong>free online letter frequency tool</strong> for everyone. Supported by unobtrusive advertising and voluntary user support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const inputStats = document.getElementById('inputStats');
+const totalLettersEl = document.getElementById('totalLetters');
+const uniqueLettersEl = document.getElementById('uniqueLetters');
+const uniquePercentEl = document.getElementById('uniquePercent');
+const topLetterEl = document.getElementById('topLetter');
+const topCountEl = document.getElementById('topCount');
+const bottomLetterEl = document.getElementById('bottomLetter');
+const bottomCountEl = document.getElementById('bottomCount');
+const uppercaseCountEl = document.getElementById('uppercaseCount');
+const uppercasePercentEl = document.getElementById('uppercasePercent');
+const lowercaseCountEl = document.getElementById('lowercaseCount');
+const lowercasePercentEl = document.getElementById('lowercasePercent');
+const analysisStats = document.getElementById('analysisStats');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+
+// Buttons
+const sampleBtn = document.getElementById('sampleBtn');
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const exportBtn = document.getElementById('exportBtn');
+const resetBtn = document.getElementById('resetBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+// Settings
+const caseSelect = document.getElementById('caseSelect');
+const alphabetSelect = document.getElementById('alphabetSelect');
+const numbersSelect = document.getElementById('numbersSelect');
+const sortSelect = document.getElementById('sortSelect');
+const showPercentages = document.getElementById('showPercentages');
+const highlightExtremes = document.getElementById('highlightExtremes');
+const ignoreWhitespace = document.getElementById('ignoreWhitespace');
+
+// Tabs
+const methodBtns = document.querySelectorAll('.method-btn');
+const tabContents = document.querySelectorAll('.tab-content');
+let currentTab = 'alphabet';
+
+// Pair tabs
+const pairTabs = document.querySelectorAll('.ngram-tab');
+let currentPairType = '2';
+
+// Data storage
+let letterData = [];
+let pairData = {};
+let analysisResults = null;
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Update input stats
+function updateInputStats() {
+  const text = inputText.value;
+  const chars = text.length;
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+  const lines = text === '' ? 0 : text.split('\n').length;
+  inputStats.textContent = `Chars: ${chars} | Words: ${words} | Lines: ${lines}`;
+}
+
+// Debounce function
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Tab switching
+methodBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    methodBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentTab = btn.dataset.tab;
+    
+    tabContents.forEach(content => content.classList.remove('active'));
+    document.getElementById('tab' + currentTab.charAt(0).toUpperCase() + currentTab.slice(1)).classList.add('active');
+  });
+});
+
+// Pair tab switching
+pairTabs.forEach(btn => {
+  btn.addEventListener('click', () => {
+    pairTabs.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentPairType = btn.dataset.pair;
+    displayPairs();
+  });
+});
+
+// Generate letter pairs
+function generatePairs(text, type) {
+  const cleanText = text.replace(/[^a-zA-Z]/g, '').toLowerCase();
+  const pairs = {};
+  
+  if (type === 'digraphs') {
+    // Common English digraphs
+    const digraphs = ['th', 'he', 'in', 'er', 'an', 're', 'on', 'at', 'en', 'nd', 
+                      'ti', 'es', 'or', 'te', 'of', 'ed', 'is', 'it', 'al', 'ar',
+                      'st', 'to', 'nt', 'ng', 'se', 'ha', 'as', 'ou', 'io', 'le'];
+    digraphs.forEach(dig => pairs[dig] = 0);
+    
+    for (let i = 0; i < cleanText.length - 1; i++) {
+      const pair = cleanText.substring(i, i + 2);
+      if (pairs.hasOwnProperty(pair)) {
+        pairs[pair]++;
+      }
+    }
+  } else {
+    const len = parseInt(type);
+    for (let i = 0; i <= cleanText.length - len; i++) {
+      const pair = cleanText.substring(i, i + len);
+      pairs[pair] = (pairs[pair] || 0) + 1;
+    }
+  }
+  
+  return pairs;
+}
+
+// Main analysis function
+function analyzeText() {
+  const startTime = performance.now();
+  const text = inputText.value;
+  
+  if (!text.trim()) {
+    resetAnalysis();
+    return;
+  }
+  
+  // Get settings
+  const caseSensitive = caseSelect.value === 'sensitive';
+  const alphabetType = alphabetSelect.value;
+  const numbersMode = numbersSelect.value;
+  const sortMode = sortSelect.value;
+  
+  // Determine character pattern based on settings
+  let pattern;
+  if (alphabetType === 'latin') {
+    pattern = numbersMode === 'include' ? /[a-zA-Z0-9]/g : /[a-zA-Z]/g;
+  } else if (alphabetType === 'extended') {
+    pattern = numbersMode === 'include' ? /[a-zA-ZÀ-ÿ0-9]/g : /[a-zA-ZÀ-ÿ]/g;
+  } else {
+    pattern = numbersMode === 'include' ? /\w/g : /[a-zA-Z]/g;
+  }
+  
+  if (numbersMode === 'only') {
+    pattern = /[0-9]/g;
+  }
+  
+  // Extract characters
+  let chars = text.match(pattern) || [];
+  
+  if (!caseSensitive) {
+    chars = chars.map(c => c.toLowerCase());
+  }
+  
+  // Count letters
+  const counts = {};
+  let uppercase = 0;
+  let lowercase = 0;
+  
+  chars.forEach(char => {
+    counts[char] = (counts[char] || 0) + 1;
+    if (char === char.toUpperCase() && char !== char.toLowerCase()) uppercase++;
+    else lowercase++;
+  });
+  
+  // Convert to array
+  letterData = Object.entries(counts).map(([letter, count]) => ({
+    letter,
+    count,
+    isUppercase: letter === letter.toUpperCase() && letter !== letter.toLowerCase()
+  }));
+  
+  // Sort
+  if (sortMode === 'frequency') {
+    letterData.sort((a, b) => b.count - a.count);
+  } else if (sortMode === 'alphabetical') {
+    letterData.sort((a, b) => a.letter.localeCompare(b.letter));
+  } else {
+    letterData.sort((a, b) => a.count - b.count);
+  }
+  
+  // Calculate stats
+  const total = chars.length;
+  const unique = letterData.length;
+  const top = letterData[0];
+  const bottom = letterData[letterData.length - 1];
+  
+  // Generate pairs
+  pairData['2'] = generatePairs(text, '2');
+  pairData['3'] = generatePairs(text, '3');
+  pairData['digraphs'] = generatePairs(text, 'digraphs');
+  
+  // Store results
+  analysisResults = {
+    total,
+    unique,
+    top,
+    bottom,
+    uppercase,
+    lowercase,
+    processingTime: (performance.now() - startTime).toFixed(1)
+  };
+  
+  // Update display
+  updateStatsDisplay();
+  displayAlphabet();
+  displayDistribution();
+  displayPairs();
+}
+
+function updateStatsDisplay() {
+  if (!analysisResults) return;
+  
+  totalLettersEl.textContent = analysisResults.total.toLocaleString();
+  uniqueLettersEl.textContent = analysisResults.unique;
+  uniquePercentEl.textContent = analysisResults.total > 0 ? 
+    ((analysisResults.unique / 26) * 100).toFixed(0) + '% of alphabet' : '0%';
+  
+  if (analysisResults.top) {
+    topLetterEl.textContent = analysisResults.top.letter.toUpperCase();
+    topCountEl.textContent = analysisResults.top.count + ' times';
+  } else {
+    topLetterEl.textContent = '-';
+    topCountEl.textContent = '0';
+  }
+  
+  if (analysisResults.bottom) {
+    bottomLetterEl.textContent = analysisResults.bottom.letter.toUpperCase();
+    bottomCountEl.textContent = analysisResults.bottom.count + ' times';
+  } else {
+    bottomLetterEl.textContent = '-';
+    bottomCountEl.textContent = '0';
+  }
+  
+  uppercaseCountEl.textContent = analysisResults.uppercase;
+  uppercasePercentEl.textContent = analysisResults.total > 0 ? 
+    ((analysisResults.uppercase / analysisResults.total) * 100).toFixed(1) + '%' : '0%';
+  
+  lowercaseCountEl.textContent = analysisResults.lowercase;
+  lowercasePercentEl.textContent = analysisResults.total > 0 ? 
+    ((analysisResults.lowercase / analysisResults.total) * 100).toFixed(1) + '%' : '0%';
+  
+  analysisStats.textContent = `Analyzed in ${analysisResults.processingTime}ms`;
+  
+  // Update progress bar
+  const progressTotal = document.getElementById('progressTotal');
+  if (progressTotal) {
+    const maxExpected = 10000;
+    const percentage = Math.min((analysisResults.total / maxExpected) * 100, 100);
+    progressTotal.style.width = percentage + '%';
+  }
+}
+
+function displayAlphabet() {
+  const container = document.getElementById('alphabetGrid');
+  if (!container) return;
+  
+  if (!letterData.length) {
+    container.innerHTML = '<div class="text-center text-gray-500 text-xs py-4 col-span-full">Enter text to see letter frequency grid</div>';
+    return;
+  }
+  
+  const maxCount = Math.max(...letterData.map(d => d.count));
+  
+  container.innerHTML = letterData.map(item => {
+    const intensity = (item.count / maxCount);
+    const bgOpacity = 0.05 + (intensity * 0.25);
+    const borderOpacity = 0.1 + (intensity * 0.4);
+    
+    return `
+      <div class="letter-cell" style="background: rgba(99, 102, 241, ${bgOpacity}); border-color: rgba(99, 102, 241, ${borderOpacity})">
+        <span class="text-white">${item.letter.toUpperCase()}</span>
+        <span class="letter-count">${item.count}</span>
+      </div>
+    `;
+  }).join('');
+}
+
+function displayDistribution() {
+  const container = document.getElementById('distributionList');
+  if (!container) return;
+  
+  if (!letterData.length) {
+    container.innerHTML = '<div class="text-center text-gray-500 text-xs py-4">Enter text to see distribution</div>';
+    return;
+  }
+  
+  const maxCount = letterData[0].count;
+  const total = analysisResults?.total || 1;
+  
+  container.innerHTML = letterData.map((item, index) => {
+    const percentage = ((item.count / total) * 100).toFixed(1);
+    const barWidth = ((item.count / maxCount) * 100).toFixed(0);
+    
+    return `
+      <div class="flex items-center gap-3 p-2 rounded bg-white/5">
+        <div class="w-8 h-8 flex items-center justify-center bg-white/10 rounded font-bold text-white">
+          ${item.letter.toUpperCase()}
+        </div>
+        <div class="flex-1">
+          <div class="flex justify-between text-xs mb-1">
+            <span class="text-gray-300">${percentage}%</span>
+            <span class="text-gray-400">${item.count} occurrences</span>
+          </div>
+          <div class="distribution-bar">
+            <div class="distribution-fill bg-gradient-to-r from-indigo-500 to-purple-500" style="width: ${barWidth}%"></div>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function displayPairs() {
+  const container = document.getElementById('pairsList');
+  if (!container) return;
+  
+  const data = pairData[currentPairType];
+  if (!data || Object.keys(data).length === 0) {
+    container.innerHTML = '<div class="text-center text-gray-500 text-xs py-4 col-span-full">Enter text to analyze letter pairs</div>';
+    return;
+  }
+  
+  const sorted = Object.entries(data)
+    .filter(([_, count]) => count > 0)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 15);
+  
+  if (sorted.length === 0) {
+    container.innerHTML = '<div class="text-center text-gray-500 text-xs py-4 col-span-full">No pairs found</div>';
+    return;
+  }
+  
+  const maxCount = sorted[0][1];
+  
+  container.innerHTML = sorted.map(([pair, count]) => {
+    const percentage = ((count / maxCount) * 100).toFixed(0);
+    return `
+      <div class="flex items-center justify-between p-2 rounded bg-white/5">
+        <span class="text-white font-mono font-bold">${pair.toUpperCase()}</span>
+        <div class="flex items-center gap-2">
+          <div class="w-12 h-1.5 bg-white/10 rounded-full overflow-hidden">
+            <div class="bg-emerald-500 h-full rounded-full" style="width: ${percentage}%"></div>
+          </div>
+          <span class="text-xs text-gray-400 w-8 text-right">${count}</span>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function resetAnalysis() {
+  letterData = [];
+  pairData = {};
+  analysisResults = null;
+  
+  totalLettersEl.textContent = '0';
+  uniqueLettersEl.textContent = '0';
+  uniquePercentEl.textContent = '0%';
+  topLetterEl.textContent = '-';
+  topCountEl.textContent = '0';
+  bottomLetterEl.textContent = '-';
+  bottomCountEl.textContent = '0';
+  uppercaseCountEl.textContent = '0';
+  uppercasePercentEl.textContent = '0%';
+  lowercaseCountEl.textContent = '0';
+  lowercasePercentEl.textContent = '0%';
+  analysisStats.textContent = 'Processing: 0ms';
+  
+  document.getElementById('progressTotal').style.width = '0%';
+  
+  document.getElementById('alphabetGrid').innerHTML = '<div class="text-center text-gray-500 text-xs py-4 col-span-full">Enter text to see letter frequency grid</div>';
+  document.getElementById('distributionList').innerHTML = '<div class="text-center text-gray-500 text-xs py-4">Enter text to see distribution</div>';
+  document.getElementById('pairsList').innerHTML = '<div class="text-center text-gray-500 text-xs py-4 col-span-full">Enter text to analyze letter pairs</div>';
+}
+
+// Debounced analysis
+const debouncedAnalyze = debounce(analyzeText, 300);
+
+// Drag and drop handlers
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  if (!file.type.match('text.*') && !file.name.match(/\.(txt|csv|json|xml|html?|md|js|css|py|java|cpp|c|php|rb|go|rs|swift|kt|sql|log)$/i)) {
+    alert('Please upload a text file');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    updateInputStats();
+    analyzeText();
+  };
+  reader.readAsText(file);
+}
+
+// Load sample text
+function loadSampleText() {
+  const sampleText = `The quick brown fox jumps over the lazy dog. This pangram contains every letter of the English alphabet at least once.
+
+Letter frequency analysis is fundamental to cryptography, linguistics, and data science. By understanding how often each character appears, we can identify patterns, break codes, and analyze writing styles.
+
+In English, the letter E is most common, appearing about 12.7% of the time. T, A, O, I, and N follow closely behind. Rare letters like Q, X, and Z appear less than 1% of the time each.
+
+This uneven distribution makes language predictable and compression possible. It also makes simple substitution ciphers vulnerable to frequency analysis attacks.`;
+  
+  inputText.value = sampleText;
+  updateInputStats();
+  analyzeText();
+}
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    updateInputStats();
+    analyzeText();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  updateInputStats();
+  resetAnalysis();
+  inputText.focus();
+}
+
+// Export CSV
+function exportCSV() {
+  if (!letterData.length) {
+    alert('Please enter text to export');
+    return;
+  }
+  
+  let csv = 'Letter,Count,Percentage,Case\n';
+  const total = analysisResults?.total || 1;
+  
+  letterData.forEach(item => {
+    const percentage = ((item.count / total) * 100).toFixed(2);
+    const caseType = item.isUppercase ? 'Uppercase' : 'Lowercase';
+    csv += `"${item.letter}",${item.count},${percentage}%,${caseType}\n`;
+  });
+  
+  // Add pair data
+  csv += '\nLetter Pairs (Top 10)\nPair,Count\n';
+  const pairCounts = pairData['2'] || {};
+  const sortedPairs = Object.entries(pairCounts)
+    .filter(([_, count]) => count > 0)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 10);
+  
+  sortedPairs.forEach(([pair, count]) => {
+    csv += `"${pair}",${count}\n`;
+  });
+  
+  const blob = new Blob([csv], { type: 'text/csv' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'letter-frequency-analysis.csv';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Reset all
+function resetAll() {
+  inputText.value = '';
+  updateInputStats();
+  resetAnalysis();
+  caseSelect.value = 'insensitive';
+  alphabetSelect.value = 'latin';
+  numbersSelect.value = 'exclude';
+  sortSelect.value = 'frequency';
+  showPercentages.checked = true;
+  highlightExtremes.checked = true;
+  ignoreWhitespace.checked = true;
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Event listeners
+inputText.addEventListener('input', () => {
+  updateInputStats();
+  debouncedAnalyze();
+});
+
+// Settings change listeners
+[caseSelect, alphabetSelect, numbersSelect, sortSelect, showPercentages, highlightExtremes, ignoreWhitespace].forEach(el => {
+  el.addEventListener('change', analyzeText);
+});
+
+sampleBtn.addEventListener('click', loadSampleText);
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+exportBtn.addEventListener('click', exportCSV);
+resetBtn.addEventListener('click', resetAll);
+
+// Initialize
+updateInputStats();
+resetAnalysis();
+</script>
+</body>
+</html>

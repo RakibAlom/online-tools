@@ -1,0 +1,1587 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Text Entropy Calculator - Free Online Information Entropy Analyzer</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online text entropy calculator. Measure information entropy, randomness, and complexity of any text. Real-time entropy analysis with visual charts and detailed statistics." />
+  <meta name="keywords" content="free text entropy calculator online, online text entropy calculator free, text entropy calculator tool, free online entropy calculator for text, online information entropy calculator free, text randomness analyzer online free, free text entropy analysis tool, online text complexity calculator free, free entropy score calculator online, online text entropy measurement free, free online information entropy tool, entropy of text calculator free, online text entropy tool for seo free, free entropy analysis for text online, text information density calculator free, online character entropy calculator free, free online textual entropy analyzer, text entropy checker online, online entropy calculator for strings free, free entropy calculator for words online, online text randomness score free, free text disorder measure calculator, entropy tool free online for text analysis" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/text-entropy-calculator/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/text-entropy-calculator/" />
+  <meta property="og:title" content="Text Entropy Calculator - Free Online Information Entropy Analyzer" />
+  <meta property="og:description" content="Measure information entropy, randomness, and complexity of any text. Real-time entropy analysis with visual charts and detailed statistics." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/text-entropy-calculator/" />
+  <meta name="twitter:title" content="Text Entropy Calculator - Free Online Information Entropy Analyzer" />
+  <meta name="twitter:description" content="Measure information entropy, randomness, and complexity of any text. Real-time entropy analysis with visual charts and detailed statistics." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+    <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+
+    <!--Google Site Verification-->
+    <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-4D39CLDW58');
+    </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .method-btn {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    .method-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .entropy-gauge {
+      position: relative;
+      width: 120px;
+      height: 60px;
+      margin: 0 auto;
+    }
+    
+    .entropy-gauge-bg {
+      fill: none;
+      stroke: rgba(255,255,255,0.1);
+      stroke-width: 8;
+    }
+    
+    .entropy-gauge-fill {
+      fill: none;
+      stroke-width: 8;
+      stroke-linecap: round;
+      transition: stroke-dasharray 0.5s ease, stroke 0.3s ease;
+    }
+
+    .stat-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+
+    .entropy-bar {
+      transition: width 0.3s ease;
+    }
+
+    .complexity-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.25rem 0.5rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 12h8M10 20h20M10 28h14" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Text Entropy Calculator</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Analysis Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Text Entropy Calculator
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Information Entropy Analyzer
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-calculation enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Input Text
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Type or paste text here to calculate entropy... Or drag & drop a file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.csv,.md,.json,.xml,.html,.js,.css,.py,.java,.cpp,.c,.php,.rb,.go,.rs,.swift,.kt,.sql,.log" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Chars: 0 | Words: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Entropy Results -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+              Entropy Analysis
+            </label>
+            <div class="flex gap-1">
+              <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                Copy Report
+              </button>
+              <button id="downloadBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Export
+              </button>
+            </div>
+          </div>
+          
+          <div id="resultsContainer" class="w-full h-48 lg:h-64 p-3 rounded-md glass-input overflow-y-auto">
+            <div id="emptyState" class="h-full flex flex-col items-center justify-center text-gray-500">
+              <svg class="w-8 h-8 mb-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+              <p class="text-xs">Enter text to calculate entropy</p>
+            </div>
+            
+            <div id="entropyResults" class="hidden space-y-3">
+              <!-- Main Entropy Score -->
+              <div class="text-center">
+                <div class="entropy-gauge mb-2">
+                  <svg viewBox="0 0 120 60" class="w-full h-full">
+                    <path class="entropy-gauge-bg" d="M 10 50 A 40 40 0 0 1 110 50"/>
+                    <path id="entropyGaugeFill" class="entropy-gauge-fill" d="M 10 50 A 40 40 0 0 1 110 50" stroke-dasharray="0, 157"/>
+                  </svg>
+                  <div class="absolute inset-0 flex flex-col items-center justify-end pb-1">
+                    <div id="entropyScore" class="text-2xl font-bold text-white">0.00</div>
+                    <div class="text-xs text-gray-400">bits/char</div>
+                  </div>
+                </div>
+                <div id="complexityBadge" class="complexity-badge bg-gray-500/20 text-gray-400">
+                  Enter text
+                </div>
+              </div>
+              
+              <!-- Stats Grid -->
+              <div class="grid grid-cols-2 gap-2 text-xs">
+                <div class="stat-card rounded p-2">
+                  <div class="text-gray-500 mb-1">Shannon Entropy</div>
+                  <div id="shannonEntropy" class="font-semibold text-indigo-400">0.00</div>
+                </div>
+                <div class="stat-card rounded p-2">
+                  <div class="text-gray-500 mb-1">Max Possible</div>
+                  <div id="maxEntropy" class="font-semibold text-gray-300">0.00</div>
+                </div>
+                <div class="stat-card rounded p-2">
+                  <div class="text-gray-500 mb-1">Efficiency</div>
+                  <div id="entropyEfficiency" class="font-semibold text-green-400">0%</div>
+                </div>
+                <div class="stat-card rounded p-2">
+                  <div class="text-gray-500 mb-1">Redundancy</div>
+                  <div id="redundancy" class="font-semibold text-yellow-400">0%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="analysisStats">Ready to analyze</span>
+            <span id="processingTime" class="text-gray-600"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-3">
+        
+        <!-- Analysis Mode -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Analysis Mode</label>
+          <div class="flex flex-wrap gap-1">
+            <button class="method-btn active rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-mode="character">By Character</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-mode="word">By Word</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-mode="byte">By Byte</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-mode="line">By Line</button>
+          </div>
+        </div>
+
+        <!-- Advanced Options -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Case Handling</label>
+            <select id="caseHandling" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="sensitive">Case Sensitive</option>
+              <option value="insensitive">Case Insensitive</option>
+            </select>
+          </div>
+          
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Whitespace</label>
+            <select id="whitespaceHandling" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="include">Include in analysis</option>
+              <option value="exclude">Exclude from analysis</option>
+              <option value="normalize">Normalize (treat as space)</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Base</label>
+            <select id="logBase" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="2">Base 2 (bits)</option>
+              <option value="e">Base e (nats)</option>
+              <option value="10">Base 10 (hartleys)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Detailed Stats Dashboard -->
+        <div id="statsDashboard" class="hidden">
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Detailed Statistics</label>
+          
+          <!-- Top Metrics -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-3">
+            <div class="stat-card rounded-md p-2">
+              <div class="text-xs text-gray-500 mb-1">Unique Symbols</div>
+              <div id="statUniqueSymbols" class="text-lg font-bold text-indigo-400">0</div>
+            </div>
+            <div class="stat-card rounded-md p-2">
+              <div class="text-xs text-gray-500 mb-1">Total Symbols</div>
+              <div id="statTotalSymbols" class="text-lg font-bold text-gray-300">0</div>
+            </div>
+            <div class="stat-card rounded-md p-2">
+              <div class="text-xs text-gray-500 mb-1">Avg Information</div>
+              <div id="statAvgInfo" class="text-lg font-bold text-green-400">0.00</div>
+            </div>
+            <div class="stat-card rounded-md p-2">
+              <div class="text-xs text-gray-500 mb-1">Compression Est.</div>
+              <div id="statCompression" class="text-lg font-bold text-pink-400">0%</div>
+            </div>
+          </div>
+          
+          <!-- Probability Distribution -->
+          <div class="glass-panel rounded-md p-3">
+            <div class="text-xs font-medium text-gray-300 mb-2">Symbol Probability Distribution (Top 10)</div>
+            <div id="probabilityBars" class="space-y-1 max-h-32 overflow-y-auto pr-1">
+              <!-- Bars will be inserted here -->
+            </div>
+          </div>
+          
+          <!-- Entropy Chart -->
+          <!-- <div class="glass-panel rounded-md p-3 mt-3">
+            <div class="text-xs font-medium text-gray-300 mb-2">Entropy Visualization</div>
+            <canvas id="entropyChart" height="100"></canvas>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Text Entropy Calculator?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Real-Time Calculation</h3>
+          <p class="text-gray-400 text-xs">Instant entropy measurement as you type</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Visual Charts</h3>
+          <p class="text-gray-400 text-xs">Gauge display and probability graphs</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Multiple Modes</h3>
+          <p class="text-gray-400 text-xs">Character, word, byte, or line analysis</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">File Support</h3>
+          <p class="text-gray-400 text-xs">Drag & drop text files for analysis</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Detailed Reports</h3>
+          <p class="text-gray-400 text-xs">Export comprehensive entropy analysis</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">100% Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based, no data uploads</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Enter Text</h3>
+          <p class="text-gray-400 text-xs">Type, paste, or drop a file. Entropy calculates automatically.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Select Mode</h3>
+          <p class="text-gray-400 text-xs">Choose analysis by character, word, byte, or line.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">View Results</h3>
+          <p class="text-gray-400 text-xs">Check entropy score, efficiency, and probability distribution.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export Data</h3>
+          <p class="text-gray-400 text-xs">Download detailed entropy reports for further analysis.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>Understanding Text Entropy: A Comprehensive Guide to Information Theory and Randomness Analysis</h2>
+        
+        <p><strong>Text entropy</strong> represents one of the most fundamental concepts in information theory, providing a quantitative measure of uncertainty, randomness, and information density within text data. Whether you're a data scientist analyzing text complexity, a cybersecurity expert evaluating password strength, a developer optimizing compression algorithms, or a linguist studying language patterns, understanding how to calculate and interpret entropy is essential. Our <strong>free text entropy calculator online</strong> provides professional-grade entropy analysis capabilities that help you understand the information-theoretic properties of any text.</p>
+
+        <p>In the digital age where data drives decision-making across industries, the ability to measure information content accurately has become increasingly valuable. <strong>Entropy of text calculator free</strong> tools enable you to quantify the unpredictability of text, assess compression potential, evaluate randomness quality, and compare information density across different sources. This comprehensive guide explores everything you need to know about text entropy, from mathematical foundations to practical applications, and how our <strong>online text entropy calculator free</strong> tool can enhance your analytical capabilities.</p>
+
+        <h2>What Is Text Entropy and Why Does It Matter?</h2>
+        
+        <p><strong>Text entropy</strong>, in the context of information theory, measures the average amount of information contained in each symbol (character, word, or byte) of a text. Developed by Claude Shannon in 1948, entropy quantifies uncertainty: higher entropy indicates more unpredictability and information content, while lower entropy suggests redundancy and predictability. When you use our <strong>free online entropy calculator for text</strong>, you're measuring how much "surprise" each character carries on average.</p>
+
+        <p>The mathematical formula for Shannon entropy is H = -Σ p(x) × log₂(p(x)), where p(x) represents the probability of each unique symbol occurring in the text. This formula yields values in bits per symbol when using base-2 logarithms. A completely random string of characters from a set of N symbols has maximum entropy of log₂(N) bits per character. English text typically exhibits entropy between 1.0 and 1.5 bits per character due to linguistic patterns and redundancies, while encrypted or compressed data approaches maximum entropy.</p>
+
+        <p>The applications for <strong>text entropy calculator tool</strong> technology span numerous fields. In cybersecurity, entropy measures password strength and encryption quality—low entropy indicates predictable passwords vulnerable to attacks. In data compression, entropy establishes theoretical limits on how much text can be compressed. In natural language processing, entropy helps identify text complexity, authorship patterns, and language characteristics. In quality assurance, entropy detects anomalies, duplicates, or corrupted data. Understanding these applications helps you leverage our <strong>online information entropy calculator free</strong> effectively.</p>
+
+        <h2>Mathematical Foundations of Entropy Calculation</h2>
+
+        <h3>Shannon Entropy and Information Theory</h3>
+        
+        <p>Claude Shannon's groundbreaking work established entropy as the foundational measure of information. In our <strong>free text entropy analysis tool</strong>, we implement Shannon's formula precisely: for each unique symbol in your text, we calculate its probability (frequency divided by total length), multiply by the logarithm of that probability (negative to ensure positive results), and sum these values. This yields the expected information content per symbol.</p>
+
+        <p>The logarithm base determines the units of measurement. Base 2 produces bits (binary digits), the standard unit for digital information. Base e yields nats (natural units), preferred in mathematical physics. Base 10 gives hartleys or bans, occasionally used in engineering contexts. Our <strong>online text complexity calculator free</strong> supports all three bases, allowing you to choose the most appropriate unit for your specific application.</p>
+
+        <h3>Maximum Entropy and Efficiency</h3>
+        
+        <p>Maximum entropy occurs when all symbols appear with equal probability—complete randomness. For an alphabet of N symbols, maximum entropy equals log₂(N) bits per symbol. English, with approximately 26 letters plus punctuation and spaces, has a theoretical maximum around 5-6 bits per character, but actual English text achieves only 1-2 bits due to linguistic patterns. Our <strong>free entropy score calculator online</strong> calculates both actual and maximum entropy, presenting efficiency as the ratio between them.</p>
+
+        <p>Efficiency percentage reveals how close text approaches maximum randomness. Natural language typically shows 20-40% efficiency, while compressed or encrypted data achieves 80-100%. Random strings generated by cryptographic functions approach 100% efficiency. This metric helps distinguish between natural text, machine-generated content, encrypted data, and random noise using our <strong>online text entropy measurement free</strong> capabilities.</p>
+
+        <h3>Redundancy and Compression Potential</h3>
+        
+        <p>Redundancy represents the difference between maximum possible entropy and actual entropy, expressed as a percentage. High redundancy indicates predictable patterns that compression algorithms can exploit. English text has approximately 50-75% redundancy, explaining why compression ratios of 2:1 or better are achievable. Our <strong>free online information entropy tool</strong> calculates redundancy automatically, helping you estimate compression potential before applying algorithms.</p>
+
+        <p>Understanding redundancy proves crucial for data storage optimization. Text with 70% redundancy theoretically compresses to 30% of original size using optimal encoding. Real-world compression algorithms (gzip, bzip2, LZMA) approach but don't achieve this theoretical limit due to practical constraints. Our entropy calculator provides the theoretical baseline for evaluating compression algorithm performance.</p>
+
+        <h2>Advanced Analysis Modes and Methodologies</h2>
+
+        <h3>Character-Level Entropy Analysis</h3>
+        
+        <p>The most common <strong>online character entropy calculator free</strong> mode analyzes individual characters. This granular approach reveals the fundamental information content of text at the symbol level. Character entropy is particularly useful for: evaluating password strength (higher entropy = stronger passwords), analyzing cipher text quality (encryption should maximize entropy), detecting language characteristics (different languages exhibit distinct entropy patterns), and optimizing character encoding schemes.</p>
+
+        <p>Character-level analysis in our <strong>free online textual entropy analyzer</strong> handles Unicode comprehensively, analyzing alphabets from any writing system. Whether you're measuring entropy of English ASCII text, Chinese hanzi, Arabic script, or mixed multilingual content, the calculator processes all characters accurately. Case sensitivity options allow you to treat 'A' and 'a' as identical or distinct symbols based on your analysis requirements.</p>
+
+        <h3>Word-Level Entropy Analysis</h3>
+        
+        <p><strong>Entropy calculator for words online</strong> mode treats each unique word as a symbol, calculating entropy per word rather than per character. This higher-level analysis reveals linguistic complexity and vocabulary diversity. Texts with rich vocabularies exhibit higher word entropy than repetitive, simple texts. Word entropy proves valuable for: assessing writing sophistication and readability, detecting plagiarism (similar texts show similar entropy patterns), analyzing author style (each writer has characteristic entropy signatures), and evaluating machine translation quality.</p>
+
+        <p>Word-level entropy typically ranges from 5-12 bits per word for natural language, depending on vocabulary size and diversity. Technical documents with specialized terminology may show higher entropy than casual conversation. Poetry often exhibits elevated entropy due to creative vocabulary choices. Our <strong>online text randomness score free</strong> tool provides both character and word entropy to give you complete analytical flexibility.</p>
+
+        <h3>Byte-Level and Binary Analysis</h3>
+        
+        <p>For technical applications, <strong>entropy of text calculator free</strong> tools offer byte-level analysis examining raw binary representation. This mode treats the text as a byte stream, calculating entropy per byte (8-bit chunk). Byte entropy is essential for: analyzing file formats and encodings, detecting compression or encryption in binary data, evaluating random number generator quality, and forensic analysis of data structures.</p>
+
+        <p>Byte entropy reveals encoding efficiency—UTF-8 encoded text typically shows different byte entropy than ASCII or UTF-16 representations of the same content. Compressed files exhibit byte entropy approaching 8 bits per byte (maximum for byte-level analysis), regardless of original text content. Our <strong>text information density calculator free</strong> supports byte mode for these specialized technical analyses.</p>
+
+        <h2>Practical Applications of Entropy Analysis</h2>
+
+        <h3>Cybersecurity and Password Strength</h3>
+        
+        <p>One of the most critical applications of <strong>text entropy checker online</strong> technology is evaluating password and cryptographic key strength. Password entropy directly correlates with cracking resistance: each bit of entropy doubles the number of guesses required for brute-force attacks. Security standards recommend minimum entropy thresholds: 28 bits for low-security applications, 40 bits for general use, 60+ bits for high-security systems, and 80+ bits for cryptographic keys.</p>
+
+        <p>Our <strong>free entropy calculator for words online</strong> helps security professionals evaluate passphrase strength. Passphrases—sequences of random words—can achieve high entropy while remaining memorable. A four-word passphrase from a 10,000-word dictionary provides approximately 53 bits of entropy (4 × log₂(10000)), comparable to a 10-character random password but easier to remember. Entropy calculation validates whether passphrase length and vocabulary size meet security requirements.</p>
+
+        <h3>Data Compression Optimization</h3>
+        
+        <p>Compression algorithms exploit redundancy—patterns that reduce entropy. By measuring entropy before compression, you establish the theoretical minimum size achievable. If your text shows 4 bits per character entropy with an 8-bit ASCII encoding, optimal compression reaches 50% of original size. Real algorithms achieve varying percentages of this theoretical limit based on their sophistication and processing constraints.</p>
+
+        <p>Different text types compress differently based on entropy characteristics: natural language (high redundancy, highly compressible), source code (moderate redundancy, moderately compressible), encrypted data (maximum entropy, incompressible), already compressed files (maximum entropy, incompressible), and random data (maximum entropy, incompressible). Our <strong>online text entropy tool for SEO free</strong> analysis helps content creators understand how their text will compress for web transmission.</p>
+
+        <h3>Natural Language Processing</h3>
+        
+        <p>In NLP, <strong>text randomness analyzer online free</strong> tools help classify and characterize text. Different languages exhibit characteristic entropy ranges: highly inflected languages (Russian, Finnish) often show higher character entropy than analytic languages (English, Chinese). Genre classification becomes possible—poetry typically exceeds prose in entropy, while technical documentation falls below literary fiction. Authorship attribution relies on entropy patterns as stylistic fingerprints.</p>
+
+        <p>Machine learning models for text generation benefit from entropy analysis. Training data entropy affects model behavior—low-entropy training produces repetitive, predictable output, while high-entropy training generates more diverse but potentially less coherent text. Monitoring output entropy helps tune generation parameters for optimal creativity-coherence balance. Our <strong>free entropy analysis for text online</strong> provides the metrics needed for these optimizations.</p>
+
+        <h3>Quality Assurance and Anomaly Detection</h3>
+        
+        <p>Entropy serves as a powerful anomaly detection metric in data quality workflows. Unexpected entropy changes indicate potential issues: sudden entropy drops may signal data duplication or corruption, unexpected entropy spikes could indicate encoding errors or binary data in text fields, and inconsistent entropy across similar documents suggests processing errors or format variations.</p>
+
+        <p>Automated quality checks using <strong>entropy tool free online for text analysis</strong> capabilities can flag suspicious files for manual review. Databases storing user-generated content benefit from entropy screening to detect spam (often low entropy due to repetition), bot-generated content (characteristic entropy signatures), or data injection attacks (anomalous entropy patterns). These automated checks scale quality assurance processes efficiently.</p>
+
+        <h2>Interpreting Entropy Results Effectively</h2>
+
+        <h3>Entropy Benchmarks and Reference Points</h3>
+        
+        <p>Understanding entropy requires context. Here are typical benchmarks measured by our <strong>free text entropy calculator online</strong>: English prose typically ranges 1.0-1.5 bits/character, random ASCII characters achieve approximately 6.5 bits/character (log₂(95 printable chars)), Base64 encoded data shows exactly 6 bits/character (by design), hexadecimal strings exhibit 4 bits/character (log₂(16)), binary data reaches 8 bits/byte maximum, and repeated single characters show 0 bits (no information).</p>
+
+        <p>Word entropy benchmarks vary by language and genre: English news articles typically show 8-10 bits/word, technical documentation ranges 9-11 bits/word, literary fiction achieves 10-12 bits/word, children's books fall to 6-8 bits/word, and random word generators can exceed 12 bits/word. Comparing your results against these benchmarks helps contextualize whether entropy is typical for your text type or anomalous.</p>
+
+        <h3>Efficiency and Redundancy Interpretation</h3>
+        
+        <p>Efficiency percentage (actual entropy ÷ maximum entropy × 100) provides intuitive interpretation: 0-20% efficiency indicates highly predictable, repetitive text; 20-40% represents typical natural language; 40-60% suggests diverse vocabulary or technical content; 60-80% indicates near-random or specialized text; 80-100% approaches maximum randomness typical of encrypted data. Our <strong>online text entropy calculator free</strong> color-codes these ranges for quick visual assessment.</p>
+
+        <p>Redundancy percentage (100% - efficiency) guides compression strategy decisions. Text with 70% redundancy compresses well and warrants compression before storage or transmission. Text below 30% redundancy offers limited compression benefits—the computational cost may exceed space savings. Understanding these thresholds optimizes data pipeline design and storage architecture decisions.</p>
+
+        <h2>Technical Implementation Considerations</h2>
+
+        <h3>Unicode and Character Encoding Handling</h3>
+        
+        <p>Modern <strong>text entropy calculator tool</strong> implementations must handle Unicode correctly. Different Unicode normalization forms (NFC, NFD, NFKC, NFKD) produce different byte sequences for visually identical characters, affecting entropy calculations. Our calculator processes text as received, preserving encoding distinctions that may carry semantic meaning or indicate data origin.</p>
+
+        <p>Whitespace handling significantly impacts entropy results. Leading/trailing spaces, multiple consecutive spaces, tab characters, and various Unicode space characters (non-breaking space, em space, en space) each affect calculations differently. Our tool provides options to normalize, exclude, or preserve whitespace based on your analytical requirements, ensuring accurate measurement for your specific use case.</p>
+
+        <h3>Statistical Significance and Sample Size</h3>
+        
+        <p>Entropy calculations become statistically reliable with adequate sample sizes. Very short texts (under 100 characters) may show misleading entropy due to insufficient sampling. Our <strong>online information entropy calculator free</strong> indicates confidence levels based on text length, warning when results may not represent the true underlying distribution. For password analysis, minimum length recommendations ensure entropy measurements reflect actual strength.</p>
+
+        <p>Large texts (millions of characters) present computational challenges. Efficient algorithms using streaming calculations process text in chunks without loading entirely into memory. Our browser-based implementation leverages modern JavaScript capabilities to handle substantial texts while maintaining responsive user interfaces. For extremely large datasets (gigabytes), specialized command-line tools remain more appropriate.</p>
+
+        <h3>Algorithm Variations and Extensions</h3>
+        
+        <p>Beyond basic Shannon entropy, information theory offers related metrics: Joint entropy measures uncertainty across multiple variables simultaneously, conditional entropy calculates remaining uncertainty given prior knowledge, mutual information quantifies shared information between variables, and relative entropy (Kullback-Leibler divergence) compares distributions. While our <strong>free entropy score calculator online</strong> focuses on Shannon entropy, understanding these extensions provides context for advanced applications.</p>
+
+        <p>Markov models and n-gram analysis extend entropy calculation to consider symbol sequences rather than individual symbols. English letter pairs (bigrams) like "th" and "he" occur frequently, reducing entropy compared to independent letter probabilities. Advanced linguistic analysis incorporates these dependencies for more accurate language modeling. Our tool provides foundational character and word entropy as the basis for these advanced analyses.</p>
+
+        <h2>Comparing Entropy Calculation Methods</h2>
+
+        <h3>Manual Calculation vs. Automated Tools</h3>
+        
+        <p>Manual entropy calculation involves counting symbol frequencies, calculating probabilities, applying logarithms, and summing results—feasible for short examples but impractical for real text. Automated <strong>text entropy checker online</strong> tools perform these calculations instantly, handling large texts, providing visualizations, and offering export capabilities. The automation eliminates arithmetic errors and enables iterative analysis with different parameters.</p>
+
+        <p>Programming languages (Python, R, MATLAB) offer entropy calculation libraries for custom analysis pipelines. These provide flexibility but require coding skills and environment setup. Our web-based <strong>free online entropy calculator for text</strong> bridges the gap, providing professional-grade analysis through an accessible interface without installation or programming knowledge.</p>
+
+        <h3>Command-Line vs. Web-Based Solutions</h3>
+        
+        <p>Command-line entropy tools (ent, pv, custom scripts) excel in automation and batch processing. They integrate into shell scripts and data pipelines but lack visual feedback and require terminal access. Web-based <strong>online text entropy measurement free</strong> tools offer immediate accessibility, cross-platform compatibility, intuitive visualizations, and zero installation requirements.</p>
+
+        <p>Privacy considerations differentiate approaches. Command-line tools process data locally without network transmission. Our browser-based calculator performs all processing client-side using JavaScript—your text never uploads to servers, maintaining privacy while providing the convenience of web access. This architecture suits sensitive data analysis including passwords and confidential documents.</p>
+
+        <h2>Best Practices for Entropy Analysis</h2>
+
+        <h3>Preparing Text for Analysis</h3>
+        
+        <p>Consistent preprocessing ensures comparable results. Decide whether to: normalize Unicode to standard forms, convert case (upper/lower) consistently, remove or preserve punctuation, handle numbers (as symbols or words), and treat whitespace (normalize, remove, or preserve). Document these choices when reporting entropy values to ensure reproducibility. Our <strong>free text entropy analysis tool</strong> provides options for common preprocessing scenarios.</p>
+
+        <p>Representative sampling matters for large corpora. Analyzing entire multi-gigabyte datasets may be impractical; random sampling provides accurate entropy estimates with manageable processing. Sample size formulas from statistics determine adequate sample sizes for desired confidence levels. For most applications, samples of 10,000-100,000 characters provide reliable entropy estimates.</p>
+
+        <h3>Interpreting Results in Context</h3>
+        
+        <p>Entropy values require interpretation within specific contexts. A password with 40 bits of entropy provides adequate security for most applications but insufficient protection for high-value targets. Text compression potential depends on both entropy and compression algorithm sophistication—high entropy guarantees incompressibility, but moderate entropy doesn't guarantee good compression ratios with simple algorithms.</p>
+
+        <p>Comparative analysis often proves more valuable than absolute values. Compare entropy across: different versions of evolving documents, texts from various authors or genres, before/after encryption or compression, and natural vs. machine-generated content. These comparisons reveal patterns invisible in isolated measurements. Our tool facilitates comparisons through rapid recalculation with different parameters.</p>
+
+        <h2>The Future of Entropy Analysis Technology</h2>
+
+        <p>Artificial intelligence is enhancing <strong>text entropy calculator</strong> capabilities beyond simple statistical measurement. Machine learning models now predict entropy for incomplete texts, identify optimal compression strategies based on entropy patterns, detect subtle anomalies invisible to traditional calculations, and correlate entropy with semantic content quality. These advances transform entropy from a descriptive statistic into a predictive tool.</p>
+
+        <p>Quantum information theory introduces quantum entropy concepts (von Neumann entropy) relevant as quantum computing matures. While classical Shannon entropy remains dominant for current text analysis, understanding quantum information theory prepares analysts for future cryptographic and communication systems where quantum effects matter. Classical entropy tools like ours provide the foundation for understanding these advanced concepts.</p>
+
+        <h2>Conclusion: Master Information Measurement with Professional Entropy Analysis</h2>
+
+        <p><strong>Text entropy</strong> stands as one of the most versatile and powerful metrics in information science, bridging pure mathematics with practical applications across cybersecurity, data compression, natural language processing, and quality assurance. Understanding how to calculate, interpret, and apply entropy measurements elevates your analytical capabilities and informs better decision-making in text-related workflows.</p>
+
+        <p>Our <strong>free text entropy calculator online</strong> delivers professional-grade entropy analysis through an intuitive, browser-based interface. With real-time calculation as you type, multiple analysis modes (character, word, byte, line), visual entropy gauges, detailed probability distributions, and flexible export options, this tool serves everyone from casual users checking password strength to professionals analyzing large text corpora. The privacy-focused client-side architecture ensures your sensitive data remains secure.</p>
+
+        <p>Whether you need to evaluate <strong>text randomness analyzer online free</strong> capabilities for security auditing, optimize compression strategies using <strong>online text complexity calculator free</strong> metrics, or analyze linguistic patterns with <strong>text information density calculator free</strong> tools, our calculator provides the precision and features you need. Stop guessing about information content—start measuring with accuracy using our advanced <strong>entropy tool free online for text analysis</strong> today.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What is text entropy and how is it calculated?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Text entropy</strong> measures the average amount of information or uncertainty in each symbol of your text, calculated using Shannon's formula: H = -Σ p(x) × log₂(p(x)). Our <strong>free text entropy calculator online</strong> counts how often each unique character appears, calculates probabilities, and computes the weighted average of information content. Results are shown in bits per character (using base-2 logarithms). Higher entropy means more randomness and less predictability; lower entropy indicates patterns and redundancy. English text typically shows 1.0-1.5 bits/character, while random text approaches 6-7 bits/character.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I interpret entropy results?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Our <strong>online text entropy calculator free</strong> provides several metrics: <strong>Shannon Entropy</strong> (actual information content), <strong>Maximum Possible</strong> (theoretical maximum for your character set), <strong>Efficiency</strong> (percentage of maximum achieved), and <strong>Redundancy</strong> (predictable patterns). Efficiency below 40% indicates highly compressible text like natural language. Efficiency above 80% suggests encrypted, compressed, or random data. The color-coded gauge provides instant visual feedback: red for low entropy (predictable), yellow for medium, green for high entropy (random).</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What are the different analysis modes?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Our <strong>text entropy calculator tool</strong> offers four analysis modes: <strong>By Character</strong> (analyzes individual letters/symbols—best for passwords and encryption), <strong>By Word</strong> (treats each unique word as a symbol—useful for linguistic analysis), <strong>By Byte</strong> (analyzes raw binary data—technical/forensic use), and <strong>By Line</strong> (treats each line as a unit—good for log files). Character mode is most common for general use. Word mode helps assess writing vocabulary diversity. Byte mode reveals encoding characteristics. Switch modes using the buttons below the input area for different perspectives on your data.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How can I use this for password strength checking?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Enter your password in our <strong>free online entropy calculator for text</strong> and select "By Character" mode. Strong passwords should show: <strong>Entropy</strong> above 40 bits (50+ for high security), <strong>Efficiency</strong> above 70% (indicating randomness), and diverse character distribution in the probability chart. A 10-character random password typically achieves 50-60 bits. Passphrases (4-5 random words) often reach 40-60 bits while being memorable. Avoid passwords showing low entropy (under 30 bits) or efficiency below 50%, as these are vulnerable to brute-force attacks. Never submit actual passwords to online tools—use similar patterns for testing.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can entropy predict compression ratios?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>online text entropy measurement free</strong> tool estimates compression potential. The <strong>Redundancy</strong> percentage indicates how much text can theoretically be compressed—70% redundancy suggests 70% size reduction is possible with optimal encoding. The <strong>Compression Est.</strong> stat in the dashboard provides this calculation. Natural language typically compresses 50-70%. Technical documentation 40-60%. Already compressed or encrypted files show near 0% compression potential (high entropy). Note that real compression algorithms (gzip, zip) achieve varying percentages of this theoretical limit based on their sophistication and speed trade-offs.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What's the difference between bits, nats, and hartleys?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">These are different units for entropy based on logarithm base: <strong>Bits</strong> (base 2) are standard in computer science and information theory—multiply by text length to get total bits of information. <strong>Nats</strong> (base e, natural log) are used in mathematical physics and thermodynamics. <strong>Hartleys</strong> (base 10) are occasionally used in engineering. Our <strong>free entropy score calculator online</strong> defaults to bits as they're most intuitive for digital applications. To convert: nats = bits × 0.693, hartleys = bits × 0.301. All units measure the same underlying information; only the scale differs.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool support file analysis?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely! Our <strong>online information entropy calculator free</strong> supports drag-and-drop file uploads and file picker selection. It handles TXT, CSV, JSON, XML, HTML, Markdown, and all code file formats. Files are read locally in your browser using JavaScript FileReader API—no upload to servers occurs, ensuring privacy. The tool processes files up to 10-20MB efficiently. For larger files, consider splitting them or using command-line tools. File analysis is perfect for evaluating log files, database dumps, or document collections for entropy patterns that might indicate compression opportunities, encoding issues, or data quality problems.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my data secure when using this tool?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">100% secure. Our <strong>free online textual entropy analyzer</strong> performs all calculations locally in your browser using JavaScript. Your text never uploads to our servers, leaves your device, or transmits over the network. You can verify this by checking the Network tab in browser DevTools—no data transfer occurs. This makes it safe for analyzing sensitive passwords, confidential documents, proprietary code, or personal data. The tool also works offline after initial page load. For maximum security with passwords, you can even disconnect from the internet before using the tool, as all processing happens client-side.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Why does the same text show different entropy with different settings?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Entropy depends on how you define "symbols." Case-sensitive mode treats 'A' and 'a' as different symbols (higher entropy), while case-insensitive treats them as one (lower entropy). Whitespace options affect whether spaces count as symbols. Analysis mode dramatically changes results: "Hello" has character entropy around 1.9 bits/char (5 unique chars) but word entropy of 0 bits (1 unique word). Our <strong>online character entropy calculator free</strong> lets you explore these perspectives. There's no single "correct" entropy—choose settings matching your analytical goals: case-sensitive for passwords, word mode for linguistic analysis, byte mode for technical forensics.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this tool really free?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, completely <strong>free</strong> with no registration, usage limits, watermarks, or hidden fees. Use our <strong>entropy of text calculator free</strong> for personal or commercial projects without attribution. All features—including multiple analysis modes, file upload, visual charts, detailed statistics, and export options—are available to all users at no cost. The tool is supported by unobtrusive advertising. This is truly a <strong>free entropy calculator for words online</strong> and characters for everyone who needs to analyze information content, whether you're checking password strength, optimizing compression, studying linguistics, or performing cybersecurity analysis.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const inputStats = document.getElementById('inputStats');
+const analysisStats = document.getElementById('analysisStats');
+const processingTime = document.getElementById('processingTime');
+const emptyState = document.getElementById('emptyState');
+const entropyResults = document.getElementById('entropyResults');
+const entropyScore = document.getElementById('entropyScore');
+const entropyGaugeFill = document.getElementById('entropyGaugeFill');
+const complexityBadge = document.getElementById('complexityBadge');
+const shannonEntropy = document.getElementById('shannonEntropy');
+const maxEntropy = document.getElementById('maxEntropy');
+const entropyEfficiency = document.getElementById('entropyEfficiency');
+const redundancy = document.getElementById('redundancy');
+const statsDashboard = document.getElementById('statsDashboard');
+const probabilityBars = document.getElementById('probabilityBars');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+
+// Stats elements
+const statUniqueSymbols = document.getElementById('statUniqueSymbols');
+const statTotalSymbols = document.getElementById('statTotalSymbols');
+const statAvgInfo = document.getElementById('statAvgInfo');
+const statCompression = document.getElementById('statCompression');
+
+// Buttons
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const resetBtn = document.getElementById('resetBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+// Mode buttons and options
+const methodBtns = document.querySelectorAll('.method-btn');
+const caseHandling = document.getElementById('caseHandling');
+const whitespaceHandling = document.getElementById('whitespaceHandling');
+const logBase = document.getElementById('logBase');
+
+let currentMode = 'character';
+let entropyChart = null;
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Update input stats
+function updateInputStats() {
+  const text = inputText.value;
+  const chars = text.length;
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+  inputStats.textContent = `Chars: ${chars} | Words: ${words}`;
+}
+
+// Debounce function for performance
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Mode selection
+methodBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    methodBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentMode = btn.dataset.mode;
+    calculateEntropy();
+  });
+});
+
+// Options change listeners
+[caseHandling, whitespaceHandling, logBase].forEach(el => {
+  el.addEventListener('change', calculateEntropy);
+});
+
+// Get base for logarithm
+function getLogBase() {
+  const base = logBase.value;
+  if (base === 'e') return Math.E;
+  if (base === '10') return 10;
+  return 2;
+}
+
+// Get unit label
+function getUnitLabel() {
+  const base = logBase.value;
+  if (base === 'e') return 'nats';
+  if (base === '10') return 'hartleys';
+  return 'bits';
+}
+
+// Preprocess text based on options
+function preprocessText(text) {
+  const caseOption = caseHandling.value;
+  const wsOption = whitespaceHandling.value;
+  
+  // Handle whitespace
+  if (wsOption === 'exclude') {
+    text = text.replace(/\s/g, '');
+  } else if (wsOption === 'normalize') {
+    text = text.replace(/\s+/g, ' ');
+  }
+  
+  // Handle case
+  if (caseOption === 'insensitive') {
+    text = text.toLowerCase();
+  }
+  
+  return text;
+}
+
+// Tokenize text based on mode
+function tokenize(text) {
+  switch(currentMode) {
+    case 'character':
+      return text.split('');
+    case 'word':
+      return text.trim() === '' ? [] : text.trim().split(/\s+/);
+    case 'line':
+      return text === '' ? [] : text.split(/\n/);
+    case 'byte':
+      // Convert to bytes
+      const encoder = new TextEncoder();
+      const bytes = encoder.encode(text);
+      return Array.from(bytes).map(b => String.fromCharCode(b));
+    default:
+      return text.split('');
+  }
+}
+
+// Calculate entropy
+function calculateEntropy() {
+  const startTime = performance.now();
+  let text = inputText.value;
+  
+  if (!text) {
+    showEmptyState();
+    return;
+  }
+  
+  text = preprocessText(text);
+  const tokens = tokenize(text);
+  
+  if (tokens.length === 0) {
+    showEmptyState();
+    return;
+  }
+  
+  // Count frequencies
+  const freq = {};
+  tokens.forEach(token => {
+    freq[token] = (freq[token] || 0) + 1;
+  });
+  
+  const total = tokens.length;
+  const unique = Object.keys(freq).length;
+  const base = getLogBase();
+  const unit = getUnitLabel();
+  
+  // Calculate entropy
+  let entropy = 0;
+  Object.values(freq).forEach(count => {
+    const p = count / total;
+    entropy -= p * (Math.log(p) / Math.log(base));
+  });
+  
+  // Calculate max entropy
+  const maxEnt = Math.log(unique) / Math.log(base);
+  
+  // Calculate efficiency and redundancy
+  const efficiency = maxEnt > 0 ? (entropy / maxEnt) * 100 : 0;
+  const redund = 100 - efficiency;
+  
+  // Compression estimate
+  const compression = redund * 0.9; // Estimate 90% of redundancy can be compressed
+  
+  const endTime = performance.now();
+  
+  // Update UI
+  displayResults({
+    entropy,
+    maxEntropy: maxEnt,
+    efficiency,
+    redundancy: redund,
+    compression,
+    unique,
+    total,
+    freq,
+    unit,
+    processingTime: endTime - startTime
+  });
+}
+
+function showEmptyState() {
+  emptyState.classList.remove('hidden');
+  entropyResults.classList.add('hidden');
+  statsDashboard.classList.add('hidden');
+  analysisStats.textContent = 'Ready to analyze';
+  processingTime.textContent = '';
+  
+  if (entropyChart) {
+    entropyChart.destroy();
+    entropyChart = null;
+  }
+}
+
+function displayResults(data) {
+  emptyState.classList.add('hidden');
+  entropyResults.classList.remove('hidden');
+  statsDashboard.classList.remove('hidden');
+  
+  // Update main score
+  entropyScore.textContent = data.entropy.toFixed(2);
+  
+  // Update gauge
+  const maxGaugeValue = Math.max(data.maxEntropy, 8); // Scale to at least 8 bits
+  const percentage = Math.min((data.entropy / maxGaugeValue) * 100, 100);
+  const dashArray = (percentage / 100) * 157; // 157 is half circumference of radius 40
+  entropyGaugeFill.style.strokeDasharray = `${dashArray}, 157`;
+  
+  // Color based on efficiency
+  let color = '#ef4444'; // red
+  let badgeClass = 'bg-red-500/20 text-red-400';
+  let badgeText = 'Low Entropy';
+  
+  if (data.efficiency > 80) {
+    color = '#22c55e'; // green
+    badgeClass = 'bg-green-500/20 text-green-400';
+    badgeText = 'High Entropy (Random)';
+  } else if (data.efficiency > 50) {
+    color = '#eab308'; // yellow
+    badgeClass = 'bg-yellow-500/20 text-yellow-400';
+    badgeText = 'Medium Entropy';
+  } else if (data.efficiency > 30) {
+    color = '#f97316'; // orange
+    badgeClass = 'bg-orange-500/20 text-orange-400';
+    badgeText = 'Low-Medium Entropy';
+  } else {
+    badgeText = 'Low Entropy (Predictable)';
+  }
+  
+  entropyGaugeFill.style.stroke = color;
+  complexityBadge.className = `complexity-badge ${badgeClass}`;
+  complexityBadge.textContent = badgeText;
+  
+  // Update stats
+  shannonEntropy.textContent = data.entropy.toFixed(2);
+  maxEntropy.textContent = data.maxEntropy.toFixed(2);
+  entropyEfficiency.textContent = data.efficiency.toFixed(1) + '%';
+  redundancy.textContent = data.redundancy.toFixed(1) + '%';
+  
+  // Update dashboard stats
+  statUniqueSymbols.textContent = data.unique;
+  statTotalSymbols.textContent = data.total;
+  statAvgInfo.textContent = data.entropy.toFixed(2);
+  statCompression.textContent = data.compression.toFixed(0) + '%';
+  
+  // Update analysis stats
+  analysisStats.textContent = `Mode: ${currentMode} | Symbols: ${data.unique} unique / ${data.total} total`;
+  processingTime.textContent = `${data.processingTime.toFixed(1)}ms`;
+  
+  // Display probability bars
+  displayProbabilityBars(data.freq, data.total);
+  
+  // Update chart
+  updateChart(data);
+}
+
+function displayProbabilityBars(freq, total) {
+  probabilityBars.innerHTML = '';
+  
+  // Sort by frequency
+  const sorted = Object.entries(freq).sort((a, b) => b[1] - a[1]).slice(0, 10);
+  const maxCount = sorted[0][1];
+  
+  sorted.forEach(([symbol, count]) => {
+    const percentage = (count / total) * 100;
+    const barWidth = (count / maxCount) * 100;
+    
+    const bar = document.createElement('div');
+    bar.className = 'flex items-center gap-2 text-xs';
+    
+    // Format symbol for display
+    let displaySymbol = symbol;
+    if (symbol === ' ') displaySymbol = 'Space';
+    else if (symbol === '\n') displaySymbol = 'LF';
+    else if (symbol === '\t') displaySymbol = 'Tab';
+    else if (symbol.length > 10) displaySymbol = symbol.substring(0, 10) + '...';
+    
+    bar.innerHTML = `
+      <div class="w-16 text-right text-gray-400 truncate" title="${symbol}">${displaySymbol}</div>
+      <div class="flex-1 h-4 bg-white/5 rounded-full overflow-hidden">
+        <div class="bg-indigo-500 h-full rounded-full entropy-bar" style="width: ${barWidth}%"></div>
+      </div>
+      <div class="w-12 text-gray-500">${percentage.toFixed(1)}%</div>
+    `;
+    
+    probabilityBars.appendChild(bar);
+  });
+}
+
+function updateChart(data) {
+  const ctx = document.getElementById('entropyChart').getContext('2d');
+  
+  if (entropyChart) {
+    entropyChart.destroy();
+  }
+  
+  // Prepare data - top 8 symbols
+  const sorted = Object.entries(data.freq).sort((a, b) => b[1] - a[1]).slice(0, 8);
+  const labels = sorted.map(([s]) => {
+    if (s === ' ') return 'Space';
+    if (s === '\n') return 'LF';
+    if (s.length > 5) return s.substring(0, 5) + '...';
+    return s;
+  });
+  const values = sorted.map(([, c]) => c);
+  
+  entropyChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: labels,
+      datasets: [{
+        label: 'Frequency',
+        data: values,
+        backgroundColor: 'rgba(99, 102, 241, 0.6)',
+        borderColor: 'rgba(99, 102, 241, 1)',
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false }
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          ticks: {
+            color: 'rgba(255, 255, 255, 0.5)',
+            font: { size: 10 }
+          },
+          grid: {
+            color: 'rgba(255, 255, 255, 0.05)'
+          }
+        },
+        x: {
+          ticks: {
+            color: 'rgba(255, 255, 255, 0.5)',
+            font: { size: 10 }
+          },
+          grid: {
+            display: false
+          }
+        }
+      }
+    }
+  });
+}
+
+// Debounced version for typing
+const debouncedCalculate = debounce(calculateEntropy, 100);
+
+// Drag and drop handlers
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  if (!file.type.match('text.*') && !file.name.match(/\.(txt|csv|json|xml|html?|md|js|css|py|java|cpp|c|php|rb|go|rs|swift|kt|sql|log)$/i)) {
+    alert('Please upload a text file');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    updateInputStats();
+    calculateEntropy();
+  };
+  reader.readAsText(file);
+}
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    updateInputStats();
+    calculateEntropy();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  updateInputStats();
+  showEmptyState();
+  inputText.focus();
+}
+
+// Copy results
+async function copyResults() {
+  const text = inputText.value;
+  if (!text) return;
+  
+  // Generate report
+  const mode = currentMode;
+  const entropy = entropyScore.textContent;
+  const unit = getUnitLabel();
+  const eff = entropyEfficiency.textContent;
+  const red = redundancy.textContent;
+  
+  const report = `Entropy Analysis Report
+======================
+Mode: ${mode}
+Shannon Entropy: ${entropy} ${unit}/symbol
+Efficiency: ${eff}
+Redundancy: ${red}
+Unique Symbols: ${statUniqueSymbols.textContent}
+Total Symbols: ${statTotalSymbols.textContent}
+
+Generated by Text Entropy Calculator
+https://easyprotools.com/text-entropy-calculator/`;
+  
+  try {
+    await navigator.clipboard.writeText(report);
+    const originalText = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalText;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+}
+
+// Download results
+function downloadResults() {
+  const text = inputText.value;
+  if (!text) return;
+  
+  const mode = currentMode;
+  const entropy = entropyScore.textContent;
+  const unit = getUnitLabel();
+  
+  const report = `ENTROPY ANALYSIS REPORT
+========================
+Analysis Date: ${new Date().toLocaleString()}
+Analysis Mode: ${mode}
+
+RESULTS
+-------
+Shannon Entropy: ${entropy} ${unit}/symbol
+Efficiency: ${entropyEfficiency.textContent}
+Redundancy: ${redundancy.textContent}
+Max Possible: ${maxEntropy.textContent} ${unit}/symbol
+
+STATISTICS
+----------
+Unique Symbols: ${statUniqueSymbols.textContent}
+Total Symbols: ${statTotalSymbols.textContent}
+Compression Potential: ${statCompression.textContent}
+
+INPUT SAMPLE
+------------
+${text.substring(0, 500)}${text.length > 500 ? '...' : ''}
+
+---
+Generated by Text Entropy Calculator
+https://easyprotools.com/text-entropy-calculator/`;
+  
+  const blob = new Blob([report], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'entropy-analysis.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Reset all
+function resetAll() {
+  inputText.value = '';
+  updateInputStats();
+  showEmptyState();
+  
+  // Reset filters
+  methodBtns.forEach(b => b.classList.remove('active'));
+  methodBtns[0].classList.add('active');
+  currentMode = 'character';
+  
+  // Reset selects
+  caseHandling.value = 'sensitive';
+  whitespaceHandling.value = 'include';
+  logBase.value = '2';
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Event listeners
+inputText.addEventListener('input', () => {
+  updateInputStats();
+  debouncedCalculate();
+});
+
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+copyBtn.addEventListener('click', copyResults);
+downloadBtn.addEventListener('click', downloadResults);
+resetBtn.addEventListener('click', resetAll);
+
+// Initialize
+updateInputStats();
+</script>
+</body>
+</html>

@@ -1,0 +1,1681 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Word Frequency Analyzer - Free Online Text Analysis Tool</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online word frequency analyzer tool. Analyze word usage, count repetitions, find keyword density with n-gram analysis, and generate detailed text statistics. Real-time analysis with no registration required." />
+  <meta name="keywords" content="word frequency analyzer online, online word frequency analyzer free, word frequency analyzer tool, free word frequency counter online, online text word frequency tool, free online word analyzer, word frequency analysis tool, free online text analysis tool, online word usage analyzer free, word count and frequency counter, free online keyword frequency analyzer, online text frequency analysis free, word repetition checker online, free word frequency checker, online content frequency tool free, word usage statistics online, free text analyzer with word frequency, online word frequency report tool, word frequency analysis for seo free, online word count and frequency tool, free seo word frequency analyzer, online keyword and word frequency tool free, free text frequency counter online, word frequency dashboard online, free online word patterns analyzer, online word frequency statistics free" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/word-frequency-analyzer/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/word-frequency-analyzer/" />
+  <meta property="og:title" content="Word Frequency Analyzer - Free Online Text Analysis Tool" />
+  <meta property="og:description" content="Analyze word usage, count repetitions, find keyword density with n-gram analysis, and generate detailed text statistics. Real-time analysis with no registration required." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/word-frequency-analyzer/" />
+  <meta name="twitter:title" content="Word Frequency Analyzer - Free Online Text Analysis Tool" />
+  <meta name="twitter:description" content="Analyze word usage, count repetitions, find keyword density with n-gram analysis, and generate detailed text statistics. Real-time analysis with no registration required." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .method-btn {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    .method-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .word-item {
+      border-left: 2px solid rgba(99, 102, 241, 0.5);
+      transition: all 0.2s ease;
+    }
+    
+    .word-item:hover {
+      border-left-color: rgba(99, 102, 241, 1);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+
+    .stat-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.2s ease;
+    }
+    
+    .stat-card:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.12);
+    }
+
+    .stat-value {
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .progress-bar {
+      height: 3px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #6366f1, #8b5cf6);
+      border-radius: 2px;
+      transition: width 0.3s ease;
+    }
+
+    .ngram-tabs {
+      display: flex;
+      gap: 0.25rem;
+      margin-bottom: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .ngram-tab {
+      padding: 0.25rem 0.5rem;
+      font-size: 0.7rem;
+      border-radius: 0.25rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.05);
+      color: #9ca3af;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .ngram-tab.active {
+      background: rgba(99, 102, 241, 0.3);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    .ngram-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 0.5rem;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+
+    .ngram-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 0.375rem;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .stats-grid-compact {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .stats-grid-compact {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .mini-stat {
+      padding: 0.5rem;
+    }
+
+    .mini-stat .stat-value {
+      font-size: 1rem;
+    }
+
+    .mini-stat .stat-label {
+      font-size: 0.6rem;
+    }
+
+    .frequency-bar {
+      background: rgba(99, 102, 241, 0.3);
+      transition: width 0.3s ease;
+    }
+
+    .tab-content {
+      display: none;
+    }
+    
+    .tab-content.active {
+      display: block;
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 12h8M10 20h20M10 28h14" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Word Frequency Analyzer</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Analysis Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Word Frequency Analyzer
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Text Analysis Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-analysis enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Input Text
+            </label>
+            <div class="flex gap-1">
+              <button id="sampleBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                Sample
+              </button>
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Type or paste text here... Or drag & drop a file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.csv,.md,.json,.xml,.html,.js,.css,.py,.java,.cpp,.c,.php,.rb,.go,.rs,.swift,.kt,.sql,.log" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Chars: 0 | Words: 0 | Lines: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Analysis Dashboard -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+              Analysis Dashboard
+            </label>
+            <div class="flex gap-1">
+              <button id="exportBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Export CSV
+              </button>
+            </div>
+          </div>
+          
+          <!-- Compact Stats Grid -->
+          <div class="stats-grid-compact" id="statsContainer">
+            <div class="stat-card mini-stat rounded-lg p-2 text-center">
+              <div class="stat-label text-gray-400 mb-1">Total Words</div>
+              <div class="stat-value text-indigo-400" id="totalWords">0</div>
+              <div class="progress-bar mt-1">
+                <div class="progress-fill" id="progressTotal" style="width: 0%"></div>
+              </div>
+            </div>
+            
+            <div class="stat-card mini-stat rounded-lg p-2 text-center">
+              <div class="stat-label text-gray-400 mb-1">Unique Words</div>
+              <div class="stat-value text-emerald-400" id="uniqueWords">0</div>
+              <div class="text-xs text-gray-500 mt-1" id="uniquePercent">0%</div>
+            </div>
+            
+            <div class="stat-card mini-stat rounded-lg p-2 text-center">
+              <div class="stat-label text-gray-400 mb-1">Avg Length</div>
+              <div class="stat-value text-amber-400" id="avgWordLen">0</div>
+              <div class="text-xs text-gray-500 mt-1">chars</div>
+            </div>
+            
+            <div class="stat-card mini-stat rounded-lg p-2 text-center">
+              <div class="stat-label text-gray-400 mb-1">Longest Word</div>
+              <div class="stat-value text-rose-400 truncate px-1" id="longestWord">-</div>
+              <div class="text-xs text-gray-500 mt-1" id="longestLen">0 chars</div>
+            </div>
+            
+            <div class="stat-card mini-stat rounded-lg p-2 text-center">
+              <div class="stat-label text-gray-400 mb-1">Lexical Density</div>
+              <div class="stat-value text-cyan-400" id="lexicalDensity">0%</div>
+              <div class="text-xs text-gray-500 mt-1">vocab rich</div>
+            </div>
+            
+            <div class="stat-card mini-stat rounded-lg p-2 text-center">
+              <div class="stat-label text-gray-400 mb-1">Top Frequency</div>
+              <div class="stat-value text-violet-400" id="topFrequency">0</div>
+              <div class="text-xs text-gray-500 mt-1" id="topWord">-</div>
+            </div>
+          </div>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="analysisStats">Processing: 0ms</span>
+            <span id="filterContainer" class="hidden">
+              <input type="text" id="filterInput" placeholder="Filter..." class="w-20 px-2 py-1 rounded bg-black/40 border border-white/10 text-xs">
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Analysis Tabs -->
+          <div>
+            <div class="flex flex-wrap gap-1 mt-2 mb-2">
+              <button class="method-btn active rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-tab="frequency">Word Frequency</button>
+              <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-tab="density">Keyword Density</button>
+              <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-tab="length">By Length</button>
+            </div>
+          </div>
+
+          <!-- Tab Content -->
+          <div id="tabFrequency" class="tab-content active">
+            <div class="ngram-list" id="frequencyList">
+              <div class="text-center text-gray-500 text-xs py-4 col-span-full">Enter text to see word frequency analysis</div>
+            </div>
+          </div>
+
+          <div id="tabDensity" class="tab-content">
+            <!-- N-gram Tabs -->
+            <div class="ngram-tabs">
+              <button class="ngram-tab active" data-ngram="1">Single Words</button>
+              <button class="ngram-tab" data-ngram="2">2-Word Phrases</button>
+              <button class="ngram-tab" data-ngram="3">3-Word Phrases</button>
+              <button class="ngram-tab" data-ngram="4">4-Word Phrases</button>
+              <button class="ngram-tab" data-ngram="5">Long-tail (5+)</button>
+            </div>
+            
+            <!-- N-gram Stats Summary -->
+            <div class="flex gap-4 mb-3 text-xs text-gray-400">
+              <span id="ngramTotal">Total phrases: 0</span>
+              <span id="ngramUnique">Unique: 0</span>
+              <span id="ngramTop">Most frequent: -</span>
+            </div>
+            
+            <!-- N-gram List -->
+            <div class="ngram-list" id="ngramList">
+              <div class="text-center text-gray-500 text-xs py-4 col-span-full">Enter text to analyze keyword phrases</div>
+            </div>
+          </div>
+
+          <div id="tabLength" class="tab-content">
+            <div class="ngram-list" id="lengthList">
+              <div class="text-center text-gray-500 text-xs py-4 col-span-full">Enter text to see words grouped by length</div>
+            </div>
+          </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-3">
+        
+        <!-- Analysis Options -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Case Sensitivity</label>
+            <select id="caseSelect" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="insensitive">Ignore Case (Default)</option>
+              <option value="sensitive">Case Sensitive</option>
+            </select>
+          </div>
+          
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Min Word Length</label>
+            <input type="number" id="minLength" min="1" value="2" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+          </div>
+
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Exclude Stop Words</label>
+            <select id="stopWordsSelect" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="none">Keep All Words</option>
+              <option value="basic">Basic (the, and, is...)</option>
+              <option value="extended">Extended + Common</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Max Results</label>
+            <select id="maxResults" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="50">Top 50</option>
+              <option value="100">Top 100</option>
+              <option value="200">Top 200</option>
+              <option value="all">All Words</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Advanced Options -->
+        <div class="flex flex-wrap gap-2 items-center">
+          <label class="flex items-center gap-1.5 text-xs text-gray-400">
+            <input type="checkbox" id="excludeNumbers" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Exclude Numbers
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400">
+            <input type="checkbox" id="excludeSpecial" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Exclude Special Chars
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400">
+            <input type="checkbox" id="showPercentages" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Show Percentages
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Word Frequency Analyzer?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Real-Time Analysis</h3>
+          <p class="text-gray-400 text-xs">Instant word counting as you type</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">N-gram Analysis</h3>
+          <p class="text-gray-400 text-xs">1-word to 5+ word phrases</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Drag & Drop</h3>
+          <p class="text-gray-400 text-xs">Upload text files instantly</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based, no uploads</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">CSV data export</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration required</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Enter Text</h3>
+          <p class="text-gray-400 text-xs">Type, paste, or drop a file. Analysis happens automatically.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Configure</h3>
+          <p class="text-gray-400 text-xs">Set case sensitivity, stop words, and length filters.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Analyze</h3>
+          <p class="text-gray-400 text-xs">View frequency, density, and length statistics instantly.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Download CSV data or copy results for your reports.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Word Frequency Analysis: Mastering Text Analytics for SEO, Writing, and Data Science</h2>
+        
+        <p><strong>Word frequency analysis</strong> stands as one of the most fundamental yet profoundly powerful techniques in text analytics, offering insights that bridge the gap between raw data and actionable intelligence. Whether you're an SEO professional optimizing content for search engines, a writer refining your prose, a data scientist extracting patterns from unstructured text, or a researcher analyzing linguistic trends, understanding how to effectively use a <strong>word frequency analyzer online</strong> is essential for modern digital workflows. Our <strong>free online word analyzer</strong> provides comprehensive capabilities that transform how you understand and utilize textual data.</p>
+
+        <h2>Understanding Word Frequency Analysis and Its Importance</h2>
+        
+        <p><strong>Word frequency analysis</strong> is the systematic process of counting how often each word appears within a given text or corpus. This seemingly straightforward operation unlocks deep insights into content structure, writing patterns, keyword optimization, and linguistic characteristics. When you use an <strong>online word frequency analyzer free</strong> tool, you're engaging with a methodology that has applications spanning from academic research to commercial SEO strategies, from literary analysis to machine learning preprocessing.</p>
+
+        <p>The significance of reliable <strong>word frequency analysis tools</strong> cannot be overstated in our content-driven digital ecosystem. Consider the daily challenges professionals face: an SEO specialist needs a <strong>free online keyword frequency analyzer</strong> to ensure optimal keyword density without over-optimization; a content editor requires a <strong>word repetition checker online</strong> to eliminate redundant phrasing; a digital marketer uses <strong>online text word frequency tools</strong> to analyze competitor content; a data scientist employs <strong>word frequency analysis for SEO free</strong> solutions to preprocess training data. Without efficient <strong>text frequency counter online</strong> capabilities, these tasks become impossibly time-consuming manual processes.</p>
+
+        <h2>Core Concepts in Word Frequency Analysis</h2>
+
+        <h3>Tokenization and Text Preprocessing</h3>
+        
+        <p>Before frequency counting begins, text must undergo tokenization—the process of breaking continuous text into discrete words or tokens. Advanced <strong>online text frequency analysis free</strong> tools handle complex tokenization scenarios that simple split functions cannot manage. Punctuation attachment (is "word," one token or two?), contractions (handling "don't" as "do not" or keeping it whole), hyphenated compounds, and special characters all require sophisticated processing. Our <strong>free text analyzer with word frequency</strong> capabilities provides configurable tokenization options, making it suitable for professional text processing tasks.</p>
+
+        <p>Case sensitivity represents another crucial preprocessing decision. Should "Word" and "word" count as the same token? Most <strong>word frequency analyzer tools</strong> default to case-insensitive counting for general analysis, but case-sensitive modes prove essential for analyzing proper nouns, programming code, or texts where capitalization carries semantic meaning. Our <strong>online word usage analyzer free</strong> solution offers both approaches with simple toggling.</p>
+
+        <h3>Stop Words and Content Filtering</h3>
+        
+        <p>Stop words—extremely common words like "the," "and," "is," "to,"—present a unique challenge in <strong>word frequency analysis</strong>. While they dominate raw frequency counts (often comprising 20-30% of all words), they typically carry little semantic value for content analysis. Professional <strong>free word frequency counter online</strong> tools offer configurable stop word filtering, allowing users to exclude these high-frequency low-value tokens and focus on meaningful content words.</p>
+
+        <p>Beyond basic stop words, advanced <strong>word frequency analysis tools</strong> support custom filtering. Users might exclude domain-specific common terms, numbers (when analyzing purely textual content), or short words below a length threshold. Our <strong>online word frequency report tool</strong> provides flexible filtering options that adapt to diverse analytical needs, from academic linguistic studies to SEO content optimization.</p>
+
+        <h3>N-gram Analysis: Beyond Single Words</h3>
+        
+        <p>While single-word (unigram) frequency provides valuable insights, multi-word sequences (n-grams) reveal contextual patterns that isolated words cannot capture. Bigrams (two-word sequences) and trigrams (three-word sequences) identify collocations—words that frequently appear together. A professional <strong>word frequency analyzer tool</strong> with n-gram capabilities can identify common phrases, technical terminology, long-tail keywords, and idiomatic expressions.</p>
+
+        <p>SEO applications of n-gram analysis are particularly powerful. Modern search engines understand that "best running shoes" carries different intent than analyzing "best," "running," and "shoes" separately. Our <strong>free online word patterns analyzer</strong> provides n-gram analysis from single words through 5+ word phrases, helping you identify the exact keyword combinations your content emphasizes and revealing opportunities for semantic optimization.</p>
+
+        <h3>Frequency Metrics and Statistical Measures</h3>
+        
+        <p>Raw frequency counts represent just one dimension of <strong>word frequency analysis</strong>. Sophisticated <strong>word frequency dashboard online</strong> solutions provide multiple statistical perspectives:</p>
+
+        <p><strong>Absolute Frequency:</strong> The simple count of how many times a word appears. This metric answers "How often?" but doesn't account for document length or corpus size.</p>
+
+        <p><strong>Relative Frequency:</strong> Expressed as a percentage of total words, this metric enables comparison across documents of different lengths. When you need <strong>word count and frequency counter</strong> capabilities for competitive analysis, relative frequency proves invaluable.</p>
+
+        <p><strong>Keyword Density:</strong> A specialized relative frequency measure crucial for SEO, indicating what percentage of your content specific terms occupy. Optimal density varies by term type and competition level, typically ranging 1-3% for primary keywords.</p>
+
+        <p><strong>Lexical Diversity:</strong> The ratio of unique words to total words, indicating vocabulary richness. Higher diversity scores suggest more engaging, sophisticated writing, while lower scores may indicate repetitive or simplistic content.</p>
+
+        <h2>Practical Applications of Word Frequency Analysis</h2>
+
+        <h3>Search Engine Optimization (SEO)</h3>
+        
+        <p>SEO professionals rely heavily on <strong>word frequency analyzer online</strong> tools for content optimization. Keyword density—the percentage of times a target keyword appears relative to total word count—remains a fundamental metric, though modern SEO emphasizes natural language over mechanical keyword stuffing. A <strong>free SEO word frequency analyzer</strong> helps identify optimal keyword placement without crossing into over-optimization penalties.</p>
+
+        <p>Semantic SEO analysis takes frequency counting further. Rather than focusing on single keywords, modern <strong>online keyword and word frequency tool free</strong> solutions analyze keyword clusters, related terms, and topical comprehensiveness. Content that thoroughly covers a topic (indicated by diverse but related vocabulary) typically outperforms narrow keyword-focused text. Our <strong>word frequency analysis for SEO free</strong> capabilities support this holistic approach to content optimization.</p>
+
+        <p>Competitor content analysis represents another crucial SEO application. By running competitor pages through a <strong>text frequency counter online</strong>, you can identify their keyword strategies, content gaps, and topical focus areas. This intelligence informs your own content strategy, helping you create more comprehensive, competitive material.</p>
+
+        <h3>Content Writing and Editing</h3>
+        
+        <p>Writers and editors use <strong>word repetition checker online</strong> tools to polish prose and eliminate stylistic issues. Unintentional word repetition creates monotonous, amateurish writing. A <strong>free word frequency checker</strong> identifies overused terms, suggesting opportunities for synonym substitution or structural variation.</p>
+
+        <p>Readability analysis often incorporates frequency metrics. Texts with limited vocabulary diversity (indicated by high concentration among top frequency words) may prove too simplistic for professional audiences, while excessively diverse vocabulary might alienate general readers. <strong>Word usage statistics online</strong> help writers calibrate their vocabulary to target audiences.</p>
+
+        <p>Genre analysis benefits from frequency patterns. Different content types—academic papers, marketing copy, fiction, technical documentation—exhibit distinct frequency signatures. A <strong>free online word patterns analyzer</strong> can verify that your content matches genre expectations or deliberately breaks conventions for stylistic effect.</p>
+
+        <h3>Academic Research and Linguistics</h3>
+        
+        <p>Linguistics researchers employ <strong>word frequency analysis</strong> for diverse studies: tracking language evolution over time, comparing dialects or registers, analyzing authorial style (stylometry), and studying language acquisition patterns. Historical texts analyzed through <strong>online word frequency statistics free</strong> tools reveal how vocabulary shifts reflect cultural changes.</p>
+
+        <p>Authorship attribution represents a fascinating application. By analyzing word frequency patterns, researchers can identify likely authors of anonymous or disputed texts. Each writer exhibits unique frequency signatures—preferred conjunctions, characteristic prepositions, distinctive adverb usage—that function like fingerprints. Professional <strong>word frequency analysis tools</strong> support these forensic linguistic investigations.</p>
+
+        <h3>Data Science and Machine Learning</h3>
+        
+        <p>Data scientists use <strong>word frequency analysis</strong> as a preprocessing step for machine learning pipelines. Feature extraction for text classification often begins with frequency counting, creating bag-of-words representations or TF-IDF vectors. <strong>Free online word analyzer</strong> tools that export frequency data in CSV format integrate seamlessly with Python, R, or other analytical environments.</p>
+
+        <p>Natural Language Processing (NLP) applications—from sentiment analysis to named entity recognition—rely on frequency statistics for model training and evaluation. Understanding the frequency distribution of your training corpus helps identify potential biases, class imbalances, or data quality issues before they compromise model performance.</p>
+
+        <h2>Advanced Word Frequency Analysis Techniques</h2>
+
+        <h3>N-gram Analysis and Collocation Detection</h3>
+        
+        <p>Multi-word sequence analysis (n-grams) reveals patterns invisible to single-word counting. Bigram analysis might reveal that "fast food" appears frequently while "quick food" does not, despite "fast" and "quick" being synonyms in isolation. Trigram analysis identifies technical phrases like "machine learning algorithm" or "search engine optimization" that carry specific meanings as units.</p>
+
+        <p>Our <strong>word frequency analyzer online</strong> provides comprehensive n-gram analysis from single words through long-tail phrases of 5+ words. This range captures everything from individual keywords to complete long-tail search queries, helping SEO professionals optimize for voice search and conversational queries that tend toward longer, more specific phrases.</p>
+
+        <h3>Comparative Frequency Analysis</h3>
+        
+        <p>Comparing frequency distributions across multiple documents or corpora reveals distinctive characteristics. A <strong>word frequency dashboard online</strong> might visualize how your content's vocabulary differs from industry benchmarks, competitor materials, or genre standards. This comparative approach identifies content gaps, unique value propositions, or areas needing development.</p>
+
+        <p>Delta analysis—measuring frequency differences between texts—supports plagiarism detection, translation quality assessment, and content versioning. Significant frequency deviations between supposedly similar texts may indicate problems requiring investigation.</p>
+
+        <h3>Temporal Frequency Analysis</h3>
+        
+        <p>Tracking word frequencies over time reveals trends, emerging terminology, and shifting discourse patterns. Social media monitoring, news analysis, and academic literature tracking all benefit from temporal frequency analysis. While individual <strong>online text word frequency tools</strong> process single documents, exporting frequency data enables longitudinal studies across time-series corpora.</p>
+
+        <h2>Best Practices for Effective Word Frequency Analysis</h2>
+
+        <h3>Preprocessing and Data Quality</h3>
+        
+        <p>Quality analysis begins with quality data. Before running <strong>word frequency analysis</strong>, clean your text: remove HTML tags and formatting codes, handle encoding issues (UTF-8 standardization), normalize whitespace, and address optical character recognition (OCR) errors if working with scanned documents. Our <strong>free online word analyzer</strong> handles many preprocessing tasks automatically, but understanding your data source prevents garbage-in-garbage-out scenarios.</p>
+
+        <h3>Choosing Appropriate Metrics</h3>
+        
+        <p>Match your analytical approach to your research questions: Use raw frequencies for absolute volume comparisons within a single document. Prefer relative frequencies (percentages) when comparing documents of different lengths. Apply n-gram analysis when contextual patterns matter more than individual terms. Consider lexical diversity when assessing writing sophistication. Our versatile <strong>word count and frequency counter</strong> supports multiple metrics for comprehensive analysis.</p>
+
+        <h3>Interpreting Results Contextually</h3>
+        
+        <p>Frequency data requires contextual interpretation. High-frequency words aren't necessarily important—they might be stop words or domain-common terms. Low-frequency words aren't necessarily insignificant—they might be technical terms, proper nouns, or key concepts. A <strong>word frequency analysis tool</strong> provides data; human judgment provides meaning.</p>
+
+        <p>Consider text genre, audience, and purpose when evaluating frequencies. Technical documentation should feature precise terminology with high relative frequency; creative writing should demonstrate greater lexical diversity. What constitutes "optimal" frequency varies dramatically by context.</p>
+
+        <h2>Comparing Word Frequency Analysis Approaches</h2>
+
+        <h3>Manual Counting vs. Automated Tools</h3>
+        
+        <p>Manual word counting using spreadsheets or tallies is theoretically possible but practically impossible for texts beyond a few hundred words. Automated <strong>word frequency analyzer online</strong> tools process thousands of words instantaneously, eliminate human error, handle complex tokenization scenarios, and generate exportable data for further analysis. For any serious text analysis, automated tools aren't merely convenient—they're essential.</p>
+
+        <h3>Desktop Software vs. Online Tools</h3>
+        
+        <p>Desktop text analysis software offers advantages for sensitive documents requiring offline processing or extremely large corpora exceeding browser capabilities. However, modern <strong>online word frequency analyzer free</strong> solutions like ours provide compelling advantages: no installation or updates, cross-platform compatibility, collaborative sharing capabilities, and continuous feature improvements. For most users, browser-based tools offer the optimal balance of power and convenience.</p>
+
+        <h3>Simple Counters vs. Comprehensive Analyzers</h3>
+        
+        <p>Basic word counters provide limited utility beyond simple length verification. Comprehensive <strong>word frequency analysis tools</strong> offer detailed breakdowns, statistical measures, visualization, n-gram analysis, and export capabilities. For casual use (checking essay length), simple counters suffice. For professional SEO, writing, or research applications, comprehensive analyzers deliver necessary insights.</p>
+
+        <h2>The Future of Text Analytics Technology</h2>
+
+        <p>Artificial intelligence is transforming <strong>word frequency analysis</strong>, moving beyond mechanical counting toward semantic understanding. AI-enhanced tools can: distinguish between different senses of the same word (bank as financial institution vs. river edge), identify implicit themes without explicit keyword matching, suggest contextual synonyms based on frequency patterns in high-performing content, and predict content performance based on frequency characteristics.</p>
+
+        <p>These capabilities will evolve <strong>word frequency analyzer tools</strong> from passive counters into active writing assistants that guide content creation in real-time. Our platform continuously incorporates these innovations while maintaining the simplicity and accessibility you expect from a <strong>free online text analysis tool</strong>.</p>
+
+        <h2>Conclusion: Master Your Text with Professional Frequency Analysis</h2>
+
+        <p><strong>Word frequency analysis</strong> remains one of the most accessible yet powerful techniques in text analytics. From basic keyword counting to sophisticated n-gram analysis, the ability to understand word usage patterns empowers professionals across every discipline. Whether you're optimizing content for search engines, refining your writing style, conducting linguistic research, or preprocessing data for machine learning, mastering <strong>word frequency analysis</strong> will dramatically improve your effectiveness and insights.</p>
+
+        <p>Our <strong>free word frequency analyzer online</strong> provides all the capabilities you need for professional text analysis. With automatic real-time analysis as you type, comprehensive n-gram analysis (single words through 5+ word phrases), advanced filtering options (stop words, case sensitivity, length thresholds), visual statistics dashboard, and flexible CSV export, this tool serves everyone from casual users to data professionals. The browser-based architecture ensures privacy and accessibility, while the intuitive interface requires no learning curve. Whether you need a <strong>word repetition checker online</strong>, a <strong>keyword frequency analyzer</strong>, or a comprehensive <strong>word usage statistics</strong> solution, our <strong>online word frequency report tool</strong> delivers professional results instantly. Stop guessing about your text content—start using our professional <strong>word frequency analyzer online</strong> today and experience the clarity of data-driven text analysis.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool split text automatically as I type?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>word frequency analyzer online</strong> features <strong>automatic real-time analysis</strong>. As you type or paste text, the tool instantly processes your input and displays the results. We use intelligent debouncing to ensure smooth performance without lag. The "Auto-analysis enabled" indicator at the top confirms the feature is active. Changes to analysis options also apply instantly, making this the most responsive <strong>free word frequency analyzer</strong> available.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What is n-gram analysis and why is it useful?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>N-gram analysis</strong> examines multi-word sequences (phrases) rather than just individual words. Bigrams (2 words) capture phrases like "machine learning," trigrams (3 words) identify "search engine optimization," and longer n-grams reveal complete long-tail keywords. This is crucial for modern SEO because search engines understand phrase context. Our <strong>online word frequency analyzer free</strong> provides n-gram analysis from 1-word up to 5+ word phrases.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I exclude common words from analysis?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Use the "Exclude Stop Words" dropdown in the settings section. Choose "Basic" to remove common words (the, and, is, to) or "Extended" for a more comprehensive list including modal verbs and common adverbs. This feature helps focus your <strong>word frequency analysis</strong> on meaningful content words rather than grammatical function words, revealing the true topical focus of your text.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What is lexical density and why does it matter?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Lexical density</strong> measures vocabulary richness: unique words divided by total words, expressed as a percentage. Higher density (20%+) indicates varied vocabulary and potentially more engaging content. Very low density suggests repetitive language. Academic writing typically achieves 15-25%, while creative fiction may exceed 30%. Our <strong>word frequency dashboard online</strong> calculates this automatically to help you assess writing sophistication.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I download the analysis results?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Click the <strong>Export CSV</strong> button to download a complete frequency report. The CSV includes each word/phrase, its count, percentage of total, and length. This opens in Excel or Google Sheets for further analysis, charting, or reporting. Perfect for SEO audits, content strategy documentation, or academic research. Our <strong>online word frequency report tool</strong> makes data export seamless.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I analyze keyword density for SEO?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Switch to the "Keyword Density" tab and select your desired phrase length (Single Words, 2-Word Phrases, etc.). The tool shows each phrase's frequency and percentage of total content. For SEO, aim for 1-3% density for primary keywords. Use n-gram analysis to find related phrases and ensure topical comprehensiveness. Our <strong>free SEO word frequency analyzer</strong> helps optimize without over-stuffing.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What file types are supported?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">All text-based files: TXT, CSV, JSON, XML, HTML, Markdown, and code files (JS, CSS, Python, Java, C/C++, PHP, Ruby, Go, Rust, Swift, Kotlin, SQL, LOG). Files are read as plain text, so any text file works regardless of extension. Our <strong>word frequency analysis tool</strong> handles them all with drag-and-drop simplicity.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is there a file size limit?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">The tool handles files up to 10-20MB (several million characters), roughly 3,000-5,000 pages. Limits vary by browser—Chrome/Edge handle larger files than Safari/mobile. For 100MB+ files, use command-line tools or process in chunks. Our <strong>free online word analyzer</strong> is optimized for typical daily use cases from short emails to long-form articles.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my data secure?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely. All processing happens <strong>locally in your browser</strong>—text never uploads to servers or leaves your device. You can verify this with browser DevTools (Network tab shows no external data transfer). Works offline after loading. Ideal for confidential documents, unpublished manuscripts, or proprietary content. Privacy is built into our <strong>word frequency analyzer online</strong> architecture.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this tool free?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, completely <strong>free</strong> with no registration, usage limits, watermarks, or hidden fees. Use for personal or commercial projects without attribution. This is truly a <strong>free text frequency analyzer</strong> for everyone. Supported by unobtrusive advertising and voluntary user support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const inputStats = document.getElementById('inputStats');
+const totalWordsEl = document.getElementById('totalWords');
+const uniqueWordsEl = document.getElementById('uniqueWords');
+const avgWordLenEl = document.getElementById('avgWordLen');
+const longestWordEl = document.getElementById('longestWord');
+const longestLenEl = document.getElementById('longestLen');
+const lexicalDensityEl = document.getElementById('lexicalDensity');
+const topFrequencyEl = document.getElementById('topFrequency');
+const topWordEl = document.getElementById('topWord');
+const uniquePercentEl = document.getElementById('uniquePercent');
+const analysisStats = document.getElementById('analysisStats');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+
+// Buttons
+const sampleBtn = document.getElementById('sampleBtn');
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const exportBtn = document.getElementById('exportBtn');
+const resetBtn = document.getElementById('resetBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+// Settings
+const caseSelect = document.getElementById('caseSelect');
+const minLength = document.getElementById('minLength');
+const stopWordsSelect = document.getElementById('stopWordsSelect');
+const maxResults = document.getElementById('maxResults');
+const excludeNumbers = document.getElementById('excludeNumbers');
+const excludeSpecial = document.getElementById('excludeSpecial');
+const showPercentages = document.getElementById('showPercentages');
+
+// Tabs
+const methodBtns = document.querySelectorAll('.method-btn');
+const tabContents = document.querySelectorAll('.tab-content');
+let currentTab = 'frequency';
+
+// N-gram tabs
+const ngramTabs = document.querySelectorAll('.ngram-tab');
+let currentNgram = 1;
+
+// Data storage
+let wordData = [];
+let ngramData = {};
+let analysisResults = null;
+
+// Stop words lists
+const basicStopWords = new Set(['the', 'be', 'to', 'of', 'and', 'a', 'in', 'that', 'have', 'i', 'it', 'for', 'not', 'on', 'with', 'he', 'as', 'you', 'do', 'at', 'this', 'but', 'his', 'by', 'from', 'they', 'we', 'say', 'her', 'she', 'or', 'an', 'will', 'my', 'one', 'all', 'would', 'there', 'their', 'what', 'so', 'up', 'out', 'if', 'about', 'who', 'get', 'which', 'go', 'me', 'when', 'make', 'can', 'like', 'time', 'no', 'just', 'him', 'know', 'take', 'people', 'into', 'year', 'your', 'good', 'some', 'could', 'them', 'see', 'other', 'than', 'then', 'now', 'look', 'only', 'come', 'its', 'over', 'think', 'also', 'back', 'after', 'use', 'two', 'how', 'our', 'work', 'first', 'well', 'way', 'even', 'new', 'want', 'because', 'any', 'these', 'give', 'day', 'most', 'us', 'is', 'was', 'are', 'were', 'been', 'has', 'had', 'did', 'does', 'doing', 'should', 'would', 'could', 'may', 'might', 'must', 'shall', 'need', 'dare', 'ought', 'used', 'able']);
+
+const extendedStopWords = new Set([...basicStopWords, 'should', 'would', 'could', 'may', 'might', 'must', 'shall', 'can', 'need', 'dare', 'ought', 'used', 'able', 'about', 'above', 'across', 'after', 'against', 'along', 'among', 'around', 'at', 'before', 'behind', 'below', 'beneath', 'beside', 'between', 'beyond', 'but', 'by', 'concerning', 'despite', 'down', 'during', 'except', 'following', 'for', 'from', 'in', 'inside', 'into', 'like', 'near', 'of', 'off', 'on', 'onto', 'out', 'outside', 'over', 'past', 'regarding', 'round', 'since', 'through', 'throughout', 'till', 'to', 'toward', 'under', 'underneath', 'until', 'up', 'upon', 'with', 'within', 'without', 'very', 'really', 'quite', 'rather', 'pretty', 'fairly', 'too', 'so', 'just', 'enough', 'still', 'already', 'yet', 'almost', 'even', 'only', 'merely', 'simply', 'completely', 'absolutely', 'definitely', 'certainly', 'probably', 'possibly', 'perhaps', 'maybe', 'actually', 'clearly', 'obviously', 'apparently', 'evidently']);
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Update input stats
+function updateInputStats() {
+  const text = inputText.value;
+  const chars = text.length;
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+  const lines = text === '' ? 0 : text.split('\n').length;
+  inputStats.textContent = `Chars: ${chars} | Words: ${words} | Lines: ${lines}`;
+}
+
+// Debounce function
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Tab switching
+methodBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    methodBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentTab = btn.dataset.tab;
+    
+    tabContents.forEach(content => content.classList.remove('active'));
+    document.getElementById('tab' + currentTab.charAt(0).toUpperCase() + currentTab.slice(1)).classList.add('active');
+    
+    if (currentTab === 'density') {
+      displayNgrams();
+    } else if (currentTab === 'length') {
+      displayByLength();
+    } else {
+      displayFrequency();
+    }
+  });
+});
+
+// N-gram tab switching
+ngramTabs.forEach(btn => {
+  btn.addEventListener('click', () => {
+    ngramTabs.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentNgram = parseInt(btn.dataset.ngram);
+    displayNgrams();
+  });
+});
+
+// Generate n-grams from text
+function generateNgrams(text, n) {
+  const words = text.toLowerCase()
+    .replace(/[^\w\s]/g, ' ')
+    .split(/\s+/)
+    .filter(w => w.length > 0 && (n === 1 ? !stopWordsSelect.value === 'none' || !getStopWords().has(w) : true));
+  
+  const ngrams = {};
+  
+  for (let i = 0; i <= words.length - n; i++) {
+    const ngram = words.slice(i, i + n).join(' ');
+    
+    // Skip if contains only stop words for n > 1
+    if (n > 1) {
+      const ngramWords = ngram.split(' ');
+      const meaningfulWords = ngramWords.filter(w => !getStopWords().has(w));
+      if (meaningfulWords.length === 0) continue;
+    }
+    
+    ngrams[ngram] = (ngrams[ngram] || 0) + 1;
+  }
+  
+  return ngrams;
+}
+
+function getStopWords() {
+  const mode = stopWordsSelect.value;
+  if (mode === 'basic') return basicStopWords;
+  if (mode === 'extended') return extendedStopWords;
+  return new Set();
+}
+
+// Main analysis function
+function analyzeText() {
+  const startTime = performance.now();
+  const text = inputText.value;
+  
+  if (!text.trim()) {
+    resetAnalysis();
+    return;
+  }
+  
+  // Get settings
+  const caseSensitive = caseSelect.value === 'sensitive';
+  const minLen = parseInt(minLength.value) || 1;
+  const stopWordsSet = getStopWords();
+  const excludeNums = excludeNumbers.checked;
+  const excludeSpec = excludeSpecial.checked;
+  
+  // Tokenize
+  let tokens;
+  if (excludeSpec) {
+    tokens = text.toLowerCase().match(/\b[\w']+\b/g) || [];
+  } else {
+    tokens = text.split(/\s+/).filter(t => t.length > 0);
+  }
+  
+  const wordCounts = new Map();
+  let totalWordCount = 0;
+  let totalLength = 0;
+  let longestWord = '';
+  
+  tokens.forEach(token => {
+    let word = token;
+    
+    if (!caseSensitive) {
+      word = word.toLowerCase();
+    }
+    
+    if (word.length < minLen) return;
+    if (excludeNums && /^\d+$/.test(word)) return;
+    if (stopWordsSet.has(word.toLowerCase())) return;
+    
+    wordCounts.set(word, (wordCounts.get(word) || 0) + 1);
+    totalWordCount++;
+    totalLength += word.length;
+    
+    if (word.length > longestWord.length) {
+      longestWord = word;
+    }
+  });
+  
+  // Convert to array and sort
+  wordData = Array.from(wordCounts.entries()).map(([word, count]) => ({
+    word,
+    count,
+    length: word.length,
+    percentage: (count / totalWordCount * 100).toFixed(2)
+  }));
+  
+  wordData.sort((a, b) => b.count - a.count);
+  
+  // Generate n-grams
+  for (let i = 1; i <= 5; i++) {
+    ngramData[i] = generateNgrams(text, i);
+  }
+  
+  // Calculate lexical density
+  const lexicalDensity = totalWordCount > 0 ? ((wordData.length / totalWordCount) * 100).toFixed(1) : 0;
+  
+  // Store results
+  analysisResults = {
+    totalWords: totalWordCount,
+    uniqueWords: wordData.length,
+    avgLength: totalWordCount > 0 ? (totalLength / totalWordCount).toFixed(1) : 0,
+    longestWord: longestWord,
+    longestLength: longestWord.length,
+    lexicalDensity: lexicalDensity,
+    topWord: wordData.length > 0 ? wordData[0] : null,
+    processingTime: (performance.now() - startTime).toFixed(1)
+  };
+  
+  // Update display
+  updateStatsDisplay();
+  displayFrequency();
+  
+  if (currentTab === 'density') displayNgrams();
+  if (currentTab === 'length') displayByLength();
+}
+
+function updateStatsDisplay() {
+  if (!analysisResults) return;
+  
+  totalWordsEl.textContent = analysisResults.totalWords.toLocaleString();
+  uniqueWordsEl.textContent = analysisResults.uniqueWords.toLocaleString();
+  avgWordLenEl.textContent = analysisResults.avgLength;
+  longestWordEl.textContent = analysisResults.longestWord || '-';
+  longestLenEl.textContent = analysisResults.longestLength + ' chars';
+  lexicalDensityEl.textContent = analysisResults.lexicalDensity + '%';
+  
+  if (analysisResults.topWord) {
+    topFrequencyEl.textContent = analysisResults.topWord.count;
+    topWordEl.textContent = analysisResults.topWord.word;
+  } else {
+    topFrequencyEl.textContent = '0';
+    topWordEl.textContent = '-';
+  }
+  
+  const uniquePercent = analysisResults.totalWords > 0 ? 
+    ((analysisResults.uniqueWords / analysisResults.totalWords) * 100).toFixed(1) : 0;
+  uniquePercentEl.textContent = uniquePercent + '% unique';
+  
+  analysisStats.textContent = `Analyzed in ${analysisResults.processingTime}ms`;
+  
+  // Update progress bar
+  const progressTotal = document.getElementById('progressTotal');
+  if (progressTotal) {
+    const maxExpected = 10000; // Expected max words for scale
+    const percentage = Math.min((analysisResults.totalWords / maxExpected) * 100, 100);
+    progressTotal.style.width = percentage + '%';
+  }
+}
+
+function displayFrequency() {
+  const container = document.getElementById('frequencyList');
+  if (!container) return;
+  
+  if (!wordData.length) {
+    container.innerHTML = '<div class="text-center text-gray-500 text-xs py-4 col-span-full">Enter text to see word frequency analysis</div>';
+    return;
+  }
+  
+  const maxRes = maxResults.value === 'all' ? wordData.length : parseInt(maxResults.value);
+  const displayData = wordData.slice(0, maxRes);
+  const maxCount = wordData[0].count;
+  
+  container.innerHTML = displayData.map((item, index) => {
+    const percentage = ((item.count / maxCount) * 100).toFixed(0);
+    return `
+      <div class="ngram-item">
+        <div class="flex items-center gap-2">
+          <span class="text-xs text-gray-500 w-5">${index + 1}.</span>
+          <span class="text-sm text-gray-300">${escapeHtml(item.word)}</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="w-16 h-1.5 bg-white/10 rounded-full overflow-hidden">
+            <div class="bg-indigo-500/60 h-full rounded-full" style="width: ${percentage}%"></div>
+          </div>
+          <span class="text-xs text-indigo-400 font-mono w-10 text-right">${item.count}</span>
+        </div>
+      </div>
+    `;
+  }).join('');
+  
+  if (wordData.length > maxRes) {
+    container.innerHTML += `<div class="text-center text-gray-500 text-xs py-2 col-span-full">... and ${wordData.length - maxRes} more words</div>`;
+  }
+}
+
+function displayNgrams() {
+  const container = document.getElementById('ngramList');
+  const totalEl = document.getElementById('ngramTotal');
+  const uniqueEl = document.getElementById('ngramUnique');
+  const topEl = document.getElementById('ngramTop');
+  
+  if (!container) return;
+  
+  if (!ngramData[currentNgram] || Object.keys(ngramData[currentNgram]).length === 0) {
+    container.innerHTML = '<div class="text-center text-gray-500 text-xs py-4 col-span-full">Enter text to analyze keyword phrases</div>';
+    if (totalEl) totalEl.textContent = 'Total phrases: 0';
+    if (uniqueEl) uniqueEl.textContent = 'Unique: 0';
+    if (topEl) topEl.textContent = 'Most frequent: -';
+    return;
+  }
+  
+  const data = ngramData[currentNgram];
+  const sorted = Object.entries(data).sort((a, b) => b[1] - a[1]).slice(0, 20);
+  
+  if (sorted.length === 0) {
+    container.innerHTML = '<div class="text-center text-gray-500 text-xs py-4 col-span-full">No phrases found for this length</div>';
+    return;
+  }
+  
+  const maxCount = sorted[0][1];
+  const total = Object.values(data).reduce((a, b) => a + b, 0);
+  
+  if (totalEl) totalEl.textContent = `Total phrases: ${total}`;
+  if (uniqueEl) uniqueEl.textContent = `Unique: ${sorted.length}`;
+  if (topEl) topEl.textContent = `Most frequent: "${sorted[0][0]}" (${sorted[0][1]})`;
+  
+  container.innerHTML = sorted.map(([phrase, count]) => {
+    const percentage = ((count / maxCount) * 100).toFixed(0);
+    const density = ((count / total) * 100).toFixed(1);
+    return `
+      <div class="ngram-item">
+        <div class="flex-1 min-w-0">
+          <div class="text-sm text-gray-300 truncate" title="${escapeHtml(phrase)}">${escapeHtml(phrase)}</div>
+          <div class="w-full bg-white/10 rounded-full h-1 mt-1">
+            <div class="bg-emerald-500/60 h-1 rounded-full" style="width: ${percentage}%"></div>
+          </div>
+        </div>
+        <div class="text-right ml-2 flex-shrink-0">
+          <div class="text-sm font-bold text-white">${count}</div>
+          <div class="text-xs text-gray-500">${density}%</div>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function displayByLength() {
+  const container = document.getElementById('lengthList');
+  if (!container) return;
+  
+  if (!wordData.length) {
+    container.innerHTML = '<div class="text-center text-gray-500 text-xs py-4 col-span-full">Enter text to see words grouped by length</div>';
+    return;
+  }
+  
+  // Group by length
+  const byLength = {};
+  wordData.forEach(item => {
+    if (!byLength[item.length]) byLength[item.length] = [];
+    byLength[item.length].push(item);
+  });
+  
+  // Sort lengths descending
+  const lengths = Object.keys(byLength).sort((a, b) => b - a);
+  
+  let html = '';
+  lengths.forEach(length => {
+    const words = byLength[length].slice(0, 5); // Top 5 per length
+    html += `
+      <div class="ngram-item flex-col items-start">
+        <div class="flex justify-between w-full mb-1">
+          <span class="text-xs font-bold text-indigo-400">${length} letters</span>
+          <span class="text-xs text-gray-500">${byLength[length].length} words</span>
+        </div>
+        <div class="text-xs text-gray-300">
+          ${words.map(w => escapeHtml(w.word)).join(', ')}
+          ${byLength[length].length > 5 ? '...' : ''}
+        </div>
+      </div>
+    `;
+  });
+  
+  container.innerHTML = html;
+}
+
+function resetAnalysis() {
+  wordData = [];
+  ngramData = {};
+  analysisResults = null;
+  
+  totalWordsEl.textContent = '0';
+  uniqueWordsEl.textContent = '0';
+  avgWordLenEl.textContent = '0';
+  longestWordEl.textContent = '-';
+  longestLenEl.textContent = '0 chars';
+  lexicalDensityEl.textContent = '0%';
+  topFrequencyEl.textContent = '0';
+  topWordEl.textContent = '-';
+  uniquePercentEl.textContent = '0% unique';
+  analysisStats.textContent = 'Processing: 0ms';
+  
+  document.getElementById('progressTotal').style.width = '0%';
+  
+  document.getElementById('frequencyList').innerHTML = '<div class="text-center text-gray-500 text-xs py-4 col-span-full">Enter text to see word frequency analysis</div>';
+  document.getElementById('ngramList').innerHTML = '<div class="text-center text-gray-500 text-xs py-4 col-span-full">Enter text to analyze keyword phrases</div>';
+  document.getElementById('lengthList').innerHTML = '<div class="text-center text-gray-500 text-xs py-4 col-span-full">Enter text to see words grouped by length</div>';
+  
+  document.getElementById('ngramTotal').textContent = 'Total phrases: 0';
+  document.getElementById('ngramUnique').textContent = 'Unique: 0';
+  document.getElementById('ngramTop').textContent = 'Most frequent: -';
+}
+
+// Debounced analysis
+const debouncedAnalyze = debounce(analyzeText, 300);
+
+// Drag and drop handlers
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  if (!file.type.match('text.*') && !file.name.match(/\.(txt|csv|json|xml|html?|md|js|css|py|java|cpp|c|php|rb|go|rs|swift|kt|sql|log)$/i)) {
+    alert('Please upload a text file');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    updateInputStats();
+    analyzeText();
+  };
+  reader.readAsText(file);
+}
+
+// Load sample text
+function loadSampleText() {
+  const sampleText = `The quick brown fox jumps over the lazy dog. This pangram contains every letter of the English alphabet at least once.
+
+Word frequency analysis helps identify patterns in text. By analyzing which words appear most often, writers can improve their content for better readability and SEO performance.
+
+Search engines use sophisticated algorithms to understand content. Keyword density and phrase usage play important roles in how pages rank for specific search queries. Modern SEO requires natural language that flows well while still signaling topical relevance.
+
+Effective writing balances creativity with data-driven insights. Text analysis tools provide the metrics needed to optimize content without losing authentic voice.`;
+  
+  inputText.value = sampleText;
+  updateInputStats();
+  analyzeText();
+}
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    updateInputStats();
+    analyzeText();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  updateInputStats();
+  resetAnalysis();
+  inputText.focus();
+}
+
+// Export CSV
+function exportCSV() {
+  if (!wordData.length) {
+    alert('Please enter text to export');
+    return;
+  }
+  
+  let csv = 'Word,Count,Percentage,Length\n';
+  wordData.forEach(item => {
+    csv += `"${item.word}",${item.count},${item.percentage}%,${item.length}\n`;
+  });
+  
+  // Add n-gram data
+  csv += '\nN-gram Analysis\n';
+  for (let i = 1; i <= 5; i++) {
+    if (ngramData[i] && Object.keys(ngramData[i]).length > 0) {
+      csv += `\n${i}-Word Phrases\nPhrase,Count\n`;
+      const sorted = Object.entries(ngramData[i]).sort((a, b) => b[1] - a[1]);
+      sorted.forEach(([phrase, count]) => {
+        csv += `"${phrase}",${count}\n`;
+      });
+    }
+  }
+  
+  const blob = new Blob([csv], { type: 'text/csv' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'word-frequency-analysis.csv';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Reset all
+function resetAll() {
+  inputText.value = '';
+  updateInputStats();
+  resetAnalysis();
+  caseSelect.value = 'insensitive';
+  minLength.value = '2';
+  stopWordsSelect.value = 'none';
+  maxResults.value = '50';
+  excludeNumbers.checked = false;
+  excludeSpecial.checked = true;
+  showPercentages.checked = true;
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Escape HTML
+function escapeHtml(text) {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
+}
+
+// Event listeners
+inputText.addEventListener('input', () => {
+  updateInputStats();
+  debouncedAnalyze();
+});
+
+// Settings change listeners
+[caseSelect, minLength, stopWordsSelect, maxResults, excludeNumbers, excludeSpecial, showPercentages].forEach(el => {
+  el.addEventListener('change', analyzeText);
+});
+
+sampleBtn.addEventListener('click', loadSampleText);
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+exportBtn.addEventListener('click', exportCSV);
+resetBtn.addEventListener('click', resetAll);
+
+// Initialize
+updateInputStats();
+</script>
+</body>
+</html>

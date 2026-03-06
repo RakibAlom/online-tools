@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Duplicate Word Finder - Free Online Text Analysis Tool</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online duplicate word finder tool. Find, highlight, and remove repeated words in your text. Analyze word frequency and clean up redundant content instantly. No registration required." />
+  <meta name="keywords" content="free duplicate word finder online, online duplicate word finder free, duplicate word finder tool, free duplicate word checker online, online text duplicate word finder, free online duplicate words tool, duplicate word remover online, free duplicate word analyzer, online duplicate word detector free, free duplicate word search tool, duplicate word highlighter online, free text duplicate word finder, online repeated word finder free, free repeated word checker, duplicate word counter online free, online duplicate word tool for writers, free online text analysis duplicate words, duplicate word scanner online free, free duplicate word extraction tool, online duplicate term finder free, remove duplicate words online free, duplicate word finder and remover, free repeated term finder online, online duplicated words identification free" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/duplicate-word-finder/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/duplicate-word-finder/" />
+  <meta property="og:title" content="Duplicate Word Finder - Free Online Text Analysis Tool" />
+  <meta property="og:description" content="Find, highlight, and remove repeated words in your text. Analyze word frequency and clean up redundant content instantly with our free online tool." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/duplicate-word-finder/" />
+  <meta name="twitter:title" content="Duplicate Word Finder - Free Online Text Analysis Tool" />
+  <meta name="twitter:description" content="Find, highlight, and remove repeated words in your text. Analyze word frequency and clean up redundant content instantly with our free online tool." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .duplicate-highlight {
+      background: rgba(239, 68, 68, 0.3);
+      border-bottom: 2px solid rgba(239, 68, 68, 0.8);
+      padding: 0 2px;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    
+    .duplicate-highlight:hover {
+      background: rgba(239, 68, 68, 0.5);
+    }
+
+    .duplicate-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.25rem 0.5rem;
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      border-radius: 0.375rem;
+      font-size: 0.75rem;
+      color: #f87171;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    
+    .duplicate-tag:hover {
+      background: rgba(239, 68, 68, 0.25);
+      border-color: rgba(239, 68, 68, 0.5);
+    }
+
+    .duplicate-tag .count {
+      background: rgba(239, 68, 68, 0.3);
+      padding: 0.125rem 0.375rem;
+      border-radius: 0.25rem;
+      font-size: 0.625rem;
+      font-weight: 600;
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+
+    .stat-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 0.5rem;
+      padding: 0.75rem;
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.625rem;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-top: 0.25rem;
+    }
+
+    .highlighted-text {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+    }
+
+    .position-marker {
+      display: inline-block;
+      background: rgba(99, 102, 241, 0.3);
+      color: #818cf8;
+      font-size: 0.625rem;
+      padding: 0 3px;
+      border-radius: 2px;
+      margin-left: 2px;
+      vertical-align: super;
+      cursor: help;
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 15h20M10 25h20M15 10v20M25 10v20" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Duplicate Word Finder</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Duplicate Word Finder
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Text Analysis Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-detection enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Input Text
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Type or paste text here... Or drag & drop a file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.csv,.md,.json,.xml,.html,.js,.css,.py,.java,.cpp,.c,.php,.rb,.go,.rs,.swift,.kt,.sql,.log" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Chars: 0 | Words: 0 | Lines: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Output -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Duplicate Analysis <span id="duplicateCount" class="text-gray-500 font-normal ml-1 hidden">(0)</span>
+            </label>
+            <div class="flex gap-1">
+              <button id="removeDuplicatesBtn" class="compact-btn rounded-md bg-indigo-500/10 hover:bg-indigo-500/20 border border-indigo-500/20 text-indigo-400 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Remove Dups
+              </button>
+              <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                Copy
+              </button>
+              <button id="downloadBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Download
+              </button>
+            </div>
+          </div>
+          
+          <div id="outputContainer" class="w-full h-48 lg:h-64 p-3 rounded-md glass-input overflow-y-auto">
+            <div id="highlightedOutput" class="highlighted-text text-xs text-gray-400" placeholder="Duplicate words will be highlighted here automatically...">Duplicate words will be highlighted here automatically...</div>
+          </div>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="outputStats">Duplicates: 0 | Unique: 0 | Total: 0</span>
+            <span id="processingTime" class="text-gray-600"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-3">
+        
+        <!-- Stats Cards -->
+        <div class="grid grid-cols-4 gap-2 mb-3">
+          <div class="stat-card">
+            <div class="stat-value" id="statTotal">0</div>
+            <div class="stat-label">Total Words</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="statUnique">0</div>
+            <div class="stat-label">Unique</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value text-red-400" id="statDuplicates">0</div>
+            <div class="stat-label">Duplicates</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="statRedundancy">0%</div>
+            <div class="stat-label">Redundancy</div>
+          </div>
+        </div>
+
+        <!-- Options Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+          <!-- Case Sensitivity -->
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Case Handling</label>
+            <select id="caseSelect" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="insensitive">Case Insensitive</option>
+              <option value="sensitive">Case Sensitive</option>
+            </select>
+          </div>
+
+          <!-- Detection Mode -->
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Detection Mode</label>
+            <select id="modeSelect" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="consecutive">Consecutive Only</option>
+              <option value="global">All Duplicates</option>
+              <option value="proximity">Within 50 Words</option>
+            </select>
+          </div>
+
+          <!-- Min Word Length -->
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Min Word Length</label>
+            <input type="number" id="minLength" min="1" value="2" class="w-full px-2 py-1.5 rounded-md glass-input text-xs" placeholder="Min chars">
+          </div>
+
+          <!-- Highlight Style -->
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Highlight Style</label>
+            <select id="highlightStyle" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="background">Red Background</option>
+              <option value="underline">Underline</option>
+              <option value="bold">Bold Text</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Advanced Options -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+          <label class="flex items-center gap-1.5 text-xs text-gray-400 bg-white/5 p-2 rounded-md border border-white/10 cursor-pointer hover:bg-white/10 transition-colors">
+            <input type="checkbox" id="ignoreCommon" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Ignore common words
+          </label>
+          
+          <label class="flex items-center gap-1.5 text-xs text-gray-400 bg-white/5 p-2 rounded-md border border-white/10 cursor-pointer hover:bg-white/10 transition-colors">
+            <input type="checkbox" id="ignoreNumbers" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Ignore numbers
+          </label>
+          
+          <label class="flex items-center gap-1.5 text-xs text-gray-400 bg-white/5 p-2 rounded-md border border-white/10 cursor-pointer hover:bg-white/10 transition-colors">
+            <input type="checkbox" id="showPositions" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Show positions
+          </label>
+          
+          <label class="flex items-center gap-1.5 text-xs text-gray-400 bg-white/5 p-2 rounded-md border border-white/10 cursor-pointer hover:bg-white/10 transition-colors">
+            <input type="checkbox" id="keepFirst" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Keep first occurrence
+          </label>
+        </div>
+
+        <!-- Duplicate Words List -->
+        <div id="duplicatesList" class="hidden">
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-xs font-medium text-gray-300">Duplicate Words Found <span class="text-gray-500 font-normal">(click to locate)</span></label>
+            <button id="exportDuplicatesBtn" class="text-xs text-indigo-400 hover:text-indigo-300 transition-colors">Export List</button>
+          </div>
+          <div id="duplicatesCloud" class="max-h-32 overflow-y-auto p-3 bg-black/20 rounded-md border border-white/10 flex flex-wrap gap-1.5 content-start">
+            <!-- Duplicate words will be inserted here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Duplicate Word Finder?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Visual Highlight</h3>
+          <p class="text-gray-400 text-xs">Instantly see duplicates highlighted in text</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Auto-Remove</h3>
+          <p class="text-gray-400 text-xs">One-click duplicate removal</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Drag & Drop</h3>
+          <p class="text-gray-400 text-xs">Upload text files instantly</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based, no uploads</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Stats</h3>
+          <p class="text-gray-400 text-xs">Redundancy percentage & counts</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration required</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Input Text</h3>
+          <p class="text-gray-400 text-xs">Type, paste, or drop a file. Analysis happens automatically.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Configure</h3>
+          <p class="text-gray-400 text-xs">Set detection mode, case sensitivity, and filters.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Review</h3>
+          <p class="text-gray-400 text-xs">See highlighted duplicates and redundancy statistics.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Clean</h3>
+          <p class="text-gray-400 text-xs">Remove duplicates with one click or export cleaned text.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Duplicate Word Detection: Eliminating Redundancy for Cleaner, More Professional Writing</h2>
+        
+        <p><strong>Duplicate word detection</strong> is an essential technique in modern writing, editing, and content optimization that helps identify and eliminate repetitive language patterns that can diminish the quality and impact of your text. Whether you're a professional writer polishing a manuscript, a student revising an essay, a content creator optimizing blog posts, or a business professional crafting important communications, understanding how to effectively find and remove duplicate words is crucial for producing clear, engaging, and professional content. Our <strong>free duplicate word finder online</strong> solution provides instant analysis and cleanup capabilities that transform repetitive text into polished prose.</p>
+
+        <h2>Understanding Duplicate Words and Their Impact on Writing Quality</h2>
+        
+        <p><strong>Duplicate words</strong> occur when the same word appears multiple times within a text, either immediately adjacent to each other (consecutive duplicates like "the the") or scattered throughout paragraphs (distributed duplicates). While some repetition is natural and even necessary for clarity and emphasis, excessive duplication creates several problems: it makes writing feel monotonous and uninspired, reduces reader engagement, signals poor editing or rushed composition, and can even impact SEO performance by triggering spam filters or readability penalties.</p>
+
+        <p>The significance of using an <strong>online duplicate word finder free</strong> tool extends beyond simple error correction. Repetitive language patterns often indicate deeper writing issues—limited vocabulary, unclear thinking, or insufficient revision. By systematically identifying these patterns, writers can improve their craft, expand their lexical range, and develop more sophisticated expression. Our <strong>duplicate word finder tool</strong> serves as both a practical editing instrument and a learning aid for developing better writing habits.</p>
+
+        <h2>Types of Duplicate Words and Detection Methods</h2>
+
+        <h3>Consecutive Duplicates</h3>
+        
+        <p>The most obvious and problematic type of duplication involves identical words appearing immediately next to each other: "the the," "and and," "to to." These typically result from typing errors, copy-paste mistakes, or incomplete revisions where words were intended to be changed but weren't fully replaced. Consecutive duplicates are universally considered errors in published writing and should always be eliminated. Our <strong>free duplicate word checker online</strong> immediately flags these obvious errors with prominent highlighting, making them impossible to miss during editing.</p>
+
+        <h3>Proximity Duplicates</h3>
+        
+        <p>More subtle and stylistically significant are words repeated within close proximity—within the same sentence, paragraph, or nearby paragraphs. While not technically errors, proximity duplicates create a "echo effect" that readers subconsciously notice and find distracting. For example: "The <strong>important</strong> decision was <strong>important</strong> because..." or "We need to <strong>focus</strong> on our <strong>focus</strong> groups." An effective <strong>online text duplicate word finder</strong> detects these patterns and helps writers vary their vocabulary using synonyms or restructuring.</p>
+
+        <h3>Global Duplicates and Keyword Stuffing</h3>
+        
+        <p>At the document level, <strong>free online duplicate words tool</strong> analysis reveals whether specific terms are overused throughout an entire piece. This is particularly important for SEO content, where "keyword stuffing"—excessive repetition of target terms—can trigger search engine penalties. It's also crucial for academic writing, where varied terminology demonstrates subject mastery, and for creative writing, where repetitive word choice suggests limited imagination. Our <strong>duplicate word analyzer</strong> provides comprehensive statistics showing which words appear most frequently, helping authors achieve optimal vocabulary distribution.</p>
+
+        <h2>How Duplicate Word Detection Technology Works</h2>
+
+        <h3>Tokenization and Normalization</h3>
+        
+        <p>Professional <strong>online duplicate word detector free</strong> tools begin with tokenization—breaking text into individual words by splitting on whitespace and punctuation. This process must handle various edge cases: contractions ("don't" as one word or two?), hyphenated compounds, possessive forms, and non-standard spacing. Normalization follows, converting words to consistent case (lowercase or uppercase) so "Word" and "word" are recognized as duplicates. Our tool offers configurable case sensitivity for situations where proper nouns should be treated distinctly from common words.</p>
+
+        <h3>Pattern Matching Algorithms</h3>
+        
+        <p>Detection algorithms vary by scope. Consecutive duplicate detection uses sliding window comparison—checking each word against its immediate neighbors. Proximity detection maintains a history of recently seen words (typically 20-50 words back) and flags repeats within that window. Global frequency analysis uses hash maps or dictionaries to count occurrences across entire documents. Advanced <strong>free duplicate word search tool</strong> implementations like ours combine all three approaches, providing comprehensive coverage of different duplication types.</p>
+
+        <h3>Intelligent Filtering</h3>
+        
+        <p>Not all repetition is problematic. Common words (the, and, is, to) naturally appear frequently and filtering them prevents overwhelming users with false positives. Short words (a, I, of) often duplicate legitimately and can be excluded based on length thresholds. Numbers, dates, and technical terms may need to repeat for clarity. Our <strong>duplicate word highlighter online</strong> includes smart filtering options that focus attention on content words—nouns, verbs, adjectives, and adverbs—where repetition actually impacts writing quality.</p>
+
+        <h2>Professional Applications of Duplicate Word Analysis</h2>
+
+        <h3>Content Editing and Proofreading</h3>
+        
+        <p>Professional editors rely on <strong>free text duplicate word finder</strong> tools as a first-pass screening step. Before addressing complex issues like structure, pacing, or argumentation, editors clean up mechanical repetition that distracts from content evaluation. This systematic approach ensures no embarrassing "the the" errors reach publication while identifying broader lexical redundancy patterns that authors should address. The <strong>online repeated word finder free</strong> capability transforms editing from subjective art into partially automated science, increasing consistency and reducing oversight.</p>
+
+        <h3>Academic Writing and Research</h3>
+        
+        <p>Academic writers face strict standards for originality and precision. Dissertation committees and journal reviewers penalize repetitive language as evidence of insufficient scholarly development. Students learning academic conventions use <strong>free repeated word checker</strong> tools to identify unconscious habits—overusing "however," "therefore," "significant," or discipline-specific jargon. Researchers preparing manuscripts ensure key terminology is used consistently but not repetitively, striking the balance between clarity and variety that defines professional academic prose.</p>
+
+        <h3>SEO Content Optimization</h3>
+        
+        <p>Search engine optimization walks a fine line between including target keywords sufficiently for ranking and overusing them to the point of triggering spam penalties. Modern algorithms like Google's BERT and MUM explicitly penalize keyword stuffing while rewarding natural language. Content marketers use <strong>duplicate word counter online free</strong> analysis to verify their keyword density stays within optimal ranges (typically 1-2% for primary terms) while ensuring related semantic terms provide variety. This data-driven approach removes guesswork from SEO writing.</p>
+
+        <h3>Creative Writing and Literature</h3>
+        
+        <p>Creative writers employ <strong>online duplicate word tool for writers</strong> capabilities for different purposes than technical authors. Poets check that sonic patterns (alliteration, assonance) don't become excessive. Fiction writers ensure character names, place names, and key terms don't appear so frequently they become distracting. Dialogue writers verify that speech patterns feel natural without being repetitively realistic (real conversation contains massive duplication that reads poorly in print). The tool serves creativity by handling mechanical checking, freeing mental energy for artistic decisions.</p>
+
+        <h3>Business and Professional Communications</h3>
+        
+        <p>Corporate communications—emails, reports, proposals, presentations—benefit enormously from <strong>free online text analysis duplicate words</strong> screening. Repetitive language in business contexts signals carelessness, undermining credibility. Proposal writers ensure key differentiators are highlighted without becoming monotonous. Executives reviewing speeches eliminate verbal tics and filler patterns. Marketing teams polish copy to be punchy and varied. The professional impression created by clean, non-repetitive writing directly impacts business outcomes.</p>
+
+        <h2>Advanced Features and Configuration Options</h2>
+
+        <h3>Detection Mode Selection</h3>
+        
+        <p>Different editing scenarios require different detection scopes. Consecutive mode finds immediate duplicates ("the the") for proofreading final drafts. Proximity mode identifies words repeated within sentences or paragraphs for stylistic revision. Global mode reveals document-wide frequency patterns for comprehensive vocabulary assessment. Our <strong>duplicate word scanner online free</strong> provides all three modes, allowing users to match detection sensitivity to their current editing phase.</p>
+
+        <h3>Case Sensitivity and Normalization</h3>
+        
+        <p>Case handling significantly impacts duplicate detection results. Case-insensitive mode treats "Apple," "apple," and "APPLE" as identical—appropriate for general writing analysis. Case-sensitive mode keeps them distinct, crucial for texts containing proper nouns where "John" and "john" represent different entities. Smart case mode (offered in advanced tools) uses natural language processing to distinguish sentence-case words from proper nouns automatically. Our <strong>free duplicate word extraction tool</strong> provides flexible case options for different content types.</p>
+
+        <h3>Stopword Filtering and Custom Dictionaries</h3>
+        
+        <p>Stopwords—extremely common words like articles, prepositions, and pronouns—naturally duplicate frequently without indicating writing problems. Effective <strong>online duplicate term finder free</strong> tools filter these by default, focusing attention on content words where repetition matters. Advanced users can customize stopword lists, adding domain-specific terms that legitimately repeat (technical jargon, product names) or removing filtered words that are actually important in specific contexts (poetry often uses "and" and "the" intentionally for rhythm).</p>
+
+        <h2>Best Practices for Eliminating Duplicate Words</h2>
+
+        <h3>Systematic Revision Workflow</h3>
+        
+        <p>Effective revision follows a systematic sequence: first, run <strong>remove duplicate words online free</strong> detection to identify mechanical errors and obvious repetition; second, address consecutive duplicates immediately as these are always errors; third, review proximity duplicates and decide whether to replace with synonyms, restructure sentences, or keep for emphasis; fourth, examine global frequency data to identify overused terms throughout the document; finally, read the cleaned text aloud to catch any remaining awkward patterns automated tools missed.</p>
+
+        <h3>Synonym Selection and Vocabulary Expansion</h3>
+        
+        <p>When duplicates are identified, the solution isn't always simple replacement. Effective synonym selection considers: connotation (is the alternative too formal/casual?), precision (does it mean exactly the same thing?), rhythm (does it fit the sentence's cadence?), and reader familiarity (will the audience understand it?). Thesaurus tools help, but human judgment ensures substitutions enhance rather than confuse meaning. Our <strong>duplicate word finder and remover</strong> highlights problems; your expertise solves them elegantly.</p>
+
+        <h3>Maintaining Voice and Intentionality</h3>
+        
+        <p>Not all repetition should be eliminated. Strategic repetition creates emphasis, rhythm, and rhetorical power—"We shall fight on the beaches, we shall fight on the landing grounds..." Deliberate anaphora (repetition at sentence beginnings) and epistrophe (repetition at endings) are legitimate literary devices. The <strong>free repeated term finder online</strong> tool identifies patterns; you decide which serve intentional purposes and which reflect lazy writing. This human-AI collaboration produces better results than either alone.</p>
+
+        <h2>Comparing Duplicate Word Detection Approaches</h2>
+
+        <h3>Manual Proofreading vs. Automated Tools</h3>
+        
+        <p>Manual proofreading catches duplicates through careful reading, but suffers from inevitable human limitations: fatigue causes missed instances after extended focus, familiarity with content leads to skimming, and cognitive biases make us see what we expect rather than what's there. Studies show professional proofreaders catch only 60-70% of errors in unfamiliar text. Automated <strong>online duplicated words identification free</strong> tools catch 100% of pattern-matching duplicates instantly, without fatigue or bias. The optimal approach combines both: automated detection for comprehensive identification, human judgment for contextual decisions.</p>
+
+        <h3>Built-in Software vs. Specialized Tools</h3>
+        
+        <p>Word processors like Microsoft Word and Google Docs include basic grammar checking that catches some duplicates, but these features are limited: they typically find only consecutive duplicates, miss proximity repetition, provide no frequency statistics, and offer limited customization. Dedicated <strong>free duplicate word finder online</strong> tools provide comprehensive detection modes, detailed analytics, exportable reports, and flexible configuration. For serious writing work, specialized tools deliver significantly better results than general-purpose software.</p>
+
+        <h2>The Future of Writing Enhancement Technology</h2>
+
+        <p>Artificial intelligence is transforming <strong>duplicate word finder tool</strong> capabilities beyond simple string matching. Contextual AI understands semantic similarity—flagging "car" and "automobile" as conceptual duplicates even when spelled differently. Style analysis learns individual author patterns, distinguishing between harmful repetition and characteristic voice. Predictive suggestions offer contextually appropriate synonyms rather than just highlighting problems. Real-time coaching provides feedback as you write rather than requiring post-draft analysis. Our platform continuously integrates these innovations, ensuring our <strong>online duplicate word finder free</strong> remains at the cutting edge of writing technology.</p>
+
+        <h2>Conclusion: Master Clean Writing with Professional Duplicate Detection</h2>
+
+        <p><strong>Duplicate word detection</strong> represents a fundamental pillar of professional writing quality. From eliminating embarrassing consecutive errors to refining sophisticated vocabulary distribution, the ability to systematically identify and address repetition separates amateur writing from polished prose. Whether you're crafting business communications, academic papers, creative fiction, or web content, mastering duplicate elimination will significantly improve your writing's clarity, engagement, and impact.</p>
+
+        <p>Our <strong>free duplicate word finder online</strong> provides all the capabilities you need for comprehensive repetition analysis. With multiple detection modes (consecutive, proximity, global), configurable case sensitivity, intelligent stopword filtering, visual highlighting, one-click removal, and detailed redundancy statistics, this tool serves everyone from casual writers to professional editors. The browser-based architecture ensures complete privacy—your text never leaves your device—while the intuitive interface requires no learning curve. Whether you need to <strong>find duplicate words online free</strong> for a quick email check, perform deep <strong>duplicate word analysis</strong> on a manuscript, or systematically <strong>remove duplicate words online free</strong> from content archives, our <strong>duplicate word finder tool</strong> delivers professional results instantly. Stop letting repetition undermine your writing—start using our advanced detection technology today and experience the confidence of truly clean, professional prose.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool find duplicates automatically as I type?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>free duplicate word finder online</strong> features <strong>automatic real-time detection</strong>. As you type or paste text, the tool instantly analyzes for duplicates and highlights them in red. We use intelligent debouncing to ensure smooth performance. The "Auto-detection enabled" indicator confirms the feature is active. All settings changes apply immediately, making this the most responsive <strong>online duplicate word finder free</strong> available.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What's the difference between "Consecutive" and "All Duplicates" modes?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Consecutive Only</strong> finds immediate duplicates like "the the" or "and and"—these are always errors. <strong>All Duplicates</strong> highlights every repeated word in your text, helping identify overused vocabulary. <strong>Within 50 Words</strong> finds duplicates that appear close together (proximity duplicates) which often create poor style. Use Consecutive for proofreading, All Duplicates for comprehensive analysis, and Proximity for stylistic editing. Our <strong>duplicate word finder tool</strong> supports all three modes.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I remove duplicates from my text?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Click the <strong>"Remove Dups"</strong> button to automatically eliminate duplicate words. The tool keeps the first occurrence of each word (unless you uncheck "Keep first occurrence") and removes subsequent duplicates. You can also click individual highlighted words to remove them manually. The cleaned text appears in the output panel and can be copied or downloaded. This makes our tool both a <strong>duplicate word finder and remover</strong> in one.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What are "common words" and why ignore them?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Common words (stopwords) like "the," "and," "is," "to" appear naturally in almost every sentence. Highlighting these would create overwhelming visual noise and distract from meaningful duplicates in your content words (nouns, verbs, adjectives). Our <strong>free duplicate word checker online</strong> filters these by default so you can focus on important repetition. Disable this filter if you need to analyze every word, such as for poetry or specific linguistic studies.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I see where duplicates appear in my text?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Enable the "Show positions" option to see small superscript numbers next to each duplicate indicating its occurrence count. The visual highlighting uses red backgrounds to make duplicates stand out clearly. You can also click any word in the "Duplicate Words Found" list to jump to its location in the text. This makes our <strong>duplicate word highlighter online</strong> perfect for detailed editing and proofreading workflows.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What file types are supported?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">All text-based files: TXT, CSV, JSON, XML, HTML, Markdown, and code files (JS, CSS, Python, Java, C/C++, PHP, Ruby, Go, Rust, Swift, Kotlin, SQL, LOG). Files are read as plain text. For Word documents (DOCX) or PDFs, copy and paste the text directly into the input area. Our <strong>online text duplicate word finder</strong> handles files up to 10-20MB efficiently in your browser.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is there a limit to how much text I can analyze?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">The tool handles text up to several million characters (roughly 3,000-5,000 pages), limited by your browser's memory. Chrome and Edge handle larger texts better than mobile browsers. For extremely large documents, consider processing in chapters or sections. The <strong>duplicate word counter online free</strong> displays real-time statistics and processing time so you can monitor performance with large documents.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my text data secure?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely. All processing happens <strong>locally in your browser</strong>—your text never uploads to our servers or leaves your device. You can verify this by checking your browser's Network tab (no data transfer occurs). The tool works offline after initial loading. This makes our <strong>free online duplicate words tool</strong> ideal for confidential documents, proprietary content, sensitive manuscripts, or any text requiring privacy protection.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I use this for languages other than English?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>online duplicate word detector free</strong> supports all Unicode text including Spanish, French, German, Chinese, Japanese, Arabic, Russian, and more. The tool properly handles accented characters, non-Latin scripts, and right-to-left languages. Note that the "ignore common words" filter is optimized for English; for other languages, you may want to disable this filter or manually review the results.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this tool completely free?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, completely <strong>free</strong> with no registration, usage limits, watermarks, or hidden fees. Use for personal or commercial projects without attribution. This is truly a <strong>free duplicate word search tool</strong> for everyone. Supported by unobtrusive advertising. All features—including multiple detection modes, auto-removal, export options, and file processing—are available without payment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const highlightedOutput = document.getElementById('highlightedOutput');
+const outputContainer = document.getElementById('outputContainer');
+const inputStats = document.getElementById('inputStats');
+const outputStats = document.getElementById('outputStats');
+const duplicateCount = document.getElementById('duplicateCount');
+const processingTime = document.getElementById('processingTime');
+const duplicatesList = document.getElementById('duplicatesList');
+const duplicatesCloud = document.getElementById('duplicatesCloud');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+
+// Stats elements
+const statTotal = document.getElementById('statTotal');
+const statUnique = document.getElementById('statUnique');
+const statDuplicates = document.getElementById('statDuplicates');
+const statRedundancy = document.getElementById('statRedundancy');
+
+// Buttons
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const removeDuplicatesBtn = document.getElementById('removeDuplicatesBtn');
+const exportDuplicatesBtn = document.getElementById('exportDuplicatesBtn');
+const resetBtn = document.getElementById('resetBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+// Options
+const caseSelect = document.getElementById('caseSelect');
+const modeSelect = document.getElementById('modeSelect');
+const minLength = document.getElementById('minLength');
+const highlightStyle = document.getElementById('highlightStyle');
+const ignoreCommon = document.getElementById('ignoreCommon');
+const ignoreNumbers = document.getElementById('ignoreNumbers');
+const showPositions = document.getElementById('showPositions');
+const keepFirst = document.getElementById('keepFirst');
+
+// Common English stopwords
+const commonWords = new Set([
+  'the','be','to','of','and','a','in','that','have','i','it','for','not','on','with','he','as','you','do','at',
+  'this','but','his','by','from','they','we','say','her','she','or','an','will','my','one','all','would','there',
+  'their','what','so','up','out','if','about','who','get','which','go','me','when','make','can','like','time','no',
+  'just','him','know','take','people','into','year','your','good','some','could','them','see','other','than','then',
+  'now','look','only','come','its','over','think','also','back','after','use','two','how','our','work','first','well',
+  'way','even','new','want','because','any','these','give','day','most','us','is','are','was','were','been','has',
+  'had','did','does','doing','done','being','am'
+]);
+
+// Analysis data storage
+let analysisData = {
+  tokens: [],
+  duplicates: new Map(),
+  totalWords: 0,
+  uniqueWords: 0,
+  duplicateCount: 0
+};
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Update input stats
+function updateInputStats() {
+  const text = inputText.value;
+  const chars = text.length;
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+  const lines = text === '' ? 0 : text.split('\n').length;
+  inputStats.textContent = `Chars: ${chars} | Words: ${words} | Lines: ${lines}`;
+}
+
+// Debounce function for performance
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Tokenize text into words with positions
+function tokenize(text) {
+  const tokens = [];
+  const regex = /\b[\w']+\b/g;
+  let match;
+  
+  while ((match = regex.exec(text)) !== null) {
+    const word = match[0];
+    const start = match.index;
+    const end = start + word.length;
+    
+    // Filter by length
+    if (word.length < parseInt(minLength.value || 2)) continue;
+    
+    // Filter numbers if enabled
+    if (ignoreNumbers.checked && /^\d+$/.test(word)) continue;
+    
+    // Filter common words if enabled
+    const normalized = caseSelect.value === 'sensitive' ? word : word.toLowerCase();
+    if (ignoreCommon.checked && commonWords.has(normalized.toLowerCase())) continue;
+    
+    tokens.push({
+      word: word,
+      normalized: normalized,
+      start: start,
+      end: end,
+      isDuplicate: false,
+      occurrence: 0
+    });
+  }
+  
+  return tokens;
+}
+
+// Find duplicates based on mode
+function findDuplicates(tokens) {
+  const mode = modeSelect.value;
+  const duplicates = new Map();
+  
+  if (mode === 'consecutive') {
+    // Find consecutive duplicates only
+    for (let i = 0; i < tokens.length - 1; i++) {
+      if (tokens[i].normalized === tokens[i + 1].normalized) {
+        tokens[i].isDuplicate = true;
+        tokens[i + 1].isDuplicate = true;
+        tokens[i].occurrence++;
+        tokens[i + 1].occurrence = tokens[i].occurrence + 1;
+        
+        const word = tokens[i].normalized;
+        if (!duplicates.has(word)) {
+          duplicates.set(word, { count: 0, positions: [] });
+        }
+        duplicates.get(word).count++;
+        duplicates.get(word).positions.push(tokens[i].start);
+      }
+    }
+  } else if (mode === 'proximity') {
+    // Find duplicates within 50 words
+    const window = 50;
+    for (let i = 0; i < tokens.length; i++) {
+      let count = 0;
+      for (let j = Math.max(0, i - window); j < Math.min(tokens.length, i + window + 1); j++) {
+        if (i !== j && tokens[i].normalized === tokens[j].normalized) {
+          count++;
+          if (count === 1) {
+            tokens[i].isDuplicate = true;
+            tokens[i].occurrence = count;
+          }
+        }
+      }
+      if (count > 0) {
+        const word = tokens[i].normalized;
+        if (!duplicates.has(word)) {
+          duplicates.set(word, { count: 0, positions: [] });
+        }
+        duplicates.get(word).count += count;
+        duplicates.get(word).positions.push(tokens[i].start);
+      }
+    }
+  } else {
+    // Global mode - find all duplicates
+    const wordCounts = new Map();
+    
+    // First pass: count occurrences
+    tokens.forEach(token => {
+      const count = wordCounts.get(token.normalized) || 0;
+      wordCounts.set(token.normalized, count + 1);
+    });
+    
+    // Second pass: mark duplicates
+    const occurrenceTracker = new Map();
+    tokens.forEach(token => {
+      const totalCount = wordCounts.get(token.normalized);
+      if (totalCount > 1) {
+        token.isDuplicate = true;
+        const occ = (occurrenceTracker.get(token.normalized) || 0) + 1;
+        token.occurrence = occ;
+        occurrenceTracker.set(token.normalized, occ);
+        
+        if (!duplicates.has(token.normalized)) {
+          duplicates.set(token.normalized, { count: 0, positions: [] });
+        }
+        duplicates.get(token.normalized).count++;
+        duplicates.get(token.normalized).positions.push(token.start);
+      }
+    });
+  }
+  
+  return duplicates;
+}
+
+// Generate highlighted HTML
+function generateHighlightedText(text, tokens) {
+  if (tokens.length === 0) return text || '<span class="text-gray-500">Duplicate words will be highlighted here automatically...</span>';
+  
+  let result = '';
+  let lastIndex = 0;
+  
+  tokens.forEach(token => {
+    // Add text before this token
+    result += escapeHtml(text.slice(lastIndex, token.start));
+    
+    // Add the token with or without highlighting
+    if (token.isDuplicate) {
+      const style = highlightStyle.value;
+      let className = 'duplicate-highlight';
+      if (style === 'underline') className = 'border-b-2 border-red-500 text-red-400';
+      if (style === 'bold') className = 'font-bold text-red-400';
+      
+      const positionMarker = showPositions.checked ? `<span class="position-marker" title="Occurrence #${token.occurrence}">${token.occurrence}</span>` : '';
+      result += `<span class="${className}" data-word="${escapeHtml(token.normalized)}" title="Duplicate: ${escapeHtml(token.normalized)}">${escapeHtml(token.word)}${positionMarker}</span>`;
+    } else {
+      result += escapeHtml(token.word);
+    }
+    
+    lastIndex = token.end;
+  });
+  
+  // Add remaining text
+  result += escapeHtml(text.slice(lastIndex));
+  
+  return result;
+}
+
+function escapeHtml(text) {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
+}
+
+// Process text and find duplicates
+function processText() {
+  const startTime = performance.now();
+  const text = inputText.value;
+  
+  if (!text.trim()) {
+    resetOutput();
+    return;
+  }
+  
+  // Tokenize
+  const tokens = tokenize(text);
+  analysisData.tokens = tokens;
+  analysisData.totalWords = tokens.length;
+  
+  // Find duplicates
+  const duplicates = findDuplicates(tokens);
+  analysisData.duplicates = duplicates;
+  analysisData.duplicateCount = duplicates.size;
+  
+  // Calculate unique words
+  const uniqueSet = new Set(tokens.map(t => t.normalized));
+  analysisData.uniqueWords = uniqueSet.size;
+  
+  const endTime = performance.now();
+  
+  // Update stats
+  const totalDupInstances = Array.from(duplicates.values()).reduce((sum, d) => sum + d.count, 0);
+  const redundancy = analysisData.totalWords > 0 ? 
+    Math.round((totalDupInstances / analysisData.totalWords) * 100) : 0;
+  
+  statTotal.textContent = analysisData.totalWords.toLocaleString();
+  statUnique.textContent = analysisData.uniqueWords.toLocaleString();
+  statDuplicates.textContent = analysisData.duplicateCount.toLocaleString();
+  statRedundancy.textContent = redundancy + '%';
+  
+  duplicateCount.textContent = `(${analysisData.duplicateCount})`;
+  duplicateCount.classList.remove('hidden');
+  
+  outputStats.textContent = `Duplicates: ${analysisData.duplicateCount} | Unique: ${analysisData.uniqueWords} | Total: ${analysisData.totalWords}`;
+  processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+  
+  // Update highlighted output
+  highlightedOutput.innerHTML = generateHighlightedText(text, tokens);
+  
+  // Update duplicates list
+  updateDuplicatesList(duplicates);
+}
+
+function resetOutput() {
+  highlightedOutput.innerHTML = '<span class="text-gray-500">Duplicate words will be highlighted here automatically...</span>';
+  outputStats.textContent = 'Duplicates: 0 | Unique: 0 | Total: 0';
+  duplicateCount.classList.add('hidden');
+  processingTime.textContent = '';
+  duplicatesList.classList.add('hidden');
+  
+  statTotal.textContent = '0';
+  statUnique.textContent = '0';
+  statDuplicates.textContent = '0';
+  statRedundancy.textContent = '0%';
+  
+  analysisData = { tokens: [], duplicates: new Map(), totalWords: 0, uniqueWords: 0, duplicateCount: 0 };
+}
+
+function updateDuplicatesList(duplicates) {
+  if (duplicates.size === 0) {
+    duplicatesList.classList.add('hidden');
+    return;
+  }
+  
+  duplicatesList.classList.remove('hidden');
+  duplicatesCloud.innerHTML = '';
+  
+  // Sort by frequency
+  const sorted = Array.from(duplicates.entries())
+    .sort((a, b) => b[1].count - a[1].count)
+    .slice(0, 100); // Limit to top 100
+  
+  sorted.forEach(([word, data]) => {
+    const tag = document.createElement('span');
+    tag.className = 'duplicate-tag';
+    tag.innerHTML = `${word}<span class="count">${data.count}</span>`;
+    tag.addEventListener('click', () => {
+      // Scroll to first occurrence
+      const firstPos = data.positions[0];
+      outputContainer.scrollTop = 0; // Simplified scroll
+    });
+    duplicatesCloud.appendChild(tag);
+  });
+}
+
+// Remove duplicates functionality
+function removeDuplicates() {
+  const text = inputText.value;
+  if (!text.trim() || analysisData.tokens.length === 0) return;
+  
+  const mode = modeSelect.value;
+  const keepFirstOccurrence = keepFirst.checked;
+  let result = '';
+  
+  if (mode === 'consecutive') {
+    // Remove consecutive duplicates
+    const tokens = analysisData.tokens;
+    let lastWord = null;
+    
+    tokens.forEach((token, index) => {
+      if (token.isDuplicate && token.normalized === lastWord) {
+        // Skip this duplicate
+        return;
+      }
+      // Add text from last end to this start
+      const prevEnd = index > 0 ? tokens[index - 1].end : 0;
+      if (index === 0 || token.start > prevEnd) {
+        result += text.slice(prevEnd, token.start);
+      }
+      result += token.word;
+      lastWord = token.normalized;
+    });
+    
+    // Add remaining text
+    const lastToken = tokens[tokens.length - 1];
+    if (lastToken) {
+      result += text.slice(lastToken.end);
+    }
+  } else {
+    // For global and proximity modes, filter based on occurrence
+    const seen = new Set();
+    const tokens = analysisData.tokens;
+    
+    tokens.forEach((token, index) => {
+      const prevEnd = index > 0 ? tokens[index - 1].end : 0;
+      if (index === 0 || token.start > prevEnd) {
+        result += text.slice(prevEnd, token.start);
+      }
+      
+      if (token.isDuplicate) {
+        if (!keepFirstOccurrence || !seen.has(token.normalized)) {
+          result += token.word;
+          seen.add(token.normalized);
+        }
+      } else {
+        result += token.word;
+      }
+    });
+    
+    const lastToken = tokens[tokens.length - 1];
+    if (lastToken) {
+      result += text.slice(lastToken.end);
+    }
+  }
+  
+  // Update input with cleaned text
+  inputText.value = result;
+  updateInputStats();
+  processText();
+}
+
+// Export duplicates list
+function exportDuplicates() {
+  if (analysisData.duplicates.size === 0) return;
+  
+  let content = 'Duplicate Word Analysis\n';
+  content += '=======================\n\n';
+  content += `Total Words: ${analysisData.totalWords}\n`;
+  content += `Unique Words: ${analysisData.uniqueWords}\n`;
+  content += `Duplicate Words: ${analysisData.duplicateCount}\n\n`;
+  content += 'Word\tCount\tPositions\n';
+  content += '----\t-----\t---------\n';
+  
+  analysisData.duplicates.forEach((data, word) => {
+    content += `${word}\t${data.count}\t${data.positions.join(', ')}\n`;
+  });
+  
+  const blob = new Blob([content], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'duplicate-words-analysis.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Event listeners for options
+[caseSelect, modeSelect, minLength, highlightStyle, ignoreCommon, ignoreNumbers, showPositions].forEach(el => {
+  el.addEventListener('change', processText);
+  if (el.type === 'number') {
+    el.addEventListener('input', debounce(processText, 300));
+  }
+});
+
+// Debounced processing for typing
+const debouncedProcess = debounce(processText, 150);
+
+// Drag and drop handlers
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  if (!file.type.match('text.*') && !file.name.match(/\.(txt|csv|json|xml|html?|md|js|css|py|java|cpp|c|php|rb|go|rs|swift|kt|sql|log)$/i)) {
+    alert('Please upload a text file');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    updateInputStats();
+    processText();
+  };
+  reader.readAsText(file);
+}
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    updateInputStats();
+    processText();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  updateInputStats();
+  resetOutput();
+  inputText.focus();
+}
+
+// Copy output
+async function copyOutput() {
+  const text = inputText.value;
+  if (!text.trim()) return;
+  
+  try {
+    await navigator.clipboard.writeText(text);
+    const originalText = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalText;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+}
+
+// Download output
+function downloadOutput() {
+  const text = inputText.value;
+  if (!text.trim()) return;
+  
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'cleaned-text.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Reset all
+function resetAll() {
+  inputText.value = '';
+  updateInputStats();
+  resetOutput();
+  caseSelect.value = 'insensitive';
+  modeSelect.value = 'consecutive';
+  minLength.value = 2;
+  highlightStyle.value = 'background';
+  ignoreCommon.checked = true;
+  ignoreNumbers.checked = true;
+  showPositions.checked = false;
+  keepFirst.checked = true;
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Event listeners
+inputText.addEventListener('input', () => {
+  updateInputStats();
+  debouncedProcess();
+});
+
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+copyBtn.addEventListener('click', copyOutput);
+downloadBtn.addEventListener('click', downloadOutput);
+removeDuplicatesBtn.addEventListener('click', removeDuplicates);
+exportDuplicatesBtn.addEventListener('click', exportDuplicates);
+resetBtn.addEventListener('click', resetAll);
+
+// Initialize
+updateInputStats();
+</script>
+</body>
+</html>

@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Text Complexity Analyzer - Free Online Readability Tool</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online text complexity analyzer. Check readability scores, grade level, reading time, and text difficulty instantly. No registration required." />
+  <meta name="keywords" content="free text complexity analyzer online, online text complexity tool free, text complexity analyzer tool, free online text readability checker, online text difficulty analyzer free, free text complexity checker, text readability and complexity analyzer online, free online text complexity score tool, online text grade level analyzer free, free text complexity measurement tool, online readability score calculator free, free online text analysis complexity, text complexity assessment tool online, online free text difficulty score, free online readability and complexity checker, text complexity checker online free, online text complexity metrics tool free, free text complexity evaluation online, online free text readability analyzer, text complexity calculator online free, free online text grade level tool, online text difficulty meter free, free text complexity report tool" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/text-complexity-analyzer/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/text-complexity-analyzer/" />
+  <meta property="og:title" content="Text Complexity Analyzer - Free Online Readability Tool" />
+  <meta property="og:description" content="Analyze text complexity, readability scores, grade level, and reading difficulty instantly. Real-time processing with no registration required." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/text-complexity-analyzer/" />
+  <meta name="twitter:title" content="Text Complexity Analyzer - Free Online Readability Tool" />
+  <meta name="twitter:description" content="Analyze text complexity, readability scores, grade level, and reading difficulty instantly. Real-time processing with no registration required." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+
+    .metric-card {
+      transition: all 0.3s ease;
+    }
+    
+    .metric-card:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .score-bar {
+      transition: width 0.5s ease;
+    }
+
+    .difficulty-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .difficulty-easy { background: rgba(34, 197, 94, 0.2); color: #4ade80; }
+    .difficulty-medium { background: rgba(234, 179, 8, 0.2); color: #facc15; }
+    .difficulty-hard { background: rgba(239, 68, 68, 0.2); color: #f87171; }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+    }
+
+    .stat-value {
+      font-variant-numeric: tabular-nums;
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 12h8M10 20h20M10 28h14" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Text Complexity Analyzer</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Text Complexity Analyzer
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Readability & Complexity Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Real-time analysis enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Input Text
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Type or paste text here to analyze complexity, readability scores, and grade level... Or drag & drop a file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.csv,.md,.json,.xml,.html,.js,.css,.py,.java,.cpp,.c,.php,.rb,.go,.rs,.swift,.kt,.sql,.log,.docx,.pdf" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Chars: 0 | Words: 0 | Sentences: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Quick Stats -->
+        <div class="space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+              Quick Overview
+            </label>
+            <span id="analysisTime" class="text-xs text-gray-600"></span>
+          </div>
+          
+          <div class="glass-panel rounded-lg p-3 space-y-2">
+            <div class="grid grid-cols-2 gap-2">
+              <div class="metric-card p-2 rounded bg-white/5">
+                <div class="text-xs text-gray-400 mb-1">Reading Time</div>
+                <div id="readingTime" class="text-lg font-bold text-white stat-value">0 min</div>
+              </div>
+              <div class="metric-card p-2 rounded bg-white/5">
+                <div class="text-xs text-gray-400 mb-1">Speaking Time</div>
+                <div id="speakingTime" class="text-lg font-bold text-white stat-value">0 min</div>
+              </div>
+            </div>
+            
+            <div class="metric-card p-2 rounded bg-white/5">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs text-gray-400">Difficulty Level</span>
+                <span id="difficultyBadge" class="difficulty-badge difficulty-easy">Easy</span>
+              </div>
+              <div class="w-full bg-white/10 rounded-full h-2">
+                <div id="difficultyBar" class="score-bar bg-green-500 h-2 rounded-full" style="width: 0%"></div>
+              </div>
+            </div>
+            
+            <div class="grid grid-cols-3 gap-2 text-center">
+              <div class="metric-card p-2 rounded bg-white/5">
+                <div id="avgSyllables" class="text-base font-bold text-indigo-400 stat-value">0</div>
+                <div class="text-xs text-gray-500">Syllables/Word</div>
+              </div>
+              <div class="metric-card p-2 rounded bg-white/5">
+                <div id="avgWordsPerSentence" class="text-base font-bold text-indigo-400 stat-value">0</div>
+                <div class="text-xs text-gray-500">Words/Sentence</div>
+              </div>
+              <div class="metric-card p-2 rounded bg-white/5">
+                <div id="complexWords" class="text-base font-bold text-indigo-400 stat-value">0%</div>
+                <div class="text-xs text-gray-500">Complex Words</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Detailed Metrics Section -->
+      <div class="mt-4 pt-4 border-t border-white/10">
+        <div class="flex items-center justify-between mb-3">
+          <label class="text-xs font-medium text-gray-300">Readability Scores & Grade Levels</label>
+          <button id="exportBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            Export Report
+          </button>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+          <!-- Flesch Reading Ease -->
+          <div class="metric-card glass-panel rounded-lg p-3">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-medium text-gray-300">Flesch Reading Ease</span>
+              <span id="fleschScore" class="text-sm font-bold text-white stat-value">0</span>
+            </div>
+            <div class="w-full bg-white/10 rounded-full h-1.5 mb-2">
+              <div id="fleschBar" class="score-bar bg-indigo-500 h-1.5 rounded-full" style="width: 0%"></div>
+            </div>
+            <div id="fleschInterpretation" class="text-xs text-gray-400">Very Difficult</div>
+          </div>
+
+          <!-- Flesch-Kincaid Grade -->
+          <div class="metric-card glass-panel rounded-lg p-3">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-medium text-gray-300">Flesch-Kincaid Grade</span>
+              <span id="fkGrade" class="text-sm font-bold text-white stat-value">0</span>
+            </div>
+            <div class="text-xs text-gray-400 mb-1">US School Grade Level</div>
+            <div id="fkInterpretation" class="text-xs text-indigo-400">College Graduate</div>
+          </div>
+
+          <!-- Gunning Fog Index -->
+          <div class="metric-card glass-panel rounded-lg p-3">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-medium text-gray-300">Gunning Fog Index</span>
+              <span id="gunningFog" class="text-sm font-bold text-white stat-value">0</span>
+            </div>
+            <div class="text-xs text-gray-400 mb-1">Years of formal education</div>
+            <div id="gunningInterpretation" class="text-xs text-indigo-400">High School</div>
+          </div>
+
+          <!-- SMOG Index -->
+          <div class="metric-card glass-panel rounded-lg p-3">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-medium text-gray-300">SMOG Index</span>
+              <span id="smogIndex" class="text-sm font-bold text-white stat-value">0</span>
+            </div>
+            <div class="text-xs text-gray-400 mb-1">Years of education needed</div>
+            <div id="smogInterpretation" class="text-xs text-indigo-400">High School</div>
+          </div>
+
+          <!-- Coleman-Liau Index -->
+          <div class="metric-card glass-panel rounded-lg p-3">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-medium text-gray-300">Coleman-Liau Index</span>
+              <span id="colemanLiau" class="text-sm font-bold text-white stat-value">0</span>
+            </div>
+            <div class="text-xs text-gray-400 mb-1">Grade level estimation</div>
+            <div id="colemanInterpretation" class="text-xs text-indigo-400">College</div>
+          </div>
+
+          <!-- Automated Readability -->
+          <div class="metric-card glass-panel rounded-lg p-3">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-medium text-gray-300">Automated Readability</span>
+              <span id="ariScore" class="text-sm font-bold text-white stat-value">0</span>
+            </div>
+            <div class="text-xs text-gray-400 mb-1">Grade level (ages 14+)</div>
+            <div id="ariInterpretation" class="text-xs text-indigo-400">High School</div>
+          </div>
+        </div>
+
+        <!-- Additional Stats Row -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-3">
+          <div class="metric-card glass-panel rounded-lg p-2 text-center">
+            <div id="totalChars" class="text-base font-bold text-white stat-value">0</div>
+            <div class="text-xs text-gray-500">Characters</div>
+          </div>
+          <div class="metric-card glass-panel rounded-lg p-2 text-center">
+            <div id="totalWords" class="text-base font-bold text-white stat-value">0</div>
+            <div class="text-xs text-gray-500">Words</div>
+          </div>
+          <div class="metric-card glass-panel rounded-lg p-2 text-center">
+            <div id="totalSentences" class="text-base font-bold text-white stat-value">0</div>
+            <div class="text-xs text-gray-500">Sentences</div>
+          </div>
+          <div class="metric-card glass-panel rounded-lg p-2 text-center">
+            <div id="totalSyllables" class="text-base font-bold text-white stat-value">0</div>
+            <div class="text-xs text-gray-500">Syllables</div>
+          </div>
+        </div>
+
+        <!-- Text Insights -->
+        <div class="mt-3 glass-panel rounded-lg p-3">
+          <div class="text-xs font-medium text-gray-300 mb-2">Text Insights</div>
+          <div id="textInsights" class="text-xs text-gray-400 space-y-1">
+            <p>Start typing to see insights about your text complexity, readability, and suggested improvements.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Text Complexity Analyzer?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">6 Readability Tests</h3>
+          <p class="text-gray-400 text-xs">Flesch, F-K, Gunning Fog, SMOG, Coleman-Liau, ARI</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Real-Time Analysis</h3>
+          <p class="text-gray-400 text-xs">Instant results as you type</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Drag & Drop</h3>
+          <p class="text-gray-400 text-xs">Upload documents instantly</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based, no uploads</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export Reports</h3>
+          <p class="text-gray-400 text-xs">Download detailed analysis</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free Forever</h3>
+          <p class="text-gray-400 text-xs">No registration required</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Input Text</h3>
+          <p class="text-gray-400 text-xs">Type, paste, or drop a file. Analysis happens automatically.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">View Scores</h3>
+          <p class="text-gray-400 text-xs">Check 6 different readability metrics and grade levels instantly.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Check Insights</h3>
+          <p class="text-gray-400 text-xs">Review difficulty level, reading time, and improvement suggestions.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Download a comprehensive report for your records or sharing.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>Understanding Text Complexity: The Complete Guide to Readability Analysis and Content Optimization</h2>
+        
+        <p><strong>Text complexity analysis</strong> has become an essential discipline in modern content creation, education, and professional communication. Whether you're a teacher selecting appropriate reading materials, a marketer crafting accessible copy, a student evaluating source credibility, or a developer building natural language processing applications, understanding how to measure and interpret text difficulty is crucial for effective communication. Our <strong>free text complexity analyzer online</strong> provides comprehensive readability assessment that helps you create content perfectly matched to your target audience's reading level.</p>
+
+        <p>The science of <strong>text complexity</strong> extends far beyond simple word counting. It encompasses linguistic structures, vocabulary sophistication, syntactic patterns, and semantic density that collectively determine how easily readers can process and comprehend written material. When you use an <strong>online text complexity tool free</strong> like ours, you're accessing decades of linguistic research distilled into actionable metrics that predict comprehension difficulty with remarkable accuracy. These tools have revolutionized how we approach content creation, making readability optimization accessible to everyone regardless of technical expertise.</p>
+
+        <h2>What Is Text Complexity and Why Does It Matter?</h2>
+        
+        <p><strong>Text complexity</strong> refers to the level of difficulty readers face when processing written content. This encompasses multiple dimensions: vocabulary difficulty (rare words, technical terminology, abstract concepts), syntactic complexity (sentence length, subordinate clauses, passive constructions), text cohesion (logical flow, transitions, referential clarity), and background knowledge requirements (domain-specific concepts, cultural references, prerequisite understanding). A professional <strong>text complexity analyzer tool</strong> evaluates these factors to provide objective difficulty measurements.</p>
+
+        <p>The importance of <strong>text complexity assessment</strong> cannot be overstated in our information-rich society. Mismatched text complexity creates barriers: content that's too difficult frustrates readers, reduces comprehension, and increases cognitive load, while content that's too simple may fail to convey necessary nuance or respect the reader's intelligence. Educators use <strong>free online text readability checker</strong> tools to ensure reading materials match student grade levels. Content strategists rely on <strong>online text difficulty analyzer free</strong> solutions to optimize web copy for target demographics. Publishers employ <strong>text readability and complexity analyzer online</strong> systems to maintain consistent editorial standards across their catalogs.</p>
+
+        <h2>The Science Behind Readability Formulas</h2>
+
+        <h3>Flesch Reading Ease and Flesch-Kincaid Grade Level</h3>
+        
+        <p>The Flesch Reading Ease test, developed by Rudolf Flesch in 1948, remains one of the most widely used <strong>free text complexity checker</strong> metrics. It calculates readability based on two factors: average sentence length and average syllables per word. Scores range from 0-100, with higher scores indicating easier reading. The formula is: 206.835 - (1.015 × average sentence length) - (84.6 × average syllables per word). Our <strong>free online text complexity score tool</strong> implements this calculation precisely, providing scores that correlate with reading difficulty: 90-100 (5th grade, very easy), 60-70 (8th-9th grade, standard), 0-30 (college graduate, very difficult).</p>
+
+        <p>The Flesch-Kincaid Grade Level, developed for the US Navy in 1975, transforms the Reading Ease score into American school grade levels. This <strong>online text grade level analyzer free</strong> metric uses the formula: (0.39 × average sentence length) + (11.8 × average syllables per word) - 15.59. The result indicates the minimum education level required to understand the text comfortably. A score of 8.0 means an eighth-grader should understand the material, while 12.0 indicates college-level difficulty. This makes it invaluable for educators using a <strong>free text complexity measurement tool</strong> to select appropriate textbooks.</p>
+
+        <h3>Gunning Fog Index and SMOG Index</h3>
+        
+        <p>The Gunning Fog Index, created by Robert Gunning in 1952, emphasizes complex words—those with three or more syllables. This <strong>online readability score calculator free</strong> formula is: 0.4 × [(average sentence length) + (percentage of complex words)]. The result estimates years of formal education needed to understand the text on first reading. Business writing typically targets scores between 8-12, while academic papers may score 15-20. Our <strong>free online text analysis complexity</strong> tool identifies complex words automatically, making Gunning Fog calculations instant and accurate.</p>
+
+        <p>The SMOG (Simple Measure of Gobbledygook) Index, developed by G. Harry McLaughlin in 1969, provides another <strong>text complexity assessment tool online</strong> approach. SMOG counts polysyllabic words (three or more syllables) in samples of 30 sentences, then applies the formula: √(polysyllable count × 30/number of sentences) + 3. This yields grade level estimates that correlate highly with reading comprehension tests. SMOG is particularly valued for its accuracy with technical and healthcare materials, making it essential for <strong>online free text difficulty score</strong> assessment in medical communications.</p>
+
+        <h3>Coleman-Liau Index and Automated Readability Index</h3>
+        
+        <p>The Coleman-Liau Index, developed in 1975, takes a unique approach among <strong>free online readability and complexity checker</strong> formulas by using characters rather than syllables. It calculates: 5.89 × (characters/words) - 29.5 × (sentences/words) - 15.8. This method works well for computer-based analysis since character counting is computationally simpler than syllable detection. The result approximates US grade levels, making it reliable for <strong>text complexity checker online free</strong> applications in digital publishing.</p>
+
+        <p>The Automated Readability Index (ARI), developed in 1967 for real-time computer processing, uses: 4.71 × (characters/words) + 0.5 × (words/sentences) - 21.43. Unlike formulas requiring syllable counting, ARI relies solely on character, word, and sentence counts, making it extremely fast for <strong>online text complexity metrics tool free</strong> implementations. ARI correlates well with actual reading levels for ages 14 and up, though it may underestimate difficulty for younger readers. Our <strong>free text complexity evaluation online</strong> system includes ARI for comprehensive multi-metric analysis.</p>
+
+        <h2>Professional Applications of Text Complexity Analysis</h2>
+
+        <h3>Education and Curriculum Development</h3>
+        
+        <p>Educators represent the primary users of <strong>online free text readability analyzer</strong> tools. Teachers employ these systems to: select leveled reading materials appropriate for student abilities, differentiate instruction by providing texts at multiple complexity levels, assess student writing development over time, ensure standardized test passages match specified difficulty ranges, and create accessible versions of complex texts for struggling readers. A <strong>text complexity calculator online free</strong> enables data-driven literacy instruction that improves student outcomes.</p>
+
+        <p>Common Core State Standards explicitly reference text complexity as a crucial factor in reading instruction. The standards recommend that students engage with texts at the high end of their grade band's complexity range, with appropriate scaffolding. This requires precise <strong>free online text grade level tool</strong> assessment to ensure compliance. Our analyzer supports educational compliance by providing multiple grade-level metrics that align with Common Core expectations, making it the preferred <strong>online text difficulty meter free</strong> solution for American educators.</p>
+
+        <h3>Content Marketing and SEO</h3>
+        
+        <p>Digital marketers leverage <strong>free text complexity report tool</strong> capabilities to optimize content for target audiences. Web copy must balance authority with accessibility: too simple and it lacks credibility; too complex and it alienates readers. Readability affects SEO indirectly through user engagement metrics—bounce rate, time on page, and social sharing—all of which influence search rankings. A <strong>text complexity analyzer tool</strong> helps content creators hit the sweet spot where expertise meets accessibility.</p>
+
+        <p>Different platforms and audiences require different complexity levels: Social media content typically targets 6th-8th grade (Flesch 60-70) for quick consumption. Blog posts often aim for 8th-10th grade (Flesch 50-60) balancing depth and accessibility. White papers and technical documentation may target 12th grade+ (Flesch 30-50) for professional audiences. Legal and medical content must prioritize precision over simplicity, often scoring college-level. Our <strong>free text complexity analyzer online</strong> helps marketers calibrate content for each channel and demographic.</p>
+
+        <h3>Healthcare and Medical Communications</h3>
+        
+        <p>Health literacy research consistently shows that medical information is often too complex for general audiences. The average American reads at an 8th-grade level, yet most patient education materials score at college level. This mismatch creates dangerous health literacy gaps. Healthcare communicators use <strong>online text complexity tool free</strong> solutions to: rewrite patient instructions at appropriate levels, ensure informed consent forms are comprehensible, develop accessible public health materials, and meet regulatory requirements for plain language. Our analyzer's multi-metric approach, including SMOG which performs well with medical terminology, makes it ideal for <strong>text readability and complexity analyzer online</strong> healthcare applications.</p>
+
+        <h3>Legal and Financial Documentation</h3>
+        
+        <p>Legal and financial sectors face increasing pressure to improve document accessibility. Plain language laws in several jurisdictions mandate that consumer contracts be understandable to non-experts. Financial regulators require disclosure documents that average investors can comprehend. Law firms use <strong>free text complexity checker</strong> tools to: simplify contracts without losing legal precision, create layered documents with executive summaries, test jury instructions for comprehensibility, and comply with accessibility regulations. Our <strong>free online text complexity score tool</strong> supports legal professionals in meeting these modern standards.</p>
+
+        <h2>Advanced Text Complexity Factors</h2>
+
+        <h3>Beyond Formulas: Semantic and Pragmatic Complexity</h3>
+        
+        <p>While readability formulas provide valuable <strong>online text grade level analyzer free</strong> estimates, they don't capture all complexity dimensions. Semantic complexity involves concept density, abstraction levels, and domain-specific terminology. A text may score as "easy" by traditional metrics yet prove difficult due to unfamiliar concepts. Pragmatic complexity concerns text organization, coherence, and the reader's required background knowledge. Our <strong>free text complexity measurement tool</strong> addresses these limitations through supplementary metrics and insights.</p>
+
+        <p>Modern <strong>online readability score calculator free</strong> systems increasingly incorporate natural language processing to assess: lexical diversity (type-token ratio), syntactic sophistication (dependency parse depth), semantic cohesion (entity consistency), and conceptual density (information content per sentence). These advanced analyses complement traditional formulas, providing holistic <strong>text complexity assessment tool online</strong> evaluation that predicts comprehension more accurately than single metrics.</p>
+
+        <h3>Cross-Linguistic and Cultural Considerations</h3>
+        
+        <p>Readability formulas were developed primarily for English, limiting <strong>online free text difficulty score</strong> applications in multilingual contexts. Translation complicates complexity assessment: a text simple in English may become complex in translation due to morphological differences, or vice versa. Cultural references, idioms, and register variations affect comprehension beyond what formulas measure. Our <strong>free online readability and complexity checker</strong> focuses on English text while acknowledging these broader linguistic complexities.</p>
+
+        <h2>Best Practices for Text Complexity Optimization</h2>
+
+        <h3>Writing for Your Target Audience</h3>
+        
+        <p>Effective <strong>text complexity checker online free</strong> usage begins with audience analysis. Define your target readers' education levels, domain expertise, reading purposes, and cultural backgrounds. A technical manual for engineers can tolerate higher complexity than a product FAQ for general consumers. Use our <strong>online text complexity metrics tool free</strong> to establish baseline metrics for your genre, then adjust based on audience feedback and engagement data.</p>
+
+        <h3>Strategies for Complexity Reduction</h3>
+        
+        <p>When <strong>free text complexity evaluation online</strong> reveals excessive difficulty, employ these techniques: Break long sentences into shorter, active-voice constructions. Replace jargon with plain language equivalents, or define terms on first use. Use concrete examples to illustrate abstract concepts. Implement clear headings and subheadings for structural guidance. Add transitional phrases to improve flow. Create bulleted lists for complex sequences. Our <strong>online free text readability analyzer</strong> helps you verify these improvements through before-and-after comparison.</p>
+
+        <h3>When to Maintain Complexity</h3>
+        
+        <p>Sometimes high complexity is appropriate. Academic research papers must maintain precision through technical terminology. Legal documents require specific phrasing to preserve enforceability. Literary fiction may intentionally challenge readers aesthetically. In these cases, use a <strong>text complexity calculator online free</strong> not to simplify but to document complexity levels, enabling appropriate reader warnings or prerequisite recommendations. Our <strong>free online text grade level tool</strong> supports transparency about text demands.</p>
+
+        <h2>The Future of Readability Technology</h2>
+
+        <p>Artificial intelligence is transforming <strong>free text complexity report tool</strong> capabilities. Machine learning models now predict comprehension difficulty by analyzing eye-tracking patterns, reading speed variations, and neural activation during text processing. These biometric approaches may eventually surpass formula-based <strong>text complexity analyzer tool</strong> predictions. Meanwhile, large language models enable real-time complexity adjustment—automatically rewriting text to match specified grade levels while preserving meaning. Our platform evolves to incorporate these innovations while maintaining the simplicity that makes our <strong>free text complexity analyzer online</strong> accessible to all users.</p>
+
+        <h2>Conclusion: Master Text Complexity for Better Communication</h2>
+
+        <p><strong>Text complexity analysis</strong> empowers writers, educators, marketers, and professionals to create content that truly serves its intended audience. By leveraging proven readability formulas—Flesch Reading Ease, Flesch-Kincaid Grade Level, Gunning Fog, SMOG, Coleman-Liau, and Automated Readability Index—you can objectively assess and optimize text difficulty. Our <strong>online text complexity tool free</strong> provides instant access to these metrics, supporting data-driven decisions that improve comprehension, engagement, and accessibility.</p>
+
+        <p>Whether you're ensuring educational materials match student levels, optimizing marketing copy for target demographics, simplifying healthcare instructions for patient safety, or maintaining consistent editorial standards, our <strong>text complexity analyzer tool</strong> delivers professional-grade analysis without cost or complexity. The browser-based architecture ensures privacy and accessibility, while real-time processing provides immediate feedback as you write and edit. Stop guessing about text difficulty—start using our comprehensive <strong>free online text readability checker</strong> today and experience the confidence that comes from objective, evidence-based text optimization. With support for drag-and-drop file analysis, detailed metric visualization, and comprehensive report export, this is the most advanced <strong>text readability and complexity analyzer online</strong> available for professional use.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool analyze text automatically as I type?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>free text complexity analyzer online</strong> features <strong>real-time analysis</strong>. As you type or paste text, all 6 readability scores (Flesch Reading Ease, Flesch-Kincaid, Gunning Fog, SMOG, Coleman-Liau, ARI) update instantly. We use intelligent debouncing to ensure smooth performance. The "Real-time analysis enabled" indicator confirms the feature is active. Changes apply immediately, making this the most responsive <strong>online text complexity tool free</strong> available.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Which readability score should I trust most?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Each <strong>text complexity analyzer tool</strong> formula has strengths: Flesch-Kincaid is widely used in education; Gunning Fog excels for business writing; SMOG is best for healthcare/technical content; Coleman-Liau works well for computer analysis; ARI is fastest for long texts. We recommend comparing all 6 scores in our <strong>free online text readability checker</strong>. If scores cluster around a specific grade level, that's your answer. Large variations suggest the text has inconsistent complexity.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What is a "complex word" and how is it detected?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">In our <strong>online text difficulty analyzer free</strong>, complex words typically have 3+ syllables (Gunning Fog standard). We use advanced syllable counting algorithms that handle English exceptions: silent e's, consecutive vowels, and suffix patterns. The "Complex Words" percentage in our <strong>text readability and complexity analyzer online</strong> helps identify vocabulary sophistication. Higher percentages indicate more academic, technical, or specialized language that may challenge general readers.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I analyze documents like PDF or Word files?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>free text complexity checker</strong> supports drag-and-drop for .txt, .csv, .md, .json, .xml, .html, code files, and attempts to read .docx and .pdf files. For best results with PDFs and Word documents, copy-paste the text directly into the input area. The <strong>free online text complexity score tool</strong> processes up to 50,000 characters instantly. For larger documents, analyze sections separately or use the Export feature to compile reports.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How accurate are readability formulas?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Readability formulas in our <strong>online text grade level analyzer free</strong> correlate 0.60-0.85 with actual comprehension tests—meaning they explain 60-85% of reading difficulty variance. They're highly reliable for general text but less accurate for: poetry/creative writing, texts with extensive dialogue, highly technical content with defined terminology, and texts requiring significant background knowledge. Use our <strong>free text complexity measurement tool</strong> as a guide, not an absolute, and consider audience testing for critical content.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What reading level should I target for my audience?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">General guidelines from our <strong>online readability score calculator free</strong>: General public (8th grade/Flesch 60-70), Mass market fiction (6th-8th grade), Technical blogs (10th-12th grade), Academic papers (12th-16th grade), Legal documents (often 16th+ but should target 8th-12th for consumer contracts). The average American adult reads at 8th-grade level. When in doubt, aim lower—clear communication benefits everyone. Our <strong>text complexity assessment tool online</strong> helps you verify you've hit your target.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I export or save my analysis results?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Click the <strong>"Export Report"</strong> button to download a comprehensive text file containing all metrics: Flesch scores, grade levels, word/sentence statistics, complex word percentages, reading time estimates, and difficulty interpretations. This <strong>online free text difficulty score</strong> report is perfect for documentation, sharing with editors, or tracking improvements across document versions. The export includes timestamps for your records.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my text data secure and private?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely. All analysis in our <strong>free online readability and complexity checker</strong> happens <strong>locally in your browser</strong>—text never uploads to our servers or leaves your device. You can verify this using browser DevTools (Network tab shows no data transfer). Works offline after loading. Ideal for confidential documents, unpublished manuscripts, sensitive business content, or student work. Privacy is fundamental to our <strong>text complexity checker online free</strong> architecture.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool work with non-English text?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Our <strong>online text complexity metrics tool free</strong> is optimized for English. Readability formulas were developed specifically for English language structures and won't produce accurate results for other languages. The syllable counter, sentence detection, and grade-level correlations assume English grammar and vocabulary. For non-English texts, the character and word counts will work, but readability scores will be meaningless. We're developing language-specific analyzers for future releases of our <strong>free text complexity evaluation online</strong> platform.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this tool really free?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, completely <strong>free</strong> with no registration, usage limits, or hidden fees. Use our <strong>online free text readability analyzer</strong> for personal or commercial projects without attribution. Analyze unlimited texts, export unlimited reports, access all 6 readability formulas and advanced metrics. This is truly a <strong>text complexity calculator online free</strong> for everyone. Supported by unobtrusive advertising. We believe text complexity analysis should be accessible to all writers, educators, and professionals.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const inputStats = document.getElementById('inputStats');
+const analysisTime = document.getElementById('analysisTime');
+const readingTime = document.getElementById('readingTime');
+const speakingTime = document.getElementById('speakingTime');
+const difficultyBadge = document.getElementById('difficultyBadge');
+const difficultyBar = document.getElementById('difficultyBar');
+const avgSyllables = document.getElementById('avgSyllables');
+const avgWordsPerSentence = document.getElementById('avgWordsPerSentence');
+const complexWords = document.getElementById('complexWords');
+const fleschScore = document.getElementById('fleschScore');
+const fleschBar = document.getElementById('fleschBar');
+const fleschInterpretation = document.getElementById('fleschInterpretation');
+const fkGrade = document.getElementById('fkGrade');
+const fkInterpretation = document.getElementById('fkInterpretation');
+const gunningFog = document.getElementById('gunningFog');
+const gunningInterpretation = document.getElementById('gunningInterpretation');
+const smogIndex = document.getElementById('smogIndex');
+const smogInterpretation = document.getElementById('smogInterpretation');
+const colemanLiau = document.getElementById('colemanLiau');
+const colemanInterpretation = document.getElementById('colemanInterpretation');
+const ariScore = document.getElementById('ariScore');
+const ariInterpretation = document.getElementById('ariInterpretation');
+const totalChars = document.getElementById('totalChars');
+const totalWords = document.getElementById('totalWords');
+const totalSentences = document.getElementById('totalSentences');
+const totalSyllables = document.getElementById('totalSyllables');
+const textInsights = document.getElementById('textInsights');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+
+// Buttons
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const resetBtn = document.getElementById('resetBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const exportBtn = document.getElementById('exportBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Syllable counting function
+function countSyllables(word) {
+  word = word.toLowerCase().replace(/[^a-z]/g, '');
+  if (word.length === 0) return 0;
+  if (word.length <= 3) return 1;
+  
+  word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '');
+  word = word.replace(/^y/, '');
+  const matches = word.match(/[aeiouy]{1,2}/g);
+  return matches ? matches.length : 1;
+}
+
+// Sentence tokenizer
+function countSentences(text) {
+  if (!text.trim()) return 0;
+  const sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 0);
+  return sentences.length;
+}
+
+// Get difficulty level based on Flesch score
+function getDifficultyLevel(score) {
+  if (score >= 90) return { level: 'Easy', class: 'difficulty-easy', color: 'bg-green-500', width: '20%' };
+  if (score >= 70) return { level: 'Fairly Easy', class: 'difficulty-easy', color: 'bg-green-500', width: '40%' };
+  if (score >= 60) return { level: 'Standard', class: 'difficulty-medium', color: 'bg-yellow-500', width: '60%' };
+  if (score >= 50) return { level: 'Fairly Difficult', class: 'difficulty-medium', color: 'bg-yellow-500', width: '75%' };
+  if (score >= 30) return { level: 'Difficult', class: 'difficulty-hard', color: 'bg-red-500', width: '85%' };
+  return { level: 'Very Difficult', class: 'difficulty-hard', color: 'bg-red-500', width: '95%' };
+}
+
+// Get Flesch interpretation
+function getFleschInterpretation(score) {
+  if (score >= 90) return '5th Grade - Very Easy';
+  if (score >= 80) return '6th Grade - Easy';
+  if (score >= 70) return '7th Grade - Fairly Easy';
+  if (score >= 60) return '8th-9th Grade - Standard';
+  if (score >= 50) return '10th-12th Grade - Fairly Difficult';
+  if (score >= 30) return 'College - Difficult';
+  return 'College Graduate - Very Difficult';
+}
+
+// Get grade interpretation
+function getGradeInterpretation(grade) {
+  if (grade <= 5) return 'Elementary School';
+  if (grade <= 8) return 'Middle School';
+  if (grade <= 12) return 'High School';
+  if (grade <= 16) return 'College';
+  return 'Graduate School';
+}
+
+// Debounce function
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Main analysis function
+function analyzeText() {
+  const startTime = performance.now();
+  const text = inputText.value;
+  
+  if (!text.trim()) {
+    resetMetrics();
+    return;
+  }
+  
+  // Basic counts
+  const chars = text.length;
+  const words = text.trim().split(/\s+/).filter(w => w.length > 0);
+  const wordCount = words.length;
+  const sentences = countSentences(text);
+  
+  if (wordCount === 0 || sentences === 0) {
+    resetMetrics();
+    return;
+  }
+  
+  // Syllable counting
+  let totalSyllableCount = 0;
+  let complexWordCount = 0;
+  
+  words.forEach(word => {
+    const cleanWord = word.replace(/[^a-zA-Z]/g, '');
+    if (cleanWord.length > 0) {
+      const syllableCount = countSyllables(cleanWord);
+      totalSyllableCount += syllableCount;
+      if (syllableCount >= 3) complexWordCount++;
+    }
+  });
+  
+  // Calculate averages
+  const avgSentenceLength = wordCount / sentences;
+  const avgSyllablesPerWord = totalSyllableCount / wordCount;
+  const complexWordPercentage = (complexWordCount / wordCount) * 100;
+  
+  // Reading time (average 200-250 wpm for silent reading)
+  const readingMinutes = Math.ceil(wordCount / 225);
+  const speakingMinutes = Math.ceil(wordCount / 130); // speaking rate
+  
+  // Flesch Reading Ease: 206.835 - (1.015 × ASL) - (84.6 × ASW)
+  const flesch = 206.835 - (1.015 * avgSentenceLength) - (84.6 * avgSyllablesPerWord);
+  const fleschClamped = Math.max(0, Math.min(100, flesch));
+  
+  // Flesch-Kincaid Grade Level: (0.39 × ASL) + (11.8 × ASW) - 15.59
+  const fk = (0.39 * avgSentenceLength) + (11.8 * avgSyllablesPerWord) - 15.59;
+  
+  // Gunning Fog Index: 0.4 × [(words/sentences) + 100 × (complex words/words)]
+  const gunning = 0.4 * (avgSentenceLength + 100 * (complexWordCount / wordCount));
+  
+  // SMOG Index: 1.043 × √(complex words × 30 / sentences) + 3.1291
+  const smog = 1.043 * Math.sqrt(complexWordCount * (30 / sentences)) + 3.1291;
+  
+  // Coleman-Liau Index: 5.89 × (chars/words) - 29.5 × (sentences/words) - 15.8
+  const letters = text.replace(/[^a-zA-Z]/g, '').length;
+  const coleman = (5.89 * (letters / wordCount)) - (29.5 * (sentences / wordCount)) - 15.8;
+  
+  // Automated Readability Index: 4.71 × (chars/words) + 0.5 × (words/sentences) - 21.43
+  const characters = text.replace(/\s/g, '').length;
+  const ari = (4.71 * (characters / wordCount)) + (0.5 * avgSentenceLength) - 21.43;
+  
+  const endTime = performance.now();
+  
+  // Update UI
+  updateUI({
+    chars,
+    wordCount,
+    sentences,
+    totalSyllableCount,
+    readingMinutes,
+    speakingMinutes,
+    flesch: fleschClamped,
+    fk,
+    gunning,
+    smog,
+    coleman,
+    ari,
+    avgSyllablesPerWord,
+    avgSentenceLength,
+    complexWordPercentage,
+    processingTime: endTime - startTime
+  });
+}
+
+function updateUI(data) {
+  // Input stats
+  inputStats.textContent = `Chars: ${data.chars} | Words: ${data.wordCount} | Sentences: ${data.sentences}`;
+  analysisTime.textContent = `${data.processingTime.toFixed(1)}ms`;
+  
+  // Quick stats
+  readingTime.textContent = `${data.readingMinutes} min`;
+  speakingTime.textContent = `${data.speakingMinutes} min`;
+  
+  // Difficulty
+  const difficulty = getDifficultyLevel(data.flesch);
+  difficultyBadge.textContent = difficulty.level;
+  difficultyBadge.className = `difficulty-badge ${difficulty.class}`;
+  difficultyBar.className = `score-bar ${difficulty.color} h-2 rounded-full`;
+  difficultyBar.style.width = difficulty.width;
+  
+  // Averages
+  avgSyllables.textContent = data.avgSyllablesPerWord.toFixed(1);
+  avgWordsPerSentence.textContent = data.avgSentenceLength.toFixed(1);
+  complexWords.textContent = `${data.complexWordPercentage.toFixed(1)}%`;
+  
+  // Detailed metrics
+  fleschScore.textContent = data.flesch.toFixed(1);
+  fleschBar.style.width = `${data.flesch}%`;
+  fleschInterpretation.textContent = getFleschInterpretation(data.flesch);
+  
+  fkGrade.textContent = data.fk.toFixed(1);
+  fkInterpretation.textContent = getGradeInterpretation(data.fk);
+  
+  gunningFog.textContent = data.gunning.toFixed(1);
+  gunningInterpretation.textContent = getGradeInterpretation(data.gunning);
+  
+  smogIndex.textContent = data.smog.toFixed(1);
+  smogInterpretation.textContent = getGradeInterpretation(data.smog);
+  
+  colemanLiau.textContent = data.coleman.toFixed(1);
+  colemanInterpretation.textContent = getGradeInterpretation(data.coleman);
+  
+  ariScore.textContent = data.ari.toFixed(1);
+  ariInterpretation.textContent = getGradeInterpretation(data.ari);
+  
+  // Totals
+  totalChars.textContent = data.chars.toLocaleString();
+  totalWords.textContent = data.wordCount.toLocaleString();
+  totalSentences.textContent = data.sentences.toLocaleString();
+  totalSyllables.textContent = data.totalSyllableCount.toLocaleString();
+  
+  // Insights
+  generateInsights(data);
+}
+
+function generateInsights(data) {
+  const insights = [];
+  
+  if (data.avgSentenceLength > 25) {
+    insights.push("• Consider shortening sentences. Long sentences (25+ words) reduce readability significantly.");
+  } else if (data.avgSentenceLength < 10) {
+    insights.push("• Your sentences are quite short. This improves readability but may feel choppy.");
+  }
+  
+  if (data.complexWordPercentage > 15) {
+    insights.push("• High percentage of complex words (3+ syllables). Consider simpler alternatives for general audiences.");
+  } else if (data.complexWordPercentage < 5) {
+    insights.push("• Low complex word usage. Good for accessibility, but may lack sophistication for academic contexts.");
+  }
+  
+  if (data.fk > 12) {
+    insights.push("• College-level text. Suitable for academic papers, technical documentation, or expert audiences.");
+  } else if (data.fk < 6) {
+    insights.push("• Elementary reading level. Excellent for broad accessibility or children's content.");
+  }
+  
+  if (data.wordCount > 0) {
+    const avgWordLength = data.chars / data.wordCount;
+    if (avgWordLength > 5.5) {
+      insights.push("• Long average word length suggests technical or academic vocabulary.");
+    }
+  }
+  
+  if (insights.length === 0) {
+    insights.push("• Your text shows balanced complexity. Good mix of sentence lengths and vocabulary.");
+  }
+  
+  textInsights.innerHTML = insights.join('<br>');
+}
+
+function resetMetrics() {
+  inputStats.textContent = 'Chars: 0 | Words: 0 | Sentences: 0';
+  analysisTime.textContent = '';
+  readingTime.textContent = '0 min';
+  speakingTime.textContent = '0 min';
+  difficultyBadge.textContent = 'Easy';
+  difficultyBadge.className = 'difficulty-badge difficulty-easy';
+  difficultyBar.style.width = '0%';
+  avgSyllables.textContent = '0';
+  avgWordsPerSentence.textContent = '0';
+  complexWords.textContent = '0%';
+  fleschScore.textContent = '0';
+  fleschBar.style.width = '0%';
+  fleschInterpretation.textContent = 'Very Difficult';
+  fkGrade.textContent = '0';
+  fkInterpretation.textContent = 'Elementary School';
+  gunningFog.textContent = '0';
+  gunningInterpretation.textContent = 'Elementary School';
+  smogIndex.textContent = '0';
+  smogInterpretation.textContent = 'Elementary School';
+  colemanLiau.textContent = '0';
+  colemanInterpretation.textContent = 'Elementary School';
+  ariScore.textContent = '0';
+  ariInterpretation.textContent = 'Elementary School';
+  totalChars.textContent = '0';
+  totalWords.textContent = '0';
+  totalSentences.textContent = '0';
+  totalSyllables.textContent = '0';
+  textInsights.innerHTML = '<p>Start typing to see insights about your text complexity, readability, and suggested improvements.</p>';
+}
+
+// Debounced analysis
+const debouncedAnalyze = debounce(analyzeText, 300);
+
+// Drag and drop handlers
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    analyzeText();
+  };
+  
+  if (file.name.endsWith('.docx')) {
+    // For docx, we'd need a library like mammoth.js - for now, alert user
+    alert('For .docx files, please copy and paste the text directly into the input area.');
+    return;
+  }
+  
+  reader.readAsText(file);
+}
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    analyzeText();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  resetMetrics();
+  inputText.focus();
+}
+
+// Reset all
+function resetAll() {
+  inputText.value = '';
+  resetMetrics();
+}
+
+// Export report
+function exportReport() {
+  const text = inputText.value;
+  if (!text.trim()) {
+    alert('Please enter some text to analyze first.');
+    return;
+  }
+  
+  const report = `
+TEXT COMPLEXITY ANALYSIS REPORT
+Generated: ${new Date().toLocaleString()}
+================================
+
+BASIC STATISTICS
+----------------
+Characters: ${totalChars.textContent}
+Words: ${totalWords.textContent}
+Sentences: ${totalSentences.textContent}
+Syllables: ${totalSyllables.textContent}
+
+READABILITY SCORES
+------------------
+Flesch Reading Ease: ${fleschScore.textContent} (${fleschInterpretation.textContent})
+Flesch-Kincaid Grade: ${fkGrade.textContent} (${fkInterpretation.textContent})
+Gunning Fog Index: ${gunningFog.textContent} (${gunningInterpretation.textContent})
+SMOG Index: ${smogIndex.textContent} (${smogInterpretation.textContent})
+Coleman-Liau Index: ${colemanLiau.textContent} (${colemanInterpretation.textContent})
+Automated Readability: ${ariScore.textContent} (${ariInterpretation.textContent})
+
+TIME ESTIMATES
+--------------
+Reading Time: ${readingTime.textContent}
+Speaking Time: ${speakingTime.textContent}
+
+COMPOSITION METRICS
+-------------------
+Average Syllables per Word: ${avgSyllables.textContent}
+Average Words per Sentence: ${avgWordsPerSentence.textContent}
+Complex Words: ${complexWords.textContent}
+Difficulty Level: ${difficultyBadge.textContent}
+
+INSIGHTS
+--------
+${textInsights.innerText}
+
+================================
+Report generated by EasyPro Tools Text Complexity Analyzer
+https://easyprotools.com/text-complexity-analyzer/
+`;
+  
+  const blob = new Blob([report], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'text-complexity-report.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Event listeners
+inputText.addEventListener('input', debouncedAnalyze);
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+resetBtn.addEventListener('click', resetAll);
+exportBtn.addEventListener('click', exportReport);
+
+// Initialize
+resetMetrics();
+</script>
+</body>
+</html>

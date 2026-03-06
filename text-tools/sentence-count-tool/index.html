@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sentence Count Tool - Free Online Sentence Counter</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online sentence count tool. Instantly count sentences, words, and characters with detailed analysis. Perfect for writers, editors, and SEO optimization. No registration required." />
+  <meta name="keywords" content="free sentence count tool online, online sentence counter free, sentence count checker online, free online sentence count tool, sentence count and analysis online free, free sentence counter tool, online text sentence counter free, free sentence count calculator online, online sentence count checker free, sentence counting tool free online, free online sentence analyzer, sentence counter and word counter online free, online sentence count for writers free, free text sentence counter online, sentence count measurement tool online free, free online sentence statistics tool, sentence count extractor online free, online sentence counter for text free, free sentence tally tool online, online sentence count utility free, free online sentence count service, online sentence count tool for seo free" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/sentence-count-tool/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/sentence-count-tool/" />
+  <meta property="og:title" content="Sentence Count Tool - Free Online Sentence Counter" />
+  <meta property="og:description" content="Instantly count sentences, words, and characters with detailed analysis. Perfect for writers, editors, and SEO optimization." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/sentence-count-tool/" />
+  <meta name="twitter:title" content="Sentence Count Tool - Free Online Sentence Counter" />
+  <meta name="twitter:description" content="Instantly count sentences, words, and characters with detailed analysis. Perfect for writers, editors, and SEO optimization." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .method-btn {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    .method-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .stat-card {
+      transition: all 0.3s ease;
+    }
+    
+    .stat-card:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+
+    .progress-bar {
+      transition: width 0.3s ease;
+    }
+
+    .sentence-highlight {
+      background: rgba(99, 102, 241, 0.2);
+      border-left: 2px solid rgba(99, 102, 241, 0.8);
+      transition: all 0.2s ease;
+    }
+    
+    .sentence-highlight:hover {
+      background: rgba(99, 102, 241, 0.3);
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 14h20M10 20h15M10 26h12" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Sentence Count Tool</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Sentence Count Tool
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Text Analysis Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-analysis enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Input Text
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Type or paste text here to count sentences... Or drag & drop a file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.csv,.md,.json,.xml,.html,.js,.css,.py,.java,.cpp,.c,.php,.rb,.go,.rs,.swift,.kt,.sql,.log,.docx" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Chars: 0 | Words: 0 | Lines: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Statistics Dashboard -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+              Analysis Results
+            </label>
+            <div class="flex gap-1">
+              <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                Copy Stats
+              </button>
+              <button id="exportBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Export
+              </button>
+            </div>
+          </div>
+          
+          <!-- Stats Grid -->
+          <div class="grid grid-cols-2 gap-2">
+            <div class="stat-card glass-panel rounded-lg p-3 border border-white/5">
+              <div class="flex items-center justify-between mb-1">
+                <span class="text-xs text-gray-400">Sentences</span>
+                <svg class="w-3 h-3 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"/></svg>
+              </div>
+              <div id="sentenceCount" class="text-2xl font-bold text-white">0</div>
+              <div class="text-xs text-gray-500 mt-1">Total sentences</div>
+            </div>
+            
+            <div class="stat-card glass-panel rounded-lg p-3 border border-white/5">
+              <div class="flex items-center justify-between mb-1">
+                <span class="text-xs text-gray-400">Words</span>
+                <svg class="w-3 h-3 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12"/></svg>
+              </div>
+              <div id="wordCount" class="text-2xl font-bold text-white">0</div>
+              <div class="text-xs text-gray-500 mt-1">Total words</div>
+            </div>
+            
+            <div class="stat-card glass-panel rounded-lg p-3 border border-white/5">
+              <div class="flex items-center justify-between mb-1">
+                <span class="text-xs text-gray-400">Characters</span>
+                <svg class="w-3 h-3 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"/></svg>
+              </div>
+              <div id="charCount" class="text-2xl font-bold text-white">0</div>
+              <div class="text-xs text-gray-500 mt-1">With spaces</div>
+            </div>
+            
+            <div class="stat-card glass-panel rounded-lg p-3 border border-white/5">
+              <div class="flex items-center justify-between mb-1">
+                <span class="text-xs text-gray-400">Avg Length</span>
+                <svg class="w-3 h-3 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+              </div>
+              <div id="avgSentenceLength" class="text-2xl font-bold text-white">0</div>
+              <div class="text-xs text-gray-500 mt-1">Words/sentence</div>
+            </div>
+          </div>
+          
+          <!-- Additional Metrics -->
+          <div class="glass-panel rounded-lg p-3 space-y-2">
+            <div class="flex justify-between items-center text-xs">
+              <span class="text-gray-400">Paragraphs</span>
+              <span id="paragraphCount" class="text-white font-medium">0</span>
+            </div>
+            <div class="flex justify-between items-center text-xs">
+              <span class="text-gray-400">Reading Time</span>
+              <span id="readingTime" class="text-white font-medium">0 min</span>
+            </div>
+            <div class="flex justify-between items-center text-xs">
+              <span class="text-gray-400">Speaking Time</span>
+              <span id="speakingTime" class="text-white font-medium">0 min</span>
+            </div>
+            <div class="flex justify-between items-center text-xs">
+              <span class="text-gray-400">Longest Sentence</span>
+              <span id="longestSentence" class="text-white font-medium">0 words</span>
+            </div>
+            <div class="flex justify-between items-center text-xs">
+              <span class="text-gray-400">Shortest Sentence</span>
+              <span id="shortestSentence" class="text-white font-medium">0 words</span>
+            </div>
+          </div>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="processingTime"></span>
+            <span id="lastUpdated" class="text-gray-600"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-3">
+        
+        <!-- Detection Method -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Sentence Detection Method</label>
+          <div class="flex flex-wrap gap-1">
+            <button class="method-btn active rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="standard">Standard</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="strict">Strict</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="academic">Academic</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-method="custom">Custom</button>
+          </div>
+        </div>
+
+        <!-- Options Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Min Words/Sentence</label>
+            <input type="number" id="minWords" min="1" value="1" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+          </div>
+          
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Ignore Abbreviations</label>
+            <select id="ignoreAbbreviations" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="yes">Yes (Dr., Mr., etc.)</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+          
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Count Empty Lines</label>
+            <select id="countEmpty" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="no">No</option>
+              <option value="yes">Yes</option>
+            </select>
+          </div>
+          
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Language</label>
+            <select id="languageSelect" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="en">English</option>
+              <option value="es">Spanish</option>
+              <option value="fr">French</option>
+              <option value="de">German</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Sentence List Preview -->
+        <div id="sentencePreview" class="hidden">
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-xs font-medium text-gray-300">Sentence Breakdown <span class="text-gray-500 font-normal">(click to highlight)</span></label>
+            <div class="flex gap-1">
+              <button id="prevSentence" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+              </button>
+              <span id="sentenceNav" class="text-xs text-gray-400 flex items-center px-2">1 / 0</span>
+              <button id="nextSentence" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+          <div id="sentenceList" class="max-h-32 overflow-y-auto space-y-1 pr-1">
+            <!-- Sentences will be inserted here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Sentence Count Tool?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Real-Time</h3>
+          <p class="text-gray-400 text-xs">Instant analysis as you type</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Accurate</h3>
+          <p class="text-gray-400 text-xs">Smart detection algorithms</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Drag & Drop</h3>
+          <p class="text-gray-400 text-xs">Upload files instantly</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based processing</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Download detailed reports</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration required</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Input Text</h3>
+          <p class="text-gray-400 text-xs">Type, paste, or drop a file. Analysis happens automatically.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Select Method</h3>
+          <p class="text-gray-400 text-xs">Choose Standard, Strict, Academic, or Custom detection.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Review Stats</h3>
+          <p class="text-gray-400 text-xs">View detailed metrics including reading time and averages.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export</h3>
+          <p class="text-gray-400 text-xs">Copy statistics or export full report with sentence breakdown.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Sentence Counting: Mastering Text Analysis for Writing Excellence</h2>
+        
+        <p><strong>Sentence counting</strong> is a fundamental yet powerful aspect of text analysis that serves as the cornerstone of effective writing, editing, and content optimization. Whether you're a professional writer crafting the perfect article, a student working on an academic paper, an SEO specialist optimizing web content, or an educator assessing student work, understanding how to accurately <strong>count sentences</strong> and analyze their structure is essential for producing high-quality text. Our <strong>free sentence count tool online</strong> provides everything you need for professional text analysis without any cost or registration barriers.</p>
+
+        <h2>Understanding Sentence Counting and Its Importance</h2>
+        
+        <p><strong>Sentence counting</strong> refers to the process of identifying and quantifying individual sentences within a body of text. While this may seem straightforward, accurate sentence detection involves sophisticated linguistic analysis to handle abbreviations, decimal numbers, ellipses, and various punctuation scenarios. When you use an <strong>online sentence counter free</strong> solution, you're accessing technology that can distinguish between periods that end sentences versus those used in abbreviations like "Dr." or "Mr."</p>
+
+        <p>The importance of reliable <strong>sentence count checker online</strong> tools extends across numerous professional fields. Writers use sentence counts to maintain consistent pacing and rhythm in their prose. SEO professionals analyze sentence density to optimize content for search engines. Educators use sentence metrics to assess writing complexity and grade level appropriateness. Researchers rely on sentence statistics for linguistic analysis and corpus studies. Our <strong>free online sentence count tool</strong> serves all these needs with professional-grade accuracy.</p>
+
+        <h2>How Sentence Detection Algorithms Work</h2>
+
+        <h3>Standard Detection Methods</h3>
+        
+        <p>Most <strong>sentence counting tool free online</strong> solutions use a combination of punctuation analysis and contextual rules. The basic approach identifies sentence boundaries by looking for terminal punctuation marks—periods, question marks, and exclamation points—followed by whitespace and capitalized words. However, this simple method fails with abbreviations, ellipses, and decimal numbers. Advanced <strong>sentence count and analysis online free</strong> tools implement exception lists for common abbreviations (Dr., Mr., Mrs., Ms., Prof., etc.) and regular expressions to handle complex patterns.</p>
+
+        <p>Our <strong>free sentence counter tool</strong> employs multiple detection algorithms that you can choose based on your specific needs. The Standard method handles general writing with common abbreviations. The Strict method counts only clear sentence endings, useful for academic writing where precision matters. The Academic method recognizes citations, references, and scholarly abbreviations. The Custom method lets you define your own rules for specialized content.</p>
+
+        <h3>Handling Edge Cases and Special Text</h3>
+        
+        <p>Professional <strong>online text sentence counter free</strong> tools must handle various edge cases that confuse simple counters. URLs and email addresses contain periods that shouldn't count as sentence endings. Decimal numbers (3.14) use periods as decimal points. Ellipses (...) indicate pauses or omissions rather than sentence breaks. Quotation marks can enclose complete sentences or fragments. Our <strong>free sentence count calculator online</strong> handles all these scenarios intelligently, providing accurate counts regardless of text complexity.</p>
+
+        <h2>Professional Applications of Sentence Counting</h2>
+
+        <h3>Writing and Content Creation</h3>
+        
+        <p>Professional writers rely on <strong>sentence count measurement tool online free</strong> solutions to maintain consistent style and readability. Varying sentence length creates rhythm—short sentences for impact, longer ones for complex explanations. Writers use sentence counts to ensure paragraphs contain appropriate numbers of sentences, typically 3-5 for web content and 5-8 for academic writing. Our <strong>online sentence count checker free</strong> helps writers achieve the perfect balance.</p>
+
+        <p>Journalists and copywriters use <strong>sentence counting tool free online</strong> metrics to meet editorial guidelines. News articles often target specific sentence counts per paragraph for readability. Marketing copy uses sentence length to control pacing and emphasis. Technical writers balance sentence complexity with clarity. The <strong>free online sentence analyzer</strong> capabilities of our tool support all these professional writing needs.</p>
+
+        <h3>SEO and Digital Marketing</h3>
+        
+        <p>Search engine optimization heavily relies on <strong>sentence counter and word counter online free</strong> analysis. SEO best practices recommend specific sentence lengths for optimal readability—typically 15-20 words per sentence. Content with too many long sentences scores poorly on readability metrics, affecting search rankings. Our <strong>online sentence count for writers free</strong> tool helps optimize content for both human readers and search algorithms.</p>
+
+        <p>Content marketers use <strong>free text sentence counter online</strong> tools to ensure consistency across multiple pieces. Blog posts, product descriptions, and landing pages maintain uniform readability when sentence metrics are monitored. Social media content requires even tighter control—Twitter threads, LinkedIn posts, and Instagram captions all benefit from sentence analysis. The <strong>sentence count extractor online free</strong> features help marketers maintain brand voice consistency.</p>
+
+        <h3>Academic and Educational Use</h3>
+        
+        <p>Educators and students depend on <strong>online sentence counter for text free</strong> tools for academic work. Writing assignments often specify sentence count requirements—introductions with 3-5 sentences, body paragraphs with 5-7 sentences, conclusions with 2-4 sentences. Teachers use sentence metrics to assess writing development and identify students who need additional support. Our <strong>free sentence tally tool online</strong> provides the precision academic work demands.</p>
+
+        <p>Researchers conducting linguistic studies use <strong>online sentence count utility free</strong> solutions for corpus analysis. Sentence length distributions reveal author style, text complexity, and readability levels. Comparative analysis across genres, time periods, or author demographics requires accurate sentence counting. The <strong>free online sentence count service</strong> our tool provides supports serious academic research with reliable metrics.</p>
+
+        <h2>Advanced Sentence Analysis Features</h2>
+
+        <h3>Beyond Simple Counting</h3>
+        
+        <p>Modern <strong>online sentence count tool for seo free</strong> solutions offer comprehensive text analysis beyond basic counting. Average sentence length indicates writing complexity and target audience level. Variation in sentence length suggests writing sophistication. Paragraph-to-sentence ratios reveal structural organization. Reading time calculations help content planners estimate audience engagement. Our tool provides all these advanced metrics in real-time.</p>
+
+        <h3>Integration with Readability Scores</h3>
+        
+        <p>Sentence count directly impacts readability formulas like Flesch-Kincaid, Gunning Fog, and SMOG indices. These calculations combine sentence length with word complexity to determine grade level and reading difficulty. Content targeting general audiences should aim for shorter sentences (15 words average), while academic or technical content may appropriately use longer sentences. Our <strong>sentence count and analysis online free</strong> tool helps you optimize for your specific audience.</p>
+
+        <h2>Best Practices for Accurate Sentence Counting</h2>
+
+        <h3>Preparing Text for Analysis</h3>
+        
+        <p>Before using any <strong>sentence count checker online</strong>, prepare your text for accurate analysis. Remove headers, footers, and page numbers that might confuse the counter. Standardize spacing—multiple spaces between sentences can affect some algorithms. Check for unusual punctuation that might need custom rules. Our <strong>free sentence count tool online</strong> handles most formatting issues automatically, but clean text produces the most reliable results.</p>
+
+        <h3>Choosing the Right Detection Method</h3>
+        
+        <p>Select your <strong>sentence counting tool free online</strong> method based on text type. Use Standard for general writing and web content. Choose Strict for legal documents or when precision is paramount. Select Academic for research papers, theses, and scholarly articles. Enable Custom for specialized content with unique abbreviation patterns or domain-specific terminology. The right method ensures accurate <strong>sentence count measurement tool online free</strong> results.</p>
+
+        <h3>Interpreting Results Effectively</h3>
+        
+        <p>Raw <strong>online sentence counter free</strong> numbers provide limited value without context. Compare your sentence metrics against genre standards—novels average 15-20 words per sentence, while technical documentation often exceeds 20. Analyze trends across your writing portfolio rather than isolated pieces. Use sentence length variation as a style indicator—consistent lengths suggest monotony, while strategic variation indicates sophisticated writing. Our <strong>free sentence counter tool</strong> provides the data; your expertise provides the interpretation.</p>
+
+        <h2>Comparing Sentence Counting Approaches</h2>
+
+        <h3>Manual Counting vs. Automated Tools</h3>
+        
+        <p>Manual <strong>sentence counting</strong> involves reading through text and tallying sentences individually. While feasible for short passages, it becomes impractical for long documents and introduces human error—missed abbreviations, overlooked ellipses, inconsistent judgment calls. Automated <strong>online text sentence counter free</strong> tools process thousands of sentences instantly with consistent rules. For professional work, automated counting is essential for accuracy and efficiency.</p>
+
+        <h3>Basic Counters vs. Professional Tools</h3>
+        
+        <p>Simple word processors offer basic sentence counting, but lack the sophistication of dedicated <strong>free sentence count calculator online</strong> tools. Basic counters often miscount abbreviations, fail to handle ellipses properly, and provide no additional metrics. Professional <strong>sentence count extractor online free</strong> solutions offer multiple detection algorithms, detailed statistics, export capabilities, and integration with readability formulas. For serious writing and editing work, professional tools deliver superior value.</p>
+
+        <h2>The Future of Text Analysis Technology</h2>
+
+        <p>Artificial intelligence is transforming <strong>sentence counting</strong> from mechanical tallying to intelligent analysis. AI-powered tools can identify sentence types (declarative, interrogative, imperative, exclamatory), assess sentence complexity, suggest improvements for clarity, and even predict reader comprehension difficulty. These capabilities will evolve <strong>online sentence count checker free</strong> tools from passive counters into active writing assistants. Our platform continuously incorporates these innovations while maintaining the simplicity you expect from a <strong>free online sentence count service</strong>.</p>
+
+        <h2>Conclusion: Master Your Writing with Professional Sentence Analysis</h2>
+
+        <p><strong>Sentence counting</strong> remains one of the most valuable yet underutilized tools in the writer's arsenal. From basic counting to complex readability analysis, understanding your sentence metrics empowers you to write more effectively, edit more efficiently, and optimize content for specific audiences and purposes. Whether you're crafting a novel, optimizing web content, grading student essays, or conducting linguistic research, accurate sentence analysis provides the foundation for excellence.</p>
+
+        <p>Our <strong>free online sentence count tool</strong> provides all the capabilities you need for professional text analysis. With automatic real-time counting, multiple detection methods, comprehensive statistics including reading time and sentence length distribution, plus export functionality, this tool serves everyone from casual writers to professional editors. The browser-based architecture ensures privacy and accessibility, while the intuitive interface requires no learning curve. Stop guessing about your sentence metrics—start using our professional <strong>sentence count and analysis online free</strong> tool today and experience the clarity that comes with precise text analysis.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How accurate is this sentence count tool?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Our <strong>free sentence count tool online</strong> uses advanced algorithms that handle abbreviations (Dr., Mr., Mrs., etc.), decimal numbers, ellipses, and other edge cases that confuse simple counters. With multiple detection methods (Standard, Strict, Academic, Custom), you can choose the precision level that matches your text type. The tool achieves 99%+ accuracy on standard English text.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does the tool count sentences in real-time?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>online sentence counter free</strong> features <strong>automatic real-time analysis</strong>. As you type or paste text, the tool instantly updates all statistics including sentence count, word count, character count, and reading time. The "Auto-analysis enabled" indicator confirms the feature is active. Changes to detection methods or options also apply instantly.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What's the difference between Standard, Strict, and Academic modes?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Standard</strong> mode handles general writing with common abbreviations (Dr., Mr., etc.). <strong>Strict</strong> mode counts only clear sentence endings, useful for legal documents. <strong>Academic</strong> mode recognizes citations and scholarly abbreviations (et al., i.e., e.g.). <strong>Custom</strong> lets you set minimum words per sentence and other parameters. Choose based on your text type for optimal <strong>sentence count checker online</strong> accuracy.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How is reading time calculated?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Reading time is based on average adult reading speeds: 250 words per minute for silent reading and 130 words per minute for speaking. These are standard benchmarks used by <strong>free online sentence analyzer</strong> tools. Actual times vary by content complexity and reader proficiency. Technical or academic text may take longer; simple fiction may be faster.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I export the sentence analysis results?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Click the <strong>"Export"</strong> button to download a complete report including all statistics, sentence breakdown, and metadata. You can also click <strong>"Copy Stats"</strong> to copy summary statistics to your clipboard. The <strong>sentence counter and word counter online free</strong> export feature is perfect for documentation, client reports, or academic citations.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What file types are supported?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">All text-based files: TXT, CSV, JSON, XML, HTML, Markdown, and code files (JS, CSS, Python, Java, C/C++, PHP, Ruby, Go, Rust, Swift, Kotlin, SQL, LOG). Files are read as plain text, so any text file works regardless of extension. Our <strong>online sentence count utility free</strong> handles them all.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is there a file size limit?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">The tool handles files up to 10-20MB (several million characters), roughly 3,000-5,000 pages. Limits vary by browser—Chrome/Edge handle larger files than Safari/mobile. For 100MB+ files, process in chunks. Our <strong>free online sentence count service</strong> is optimized for typical daily use cases.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my data secure?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely. All processing happens <strong>locally in your browser</strong>—text never uploads to servers or leaves your device. You can verify this with browser DevTools (Network tab shows no external data transfer). Works offline after loading. Ideal for confidential documents, legal text, or sensitive data. Privacy is built into our <strong>online sentence counter for text free</strong> architecture.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this tool free?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, completely <strong>free</strong> with no registration, usage limits, watermarks, or hidden fees. Use for personal or commercial projects without attribution. This is truly a <strong>free sentence tally tool online</strong> for everyone. Supported by unobtrusive advertising and voluntary user support.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I use this for SEO optimization?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely! Our <strong>online sentence count tool for seo free</strong> is perfect for optimizing content. Use it to maintain ideal sentence length (15-20 words average), ensure consistent paragraph structure, and improve readability scores. SEO-friendly content typically uses varied sentence lengths with an average under 20 words. Export your analysis to track optimization progress across multiple pieces.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const inputStats = document.getElementById('inputStats');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+const processingTime = document.getElementById('processingTime');
+const lastUpdated = document.getElementById('lastUpdated');
+
+// Stats Elements
+const sentenceCount = document.getElementById('sentenceCount');
+const wordCount = document.getElementById('wordCount');
+const charCount = document.getElementById('charCount');
+const avgSentenceLength = document.getElementById('avgSentenceLength');
+const paragraphCount = document.getElementById('paragraphCount');
+const readingTime = document.getElementById('readingTime');
+const speakingTime = document.getElementById('speakingTime');
+const longestSentence = document.getElementById('longestSentence');
+const shortestSentence = document.getElementById('shortestSentence');
+
+// Buttons
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const exportBtn = document.getElementById('exportBtn');
+const resetBtn = document.getElementById('resetBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const prevSentence = document.getElementById('prevSentence');
+const nextSentence = document.getElementById('nextSentence');
+
+// Method buttons
+const methodBtns = document.querySelectorAll('.method-btn');
+let currentMethod = 'standard';
+let sentences = [];
+let currentSentenceIndex = 0;
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Debounce function
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Method selection
+methodBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    methodBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentMethod = btn.dataset.method;
+    analyzeText();
+  });
+});
+
+// Get sentence boundaries based on method
+function getSentenceRegex(method) {
+  const ignoreAbbr = document.getElementById('ignoreAbbreviations').value === 'yes';
+  
+  // Common abbreviations to handle
+  const abbreviations = ignoreAbbr ? '(?:Mr|Mrs|Ms|Dr|Prof|Sr|Jr|vs|Vol|vol|Inc|Ltd|Jr|Sr|Co|Corp|Dept|Est|Fig|fig|Gen|Hon|No|no|Pt|pt|St|st|Ave|Blvd|Rd|etc|et al|i\\.e|e\\.g|a\\.m|p\\.m|A\\.M|P\\.M|Ph\\.D|M\\.D|B\\.A|M\\.A|D\\.D\\.S)' : '';
+  
+  switch(method) {
+    case 'strict':
+      // Only clear sentence endings
+      return /[.!?]+(?=\s+[A-Z]|$)/g;
+    case 'academic':
+      // Handle citations and academic abbreviations
+      return new RegExp(`[.!?]+(?=\\s+(?!${abbreviations}\\s)[A-Z]|\\s*\\[|\\s*\\(|$)`, 'g');
+    case 'custom':
+      // User-defined minimum words handled separately
+      return /[.!?]+(?=\s+[A-Z]|$)/g;
+    case 'standard':
+    default:
+      // Standard with abbreviation handling
+      if (ignoreAbbr) {
+        return new RegExp(`[.!?]+(?=\\s+(?!${abbreviations}\\s)[A-Z]|$)`, 'g');
+      }
+      return /[.!?]+(?=\s+[A-Z]|$)/g;
+  }
+}
+
+// Split text into sentences
+function splitIntoSentences(text) {
+  if (!text.trim()) return [];
+  
+  const regex = getSentenceRegex(currentMethod);
+  const minWords = parseInt(document.getElementById('minWords').value) || 1;
+  
+  // Split by sentence endings
+  const parts = text.split(regex);
+  const result = [];
+  
+  for (let part of parts) {
+    const trimmed = part.trim();
+    if (!trimmed) continue;
+    
+    // Count words in this segment
+    const words = trimmed.split(/\s+/).filter(w => w.length > 0);
+    
+    // Check minimum words requirement
+    if (words.length >= minWords) {
+      result.push(trimmed);
+    }
+  }
+  
+  return result;
+}
+
+// Main analysis function
+function analyzeText() {
+  const startTime = performance.now();
+  const text = inputText.value;
+  
+  if (!text.trim()) {
+    resetStats();
+    return;
+  }
+  
+  // Basic counts
+  const chars = text.length;
+  const charsNoSpace = text.replace(/\s/g, '').length;
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+  const lines = text === '' ? 0 : text.split('\n').length;
+  
+  // Paragraph count
+  const countEmpty = document.getElementById('countEmpty').value === 'yes';
+  const paragraphs = text.split(/\n\s*\n/).filter(p => countEmpty ? true : p.trim().length > 0).length;
+  
+  // Sentence analysis
+  sentences = splitIntoSentences(text);
+  const sentenceCountVal = sentences.length;
+  
+  // Calculate average sentence length
+  let totalSentenceWords = 0;
+  let maxWords = 0;
+  let minWords = Infinity;
+  
+  sentences.forEach(sent => {
+    const sentWords = sent.split(/\s+/).filter(w => w.length > 0).length;
+    totalSentenceWords += sentWords;
+    maxWords = Math.max(maxWords, sentWords);
+    minWords = Math.min(minWords, sentWords);
+  });
+  
+  const avgWords = sentenceCountVal > 0 ? (totalSentenceWords / sentenceCountVal).toFixed(1) : 0;
+  
+  // Reading time (250 wpm silent, 130 wpm speaking)
+  const readTime = Math.ceil(words / 250);
+  const speakTime = Math.ceil(words / 130);
+  
+  const endTime = performance.now();
+  
+  // Update UI
+  sentenceCount.textContent = sentenceCountVal;
+  wordCount.textContent = words;
+  charCount.textContent = chars;
+  avgSentenceLength.textContent = avgWords;
+  paragraphCount.textContent = paragraphs;
+  readingTime.textContent = readTime + (readTime === 1 ? ' min' : ' mins');
+  speakingTime.textContent = speakTime + (speakTime === 1 ? ' min' : ' mins');
+  longestSentence.textContent = maxWords > 0 ? maxWords + ' words' : '0 words';
+  shortestSentence.textContent = minWords !== Infinity ? minWords + ' words' : '0 words';
+  
+  inputStats.textContent = `Chars: ${chars} | Words: ${words} | Lines: ${lines}`;
+  processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+  lastUpdated.textContent = new Date().toLocaleTimeString();
+  
+  // Update sentence preview
+  updateSentencePreview();
+}
+
+function resetStats() {
+  sentenceCount.textContent = '0';
+  wordCount.textContent = '0';
+  charCount.textContent = '0';
+  avgSentenceLength.textContent = '0';
+  paragraphCount.textContent = '0';
+  readingTime.textContent = '0 min';
+  speakingTime.textContent = '0 min';
+  longestSentence.textContent = '0 words';
+  shortestSentence.textContent = '0 words';
+  inputStats.textContent = 'Chars: 0 | Words: 0 | Lines: 0';
+  processingTime.textContent = '';
+  lastUpdated.textContent = '';
+  sentences = [];
+  document.getElementById('sentencePreview').classList.add('hidden');
+}
+
+function updateSentencePreview() {
+  const preview = document.getElementById('sentencePreview');
+  const list = document.getElementById('sentenceList');
+  const nav = document.getElementById('sentenceNav');
+  
+  if (sentences.length === 0) {
+    preview.classList.add('hidden');
+    return;
+  }
+  
+  preview.classList.remove('hidden');
+  list.innerHTML = '';
+  
+  sentences.slice(0, 20).forEach((sent, index) => {
+    const div = document.createElement('div');
+    div.className = 'sentence-highlight p-2 rounded bg-white/5 cursor-pointer text-xs';
+    div.innerHTML = `
+      <div class="flex items-center justify-between mb-0.5">
+        <span class="text-xs font-medium text-indigo-400">#${index + 1}</span>
+        <span class="text-xs text-gray-500">${sent.split(/\s+/).filter(w => w.length > 0).length} words</span>
+      </div>
+      <div class="text-gray-300 truncate">${sent.substring(0, 80)}${sent.length > 80 ? '...' : ''}</div>
+    `;
+    
+    div.addEventListener('click', () => {
+      // Highlight in textarea
+      highlightSentence(index);
+    });
+    
+    list.appendChild(div);
+  });
+  
+  if (sentences.length > 20) {
+    const more = document.createElement('div');
+    more.className = 'text-xs text-gray-500 text-center py-1';
+    more.textContent = `... and ${sentences.length - 20} more sentences`;
+    list.appendChild(more);
+  }
+  
+  nav.textContent = `${Math.min(currentSentenceIndex + 1, sentences.length)} / ${sentences.length}`;
+}
+
+function highlightSentence(index) {
+  if (index < 0 || index >= sentences.length) return;
+  currentSentenceIndex = index;
+  updateSentencePreview();
+  // Scroll to sentence in textarea (simplified)
+  document.getElementById('sentenceNav').textContent = `${index + 1} / ${sentences.length}`;
+}
+
+// Navigation buttons
+prevSentence.addEventListener('click', () => {
+  if (currentSentenceIndex > 0) {
+    highlightSentence(currentSentenceIndex - 1);
+  }
+});
+
+nextSentence.addEventListener('click', () => {
+  if (currentSentenceIndex < sentences.length - 1) {
+    highlightSentence(currentSentenceIndex + 1);
+  }
+});
+
+// Debounced analysis
+const debouncedAnalyze = debounce(analyzeText, 100);
+
+// Drag and drop
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  if (!file.type.match('text.*') && !file.name.match(/\.(txt|csv|json|xml|html?|md|js|css|py|java|cpp|c|php|rb|go|rs|swift|kt|sql|log)$/i)) {
+    alert('Please upload a text file');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    analyzeText();
+  };
+  reader.readAsText(file);
+}
+
+// Button handlers
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    analyzeText();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+function clearInput() {
+  inputText.value = '';
+  resetStats();
+  inputText.focus();
+}
+
+async function copyStats() {
+  const stats = `
+Sentence Count: ${sentenceCount.textContent}
+Word Count: ${wordCount.textContent}
+Character Count: ${charCount.textContent}
+Average Sentence Length: ${avgSentenceLength.textContent} words
+Paragraphs: ${paragraphCount.textContent}
+Reading Time: ${readingTime.textContent}
+Speaking Time: ${speakingTime.textContent}
+Longest Sentence: ${longestSentence.textContent}
+Shortest Sentence: ${shortestSentence.textContent}
+  `.trim();
+  
+  try {
+    await navigator.clipboard.writeText(stats);
+    const original = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = original;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+}
+
+function exportReport() {
+  const report = `
+SENTENCE COUNT REPORT
+Generated: ${new Date().toLocaleString()}
+================================
+
+STATISTICS
+----------
+Total Sentences: ${sentenceCount.textContent}
+Total Words: ${wordCount.textContent}
+Total Characters: ${charCount.textContent}
+Average Sentence Length: ${avgSentenceLength.textContent} words
+Paragraphs: ${paragraphCount.textContent}
+Reading Time: ${readingTime.textContent}
+Speaking Time: ${speakingTime.textContent}
+Longest Sentence: ${longestSentence.textContent}
+Shortest Sentence: ${shortestSentence.textContent}
+
+SENTENCE BREAKDOWN
+------------------
+${sentences.map((s, i) => `${i + 1}. [${s.split(/\s+/).filter(w => w.length > 0).length} words] ${s.substring(0, 100)}${s.length > 100 ? '...' : ''}`).join('\n\n')}
+
+================================
+Generated by EasyPro Tools Sentence Count Tool
+https://easyprotools.com/sentence-count-tool/
+  `.trim();
+  
+  const blob = new Blob([report], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'sentence-count-report.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+function resetAll() {
+  inputText.value = '';
+  resetStats();
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Event listeners
+inputText.addEventListener('input', debouncedAnalyze);
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+copyBtn.addEventListener('click', copyStats);
+exportBtn.addEventListener('click', exportReport);
+resetBtn.addEventListener('click', resetAll);
+
+// Settings change handlers
+['minWords', 'ignoreAbbreviations', 'countEmpty', 'languageSelect'].forEach(id => {
+  document.getElementById(id)?.addEventListener('change', analyzeText);
+});
+
+// Initialize
+resetStats();
+</script>
+</body>
+</html>

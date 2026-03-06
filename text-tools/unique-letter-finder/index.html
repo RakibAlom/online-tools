@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unique Letter Finder - Free Online Unique Character Analyzer</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online unique letter finder tool. Instantly identify, extract, and analyze unique characters and letters in any text. Real-time unique character detection with visual analysis." />
+  <meta name="keywords" content="free unique letter finder online, online unique letter finder free, unique letter finder tool, free unique character finder online, online unique letter extractor free, unique letter analyzer online, free online unique letter tool, online text unique letters finder free, free online character uniqueness finder, unique alphabet finder online free, free unique letter search tool, online text unique character analyzer free, unique letter counter online free, free online letter uniqueness checker, unique letter detection tool online, online unique letter list generator free, free unique character extractor online, unique letter filter online free, free online text letter uniqueness tool, unique letter highlighter online, online unique letter analysis free, free unique char finder online, unique letter identification tool online free" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/unique-letter-finder/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/unique-letter-finder/" />
+  <meta property="og:title" content="Unique Letter Finder - Free Online Unique Character Analyzer" />
+  <meta property="og:description" content="Instantly identify, extract, and analyze unique characters and letters in any text. Real-time unique character detection with visual analysis." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/unique-letter-finder/" />
+  <meta name="twitter:title" content="Unique Letter Finder - Free Online Unique Character Analyzer" />
+  <meta name="twitter:description" content="Instantly identify, extract, and analyze unique characters and letters in any text. Real-time unique character detection with visual analysis." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+    <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+
+    <!--Google Site Verification-->
+    <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-4D39CLDW58');
+    </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .method-btn {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    .method-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      color: #818cf8;
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .unique-char-card {
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    
+    .unique-char-card:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(99, 102, 241, 0.4);
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+
+    .char-highlight {
+      background: rgba(99, 102, 241, 0.3);
+      border-radius: 2px;
+      padding: 0 2px;
+    }
+
+    .stat-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 12h8M10 20h20M10 28h14" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Unique Letter Finder</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Unique Letter Finder
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Text Analysis Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-analysis enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Input Text
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Type or paste text here to find unique letters and characters... Or drag & drop a file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.csv,.md,.json,.xml,.html,.js,.css,.py,.java,.cpp,.c,.php,.rb,.go,.rs,.swift,.kt,.sql,.log" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Chars: 0 | Unique: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Analysis Results -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Unique Characters <span id="uniqueCount" class="text-gray-500 font-normal ml-1 hidden">(0 found)</span>
+            </label>
+            <div class="flex gap-1">
+              <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                Copy List
+              </button>
+              <button id="downloadBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Export
+              </button>
+            </div>
+          </div>
+          
+          <div id="resultsContainer" class="w-full h-48 lg:h-64 p-3 rounded-md glass-input overflow-y-auto">
+            <div id="emptyState" class="h-full flex flex-col items-center justify-center text-gray-500">
+              <svg class="w-8 h-8 mb-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"/></svg>
+              <p class="text-xs">Enter text to see unique characters</p>
+            </div>
+            <div id="uniqueCharsGrid" class="hidden grid grid-cols-6 sm:grid-cols-8 gap-1"></div>
+          </div>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="analysisStats">Letters: 0 | Numbers: 0 | Symbols: 0</span>
+            <span id="processingTime" class="text-gray-600"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-3">
+        
+        <!-- Analysis Options -->
+        <div>
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Analysis Options</label>
+          <div class="flex flex-wrap gap-1">
+            <button class="method-btn active rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-filter="all">All Characters</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-filter="letters">Letters Only</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-filter="numbers">Numbers Only</button>
+            <button class="method-btn rounded-md border border-white/10 bg-white/5 text-gray-300 transition-all" data-filter="symbols">Symbols Only</button>
+          </div>
+        </div>
+
+        <!-- Advanced Options -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Case Sensitivity</label>
+            <select id="caseSensitivity" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="sensitive">Case Sensitive (A ≠ a)</option>
+              <option value="insensitive">Case Insensitive (A = a)</option>
+            </select>
+          </div>
+          
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Sort By</label>
+            <select id="sortBy" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="frequency">Frequency (High to Low)</option>
+              <option value="alphabetical">Alphabetical (A-Z)</option>
+              <option value="appearance">Appearance Order</option>
+              <option value="unicode">Unicode Value</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Output Format</label>
+            <select id="outputFormat" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="list">Character List</option>
+              <option value="comma">Comma Separated</option>
+              <option value="json">JSON Array</option>
+              <option value="regex">Regex Class</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Stats Dashboard -->
+        <div id="statsDashboard" class="hidden">
+          <label class="text-xs font-medium text-gray-300 mb-2 block">Detailed Statistics</label>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+            <div class="stat-card rounded-md p-2">
+              <div class="text-xs text-gray-500 mb-1">Total Unique</div>
+              <div id="statTotalUnique" class="text-lg font-bold text-indigo-400">0</div>
+            </div>
+            <div class="stat-card rounded-md p-2">
+              <div class="text-xs text-gray-500 mb-1">Letters</div>
+              <div id="statLetters" class="text-lg font-bold text-green-400">0</div>
+            </div>
+            <div class="stat-card rounded-md p-2">
+              <div class="text-xs text-gray-500 mb-1">Numbers</div>
+              <div id="statNumbers" class="text-lg font-bold text-yellow-400">0</div>
+            </div>
+            <div class="stat-card rounded-md p-2">
+              <div class="text-xs text-gray-500 mb-1">Symbols</div>
+              <div id="statSymbols" class="text-lg font-bold text-pink-400">0</div>
+            </div>
+          </div>
+          
+          <!-- Character Frequency Bars -->
+          <div id="frequencyBars" class="mt-3 space-y-1 max-h-32 overflow-y-auto pr-1 hidden">
+            <!-- Frequency bars will be inserted here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Unique Letter Finder?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Real-Time Analysis</h3>
+          <p class="text-gray-400 text-xs">Instant unique character detection as you type</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Visual Stats</h3>
+          <p class="text-gray-400 text-xs">Frequency bars and detailed analytics</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Smart Filters</h3>
+          <p class="text-gray-400 text-xs">Filter by letters, numbers, or symbols</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Drag & Drop</h3>
+          <p class="text-gray-400 text-xs">Upload text files instantly</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Multiple Formats</h3>
+          <p class="text-gray-400 text-xs">Export as list, JSON, or regex</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">100% Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based, no data uploads</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Enter Text</h3>
+          <p class="text-gray-400 text-xs">Type, paste, or drop a file. Analysis happens automatically.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Choose Filters</h3>
+          <p class="text-gray-400 text-xs">Select character types and case sensitivity options.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">View Analysis</h3>
+          <p class="text-gray-400 text-xs">See unique characters with frequency statistics instantly.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Export Results</h3>
+          <p class="text-gray-400 text-xs">Copy or download results in your preferred format.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Unique Character Analysis: Mastering Text Uniqueness Detection</h2>
+        
+        <p><strong>Unique letter finder</strong> tools represent one of the most fundamental yet powerful utilities in text processing and analysis. Whether you're a developer debugging character encoding issues, a linguist studying alphabet usage patterns, a data scientist cleaning datasets, or a security analyst examining password complexity, understanding how to identify and extract unique characters from text is essential. Our <strong>free online unique letter finder</strong> provides professional-grade character analysis capabilities that help you understand the composition of any text at the granular level.</p>
+
+        <p>In the digital age where text data flows constantly through our systems, the ability to quickly <strong>find unique letters online</strong> has become more than just a convenience—it's a necessity. From identifying special characters causing system errors to analyzing the linguistic diversity of content, unique character detection serves countless practical purposes. This comprehensive guide explores everything you need to know about unique character analysis, why it matters, and how our <strong>online unique letter finder free</strong> tool can streamline your workflow.</p>
+
+        <h2>What Is a Unique Letter Finder and Why Do You Need One?</h2>
+        
+        <p>A <strong>unique letter finder tool</strong> is a specialized utility designed to analyze text and identify every distinct character present, eliminating duplicates to show you exactly what characters make up your content. Unlike simple character counting, which tallies total occurrences, unique character detection focuses on the diversity of your text—revealing the distinct building blocks used in your data. When you use our <strong>free unique character finder online</strong>, you're performing a diagnostic analysis that reveals the underlying structure of any text string.</p>
+
+        <p>The applications for <strong>online unique letter extractor free</strong> tools extend across numerous fields and industries. Web developers use them to detect invisible characters or encoding issues that break layouts. Data analysts employ them to profile datasets and identify anomalies. Content creators utilize them to ensure consistent character usage across platforms. Security professionals leverage them to analyze password complexity and detect potential injection attacks. Linguists and researchers apply them to study language patterns and character frequency distributions. The versatility of <strong>unique letter analyzer online</strong> technology makes it indispensable for anyone working with text data.</p>
+
+        <h2>Understanding Character Types and Classifications</h2>
+
+        <h3>Letters and Alphabetic Characters</h3>
+        
+        <p>When you <strong>find unique letters online</strong>, you're typically looking for alphabetic characters—the foundation of written language. Our <strong>unique alphabet finder online free</strong> distinguishes between uppercase and lowercase letters based on your sensitivity settings. This distinction proves crucial for case-sensitive systems like passwords, programming variables, and database queries. The tool recognizes letters from multiple alphabets, including Latin (A-Z), extended Latin (accents and diacritics), Cyrillic, Greek, and other Unicode alphabetic characters, making it a truly international <strong>free online unique letter tool</strong>.</p>
+
+        <p>Understanding letter uniqueness helps in various scenarios: ensuring password complexity by requiring mixed cases, detecting inconsistent capitalization in data entry, identifying non-standard characters in imported data, and analyzing the linguistic richness of text content. Our <strong>online text unique letters finder free</strong> provides instant visibility into the alphabetic diversity of any content, helping you maintain data quality and consistency.</p>
+
+        <h3>Numeric Characters and Digits</h3>
+        
+        <p>Numbers represent another critical category in <strong>unique character finder</strong> analysis. Digits 0-9 may seem simple, but their presence or absence in text data carries significant meaning. In password security analysis, numeric inclusion indicates complexity. In data validation, unexpected numbers in text fields signal potential data corruption. Our <strong>free online character uniqueness finder</strong> separates numeric characters for individual analysis, allowing you to quickly assess the quantitative elements within your text.</p>
+
+        <p>Beyond basic digits, modern <strong>unique letter identification tool online free</strong> utilities recognize various numeric representations: subscript and superscript numbers, Roman numerals, fraction characters, and mathematical notation symbols. This comprehensive detection ensures no numeric character goes unnoticed, whether you're analyzing financial data, scientific notation, or encoded information.</p>
+
+        <h3>Symbols, Punctuation, and Special Characters</h3>
+        
+        <p>The most challenging aspect of text analysis often involves symbols and special characters. These include punctuation marks (periods, commas, quotation marks), mathematical symbols (+, -, =, ×), currency symbols ($, €, £, ¥), and special Unicode characters (emojis, arrows, geometric shapes). Our <strong>unique letter highlighter online</strong> distinctly categorizes these symbols, preventing them from being lost among letters and numbers.</p>
+
+        <p>Special characters frequently cause technical issues: invisible control characters disrupting parsers, smart quotes breaking database imports, emojis rendering inconsistently across platforms, or XML-reserved characters causing markup errors. Using a <strong>free unique letter search tool</strong> to identify these characters before they cause problems saves hours of debugging and data cleaning. The visual representation in our tool makes immediately apparent which special characters exist in your text.</p>
+
+        <h2>Advanced Features of Professional Unique Character Tools</h2>
+
+        <h3>Case Sensitivity Control</h3>
+        
+        <p>One of the most important configuration options in any <strong>online unique letter analysis free</strong> tool is case sensitivity handling. Case-sensitive mode treats 'A' and 'a' as distinct characters, essential for password analysis, programming syntax checking, and exact data matching. Case-insensitive mode considers them the same letter, useful for linguistic analysis, search indexing, and general content profiling. Our <strong>free unique char finder online</strong> provides both modes with a simple toggle, adapting to your specific use case.</p>
+
+        <p>The case sensitivity decision significantly impacts results: a case-sensitive analysis of "Hello World" finds 8 unique characters (H, e, l, o, W, r, d, space), while case-insensitive analysis finds 7 (treating W and w as the same). Understanding these nuances helps you choose the right approach for your <strong>unique letter detection tool online</strong> requirements.</p>
+
+        <h3>Sorting and Organization Options</h3>
+        
+        <p>Professional <strong>online text unique character analyzer free</strong> tools offer multiple sorting methods to organize results meaningfully. Frequency sorting arranges characters by occurrence count, highlighting the most common characters in your text—valuable for compression analysis, cryptography studies, and language identification. Alphabetical sorting presents characters in A-Z order, making it easy to spot missing letters or check for specific characters. Appearance order maintains the sequence in which characters first appear in the text, useful for encoding and sequence analysis.</p>
+
+        <p>Unicode value sorting organizes characters by their numerical code points, grouping related characters together and helping identify non-standard or high-value Unicode characters. This sorting method particularly aids developers working with internationalization, emoji support, and legacy system compatibility. Our <strong>unique letter counter online free</strong> implements all these sorting strategies, providing flexible analysis options.</p>
+
+        <h3>Export and Integration Capabilities</h3>
+        
+        <p>Modern <strong>free online letter uniqueness checker</strong> tools must integrate with existing workflows. Export options typically include plain text lists (one character per line for easy reading), comma-separated values (for spreadsheet import), JSON arrays (for API integration and programming), and regular expression character classes (for immediate use in code). These export formats transform raw analysis into actionable data that feeds directly into your applications, databases, or scripts.</p>
+
+        <p>The regex export feature deserves special mention—converting your unique character list into a valid regex character class like <code>[a-zA-Z0-9!@#$]</code> enables immediate use in validation patterns, search operations, and data filtering. This bridges the gap between analysis and implementation, making our <strong>online unique letter list generator free</strong> a practical development tool rather than just a diagnostic utility.</p>
+
+        <h2>Practical Applications and Use Cases</h2>
+
+        <h3>Data Cleaning and Quality Assurance</h3>
+        
+        <p>Data scientists and database administrators regularly use <strong>free unique character extractor online</strong> tools to profile and clean datasets. Before importing text data into structured databases, understanding the character set prevents encoding errors, truncation issues, and corruption. Unique character analysis reveals invisible problems: null bytes indicating file corruption, tab characters disrupting CSV parsing, non-breaking spaces causing search mismatches, or control characters affecting display.</p>
+
+        <p>Regular expression patterns derived from unique character analysis create robust data validation rules. If your analysis shows that a name field contains digits, you know data quality issues exist. If a numeric field contains letters, validation failures will occur. Proactive <strong>unique letter filter online free</strong> analysis prevents these issues from reaching production systems.</p>
+
+        <h3>Security and Password Analysis</h3>
+        
+        <p>Cybersecurity professionals leverage <strong>free online text letter uniqueness tool</strong> capabilities to assess password complexity and detect potential attacks. Password strength often correlates with character diversity—more unique characters generally indicate stronger passwords. Analyzing password dumps or policy compliance requires identifying the character sets in use: Are users including numbers and symbols? Are passwords case-varied? Are there forbidden characters causing login issues?</p>
+
+        <p>On the defensive side, <strong>unique letter detection tool online</strong> analysis helps identify injection attacks. SQL injection attempts often contain specific punctuation patterns (quotes, semicolons, dashes). Cross-site scripting attacks include angle brackets and JavaScript characters. By analyzing input character uniqueness, security systems can flag anomalous patterns for further inspection before processing.</p>
+
+        <h3>Programming and Development</h3>
+        
+        <p>Software developers encounter character-related issues constantly: string encoding mismatches between systems, regex pattern optimization requiring character class knowledge, internationalization testing across languages, and font rendering verification for special symbols. A <strong>unique character finder</strong> serves as the first diagnostic step when text behaves unexpectedly.</p>
+
+        <p>When debugging "invisible" characters—those that occupy space but don't display clearly—developers use unique character analysis to identify zero-width spaces, non-breaking spaces, soft hyphens, or control characters. These characters often sneak in through copy-paste operations from formatted documents, web pages, or PDFs, causing layout issues, search failures, or data mismatches that seem inexplicable until the character composition is revealed.</p>
+
+        <h3>Linguistic and Content Analysis</h3>
+        
+        <p>Linguists and content strategists apply <strong>online unique letter analysis free</strong> tools to study writing patterns and optimize content. Character diversity metrics indicate vocabulary richness and writing sophistication. Over-reliance on common letters might suggest repetitive language, while balanced character distribution indicates varied expression. Multilingual content analysis reveals which alphabets and scripts appear in mixed-language documents.</p>
+
+        <p>For content optimization, understanding character usage ensures platform compatibility. Social media posts containing special Unicode characters may display differently across devices. Email subject lines with emojis might trigger spam filters. URL slugs containing non-ASCII characters require encoding. <strong>Unique letter highlighter online</strong> analysis helps content creators navigate these constraints while maintaining message integrity.</p>
+
+        <h2>Technical Implementation and Best Practices</h2>
+
+        <h3>Unicode and Character Encoding</h3>
+        
+        <p>Modern <strong>unique letter finder tool</strong> implementations must handle Unicode comprehensively. Unicode assigns a unique number (code point) to every character across all writing systems, supporting over 140,000 characters including emojis, mathematical symbols, and historical scripts. Proper Unicode handling ensures your analysis captures characters from any language: Chinese hanzi, Arabic script, Devanagari, emoji, or mathematical notation.</p>
+
+        <p>Encoding issues arise when systems interpret the same bytes differently. UTF-8, the dominant web encoding, represents characters using variable byte lengths. Misinterpreting UTF-8 data as ASCII or Latin-1 produces "mojibake"—garbled text with replacement characters. Our browser-based <strong>free online unique letter tool</strong> leverages JavaScript's native Unicode support, ensuring accurate character identification regardless of source encoding.</p>
+
+        <h3>Performance Optimization</h3>
+        
+        <p>Analyzing large text datasets requires efficient algorithms. The fundamental operation—identifying unique characters—typically uses hash sets or bit arrays for O(n) linear time complexity, processing millions of characters instantly. Sorting operations add O(n log n) complexity, while frequency counting requires additional hash map storage. For real-time tools like our <strong>online unique letter finder free</strong>, debouncing input prevents excessive recalculation during typing, balancing responsiveness with performance.</p>
+
+        <p>Memory management matters when processing files approaching megabytes or gigabytes. Streaming analysis processes text in chunks rather than loading entirely into memory. Web-based tools face additional constraints from browser memory limits and single-threaded execution, requiring careful optimization for large file handling without UI freezing.</p>
+
+        <h3>Accuracy and Edge Cases</h3>
+        
+        <p>Professional <strong>unique alphabet finder online free</strong> tools handle edge cases that simple implementations miss: combining characters (like accent marks that attach to base letters), zero-width joiners used in emoji sequences, variation selectors that modify character appearance, and surrogate pairs representing characters outside the Basic Multilingual Plane. These advanced Unicode features ensure accurate analysis of modern digital text, including complex emoji and international writing systems.</p>
+
+        <p>Normalization represents another consideration—Unicode allows multiple representations of the same visual character (e.g., "é" as single character vs. "e" plus combining acute accent). Canonical equivalence means these should be treated as identical for most purposes, though strict byte-level analysis preserves distinctions. Our <strong>online text unique letters finder free</strong> provides options for handling these complexities based on your requirements.</p>
+
+        <h2>Comparing Unique Character Analysis Methods</h2>
+
+        <h3>Manual Inspection vs. Automated Tools</h3>
+        
+        <p>Manual character inspection involves reading through text character-by-character, feasible only for short strings and guaranteed to miss invisible or subtle characters. For any text longer than a few words, manual analysis becomes impractical and error-prone. Automated <strong>free unique letter search tool</strong> solutions process thousands of characters instantly, identify invisible control characters, categorize by type, and provide statistical summaries impossible to calculate manually.</p>
+
+        <p>Spreadsheet software offers basic unique value detection through pivot tables or remove-duplicates features, but these treat entire cell contents as values rather than analyzing individual characters within text. Programming languages like Python provide set operations for unique character extraction, but require coding knowledge and environment setup. Dedicated <strong>unique letter analyzer online</strong> tools bridge the gap, providing programming-level analysis through an accessible interface.</p>
+
+        <h3>Command-Line vs. Web-Based Tools</h3>
+        
+        <p>Command-line utilities (Unix uniq, sort, awk) offer powerful text processing for technical users comfortable with terminal interfaces. These tools excel in scripting and automation but require installation, lack visual feedback, and present steep learning curves. Web-based <strong>free online character uniqueness finder</strong> tools provide immediate accessibility—no installation, cross-platform compatibility, intuitive visual interfaces, and instant results sharing through URLs.</p>
+
+        <p>Privacy considerations differentiate approaches: command-line tools process data locally without network transmission, while web tools may upload data to servers. Our browser-based <strong>unique letter identification tool online free</strong> performs all processing client-side using JavaScript, ensuring your text never leaves your device—combining the privacy of local tools with the convenience of web access.</p>
+
+        <h2>The Future of Character Analysis Technology</h2>
+
+        <p>Artificial intelligence and machine learning are beginning to influence <strong>unique letter finder</strong> technology, moving beyond simple enumeration toward intelligent interpretation. AI-powered tools can: identify the language or script family based on character distribution, detect encoding issues and suggest corrections, recognize patterns indicating specific file formats or data types, and predict missing characters in corrupted text. These capabilities transform character analysis from descriptive to predictive, offering proactive insights rather than reactive reporting.</p>
+
+        <p>As Unicode continues expanding—adding new emoji, scripts for endangered languages, and technical symbols—unique character tools must evolve to handle growing complexity. The Unicode standard releases annual updates, with version 15.0 adding thousands of new characters. Modern tools require architectural flexibility to accommodate these expansions without fundamental redesign, ensuring longevity and accuracy as digital communication evolves.</p>
+
+        <h2>Conclusion: Master Your Text with Professional Character Analysis</h2>
+
+        <p><strong>Unique letter finder</strong> technology represents an essential utility in the modern digital toolkit, bridging the gap between raw text and actionable insight. From debugging encoding issues to optimizing content strategy, from ensuring data quality to analyzing security threats, the ability to quickly identify and categorize unique characters streamlines workflows across countless domains. Understanding what characters comprise your text—beyond just what words they form—provides diagnostic capabilities that prevent problems before they manifest.</p>
+
+        <p>Our <strong>free online unique letter finder</strong> delivers professional-grade character analysis through an intuitive, browser-based interface. With real-time processing as you type, comprehensive filtering options, multiple sorting strategies, visual frequency representation, and flexible export formats, this tool serves everyone from casual users inspecting pasted text to professionals analyzing massive datasets. The privacy-focused client-side architecture ensures your sensitive data remains secure while providing instant results.</p>
+
+        <p>Whether you need to <strong>find unique letters online</strong> for a quick check, perform deep <strong>online unique letter analysis free</strong> for research, or integrate <strong>unique character finder</strong> capabilities into your regular workflow, our tool provides the reliability, speed, and features you need. Stop guessing about your text composition—start analyzing with precision using our advanced <strong>unique letter finder tool</strong> today and discover exactly what characters lie within your data.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How does the unique letter finder work?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Our <strong>free online unique letter finder</strong> analyzes your text in real-time using JavaScript. As you type or paste content, it examines every character, identifies distinct values (removing duplicates), and categorizes them by type (letters, numbers, symbols). The tool uses efficient algorithms to process millions of characters instantly, displaying results in a visual grid with frequency statistics. All processing happens locally in your browser—your text never uploads to any server, ensuring complete privacy while using this <strong>online unique letter finder free</strong> tool.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What's the difference between case-sensitive and case-insensitive mode?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Case-sensitive mode treats uppercase and lowercase letters as different characters (A and a are counted separately). This is essential for password analysis, programming, and exact data matching. Case-insensitive mode considers them the same letter, useful for general text analysis and linguistic studies. Our <strong>unique letter analyzer online</strong> lets you toggle between modes instantly, with results updating automatically. For example, "Hello" contains 4 unique letters case-insensitively (H, e, l, o) but 5 case-sensitively (H, e, l, o, L).</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I find unique characters in files?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>online unique letter extractor free</strong> supports drag-and-drop file uploads and file picker selection. It handles TXT, CSV, JSON, XML, HTML, Markdown, and all common code file formats (JS, Python, Java, C++, etc.). Files are read locally in your browser—no upload required. This makes it perfect for analyzing log files, datasets, or source code for character encoding issues. The tool processes files up to 10-20MB efficiently, displaying unique characters and their frequencies instantly.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What export formats are available?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Our <strong>free unique character extractor online</strong> offers four export formats: <strong>List</strong> (one character per line with frequency), <strong>Comma Separated</strong> (for spreadsheet import), <strong>JSON Array</strong> (for API integration and programming), and <strong>Regex Class</strong> (formatted as [a-zA-Z] for immediate use in code). Click the "Export" button and select your preferred format. You can also click individual characters in the results grid to copy them, or use "Copy List" to copy all unique characters to your clipboard instantly.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does it detect emojis and special Unicode characters?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely! Our <strong>unique letter detection tool online</strong> fully supports Unicode, including emojis, mathematical symbols, currency signs, and characters from all world languages (Chinese, Arabic, Devanagari, Cyrillic, etc.). It correctly handles multi-byte characters, combining marks, and zero-width joiners used in complex emoji sequences. Whether you're analyzing international text, checking emoji usage in social media content, or debugging encoding issues with special characters, this <strong>free online unique letter tool</strong> provides accurate detection and display.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How is this different from a character counter?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">A character counter tells you how many total characters exist (including duplicates). Our <strong>online text unique character analyzer free</strong> identifies only distinct characters, removing duplicates to show you the unique set. For example, "hello" has 5 total characters but only 4 unique letters (h, e, l, o— with 'l' appearing twice). We also categorize by type (letters, numbers, symbols), show frequency counts, offer sorting options, and provide export capabilities. It's a diagnostic tool for understanding text composition, not just counting.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my data secure and private?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">100% secure. Our <strong>free unique letter search tool</strong> processes everything locally in your browser using JavaScript. Your text never uploads to our servers, leaves your device, or transmits over the network. You can verify this by checking the Network tab in browser DevTools—no data transfer occurs. This makes it safe for analyzing passwords, confidential documents, proprietary code, or any sensitive text. The tool also works offline after initial page load, ensuring complete privacy for your <strong>online unique letter analysis free</strong> needs.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I find invisible or hidden characters?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>unique letter highlighter online</strong> detects invisible characters like spaces (regular, non-breaking, zero-width), tabs, line breaks, null bytes, and control characters. These often cause mysterious issues: layout problems, search failures, data mismatches, or parsing errors. In the results grid, invisible characters are labeled with their Unicode names (e.g., "Space", "Tab", "Zero Width Space") and hex codes, making them easy to identify and remove. This is invaluable for debugging "ghost" characters in copied text from PDFs or formatted documents.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is there a limit to how much text I can analyze?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">The tool handles text up to several million characters (roughly 10-20MB) depending on your browser and device memory. Chrome and Edge typically handle larger datasets than mobile browsers. For extremely large files (100MB+), we recommend using command-line tools or splitting the file into chunks. The <strong>free online unique letter finder</strong> is optimized for typical daily use—articles, code files, datasets, and documents—with real-time performance that stays responsive even with thousands of lines of text.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this tool really free?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, completely <strong>free</strong> with no registration, usage limits, watermarks, or hidden fees. Use our <strong>unique alphabet finder online free</strong> for personal or commercial projects without attribution. The tool is supported by unobtrusive advertising and voluntary user support. All features—including file upload, export options, Unicode support, and real-time analysis—are available to all users at no cost. This is truly a <strong>free unique char finder online</strong> for everyone who needs to analyze text character composition.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const inputStats = document.getElementById('inputStats');
+const uniqueCount = document.getElementById('uniqueCount');
+const analysisStats = document.getElementById('analysisStats');
+const processingTime = document.getElementById('processingTime');
+const emptyState = document.getElementById('emptyState');
+const uniqueCharsGrid = document.getElementById('uniqueCharsGrid');
+const resultsContainer = document.getElementById('resultsContainer');
+const statsDashboard = document.getElementById('statsDashboard');
+const frequencyBars = document.getElementById('frequencyBars');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+
+// Stats elements
+const statTotalUnique = document.getElementById('statTotalUnique');
+const statLetters = document.getElementById('statLetters');
+const statNumbers = document.getElementById('statNumbers');
+const statSymbols = document.getElementById('statSymbols');
+
+// Buttons
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const resetBtn = document.getElementById('resetBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+// Filter buttons and options
+const methodBtns = document.querySelectorAll('.method-btn');
+const caseSensitivity = document.getElementById('caseSensitivity');
+const sortBy = document.getElementById('sortBy');
+const outputFormat = document.getElementById('outputFormat');
+
+let currentFilter = 'all';
+let uniqueCharsData = [];
+let charFrequency = new Map();
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Update input stats
+function updateInputStats() {
+  const text = inputText.value;
+  const chars = text.length;
+  
+  // Calculate unique count for display
+  const uniqueChars = new Set(text.split(''));
+  const uniqueCount = uniqueChars.size;
+  
+  inputStats.textContent = `Chars: ${chars} | Unique: ${uniqueCount}`;
+}
+
+// Debounce function for performance
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Filter selection
+methodBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    methodBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentFilter = btn.dataset.filter;
+    analyzeText();
+  });
+});
+
+// Options change listeners
+[caseSensitivity, sortBy, outputFormat].forEach(el => {
+  el.addEventListener('change', analyzeText);
+});
+
+// Character type detection
+function getCharType(char) {
+  const code = char.charCodeAt(0);
+  
+  // Check for letters (including Unicode letters)
+  if (/\p{L}/u.test(char)) return 'letter';
+  
+  // Check for numbers
+  if (/\p{N}/u.test(char)) return 'number';
+  
+  // Check for whitespace
+  if (/\s/.test(char)) return 'whitespace';
+  
+  // Everything else is a symbol
+  return 'symbol';
+}
+
+// Get character display name
+function getCharDisplayName(char) {
+  if (char === ' ') return 'Space';
+  if (char === '\n') return 'LF';
+  if (char === '\r') return 'CR';
+  if (char === '\t') return 'Tab';
+  if (char === '\u00A0') return 'NBSP';
+  if (char === '\u200B') return 'ZWS';
+  if (char === '\u200C') return 'ZWNJ';
+  if (char === '\u200D') return 'ZWJ';
+  
+  // For control characters
+  const code = char.charCodeAt(0);
+  if (code < 32 || (code >= 127 && code < 160)) {
+    return `U+${code.toString(16).toUpperCase().padStart(4, '0')}`;
+  }
+  
+  return char;
+}
+
+// Main analysis function
+function analyzeText() {
+  const startTime = performance.now();
+  const text = inputText.value;
+  
+  if (!text) {
+    showEmptyState();
+    return;
+  }
+  
+  const isCaseSensitive = caseSensitivity.value === 'sensitive';
+  const sortMethod = sortBy.value;
+  
+  // Build frequency map
+  charFrequency.clear();
+  const processedChars = new Set();
+  
+  for (const char of text) {
+    const key = isCaseSensitive ? char : char.toLowerCase();
+    const displayChar = isCaseSensitive ? char : (processedChars.has(key) ? char : char);
+    
+    if (charFrequency.has(key)) {
+      charFrequency.set(key, {
+        count: charFrequency.get(key).count + 1,
+        char: displayChar,
+        types: new Set([...charFrequency.get(key).types, getCharType(char)])
+      });
+    } else {
+      charFrequency.set(key, {
+        count: 1,
+        char: displayChar,
+        types: new Set([getCharType(char)])
+      });
+      processedChars.add(key);
+    }
+  }
+  
+  // Filter characters based on current filter
+  let filteredEntries = Array.from(charFrequency.entries());
+  
+  if (currentFilter !== 'all') {
+    filteredEntries = filteredEntries.filter(([key, data]) => {
+      const type = Array.from(data.types)[0];
+      if (currentFilter === 'letters') return type === 'letter';
+      if (currentFilter === 'numbers') return type === 'number';
+      if (currentFilter === 'symbols') return type === 'symbol' || type === 'whitespace';
+      return true;
+    });
+  }
+  
+  // Sort entries
+  filteredEntries.sort((a, b) => {
+    switch(sortMethod) {
+      case 'frequency':
+        return b[1].count - a[1].count;
+      case 'alphabetical':
+        return a[0].localeCompare(b[0], undefined, {sensitivity: 'base'});
+      case 'appearance':
+        // Keep original order (already in map insertion order)
+        return 0;
+      case 'unicode':
+        return a[0].codePointAt(0) - b[0].codePointAt(0);
+      default:
+        return 0;
+    }
+  });
+  
+  uniqueCharsData = filteredEntries;
+  
+  // Update UI
+  displayResults(filteredEntries);
+  updateStats(filteredEntries);
+  updateStatsDashboard(filteredEntries);
+  
+  const endTime = performance.now();
+  processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+  
+  // Show stats dashboard
+  statsDashboard.classList.remove('hidden');
+}
+
+function showEmptyState() {
+  emptyState.classList.remove('hidden');
+  uniqueCharsGrid.classList.add('hidden');
+  uniqueCount.classList.add('hidden');
+  analysisStats.textContent = 'Letters: 0 | Numbers: 0 | Symbols: 0';
+  processingTime.textContent = '';
+  statsDashboard.classList.add('hidden');
+  frequencyBars.classList.add('hidden');
+  uniqueCharsData = [];
+  charFrequency.clear();
+}
+
+function displayResults(entries) {
+  emptyState.classList.add('hidden');
+  uniqueCharsGrid.classList.remove('hidden');
+  uniqueCharsGrid.innerHTML = '';
+  
+  if (entries.length === 0) {
+    uniqueCharsGrid.innerHTML = '<div class="col-span-full text-center text-gray-500 text-xs py-8">No characters match the current filter</div>';
+    uniqueCount.classList.add('hidden');
+    return;
+  }
+  
+  uniqueCount.textContent = `(${entries.length} found)`;
+  uniqueCount.classList.remove('hidden');
+  
+  entries.forEach(([key, data]) => {
+    const card = document.createElement('div');
+    card.className = 'unique-char-card glass-panel rounded p-2 text-center relative group';
+    
+    const charType = Array.from(data.types)[0];
+    let typeColor = 'text-gray-400';
+    if (charType === 'letter') typeColor = 'text-green-400';
+    if (charType === 'number') typeColor = 'text-yellow-400';
+    if (charType === 'symbol' || charType === 'whitespace') typeColor = 'text-pink-400';
+    
+    const displayName = getCharDisplayName(data.char);
+    const isSpecial = displayName !== data.char;
+    
+    card.innerHTML = `
+      <div class="text-lg font-mono mb-1 ${typeColor} truncate" title="${isSpecial ? data.char : ''}">${isSpecial ? displayName : data.char}</div>
+      <div class="text-xs text-gray-500">${data.count}</div>
+      <div class="absolute inset-0 bg-indigo-500/10 rounded opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+        <span class="text-xs text-indigo-300">Click to copy</span>
+      </div>
+    `;
+    
+    card.addEventListener('click', () => {
+      navigator.clipboard.writeText(data.char);
+      card.style.background = 'rgba(34, 197, 94, 0.2)';
+      setTimeout(() => {
+        card.style.background = '';
+      }, 300);
+    });
+    
+    uniqueCharsGrid.appendChild(card);
+  });
+}
+
+function updateStats(entries) {
+  let letters = 0, numbers = 0, symbols = 0;
+  
+  entries.forEach(([key, data]) => {
+    const type = Array.from(data.types)[0];
+    if (type === 'letter') letters++;
+    else if (type === 'number') numbers++;
+    else symbols++;
+  });
+  
+  analysisStats.textContent = `Letters: ${letters} | Numbers: ${numbers} | Symbols: ${symbols}`;
+}
+
+function updateStatsDashboard(entries) {
+  let letters = 0, numbers = 0, symbols = 0;
+  
+  entries.forEach(([key, data]) => {
+    const type = Array.from(data.types)[0];
+    if (type === 'letter') letters++;
+    else if (type === 'number') numbers++;
+    else symbols++;
+  });
+  
+  statTotalUnique.textContent = entries.length;
+  statLetters.textContent = letters;
+  statNumbers.textContent = numbers;
+  statSymbols.textContent = symbols;
+  
+  // Update frequency bars if there are entries
+  if (entries.length > 0) {
+    frequencyBars.classList.remove('hidden');
+    frequencyBars.innerHTML = '';
+    
+    const maxCount = Math.max(...entries.map(e => e[1].count));
+    
+    entries.slice(0, 20).forEach(([key, data]) => {
+      const percentage = (data.count / maxCount) * 100;
+      const bar = document.createElement('div');
+      bar.className = 'flex items-center gap-2 text-xs';
+      
+      const charType = Array.from(data.types)[0];
+      let barColor = 'bg-gray-500';
+      if (charType === 'letter') barColor = 'bg-green-500';
+      if (charType === 'number') barColor = 'bg-yellow-500';
+      if (charType === 'symbol' || charType === 'whitespace') barColor = 'bg-pink-500';
+      
+      const displayName = getCharDisplayName(data.char);
+      const label = displayName === data.char ? data.char : `${displayName}(${data.char})`;
+      
+      bar.innerHTML = `
+        <div class="w-8 text-right text-gray-400 truncate" title="${label}">${label}</div>
+        <div class="flex-1 h-4 bg-white/5 rounded-full overflow-hidden">
+          <div class="${barColor} h-full rounded-full transition-all duration-300" style="width: ${percentage}%"></div>
+        </div>
+        <div class="w-8 text-gray-500">${data.count}</div>
+      `;
+      
+      frequencyBars.appendChild(bar);
+    });
+    
+    if (entries.length > 20) {
+      const more = document.createElement('div');
+      more.className = 'text-xs text-gray-500 text-center py-1';
+      more.textContent = `... and ${entries.length - 20} more`;
+      frequencyBars.appendChild(more);
+    }
+  } else {
+    frequencyBars.classList.add('hidden');
+  }
+}
+
+// Debounced version for typing
+const debouncedAnalyze = debounce(analyzeText, 100);
+
+// Drag and drop handlers
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  if (!file.type.match('text.*') && !file.name.match(/\.(txt|csv|json|xml|html?|md|js|css|py|java|cpp|c|php|rb|go|rs|swift|kt|sql|log)$/i)) {
+    alert('Please upload a text file');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    updateInputStats();
+    analyzeText();
+  };
+  reader.readAsText(file);
+}
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    updateInputStats();
+    analyzeText();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  updateInputStats();
+  showEmptyState();
+  inputText.focus();
+}
+
+// Copy results
+async function copyResults() {
+  if (uniqueCharsData.length === 0) return;
+  
+  const format = outputFormat.value;
+  let text = '';
+  
+  switch(format) {
+    case 'list':
+      text = uniqueCharsData.map(([key, data]) => `${data.char} (${data.count})`).join('\n');
+      break;
+    case 'comma':
+      text = uniqueCharsData.map(([key, data]) => data.char).join(',');
+      break;
+    case 'json':
+      text = JSON.stringify(uniqueCharsData.map(([key, data]) => ({
+        character: data.char,
+        count: data.count,
+        type: Array.from(data.types)[0]
+      })), null, 2);
+      break;
+    case 'regex':
+      const chars = uniqueCharsData.map(([key, data]) => {
+        const c = data.char;
+        if (c === ']' || c === '\\' || c === '-' || c === '^') return '\\' + c;
+        return c;
+      }).join('');
+      text = `[${chars}]`;
+      break;
+  }
+  
+  try {
+    await navigator.clipboard.writeText(text);
+    const originalText = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalText;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+}
+
+// Download results
+function downloadResults() {
+  if (uniqueCharsData.length === 0) return;
+  
+  const format = outputFormat.value;
+  let content = '';
+  let extension = 'txt';
+  
+  switch(format) {
+    case 'list':
+      content = uniqueCharsData.map(([key, data]) => `${data.char}\t${data.count}\t${Array.from(data.types)[0]}`).join('\n');
+      content = 'Character\tCount\tType\n' + content;
+      extension = 'txt';
+      break;
+    case 'comma':
+      content = uniqueCharsData.map(([key, data]) => data.char).join(',');
+      extension = 'txt';
+      break;
+    case 'json':
+      content = JSON.stringify(uniqueCharsData.map(([key, data]) => ({
+        character: data.char,
+        count: data.count,
+        type: Array.from(data.types)[0]
+      })), null, 2);
+      extension = 'json';
+      break;
+    case 'regex':
+      const chars = uniqueCharsData.map(([key, data]) => {
+        const c = data.char;
+        if (c === ']' || c === '\\' || c === '-' || c === '^') return '\\' + c;
+        return c;
+      }).join('');
+      content = `[${chars}]`;
+      extension = 'txt';
+      break;
+  }
+  
+  const blob = new Blob([content], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `unique-characters.${extension}`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Reset all
+function resetAll() {
+  inputText.value = '';
+  updateInputStats();
+  showEmptyState();
+  
+  // Reset filters
+  methodBtns.forEach(b => b.classList.remove('active'));
+  methodBtns[0].classList.add('active');
+  currentFilter = 'all';
+  
+  // Reset selects
+  caseSensitivity.value = 'sensitive';
+  sortBy.value = 'frequency';
+  outputFormat.value = 'list';
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Event listeners
+inputText.addEventListener('input', () => {
+  updateInputStats();
+  debouncedAnalyze();
+});
+
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+copyBtn.addEventListener('click', copyResults);
+downloadBtn.addEventListener('click', downloadResults);
+resetBtn.addEventListener('click', resetAll);
+
+// Initialize
+updateInputStats();
+</script>
+</body>
+</html>

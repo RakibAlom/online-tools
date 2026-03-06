@@ -1,0 +1,1633 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Duplicate Letter Finder - Free Online Text Analysis Tool</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Free online duplicate letter finder tool. Find, highlight, and remove repeated characters in your text. Analyze letter frequency and clean up redundant letters instantly. No registration required." />
+  <meta name="keywords" content="free duplicate letter finder online, online duplicate letter finder free, duplicate letter finder tool, free duplicate character finder online, online repeated letter finder free, free online duplicate letters tool, duplicate letter checker online, free online letter repetition finder, online duplicate character detector free, free duplicate letter analyzer online, duplicate letter counter online free, online repeated character finder free, free duplicate letter search tool, duplicate letter highlighter online, online duplicate char finder free, free duplicate text letter tool, online letter repetition analysis free, free duplicate alphabet finder online, duplicate char finder and remover online free, online repeated letter detection free, free repeated character checker online, duplicate letter identification tool free, online duplicate letter extraction free" />
+  <meta name="author" content="EasyPro Tools" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://easyprotools.com/duplicate-letter-finder/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://easyprotools.com/duplicate-letter-finder/" />
+  <meta property="og:title" content="Duplicate Letter Finder - Free Online Text Analysis Tool" />
+  <meta property="og:description" content="Find, highlight, and remove repeated characters in your text. Analyze letter frequency and clean up redundant letters instantly with our free online tool." />
+  <meta property="og:image" content="/assets/img/easypro-tools.jpg" />
+  <meta property="og:site_name" content="EasyPro Tools" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://easyprotools.com/duplicate-letter-finder/" />
+  <meta name="twitter:title" content="Duplicate Letter Finder - Free Online Text Analysis Tool" />
+  <meta name="twitter:description" content="Find, highlight, and remove repeated characters in your text. Analyze letter frequency and clean up redundant letters instantly with our free online tool." />
+  <meta name="twitter:image" content="/assets/img/easypro-tools.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/easypro-tools-favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!--Google Adsense-->
+  <meta name="google-adsense-account" content="ca-pub-8183914844375779">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+  <!--Google Site Verification-->
+  <meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4D39CLDW58');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              100: 'rgba(255, 255, 255, 0.03)',
+              200: 'rgba(255, 255, 255, 0.06)',
+              300: 'rgba(255, 255, 255, 0.1)',
+              border: 'rgba(255, 255, 255, 0.08)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+    
+    .bg-mesh {
+      background-color: #0a0a0a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(40, 40, 40, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(40, 40, 40, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .glass-panel {
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+    }
+    
+    .glass-input:focus {
+      background: rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .glass-hover:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.15); 
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.25); 
+    }
+
+    .btn-animated {
+      transition: all 0.2s ease;
+    }
+    .btn-animated:active {
+      transform: scale(0.98);
+    }
+
+    #mobileMenu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .article-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #cbd5e1;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #94a3b8;
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: #e2e8f0;
+    }
+
+    .faq-content {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .compact-btn {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .drag-active {
+      border-color: rgba(99, 102, 241, 0.8) !important;
+      background: rgba(99, 102, 241, 0.1) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .tool-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .tool-left-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .tool-right-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .full-width-section {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .letter-highlight {
+      background: rgba(245, 158, 11, 0.3);
+      border-bottom: 2px solid rgba(245, 158, 11, 0.8);
+      padding: 0 1px;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    
+    .letter-highlight:hover {
+      background: rgba(245, 158, 11, 0.5);
+    }
+
+    .letter-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.25rem 0.5rem;
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      border-radius: 0.375rem;
+      font-size: 0.875rem;
+      font-family: monospace;
+      color: #fbbf24;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    
+    .letter-tag:hover {
+      background: rgba(245, 158, 11, 0.25);
+      border-color: rgba(245, 158, 11, 0.5);
+    }
+
+    .letter-tag .count {
+      background: rgba(245, 158, 11, 0.3);
+      padding: 0.125rem 0.375rem;
+      border-radius: 0.25rem;
+      font-size: 0.625rem;
+      font-weight: 600;
+    }
+
+    .auto-processing-indicator {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+
+    .stat-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 0.5rem;
+      padding: 0.75rem;
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.625rem;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-top: 0.25rem;
+    }
+
+    .highlighted-text {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      font-size: 0.875rem;
+    }
+
+    .occurrence-marker {
+      display: inline-block;
+      background: rgba(99, 102, 241, 0.3);
+      color: #818cf8;
+      font-size: 0.5rem;
+      padding: 0 2px;
+      border-radius: 2px;
+      margin-left: 1px;
+      vertical-align: super;
+      line-height: 1;
+    }
+
+    .char-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(2.5rem, 1fr));
+      gap: 0.5rem;
+    }
+
+    .char-cell {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 0.375rem;
+      padding: 0.5rem;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .char-cell:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(245, 158, 11, 0.5);
+    }
+
+    .char-cell .char {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fbbf24;
+      font-family: monospace;
+    }
+
+    .char-cell .freq {
+      font-size: 0.625rem;
+      color: #888;
+      margin-top: 0.125rem;
+    }
+
+    .char-cell.duplicate {
+      background: rgba(245, 158, 11, 0.1);
+      border-color: rgba(245, 158, 11, 0.3);
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <div class="flex items-center space-x-2">
+          <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+            <path d="M10 20h5v-5h5v5h5v-5h5M10 28h20" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <h1 class="text-sm font-bold text-white">Duplicate Letter Finder</h1>
+            <p class="text-gray-400 text-xs hidden sm:block">Online Free Text Tool</p>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-4">
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            All Tools
+          </a>
+        </nav>
+
+        <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+      <div class="px-4 py-3 space-y-2">
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Home
+        </a>
+        <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          All Tools
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-4 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent glow-text">
+        Duplicate Letter Finder
+      </h1>
+      <p class="text-gray-400 text-sm px-4">
+        Online Free Text Analysis Tool
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 pb-12 w-full">
+
+    <!-- Tool Interface -->
+    <div class="glass-panel rounded-xl p-3 sm:p-4 mb-4">
+      
+      <!-- Auto-processing indicator -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 text-xs text-green-400 auto-processing-indicator">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+          </span>
+          <span>Auto-detection enabled</span>
+        </div>
+        <button id="resetBtn" class="compact-btn rounded-md bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 transition-all btn-animated flex items-center gap-1">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Reset
+        </button>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="tool-grid">
+        <!-- Left Column - Input -->
+        <div class="tool-left-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Input Text
+            </label>
+            <div class="flex gap-1">
+              <button id="pasteBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Paste
+              </button>
+              <button id="clearBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Clear
+              </button>
+            </div>
+          </div>
+          
+          <!-- Drag & Drop Zone -->
+          <div id="dropZone" class="relative group flex-grow">
+            <textarea id="inputText" spellcheck="false"
+              class="w-full h-48 lg:h-64 p-3 rounded-md glass-input font-mono text-xs leading-relaxed resize-none"
+              placeholder="Type or paste text here... Or drag & drop a file"></textarea>
+            <div id="dropOverlay" class="absolute inset-0 rounded-md border-2 border-dashed border-white/20 bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                <p class="text-xs text-gray-300 font-medium">Drop text file here</p>
+              </div>
+            </div>
+          </div>
+          
+          <input type="file" id="fileInput" accept=".txt,.csv,.md,.json,.xml,.html,.js,.css,.py,.java,.cpp,.c,.php,.rb,.go,.rs,.swift,.kt,.sql,.log" class="hidden">
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="inputStats">Chars: 0 | Letters: 0 | Lines: 0</span>
+            <button id="fileSelectBtn" class="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              Select file
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column - Output -->
+        <div class="tool-right-col space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-medium text-gray-300 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Highlighted Duplicates <span id="duplicateCount" class="text-gray-500 font-normal ml-1 hidden">(0)</span>
+            </label>
+            <div class="flex gap-1">
+              <button id="removeDuplicatesBtn" class="compact-btn rounded-md bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/20 text-amber-400 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Remove Dups
+              </button>
+              <button id="copyBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                Copy
+              </button>
+              <button id="downloadBtn" class="compact-btn rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 transition-all btn-animated flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Download
+              </button>
+            </div>
+          </div>
+          
+          <div id="outputContainer" class="w-full h-48 lg:h-64 p-3 rounded-md glass-input overflow-y-auto">
+            <div id="highlightedOutput" class="highlighted-text text-gray-400" placeholder="Duplicate letters will be highlighted here automatically...">Duplicate letters will be highlighted here automatically...</div>
+          </div>
+          
+          <div class="flex justify-between items-center text-xs text-gray-500">
+            <span id="outputStats">Duplicates: 0 | Unique: 0 | Total: 0</span>
+            <span id="processingTime" class="text-gray-600"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section - Full Width -->
+      <div class="full-width-section mt-4 pt-4 border-t border-white/10 space-y-3">
+        
+        <!-- Stats Cards -->
+        <div class="grid grid-cols-4 gap-2 mb-3">
+          <div class="stat-card">
+            <div class="stat-value" id="statTotal">0</div>
+            <div class="stat-label">Total Chars</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="statUnique">0</div>
+            <div class="stat-label">Unique</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value text-amber-400" id="statDuplicates">0</div>
+            <div class="stat-label">Duplicates</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="statRedundancy">0%</div>
+            <div class="stat-label">Redundancy</div>
+          </div>
+        </div>
+
+        <!-- Options Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+          <!-- Character Type -->
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Character Type</label>
+            <select id="charTypeSelect" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="letters">Letters Only (A-Z)</option>
+              <option value="alphanumeric">Alphanumeric</option>
+              <option value="all">All Characters</option>
+            </select>
+          </div>
+
+          <!-- Detection Mode -->
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Detection Mode</label>
+            <select id="modeSelect" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="consecutive">Consecutive Only</option>
+              <option value="global">All Duplicates</option>
+              <option value="word">Within Words</option>
+            </select>
+          </div>
+
+          <!-- Case Handling -->
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Case Handling</label>
+            <select id="caseSelect" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="insensitive">Case Insensitive</option>
+              <option value="sensitive">Case Sensitive</option>
+            </select>
+          </div>
+
+          <!-- Highlight Style -->
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Highlight Style</label>
+            <select id="highlightStyle" class="w-full px-2 py-1.5 rounded-md glass-input text-xs">
+              <option value="background">Amber Background</option>
+              <option value="underline">Underline</option>
+              <option value="bold">Bold Text</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Advanced Options -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+          <label class="flex items-center gap-1.5 text-xs text-gray-400 bg-white/5 p-2 rounded-md border border-white/10 cursor-pointer hover:bg-white/10 transition-colors">
+            <input type="checkbox" id="ignoreSpaces" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Ignore whitespace
+          </label>
+          
+          <label class="flex items-center gap-1.5 text-xs text-gray-400 bg-white/5 p-2 rounded-md border border-white/10 cursor-pointer hover:bg-white/10 transition-colors">
+            <input type="checkbox" id="ignorePunctuation" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Ignore punctuation
+          </label>
+          
+          <label class="flex items-center gap-1.5 text-xs text-gray-400 bg-white/5 p-2 rounded-md border border-white/10 cursor-pointer hover:bg-white/10 transition-colors">
+            <input type="checkbox" id="showOccurrences" class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Show occurrence #s
+          </label>
+          
+          <label class="flex items-center gap-1.5 text-xs text-gray-400 bg-white/5 p-2 rounded-md border border-white/10 cursor-pointer hover:bg-white/10 transition-colors">
+            <input type="checkbox" id="keepFirst" checked class="rounded bg-black/40 border-white/20 text-indigo-500 focus:ring-0 w-3 h-3">
+            Keep first occurrence
+          </label>
+        </div>
+
+        <!-- Character Frequency Grid -->
+        <div id="charGridContainer" class="hidden">
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-xs font-medium text-gray-300">Character Frequency <span class="text-gray-500 font-normal">(click to highlight)</span></label>
+            <span class="text-xs text-gray-500" id="gridStats">Showing all characters</span>
+          </div>
+          <div id="charGrid" class="char-grid max-h-40 overflow-y-auto p-2 bg-black/20 rounded-md border border-white/10">
+            <!-- Character cells will be inserted here -->
+          </div>
+        </div>
+
+        <!-- Duplicate Letters List -->
+        <div id="duplicatesList" class="hidden">
+          <div class="flex items-center justify-between mb-2">
+            <label class="text-xs font-medium text-gray-300">Duplicate Letters Found <span class="text-gray-500 font-normal">(click to locate)</span></label>
+            <button id="exportDuplicatesBtn" class="text-xs text-indigo-400 hover:text-indigo-300 transition-colors">Export List</button>
+          </div>
+          <div id="duplicatesCloud" class="max-h-32 overflow-y-auto p-3 bg-black/20 rounded-md border border-white/10 flex flex-wrap gap-1.5 content-start">
+            <!-- Duplicate letters will be inserted here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Why Use Our Duplicate Letter Finder?
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Visual Highlight</h3>
+          <p class="text-gray-400 text-xs">Instantly see duplicate letters highlighted</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Auto-Remove</h3>
+          <p class="text-gray-400 text-xs">One-click duplicate removal</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Drag & Drop</h3>
+          <p class="text-gray-400 text-xs">Upload text files instantly</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Private</h3>
+          <p class="text-gray-400 text-xs">Browser-based, no uploads</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Char Grid</h3>
+          <p class="text-gray-400 text-xs">Visual frequency analysis</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3 glass-hover transition-all duration-300">
+          <div class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center mb-2">
+            <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Free</h3>
+          <p class="text-gray-400 text-xs">No registration required</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        How to Use
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">1</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Input Text</h3>
+          <p class="text-gray-400 text-xs">Type, paste, or drop a file. Analysis happens automatically.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">2</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Configure</h3>
+          <p class="text-gray-400 text-xs">Set character type, detection mode, and filters.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">3</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Analyze</h3>
+          <p class="text-gray-400 text-xs">View highlighted duplicates and character frequency grid.</p>
+        </div>
+        
+        <div class="glass-panel rounded-lg p-3">
+          <div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mb-2">
+            <span class="text-white text-xs font-bold">4</span>
+          </div>
+          <h3 class="text-sm font-semibold mb-1 text-white">Clean</h3>
+          <p class="text-gray-400 text-xs">Remove duplicates with one click or export analysis.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="mb-8">
+      <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+        <h2>The Complete Guide to Duplicate Letter Detection: Mastering Character Analysis for Text Optimization and Data Cleaning</h2>
+        
+        <p><strong>Duplicate letter detection</strong> is a specialized yet powerful text analysis technique that identifies repeated characters within strings, words, or entire documents. While often overlooked in favor of word-level analysis, character-level examination serves critical functions across cryptography, data compression, linguistics, text processing, and quality control. Whether you're a programmer debugging string manipulation, a cryptographer analyzing cipher patterns, a linguist studying phonetic structures, or simply someone cleaning up messy text data, understanding how to effectively find and analyze duplicate letters is essential for precision work. Our <strong>free duplicate letter finder online</strong> provides instant, visual character analysis that transforms complex text examination into an intuitive process.</p>
+
+        <h2>Understanding Character-Level Text Analysis</h2>
+        
+        <p><strong>Duplicate letter analysis</strong> operates at the most granular level of text examination—the individual character. Unlike word-level duplication (finding repeated words like "the the"), letter-level detection identifies repeated characters within words or across text streams. This includes consecutive duplicates ("bookkeeper" contains three consecutive duplicate pairs: oo, kk, ee), non-consecutive duplicates within words ("banana" repeats 'a' and 'n' multiple times), and distributed duplicates across text (the letter 'e' appearing hundreds of times in a paragraph).</p>
+
+        <p>The significance of <strong>online duplicate letter finder free</strong> tools extends across multiple domains. In data compression algorithms like run-length encoding (RLE), consecutive duplicate detection enables efficient storage reduction—"aaaabbbb" becomes "4a4b". In cryptography, frequency analysis of individual letters has been used since ancient times to break substitution ciphers. In natural language processing, character n-grams (sequences of n characters) power modern AI language models. For everyday users, <strong>duplicate letter finder tool</strong> capabilities help clean up OCR errors, normalize database entries, and identify typing mistakes that word processors miss.</p>
+
+        <h2>Types of Duplicate Letter Patterns</h2>
+
+        <h3>Consecutive Character Duplication</h3>
+        
+        <p>The most visually obvious pattern involves identical characters appearing immediately adjacent: "letter," "book," "success," "committee." These consecutive duplicates often result from typing errors (holding a key too long), OCR scanning artifacts, or intentional stylistic choices. In programming and data entry, consecutive duplicates frequently indicate input errors—"aa" instead of "a" or "11" instead of "1". Our <strong>free duplicate character finder online</strong> immediately highlights these patterns with prominent visual markers, making them impossible to miss during text review.</p>
+
+        <p>Consecutive duplicate detection serves specialized functions across industries. In genetics, DNA sequence analysis uses duplicate detection to identify repeating nucleotide patterns. In music notation software, consecutive note detection prevents impossible fingerings. In manufacturing barcodes, duplicate character validation ensures scanner readability. The <strong>online repeated letter finder free</strong> capability to isolate consecutive patterns while ignoring distributed repetition makes it uniquely valuable for these precision applications.</p>
+
+        <h3>Intra-Word Character Distribution</h3>
+        
+        <p>Beyond consecutive pairs, sophisticated <strong>free online duplicate letters tool</strong> analysis examines how characters distribute within individual words. English contains relatively few words with high intra-word duplication—"assesses" (4 s's), "possession" (4 s's), "committee" (3 pairs)—making such words statistically notable when they appear. Linguists use this analysis to study phonotactic constraints (which sound combinations languages allow). Game designers use it for word puzzles and password strength evaluation. Spelling correction algorithms weight words with unusual character distributions differently than common patterns.</p>
+
+        <h3>Cross-Text Character Frequency</h3>
+        
+        <p>At the document level, <strong>duplicate letter checker online</strong> tools analyze how often each character appears across entire texts. This frequency analysis reveals language patterns—English uses 'e' most frequently (~12.7%), followed by 't', 'a', 'o', 'i', 'n'. Deviations from expected frequency distributions indicate: non-English text, specialized technical vocabulary (heavy in 'x', 'z', 'q'), ciphered or encoded content (flattened frequencies), or OCR errors (character substitutions). Our tool's character grid visualization makes these patterns immediately visible, transforming raw statistics into intuitive visual understanding.</p>
+
+        <h2>How Duplicate Letter Detection Technology Works</h2>
+
+        <h3>Character Tokenization and Filtering</h3>
+        
+        <p>Professional <strong>free online letter repetition finder</strong> tools begin by defining what constitutes a "letter" for analysis purposes. Options typically include: letters only (A-Z, case insensitive or sensitive), alphanumeric (letters plus 0-9), or all characters (including punctuation, symbols, whitespace). This filtering determines the analysis scope—finding duplicate punctuation might matter for code review but not for prose editing. Our tool provides configurable character type selection, ensuring analysis matches your specific use case.</p>
+
+        <p>Normalization follows tokenization. Case folding converts uppercase to lowercase (or vice versa) so 'A' and 'a' register as duplicates. Unicode normalization handles accented characters, ensuring 'é' matches 'e' when appropriate or remains distinct when necessary. Whitespace handling determines whether spaces, tabs, and newlines participate in duplication detection—crucial for code analysis where "  " (double space) might be significant, but generally irrelevant for prose.</p>
+
+        <h3>Detection Algorithms and Pattern Matching</h3>
+        
+        <p>Consecutive duplicate detection uses simple sliding window comparison—checking each character against its immediate neighbor. This O(n) operation is extremely fast even on large texts. Global duplicate detection maintains a Set or HashMap of seen characters, flagging subsequent occurrences. Word-boundary detection requires additional tokenization—splitting text into words, then analyzing character patterns within each word independently. Our <strong>online duplicate character detector free</strong> implements all three modes, selectable based on analytical needs.</p>
+
+        <p>Advanced features like "within words" mode use regular expressions to find duplicate letters separated by other characters but contained within word boundaries. This catches patterns like "banana" (a...a...a) that simple consecutive detection misses. The algorithmic complexity remains low (O(n) for single pass, O(n*m) for word-level analysis where m is average word length), ensuring real-time performance even with thousands of characters.</p>
+
+        <h2>Professional Applications of Letter-Level Analysis</h2>
+
+        <h3>Data Cleaning and Normalization</h3>
+        
+        <p>Database administrators and data scientists use <strong>free duplicate letter analyzer online</strong> tools to clean imported data. Common issues include: double-typed characters from keyboard bounce ("success" → "succcess"), OCR misreadings ("rn" → "m" or "cl" → "d"), encoding corruption (UTF-8 interpreted as ASCII producing "Ã©" instead of "é"), and user input errors. Systematic duplicate detection identifies these issues faster than manual review, especially when processing thousands of records.</p>
+
+        <p>Text normalization for machine learning requires consistent character representation. Duplicate letter analysis helps identify inconsistencies—"co-operate" vs "cooperate" vs "coooperate"—that should be standardized before model training. The <strong>duplicate letter counter online free</strong> statistics guide decisions about whether to collapse duplicates (normalization) or preserve them (feature engineering for models that might learn from repetition patterns).</p>
+
+        <h3>Cryptography and Security</h3>
+        
+        <p>Historical cryptanalysis relied heavily on letter frequency analysis. The famous cracking of the Enigma machine and Zodiac Killer ciphers involved statistical analysis of character distributions. Modern <strong>online repeated character finder free</strong> tools serve educational purposes in cryptography courses, demonstrating how simple substitution ciphers fail against frequency analysis. Security researchers use character pattern analysis to identify weak passwords—"password" contains no consecutive duplicates and follows common patterns, while "pa55w0rd" contains digit substitutions that analysis can flag.</p>
+
+        <h3>Linguistics and Language Research</h3>
+        
+        <p>Linguists study character-level patterns to understand phonological constraints and writing system evolution. Which letters commonly double in English? (Answer: mostly consonants at word ends or middles—ss, ll, tt, ff, mm, nn, pp, rr, cc, dd, gg, but rarely vowels except ee and oo). How do these patterns differ across languages? (Italian favors double consonants; Finnish uses long vowels distinctively). Computational linguists use <strong>free duplicate letter search tool</strong> capabilities to extract features for language identification algorithms—each language has characteristic character distribution fingerprints.</p>
+
+        <h3>Software Development and Code Review</h3>
+        
+        <p>Programmers encounter character duplication in specific contexts: string literals with accidental double characters, regex patterns where escaping creates duplicates ("\\" vs "\"), variable names with typos, and comments with formatting errors. While compilers catch syntax errors, logic errors from string mismatches (comparing "success" to "succcess") require runtime debugging. Code review tools integrate <strong>duplicate letter highlighter online</strong> functionality to flag suspicious patterns before they reach production.</p>
+
+        <h3>Typography and Graphic Design</h3>
+        
+        <p>Graphic designers working with text layouts use character analysis to predict line breaks and kerning issues. Letters with ascenders (b, d, f, h, k, l, t) and descenders (g, j, p, q, y) create visual rhythm; duplicate sequences create patterns that affect readability. Font designers analyze character frequency to optimize glyph design—creating more beautiful versions of commonly used letters. The <strong>online duplicate char finder free</strong> visualization helps designers see text structure beyond semantic meaning.</p>
+
+        <h2>Advanced Features and Configuration</h2>
+
+        <h3>Multi-Mode Detection</h3>
+        
+        <p>Effective <strong>free duplicate text letter tool</strong> tools offer multiple detection modes for different scenarios. Consecutive mode finds immediate duplicates for typo detection. Global mode finds all repeated characters for frequency analysis. Word-boundary mode analyzes duplication within individual words for linguistic study. Our tool provides all three modes with instant switching, allowing users to examine the same text from multiple analytical perspectives without reprocessing delays.</p>
+
+        <h3>Visual Encoding and Highlighting</h3>
+        
+        <p>Character-level analysis produces dense data that requires thoughtful visualization. Background highlighting makes duplicates stand out while preserving text readability. Underlining maintains clean appearance while marking positions. Bold formatting emphasizes duplicates without color (useful for printing). Occurrence numbering (showing "a¹ a² a³") reveals distribution patterns. The <strong>online letter repetition analysis free</strong> interface should let users choose visualization methods that match their specific tasks and accessibility needs.</p>
+
+        <h3>Character Grid and Frequency Mapping</h3>
+        
+        <p>Beyond inline highlighting, alphabet-grid visualization shows all 26 letters (or full ASCII/Unicode ranges) with frequency indicators. This "dashboard" view reveals patterns invisible in text: which letters dominate? Which are absent? Are frequencies balanced or skewed? Color coding by frequency (rare to common) transforms the grid into a heatmap. Clicking grid cells should highlight all instances of that character in the source text, creating bidirectional exploration—grid to text and text to grid.</p>
+
+        <h2>Best Practices for Character Analysis</h2>
+
+        <h3>Context-Appropriate Filtering</h3>
+        
+        <p>Effective <strong>free duplicate alphabet finder online</strong> use requires matching tool configuration to analytical goals. Analyzing prose? Ignore whitespace and punctuation, focus on letters. Reviewing code? Include all characters—duplication in operators (==, ++, &&) matters. Studying passwords? Consider alphanumeric plus symbols. Examining DNA sequences? Use only A, C, G, T. Our tool's filtering options ensure you're analyzing relevant characters rather than noise.</p>
+
+        <h3>Normalization Decisions</h3>
+        
+        <p>Case sensitivity significantly impacts results. "Apple" contains one 'p' in case-sensitive mode, two in case-insensitive (P vs p). Neither is "correct"—the choice depends on whether you're treating text as abstract characters (insensitive) or specific glyphs (sensitive, important for typography). Similarly, Unicode normalization determines whether "é" (single character) equals "e" + "́" (combining characters). These decisions should be deliberate and documented, especially when comparing results across different tools or sessions.</p>
+
+        <h3>Interpretation of Results</h3>
+        
+        <p>Raw duplicate counts require contextual interpretation. High redundancy (many duplicates) might indicate: efficient compression opportunity (RLE would work well), typing errors (if consecutive), natural language (English averages ~40% character redundancy), or ciphered text (flattened distributions). Low redundancy suggests: random data, constructed languages with balanced alphabets, or heavy abbreviation/acronym use. The <strong>duplicate char finder and remover online free</strong> tool provides statistics; your expertise provides meaning.</p>
+
+        <h2>Comparing Character Analysis Approaches</h2>
+
+        <h3>Manual Inspection vs. Automated Tools</h3>
+        
+        <p>Manual character counting is impractical beyond a few dozen characters—human working memory holds only 4-7 items, making systematic duplicate identification across hundreds of characters impossible. Automated <strong>online repeated letter detection free</strong> tools process thousands of characters instantly, with perfect accuracy and consistent rules. The only reason for manual inspection is developing intuition about character patterns; for actual analysis, automation is essential.</p>
+
+        <h3>General Text Editors vs. Specialized Tools</h3>
+        
+        <p>Advanced text editors like VS Code or Sublime Text offer find-and-replace with regex, enabling manual duplicate detection through pattern crafting (e.g., "([a-z])\\1" for consecutive duplicates). However, this requires regex knowledge, doesn't provide visual highlighting of all duplicates simultaneously, lacks frequency statistics, and offers no character-grid visualization. Specialized <strong>free repeated character checker online</strong> tools provide integrated analysis environments designed specifically for character-level examination, delivering insights faster and more comprehensively.</p>
+
+        <h2>The Future of Character-Level Text Intelligence</h2>
+
+        <p>Artificial intelligence is beginning to leverage character-level patterns in sophisticated ways. Deep learning models like BERT and GPT process text as subword tokens, but their foundations include character-level embeddings that capture orthographic patterns. Future <strong>duplicate letter identification tool free</strong> capabilities may integrate AI to: predict whether duplication is intentional (poetic emphasis) or erroneous (typo), suggest corrections based on context, identify language or author based on character fingerprints, and detect steganography (hidden messages in character patterns). Our platform evolves continuously to incorporate these advances while maintaining the accessibility that makes character analysis available to all users.</p>
+
+        <h2>Conclusion: Master Character-Level Text Analysis</h2>
+
+        <p><strong>Duplicate letter detection</strong> represents a fundamental yet frequently overlooked dimension of text analysis. From debugging code to analyzing ciphers, from cleaning data to studying linguistics, character-level examination reveals patterns invisible at word-level analysis. The ability to systematically identify, visualize, and manipulate character duplication empowers professionals across technical, academic, and creative fields to work with precision and insight.</p>
+
+        <p>Our <strong>free duplicate letter finder online</strong> provides comprehensive character analysis capabilities previously available only through complex software or programming scripts. With multiple detection modes (consecutive, global, word-boundary), configurable character filtering, visual highlighting with multiple styles, interactive character frequency grids, one-click duplicate removal, and exportable statistics, this tool serves everyone from casual users to specialized professionals. The browser-based architecture ensures complete privacy—your text never leaves your device—while the intuitive interface requires no technical background. Whether you need to <strong>find duplicate letters online free</strong> for a quick typo check, perform deep <strong>duplicate letter analysis</strong> on linguistic corpora, or systematically <strong>remove duplicate letters online free</strong> from data exports, our <strong>duplicate letter finder tool</strong> delivers professional results instantly. Stop working blind at the character level—start using our advanced detection technology today and experience the clarity of comprehensive text analysis.</p>
+      </article>
+    </section>
+
+    <!-- FAQ Section - Compact -->
+    <section class="mb-8">
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-2" id="faqContainer">
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Does this tool find duplicate letters automatically as I type?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>free duplicate letter finder online</strong> features <strong>automatic real-time detection</strong>. As you type or paste text, the tool instantly analyzes for duplicate letters and highlights them in amber/orange. We use intelligent debouncing to ensure smooth performance. The "Auto-detection enabled" indicator confirms the feature is active. All settings changes apply immediately, making this the most responsive <strong>online duplicate letter finder free</strong> available.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What's the difference between "Consecutive" and "All Duplicates" modes?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Consecutive Only</strong> finds immediate duplicates like "aa", "bb", "11"—these are often typos. <strong>All Duplicates</strong> highlights every repeated character in your text, useful for frequency analysis. <strong>Within Words</strong> finds duplicates contained inside individual words (like the 'a's in "banana"). Use Consecutive for typo checking, All Duplicates for statistical analysis, and Within Words for linguistic study. Our <strong>duplicate letter finder tool</strong> supports all three modes.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">How do I remove duplicate letters from my text?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Click the <strong>"Remove Dups"</strong> button to automatically eliminate duplicate letters. The tool keeps the first occurrence of each letter (unless you uncheck "Keep first occurrence") and removes subsequent duplicates. You can also click individual highlighted letters to remove them manually. The cleaned text appears in the input panel and can be copied or downloaded. This makes our tool both a <strong>duplicate char finder and remover online free</strong> solution.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What's the difference between "Letters Only" and "All Characters"?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed"><strong>Letters Only</strong> analyzes just A-Z (and a-z), ignoring numbers, spaces, and punctuation—best for prose analysis. <strong>Alphanumeric</strong> includes letters and numbers 0-9, useful for passwords and codes. <strong>All Characters</strong> includes everything: letters, numbers, spaces, punctuation, symbols—essential for code review and precise text analysis. Choose based on what you need to analyze. Our <strong>free duplicate character finder online</strong> handles all three modes.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I see how many times each letter appears?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! The <strong>Character Frequency Grid</strong> shows all letters with their occurrence counts. Click any letter in the grid to highlight all instances in your text. The grid uses visual indicators—letters with duplicates have amber coloring. You can also enable "Show occurrence #s" to see small superscript numbers next to each duplicate indicating which occurrence it is (1st, 2nd, 3rd, etc.). This makes our tool a powerful <strong>duplicate letter counter online free</strong> solution.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">What file types are supported?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">All text-based files: TXT, CSV, JSON, XML, HTML, Markdown, and code files (JS, CSS, Python, Java, C/C++, PHP, Ruby, Go, Rust, Swift, Kotlin, SQL, LOG). Files are read as plain text. For Word documents or PDFs, copy and paste the text directly. Our <strong>online repeated character finder free</strong> handles files up to 10-20MB efficiently in your browser.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is there a limit to how much text I can analyze?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">The tool handles text up to several million characters (roughly 3,000-5,000 pages), limited by your browser's memory. Chrome and Edge handle larger texts better than mobile browsers. For extremely large datasets, consider processing in chunks. The <strong>duplicate letter counter online free</strong> displays real-time statistics and processing time so you can monitor performance.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is my text data secure?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely. All processing happens <strong>locally in your browser</strong>—your text never uploads to our servers or leaves your device. Verify this by checking your browser's Network tab (no data transfer occurs). The tool works offline after loading. This makes our <strong>free online duplicate letters tool</strong> ideal for sensitive data, passwords, proprietary code, or confidential documents.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Can I use this for non-English text?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>online duplicate character detector free</strong> supports all Unicode characters including accented Latin letters (é, ñ, ü), Greek (α, β, γ), Cyrillic (а, б, в), Arabic, Hebrew, Chinese, Japanese, Korean, and emoji. The "Letters Only" mode recognizes Unicode letters beyond A-Z. This makes it suitable for analyzing text in any language or writing system.</p>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+            <span class="text-sm font-medium text-gray-200 pr-4">Is this tool completely free?</span>
+            <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content px-3">
+            <p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, completely <strong>free</strong> with no registration, usage limits, watermarks, or hidden fees. Use for personal or commercial projects without attribution. This is truly a <strong>free duplicate letter search tool</strong> for everyone. Supported by unobtrusive advertising. All features—including multiple detection modes, character grid, auto-removal, and export—are available without payment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+      <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">EasyPro Tools</a>. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">Home</a>
+        <a href="https://easyprotools.com/" target="_blank" class="hover:text-white transition-colors">All Tools</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const highlightedOutput = document.getElementById('highlightedOutput');
+const outputContainer = document.getElementById('outputContainer');
+const inputStats = document.getElementById('inputStats');
+const outputStats = document.getElementById('outputStats');
+const duplicateCount = document.getElementById('duplicateCount');
+const processingTime = document.getElementById('processingTime');
+const charGridContainer = document.getElementById('charGridContainer');
+const charGrid = document.getElementById('charGrid');
+const gridStats = document.getElementById('gridStats');
+const duplicatesList = document.getElementById('duplicatesList');
+const duplicatesCloud = document.getElementById('duplicatesCloud');
+const dropZone = document.getElementById('dropZone');
+const dropOverlay = document.getElementById('dropOverlay');
+const fileInput = document.getElementById('fileInput');
+
+// Stats elements
+const statTotal = document.getElementById('statTotal');
+const statUnique = document.getElementById('statUnique');
+const statDuplicates = document.getElementById('statDuplicates');
+const statRedundancy = document.getElementById('statRedundancy');
+
+// Buttons
+const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const removeDuplicatesBtn = document.getElementById('removeDuplicatesBtn');
+const exportDuplicatesBtn = document.getElementById('exportDuplicatesBtn');
+const resetBtn = document.getElementById('resetBtn');
+const fileSelectBtn = document.getElementById('fileSelectBtn');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+// Options
+const charTypeSelect = document.getElementById('charTypeSelect');
+const modeSelect = document.getElementById('modeSelect');
+const caseSelect = document.getElementById('caseSelect');
+const highlightStyle = document.getElementById('highlightStyle');
+const ignoreSpaces = document.getElementById('ignoreSpaces');
+const ignorePunctuation = document.getElementById('ignorePunctuation');
+const showOccurrences = document.getElementById('showOccurrences');
+const keepFirst = document.getElementById('keepFirst');
+
+// Analysis data storage
+let analysisData = {
+  characters: [],
+  charMap: new Map(),
+  totalChars: 0,
+  uniqueChars: 0,
+  duplicateChars: 0
+};
+
+// Set current year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
+
+// Update input stats
+function updateInputStats() {
+  const text = inputText.value;
+  const chars = text.length;
+  const letters = (text.match(/[a-zA-Z]/g) || []).length;
+  const lines = text === '' ? 0 : text.split('\n').length;
+  inputStats.textContent = `Chars: ${chars} | Letters: ${letters} | Lines: ${lines}`;
+}
+
+// Debounce function for performance
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Check if character should be analyzed based on type filter
+function shouldAnalyzeChar(char) {
+  const type = charTypeSelect.value;
+  const code = char.charCodeAt(0);
+  
+  if (ignoreSpaces.checked && /\s/.test(char)) return false;
+  if (ignorePunctuation.checked && /[.,!?;:'"()\[\]{}]/.test(char)) return false;
+  
+  if (type === 'letters') {
+    return /[a-zA-Z]/.test(char) || (code > 127 && char.match(/\p{L}/u));
+  } else if (type === 'alphanumeric') {
+    return /[a-zA-Z0-9]/.test(char);
+  }
+  return true; // 'all'
+}
+
+// Normalize character based on case setting
+function normalizeChar(char) {
+  if (caseSelect.value === 'insensitive') {
+    return char.toLowerCase();
+  }
+  return char;
+}
+
+// Process text and find duplicates
+function processText() {
+  const startTime = performance.now();
+  const text = inputText.value;
+  
+  if (!text) {
+    resetOutput();
+    return;
+  }
+  
+  const chars = [];
+  const charMap = new Map();
+  const mode = modeSelect.value;
+  
+  // First pass: collect all characters with positions
+  for (let i = 0; i < text.length; i++) {
+    const char = text[i];
+    const normalized = normalizeChar(char);
+    
+    if (!shouldAnalyzeChar(char)) {
+      chars.push({
+        char: char,
+        normalized: normalized,
+        index: i,
+        isDuplicate: false,
+        occurrence: 0,
+        analyze: false
+      });
+      continue;
+    }
+    
+    const info = {
+      char: char,
+      normalized: normalized,
+      index: i,
+      isDuplicate: false,
+      occurrence: 0,
+      analyze: true
+    };
+    
+    // Track occurrences
+    if (charMap.has(normalized)) {
+      const existing = charMap.get(normalized);
+      existing.count++;
+      info.occurrence = existing.count;
+      info.isDuplicate = true;
+    } else {
+      charMap.set(normalized, { count: 1, positions: [] });
+      info.occurrence = 1;
+    }
+    
+    charMap.get(normalized).positions.push(i);
+    chars.push(info);
+  }
+  
+  // Second pass: apply mode-specific logic
+  if (mode === 'consecutive') {
+    // Only mark consecutive duplicates
+    chars.forEach((info, idx) => {
+      if (!info.analyze) return;
+      // Reset duplicate flag
+      info.isDuplicate = false;
+      // Check if same as previous analyzed char
+      for (let i = idx - 1; i >= 0; i--) {
+        if (chars[i].analyze) {
+          if (chars[i].normalized === info.normalized) {
+            info.isDuplicate = true;
+          }
+          break;
+        }
+      }
+    });
+  } else if (mode === 'word') {
+    // Find word boundaries and analyze within words
+    const wordRegex = /\b[\w']+\b/g;
+    let match;
+    const wordRanges = [];
+    
+    while ((match = wordRegex.exec(text)) !== null) {
+      wordRanges.push([match.index, match.index + match[0].length]);
+    }
+    
+    // Reset and re-mark based on word boundaries
+    chars.forEach(info => {
+      if (!info.analyze) return;
+      info.isDuplicate = false;
+      info.occurrence = 0;
+    });
+    
+    // Process each word separately
+    wordRanges.forEach(([start, end]) => {
+      const wordChars = chars.filter(c => c.index >= start && c.index < end && c.analyze);
+      const seen = new Map();
+      
+      wordChars.forEach(info => {
+        const count = (seen.get(info.normalized) || 0) + 1;
+        seen.set(info.normalized, count);
+        info.occurrence = count;
+        if (count > 1) {
+          info.isDuplicate = true;
+        }
+      });
+    });
+  }
+  // 'global' mode uses the initial marking from first pass
+  
+  // Calculate stats
+  const analyzedChars = chars.filter(c => c.analyze);
+  const uniqueSet = new Set(analyzedChars.map(c => c.normalized));
+  const duplicateSet = new Set(analyzedChars.filter(c => c.isDuplicate).map(c => c.normalized));
+  
+  analysisData = {
+    characters: chars,
+    charMap: charMap,
+    totalChars: analyzedChars.length,
+    uniqueChars: uniqueSet.size,
+    duplicateChars: duplicateSet.size
+  };
+  
+  const endTime = performance.now();
+  
+  // Update stats display
+  const redundancy = analysisData.totalChars > 0 ? 
+    Math.round((analysisData.duplicateChars / analysisData.uniqueChars) * 100) : 0;
+  
+  statTotal.textContent = analysisData.totalChars.toLocaleString();
+  statUnique.textContent = analysisData.uniqueChars.toLocaleString();
+  statDuplicates.textContent = analysisData.duplicateChars.toLocaleString();
+  statRedundancy.textContent = isFinite(redundancy) ? redundancy + '%' : '0%';
+  
+  duplicateCount.textContent = `(${analysisData.duplicateChars})`;
+  duplicateCount.classList.remove('hidden');
+  
+  const totalDups = analyzedChars.filter(c => c.isDuplicate).length;
+  outputStats.textContent = `Duplicates: ${totalDups} | Unique: ${analysisData.uniqueChars} | Total: ${analysisData.totalChars}`;
+  processingTime.textContent = `${(endTime - startTime).toFixed(1)}ms`;
+  
+  // Update displays
+  highlightedOutput.innerHTML = generateHighlightedText(chars);
+  updateCharGrid(charMap);
+  updateDuplicatesList(duplicateSet, charMap);
+}
+
+function resetOutput() {
+  highlightedOutput.innerHTML = '<span class="text-gray-500">Duplicate letters will be highlighted here automatically...</span>';
+  outputStats.textContent = 'Duplicates: 0 | Unique: 0 | Total: 0';
+  duplicateCount.classList.add('hidden');
+  processingTime.textContent = '';
+  charGridContainer.classList.add('hidden');
+  duplicatesList.classList.add('hidden');
+  
+  statTotal.textContent = '0';
+  statUnique.textContent = '0';
+  statDuplicates.textContent = '0';
+  statRedundancy.textContent = '0%';
+  
+  analysisData = { characters: [], charMap: new Map(), totalChars: 0, uniqueChars: 0, duplicateChars: 0 };
+}
+
+function generateHighlightedText(chars) {
+  if (chars.length === 0) return '';
+  
+  let html = '';
+  
+  chars.forEach(info => {
+    const char = info.char;
+    const escaped = char === '\n' ? '<br>' : 
+                    char === ' ' ? '&nbsp;' : 
+                    char === '\t' ? '&nbsp;&nbsp;&nbsp;&nbsp;' :
+                    escapeHtml(char);
+    
+    if (info.analyze && info.isDuplicate) {
+      const style = highlightStyle.value;
+      let className = 'letter-highlight';
+      if (style === 'underline') className = 'border-b-2 border-amber-500 text-amber-400';
+      if (style === 'bold') className = 'font-bold text-amber-400';
+      
+      const marker = showOccurrences.checked ? `<span class="occurrence-marker">${info.occurrence}</span>` : '';
+      html += `<span class="${className}" data-char="${escapeHtml(info.normalized)}" title="Duplicate: ${escapeHtml(info.normalized)}">${escaped}${marker}</span>`;
+    } else {
+      html += escaped;
+    }
+  });
+  
+  return html;
+}
+
+function escapeHtml(text) {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
+}
+
+function updateCharGrid(charMap) {
+  if (charMap.size === 0) {
+    charGridContainer.classList.add('hidden');
+    return;
+  }
+  
+  charGridContainer.classList.remove('hidden');
+  charGrid.innerHTML = '';
+  
+  // Sort by frequency
+  const sorted = Array.from(charMap.entries())
+    .sort((a, b) => b[1].count - a[1].count);
+  
+  gridStats.textContent = `Showing ${sorted.length} unique characters`;
+  
+  sorted.forEach(([char, data]) => {
+    const cell = document.createElement('div');
+    cell.className = `char-cell ${data.count > 1 ? 'duplicate' : ''}`;
+    cell.innerHTML = `
+      <div class="char">${escapeHtml(char)}</div>
+      <div class="freq">${data.count}</div>
+    `;
+    cell.addEventListener('click', () => {
+      // Highlight all instances of this character
+      document.querySelectorAll('.letter-highlight').forEach(el => {
+        el.style.opacity = el.dataset.char === char ? '1' : '0.3';
+      });
+      setTimeout(() => {
+        document.querySelectorAll('.letter-highlight').forEach(el => {
+          el.style.opacity = '';
+        });
+      }, 2000);
+    });
+    charGrid.appendChild(cell);
+  });
+}
+
+function updateDuplicatesList(duplicateSet, charMap) {
+  if (duplicateSet.size === 0) {
+    duplicatesList.classList.add('hidden');
+    return;
+  }
+  
+  duplicatesList.classList.remove('hidden');
+  duplicatesCloud.innerHTML = '';
+  
+  const sorted = Array.from(duplicateSet)
+    .sort((a, b) => charMap.get(b).count - charMap.get(a).count);
+  
+  sorted.forEach(char => {
+    const data = charMap.get(char);
+    const tag = document.createElement('span');
+    tag.className = 'letter-tag';
+    tag.innerHTML = `${escapeHtml(char)}<span class="count">${data.count}</span>`;
+    tag.addEventListener('click', () => {
+      // Scroll to first occurrence
+      outputContainer.scrollTop = 0;
+    });
+    duplicatesCloud.appendChild(tag);
+  });
+}
+
+// Remove duplicates functionality
+function removeDuplicates() {
+  const text = inputText.value;
+  if (!text || analysisData.characters.length === 0) return;
+  
+  const mode = modeSelect.value;
+  const keepFirstOccurrence = keepFirst.checked;
+  let result = '';
+  const seen = new Set();
+  
+  if (mode === 'consecutive') {
+    // Remove consecutive duplicates only
+    let lastChar = null;
+    analysisData.characters.forEach(info => {
+      if (!info.analyze) {
+        result += info.char;
+        return;
+      }
+      
+      const normalized = info.normalized;
+      if (normalized === lastChar) {
+        // Skip this consecutive duplicate
+        return;
+      }
+      result += info.char;
+      lastChar = normalized;
+    });
+  } else {
+    // Remove all duplicates (global or word mode)
+    analysisData.characters.forEach(info => {
+      if (!info.analyze) {
+        result += info.char;
+        return;
+      }
+      
+      const normalized = info.normalized;
+      if (keepFirstOccurrence) {
+        if (!seen.has(normalized)) {
+          result += info.char;
+          seen.add(normalized);
+        }
+      } else {
+        // Keep last occurrence instead
+        // This requires two-pass, simplified to keep first for now
+        if (!seen.has(normalized)) {
+          result += info.char;
+          seen.add(normalized);
+        }
+      }
+    });
+  }
+  
+  inputText.value = result;
+  updateInputStats();
+  processText();
+}
+
+// Export duplicates list
+function exportDuplicates() {
+  if (analysisData.charMap.size === 0) return;
+  
+  let content = 'Duplicate Letter Analysis\n';
+  content += '=========================\n\n';
+  content += `Total Characters: ${analysisData.totalChars}\n`;
+  content += `Unique Characters: ${analysisData.uniqueChars}\n`;
+  content += `Duplicate Characters: ${analysisData.duplicateChars}\n\n`;
+  content += 'Character\tCount\tPositions\n';
+  content += '---------\t-----\t---------\n';
+  
+  analysisData.charMap.forEach((data, char) => {
+    if (data.count > 1) {
+      content += `${char}\t${data.count}\t${data.positions.join(', ')}\n`;
+    }
+  });
+  
+  const blob = new Blob([content], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'duplicate-letters-analysis.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Event listeners for options
+[charTypeSelect, modeSelect, caseSelect, highlightStyle, ignoreSpaces, ignorePunctuation, showOccurrences].forEach(el => {
+  el.addEventListener('change', processText);
+});
+
+// Debounced processing for typing
+const debouncedProcess = debounce(processText, 150);
+
+// Drag and drop handlers
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.add('drag-active');
+});
+
+dropZone.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropOverlay.classList.add('opacity-0', 'pointer-events-none');
+  dropZone.querySelector('textarea').classList.remove('drag-active');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    handleFile(files[0]);
+  }
+});
+
+fileSelectBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
+function handleFile(file) {
+  if (!file.type.match('text.*') && !file.name.match(/\.(txt|csv|json|xml|html?|md|js|css|py|java|cpp|c|php|rb|go|rs|swift|kt|sql|log)$/i)) {
+    alert('Please upload a text file');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    inputText.value = e.target.result;
+    updateInputStats();
+    processText();
+  };
+  reader.readAsText(file);
+}
+
+// Paste from clipboard
+async function pasteFromClipboard() {
+  try {
+    const text = await navigator.clipboard.readText();
+    inputText.value = text;
+    updateInputStats();
+    processText();
+  } catch (err) {
+    alert('Unable to access clipboard');
+  }
+}
+
+// Clear input
+function clearInput() {
+  inputText.value = '';
+  updateInputStats();
+  resetOutput();
+  inputText.focus();
+}
+
+// Copy output (copies cleaned text)
+async function copyOutput() {
+  const text = inputText.value;
+  if (!text.trim()) return;
+  
+  try {
+    await navigator.clipboard.writeText(text);
+    const originalText = copyBtn.innerHTML;
+    copyBtn.innerHTML = `<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Copied!</span>`;
+    copyBtn.classList.add('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalText;
+      copyBtn.classList.remove('bg-green-500/20', 'text-green-400', 'border-green-500/30');
+    }, 1500);
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+}
+
+// Download output
+function downloadOutput() {
+  const text = inputText.value;
+  if (!text.trim()) return;
+  
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'cleaned-text.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Reset all
+function resetAll() {
+  inputText.value = '';
+  updateInputStats();
+  resetOutput();
+  charTypeSelect.value = 'letters';
+  modeSelect.value = 'consecutive';
+  caseSelect.value = 'insensitive';
+  highlightStyle.value = 'background';
+  ignoreSpaces.checked = true;
+  ignorePunctuation.checked = true;
+  showOccurrences.checked = false;
+  keepFirst.checked = true;
+}
+
+// FAQ Toggle
+function toggleFaq(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Event listeners
+inputText.addEventListener('input', () => {
+  updateInputStats();
+  debouncedProcess();
+});
+
+pasteBtn.addEventListener('click', pasteFromClipboard);
+clearBtn.addEventListener('click', clearInput);
+copyBtn.addEventListener('click', copyOutput);
+downloadBtn.addEventListener('click', downloadOutput);
+removeDuplicatesBtn.addEventListener('click', removeDuplicates);
+exportDuplicatesBtn.addEventListener('click', exportDuplicates);
+resetBtn.addEventListener('click', resetAll);
+
+// Initialize
+updateInputStats();
+</script>
+</body>
+</html>
