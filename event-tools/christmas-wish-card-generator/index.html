@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Christmas Wish Card Generator | Free Online Card Maker</title>
+<meta name="description" content="Create stunning Christmas wish cards online free. Personalize with names, messages & 50+ designs. Download as PNG, JPG, WEBP or PDF instantly."/>
+<meta name="keywords" content="christmas wish card generator online, online christmas wish card generator free, christmas wish card generator tool, free online christmas card maker, online christmas greeting card generator free, free christmas wish card creator online, online merry christmas card maker free, free digital christmas wish card generator online, online personalized christmas wish card generator free, free online christmas greeting card creator tool"/>
+<link rel="canonical" href="https://easyprotools.com/christmas-wish-card-generator/"/>
+<link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png"/>
+<!--Google Adsense-->
+<meta name="google-adsense-account" content="ca-pub-8183914844375779">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+<!--Google Site Verification-->
+<meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk"/>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4D39CLDW58');</script>
+<!-- Open Graph -->
+<meta property="og:title" content="Christmas Wish Card Generator | Free Online Card Maker"/>
+<meta property="og:description" content="Create stunning Christmas wish cards online free. Personalize with names, messages & 50+ designs. Download as PNG, JPG, WEBP or PDF instantly."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://easyprotools.com/christmas-wish-card-generator/"/>
+<meta property="og:image" content="/assets/img/easypro-tools.jpg"/>
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Christmas Wish Card Generator | Free Online Card Maker"/>
+<meta name="twitter:description" content="Create stunning Christmas wish cards online free. Personalize with names, messages & 50+ designs. Download as PNG, JPG, WEBP or PDF instantly."/>
+<meta name="twitter:image" content="/assets/img/easypro-tools.jpg"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Dancing+Script:wght@400;600;700&family=Montserrat:wght@300;400;600;700;800&family=Pacifico&family=Satisfy&family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Raleway:wght@300;400;600;700&family=Lobster&family=Nunito:wght@300;400;600;700&family=Bebas+Neue&family=Lato:wght@300;400;700&family=Mountains+of+Christmas:wght@400;700&family=Limelight&display=swap" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={darkMode:'class'}</script>
+<style>
+body{font-family:'Inter',sans-serif;background:#0a0a0a;color:#e5e5e5}
+.bg-mesh{background-color:#0a0a0a;background-image:radial-gradient(at 0% 0%,rgba(185,28,28,.09) 0px,transparent 50%),radial-gradient(at 100% 0%,rgba(21,128,61,.07) 0px,transparent 50%);background-attachment:fixed}
+.glass-panel{background:rgba(20,20,20,.6);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.08)}
+.glass-input{background:rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.1);color:#f5f5f5;transition:all .2s ease}
+.glass-input:focus{background:rgba(0,0,0,.6);border-color:rgba(220,38,38,.5);box-shadow:0 0 0 3px rgba(220,38,38,.1);outline:none}
+.glass-input::placeholder{color:#6b7280}
+.btn-primary{background:linear-gradient(135deg,rgba(185,28,28,.9),rgba(127,29,29,.8));border:1px solid rgba(255,255,255,.1);position:relative;overflow:hidden;transition:all .3s ease}
+.btn-primary:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(185,28,28,.4)}
+.pulse-dot{animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+#mobileMenu{transition:max-height .3s,opacity .3s;max-height:0;opacity:0;overflow:hidden}
+#mobileMenu.open{max-height:200px;opacity:1}
+.card-thumb{cursor:pointer;transition:all .25s ease;border:2px solid transparent;position:relative;overflow:hidden;border-radius:8px}
+.card-thumb:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 12px 32px rgba(220,38,38,.25);border-color:rgba(220,38,38,.4)}
+.card-thumb.selected{border-color:rgba(220,38,38,.9);box-shadow:0 0 0 3px rgba(220,38,38,.3)}
+.card-thumb .select-badge{position:absolute;top:6px;right:6px;width:18px;height:18px;background:rgba(220,38,38,.9);border-radius:50%;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s;z-index:10}
+.card-thumb.selected .select-badge{opacity:1}
+.faq-content{transition:max-height .3s,opacity .3s;max-height:0;opacity:0;overflow:hidden}
+.faq-content.open{max-height:400px;opacity:1}
+.faq-icon{transition:transform .3s}
+.faq-icon.open{transform:rotate(180deg)}
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-track{background:rgba(0,0,0,.2)}
+::-webkit-scrollbar-thumb{background:rgba(255,255,255,.15);border-radius:3px}
+.toast-msg{position:fixed;bottom:24px;right:80px;color:white;padding:10px 18px;border-radius:8px;font-size:.8rem;font-weight:500;transform:translateY(80px);opacity:0;transition:all .3s;z-index:1000;pointer-events:none}
+.toast-msg.show{transform:translateY(0);opacity:1}
+.toast-success{background:rgba(34,197,94,.95)}
+.toast-error{background:rgba(239,68,68,.95)}
+.scroll-top-btn{position:fixed;bottom:24px;right:24px;width:42px;height:42px;border-radius:50%;background:rgba(185,28,28,.85);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;visibility:hidden;transition:all .3s;z-index:99}
+.scroll-top-btn.visible{opacity:1;visibility:visible}
+.ctrl-range{-webkit-appearance:none;appearance:none;background:rgba(255,255,255,.08);border-radius:4px;height:4px;width:100%;outline:none;cursor:pointer;margin-top:3px}
+.ctrl-range::-webkit-slider-thumb{-webkit-appearance:none;width:14px;height:14px;background:#dc2626;border-radius:50%;cursor:pointer;border:2px solid rgba(255,255,255,.2)}
+.ctrl-range::-moz-range-thumb{width:14px;height:14px;background:#dc2626;border-radius:50%;cursor:pointer;border:2px solid rgba(255,255,255,.2)}
+.card-thumb-name{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(0deg,rgba(0,0,0,.9) 0%,transparent 100%);padding:16px 6px 5px;font-size:10px;font-weight:600;color:#fff;text-align:center;pointer-events:none}
+.ctrl-section-body{transition:max-height .3s,opacity .3s;overflow:hidden}
+.ctrl-section-body.collapsed{max-height:0!important;opacity:0}
+.ctrl-section-body.expanded{opacity:1}
+.ctrl-chevron{transition:transform .25s}
+.ctrl-chevron.open{transform:rotate(180deg)}
+.color-swatch{width:26px;height:26px;border-radius:5px;border:2px solid rgba(255,255,255,.15);cursor:pointer;padding:0;overflow:hidden;background:none;flex-shrink:0}
+.color-swatch input[type=color]{width:34px;height:34px;border:none;cursor:pointer;margin:-4px 0 0 -4px;background:none;padding:0}
+.ctrl-section-hdr{display:flex;align-items:center;justify-content:space-between;cursor:pointer;padding:1px 0;user-select:none}
+.ctrl-section-hdr:hover .ctrl-lbl{color:#fca5a5}
+.ctrl-badge{font-size:9px;padding:1px 5px;border-radius:9999px;background:rgba(220,38,38,.2);border:1px solid rgba(220,38,38,.3);color:#fca5a5;font-weight:600}
+#cardPreviewOuter{width:100%;position:relative;overflow:hidden;border-radius:10px;border:1px solid rgba(255,255,255,.1)}
+#cardScaleContainer{position:absolute;top:0;left:0;transform-origin:top left}
+.size-tab{padding:.2rem .55rem;border-radius:6px;font-size:.68rem;border:1px solid rgba(255,255,255,.1);color:#9ca3af;cursor:pointer;transition:all .2s;white-space:nowrap}
+.size-tab.active{background:rgba(220,38,38,.2);border-color:rgba(220,38,38,.5);color:#fca5a5}
+.size-tab:hover{background:rgba(220,38,38,.1);color:#fecaca}
+.dl-btn{display:flex;align-items:center;justify-content:center;gap:4px;padding:.4rem .3rem;border-radius:7px;font-size:.68rem;font-weight:700;cursor:pointer;transition:all .2s;border:1px solid}
+.article-content h2{font-size:1.3rem;font-weight:700;margin-top:1.4rem;margin-bottom:.5rem;color:#e2e8f0}
+.article-content h3{font-size:1.05rem;font-weight:600;margin-top:1rem;margin-bottom:.4rem;color:#cbd5e1}
+.article-content p{margin-bottom:.75rem;line-height:1.8;color:#94a3b8}
+.article-content strong{color:#e2e8f0}
+.category-tab{padding:.25rem .7rem;border-radius:9999px;font-size:.7rem;border:1px solid rgba(255,255,255,.1);color:#9ca3af;cursor:pointer;transition:all .2s;white-space:nowrap}
+.category-tab.active,.category-tab:hover{background:rgba(220,38,38,.2);border-color:rgba(220,38,38,.5);color:#fca5a5}
+</style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+<div id="toastMsg" class="toast-msg toast-success"></div>
+<button id="scrollTopBtn" class="scroll-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+</button>
+
+<!-- HEADER -->
+<header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex items-center justify-between h-14">
+      <div class="flex items-center space-x-2">
+        <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none">
+          <rect width="40" height="40" rx="10" fill="url(#chg)"/>
+          <text x="20" y="27" text-anchor="middle" fill="white" font-size="20">🎄</text>
+          <defs><linearGradient id="chg" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse"><stop stop-color="#b91c1c"/><stop offset="1" stop-color="#166534"/></linearGradient></defs>
+        </svg>
+        <div>
+          <h1 class="text-sm font-bold text-white">Christmas Wish Card Generator</h1>
+          <p class="text-gray-400 text-xs hidden sm:block">Free Online Christmas Greeting Card Maker</p>
+        </div>
+      </div>
+      <nav class="hidden md:flex items-center space-x-5">
+        <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors">🏠 Home</a>
+        <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors">⚙️ All Tools</a>
+      </nav>
+      <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-black/90">
+    <div class="px-4 py-2 space-y-1">
+      <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm text-gray-300 hover:text-white hover:bg-white/10">Home</a>
+      <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm text-gray-300 hover:text-white hover:bg-white/10">All Tools</a>
+    </div>
+  </div>
+</header>
+
+<!-- BANNER -->
+<section class="py-4 px-4">
+  <div class="max-w-4xl mx-auto text-center">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel mb-2">
+      <span class="w-1.5 h-1.5 rounded-full bg-red-400 pulse-dot"></span>
+      <span class="text-xs text-gray-400">Free Tool • No Registration • Instant Download</span>
+    </div>
+    <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-1 bg-gradient-to-r from-white via-red-100 to-red-300 bg-clip-text text-transparent">Christmas Wish Card Generator</h2>
+    <p class="text-gray-400 text-sm">Create & Download Beautiful Christmas Cards Instantly — 100% Free</p>
+  </div>
+</section>
+
+<!-- MAIN TOOL -->
+<main class="flex-grow max-w-6xl mx-auto px-4 pb-10 w-full">
+<div class="glass-panel rounded-xl p-3 sm:p-4 mb-6">
+<div class="grid grid-cols-1 lg:grid-cols-5 gap-3">
+
+<!-- LEFT CONTROLS -->
+<div class="lg:col-span-2 space-y-2">
+
+  <!-- Recipient -->
+  <div class="glass-panel rounded-xl p-3">
+    <div class="ctrl-section-hdr" onclick="toggleSec('recipient')">
+      <div class="flex items-center gap-2"><span>🎄</span><span class="ctrl-lbl text-xs font-bold text-gray-200 uppercase tracking-wider">Recipient</span></div>
+      <svg class="ctrl-chevron open w-3.5 h-3.5 text-gray-400" id="chev-recipient" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+    </div>
+    <div id="sec-recipient" class="ctrl-section-body expanded mt-2" style="max-height:220px">
+      <div class="space-y-2">
+        <div>
+          <label class="text-xs text-gray-400 mb-1 block">Name</label>
+          <div class="flex gap-1.5">
+            <input type="text" id="recipientName" placeholder="e.g. Sarah" maxlength="35" class="flex-1 px-2.5 py-1.5 rounded-lg glass-input text-sm" oninput="updatePreview()"/>
+            <label class="color-swatch" title="Name color"><input type="color" id="nameColor" value="#ffffff" oninput="updatePreview()"/></label>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-2">
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Name Font</label>
+            <select id="nameFontSelect" class="w-full px-2 py-1.5 rounded-lg glass-input text-xs" onchange="updatePreview()">
+              <option value="'Great Vibes',cursive">Great Vibes</option>
+              <option value="'Mountains of Christmas',cursive">Mountains of Xmas</option>
+              <option value="'Playfair Display',serif">Playfair</option>
+              <option value="'Dancing Script',cursive">Dancing Script</option>
+              <option value="'Cinzel',serif">Cinzel</option>
+              <option value="'Pacifico',cursive">Pacifico</option>
+              <option value="'Bebas Neue',sans-serif">Bebas Neue</option>
+              <option value="'Lobster',cursive">Lobster</option>
+            </select>
+          </div>
+          <div>
+            <label class="text-xs text-gray-400 mb-0.5 block">Size <span id="nameSizeVal" class="text-red-400">32px</span></label>
+            <input type="range" id="nameSize" min="14" max="56" value="32" class="ctrl-range" oninput="document.getElementById('nameSizeVal').textContent=this.value+'px';updatePreview()"/>
+          </div>
+        </div>
+        <div>
+          <label class="text-xs text-gray-400 mb-1 block">Relation (Optional)</label>
+          <input type="text" id="relationInput" placeholder="e.g. My Dearest Friend" maxlength="40" class="w-full px-2.5 py-1.5 rounded-lg glass-input text-xs" oninput="updatePreview()"/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card Title -->
+  <div class="glass-panel rounded-xl p-3">
+    <div class="ctrl-section-hdr" onclick="toggleSec('title')">
+      <div class="flex items-center gap-2"><span>✏️</span><span class="ctrl-lbl text-xs font-bold text-gray-200 uppercase tracking-wider">Card Title</span><span class="ctrl-badge">auto-fill</span></div>
+      <svg class="ctrl-chevron open w-3.5 h-3.5 text-gray-400" id="chev-title" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+    </div>
+    <div id="sec-title" class="ctrl-section-body expanded mt-2" style="max-height:310px">
+      <div class="flex gap-1.5 mb-2">
+        <input type="text" id="cardTitle" placeholder="e.g. Merry Christmas!" maxlength="50" class="flex-1 px-2.5 py-1.5 rounded-lg glass-input text-sm" oninput="updatePreview()"/>
+        <label class="color-swatch" title="Title color"><input type="color" id="titleColor" value="#fca5a5" oninput="updatePreview()"/></label>
+      </div>
+      <div class="grid grid-cols-2 gap-2 mb-2">
+        <div>
+          <label class="text-xs text-gray-400 mb-1 block">Font</label>
+          <select id="titleFontSelect" class="w-full px-2 py-1.5 rounded-lg glass-input text-xs" onchange="updatePreview()">
+            <option value="'Mountains of Christmas',cursive">Mountains of Xmas</option>
+            <option value="'Cinzel',serif">Cinzel</option>
+            <option value="'Playfair Display',serif">Playfair</option>
+            <option value="'Great Vibes',cursive">Great Vibes</option>
+            <option value="'Pacifico',cursive">Pacifico</option>
+            <option value="'Bebas Neue',sans-serif">Bebas Neue</option>
+            <option value="'Lobster',cursive">Lobster</option>
+            <option value="'Limelight',cursive">Limelight</option>
+          </select>
+        </div>
+        <div>
+          <label class="text-xs text-gray-400 mb-0.5 block">Size <span id="titleSizeVal" class="text-red-400">44px</span></label>
+          <input type="range" id="titleSize" min="16" max="72" value="44" class="ctrl-range" oninput="document.getElementById('titleSizeVal').textContent=this.value+'px';updatePreview()"/>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-2">
+        <div>
+          <label class="text-xs text-gray-400 mb-0.5 block">Spacing <span id="titleSpacingVal" class="text-red-400">0px</span></label>
+          <input type="range" id="titleSpacing" min="-2" max="12" value="0" class="ctrl-range" oninput="document.getElementById('titleSpacingVal').textContent=this.value+'px';updatePreview()"/>
+        </div>
+        <div>
+          <label class="text-xs text-gray-400 mb-1 block">Style</label>
+          <select id="titleStyle" class="w-full px-2 py-1.5 rounded-lg glass-input text-xs" onchange="updatePreview()">
+            <option value="normal">Normal</option>
+            <option value="uppercase">UPPERCASE</option>
+            <option value="capitalize">Capitalize</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Message -->
+  <div class="glass-panel rounded-xl p-3">
+    <div class="ctrl-section-hdr" onclick="toggleSec('msg')">
+      <div class="flex items-center gap-2"><span>💬</span><span class="ctrl-lbl text-xs font-bold text-gray-200 uppercase tracking-wider">Message</span><span class="ctrl-badge">auto-fill</span></div>
+      <div class="flex items-center gap-2"><span id="msgCount" class="text-xs text-gray-500">0/200</span><svg class="ctrl-chevron open w-3.5 h-3.5 text-gray-400" id="chev-msg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></div>
+    </div>
+    <div id="sec-msg" class="ctrl-section-body expanded mt-2" style="max-height:340px">
+      <div class="flex gap-1.5 mb-2">
+        <textarea id="customMessage" placeholder="Your Christmas message..." maxlength="200" rows="3" class="flex-1 px-2.5 py-1.5 rounded-lg glass-input text-sm resize-none" oninput="document.getElementById('msgCount').textContent=this.value.length+'/200';updatePreview()"></textarea>
+        <label class="color-swatch mt-0.5" title="Message color"><input type="color" id="msgColor" value="#fef2f2" oninput="updatePreview()"/></label>
+      </div>
+      <div class="grid grid-cols-2 gap-2 mb-2">
+        <div>
+          <label class="text-xs text-gray-400 mb-1 block">Font</label>
+          <select id="fontSelect" class="w-full px-2 py-1.5 rounded-lg glass-input text-xs" onchange="updatePreview()">
+            <option value="'Cormorant Garamond',serif">Cormorant</option>
+            <option value="'Nunito',sans-serif">Nunito</option>
+            <option value="'Playfair Display',serif">Playfair</option>
+            <option value="'Montserrat',sans-serif">Montserrat</option>
+            <option value="'Raleway',sans-serif">Raleway</option>
+            <option value="'Lato',sans-serif">Lato</option>
+          </select>
+        </div>
+        <div>
+          <label class="text-xs text-gray-400 mb-0.5 block">Size <span id="msgSizeVal" class="text-red-400">13px</span></label>
+          <input type="range" id="msgSize" min="9" max="22" value="13" class="ctrl-range" oninput="document.getElementById('msgSizeVal').textContent=this.value+'px';updatePreview()"/>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-2">
+        <div>
+          <label class="text-xs text-gray-400 mb-0.5 block">Line H <span id="msgLineHVal" class="text-red-400">1.6</span></label>
+          <input type="range" id="msgLineH" min="1" max="2.5" step="0.1" value="1.6" class="ctrl-range" oninput="document.getElementById('msgLineHVal').textContent=parseFloat(this.value).toFixed(1);updatePreview()"/>
+        </div>
+        <div>
+          <label class="text-xs text-gray-400 mb-1 block">Align</label>
+          <select id="msgAlign" class="w-full px-2 py-1.5 rounded-lg glass-input text-xs" onchange="updatePreview()">
+            <option value="center">Center</option>
+            <option value="left">Left</option>
+            <option value="right">Right</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sender -->
+  <div class="glass-panel rounded-xl p-3">
+    <div class="ctrl-section-hdr" onclick="toggleSec('sender')">
+      <div class="flex items-center gap-2"><span>✍️</span><span class="ctrl-lbl text-xs font-bold text-gray-200 uppercase tracking-wider">From</span></div>
+      <svg class="ctrl-chevron open w-3.5 h-3.5 text-gray-400" id="chev-sender" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+    </div>
+    <div id="sec-sender" class="ctrl-section-body expanded mt-2" style="max-height:180px">
+      <div class="space-y-2">
+        <div>
+          <label class="text-xs text-gray-400 mb-1 block">Your Name</label>
+          <div class="flex gap-1.5">
+            <input type="text" id="senderName" placeholder="e.g. The Smiths" maxlength="25" class="flex-1 px-2.5 py-1.5 rounded-lg glass-input text-sm" oninput="updatePreview()"/>
+            <label class="color-swatch" title="Sender color"><input type="color" id="fromColor" value="#fca5a5" oninput="updatePreview()"/></label>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-2">
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Font</label>
+            <select id="fromFontSelect" class="w-full px-2 py-1.5 rounded-lg glass-input text-xs" onchange="updatePreview()">
+              <option value="'Dancing Script',cursive">Dancing Script</option>
+              <option value="'Great Vibes',cursive">Great Vibes</option>
+              <option value="'Satisfy',cursive">Satisfy</option>
+              <option value="'Pacifico',cursive">Pacifico</option>
+            </select>
+          </div>
+          <div>
+            <label class="text-xs text-gray-400 mb-0.5 block">Size <span id="fromSizeVal" class="text-red-400">16px</span></label>
+            <input type="range" id="fromSize" min="10" max="32" value="16" class="ctrl-range" oninput="document.getElementById('fromSizeVal').textContent=this.value+'px';updatePreview()"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Actions -->
+  <div class="glass-panel rounded-xl p-3">
+    <div class="grid grid-cols-2 gap-2">
+      <button onclick="shuffleDesign()" class="btn-primary py-2.5 px-3 rounded-lg text-white text-xs font-bold flex items-center justify-center gap-1.5">🎲 Shuffle Design</button>
+      <button onclick="resetToDefault()" class="py-2.5 px-3 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 text-xs font-semibold flex items-center justify-center gap-1.5 transition-all">🔄 Reset</button>
+    </div>
+  </div>
+</div>
+
+<!-- RIGHT: Preview + Download + Grid -->
+<div class="lg:col-span-3 space-y-3">
+
+  <!-- Live Preview -->
+  <div>
+    <div class="flex items-center justify-between mb-1.5">
+      <label class="text-xs font-medium text-gray-300">👁 Live Preview</label>
+      <span id="selectedDesignName" class="text-xs text-red-400 font-medium"></span>
+    </div>
+    <div id="cardPreviewOuter">
+      <div id="cardScaleContainer"><div id="cardCanvas"></div></div>
+    </div>
+  </div>
+
+  <!-- Size & Download -->
+  <div class="glass-panel rounded-xl p-3">
+    <div class="ctrl-section-hdr" onclick="toggleSec('dl')">
+      <div class="flex items-center gap-2"><span>⬇️</span><span class="ctrl-lbl text-xs font-bold text-gray-200 uppercase tracking-wider">Size & Download</span></div>
+      <svg class="ctrl-chevron open w-3.5 h-3.5 text-gray-400" id="chev-dl" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+    </div>
+    <div id="sec-dl" class="ctrl-section-body expanded mt-2" style="max-height:300px">
+      <div class="flex flex-wrap gap-1.5 mb-2">
+        <button class="size-tab active" onclick="applySize('landscape',this)">Standard</button>
+        <button class="size-tab" onclick="applySize('square',this)">Square</button>
+        <button class="size-tab" onclick="applySize('story',this)">Story</button>
+        <button class="size-tab" onclick="applySize('wide',this)">Wide</button>
+      </div>
+      <div class="flex items-end gap-2 mb-2">
+        <div class="flex-1"><label class="text-xs text-gray-500 block mb-0.5">W (px)</label><input type="number" id="customW" value="600" min="200" max="1200" class="w-full px-2 py-1.5 rounded-lg glass-input text-xs" oninput="applyCustomSize()"/></div>
+        <span class="text-gray-500 mb-2">×</span>
+        <div class="flex-1"><label class="text-xs text-gray-500 block mb-0.5">H (px)</label><input type="number" id="customH" value="400" min="200" max="1200" class="w-full px-2 py-1.5 rounded-lg glass-input text-xs" oninput="applyCustomSize()"/></div>
+      </div>
+      <p id="sizeLabel" class="text-xs text-gray-500 mb-2">Standard (600×400)</p>
+      <div class="grid grid-cols-5 gap-1.5">
+        <button onclick="downloadCard('png')" class="dl-btn bg-red-500/10 hover:bg-red-500/25 border-red-500/30 text-red-300">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>PNG</button>
+        <button onclick="downloadCard('jpeg')" class="dl-btn bg-purple-500/10 hover:bg-purple-500/25 border-purple-500/30 text-purple-300">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>JPG</button>
+        <button onclick="downloadCard('webp')" class="dl-btn bg-blue-500/10 hover:bg-blue-500/25 border-blue-500/30 text-blue-300">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>WEBP</button>
+        <button onclick="downloadCard('pdf')" class="dl-btn bg-orange-500/10 hover:bg-orange-500/25 border-orange-500/30 text-orange-300">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>PDF</button>
+        <button onclick="copyCardImage()" id="copyImgBtn" class="dl-btn bg-green-500/10 hover:bg-green-500/25 border-green-500/30 text-green-300">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>Copy</button>
+      </div>
+      <div id="dlProgress" class="hidden mt-2 text-center text-xs text-red-400 animate-pulse">Generating...</div>
+    </div>
+  </div>
+
+  <!-- Category Tabs -->
+  <div class="flex gap-1.5 overflow-x-auto pb-1">
+    <button class="category-tab active" onclick="filterCards('all',this)">All</button>
+    <button class="category-tab" onclick="filterCards('classic',this)">Classic</button>
+    <button class="category-tab" onclick="filterCards('winter',this)">Winter</button>
+    <button class="category-tab" onclick="filterCards('modern',this)">Modern</button>
+    <button class="category-tab" onclick="filterCards('nature',this)">Nature</button>
+    <button class="category-tab" onclick="filterCards('elegant',this)">Elegant</button>
+    <button class="category-tab" onclick="filterCards('minimal',this)">Minimal</button>
+  </div>
+
+  <!-- Design Grid -->
+  <div id="designGrid" class="grid grid-cols-2 sm:grid-cols-3 gap-2.5 overflow-y-auto" style="max-height:560px"></div>
+  <p class="text-xs text-gray-500 mt-1">Click any design — title, message & colors auto-update</p>
+</div>
+</div>
+</div>
+
+<!-- Off-screen render -->
+<div style="position:fixed;left:-9999px;top:0;pointer-events:none;z-index:-1">
+  <div id="cardRenderTarget" style="width:600px;height:400px;overflow:hidden"></div>
+</div>
+
+<!-- Features -->
+<section class="mb-6">
+  <h2 class="text-xl font-bold text-center mb-4 bg-gradient-to-r from-white via-red-100 to-red-300 bg-clip-text text-transparent">Why Use Our Christmas Wish Card Generator?</h2>
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+    <div class="glass-panel rounded-lg p-3"><div class="text-2xl mb-1">🎨</div><h3 class="text-xs font-semibold mb-1 text-white">50+ Designs</h3><p class="text-gray-400 text-xs">Beautiful Christmas-themed templates</p></div>
+    <div class="glass-panel rounded-lg p-3"><div class="text-2xl mb-1">⬇️</div><h3 class="text-xs font-semibold mb-1 text-white">4 Formats</h3><p class="text-gray-400 text-xs">PNG, JPG, WEBP or PDF</p></div>
+    <div class="glass-panel rounded-lg p-3"><div class="text-2xl mb-1">👁</div><h3 class="text-xs font-semibold mb-1 text-white">Live Preview</h3><p class="text-gray-400 text-xs">See your card update instantly</p></div>
+    <div class="glass-panel rounded-lg p-3"><div class="text-2xl mb-1">📋</div><h3 class="text-xs font-semibold mb-1 text-white">Copy Image</h3><p class="text-gray-400 text-xs">Copy to clipboard instantly</p></div>
+    <div class="glass-panel rounded-lg p-3"><div class="text-2xl mb-1">🔒</div><h3 class="text-xs font-semibold mb-1 text-white">Free & Private</h3><p class="text-gray-400 text-xs">No login, no watermarks</p></div>
+    <div class="glass-panel rounded-lg p-3"><div class="text-2xl mb-1">📱</div><h3 class="text-xs font-semibold mb-1 text-white">All Sizes</h3><p class="text-gray-400 text-xs">Story, Square, Standard & more</p></div>
+  </div>
+</section>
+
+<!-- How To Use -->
+<section class="mb-6">
+  <h2 class="text-xl font-bold text-center mb-4 bg-gradient-to-r from-white via-red-100 to-red-300 bg-clip-text text-transparent">How to Create Your Christmas Card</h2>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+    <div class="glass-panel rounded-lg p-3"><div class="w-6 h-6 bg-red-500/20 rounded-full flex items-center justify-center mb-2 border border-red-500/30 text-red-400 text-xs font-bold">1</div><h3 class="text-xs font-semibold mb-1 text-white">Enter Details</h3><p class="text-gray-400 text-xs">Add recipient name & relation</p></div>
+    <div class="glass-panel rounded-lg p-3"><div class="w-6 h-6 bg-green-500/20 rounded-full flex items-center justify-center mb-2 border border-green-500/30 text-green-400 text-xs font-bold">2</div><h3 class="text-xs font-semibold mb-1 text-white">Customize Text</h3><p class="text-gray-400 text-xs">Edit title, message & sender</p></div>
+    <div class="glass-panel rounded-lg p-3"><div class="w-6 h-6 bg-red-500/20 rounded-full flex items-center justify-center mb-2 border border-red-500/30 text-red-400 text-xs font-bold">3</div><h3 class="text-xs font-semibold mb-1 text-white">Pick Design</h3><p class="text-gray-400 text-xs">Click any card — colors auto-apply</p></div>
+    <div class="glass-panel rounded-lg p-3"><div class="w-6 h-6 bg-green-500/20 rounded-full flex items-center justify-center mb-2 border border-green-500/30 text-green-400 text-xs font-bold">4</div><h3 class="text-xs font-semibold mb-1 text-white">Download & Share</h3><p class="text-gray-400 text-xs">Save as PNG, JPG, WEBP or PDF</p></div>
+  </div>
+</section>
+
+<!-- Article -->
+<section class="mb-8">
+  <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+    <h2>The Complete Guide to Free Online Christmas Wish Card Generators: Create Stunning Digital Greeting Cards for the Holiday Season</h2>
+    <p>Christmas — a time of warmth, generosity, family, and the joy of giving. Every year, billions of people around the world look for the perfect way to express their holiday wishes to the people they love. In our digital age, a beautifully crafted Christmas card shared over WhatsApp, Instagram, or email carries all the warmth of a traditional greeting card with the instant magic of modern technology. Our <strong>christmas wish card generator online</strong> provides the ideal platform to create stunning, personalized Christmas greeting cards that capture the full spirit of the holiday season — completely free, no registration required, and ready to download in seconds.</p>
+    <p>Whether you are sending Merry Christmas wishes to family across the country, sharing holiday greetings with colleagues and clients, or posting seasonal cheer on social media, our <strong>online christmas wish card generator free</strong> gives you the tools to create truly memorable digital cards. With over 50 professionally designed templates spanning Classic, Winter, Modern, Nature, Elegant, and Minimal categories, there is a perfect Christmas card design for every recipient and every relationship.</p>
+
+    <h2>What Is a Christmas Wish Card Generator?</h2>
+    <p>A <strong>christmas wish card generator tool</strong> is a browser-based application that enables users to create personalized, visually beautiful Christmas greeting cards without any graphic design skills or software. Unlike generic image editors, a dedicated Christmas card generator features templates, color palettes, typography, and decorative elements specifically chosen for the holiday season — Christmas trees, snow, snowflakes, reindeer, Santa Claus, holly, ornaments, winter landscapes, and the iconic red-and-green color combination that has defined Christmas visual culture for generations.</p>
+    <p>Our <strong>free online christmas card maker</strong> goes far beyond simple template selection. It provides comprehensive customization of every visual element — the recipient's name, a personal message, font choices, color palettes, and design styles — along with intelligent auto-fill of seasonal messages and professional-grade export in four formats. Everything is completely free, processes entirely in your browser, and leaves no data on any server.</p>
+
+    <h2>Key Features of Our Christmas Card Creator</h2>
+    <h3>50+ Professionally Designed Christmas Templates</h3>
+    <p>Our <strong>online christmas greeting card generator free</strong> offers more than 50 unique templates across seven categories. The Classic category features timeless Christmas aesthetics — deep reds and forest greens, plaid patterns, traditional Christmas tree silhouettes, and warm candlelight color schemes that evoke the classic holiday imagery of Victorian Christmas cards. The Winter category brings frosty blues, silver snowflakes, icy landscapes, and the magical atmosphere of a white Christmas. The Modern category reimagines holiday design through contemporary lenses — bold geometric patterns, gradient backgrounds inspired by winter sunsets, and typographic compositions that feel fresh and current. The Nature category celebrates the natural world of Christmas — pine forests, holly, mistletoe, and the organic beauty of a woodland winter. The Elegant category offers refined luxury aesthetics — marble textures with gold details, double-border treatments, and sophisticated typography. The Minimal category provides clean, typographic designs for a modern, understated holiday greeting.</p>
+
+    <h3>Deep Name Personalization</h3>
+    <p>The most touching Christmas cards are personal ones. Our <strong>free christmas wish card creator online</strong> allows you to address every card directly to the recipient by name, displayed in beautiful holiday typography. Adding a relationship description — "My Dearest Family," "Dear Friend," "Beloved Colleague" — creates a card that feels uniquely crafted for that specific person. This level of personalization transforms a beautiful template into a genuinely heartfelt holiday greeting that recipients will treasure.</p>
+
+    <h3>Holiday Typography Collection</h3>
+    <p>Our <strong>online merry christmas card maker free</strong> features a curated library of fonts including Mountains of Christmas — a playful, festive font designed specifically for holiday cards — alongside Great Vibes, Cinzel, Dancing Script, Pacifico, Limelight, and Lobster. These font choices cover the full spectrum from whimsical and playful to refined and elegant, ensuring every Christmas card has the perfect typographic character for its design and recipient.</p>
+
+    <h3>Christmas-Specific Visual Elements</h3>
+    <p>Every design in our <strong>free digital christmas wish card generator online</strong> has been crafted with authentic Christmas visual culture. You will find Christmas tree silhouettes, snowflake scatter patterns, candy cane stripes, string light effects, holly and berry motifs, snow scenes, winter forest silhouettes, reindeer, and the warm glow of holiday firelight — all rendered beautifully and in keeping with the spirit of the season.</p>
+
+    <h3>Multiple Export Formats</h3>
+    <p>Our <strong>online personalized christmas wish card generator free</strong> exports in PNG for maximum quality, JPG for compact file sizes perfect for email, WEBP for optimal social media sharing, and PDF for professional printing. The Copy to Clipboard feature enables instant sharing via any messaging app. All formats export at 4x resolution for crisp, beautiful results on any device or print size.</p>
+
+    <h2>Christmas Card Design Categories</h2>
+    <h3>Classic Christmas Designs</h3>
+    <p>Classic designs draw from the deep well of Christmas visual tradition — the red-and-green color combination that has defined holiday imagery for over a century, the warm glow of candlelight and fireplaces, the silhouette of a decorated Christmas tree against a dark winter night, and the nostalgic warmth of Victorian and mid-century Christmas imagery. These cards feel timeless and genuinely festive, appropriate for family greetings, community communications, and anyone for whom traditional Christmas aesthetics carry deep emotional meaning. Our <strong>free online christmas greeting card creator tool</strong> classic category honors this rich visual heritage with designs that feel both familiar and beautifully crafted.</p>
+
+    <h3>Winter Wonderland Designs</h3>
+    <p>The Winter category captures the magical atmosphere of a snowy Christmas — deep midnight blues and silver whites, dancing snowflakes, icy crystal patterns, and the hushed, ethereal beauty of a landscape blanketed in fresh snow. These designs evoke the feeling of looking out at a snow-covered world through a frosted window, a warm cup of cocoa in hand. For recipients who love the winter season itself — the cold, the snow, the cozy indoors — these cards perfectly capture that beloved atmosphere.</p>
+
+    <h3>Modern Christmas Designs</h3>
+    <p>Modern designs reimagine Christmas visual traditions through a contemporary design sensibility. Geometric snowflake patterns rendered in bold colors, gradient backgrounds inspired by winter aurora skies, neon-accented holiday motifs, and typographic compositions that feel current and design-forward. These cards work beautifully for younger recipients, social media posts, and any context where contemporary aesthetics and holiday cheer come together perfectly.</p>
+
+    <h3>Nature-Inspired Christmas Designs</h3>
+    <p>The Nature category celebrates the organic beauty of the Christmas season — pine and fir trees dusted with snow, holly berries and mistletoe, the warm color of dried orange slices and cinnamon sticks, the deep green of woodland scenes under winter skies. These designs connect the festive celebration to the natural world, creating cards that feel both warmly seasonal and genuinely beautiful. They are particularly appropriate for outdoor enthusiasts, nature lovers, and anyone who appreciates a more organic, artisan aesthetic in their holiday greetings.</p>
+
+    <h3>Elegant Christmas Designs</h3>
+    <p>Elegant designs bring the luxury and refinement of high-end Christmas aesthetics to your digital cards — marble textures with gold overlays, double-border treatments, corner accent motifs, dark backgrounds with warm accent colors, and sophisticated typography. These cards are appropriate for professional holiday greetings to clients and partners, formal family announcements, and messages to recipients who appreciate a more refined, luxurious aesthetic in their Christmas cards.</p>
+
+    <h3>Minimal Christmas Designs</h3>
+    <p>Minimal designs demonstrate that the quietest holiday greetings can be the most memorable. Clean white or near-white backgrounds, precise typographic spacing, single-color accents, and restrained decorative elements create cards that feel contemporary, confident, and genuinely thoughtful. These work well for professional contexts, recipients with modern aesthetic sensibilities, and situations where elegant simplicity feels more appropriate than elaborate decoration.</p>
+
+    <h2>Christmas Card Message Ideas</h2>
+    <p>Our <strong>online christmas message card generator free</strong> auto-fills seasonally appropriate messages for each design, but a personally composed message always creates the deepest impact. For family: "May your home be filled with the warmth of love, the joy of laughter, and the magic of Christmas this holiday season and always." For friends: "Wishing you a Christmas as bright and beautiful as the friendship you bring into my life." For colleagues: "Warmest wishes for a wonderful Christmas and a prosperous, happy New Year." For children: "Santa is watching, and he knows just how wonderful you are! Have a magical Christmas filled with joy and surprises." For neighbors: "Grateful to share this neighborhood and this season with you. Merry Christmas and Happy New Year!" Feel free to add holiday-specific phrases — "Season's Greetings," "Peace on Earth," "Joy to the World," or "Happy Holidays" — to make your message inclusive and warm for all recipients.</p>
+
+    <h2>Sharing Your Christmas Cards</h2>
+    <p>Once you have created your perfect card using our <strong>free christmas greeting message card maker online</strong>, sharing is immediate and flexible. For WhatsApp and Facebook Messenger: use the Copy button to copy the card directly to your clipboard and paste into any conversation or group. For Instagram Stories: use the Story preset (400×600) for perfectly proportioned vertical posts. For Instagram Feed: the Square preset (500×500) works beautifully. For Facebook posts and cover photos: any format works; WEBP offers the best quality-to-size ratio. For email newsletters and corporate holiday communications: download as JPG for smaller attachments that load quickly. For printing physical Christmas cards: use the PDF export option for the sharpest, most professional output at any print size — glossy photo paper or professional cardstock will produce beautiful results.</p>
+
+    <h2>Why Personalized Christmas Cards Matter</h2>
+    <p>In an era of mass-forwarded holiday images and generic "Merry Christmas" texts, a genuinely personalized Christmas card stands out with remarkable power. When someone receives a card with their name written in beautiful holiday typography, a message that speaks directly to them, and a design that reflects genuine thought and care, it communicates something much deeper than seasonal greetings — it says "I took time for you." Our <strong>online merry christmas wishes card maker free</strong> makes that quality of personalized care accessible to everyone, for every person on your holiday list, in just minutes.</p>
+    <p>Studies on the psychology of gift-giving consistently show that the perceived effort in a gift or greeting matters as much as its monetary value. A personalized Christmas card created with genuine care carries far more emotional weight than an expensive but generic gift. Our tool makes that effort effortless — while ensuring the result is always visually beautiful and professionally presented.</p>
+
+    <h2>Privacy and Data Security</h2>
+    <p>Our <strong>free christmas ecard generator online</strong> processes everything entirely in your browser using client-side JavaScript. The names you enter, the messages you compose, and all your design choices never leave your device or reach any server. There is no account to create, no email to provide, and no personal information collected or stored. This privacy-first approach means you can compose your most intimate, personal holiday messages with complete confidence that they remain entirely private.</p>
+
+    <h2>Technical Excellence</h2>
+    <p>The generator is built on modern HTML5, CSS3 with glass-morphism aesthetics, and vanilla JavaScript — no plugins, no frameworks, working instantly in all current browsers on all devices. The html2canvas library renders cards at 4x resolution for crisp, beautiful output at any display or print size. jsPDF handles professional PDF generation. The platform is fully responsive from small smartphones through large desktop monitors, so you can create beautiful Christmas cards wherever the holiday spirit strikes.</p>
+
+    <h2>Conclusion: Celebrate Christmas with Cards as Joyful as the Season</h2>
+    <p>Christmas is the season of giving, connection, and the expression of love for the people who matter most in our lives. Our <strong>christmas wish card generator online</strong> brings together beautiful holiday designs, comprehensive personalization, multiple export formats, and complete privacy — all completely free — to make your Christmas greetings as warm, beautiful, and memorable as the holiday itself. Create your first Christmas card today and share the magic of the season with everyone you love. Merry Christmas!</p>
+  </article>
+</section>
+
+<!-- FAQ -->
+<section class="mb-8">
+  <h2 class="text-xl md:text-2xl font-bold text-center mb-5 bg-gradient-to-r from-white via-red-100 to-red-300 bg-clip-text text-transparent">Frequently Asked Questions About Our Christmas Wish Card Generator</h2>
+  <div class="space-y-2">
+
+    <div class="glass-panel rounded-lg overflow-hidden">
+      <button class="w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+        <span class="text-sm font-medium text-gray-200 pr-4">Is this Christmas wish card generator completely free to use?</span>
+        <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </button>
+      <div class="faq-content px-3"><p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, our <strong>christmas wish card generator online</strong> is 100% free with no hidden costs, premium tiers, or download limits. Create unlimited Christmas cards, download in all four formats (PNG, JPG, WEBP, PDF), and access all 50+ designs without any registration or payment.</p></div>
+    </div>
+
+    <div class="glass-panel rounded-lg overflow-hidden">
+      <button class="w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+        <span class="text-sm font-medium text-gray-200 pr-4">What image formats can I download my Christmas card in?</span>
+        <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </button>
+      <div class="faq-content px-3"><p class="text-gray-400 text-xs pb-3 leading-relaxed">Our <strong>christmas wish card generator tool</strong> supports PNG for maximum lossless quality, JPG for compact file sizes ideal for email and messaging, WEBP for optimal web and social media quality, and PDF for professional printing. All formats export at 4x resolution for crisp, beautiful results.</p></div>
+    </div>
+
+    <div class="glass-panel rounded-lg overflow-hidden">
+      <button class="w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+        <span class="text-sm font-medium text-gray-200 pr-4">Can I share my Christmas card directly on WhatsApp and Instagram?</span>
+        <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </button>
+      <div class="faq-content px-3"><p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely! Use the Copy button in our <strong>free online christmas card maker</strong> to copy the card image to your clipboard instantly — then paste directly into any WhatsApp conversation or group. For Instagram Stories, use the Story preset (400×600) for perfect proportions. The Square preset (500×500) works great for Instagram feed posts.</p></div>
+    </div>
+
+    <div class="glass-panel rounded-lg overflow-hidden">
+      <button class="w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+        <span class="text-sm font-medium text-gray-200 pr-4">Do I need to register or create an account?</span>
+        <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </button>
+      <div class="faq-content px-3"><p class="text-gray-400 text-xs pb-3 leading-relaxed">No registration or account is required. Our <strong>online christmas greeting card generator free</strong> is instantly accessible — visit the page and start creating right away. All processing happens in your browser, so names, messages, and design choices never reach any server.</p></div>
+    </div>
+
+    <div class="glass-panel rounded-lg overflow-hidden">
+      <button class="w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+        <span class="text-sm font-medium text-gray-200 pr-4">Are the downloaded Christmas cards watermark-free?</span>
+        <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </button>
+      <div class="faq-content px-3"><p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! All cards created with our <strong>free christmas wish card creator online</strong> are completely watermark-free. Download and share with confidence — your Christmas card will appear exactly as designed, with no branding overlays or promotional text added to your creation.</p></div>
+    </div>
+
+    <div class="glass-panel rounded-lg overflow-hidden">
+      <button class="w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+        <span class="text-sm font-medium text-gray-200 pr-4">Can I print the Christmas cards I create?</span>
+        <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </button>
+      <div class="faq-content px-3"><p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely! Use the PDF export option from our <strong>online merry christmas card maker free</strong> for the best print quality. PNG at 4x resolution also provides 300+ DPI quality at standard greeting card sizes. Print on glossy cardstock or photo paper for beautiful, professional physical Christmas cards.</p></div>
+    </div>
+
+    <div class="glass-panel rounded-lg overflow-hidden">
+      <button class="w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+        <span class="text-sm font-medium text-gray-200 pr-4">How many Christmas card design templates are available?</span>
+        <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </button>
+      <div class="faq-content px-3"><p class="text-gray-400 text-xs pb-3 leading-relaxed">Our <strong>free digital christmas wish card generator online</strong> includes 50+ unique templates in 7 categories: Classic, Winter, Modern, Nature, Elegant, and Minimal. Each features distinct Christmas-inspired color palettes, decorative elements, and typography pairings suited to different holiday contexts and recipients.</p></div>
+    </div>
+
+    <div class="glass-panel rounded-lg overflow-hidden">
+      <button class="w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+        <span class="text-sm font-medium text-gray-200 pr-4">Can I use this tool for both personal and business Christmas cards?</span>
+        <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </button>
+      <div class="faq-content px-3"><p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>online customizable christmas wish card generator free</strong> works perfectly for both personal holiday greetings and professional business Christmas cards. The Elegant and Minimal categories are particularly well-suited for corporate holiday communications, while Classic and Winter designs work beautifully for personal family greetings.</p></div>
+    </div>
+
+    <div class="glass-panel rounded-lg overflow-hidden">
+      <button class="w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+        <span class="text-sm font-medium text-gray-200 pr-4">Is my personal data safe when using this tool?</span>
+        <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </button>
+      <div class="faq-content px-3"><p class="text-gray-400 text-xs pb-3 leading-relaxed">Complete privacy is guaranteed. Our <strong>online christmas message creator free</strong> processes everything client-side in your browser. Names, messages, and design choices never leave your device or transmit to any server. No data is collected or stored — your personal Christmas messages remain entirely private on your device.</p></div>
+    </div>
+
+    <div class="glass-panel rounded-lg overflow-hidden">
+      <button class="w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+        <span class="text-sm font-medium text-gray-200 pr-4">Can I create cards for Happy New Year alongside Christmas?</span>
+        <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </button>
+      <div class="faq-content px-3"><p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Simply customize the card title to "Merry Christmas & Happy New Year!" or "Season's Greetings!" in our <strong>free christmas card maker with name online</strong>. The text fields are fully editable, so you can combine Christmas and New Year wishes, add any seasonal message, or even use "Happy Holidays" for a more inclusive greeting.</p></div>
+    </div>
+
+  </div>
+</section>
+</main>
+
+<footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+    <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" class="text-gray-400 hover:text-white">EasyPro Tools</a>. All rights reserved.</p>
+    <div class="flex gap-4"><a href="https://easyprotools.com/" class="hover:text-white">Home</a><a href="https://easyprotools.com/" class="hover:text-white">All Tools</a></div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('currentYear').textContent=new Date().getFullYear();
+let CARD_W=600,CARD_H=400,selectedDesignId=1,currentCategory='all';
+
+const SIZE_PRESETS={
+  landscape:{w:600,h:400,label:'Standard (600×400)'},
+  square:{w:500,h:500,label:'Instagram Square (500×500)'},
+  story:{w:400,h:600,label:'Mobile Story (400×600)'},
+  wide:{w:800,h:400,label:'Wide Banner (800×400)'},
+};
+function applySize(k,btn){const p=SIZE_PRESETS[k];CARD_W=p.w;CARD_H=p.h;document.getElementById('customW').value=CARD_W;document.getElementById('customH').value=CARD_H;document.getElementById('sizeLabel').textContent=p.label;document.querySelectorAll('.size-tab').forEach(b=>b.classList.remove('active'));if(btn)btn.classList.add('active');updatePreview();}
+function applyCustomSize(){const w=parseInt(document.getElementById('customW').value)||600;const h=parseInt(document.getElementById('customH').value)||400;CARD_W=Math.max(200,Math.min(1200,w));CARD_H=Math.max(200,Math.min(1200,h));document.getElementById('sizeLabel').textContent='Custom ('+CARD_W+'×'+CARD_H+')';document.querySelectorAll('.size-tab').forEach(b=>b.classList.remove('active'));updatePreview();}
+
+/* ── Visual Helpers ─────────────────────────────────────────── */
+function snowflakes(c='rgba(255,255,255,.5)'){let s='';for(let i=0;i<50;i++){const x=(i*67+13)%590,y=(i*53+7)%390;const sz=i%7===0?5:i%3===0?3:2;s+=`<div style="position:absolute;left:${x}px;top:${y}px;color:${c};font-size:${sz+8}px;opacity:${.15+(i%5)*.12};animation:sf ${3+(i%3)}s ease-in-out ${i*.15}s infinite">❄</div>`;}return s+'<style>@keyframes sf{0%,100%{transform:translateY(0) rotate(0deg);opacity:.2}50%{transform:translateY(-8px) rotate(180deg);opacity:.7}}</style>';}
+function snowDots(c='rgba(255,255,255,.6)'){let s='';for(let i=0;i<60;i++){const x=(i*47)%590,y=(i*61)%390;const sz=i%5===0?4:i%3===0?3:2;s+=`<div style="position:absolute;left:${x}px;top:${y}px;width:${sz}px;height:${sz}px;background:${c};border-radius:50%;opacity:${.2+(i%6)*.1}"></div>`;}return s;}
+function stars(c='rgba(255,215,0,.7)'){let s='';for(let i=0;i<35;i++){const x=(i*73)%580,y=(i*59)%380;const sz=i%7===0?4:i%3===0?3:2;s+=`<div style="position:absolute;left:${x}px;top:${y}px;width:${sz}px;height:${sz}px;background:${c};border-radius:50%;box-shadow:0 0 ${sz*3}px ${c};opacity:${.4+(i%5)*.12};animation:tw ${2+(i%2)}s ease-in-out ${i*.1}s infinite"></div>`;}return s+'<style>@keyframes tw{0%,100%{opacity:.3}50%{opacity:1}}</style>';}
+function goldSparkles(){let s='';for(let i=0;i<30;i++){const x=(i*71)%575,y=(i*63)%375;const sz=i%5===0?5:3;s+=`<div style="position:absolute;left:${x}px;top:${y}px;width:${sz}px;height:${sz}px;background:#ffd700;border-radius:50%;box-shadow:0 0 ${sz*3}px rgba(255,215,0,.8);animation:sp ${2+(i%3)}s ease-in-out ${i*.18}s infinite"></div>`;}return s+'<style>@keyframes sp{0%,100%{opacity:.3;transform:scale(.8)}50%{opacity:1;transform:scale(1.2)}}</style>';}
+function redSparkles(){let s='';for(let i=0;i<30;i++){const x=(i*71)%575,y=(i*63)%375;const sz=i%5===0?5:3;s+=`<div style="position:absolute;left:${x}px;top:${y}px;width:${sz}px;height:${sz}px;background:#ef4444;border-radius:50%;box-shadow:0 0 ${sz*3}px rgba(239,68,68,.8);animation:rsp ${2+(i%3)}s ease-in-out ${i*.18}s infinite"></div>`;}return s+'<style>@keyframes rsp{0%,100%{opacity:.3}50%{opacity:1}}</style>';}
+function confetti(){const cols=['#ef4444','#22c55e','#ffd700','#3b82f6','#f97316','#ffffff'];let s='';for(let i=0;i<45;i++){const x=(i*41)%580,y=(i*47)%380;const sz=5+(i%5)*3;const c=cols[i%cols.length];s+=`<div style="position:absolute;left:${x}px;top:${y}px;width:${sz}px;height:${sz}px;background:${c};border-radius:${i%3===0?'50%':'2px'};transform:rotate(${i*37}deg);opacity:.85;box-shadow:0 0 ${3+(i%3)*2}px ${c}"></div>`;}return s;}
+function treeSilhouette(c='rgba(21,128,61,.25)'){return`<svg style="position:absolute;bottom:0;left:0;width:100%;height:60%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 240" preserveAspectRatio="xMidYMax meet"><polygon points="300,10 380,80 350,80 420,150 380,150 450,220 300,220 150,220 220,150 180,150 250,80 220,80" fill="${c}"/><rect x="280" y="220" width="40" height="20" fill="${c}" opacity=".6"/></svg>`;}
+function smallTrees(){return`<svg style="position:absolute;inset:0;width:100%;height:100%" xmlns="http://www.w3.org/2000/svg"><polygon points="50,180 70,140 90,180" fill="rgba(21,128,61,.3)"/><rect x="66" y="180" width="8" height="12" fill="rgba(21,128,61,.2)"/><polygon points="530,160 555,115 580,160" fill="rgba(21,128,61,.25)"/><rect x="551" y="160" width="8" height="12" fill="rgba(21,128,61,.2)"/><polygon points="25,160 42,128 59,160" fill="rgba(21,128,61,.2)"/><polygon points="545,190 558,165 571,190" fill="rgba(21,128,61,.2)"/></svg>`;}
+function snowHill(){return`<svg style="position:absolute;bottom:0;left:0;width:100%;height:35%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 140" preserveAspectRatio="none"><path d="M0,140 Q150,40 300,80 Q450,120 600,50 L600,140 Z" fill="rgba(255,255,255,.15)"/><path d="M0,140 Q100,90 200,110 Q350,130 500,90 Q550,75 600,85 L600,140 Z" fill="rgba(255,255,255,.1)"/></svg>`;}
+function candyCaneStripes(){return`<svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.08" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="cc" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect x="0" y="0" width="10" height="20" fill="#ef4444"/><rect x="10" y="0" width="10" height="20" fill="#ffffff"/></pattern></defs><rect width="100%" height="100%" fill="url(#cc)"/></svg>`;}
+function marbleTexture(){return`<svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.12" xmlns="http://www.w3.org/2000/svg"><filter id="mf"><feTurbulence type="fractalNoise" baseFrequency=".02" numOctaves="5"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100%" height="100%" filter="url(#mf)"/></svg>`;}
+function geometricTiles(){return`<svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.1" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="gt" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="60" height="60" fill="none" stroke="#fff" stroke-width=".5"/><line x1="0" y1="0" x2="60" y2="60" stroke="#fff" stroke-width=".3"/><line x1="60" y1="0" x2="0" y2="60" stroke="#fff" stroke-width=".3"/><circle cx="30" cy="30" r="12" fill="none" stroke="#fff" stroke-width=".5"/></pattern></defs><rect width="100%" height="100%" fill="url(#gt)"/></svg>`;}
+function hexPattern(){return`<svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.1" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="hp" x="0" y="0" width="50" height="43.3" patternUnits="userSpaceOnUse"><polygon points="25,0 50,10.8 50,32.5 25,43.3 0,32.5 0,10.8" fill="none" stroke="#fff" stroke-width=".5"/></pattern></defs><rect width="100%" height="100%" fill="url(#hp)"/></svg>`;}
+function dotGrid(){let s='<svg style="position:absolute;inset:0;width:100%;height:100%" xmlns="http://www.w3.org/2000/svg">';for(let i=0;i<60;i++){const x=30+(i%10)*55,y=30+Math.floor(i/10)*65;s+=`<circle cx="${x}" cy="${y}" r="1.5" fill="rgba(255,255,255,.2)"/>`;}s+='</svg>';return s;}
+function minimalLines(){return`<svg style="position:absolute;inset:0;width:100%;height:100%" xmlns="http://www.w3.org/2000/svg"><line x1="50" y1="110" x2="550" y2="110" stroke="rgba(255,255,255,.15)" stroke-width="1"/><line x1="50" y1="290" x2="550" y2="290" stroke="rgba(255,255,255,.15)" stroke-width="1"/></svg>`;}
+function goldBorder(c='rgba(212,175,55,.55)',w=2){return`<div style="position:absolute;top:14px;left:14px;right:14px;bottom:14px;border:${w}px solid ${c};pointer-events:none;border-radius:8px;box-shadow:0 0 18px ${c.replace('.55','.2')},inset 0 0 18px ${c.replace('.55','.08')}"></div>`;}
+function redBorder(c='rgba(220,38,38,.5)',w=2){return`<div style="position:absolute;top:14px;left:14px;right:14px;bottom:14px;border:${w}px solid ${c};pointer-events:none;border-radius:8px;box-shadow:0 0 18px ${c.replace('.5','.2')},inset 0 0 18px ${c.replace('.5','.08')}"></div>`;}
+function doubleBorder(i='rgba(220,38,38,.4)',o='rgba(220,38,38,.12)'){return`<div style="position:absolute;top:10px;left:10px;right:10px;bottom:10px;border:2px solid ${o};pointer-events:none;border-radius:12px"></div><div style="position:absolute;top:18px;left:18px;right:18px;bottom:18px;border:1px solid ${i};pointer-events:none;border-radius:8px"></div>`;}
+function cornerAccents(c='rgba(220,38,38,.5)'){return`<div style="position:absolute;top:20px;left:20px;width:28px;height:28px;border-top:3px solid ${c};border-left:3px solid ${c};border-radius:3px 0 0 0"></div><div style="position:absolute;top:20px;right:20px;width:28px;height:28px;border-top:3px solid ${c};border-right:3px solid ${c};border-radius:0 3px 0 0"></div><div style="position:absolute;bottom:20px;left:20px;width:28px;height:28px;border-bottom:3px solid ${c};border-left:3px solid ${c};border-radius:0 0 0 3px"></div><div style="position:absolute;bottom:20px;right:20px;width:28px;height:28px;border-bottom:3px solid ${c};border-right:3px solid ${c};border-radius:0 0 3px 0"></div>`;}
+function floralHolly(c='rgba(21,128,61,.4)'){return`<svg style="position:absolute;inset:0;width:100%;height:100%" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="${c}" stroke-width="1.3"><ellipse cx="25" cy="22" rx="12" ry="7" transform="rotate(-30 25 22)"/><ellipse cx="38" cy="18" rx="12" ry="7" transform="rotate(20 38 18)"/><circle cx="30" cy="26" r="5" fill="rgba(220,38,38,.5)" stroke="none"/></g><g fill="none" stroke="${c}" stroke-width="1.3" transform="translate(540,0)"><ellipse cx="25" cy="22" rx="12" ry="7" transform="rotate(-150 25 22)"/><ellipse cx="38" cy="18" rx="12" ry="7" transform="rotate(160 38 18)"/><circle cx="30" cy="26" r="5" fill="rgba(220,38,38,.5)" stroke="none"/></g><g fill="none" stroke="${c}" stroke-width="1.3" transform="translate(0,330)"><ellipse cx="25" cy="22" rx="12" ry="7" transform="rotate(30 25 22)"/><ellipse cx="38" cy="18" rx="12" ry="7" transform="rotate(-20 38 18)"/><circle cx="30" cy="26" r="5" fill="rgba(220,38,38,.5)" stroke="none"/></g><g fill="none" stroke="${c}" stroke-width="1.3" transform="translate(540,330)"><ellipse cx="25" cy="22" rx="12" ry="7" transform="rotate(150 25 22)"/><ellipse cx="38" cy="18" rx="12" ry="7" transform="rotate(-160 38 18)"/><circle cx="30" cy="26" r="5" fill="rgba(220,38,38,.5)" stroke="none"/></g></svg>`;}
+function neonLines(c='rgba(239,68,68,.15)'){return`<svg style="position:absolute;inset:0;width:100%;height:100%;opacity:1" xmlns="http://www.w3.org/2000/svg">${Array.from({length:20},(_,i)=>`<line x1="${i*31}" y1="0" x2="${i*31}" y2="400" stroke="${c}" stroke-width=".6"/>`).join('')}${Array.from({length:14},(_,i)=>`<line x1="0" y1="${i*30}" x2="600" y2="${i*30}" stroke="${c}" stroke-width=".6"/>`).join('')}</svg>`;}
+function aurora(){return`<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,128,61,.15),transparent 40%,transparent 60%,rgba(185,28,28,.12))"></div><div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(59,130,246,.08),transparent 30%,transparent 70%,rgba(185,28,28,.08))"></div>`;}
+function winterForest(){return`<svg style="position:absolute;bottom:0;left:0;width:100%;height:45%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 180" preserveAspectRatio="none"><path d="M0,180 Q50,120 100,140 Q150,100 200,120 Q250,80 300,110 Q350,70 400,100 Q450,60 500,90 Q550,70 600,95 L600,180 Z" fill="rgba(21,128,61,.2)"/><path d="M0,180 Q80,150 160,160 Q240,140 320,155 Q400,135 480,150 Q540,138 600,148 L600,180 Z" fill="rgba(255,255,255,.1)"/></svg>`;}
+function plaidPattern(){return`<svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.08" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="plaid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse"><rect width="40" height="40" fill="#b91c1c"/><rect x="0" y="0" width="20" height="20" fill="#991b1b" opacity=".5"/><rect x="20" y="20" width="20" height="20" fill="#991b1b" opacity=".5"/><line x1="20" y1="0" x2="20" y2="40" stroke="#fff" stroke-width=".8" opacity=".4"/><line x1="0" y1="20" x2="40" y2="20" stroke="#fff" stroke-width=".8" opacity=".4"/></pattern></defs><rect width="100%" height="100%" fill="url(#plaid)"/></svg>`;}
+function lights(){let s='';const cols=['#ef4444','#22c55e','#ffd700','#3b82f6','#f97316'];for(let i=0;i<18;i++){const x=20+i*33,c=cols[i%cols.length];s+=`<div style="position:absolute;top:12px;left:${x}px;width:8px;height:10px;background:${c};border-radius:0 0 4px 4px;box-shadow:0 0 8px ${c};opacity:.85"></div><div style="position:absolute;top:8px;left:${x+3}px;width:2px;height:5px;background:rgba(255,255,255,.4)"></div>`;}s+=`<svg style="position:absolute;top:16px;left:0;width:100%;height:8px" xmlns="http://www.w3.org/2000/svg"><path d="${Array.from({length:18},(_,i)=>`${i===0?'M':'L'}${28+i*33},16 Q${40+i*33},4 ${47+i*33},16`).join(' ')}" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="1.2"/></svg>`;return s;}
+
+/* ── Core Card Renderer ─────────────────────────────────────── */
+function renderCard(d,bg,fx){
+  const ts=d.titleStyle||'normal';
+  const td=ts==='uppercase'?d.titleDisplay.toUpperCase():ts==='capitalize'?d.titleDisplay.replace(/\b\w/g,c=>c.toUpperCase()):d.titleDisplay;
+  const isLight=bg.includes('#faf')||bg.includes('#f5f')||bg.includes('#fff')||bg.includes('#fef')||bg.includes('#fee')||bg.includes('#ece')||bg.includes('#f0f')||bg.includes('240,253')||bg.includes('254,242');
+  const innerBg=isLight?'rgba(255,255,255,.6)':'transparent';
+  const innerBorder=isLight?'1px solid rgba(255,255,255,.7)':'none';
+  const innerShadow=isLight?'0 8px 32px rgba(0,0,0,.1)':'none';
+  const rel=d.relation?`<div style="font-size:11px;color:${d.titleColor};opacity:.72;margin-bottom:5px;letter-spacing:.5px">${d.relation}</div>`:'';
+  return`<div style="width:${d.w}px;height:${d.h}px;background:${bg};position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;font-family:'Inter',sans-serif">
+    ${fx}
+    <div style="text-align:center;z-index:2;padding:26px;background:${innerBg};border-radius:${isLight?'14px':'0'};border:${innerBorder};box-shadow:${innerShadow};max-width:${d.w*.85}px;position:relative">
+      <div style="font-family:${d.titleFont};font-size:${d.titleSize}px;color:${d.titleColor};letter-spacing:${d.spacing}px;margin-bottom:3px;line-height:1.1;font-weight:600">${td}</div>
+      ${rel}
+      <div style="font-family:${d.nameFont};font-size:${d.nameSize}px;font-weight:700;color:${d.nameColor};margin-bottom:3px">${d.nameDisplay}</div>
+      <div style="width:55px;height:2px;background:${d.titleColor};opacity:.4;margin:6px auto;border-radius:2px"></div>
+      <div style="font-family:${d.font};font-size:${d.msgSize}px;color:${d.msgColor};line-height:${d.lh};max-width:${d.w*.74}px;margin:5px auto;text-align:${d.align};white-space:pre-line">${d.msg}</div>
+      <div style="font-family:${d.fromFont};font-size:${d.fromSize}px;color:${d.fromColor};margin-top:7px;font-style:italic">${d.senderLine}</div>
+    </div>
+  </div>`;
+}
+
+/* ── Card Designs ───────────────────────────────────────────── */
+const CARD_DESIGNS=[
+
+// CLASSIC (1-10)
+{id:1,name:'Classic Red',cat:'classic',colors:{titleColor:'#fca5a5',nameColor:'#fef2f2',msgColor:'#fee2e2',fromColor:'#fca5a5'},
+ defaultTitle:'Merry Christmas!',defaultMsg:'Wishing you and your family a season filled with warmth, laughter, love, and all the magic that Christmas brings. Have a wonderful holiday!',
+ defaultTitleFont:"'Mountains of Christmas',cursive",defaultTitleSize:46,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:13,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,
+ render(d){return renderCard(d,'linear-gradient(135deg,#7f1d1d,#b91c1c 40%,#7f1d1d)',plaidPattern()+treeSilhouette()+redBorder());}},
+
+{id:2,name:'Holly & Ivy',cat:'classic',colors:{titleColor:'#ffd700',nameColor:'#fef9c3',msgColor:'#fffbeb',fromColor:'#ffd700'},
+ defaultTitle:'Merry Christmas',defaultMsg:'May your Christmas be merry and bright, filled with the warmth of good company and the joy of the holiday spirit.',
+ defaultTitleFont:"'Mountains of Christmas',cursive",defaultTitleSize:44,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:13,defaultFromFont:"'Satisfy',cursive",defaultFromSize:20,
+ render(d){return renderCard(d,'linear-gradient(135deg,#14532d,#166534 40%,#14532d)',floralHolly()+goldBorder()+snowDots('rgba(255,255,255,.3)'));}},
+
+{id:3,name:'Midnight Christmas',cat:'classic',colors:{titleColor:'#fca5a5',nameColor:'#fef2f2',msgColor:'#fee2e2',fromColor:'#fda4af'},
+ defaultTitle:'Merry Christmas ⭐',defaultMsg:'On this magical Christmas night, may every star in the sky carry a wish for your happiness, health, and peace in the new year.',
+ defaultTitleFont:"'Mountains of Christmas',cursive",defaultTitleSize:44,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:13,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,
+ render(d){return renderCard(d,'linear-gradient(180deg,#020617,#0c1445 50%,#020617)',stars()+snowflakes('rgba(255,255,255,.4)')+smallTrees());}},
+
+{id:4,name:'Red & Gold',cat:'classic',colors:{titleColor:'#ffd700',nameColor:'#fff8dc',msgColor:'#fffbeb',fromColor:'#ffd700'},
+ defaultTitle:'Merry Christmas!',defaultMsg:'Gold as the star above, red as the holly berry — may your Christmas be as rich and beautiful as this season of giving.',
+ defaultTitleFont:"'Cinzel',serif",defaultTitleSize:42,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:13,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,
+ render(d){return renderCard(d,'linear-gradient(135deg,#7f1d1d,#991b1b 40%,#7f1d1d)',goldBorder()+goldSparkles()+candyCaneStripes());}},
+
+{id:5,name:'Green & Red',cat:'classic',colors:{titleColor:'#fca5a5',nameColor:'#fef2f2',msgColor:'#fee2e2',fromColor:'#fca5a5'},
+ defaultTitle:'Merry Christmas',defaultMsg:'Red and green — the colors of Christmas, the colors of love and life. Sending you the fullness of both this holiday season.',
+ defaultTitleFont:"'Mountains of Christmas',cursive",defaultTitleSize:44,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:13,defaultFromFont:"'Satisfy',cursive",defaultFromSize:20,
+ render(d){return renderCard(d,'linear-gradient(135deg,#14532d,#15803d 50%,#14532d)',plaidPattern()+redBorder()+lights());}},
+
+{id:6,name:'Candlelight',cat:'classic',colors:{titleColor:'#fbbf24',nameColor:'#fef3c7',msgColor:'#fffbeb',fromColor:'#f59e0b'},
+ defaultTitle:'Merry Christmas',defaultMsg:'May the warm candlelight of Christmas illuminate your home, your heart, and every hope you carry into the season ahead.',
+ defaultTitleFont:"'Mountains of Christmas',cursive",defaultTitleSize:44,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:13,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,
+ render(d){return renderCard(d,'linear-gradient(135deg,#1c0a00,#3b0f00 40%,#1c0a00)',goldSparkles()+goldBorder()+treeSilhouette('rgba(251,191,36,.15)'));}},
+
+{id:7,name:'Christmas Eve',cat:'classic',colors:{titleColor:'#fca5a5',nameColor:'#fef2f2',msgColor:'#fee2e2',fromColor:'#fda4af'},
+ defaultTitle:'Merry Christmas!',defaultMsg:'The magic of Christmas Eve is in the air — may the wonder of this night follow you all year long with love and blessings.',
+ defaultTitleFont:"'Mountains of Christmas',cursive",defaultTitleSize:44,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:13,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,
+ render(d){return renderCard(d,'linear-gradient(180deg,#0c1445,#7f1d1d 70%,#7f1d1d)',snowflakes()+stars('rgba(255,200,100,.6)')+smallTrees());}},
+
+{id:8,name:'Plaid Classic',cat:'classic',colors:{titleColor:'#ffd700',nameColor:'#fff8dc',msgColor:'#fffbeb',fromColor:'#ffd700'},
+ defaultTitle:'Merry Christmas',defaultMsg:'Wrapped in the warmth of the season, sending you love, laughter, and the cozy comfort of Christmas traditions.',
+ defaultTitleFont:"'Mountains of Christmas',cursive",defaultTitleSize:44,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:13,defaultFromFont:"'Satisfy',cursive",defaultFromSize:20,
+ render(d){return renderCard(d,'linear-gradient(135deg,#7f1d1d,#b91c1c)',plaidPattern()+floralHolly()+goldBorder());}},
+
+{id:9,name:'Season\'s Greetings',cat:'classic',colors:{titleColor:'#fca5a5',nameColor:'#fef2f2',msgColor:'#fee2e2',fromColor:'#fca5a5'},
+ defaultTitle:"Season's Greetings!",defaultMsg:'As another year draws to a close, our hearts are full of gratitude for your presence in our lives. Season\'s Greetings and Happy New Year!',
+ defaultTitleFont:"'Cinzel',serif",defaultTitleSize:38,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:13,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,
+ render(d){return renderCard(d,'linear-gradient(135deg,#0c1445,#14532d 50%,#0c1445)',stars()+goldBorder()+snowDots());}},
+
+{id:10,name:'Joy to the World',cat:'classic',colors:{titleColor:'#fca5a5',nameColor:'#fef2f2',msgColor:'#fee2e2',fromColor:'#fbbf24'},
+ defaultTitle:'Joy to the World!',defaultMsg:'May the joy of Christmas fill every corner of your heart and every room of your home. Wishing you a truly magical holiday.',
+ defaultTitleFont:"'Mountains of Christmas',cursive",defaultTitleSize:44,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:13,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,
+ render(d){return renderCard(d,'linear-gradient(135deg,#7f1d1d,#166534 50%,#7f1d1d)',confetti()+redBorder());}},
+
+// WINTER (11-20)
+{id:11,name:'Frosty Blue',cat:'winter',colors:{titleColor:'#bfdbfe',nameColor:'#dbeafe',msgColor:'#eff6ff',fromColor:'#93c5fd'},
+ defaultTitle:'Merry Christmas!',defaultMsg:'Like snowflakes falling on a silent night, may this Christmas bring you peace, beauty, and the quiet joy of the winter season.',
+ defaultTitleFont:"'Mountains of Christmas',cursive",defaultTitleSize:44,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:13,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,
+ render(d){return renderCard(d,'linear-gradient(135deg,#172554,#1e3a8a 40%,#172554)',snowflakes()+snowDots()+snowHill());}},
+
+{id:12,name:'Arctic Night',cat:'winter',colors:{titleColor:'#e0f2fe',nameColor:'#bae6fd',msgColor:'#e0f2fe',fromColor:'#7dd3fc'},
+ defaultTitle:'Merry Christmas',defaultMsg:'In the quiet of a winter night, the magic of Christmas is most alive. Sending you the peace and wonder of this enchanted season.',
+ defaultTitleFont:"'Mountains of Christmas',cursive",defaultTitleSize:44,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:13,defaultFromFont:"'Satisfy',cursive",defaultFromSize:20,
+ render(d){return renderCard(d,'linear-gradient(180deg,#020617,#0c2461 50%,#020617)',snowflakes()+stars('rgba(200,230,255,.8)')+snowHill());}},
+
+{id:13,name:'Silver & White',cat:'winter',colors:{titleColor:'#1e293b',nameColor:'#334155',msgColor:'#475569',fromColor:'#64748b'},
+ defaultTitle:'Merry Christmas',defaultMsg:'Silver bells, white snow, and the warmth of good cheer — wishing you a beautiful white Christmas filled with wonder.',
+ defaultTitleFont:"'Mountains of Christmas',cursive",defaultTitleSize:44,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:13,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,
+ render(d){return renderCard(d,'linear-gradient(135deg,#f8fafc,#e2e8f0 50%,#f8fafc)',snowDots('rgba(100,116,139,.3)')+floralHolly('rgba(21,128,61,.35)')+doubleBorder('rgba(100,116,139,.3)','rgba(100,116,139,.1)'));}},
+
+{id:14,name:'Blizzard',cat:'winter',colors:{titleColor:'#fca5a5',nameColor:'#fef2f2',msgColor:'#fee2e2',fromColor:'#fda4af'},
+ defaultTitle:'Merry Christmas!',defaultMsg:'Let it snow, let it snow, let it snow! May your Christmas be a beautiful blizzard of joy, warmth, and wonderful memories.',
+ defaultTitleFont:"'Mountains of Christmas',cursive",defaultTitleSize:44,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:13,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,
+ render(d){return renderCard(d,'linear-gradient(135deg,#172554,#1e40af 50%,#172554)',snowflakes('rgba(255,255,255,.7)')+snowDots('rgba(255,255,255,.5)')+redBorder('rgba(252,165,165,.4)'));}},
+
+{id:15,name:'Ice Palace',cat:'winter',colors:{titleColor:'#e0f2fe',nameColor:'#bae6fd',msgColor:'#e0f2fe',fromColor:'#7dd3fc'},
+ defaultTitle:'Merry Christmas',defaultMsg:'Like a palace carved from ice and filled with sparkling light, may your Christmas be breathtakingly beautiful and magical.',
+ defaultTitleFont:"'Cinzel',serif",defaultTitleSize:40,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:13,defaultFromFont:"'Satisfy',cursive",defaultFromSize:20,
+ render(d){return renderCard(d,'linear-gradient(135deg,#0c1445,#0369a1 50%,#0c1445)',hexPattern()+goldBorder('rgba(224,242,254,.4)')+snowDots());}},
+
+{id:16,name:'Frosted Forest',cat:'winter',colors:{titleColor:'#d1fae5',nameColor:'#a7f3d0',msgColor:'#d1fae5',fromColor:'#6ee7b7'},
+ defaultTitle:'Merry Christmas ❄',defaultMsg:'In a forest dusted with frost and quiet with snow, Christmas magic lives. May you find that magic wherever you are this holiday.',
+ defaultTitleFont:"'Mountains of Christmas',cursive",defaultTitleSize:44,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:13,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,
+ render(d){return renderCard(d,'linear-gradient(180deg,#0a2818,#0c1445 50%,#0a2818)',winterForest()+snowflakes()+stars('rgba(209,250,229,.6)'));}},
+
+{id:17,name:'Polar Night',cat:'winter',colors:{titleColor:'#fca5a5',nameColor:'#fef2f2',msgColor:'#fee2e2',fromColor:'#fda4af'},
+ defaultTitle:'Merry Christmas',defaultMsg:'Under the polar night sky, the Christmas star shines brightest. May your holiday be lit with the same extraordinary brilliance.',
+ defaultTitleFont:"'Mountains of Christmas',cursive",defaultTitleSize:42,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:13,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,
+ render(d){return renderCard(d,'radial-gradient(ellipse at 40% 20%,#1a0a3e,#0c1445 50%,#020617)',stars('rgba(252,165,165,.6)')+snowflakes('rgba(255,255,255,.3)')+snowHill());}},
+
+{id:18,name:'Crystal Snow',cat:'winter',colors:{titleColor:'#1e293b',nameColor:'#334155',msgColor:'#475569',fromColor:'#64748b'},
+ defaultTitle:'Merry Christmas',defaultMsg:'Crystal clear in joy, sparkling with Christmas magic — wishing you a season as pure and beautiful as freshly fallen snow.',
+ defaultTitleFont:"'Mountains of Christmas',cursive",defaultTitleSize:44,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:13,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,
+ render(d){return renderCard(d,'#ffffff',snowflakes('rgba(30,58,138,.2)')+snowDots('rgba(30,58,138,.15)')+cornerAccents('rgba(30,58,138,.3)'));}},
+
+{id:19,name:'Bluebell Winter',cat:'winter',colors:{titleColor:'#bfdbfe',nameColor:'#dbeafe',msgColor:'#eff6ff',fromColor:'#93c5fd'},
+ defaultTitle:'Happy Christmas!',defaultMsg:'The bells of Christmas ring through the winter air carrying wishes of peace, love, and happiness to every corner of the earth.',
+ defaultTitleFont:"'Mountains of Christmas',cursive",defaultTitleSize:44,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:13,defaultFromFont:"'Satisfy',cursive",defaultFromSize:20,
+ render(d){return renderCard(d,'linear-gradient(135deg,#172554,#1e3a8a)',snowflakes()+goldBorder('rgba(191,219,254,.4)')+snowHill());}},
+
+{id:20,name:'Northern Lights',cat:'winter',colors:{titleColor:'#d1fae5',nameColor:'#a7f3d0',msgColor:'#ecfdf5',fromColor:'#6ee7b7'},
+ defaultTitle:'Merry Christmas!',defaultMsg:'Like the northern lights painting the sky, may Christmas fill your world with extraordinary color, wonder, and awe.',
+ defaultTitleFont:"'Cinzel',serif",defaultTitleSize:40,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:13,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,
+ render(d){return renderCard(d,'#020617',aurora()+stars('rgba(209,250,229,.7)')+snowflakes('rgba(255,255,255,.3)'));}},
+
+// MODERN (21-30)
+{id:21,name:'Neon Christmas',cat:'modern',colors:{titleColor:'#fca5a5',nameColor:'#ffffff',msgColor:'#fee2e2',fromColor:'#ef4444'},
+ defaultTitle:'MERRY CHRISTMAS',defaultMsg:'Bold, bright, and full of holiday energy! Have an electrifyingly magical Christmas and a spectacular New Year!',
+ defaultTitleFont:"'Bebas Neue',sans-serif",defaultTitleSize:54,defaultMsgFont:"'Montserrat',sans-serif",defaultMsgSize:12,defaultFromFont:"'Montserrat',sans-serif",defaultFromSize:14,
+ render(d){return renderCard(d,'#050510',neonLines()+stars('rgba(255,100,100,.5)')+snowflakes('rgba(255,255,255,.2)'));}},
+
+{id:22,name:'Geometric Xmas',cat:'modern',colors:{titleColor:'#fca5a5',nameColor:'#fef2f2',msgColor:'rgba(254,226,226,.9)',fromColor:'#fca5a5'},
+ defaultTitle:'Merry Christmas',defaultMsg:'Where modern geometry meets holiday spirit — may your Christmas be as perfectly crafted and beautifully designed as your life.',
+ defaultTitleFont:"'Cinzel',serif",defaultTitleSize:40,defaultMsgFont:"'Raleway',sans-serif",defaultMsgSize:12,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,
+ render(d){return renderCard(d,'linear-gradient(135deg,#0f172a,#1e293b 50%,#0f172a)',geometricTiles()+redBorder()+snowflakes('rgba(255,255,255,.15)'));}},
+
+{id:23,name:'Watercolor Xmas',cat:'modern',colors:{titleColor:'#7f1d1d',nameColor:'#991b1b',msgColor:'#b91c1c',fromColor:'#dc2626'},
+ defaultTitle:'Merry Christmas',defaultMsg:'Soft colors, warm hearts — wishing you all the gentle joys and beautiful moments this wonderful Christmas season brings.',
+ defaultTitleFont:"'Great Vibes',cursive",defaultTitleSize:50,defaultMsgFont:"'Nunito',sans-serif",defaultMsgSize:12,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,
+ render(d){return renderCard(d,'linear-gradient(135deg,#fef2f2,#fee2e2 35%,#fecaca)',`<div style="position:absolute;top:-20px;left:-20px;width:200px;height:200px;background:rgba(239,68,68,.15);border-radius:60% 40% 50% 45%;filter:blur(30px)"></div><div style="position:absolute;right:-20px;top:60px;width:180px;height:180px;background:rgba(21,128,61,.12);border-radius:40% 60% 70% 30%;filter:blur(25px)"></div>`);}},
+
+{id:24,name:'Gradient Xmas',cat:'modern',colors:{titleColor:'#ffffff',nameColor:'#fef2f2',msgColor:'#fee2e2',fromColor:'#fca5a5'},
+ defaultTitle:'MERRY CHRISTMAS!',defaultMsg:'From the warmth of red to the hope of green — may your Christmas spectrum be vivid, joyful, and full of holiday magic!',
+ defaultTitleFont:"'Bebas Neue',sans-serif",defaultTitleSize:52,defaultMsgFont:"'Montserrat',sans-serif",defaultMsgSize:12,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,
+ render(d){return renderCard(d,'linear-gradient(135deg,#b91c1c,#166534 50%,#0c1445)',snowflakes('rgba(255,255,255,.3)')+`<svg style="position:absolute;inset:0;width:100%;height:100%" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 L180,400" stroke="rgba(255,255,255,.12)" stroke-width="35"/><path d="M600,0 L420,400" stroke="rgba(255,255,255,.1)" stroke-width="30"/></svg>`);}},
+
+{id:25,name:'Aurora Xmas',cat:'modern',colors:{titleColor:'#d1fae5',nameColor:'#a7f3d0',msgColor:'rgba(209,250,229,.9)',fromColor:'#6ee7b7'},
+ defaultTitle:'Merry Christmas',defaultMsg:'Like the aurora over a snowy Christmas landscape, may your holiday shimmer with extraordinary color and breathtaking beauty.',
+ defaultTitleFont:"'Raleway',sans-serif",defaultTitleSize:38,defaultMsgFont:"'Raleway',sans-serif",defaultMsgSize:12,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,
+ render(d){return renderCard(d,'#050814',aurora()+stars('rgba(209,250,229,.6)')+snowflakes('rgba(255,255,255,.2)'));}},
+
+{id:26,name:'Pop Art Xmas',cat:'modern',colors:{titleColor:'#ffd700',nameColor:'#fff8dc',msgColor:'#fffbeb',fromColor:'#ffd700'},
+ defaultTitle:'Merry Xmas!',defaultMsg:'Bright, bold, and bursting with holiday cheer! Wishing you a Christmas as colorful and joyful as the very best gift under the tree.',
+ defaultTitleFont:"'Pacifico',cursive",defaultTitleSize:44,defaultMsgFont:"'Nunito',sans-serif",defaultMsgSize:12,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,
+ render(d){return renderCard(d,'linear-gradient(135deg,#b91c1c,#991b1b)',confetti()+lights());}},
+
+{id:27,name:'Minimal Dark',cat:'modern',colors:{titleColor:'#fca5a5',nameColor:'#fecaca',msgColor:'rgba(254,202,202,.85)',fromColor:'rgba(252,165,165,.7)'},
+ defaultTitle:'Merry Christmas',defaultMsg:'In the quiet moments of Christmas, the deepest joys are found. Wishing you those precious, still moments of holiday peace.',
+ defaultTitleFont:"'Montserrat',sans-serif",defaultTitleSize:32,defaultMsgFont:"'Lato',sans-serif",defaultMsgSize:12,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,
+ render(d){return renderCard(d,'#0d0d0d',minimalLines()+snowflakes('rgba(255,255,255,.1)')+stars('rgba(252,165,165,.3)'));}},
+
+{id:28,name:'Christmas Grid',cat:'modern',colors:{titleColor:'#fca5a5',nameColor:'#ffffff',msgColor:'#fee2e2',fromColor:'#fda4af'},
+ defaultTitle:'MERRY CHRISTMAS',defaultMsg:'Grid by grid, gift by gift, this Christmas is being built just for you — with love, precision, and a whole lot of holiday magic.',
+ defaultTitleFont:"'Bebas Neue',sans-serif",defaultTitleSize:52,defaultMsgFont:"'Montserrat',sans-serif",defaultMsgSize:12,defaultFromFont:"'Montserrat',sans-serif",defaultFromSize:14,
+ render(d){return renderCard(d,'#0d0d0d',neonLines('rgba(220,38,38,.18)')+redSparkles());}},
+
+{id:29,name:'Glassy Xmas',cat:'modern',colors:{titleColor:'#fca5a5',nameColor:'rgba(252,165,165,.95)',msgColor:'rgba(254,226,226,.85)',fromColor:'rgba(252,165,165,.7)'},
+ defaultTitle:'Merry Christmas',defaultMsg:'Through glass and starlight, the Christmas spirit shines eternally. May that spirit fill every day of your holiday season.',
+ defaultTitleFont:"'Montserrat',sans-serif",defaultTitleSize:36,defaultMsgFont:"'Raleway',sans-serif",defaultMsgSize:12,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,
+ render(d){return renderCard(d,'linear-gradient(135deg,#b91c1c,#7f1d1d)',`<div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.1),rgba(255,255,255,.04));backdrop-filter:blur(8px)"></div>`);}},
+
+{id:30,name:'Holographic',cat:'modern',colors:{titleColor:'#fca5a5',nameColor:'#fecaca',msgColor:'rgba(254,202,202,.9)',fromColor:'#fca5a5'},
+ defaultTitle:'Merry Christmas!',defaultMsg:'Shine like a Christmas ornament — brilliant, beautiful, and unique. Sending you a holiday season that dazzles in every direction.',
+ defaultTitleFont:"'Bebas Neue',sans-serif",defaultTitleSize:50,defaultMsgFont:"'Montserrat',sans-serif",defaultMsgSize:12,defaultFromFont:"'Montserrat',sans-serif",defaultFromSize:14,
+ render(d){return renderCard(d,'#0a0a14',`<div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(185,28,28,.15),rgba(21,128,61,.1),rgba(252,165,165,.12));background-size:400% 400%;animation:holo 8s ease infinite"></div><style>@keyframes holo{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}</style>`);}},
+
+// NATURE (31-40)
+{id:31,name:'Pine Forest',cat:'nature',colors:{titleColor:'#fca5a5',nameColor:'#fef2f2',msgColor:'#fee2e2',fromColor:'#fda4af'},
+ defaultTitle:'Merry Christmas!',defaultMsg:'May your Christmas be as fresh and alive as a pine forest dusted with new snow — bright, fragrant, and full of natural wonder.',
+ defaultTitleFont:"'Mountains of Christmas',cursive",defaultTitleSize:44,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:13,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,
+ render(d){return renderCard(d,'linear-gradient(135deg,#052e16,#166534 50%,#052e16)',treeSilhouette('rgba(252,165,165,.2)')+snowflakes()+redBorder('rgba(252,165,165,.4)'));}},
+
+{id:32,name:'Holly Garden',cat:'nature',colors:{titleColor:'#7f1d1d',nameColor:'#991b1b',msgColor:'#b91c1c',fromColor:'#dc2626'},
+ defaultTitle:'Merry Christmas',defaultMsg:'Blessed as holly, bright as berries — wishing you a Christmas garden full of natural beauty, seasonal warmth, and festive joy.',
+ defaultTitleFont:"'Great Vibes',cursive",defaultTitleSize:48,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:13,defaultFromFont:"'Satisfy',cursive",defaultFromSize:20,
+ render(d){return renderCard(d,'linear-gradient(135deg,#f0fdf4,#dcfce7 50%,#bbf7d0)',floralHolly('rgba(21,128,61,.5)')+doubleBorder('rgba(127,29,29,.3)','rgba(127,29,29,.1)'));}},
+
+{id:33,name:'Mistletoe',cat:'nature',colors:{titleColor:'#7f1d1d',nameColor:'#991b1b',msgColor:'#b91c1c',fromColor:'#dc2626'},
+ defaultTitle:'Merry Christmas',defaultMsg:'Beneath the mistletoe, wishes are whispered and love is made real. May this Christmas bring you plenty of both in abundance.',
+ defaultTitleFont:"'Playfair Display',serif",defaultTitleSize:38,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:13,defaultFromFont:"'Satisfy',cursive",defaultFromSize:20,
+ render(d){return renderCard(d,'linear-gradient(135deg,#fffbf0,#fef9e7)',floralHolly()+cornerAccents('rgba(127,29,29,.3)'));}},
+
+{id:34,name:'Winter Woodland',cat:'nature',colors:{titleColor:'#fca5a5',nameColor:'#fef2f2',msgColor:'rgba(254,226,226,.9)',fromColor:'#fda4af'},
+ defaultTitle:'Merry Christmas ✨',defaultMsg:'In the woodland hush of a Christmas morning, peace is everywhere. May you find that woodland peace wherever this season takes you.',
+ defaultTitleFont:"'Great Vibes',cursive",defaultTitleSize:48,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:13,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,
+ render(d){return renderCard(d,'linear-gradient(180deg,#052e16,#0a2818 60%,#7f1d1d)',winterForest()+snowflakes()+stars('rgba(252,165,165,.5)'));}},
+
+{id:35,name:'Poinsettia',cat:'nature',colors:{titleColor:'#14532d',nameColor:'#052e16',msgColor:'#166534',fromColor:'#16a34a'},
+ defaultTitle:'Merry Christmas',defaultMsg:'As beautiful as poinsettias in December, may your Christmas be vibrant, warm, and full of the natural beauty of the season.',
+ defaultTitleFont:"'Great Vibes',cursive",defaultTitleSize:48,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:13,defaultFromFont:"'Satisfy',cursive",defaultFromSize:20,
+ render(d){return renderCard(d,'linear-gradient(135deg,#fef2f2,#fee2e2)',`<div style="position:absolute;top:18px;left:25px;font-size:36px;opacity:.2">🌺</div><div style="position:absolute;top:25px;right:32px;font-size:28px;opacity:.18">🌸</div><div style="position:absolute;bottom:25px;left:38px;font-size:30px;opacity:.2">🌺</div><div style="position:absolute;bottom:22px;right:40px;font-size:26px;opacity:.18">🌸</div>`);}},
+
+{id:36,name:'Yule Log',cat:'nature',colors:{titleColor:'#fbbf24',nameColor:'#fef3c7',msgColor:'#fffbeb',fromColor:'#f59e0b'},
+ defaultTitle:'Merry Christmas!',defaultMsg:'May the Yule log of your heart burn bright and warm this Christmas, keeping all those you love close and cozy throughout the season.',
+ defaultTitleFont:"'Mountains of Christmas',cursive",defaultTitleSize:44,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:13,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,
+ render(d){return renderCard(d,'linear-gradient(180deg,#1c0a00,#3b0f00 50%,#1c0a00)',goldSparkles()+treeSilhouette('rgba(251,191,36,.12)')+goldBorder());}},
+
+{id:37,name:'Evergreen',cat:'nature',colors:{titleColor:'#fca5a5',nameColor:'#fef2f2',msgColor:'#fee2e2',fromColor:'#fda4af'},
+ defaultTitle:'Merry Christmas',defaultMsg:'Like an evergreen in winter — constant, green, and alive with beauty — may your Christmas spirit endure all through the year.',
+ defaultTitleFont:"'Mountains of Christmas',cursive",defaultTitleSize:44,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:13,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,
+ render(d){return renderCard(d,'linear-gradient(135deg,#052e16,#14532d 50%,#052e16)',treeSilhouette()+snowDots()+redBorder('rgba(252,165,165,.4)'));}},
+
+{id:38,name:'Cinnamon Spice',cat:'nature',colors:{titleColor:'#7f1d1d',nameColor:'#991b1b',msgColor:'#b91c1c',fromColor:'#dc2626'},
+ defaultTitle:'Merry Christmas 🎄',defaultMsg:'Like cinnamon and spice filling the air, may the warm, sweet fragrance of Christmas joy surround you all season long.',
+ defaultTitleFont:"'Pacifico',cursive",defaultTitleSize:38,defaultMsgFont:"'Nunito',sans-serif",defaultMsgSize:12,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,
+ render(d){return renderCard(d,'linear-gradient(135deg,#fff7ed,#ffedd5 50%,#fed7aa)',`<div style="position:absolute;top:18px;left:28px;font-size:30px;opacity:.18;transform:rotate(-20deg)">🎄</div><div style="position:absolute;top:55px;right:35px;font-size:26px;opacity:.16;transform:rotate(30deg)">⭐</div><div style="position:absolute;bottom:32px;left:42px;font-size:24px;opacity:.18;transform:rotate(-10deg)">❄</div>`);}},
+
+{id:39,name:'Midnight Garden',cat:'nature',colors:{titleColor:'#fca5a5',nameColor:'#fef2f2',msgColor:'rgba(254,226,226,.9)',fromColor:'#fda4af'},
+ defaultTitle:'Merry Christmas',defaultMsg:'In a midnight garden of stars and snow, Christmas dreams are born. May yours be the most beautiful and magical of all.',
+ defaultTitleFont:"'Great Vibes',cursive",defaultTitleSize:48,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:13,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,
+ render(d){return renderCard(d,'linear-gradient(135deg,#052e16,#020617 50%,#052e16)',snowflakes()+stars()+redSparkles());}},
+
+{id:40,name:'Pine & Berry',cat:'nature',colors:{titleColor:'#14532d',nameColor:'#166534',msgColor:'#15803d',fromColor:'#16a34a'},
+ defaultTitle:'Merry Christmas 🫐',defaultMsg:'Pine needles and red berries, snow and firelight — the natural ingredients of a perfect Christmas. Wishing you all of them.',
+ defaultTitleFont:"'Great Vibes',cursive",defaultTitleSize:46,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:13,defaultFromFont:"'Satisfy',cursive",defaultFromSize:20,
+ render(d){return renderCard(d,'linear-gradient(135deg,#f0fdf4,#dcfce7)',floralHolly('rgba(21,128,61,.5)')+doubleBorder('rgba(21,128,61,.3)','rgba(21,128,61,.1)'));}},
+
+// ELEGANT (41-48)
+{id:41,name:'Marble & Gold',cat:'elegant',colors:{titleColor:'#ffd700',nameColor:'#fff8dc',msgColor:'#fffbeb',fromColor:'#ffd700'},
+ defaultTitle:'Merry Christmas',defaultMsg:'Gilded halls and golden moments — may your Christmas be magnificent, warm, and filled with the luxury of time spent with loved ones.',
+ defaultTitleFont:"'Cinzel',serif",defaultTitleSize:40,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:13,defaultFromFont:"'Satisfy',cursive",defaultFromSize:20,
+ render(d){return renderCard(d,'linear-gradient(135deg,#1a1a1a,#2d2d2d 50%,#1a1a1a)',marbleTexture()+goldBorder()+snowflakes('rgba(255,215,0,.2)'));}},
+
+{id:42,name:'Velvet Red',cat:'elegant',colors:{titleColor:'#ffd700',nameColor:'#fff8dc',msgColor:'#fffbeb',fromColor:'#fbbf24'},
+ defaultTitle:'Merry Christmas',defaultMsg:'Rich as velvet, warm as candlelight — wishing you a Christmas of genuine luxury, authentic joy, and deep, lasting warmth.',
+ defaultTitleFont:"'Cinzel',serif",defaultTitleSize:40,defaultMsgFont:"'Playfair Display',serif",defaultMsgSize:13,defaultFromFont:"'Great Vibes',cursive",defaultFromSize:24,
+ render(d){return renderCard(d,'linear-gradient(135deg,#450a0a,#7f1d1d 50%,#450a0a)',goldBorder()+goldSparkles()+treeSilhouette('rgba(255,215,0,.08)'));}},
+
+{id:43,name:'Champagne',cat:'elegant',colors:{titleColor:'#7f1d1d',nameColor:'#991b1b',msgColor:'#b91c1c',fromColor:'#dc2626'},
+ defaultTitle:'Merry Christmas',defaultMsg:'Refined, warm, and genuinely beautiful — like the best champagne on Christmas Eve, may this holiday season exceed every expectation.',
+ defaultTitleFont:"'Playfair Display',serif",defaultTitleSize:38,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:13,defaultFromFont:"'Satisfy',cursive",defaultFromSize:20,
+ render(d){return renderCard(d,'linear-gradient(135deg,#fefce8,#fef3c7)',doubleBorder('rgba(127,29,29,.4)','rgba(127,29,29,.12)')+floralHolly('rgba(21,128,61,.4)'));}},
+
+{id:44,name:'Art Deco Xmas',cat:'elegant',colors:{titleColor:'#ffd700',nameColor:'#fff8dc',msgColor:'rgba(255,248,220,.9)',fromColor:'rgba(255,215,0,.7)'},
+ defaultTitle:'Merry Christmas',defaultMsg:'Glamorous, golden, and utterly magnificent — just like the spirit of a perfect Christmas celebration in the grandest style.',
+ defaultTitleFont:"'Cinzel',serif",defaultTitleSize:38,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:13,defaultFromFont:"'Satisfy',cursive",defaultFromSize:20,
+ render(d){return renderCard(d,'linear-gradient(135deg,#0d0a00,#1a0a00 50%,#0d0a00)',cornerAccents('#ffd700')+goldSparkles());}},
+
+{id:45,name:'Gold Glow',cat:'elegant',colors:{titleColor:'#fef3c7',nameColor:'#fde68a',msgColor:'#fef3c7',fromColor:'#fcd34d'},
+ defaultTitle:'Merry Christmas!',defaultMsg:'May the golden glow of Christmas illuminate every room of your home and every corner of your heart with warmth and joy.',
+ defaultTitleFont:"'Great Vibes',cursive",defaultTitleSize:48,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:13,defaultFromFont:"'Satisfy',cursive",defaultFromSize:20,
+ render(d){return renderCard(d,'linear-gradient(180deg,#1c0a00,#3b0f00 30%,#1c0a00)',confetti()+goldBorder());}},
+
+{id:46,name:'Stellar Red',cat:'elegant',colors:{titleColor:'#fca5a5',nameColor:'#ffffff',msgColor:'rgba(254,226,226,.9)',fromColor:'#fda4af'},
+ defaultTitle:'Merry Christmas',defaultMsg:'You are the star on top of every Christmas tree. May your holiday season reflect the brilliance you bring to everyone around you.',
+ defaultTitleFont:"'Cinzel',serif",defaultTitleSize:38,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:13,defaultFromFont:"'Satisfy',cursive",defaultFromSize:20,
+ render(d){return renderCard(d,'radial-gradient(ellipse at 30% 20%,#450a0a,#020617 40%,#000011)',stars()+redSparkles());}},
+
+{id:47,name:'Ivory Christmas',cat:'elegant',colors:{titleColor:'#7f1d1d',nameColor:'#991b1b',msgColor:'#b91c1c',fromColor:'#dc2626'},
+ defaultTitle:'Merry Christmas',defaultMsg:'In ivory and gold, with graceful restraint — wishing you a Christmas of quiet elegance, deep joy, and genuine contentment.',
+ defaultTitleFont:"'Playfair Display',serif",defaultTitleSize:36,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:13,defaultFromFont:"'Satisfy',cursive",defaultFromSize:20,
+ render(d){return renderCard(d,'#faf7f0',geometricTiles()+doubleBorder('rgba(127,29,29,.4)','rgba(127,29,29,.12)'));}},
+
+{id:48,name:'Midnight Luxury',cat:'elegant',colors:{titleColor:'#fca5a5',nameColor:'#fef2f2',msgColor:'#fee2e2',fromColor:'#fda4af'},
+ defaultTitle:'Merry Christmas',defaultMsg:'Midnight blue and crimson gold — the colors of a truly luxurious Christmas. May yours be just that: extraordinary in every way.',
+ defaultTitleFont:"'Cinzel',serif",defaultTitleSize:38,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:13,defaultFromFont:"'Satisfy',cursive",defaultFromSize:20,
+ render(d){return renderCard(d,'linear-gradient(135deg,#0c1445,#7f1d1d 50%,#0c1445)',stars()+goldBorder()+snowflakes('rgba(255,255,255,.15)'));}},
+
+// MINIMAL (49-56)
+{id:49,name:'Pure White',cat:'minimal',colors:{titleColor:'#1e293b',nameColor:'#334155',msgColor:'#475569',fromColor:'#64748b'},
+ defaultTitle:'Merry Christmas',defaultMsg:'The simplest gifts are the most meaningful. Wishing you peace, joy, and the warmth of those who love you most this Christmas.',
+ defaultTitleFont:"'Montserrat',sans-serif",defaultTitleSize:32,defaultMsgFont:"'Lato',sans-serif",defaultMsgSize:12,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,
+ render(d){return renderCard(d,'#ffffff',minimalLines()+snowflakes('rgba(30,58,138,.1)')+cornerAccents('rgba(30,58,138,.15)'));}},
+
+{id:50,name:'Deep Black',cat:'minimal',colors:{titleColor:'#fca5a5',nameColor:'#fecaca',msgColor:'rgba(254,202,202,.85)',fromColor:'rgba(252,165,165,.7)'},
+ defaultTitle:'Merry Christmas',defaultMsg:'In the dark of winter, Christmas light shines brightest. May your holiday illuminate even the darkest corners of the year.',
+ defaultTitleFont:"'Montserrat',sans-serif",defaultTitleSize:32,defaultMsgFont:"'Lato',sans-serif",defaultMsgSize:12,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,
+ render(d){return renderCard(d,'#000000',stars('rgba(252,165,165,.3)')+snowflakes('rgba(255,255,255,.1)'));}},
+
+{id:51,name:'Soft Cream',cat:'minimal',colors:{titleColor:'#7f1d1d',nameColor:'#991b1b',msgColor:'#b91c1c',fromColor:'#dc2626'},
+ defaultTitle:'Merry Christmas',defaultMsg:'Warm as cream, sweet as Christmas morning — wishing you all the cozy, simple, irreplaceable joys of the holiday season.',
+ defaultTitleFont:"'Montserrat',sans-serif",defaultTitleSize:32,defaultMsgFont:"'Lato',sans-serif",defaultMsgSize:12,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,
+ render(d){return renderCard(d,'#fffbf0',dotGrid());}},
+
+{id:52,name:'Forest Green',cat:'minimal',colors:{titleColor:'#14532d',nameColor:'#166534',msgColor:'#15803d',fromColor:'#16a34a'},
+ defaultTitle:'Merry Christmas',defaultMsg:'Green is the color of Christmas, of life, of hope. May all three fill your holiday season in abundance this year.',
+ defaultTitleFont:"'Montserrat',sans-serif",defaultTitleSize:32,defaultMsgFont:"'Lato',sans-serif",defaultMsgSize:12,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,
+ render(d){return renderCard(d,'#f0fdf4',dotGrid());}},
+
+{id:53,name:'Navy Minimal',cat:'minimal',colors:{titleColor:'#fca5a5',nameColor:'#fecaca',msgColor:'#fee2e2',fromColor:'#fda4af'},
+ defaultTitle:'Merry Christmas',defaultMsg:'Deep as the winter sky on Christmas Eve, vast as the love that connects us — wishing you both in equal measure.',
+ defaultTitleFont:"'Montserrat',sans-serif",defaultTitleSize:32,defaultMsgFont:"'Lato',sans-serif",defaultMsgSize:12,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,
+ render(d){return renderCard(d,'#1e3a8a',snowflakes('rgba(255,255,255,.15)'));}},
+
+{id:54,name:'Red Line',cat:'minimal',colors:{titleColor:'#fca5a5',nameColor:'#fef2f2',msgColor:'rgba(254,226,226,.85)',fromColor:'rgba(252,165,165,.7)'},
+ defaultTitle:'Merry Christmas',defaultMsg:'A single red ribbon of joy ties all hearts together at Christmas. May that ribbon never break — and may it only grow stronger.',
+ defaultTitleFont:"'Cinzel',serif",defaultTitleSize:34,defaultMsgFont:"'Raleway',sans-serif",defaultMsgSize:12,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,
+ render(d){return renderCard(d,'#0d0d0d',`<svg style="position:absolute;inset:0;width:100%;height:100%" xmlns="http://www.w3.org/2000/svg"><line x1="50" y1="110" x2="550" y2="110" stroke="rgba(220,38,38,.3)" stroke-width="1"/><line x1="50" y1="290" x2="550" y2="290" stroke="rgba(220,38,38,.3)" stroke-width="1"/></svg>`);}},
+
+{id:55,name:'Warm Gray',cat:'minimal',colors:{titleColor:'#1c1917',nameColor:'#292524',msgColor:'#44403c',fromColor:'#57534e'},
+ defaultTitle:'Merry Christmas',defaultMsg:'Warmth, simplicity, and the understated grace of genuine care — the truest gifts of Christmas. May you give and receive all three.',
+ defaultTitleFont:"'Montserrat',sans-serif",defaultTitleSize:32,defaultMsgFont:"'Lato',sans-serif",defaultMsgSize:12,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,
+ render(d){return renderCard(d,'#d6d3d1',dotGrid());}},
+
+{id:56,name:'Graphite',cat:'minimal',colors:{titleColor:'#fca5a5',nameColor:'#fecaca',msgColor:'rgba(254,202,202,.85)',fromColor:'rgba(252,165,165,.7)'},
+ defaultTitle:'Merry Christmas',defaultMsg:'Refined, understated, and genuinely heartfelt — Merry Christmas to someone who makes every ordinary day feel extraordinary.',
+ defaultTitleFont:"'Montserrat',sans-serif",defaultTitleSize:30,defaultMsgFont:"'Lato',sans-serif",defaultMsgSize:12,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,
+ render(d){return renderCard(d,'linear-gradient(135deg,#1e293b,#334155 50%,#1e293b)',dotGrid());}},
+];
+
+/* ── Helpers ──────────────────────────────────────────────── */
+function toggleSec(id){
+  const body=document.getElementById('sec-'+id);const chev=document.getElementById('chev-'+id);if(!body)return;
+  const open=body.classList.contains('expanded');
+  if(open){body.style.maxHeight=body.scrollHeight+'px';requestAnimationFrame(()=>{body.style.maxHeight='0';body.classList.remove('expanded');body.classList.add('collapsed');});}
+  else{body.classList.remove('collapsed');body.classList.add('expanded');body.style.maxHeight=body.scrollHeight+'px';setTimeout(()=>body.style.maxHeight='',400);}
+  if(chev)chev.classList.toggle('open',!open);
+}
+function applyDesignDefaults(design){
+  const setOpt=(id,v)=>{if(!v)return;const e=document.getElementById(id);if(!e)return;for(const o of e.options)if(o.value===v){e.value=v;return;}};
+  const setR=(id,lid,v,s)=>{if(v===undefined)return;const e=document.getElementById(id);if(!e)return;e.value=v;const l=document.getElementById(lid);if(l)l.textContent=v+(s||'');};
+  const set=(id,v)=>{if(v===undefined)return;const e=document.getElementById(id);if(e)e.value=v;};
+  if(design.defaultTitle)set('cardTitle',design.defaultTitle);
+  if(design.defaultMsg){set('customMessage',design.defaultMsg);const mc=document.getElementById('msgCount');if(mc)mc.textContent=design.defaultMsg.length+'/200';}
+  setOpt('titleFontSelect',design.defaultTitleFont);setR('titleSize','titleSizeVal',design.defaultTitleSize,'px');
+  setOpt('fontSelect',design.defaultMsgFont);setR('msgSize','msgSizeVal',design.defaultMsgSize,'px');
+  setOpt('fromFontSelect',design.defaultFromFont);setR('fromSize','fromSizeVal',design.defaultFromSize,'px');
+  if(design.colors){
+    const sc=(id,v)=>{if(v&&v.startsWith('#')){const e=document.getElementById(id);if(e)e.value=v;}};
+    sc('titleColor',design.colors.titleColor);sc('nameColor',design.colors.nameColor);
+    sc('msgColor',design.colors.msgColor);sc('fromColor',design.colors.fromColor);
+  }
+}
+function selectDesign(id){
+  selectedDesignId=id;const design=CARD_DESIGNS.find(d=>d.id===id);if(!design)return;
+  applyDesignDefaults(design);
+  document.querySelectorAll('.card-thumb').forEach(t=>t.classList.toggle('selected',parseInt(t.dataset.id)===id));
+  const sn=document.getElementById('selectedDesignName');if(sn)sn.textContent=design.name;
+  updatePreview();
+}
+function getCardData(){
+  const g=id=>{const e=document.getElementById(id);return e?e.value:'';};
+  const from=document.getElementById('senderName').value.trim();
+  const senderLine=from?'— '+from:'';
+  const titleRaw=document.getElementById('cardTitle').value.trim()||'Merry Christmas!';
+  const tStyle=g('titleStyle')||'normal';
+  let titleDisplay=titleRaw;
+  if(tStyle==='uppercase')titleDisplay=titleRaw.toUpperCase();
+  else if(tStyle==='capitalize')titleDisplay=titleRaw.replace(/\b\w/g,c=>c.toUpperCase());
+  return{
+    w:CARD_W,h:CARD_H,
+    name:document.getElementById('recipientName').value.trim(),
+    nameDisplay:document.getElementById('recipientName').value.trim()||'Your Name',
+    relation:document.getElementById('relationInput').value.trim(),
+    from,senderLine,title:titleRaw,titleDisplay,
+    msg:document.getElementById('customMessage').value.trim()||'Wishing you a magical Christmas filled with joy, love, and wonderful memories!',
+    font:g('fontSelect')||"'Cormorant Garamond',serif",
+    titleFont:g('titleFontSelect')||"'Mountains of Christmas',cursive",
+    fromFont:g('fromFontSelect')||"'Dancing Script',cursive",
+    nameFont:g('nameFontSelect')||"'Great Vibes',cursive",
+    titleSize:parseInt(g('titleSize'))||44,msgSize:parseInt(g('msgSize'))||13,
+    fromSize:parseInt(g('fromSize'))||18,nameSize:parseInt(g('nameSize'))||32,
+    titleColor:g('titleColor')||'#fca5a5',msgColor:g('msgColor')||'#fef2f2',
+    fromColor:g('fromColor')||'#fca5a5',nameColor:g('nameColor')||'#ffffff',
+    spacing:parseFloat(g('titleSpacing'))||0,style:tStyle,
+    lh:parseFloat(g('msgLineH'))||1.6,align:g('msgAlign')||'center',
+  };
+}
+function updatePreview(){
+  const design=CARD_DESIGNS.find(d=>d.id===selectedDesignId);if(!design)return;
+  const d=getCardData();const canvas=document.getElementById('cardCanvas');
+  canvas.innerHTML=design.render(d);canvas.style.width=d.w+'px';canvas.style.height=d.h+'px';
+  scalePreview();
+}
+function scalePreview(){
+  const outer=document.getElementById('cardPreviewOuter');const sc=document.getElementById('cardScaleContainer');if(!outer||!sc)return;
+  const avail=outer.clientWidth||outer.offsetWidth||300;const scale=avail/CARD_W;
+  sc.style.transform='scale('+scale+')';outer.style.height=(CARD_H*scale)+'px';
+}
+function populateGrid(cat){
+  currentCategory=cat;const grid=document.getElementById('designGrid');
+  const list=cat==='all'?CARD_DESIGNS:CARD_DESIGNS.filter(d=>d.cat===cat);
+  grid.innerHTML='';
+  list.forEach(design=>{
+    const thumb=document.createElement('div');
+    thumb.className='card-thumb'+(design.id===selectedDesignId?' selected':'');
+    thumb.dataset.id=design.id;thumb.onclick=()=>selectDesign(design.id);
+    const sd={
+      w:600,h:300,name:'Name',nameDisplay:'Your Name',relation:'',from:'Family',senderLine:'— Family',
+      title:design.defaultTitle||'Merry Christmas',titleDisplay:design.defaultTitle||'Merry Christmas',
+      msg:(design.defaultMsg||'Message').slice(0,60),
+      font:design.defaultMsgFont||"'Cormorant Garamond',serif",
+      titleFont:design.defaultTitleFont||"'Mountains of Christmas',cursive",
+      fromFont:design.defaultFromFont||"'Dancing Script',cursive",
+      nameFont:"'Great Vibes',cursive",
+      titleSize:Math.round((design.defaultTitleSize||44)*.5),
+      msgSize:Math.round((design.defaultMsgSize||13)*.55),
+      fromSize:Math.round((design.defaultFromSize||18)*.5),
+      nameSize:16,
+      titleColor:design.colors?.titleColor||'#fca5a5',
+      msgColor:design.colors?.msgColor||'rgba(254,226,226,.9)',
+      fromColor:design.colors?.fromColor||'rgba(252,165,165,.8)',
+      nameColor:design.colors?.nameColor||'#fff',
+      spacing:0,style:'normal',lh:1.4,align:'center',
+    };
+    const scale=100/300;
+    thumb.innerHTML=`<div style="width:100%;height:100px;overflow:hidden;position:relative;border-radius:6px"><div style="position:absolute;top:0;left:0;width:300px;height:200px;transform:scale(${scale});transform-origin:top left">${design.render(sd)}</div></div><div class="card-thumb-name">${design.name}</div><div class="select-badge"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>`;
+    grid.appendChild(thumb);
+  });
+}
+function filterCards(cat,btn){
+  document.querySelectorAll('.category-tab').forEach(b=>b.classList.remove('active'));
+  if(btn)btn.classList.add('active');populateGrid(cat);
+}
+async function generateHighRes(){
+  const design=CARD_DESIGNS.find(d=>d.id===selectedDesignId);if(!design)return null;
+  const d=getCardData();const rt=document.getElementById('cardRenderTarget');
+  rt.style.width=d.w+'px';rt.style.height=d.h+'px';rt.innerHTML=design.render(d);
+  await new Promise(r=>setTimeout(r,120));
+  const canvas=await html2canvas(rt,{scale:4,useCORS:true,allowTaint:true,width:d.w,height:d.h,backgroundColor:null});
+  rt.innerHTML='';return canvas;
+}
+async function downloadCard(fmt){
+  const pg=document.getElementById('dlProgress');pg.classList.remove('hidden');
+  try{
+    const canvas=await generateHighRes();if(!canvas)return;
+    const d=getCardData();
+    const name=(document.getElementById('recipientName').value.trim()||'ChristmasCard').replace(/\s+/g,'-');
+    if(fmt==='pdf'){
+      const{jsPDF}=window.jspdf;
+      const pdf=new jsPDF({orientation:d.w>d.h?'landscape':'portrait',unit:'px',format:[d.w,d.h]});
+      pdf.addImage(canvas.toDataURL('image/png'),0,0,d.w,d.h);
+      pdf.save(name+'-christmas-wish-card.pdf');
+    }else{
+      const mime=fmt==='jpeg'?'image/jpeg':fmt==='webp'?'image/webp':'image/png';
+      const ext=fmt==='jpeg'?'jpg':fmt;
+      const a=document.createElement('a');a.href=canvas.toDataURL(mime,.95);a.download=name+'-christmas-wish-card.'+ext;a.click();
+    }
+    showToast('Saved as '+fmt.toUpperCase()+'!','success');
+  }catch(e){showToast('Error generating file','error');console.error(e);}
+  finally{pg.classList.add('hidden');}
+}
+async function copyCardImage(){
+  const btn=document.getElementById('copyImgBtn');
+  const pg=document.getElementById('dlProgress');pg.classList.remove('hidden');
+  const orig=btn.innerHTML;
+  try{
+    if(!navigator.clipboard?.write){showToast('Copy not supported','error');return;}
+    const canvas=await generateHighRes();if(!canvas)return;
+    const blob=await new Promise(res=>canvas.toBlob(res,'image/png'));
+    await navigator.clipboard.write([new ClipboardItem({'image/png':blob})]);
+    btn.innerHTML='<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Copied!';
+    showToast('Image copied!','success');setTimeout(()=>btn.innerHTML=orig,2500);
+  }catch(e){showToast('Copy failed','error');}
+  finally{pg.classList.add('hidden');}
+}
+function shuffleDesign(){
+  const list=currentCategory==='all'?CARD_DESIGNS:CARD_DESIGNS.filter(d=>d.cat===currentCategory);
+  selectDesign(list[Math.floor(Math.random()*list.length)].id);
+}
+function resetToDefault(){
+  ['recipientName','relationInput','senderName','cardTitle','customMessage'].forEach(id=>{const e=document.getElementById(id);if(e)e.value='';});
+  document.getElementById('msgCount').textContent='0/200';
+  selectDesign(1);showToast('Reset to defaults','success');
+}
+function toggleFaq(btn){
+  const c=btn.nextElementSibling;const ic=btn.querySelector('.faq-icon');
+  c.classList.toggle('open');if(ic)ic.classList.toggle('open');
+}
+function showToast(msg,type){
+  const t=document.getElementById('toastMsg');t.textContent=msg;
+  t.className='toast-msg '+(type==='error'?'toast-error':'toast-success');
+  t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3000);
+}
+document.getElementById('mobileMenuBtn')?.addEventListener('click',()=>{
+  document.getElementById('mobileMenu')?.classList.toggle('open');
+});
+window.addEventListener('scroll',()=>{
+  document.getElementById('scrollTopBtn')?.classList.toggle('visible',window.scrollY>300);
+});
+document.addEventListener('DOMContentLoaded',()=>{
+  populateGrid('all');selectDesign(1);
+  const outer=document.getElementById('cardPreviewOuter');
+  if(window.ResizeObserver)new ResizeObserver(()=>scalePreview()).observe(outer);
+  window.addEventListener('resize',scalePreview);
+  setTimeout(scalePreview,80);
+});
+</script>
+</body>
+</html>

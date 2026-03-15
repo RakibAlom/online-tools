@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Congratulations Message Card Generator | Free Online</title>
+<meta name="description" content="Create stunning congratulations message cards online for free. Personalize cards for achievements, promotions & more. Download PNG, JPG, WEBP or PDF instantly."/>
+<meta name="keywords" content="congratulations message card generator online, online congratulations message card generator free, congratulations message card generator tool, free online congratulations card maker, online congratulations greeting card generator free, free congratulations message card creator online, online congratulations wishes card maker free, free digital congratulations message card maker online"/>
+<link rel="canonical" href="https://easyprotools.com/congratulations-message-card-generator/"/>
+<link rel="icon" type="image/png" href="/assets/img/easypro-tools-favicon.png"/>
+
+<!-- Google AdSense -->
+<meta name="google-adsense-account" content="ca-pub-8183914844375779">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8183914844375779" crossorigin="anonymous"></script>
+
+<!-- Google Site Verification -->
+<meta name="google-site-verification" content="6mVD0ZbHhhpk44oBpWSlTpYVMuSkalhH2Iviw0qVXSk"/>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4D39CLDW58"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-4D39CLDW58');
+</script>
+
+<!-- Open Graph -->
+<meta property="og:title" content="Congratulations Message Card Generator | Free Online"/>
+<meta property="og:description" content="Create stunning congratulations message cards online for free. Personalize cards for achievements, promotions & more. Download PNG, JPG, WEBP or PDF instantly."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://easyprotools.com/congratulations-message-card-generator/"/>
+<meta property="og:image" content="/assets/img/easypro-tools.jpg"/>
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Congratulations Message Card Generator | Free Online"/>
+<meta name="twitter:description" content="Create stunning congratulations message cards online for free. Personalize cards for achievements, promotions & more. Download PNG, JPG, WEBP or PDF instantly."/>
+<meta name="twitter:image" content="/assets/img/easypro-tools.jpg"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Dancing+Script:wght@400;600;700&family=Montserrat:wght@300;400;600;700;800&family=Pacifico&family=Satisfy&family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Raleway:wght@300;400;600;700&family=Lobster&family=Nunito:wght@300;400;600;700&family=Bebas+Neue&family=Abril+Fatface&family=Lato:wght@300;400;700&family=Oswald:wght@400;600;700&family=Righteous&display=swap" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={darkMode:'class'}</script>
+<style>
+body{font-family:'Inter',sans-serif;background:#0a0a0a;color:#e5e5e5}
+.bg-mesh{background-color:#0a0a0a;background-image:radial-gradient(at 0% 0%,rgba(234,179,8,.07) 0px,transparent 50%),radial-gradient(at 100% 0%,rgba(16,185,129,.05) 0px,transparent 50%);background-attachment:fixed}
+.glass-panel{background:rgba(20,20,20,.6);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.08)}
+.glass-input{background:rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.1);color:#f5f5f5;transition:all .2s ease}
+.glass-input:focus{background:rgba(0,0,0,.6);border-color:rgba(234,179,8,.5);box-shadow:0 0 0 3px rgba(234,179,8,.1);outline:none}
+.glass-input::placeholder{color:#6b7280}
+.btn-primary{background:linear-gradient(135deg,rgba(234,179,8,.9),rgba(245,158,11,.9));border:1px solid rgba(255,255,255,.1);position:relative;overflow:hidden;transition:all .3s ease}
+.btn-primary:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(234,179,8,.3)}
+.pulse-dot{animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+#mobileMenu{transition:max-height .3s,opacity .3s;max-height:0;opacity:0;overflow:hidden}
+#mobileMenu.open{max-height:200px;opacity:1}
+.card-thumb{cursor:pointer;transition:all .25s ease;border:2px solid transparent;position:relative;overflow:hidden;border-radius:8px}
+.card-thumb:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 12px 32px rgba(234,179,8,.22);border-color:rgba(234,179,8,.4)}
+.card-thumb.selected{border-color:rgba(234,179,8,.9);box-shadow:0 0 0 3px rgba(234,179,8,.25)}
+.card-thumb .select-badge{position:absolute;top:6px;right:6px;width:18px;height:18px;background:rgba(234,179,8,.9);border-radius:50%;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s;z-index:10}
+.card-thumb.selected .select-badge{opacity:1}
+.faq-content{transition:max-height .3s,opacity .3s;max-height:0;opacity:0;overflow:hidden}
+.faq-content.open{max-height:400px;opacity:1}
+.faq-icon{transition:transform .3s}
+.faq-icon.open{transform:rotate(180deg)}
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-track{background:rgba(0,0,0,.2)}
+::-webkit-scrollbar-thumb{background:rgba(255,255,255,.15);border-radius:3px}
+.toast-msg{position:fixed;bottom:24px;right:80px;color:white;padding:10px 18px;border-radius:8px;font-size:.8rem;font-weight:500;transform:translateY(80px);opacity:0;transition:all .3s;z-index:1000;pointer-events:none}
+.toast-msg.show{transform:translateY(0);opacity:1}
+.toast-success{background:rgba(34,197,94,.95)}
+.toast-error{background:rgba(239,68,68,.95)}
+.scroll-top-btn{position:fixed;bottom:24px;right:24px;width:42px;height:42px;border-radius:50%;background:rgba(234,179,8,.85);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;visibility:hidden;transition:all .3s;z-index:99}
+.scroll-top-btn.visible{opacity:1;visibility:visible}
+.ctrl-range{-webkit-appearance:none;appearance:none;background:rgba(255,255,255,.08);border-radius:4px;height:4px;width:100%;outline:none;cursor:pointer;margin-top:4px}
+.ctrl-range::-webkit-slider-thumb{-webkit-appearance:none;width:14px;height:14px;background:#eab308;border-radius:50%;cursor:pointer;border:2px solid rgba(255,255,255,.2)}
+.ctrl-range::-moz-range-thumb{width:14px;height:14px;background:#eab308;border-radius:50%;cursor:pointer;border:2px solid rgba(255,255,255,.2)}
+.card-thumb-name{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(0deg,rgba(0,0,0,.9) 0%,transparent 100%);padding:16px 6px 5px;font-size:10px;font-weight:600;color:#fff;text-align:center;pointer-events:none}
+.ctrl-section-body{transition:max-height .3s,opacity .3s;overflow:hidden}
+.ctrl-section-body.collapsed{max-height:0!important;opacity:0}
+.ctrl-section-body.expanded{opacity:1}
+.ctrl-chevron{transition:transform .25s}
+.ctrl-chevron.open{transform:rotate(180deg)}
+.color-swatch{width:26px;height:26px;border-radius:5px;border:2px solid rgba(255,255,255,.15);cursor:pointer;padding:0;overflow:hidden;background:none;flex-shrink:0}
+.color-swatch input[type=color]{width:34px;height:34px;border:none;cursor:pointer;margin:-4px 0 0 -4px;background:none;padding:0}
+.ctrl-section-hdr{display:flex;align-items:center;justify-content:space-between;cursor:pointer;padding:2px 0;user-select:none}
+.ctrl-section-hdr:hover .ctrl-lbl{color:#fde68a}
+.ctrl-badge{font-size:9px;padding:1px 5px;border-radius:9999px;background:rgba(234,179,8,.2);border:1px solid rgba(234,179,8,.3);color:#fbbf24;font-weight:600}
+#cardPreviewOuter{width:100%;position:relative;overflow:hidden;border-radius:10px;border:1px solid rgba(255,255,255,.1)}
+#cardScaleContainer{position:absolute;top:0;left:0;transform-origin:top left}
+.size-tab{padding:.22rem .6rem;border-radius:6px;font-size:.68rem;border:1px solid rgba(255,255,255,.1);color:#9ca3af;cursor:pointer;transition:all .2s;white-space:nowrap}
+.size-tab.active{background:rgba(234,179,8,.2);border-color:rgba(234,179,8,.5);color:#fbbf24}
+.size-tab:hover{background:rgba(234,179,8,.1);color:#fde68a}
+.dl-btn{display:flex;align-items:center;justify-content:center;gap:4px;padding:.45rem .3rem;border-radius:7px;font-size:.68rem;font-weight:700;cursor:pointer;transition:all .2s;border:1px solid}
+.article-content h2{font-size:1.3rem;font-weight:700;margin-top:1.4rem;margin-bottom:.5rem;color:#e2e8f0}
+.article-content h3{font-size:1.05rem;font-weight:600;margin-top:1rem;margin-bottom:.4rem;color:#fde68a}
+.article-content p{margin-bottom:.75rem;line-height:1.8;color:#94a3b8}
+.article-content strong{color:#e2e8f0}
+.category-tab{padding:.28rem .8rem;border-radius:9999px;font-size:.7rem;border:1px solid rgba(255,255,255,.1);color:#9ca3af;cursor:pointer;transition:all .2s;white-space:nowrap}
+.category-tab.active,.category-tab:hover{background:rgba(234,179,8,.2);border-color:rgba(234,179,8,.5);color:#fbbf24}
+</style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col">
+<div id="toastMsg" class="toast-msg toast-success"></div>
+<button id="scrollTopBtn" class="scroll-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+</button>
+
+<!-- HEADER -->
+<header class="glass-panel sticky top-0 z-40 border-b border-white/10">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex items-center justify-between h-14">
+      <div class="flex items-center space-x-2">
+        <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none">
+          <rect width="40" height="40" rx="10" fill="url(#cg)"/>
+          <text x="20" y="26" text-anchor="middle" fill="white" font-size="20">🏆</text>
+          <defs><linearGradient id="cg" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse"><stop stop-color="#eab308"/><stop offset="1" stop-color="#f59e0b"/></linearGradient></defs>
+        </svg>
+        <div><h1 class="text-sm font-bold text-white">Congratulations Card Generator</h1><p class="text-gray-400 text-xs hidden sm:block">Free Online Congratulations Card Maker</p></div>
+      </div>
+      <nav class="hidden md:flex items-center space-x-5">
+        <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors">🏠 Home</a>
+        <a href="https://easyprotools.com/" class="text-xs text-gray-300 hover:text-white transition-colors">⚙️ All Tools</a>
+      </nav>
+      <button id="mobileMenuBtn" class="md:hidden p-1.5 rounded-lg hover:bg-white/10 text-gray-300">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="md:hidden border-t border-white/10 bg-black/90">
+    <div class="px-4 py-2 space-y-1">
+      <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm text-gray-300 hover:text-white hover:bg-white/10">Home</a>
+      <a href="https://easyprotools.com/" class="block px-3 py-2 rounded-md text-sm text-gray-300 hover:text-white hover:bg-white/10">All Tools</a>
+    </div>
+  </div>
+</header>
+
+<!-- BANNER -->
+<section class="py-4 px-4">
+  <div class="max-w-4xl mx-auto text-center">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel mb-2">
+      <span class="w-1.5 h-1.5 rounded-full bg-yellow-400 pulse-dot"></span>
+      <span class="text-xs text-gray-400">Free Tool • No Registration • Instant Download</span>
+    </div>
+    <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-1 bg-gradient-to-r from-white via-yellow-200 to-amber-300 bg-clip-text text-transparent">Congratulations Message Card Generator</h2>
+    <p class="text-gray-400 text-sm">Create & Download Beautiful Congratulations Cards Instantly — 100% Free</p>
+  </div>
+</section>
+
+<!-- MAIN TOOL -->
+<main class="flex-grow max-w-6xl mx-auto px-4 pb-10 w-full">
+<div class="glass-panel rounded-xl p-3 sm:p-4 mb-6">
+<div class="grid grid-cols-1 lg:grid-cols-5 gap-3">
+
+<!-- LEFT CONTROLS -->
+<div class="lg:col-span-2 space-y-2.5">
+
+  <!-- Recipient -->
+  <div class="glass-panel rounded-xl p-3">
+    <div class="ctrl-section-hdr" onclick="toggleSec('recipient')">
+      <div class="flex items-center gap-2"><span>🏅</span><span class="ctrl-lbl text-xs font-bold text-gray-200 uppercase tracking-wider">Recipient</span></div>
+      <svg class="ctrl-chevron open w-3.5 h-3.5 text-gray-400" id="chev-recipient" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+    </div>
+    <div id="sec-recipient" class="ctrl-section-body expanded mt-2" style="max-height:220px">
+      <div class="space-y-2">
+        <div>
+          <label class="text-xs text-gray-400 mb-1 block">Name</label>
+          <div class="flex gap-1.5">
+            <input type="text" id="recipientName" placeholder="e.g. Dr. Sarah" maxlength="30" class="flex-1 px-2.5 py-1.5 rounded-lg glass-input text-sm" oninput="updatePreview()"/>
+            <label class="color-swatch" title="Name color"><input type="color" id="nameColor" value="#ffffff" oninput="updatePreview()"/></label>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-2">
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Name Font</label>
+            <select id="nameFontSelect" class="w-full px-2 py-1.5 rounded-lg glass-input text-xs" onchange="updatePreview()">
+              <option value="'Great Vibes',cursive">Great Vibes</option>
+              <option value="'Cinzel',serif">Cinzel</option>
+              <option value="'Playfair Display',serif">Playfair</option>
+              <option value="'Dancing Script',cursive">Dancing Script</option>
+              <option value="'Pacifico',cursive">Pacifico</option>
+              <option value="'Satisfy',cursive">Satisfy</option>
+              <option value="'Montserrat',sans-serif">Montserrat</option>
+              <option value="'Oswald',sans-serif">Oswald</option>
+            </select>
+          </div>
+          <div>
+            <label class="text-xs text-gray-400 mb-0.5 block">Size <span id="nameSizeVal" class="text-yellow-400">32px</span></label>
+            <input type="range" id="nameSize" min="14" max="56" value="32" class="ctrl-range" oninput="document.getElementById('nameSizeVal').textContent=this.value+'px';updatePreview()"/>
+          </div>
+        </div>
+        <div>
+          <label class="text-xs text-gray-400 mb-1 block">Achievement / Occasion</label>
+          <input type="text" id="achievement" placeholder="e.g. PhD Graduation, Promotion..." maxlength="40" class="w-full px-2.5 py-1.5 rounded-lg glass-input text-sm" oninput="updatePreview()"/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card Title -->
+  <div class="glass-panel rounded-xl p-3">
+    <div class="ctrl-section-hdr" onclick="toggleSec('title')">
+      <div class="flex items-center gap-2"><span>✏️</span><span class="ctrl-lbl text-xs font-bold text-gray-200 uppercase tracking-wider">Card Title</span><span class="ctrl-badge">auto-fill</span></div>
+      <svg class="ctrl-chevron open w-3.5 h-3.5 text-gray-400" id="chev-title" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+    </div>
+    <div id="sec-title" class="ctrl-section-body expanded mt-2" style="max-height:310px">
+      <div class="flex gap-1.5 mb-2">
+        <input type="text" id="cardTitle" placeholder="e.g. Congratulations!" maxlength="50" class="flex-1 px-2.5 py-1.5 rounded-lg glass-input text-sm" oninput="updatePreview()"/>
+        <label class="color-swatch"><input type="color" id="titleColor" value="#f9d77e" oninput="updatePreview()"/></label>
+      </div>
+      <div class="grid grid-cols-2 gap-2 mb-2">
+        <div>
+          <label class="text-xs text-gray-400 mb-1 block">Font</label>
+          <select id="titleFontSelect" class="w-full px-2 py-1.5 rounded-lg glass-input text-xs" onchange="updatePreview()">
+            <option value="'Cinzel',serif">Cinzel</option>
+            <option value="'Bebas Neue',sans-serif">Bebas Neue</option>
+            <option value="'Abril Fatface',cursive">Abril Fatface</option>
+            <option value="'Oswald',sans-serif">Oswald</option>
+            <option value="'Playfair Display',serif">Playfair</option>
+            <option value="'Pacifico',cursive">Pacifico</option>
+            <option value="'Great Vibes',cursive">Great Vibes</option>
+            <option value="'Righteous',cursive">Righteous</option>
+            <option value="'Montserrat',sans-serif">Montserrat</option>
+          </select>
+        </div>
+        <div>
+          <label class="text-xs text-gray-400 mb-0.5 block">Size <span id="titleSizeVal" class="text-yellow-400">40px</span></label>
+          <input type="range" id="titleSize" min="16" max="72" value="40" class="ctrl-range" oninput="document.getElementById('titleSizeVal').textContent=this.value+'px';updatePreview()"/>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-2">
+        <div>
+          <label class="text-xs text-gray-400 mb-0.5 block">Spacing <span id="titleSpacingVal" class="text-yellow-400">1px</span></label>
+          <input type="range" id="titleSpacing" min="-2" max="12" value="1" class="ctrl-range" oninput="document.getElementById('titleSpacingVal').textContent=this.value+'px';updatePreview()"/>
+        </div>
+        <div>
+          <label class="text-xs text-gray-400 mb-1 block">Style</label>
+          <select id="titleStyle" class="w-full px-2 py-1.5 rounded-lg glass-input text-xs" onchange="updatePreview()">
+            <option value="normal">Normal</option>
+            <option value="uppercase">UPPERCASE</option>
+            <option value="capitalize">Capitalize</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Message -->
+  <div class="glass-panel rounded-xl p-3">
+    <div class="ctrl-section-hdr" onclick="toggleSec('msg')">
+      <div class="flex items-center gap-2"><span>💬</span><span class="ctrl-lbl text-xs font-bold text-gray-200 uppercase tracking-wider">Message</span><span class="ctrl-badge">auto-fill</span></div>
+      <div class="flex items-center gap-2"><span id="msgCount" class="text-xs text-gray-500">0/200</span><svg class="ctrl-chevron open w-3.5 h-3.5 text-gray-400" id="chev-msg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></div>
+    </div>
+    <div id="sec-msg" class="ctrl-section-body expanded mt-2" style="max-height:340px">
+      <div class="flex gap-1.5 mb-2">
+        <textarea id="customMessage" placeholder="Your congratulations message..." maxlength="200" rows="3" class="flex-1 px-2.5 py-1.5 rounded-lg glass-input text-sm resize-none" oninput="document.getElementById('msgCount').textContent=this.value.length+'/200';updatePreview()"></textarea>
+        <label class="color-swatch mt-0.5"><input type="color" id="msgColor" value="#f3e8d0" oninput="updatePreview()"/></label>
+      </div>
+      <div class="grid grid-cols-2 gap-2 mb-2">
+        <div>
+          <label class="text-xs text-gray-400 mb-1 block">Font</label>
+          <select id="fontSelect" class="w-full px-2 py-1.5 rounded-lg glass-input text-xs" onchange="updatePreview()">
+            <option value="'Cormorant Garamond',serif">Cormorant</option>
+            <option value="'Playfair Display',serif">Playfair</option>
+            <option value="'Raleway',sans-serif">Raleway</option>
+            <option value="'Montserrat',sans-serif">Montserrat</option>
+            <option value="'Nunito',sans-serif">Nunito</option>
+            <option value="'Lato',sans-serif">Lato</option>
+          </select>
+        </div>
+        <div>
+          <label class="text-xs text-gray-400 mb-0.5 block">Size <span id="msgSizeVal" class="text-yellow-400">13px</span></label>
+          <input type="range" id="msgSize" min="9" max="22" value="13" class="ctrl-range" oninput="document.getElementById('msgSizeVal').textContent=this.value+'px';updatePreview()"/>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-2">
+        <div>
+          <label class="text-xs text-gray-400 mb-0.5 block">Line H <span id="msgLineHVal" class="text-yellow-400">1.6</span></label>
+          <input type="range" id="msgLineH" min="1" max="2.5" step="0.1" value="1.6" class="ctrl-range" oninput="document.getElementById('msgLineHVal').textContent=parseFloat(this.value).toFixed(1);updatePreview()"/>
+        </div>
+        <div>
+          <label class="text-xs text-gray-400 mb-1 block">Align</label>
+          <select id="msgAlign" class="w-full px-2 py-1.5 rounded-lg glass-input text-xs" onchange="updatePreview()">
+            <option value="center">Center</option>
+            <option value="left">Left</option>
+            <option value="right">Right</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- From -->
+  <div class="glass-panel rounded-xl p-3">
+    <div class="ctrl-section-hdr" onclick="toggleSec('sender')">
+      <div class="flex items-center gap-2"><span>✍️</span><span class="ctrl-lbl text-xs font-bold text-gray-200 uppercase tracking-wider">From</span></div>
+      <svg class="ctrl-chevron open w-3.5 h-3.5 text-gray-400" id="chev-sender" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+    </div>
+    <div id="sec-sender" class="ctrl-section-body expanded mt-2" style="max-height:160px">
+      <div class="space-y-2">
+        <div>
+          <label class="text-xs text-gray-400 mb-1 block">Your Name / Team</label>
+          <div class="flex gap-1.5">
+            <input type="text" id="senderName" placeholder="e.g. The Management Team" maxlength="30" class="flex-1 px-2.5 py-1.5 rounded-lg glass-input text-sm" oninput="updatePreview()"/>
+            <label class="color-swatch"><input type="color" id="fromColor" value="#f9d77e" oninput="updatePreview()"/></label>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-2">
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Font</label>
+            <select id="fromFontSelect" class="w-full px-2 py-1.5 rounded-lg glass-input text-xs" onchange="updatePreview()">
+              <option value="'Dancing Script',cursive">Dancing Script</option>
+              <option value="'Great Vibes',cursive">Great Vibes</option>
+              <option value="'Satisfy',cursive">Satisfy</option>
+              <option value="'Pacifico',cursive">Pacifico</option>
+            </select>
+          </div>
+          <div>
+            <label class="text-xs text-gray-400 mb-0.5 block">Size <span id="fromSizeVal" class="text-yellow-400">16px</span></label>
+            <input type="range" id="fromSize" min="10" max="32" value="16" class="ctrl-range" oninput="document.getElementById('fromSizeVal').textContent=this.value+'px';updatePreview()"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Actions -->
+  <div class="glass-panel rounded-xl p-3">
+    <div class="grid grid-cols-2 gap-2">
+      <button onclick="shuffleDesign()" class="btn-primary py-2.5 px-3 rounded-lg text-white text-xs font-bold flex items-center justify-center gap-1.5">🎲 Shuffle Design</button>
+      <button onclick="resetToDefault()" class="py-2.5 px-3 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 text-xs font-semibold flex items-center justify-center gap-1.5 transition-all">🔄 Reset</button>
+    </div>
+  </div>
+</div>
+
+<!-- RIGHT: Preview + Download + Grid -->
+<div class="lg:col-span-3 space-y-3">
+  <div>
+    <div class="flex items-center justify-between mb-1.5">
+      <label class="text-xs font-medium text-gray-300">👁 Live Preview</label>
+      <span id="selectedDesignName" class="text-xs text-yellow-400 font-medium"></span>
+    </div>
+    <div id="cardPreviewOuter">
+      <div id="cardScaleContainer"><div id="cardCanvas"></div></div>
+    </div>
+  </div>
+
+  <!-- Size & Download -->
+  <div class="glass-panel rounded-xl p-3">
+    <div class="ctrl-section-hdr" onclick="toggleSec('dl')">
+      <div class="flex items-center gap-2"><span>⬇️</span><span class="ctrl-lbl text-xs font-bold text-gray-200 uppercase tracking-wider">Size & Download</span></div>
+      <svg class="ctrl-chevron open w-3.5 h-3.5 text-gray-400" id="chev-dl" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+    </div>
+    <div id="sec-dl" class="ctrl-section-body expanded mt-2" style="max-height:300px">
+      <div class="flex flex-wrap gap-1.5 mb-2">
+        <button class="size-tab active" onclick="applySize('landscape',this)">Standard</button>
+        <button class="size-tab" onclick="applySize('square',this)">Square</button>
+        <button class="size-tab" onclick="applySize('story',this)">Story</button>
+        <button class="size-tab" onclick="applySize('wide',this)">Wide</button>
+      </div>
+      <div class="flex items-end gap-2 mb-2">
+        <div class="flex-1"><label class="text-xs text-gray-500 block mb-0.5">W (px)</label><input type="number" id="customW" value="600" min="200" max="1200" class="w-full px-2 py-1.5 rounded-lg glass-input text-xs" oninput="applyCustomSize()"/></div>
+        <span class="text-gray-500 mb-2">×</span>
+        <div class="flex-1"><label class="text-xs text-gray-500 block mb-0.5">H (px)</label><input type="number" id="customH" value="400" min="200" max="1200" class="w-full px-2 py-1.5 rounded-lg glass-input text-xs" oninput="applyCustomSize()"/></div>
+      </div>
+      <p id="sizeLabel" class="text-xs text-gray-500 mb-2">Standard (600×400)</p>
+      <div class="grid grid-cols-5 gap-1.5">
+        <button onclick="downloadCard('png')" class="dl-btn bg-yellow-500/10 hover:bg-yellow-500/25 border-yellow-500/30 text-yellow-300"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>PNG</button>
+        <button onclick="downloadCard('jpeg')" class="dl-btn bg-amber-500/10 hover:bg-amber-500/25 border-amber-500/30 text-amber-300"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>JPG</button>
+        <button onclick="downloadCard('webp')" class="dl-btn bg-blue-500/10 hover:bg-blue-500/25 border-blue-500/30 text-blue-300"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>WEBP</button>
+        <button onclick="downloadCard('pdf')" class="dl-btn bg-red-500/10 hover:bg-red-500/25 border-red-500/30 text-red-300"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>PDF</button>
+        <button onclick="copyCardImage()" id="copyImgBtn" class="dl-btn bg-green-500/10 hover:bg-green-500/25 border-green-500/30 text-green-300"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>Copy</button>
+      </div>
+      <div id="dlProgress" class="hidden mt-2 text-center text-xs text-yellow-400 animate-pulse">Generating...</div>
+    </div>
+  </div>
+
+  <!-- Category Tabs -->
+  <div class="flex gap-1.5 overflow-x-auto pb-1">
+    <button class="category-tab active" onclick="filterCards('all',this)">All</button>
+    <button class="category-tab" onclick="filterCards('achievement',this)">Achievement</button>
+    <button class="category-tab" onclick="filterCards('academic',this)">Academic</button>
+    <button class="category-tab" onclick="filterCards('career',this)">Career</button>
+    <button class="category-tab" onclick="filterCards('celebration',this)">Celebration</button>
+    <button class="category-tab" onclick="filterCards('modern',this)">Modern</button>
+  </div>
+
+  <!-- Design Grid -->
+  <div id="designGrid" class="grid grid-cols-2 sm:grid-cols-3 gap-2.5 overflow-y-auto" style="max-height:560px"></div>
+  <p class="text-xs text-gray-500 mt-1">Click any design — title, message & colors auto-update</p>
+</div>
+</div>
+</div>
+
+<!-- Off-screen render -->
+<div style="position:fixed;left:-9999px;top:0;pointer-events:none;z-index:-1">
+  <div id="cardRenderTarget" style="width:600px;height:400px;overflow:hidden"></div>
+</div>
+
+<!-- Features -->
+<section class="mb-6">
+  <h2 class="text-xl font-bold text-center mb-4 bg-gradient-to-r from-white to-yellow-200 bg-clip-text text-transparent">Why Use Our Congratulations Card Generator?</h2>
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+    <div class="glass-panel rounded-lg p-3"><div class="text-2xl mb-1">🏆</div><h3 class="text-xs font-semibold mb-1 text-white">50+ Designs</h3><p class="text-gray-400 text-xs">For every achievement & occasion</p></div>
+    <div class="glass-panel rounded-lg p-3"><div class="text-2xl mb-1">⬇️</div><h3 class="text-xs font-semibold mb-1 text-white">4 Formats</h3><p class="text-gray-400 text-xs">PNG, JPG, WEBP or PDF</p></div>
+    <div class="glass-panel rounded-lg p-3"><div class="text-2xl mb-1">👁</div><h3 class="text-xs font-semibold mb-1 text-white">Live Preview</h3><p class="text-gray-400 text-xs">See changes instantly</p></div>
+    <div class="glass-panel rounded-lg p-3"><div class="text-2xl mb-1">📋</div><h3 class="text-xs font-semibold mb-1 text-white">Copy Image</h3><p class="text-gray-400 text-xs">Copy to clipboard instantly</p></div>
+    <div class="glass-panel rounded-lg p-3"><div class="text-2xl mb-1">🔒</div><h3 class="text-xs font-semibold mb-1 text-white">Free & Private</h3><p class="text-gray-400 text-xs">No login, no watermarks</p></div>
+    <div class="glass-panel rounded-lg p-3"><div class="text-2xl mb-1">📱</div><h3 class="text-xs font-semibold mb-1 text-white">All Sizes</h3><p class="text-gray-400 text-xs">Story, Square, Standard & more</p></div>
+  </div>
+</section>
+
+<!-- How To Use -->
+<section class="mb-6">
+  <h2 class="text-xl font-bold text-center mb-4 bg-gradient-to-r from-white to-yellow-200 bg-clip-text text-transparent">How to Create Your Congratulations Card</h2>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+    <div class="glass-panel rounded-lg p-3"><div class="w-6 h-6 bg-yellow-500/20 rounded-full flex items-center justify-center mb-2 border border-yellow-500/30 text-yellow-400 text-xs font-bold">1</div><h3 class="text-xs font-semibold mb-1 text-white">Enter Name</h3><p class="text-gray-400 text-xs">Add recipient name & achievement</p></div>
+    <div class="glass-panel rounded-lg p-3"><div class="w-6 h-6 bg-amber-500/20 rounded-full flex items-center justify-center mb-2 border border-amber-500/30 text-amber-400 text-xs font-bold">2</div><h3 class="text-xs font-semibold mb-1 text-white">Write Message</h3><p class="text-gray-400 text-xs">Personalize title & congratulations</p></div>
+    <div class="glass-panel rounded-lg p-3"><div class="w-6 h-6 bg-orange-500/20 rounded-full flex items-center justify-center mb-2 border border-orange-500/30 text-orange-400 text-xs font-bold">3</div><h3 class="text-xs font-semibold mb-1 text-white">Pick Design</h3><p class="text-gray-400 text-xs">Choose from 50+ card styles</p></div>
+    <div class="glass-panel rounded-lg p-3"><div class="w-6 h-6 bg-green-500/20 rounded-full flex items-center justify-center mb-2 border border-green-500/30 text-green-400 text-xs font-bold">4</div><h3 class="text-xs font-semibold mb-1 text-white">Download & Share</h3><p class="text-gray-400 text-xs">Save as PNG, JPG, WEBP or PDF</p></div>
+  </div>
+</section>
+
+<!-- Article -->
+<section class="mb-8">
+  <article class="glass-panel rounded-xl p-4 md:p-8 article-content">
+    <h2>The Complete Guide to Free Online Congratulations Message Card Generators: Celebrate Every Achievement with a Personalized Digital Card</h2>
+    <p>Every significant achievement in life deserves to be celebrated with genuine recognition and heartfelt acknowledgment. Whether someone has earned a degree, landed a dream promotion, published a book, won a competition, started a new business, or reached any milestone that required dedication and effort, a personalized congratulations card communicates your pride and support in a tangible, memorable way. Our <strong>congratulations message card generator online</strong> makes it effortless to create beautiful, professional-quality congratulations cards for any achievement — completely free, with no design skills required.</p>
+    <p>The challenge most people face when wanting to congratulate someone properly is finding the right words in the right format. Generic text messages feel impersonal. Store-bought cards arrive late and lack personalization. Our <strong>online congratulations message card generator free</strong> platform bridges this gap by combining professionally designed templates with deep personalization tools, allowing you to create a card that speaks directly to the specific person and specific achievement being celebrated.</p>
+
+    <h2>What Is a Congratulations Message Card Generator?</h2>
+    <p>A <strong>congratulations message card generator tool</strong> is a web-based design application that enables users to create customized digital congratulations cards without any graphic design expertise or paid software. By combining ready-made professional templates with flexible customization controls, our <strong>free online congratulations card maker</strong> allows anyone to produce high-resolution, visually impressive congratulations cards in minutes. The cards can be downloaded in four professional formats — PNG, JPG, WEBP, and PDF — or copied directly to the clipboard for immediate sharing via messaging platforms.</p>
+    <p>Unlike subscription-based tools or software-heavy alternatives, our <strong>online congratulations greeting card generator free</strong> operates entirely in your web browser without installation, registration, or payment. The processing happens client-side, meaning your personal data and custom messages remain entirely on your device and are never transmitted to any server.</p>
+
+    <h2>The Growing Importance of Personalized Achievement Recognition</h2>
+    <p>Research in organizational psychology consistently shows that personalized recognition significantly outperforms generic acknowledgment in its emotional impact. When you use our <strong>free congratulations message card creator online</strong> to craft a card that includes the recipient's name, their specific achievement, and a tailored message, you demonstrate that you've invested real thought and care into the recognition — rather than simply pressing "like" on a social media post or sending a one-line text.</p>
+    <p>This matters enormously in professional contexts, where employee recognition has been linked directly to retention, engagement, and productivity. It matters equally in personal relationships, where the effort you invest in celebrating someone's achievement deepens your connection and communicates the depth of your support. Our <strong>online congratulations wishes card maker free</strong> makes this level of personalized recognition accessible to everyone, regardless of design skill or budget.</p>
+
+    <h2>Comprehensive Feature Overview</h2>
+    <h3>50+ Achievement-Specific Card Designs</h3>
+    <p>Our <strong>free digital congratulations message card maker online</strong> features over 50 professionally designed templates organized into five meaningful categories. The Achievement category celebrates general accomplishments with bold, triumphant designs featuring trophies, stars, and gold motifs. The Academic category offers designs specifically tailored for graduation, degree completion, and educational milestones, featuring mortarboard caps, scrolls, and scholarly aesthetics. The Career category provides professional, corporate-appropriate designs for promotions, new job announcements, business launches, and work anniversaries. The Celebration category delivers festive, joyful designs with confetti, balloons, and vibrant colors for any milestone worth celebrating. The Modern category offers contemporary, minimal designs that work across contexts with clean typography and sophisticated color palettes.</p>
+
+    <h3>Recipient Name and Achievement Field</h3>
+    <p>One of the most valuable features of our <strong>online personalized congratulations message card generator free</strong> is the dedicated achievement field. Beyond simply entering the recipient's name, you can specify the exact achievement being celebrated — "PhD Graduation," "Top Sales Award," "Published Novel," "First Marathon," or any custom text up to 40 characters. This achievement label integrates elegantly into the card design as a contextual subtitle, transforming a generic congratulations card into something genuinely specific and meaningful.</p>
+
+    <h3>Professional Typography System</h3>
+    <p>Our <strong>free online congratulations greeting card creator tool</strong> includes a comprehensive typography system with 9 font families for titles, 8 for recipient names, 6 for message body, and 4 for sender attribution. Fonts range from the authoritative gravitas of Cinzel and Oswald, to the playful energy of Pacifico and Righteous, to the elegant script of Great Vibes and Dancing Script. Each font can be independently sized, colored, and spaced, giving you precise control over the visual hierarchy of your card.</p>
+    <p>The title style control allows you to transform any text between Normal, UPPERCASE, and Title Case with a single click, enabling dramatic visual shifts that match the tone of the achievement. A promotion to CEO might warrant bold UPPERCASE treatment, while a heartfelt personal achievement might be better served by elegant Title Case. This flexibility makes our <strong>online congratulation card message generator free</strong> genuinely versatile across contexts.</p>
+
+    <h3>Achievement-Themed Visual Design Library</h3>
+    <p>Every design in our <strong>free congratulations card message generator online</strong> has been crafted with achievement-specific visual elements. Trophy icons, laurel wreaths, gold stars, confetti bursts, diploma scrolls, rising arrows, sunburst patterns, medal motifs, and celebratory fireworks all appear throughout the design library in contextually appropriate combinations. The Academic category features mortarboard and scroll motifs for graduation cards. The Career category uses ascending lines, geometric growth patterns, and professional gold and navy color schemes. The Achievement category draws on the universal visual language of gold medals and trophies.</p>
+
+    <h3>Full Color Customization</h3>
+    <p>Our <strong>online achievement congratulations card generator free</strong> provides color pickers for every independent text element — title, recipient name, message body, and sender — enabling complete color coordination with the recipient's brand, school colors, company identity, or personal aesthetic preferences. When you select any design template, the colors automatically update to harmonize with that design's palette, giving you an excellent starting point that you can then refine to your exact specifications.</p>
+
+    <h2>Use Cases: When to Use a Congratulations Card Generator</h2>
+    <h3>Academic Achievements</h3>
+    <p>From kindergarten graduation to doctoral degree completion, academic milestones represent years of dedicated effort and deserve genuine celebration. Our <strong>free online success congratulations card maker</strong> includes designs specifically crafted for educational contexts — formal enough for PhD completions and professional enough for MBA graduations, while also featuring playful options for younger students completing their first year of school. The academic design category acknowledges the full spectrum of educational achievement.</p>
+
+    <h3>Career and Professional Milestones</h3>
+    <p>Promotions, new job appointments, business launches, work anniversaries, and professional certifications all deserve recognition. HR departments and managers can use our <strong>online congratulation message creator free</strong> to create personalized recognition cards for employees without the cost or time investment of physical cards or professional design services. The clean, professional aesthetic of our Career category designs is appropriate for corporate contexts while still feeling personal and thoughtful.</p>
+
+    <h3>Personal Achievements</h3>
+    <p>Running a first marathon, completing a weight loss goal, publishing a book, passing a driving test, buying a first home, achieving sobriety milestones — personal achievements that require real courage and determination deserve as much recognition as academic and professional accomplishments. Our <strong>free online congratulation ecard generator</strong> includes designs that celebrate the full spectrum of human achievement, from the broadly recognized to the deeply personal.</p>
+
+    <h3>Sports and Competition</h3>
+    <p>Tournament victories, championship wins, personal records, and team achievements all merit celebratory cards. Our <strong>online congratulations wishes card generator free</strong> includes bold, high-energy designs appropriate for sports contexts — featuring dynamic typography, trophy motifs, and championship color schemes that match the energy of athletic achievement.</p>
+
+    <h3>Business and Entrepreneurial Milestones</h3>
+    <p>Business launches, first sales, funding rounds, product launches, and company anniversaries represent entrepreneurial achievements that combine personal courage with professional accomplishment. Our <strong>free customizable congratulations message card generator online</strong> includes designs that celebrate these milestones with the blend of professionalism and excitement that startup culture deserves.</p>
+
+    <h3>Social Media and Content Creation</h3>
+    <p>Content creators and community managers can use our <strong>online congratulation card maker for social media free</strong> to create visually consistent congratulations posts for milestone celebrations — follower count achievements, channel anniversaries, successful launches, and community member spotlights. The Square (500×500px) and Story (400×600px) presets are dimensioned specifically for Instagram, while the Wide preset suits Twitter and LinkedIn.</p>
+
+    <h2>Technical Architecture and Privacy</h2>
+    <p>Our <strong>free online congratulation celebration card generator</strong> operates entirely through client-side JavaScript processing, utilizing the html2canvas library for high-resolution DOM capture and jsPDF for vector-quality PDF export. All design rendering, customization processing, and format conversion happens in your browser — your recipient's name, achievement details, and custom message never leave your device or transmit to any external server.</p>
+    <p>The 4x resolution export system ensures that all downloads meet professional print standards. A standard 600×400px card exports at 2400×1600px, providing 300+ DPI quality at standard greeting card print sizes. This means cards created with our <strong>online congratulation message card maker free</strong> can be printed professionally without quality loss — a significant advantage over many free online card tools that export at screen resolution only.</p>
+
+    <h2>Tips for Creating the Perfect Congratulations Card</h2>
+    <p>The most effective congratulations cards combine visual impact with specific, genuine messaging. When using our <strong>free congratulation greeting card creator online</strong>, start by selecting a design that matches the context of the achievement — formal academic designs for educational milestones, bold achievement designs for major accomplishments, professional career designs for workplace recognition.</p>
+    <p>For the message, specificity is key. Rather than a generic "Well done!", acknowledge the specific challenge overcome: "Three years of late nights and brilliant determination led to this moment" communicates far more than a generic congratulations. Keep messages between 40–150 characters for optimal visual balance in most design templates.</p>
+    <p>The achievement field is a powerful personalization tool that many users overlook. Filling it with a specific achievement description — "Doctor of Philosophy," "Regional Sales Champion," "Published Author" — adds a contextual layer that transforms the card from a generic congratulations into a meaningful commemoration of a specific achievement.</p>
+    <p>For the recipient's name, consider whether to use their formal name (Dr. Sarah Johnson), familiar name (Sarah), or a nickname (Sar) based on your relationship. The formality of the name choice should align with the formality of the design and the message tone.</p>
+
+    <h2>Comparing Online Card Generators for Congratulations</h2>
+    <p>When evaluating congratulations card tools, several factors distinguish our platform from alternatives. Most subscription-based tools like Canva or Adobe Express require account creation and either a monthly subscription or limitations on export quality. Our <strong>congratulations message card generator online</strong> requires no registration and exports at 4x resolution entirely free, with no watermarks or usage limitations.</p>
+    <p>Many free card generators offer limited template libraries focused on birthday and holiday cards, with congratulations templates as an afterthought. Our platform, by contrast, was built specifically for achievement recognition, with 50+ designs purpose-built for congratulations contexts organized into meaningful achievement categories.</p>
+    <p>The achievement-specific fields — recipient name with achievement subtitle, professional typography options, and achievement-focused design library — reflect a tool built specifically for the congratulations use case rather than a generic greeting card tool retrofitted for achievement recognition.</p>
+
+    <h2>Conclusion</h2>
+    <p>Every achievement deserves recognition that matches its significance. Our <strong>congratulations message card generator online</strong> provides the design tools, template library, and export quality to create that recognition quickly, affordably, and beautifully. Whether you're celebrating a colleague's promotion, a student's graduation, a friend's personal triumph, or any achievement that represents the best of human effort and determination, create a card that honors the moment with the quality and personalization it deserves.</p>
+    <p>With 50+ designs, deep customization, 4x resolution export, achievement-specific fields, complete privacy, and zero cost, our <strong>online congratulations message card generator free</strong> is the most capable and accessible congratulations card tool available. Start creating today and give every achiever the recognition they have earned.</p>
+  </article>
+</section>
+
+<!-- FAQ -->
+<section class="mb-8">
+  <h2 class="text-xl md:text-2xl font-bold text-center mb-5 bg-gradient-to-r from-white to-yellow-200 bg-clip-text text-transparent">Frequently Asked Questions</h2>
+  <div class="space-y-2">
+
+    <div class="glass-panel rounded-lg overflow-hidden">
+      <button class="w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+        <span class="text-sm font-medium text-gray-200 pr-4">Is this congratulations message card generator completely free?</span>
+        <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </button>
+      <div class="faq-content px-3"><p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes, our <strong>congratulations message card generator online</strong> is 100% free with no hidden fees, premium tiers, registration requirements, or usage limits. Create unlimited cards, download in all formats, and access all 50+ designs completely free.</p></div>
+    </div>
+
+    <div class="glass-panel rounded-lg overflow-hidden">
+      <button class="w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+        <span class="text-sm font-medium text-gray-200 pr-4">What occasions can I use this congratulations card maker for?</span>
+        <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </button>
+      <div class="faq-content px-3"><p class="text-gray-400 text-xs pb-3 leading-relaxed">Our <strong>free online congratulations card maker</strong> covers virtually every achievement occasion: graduations, promotions, new jobs, business launches, sports victories, certifications, personal milestones, award wins, book publications, work anniversaries, and any other accomplishment worth celebrating. The achievement field lets you specify any occasion.</p></div>
+    </div>
+
+    <div class="glass-panel rounded-lg overflow-hidden">
+      <button class="w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+        <span class="text-sm font-medium text-gray-200 pr-4">What formats can I download my congratulations card in?</span>
+        <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </button>
+      <div class="faq-content px-3"><p class="text-gray-400 text-xs pb-3 leading-relaxed">Our <strong>congratulations message card generator tool</strong> supports PNG (lossless quality), JPG (compact file size), WEBP (modern web optimization), and PDF (professional printing). All formats export at 4x resolution for crisp results on any screen or print size — equivalent to 300+ DPI at standard card dimensions.</p></div>
+    </div>
+
+    <div class="glass-panel rounded-lg overflow-hidden">
+      <button class="w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+        <span class="text-sm font-medium text-gray-200 pr-4">Are the downloaded cards watermark-free?</span>
+        <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </button>
+      <div class="faq-content px-3"><p class="text-gray-400 text-xs pb-3 leading-relaxed">All cards created with our <strong>free congratulations message card creator online</strong> are completely watermark-free and ready for both personal and commercial use. There are no branding overlays, attribution requirements, or restrictions on how you use the cards you create.</p></div>
+    </div>
+
+    <div class="glass-panel rounded-lg overflow-hidden">
+      <button class="w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+        <span class="text-sm font-medium text-gray-200 pr-4">Can I create congratulations cards for Instagram and social media?</span>
+        <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </button>
+      <div class="faq-content px-3"><p class="text-gray-400 text-xs pb-3 leading-relaxed">Absolutely! Our <strong>online congratulation card maker for social media free</strong> includes presets for Square (500×500px) for Instagram feeds, Story (400×600px) for Instagram and Facebook Stories, and Wide (800×400px) for Twitter/LinkedIn. You can also set any custom dimension up to 1200×1200px.</p></div>
+    </div>
+
+    <div class="glass-panel rounded-lg overflow-hidden">
+      <button class="w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+        <span class="text-sm font-medium text-gray-200 pr-4">Is my personal information and message kept private?</span>
+        <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </button>
+      <div class="faq-content px-3"><p class="text-gray-400 text-xs pb-3 leading-relaxed">Complete privacy is guaranteed. Our <strong>free digital congratulations message card maker online</strong> processes everything client-side in your browser. Names, achievement details, and messages never transmit to any server. All data stays entirely on your device.</p></div>
+    </div>
+
+    <div class="glass-panel rounded-lg overflow-hidden">
+      <button class="w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+        <span class="text-sm font-medium text-gray-200 pr-4">Can I customize fonts, colors, and text for each element?</span>
+        <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </button>
+      <div class="faq-content px-3"><p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>online personalized congratulations message card generator free</strong> provides independent control over every text element. Choose from 9 title fonts, 8 name fonts, 6 message fonts, and 4 sender fonts. Set custom colors via color picker for each element, adjust sizes, letter spacing, line height, and text alignment.</p></div>
+    </div>
+
+    <div class="glass-panel rounded-lg overflow-hidden">
+      <button class="w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+        <span class="text-sm font-medium text-gray-200 pr-4">Can I print the congratulations cards I create?</span>
+        <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </button>
+      <div class="faq-content px-3"><p class="text-gray-400 text-xs pb-3 leading-relaxed">Yes! Our <strong>free online success congratulations card maker</strong> exports at 4x resolution (300+ DPI at standard card size), making it perfect for home or professional printing. Use the PDF export for the best print results. We recommend printing on premium cardstock for a professional finish.</p></div>
+    </div>
+
+    <div class="glass-panel rounded-lg overflow-hidden">
+      <button class="w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+        <span class="text-sm font-medium text-gray-200 pr-4">What does the Achievement field do?</span>
+        <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </button>
+      <div class="faq-content px-3"><p class="text-gray-400 text-xs pb-3 leading-relaxed">The Achievement field in our <strong>online achievement congratulations card generator free</strong> adds a specific achievement subtitle beneath the recipient's name — e.g., "PhD Graduation," "Top Sales Award," "Regional Champion." This transforms a generic congratulations card into a meaningful, specific commemoration of the exact achievement being celebrated.</p></div>
+    </div>
+
+    <div class="glass-panel rounded-lg overflow-hidden">
+      <button class="w-full p-3 text-left flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFaq(this)">
+        <span class="text-sm font-medium text-gray-200 pr-4">How does the Copy to Clipboard feature work?</span>
+        <svg class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </button>
+      <div class="faq-content px-3"><p class="text-gray-400 text-xs pb-3 leading-relaxed">The Copy button in our <strong>free online congratulation ecard generator</strong> renders your card at 4x resolution and copies it as a PNG image directly to your device clipboard. You can then paste it into WhatsApp, iMessage, Instagram DMs, Slack, email, or any other platform that accepts image paste — no download required.</p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="border-t border-white/10 bg-black/40 backdrop-blur-lg mt-auto">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
+    <p>&copy; <span id="currentYear"></span> <a href="https://easyprotools.com/" class="text-gray-400 hover:text-white">EasyPro Tools</a>. All rights reserved.</p>
+    <div class="flex gap-4"><a href="https://easyprotools.com/" class="hover:text-white">Home</a><a href="https://easyprotools.com/" class="hover:text-white">All Tools</a></div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+let CARD_W=600,CARD_H=400,selectedDesignId=1,currentCategory='all';
+
+const SIZE_PRESETS={
+  landscape:{w:600,h:400,label:'Standard (600×400)'},
+  square:{w:500,h:500,label:'Instagram Square (500×500)'},
+  story:{w:400,h:600,label:'Mobile Story (400×600)'},
+  wide:{w:800,h:400,label:'Wide Banner (800×400)'},
+};
+function applySize(k,btn){const p=SIZE_PRESETS[k];CARD_W=p.w;CARD_H=p.h;document.getElementById('customW').value=CARD_W;document.getElementById('customH').value=CARD_H;document.getElementById('sizeLabel').textContent=p.label;document.querySelectorAll('.size-tab').forEach(b=>b.classList.remove('active'));if(btn)btn.classList.add('active');updatePreview();}
+function applyCustomSize(){CARD_W=Math.max(200,Math.min(1200,parseInt(document.getElementById('customW').value)||600));CARD_H=Math.max(200,Math.min(1200,parseInt(document.getElementById('customH').value)||400));document.getElementById('sizeLabel').textContent='Custom ('+CARD_W+'×'+CARD_H+')';document.querySelectorAll('.size-tab').forEach(b=>b.classList.remove('active'));updatePreview();}
+
+/* ===== VISUAL HELPERS ===== */
+function goldBorder(c='rgba(212,175,55,.5)',w=2){return `<div style="position:absolute;top:14px;left:14px;right:14px;bottom:14px;border:${w}px solid ${c};pointer-events:none;border-radius:6px;box-shadow:0 0 18px ${c.replace('.5','.12')},inset 0 0 18px ${c.replace('.5','.06')}"></div>`;}
+function doubleBorder(a='rgba(255,255,255,.25)',b='rgba(255,255,255,.08)'){return `<div style="position:absolute;top:10px;left:10px;right:10px;bottom:10px;border:2px solid ${b};pointer-events:none;border-radius:12px"></div><div style="position:absolute;top:18px;left:18px;right:18px;bottom:18px;border:1px solid ${a};pointer-events:none;border-radius:8px"></div>`;}
+function cornerAccents(c='rgba(255,255,255,.4)',s=28){return `<div style="position:absolute;top:18px;left:18px;width:${s}px;height:${s}px;border-top:2px solid ${c};border-left:2px solid ${c};border-radius:3px 0 0 0"></div><div style="position:absolute;top:18px;right:18px;width:${s}px;height:${s}px;border-top:2px solid ${c};border-right:2px solid ${c};border-radius:0 3px 0 0"></div><div style="position:absolute;bottom:18px;left:18px;width:${s}px;height:${s}px;border-bottom:2px solid ${c};border-left:2px solid ${c};border-radius:0 0 0 3px"></div><div style="position:absolute;bottom:18px;right:18px;width:${s}px;height:${s}px;border-bottom:2px solid ${c};border-right:2px solid ${c};border-radius:0 0 3px 0"></div>`;}
+function trophy(){return `<div style="position:absolute;bottom:22px;left:50%;transform:translateX(-50%);font-size:42px;opacity:.15;filter:drop-shadow(0 4px 8px rgba(0,0,0,.3))">🏆</div>`;}
+function medal(){return `<div style="position:absolute;top:18px;right:22px;font-size:32px;opacity:.2">🥇</div>`;}
+function stars(c='rgba(255,215,0,.7)'){let s='';for(let i=0;i<35;i++){const x=(i*67)%570,y=(i*53)%370,sz=i%7===0?4:i%3===0?2:1,op=.2+(i%5)*.12,del=i*.1;s+=`<div style="position:absolute;left:${x}px;top:${y}px;width:${sz}px;height:${sz}px;background:${c};border-radius:50%;opacity:${op};animation:twinkle 2s ease-in-out ${del}s infinite${sz>2?';box-shadow:0 0 6px '+c:''}"></div>`;}return s+'<style>@keyframes twinkle{0%,100%{opacity:.2}50%{opacity:1}}</style>';}
+function confetti(){const cols=['#ffd700','#ff6b6b','#6bcb77','#4d96ff','#ff9a3c','#a29bfe'];let s='';for(let i=0;i<40;i++){const x=(i*47)%570,y=(i*61)%370,c=cols[i%cols.length],sz=6+(i%4)*4;s+=`<div style="position:absolute;left:${x}px;top:${y}px;width:${sz}px;height:${sz}px;background:${c};border-radius:${i%3===0?'50%':'2px'};transform:rotate(${i*45}deg);opacity:.75"></div>`;}return s;}
+function sparkles(c='rgba(255,215,0,.8)'){let s='';for(let i=0;i<22;i++){const x=(i*73)%570,y=(i*67)%370,sz=i%5===0?4:2,del=i*.2;s+=`<div style="position:absolute;left:${x}px;top:${y}px;width:${sz}px;height:${sz}px;background:${c};border-radius:50%;box-shadow:0 0 ${6+sz*2}px ${c};animation:sparkle 2s ease-in-out ${del}s infinite"></div>`;}return s+'<style>@keyframes sparkle{0%,100%{opacity:.3;transform:scale(.8)}50%{opacity:1;transform:scale(1)}}</style>';}
+function marbleTexture(){return `<svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.12" xmlns="http://www.w3.org/2000/svg"><filter id="mf"><feTurbulence type="fractalNoise" baseFrequency=".02" numOctaves="5"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100%" height="100%" filter="url(#mf)"/></svg>`;}
+function geometricPattern(){return `<svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.1" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="gp" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="2" fill="#fff"/><path d="M0,25 L50,25 M25,0 L25,50" stroke="#fff" stroke-width=".4"/></pattern></defs><rect width="100%" height="100%" fill="url(#gp)"/></svg>`;}
+function fireworks(){const cols=['#ffd700','#ff6b6b','#6bcb77','#4d96ff','#ff9a3c'];let s='';const centers=[[100,70],[480,60],[280,110],[150,240],[470,210]];centers.forEach((c,i)=>{const col=cols[i%cols.length];for(let j=0;j<8;j++){const a=(j*45)*Math.PI/180,r=22,x=c[0]+Math.cos(a)*r,y=c[1]+Math.sin(a)*r;s+=`<div style="position:absolute;left:${x}px;top:${y}px;width:3px;height:3px;background:${col};border-radius:50%;box-shadow:0 0 6px ${col}"></div>`;}s+=`<div style="position:absolute;left:${c[0]-3}px;top:${c[1]-3}px;width:6px;height:6px;background:${col};border-radius:50%;box-shadow:0 0 12px ${col}"></div>`;});return s;}
+function laurelWreath(){return `<div style="position:absolute;top:16px;left:50%;transform:translateX(-50%);font-size:28px;opacity:.2">🏅</div>`;}
+function diploma(){return `<div style="position:absolute;bottom:18px;right:22px;font-size:30px;opacity:.18">📜</div>`;}
+function graduation(){return `<div style="position:absolute;top:16px;right:22px;font-size:28px;opacity:.22">🎓</div>`;}
+function rocket(){return `<div style="position:absolute;top:18px;right:22px;font-size:28px;opacity:.2;animation:rocketUp 3s ease-in-out infinite">🚀</div><style>@keyframes rocketUp{0%,100%{transform:translateY(0) rotate(45deg)}50%{transform:translateY(-12px) rotate(45deg)}}</style>`;}
+function crown(){return `<div style="position:absolute;top:14px;left:50%;transform:translateX(-50%);font-size:30px;opacity:.18">👑</div>`;}
+function ribbons(){return `<svg style="position:absolute;inset:0;width:100%;height:100%" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="rib1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#ffd700"/><stop offset="100%" stop-color="#ffb700"/></linearGradient></defs><path d="M0,0 L200,400" stroke="url(#rib1)" stroke-width="40" opacity=".18"/><path d="M600,0 L400,400" stroke="#4d96ff" stroke-width="35" opacity=".12"/><path d="M100,0 L300,400" stroke="#6bcb77" stroke-width="28" opacity=".1"/></svg>`;}
+function neonGlow(c='rgba(255,200,0,.25)'){return `<div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,${c},transparent 65%)"></div>`;}
+function aurora(){return `<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,255,150,.1),transparent 40%,transparent 60%,rgba(100,0,255,.07))"></div><div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,200,0,.06),transparent 35%,transparent 65%,rgba(0,200,255,.07))"></div>`;}
+function gridLines(){return `<svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.08" xmlns="http://www.w3.org/2000/svg">${Array.from({length:13},(_, i)=>`<line x1="${i*50}" y1="0" x2="${i*50}" y2="400" stroke="#fff" stroke-width=".5"/>`).join('')}${Array.from({length:9},(_, i)=>`<line x1="0" y1="${i*50}" x2="600" y2="${i*50}" stroke="#fff" stroke-width=".5"/>`).join('')}</svg>`;}
+function minimalLines(){return `<svg style="position:absolute;inset:0;width:100%;height:100%" xmlns="http://www.w3.org/2000/svg"><line x1="50" y1="108" x2="550" y2="108" stroke="rgba(255,255,255,.15)" stroke-width="1"/><line x1="50" y1="292" x2="550" y2="292" stroke="rgba(255,255,255,.15)" stroke-width="1"/></svg>`;}
+function watercolor(){return `<div style="position:absolute;top:-25px;left:-20px;width:200px;height:200px;background:rgba(255,200,50,.15);border-radius:60% 40% 50% 45%;filter:blur(32px)"></div><div style="position:absolute;right:-20px;top:50px;width:180px;height:180px;background:rgba(50,200,255,.12);border-radius:40% 60% 70% 30%;filter:blur(26px)"></div><div style="position:absolute;bottom:-20px;left:25%;width:180px;height:120px;background:rgba(100,255,100,.1);border-radius:30% 70% 40% 60%;filter:blur(28px)"></div>`;}
+function holographic(){return `<div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,215,0,.08),rgba(0,255,200,.07),rgba(0,100,255,.06));background-size:400% 400%;animation:holo 8s ease infinite"></div><style>@keyframes holo{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}</style>`;}
+function sunburst(){return `<svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.1" xmlns="http://www.w3.org/2000/svg">${Array.from({length:24},(_, i)=>{const a=i*15*Math.PI/180;return `<line x1="300" y1="200" x2="${300+Math.cos(a)*400}" y2="${200+Math.sin(a)*400}" stroke="#ffd700" stroke-width="1.5"/>`}).join('')}</svg>`;}
+function hexPattern(){return `<svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.1" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="hex" x="0" y="0" width="50" height="43.3" patternUnits="userSpaceOnUse"><polygon points="25,0 50,10.8 50,32.5 25,43.3 0,32.5 0,10.8" fill="none" stroke="#fff" stroke-width=".5"/></pattern></defs><rect width="100%" height="100%" fill="url(#hex)"/></svg>`;}
+
+/* ===== CARD RENDERER ===== */
+function renderCard(d,bg,fx){
+  const ts=d.titleStyle||'normal';
+  const td=ts==='uppercase'?d.titleDisplay.toUpperCase():ts==='capitalize'?d.titleDisplay.replace(/\b\w/g,c=>c.toUpperCase()):d.titleDisplay;
+  const isLight=/fff|f8f8|f5f0|fafaf|eeee|fef9|fde8|ffe0b|fff3e/.test(bg)||bg.includes('#fff')||bg.includes('#f5')||bg.includes('#fa')||bg.includes('#fe');
+  const innerBg=isLight?'rgba(255,255,255,.65)':'transparent';
+  const innerBorder=isLight?'1px solid rgba(255,255,255,.75)':'none';
+  const innerShadow=isLight?'0 8px 32px rgba(0,0,0,.1)':'none';
+  const nameDisplay=d.name||'Your Name';
+  return `<div style="width:${d.w}px;height:${d.h}px;background:${bg};position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;font-family:'Inter',sans-serif">
+    ${fx}
+    <div style="text-align:center;z-index:2;padding:26px;background:${innerBg};border-radius:${isLight?'16px':'0'};border:${innerBorder};box-shadow:${innerShadow};max-width:${d.w*.84}px;position:relative">
+      <div style="font-family:${d.titleFont};font-size:${d.titleSize}px;color:${d.titleColor};letter-spacing:${d.spacing}px;margin-bottom:4px;line-height:1.1;font-weight:600">${td}</div>
+      <div style="font-family:${d.nameFont};font-size:${d.nameSize}px;font-weight:700;color:${d.nameColor};margin-bottom:${d.achievement?'2px':'6px'};line-height:1.1">${nameDisplay}</div>
+      ${d.achievement?`<div style="font-size:11px;color:${d.titleColor};opacity:.8;margin-bottom:6px;letter-spacing:1.5px;text-transform:uppercase;font-family:'Montserrat',sans-serif">${d.achievement}</div>`:''}
+      <div style="width:50px;height:2px;background:${d.titleColor};opacity:.35;margin:6px auto;border-radius:2px"></div>
+      <div style="font-family:${d.font};font-size:${d.msgSize}px;color:${d.msgColor};line-height:${d.lh};max-width:${d.w*.74}px;margin:6px auto;text-align:${d.align};white-space:pre-line">${d.msg}</div>
+      <div style="font-family:${d.fromFont};font-size:${d.fromSize}px;color:${d.fromColor};margin-top:8px;font-style:italic">${d.senderLine}</div>
+    </div>
+  </div>`;
+}
+
+/* ===== CARD DESIGNS ===== */
+const CARD_DESIGNS=[
+// ACHIEVEMENT (1-12)
+{id:1,name:'Golden Trophy',cat:'achievement',colors:{titleColor:'#ffd700',nameColor:'#fff8dc',msgColor:'#fffde7',fromColor:'#ffd700'},defaultTitle:'Congratulations!',defaultMsg:'Your dedication, perseverance, and brilliance have led you to this extraordinary achievement. We are so proud of you!',defaultTitleFont:"'Cinzel',serif",defaultTitleSize:38,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:14,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,render(d){return renderCard(d,'linear-gradient(135deg,#1a1000,#2d2000 50%,#1a1000)',marbleTexture()+goldBorder()+trophy());}},
+{id:2,name:'Champion Star',cat:'achievement',colors:{titleColor:'#fff176',nameColor:'#ffffff',msgColor:'#fff9c4',fromColor:'#ffee58'},defaultTitle:'Outstanding!',defaultMsg:'You have proven that with passion and persistence, anything is achievable. This achievement speaks to your excellence!',defaultTitleFont:"'Bebas Neue',sans-serif",defaultTitleSize:56,defaultMsgFont:"'Montserrat',sans-serif",defaultMsgSize:13,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,render(d){return renderCard(d,'linear-gradient(180deg,#0a0020,#1a0040 40%,#0a0020)',stars('#ffd700')+sparkles());}},
+{id:3,name:'Gold Fireworks',cat:'achievement',colors:{titleColor:'#ffd700',nameColor:'#fff8dc',msgColor:'#ffffff',fromColor:'#6bcb77'},defaultTitle:'Congratulations!',defaultMsg:'Celebrate this incredible milestone — you earned every bit of this success through hard work and determination!',defaultTitleFont:"'Abril Fatface',cursive",defaultTitleSize:40,defaultMsgFont:"'Raleway',sans-serif",defaultMsgSize:14,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,render(d){return renderCard(d,'#0d0d20',fireworks());}},
+{id:4,name:'Victory Laurel',cat:'achievement',colors:{titleColor:'#2e7d32',nameColor:'#e8f5e9',msgColor:'#c8e6c9',fromColor:'#43a047'},defaultTitle:'Well Done!',defaultMsg:'Like the greatest champions, you rose to the challenge and claimed your victory. This is your moment to shine!',defaultTitleFont:"'Cinzel',serif",defaultTitleSize:40,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:14,defaultFromFont:"'Satisfy',cursive",defaultFromSize:20,render(d){return renderCard(d,'linear-gradient(135deg,#1a3a00,#2d5a10 50%,#1a3a00)',laurelWreath()+goldBorder('rgba(100,200,50,.4)'));}},
+{id:5,name:'Sunburst Gold',cat:'achievement',colors:{titleColor:'#ffd700',nameColor:'#fff8dc',msgColor:'#fffde7',fromColor:'#ffb700'},defaultTitle:'Bravo!',defaultMsg:'Your achievement radiates like sunshine — illuminating the world around you. Congratulations on this brilliant success!',defaultTitleFont:"'Righteous',cursive",defaultTitleSize:44,defaultMsgFont:"'Raleway',sans-serif",defaultMsgSize:13,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,render(d){return renderCard(d,'linear-gradient(135deg,#2a1500,#4a2a00 50%,#2a1500)',sunburst());}},
+{id:6,name:'Crown of Success',cat:'achievement',colors:{titleColor:'#ffd700',nameColor:'#fff8dc',msgColor:'#fffde7',fromColor:'#ffd700'},defaultTitle:'You Did It!',defaultMsg:'A crown of success rests perfectly upon your head. Your hard work, vision, and tenacity brought you here.',defaultTitleFont:"'Cinzel',serif",defaultTitleSize:40,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:14,defaultFromFont:"'Satisfy',cursive",defaultFromSize:20,render(d){return renderCard(d,'radial-gradient(ellipse at 50% 0%,#1a1400,#0d0a00 60%,#050300)',crown()+sparkles());}},
+{id:7,name:'Confetti Burst',cat:'achievement',colors:{titleColor:'#ff6b6b',nameColor:'#2d2d2d',msgColor:'#3d3d3d',fromColor:'#4d96ff'},defaultTitle:'Congratulations!',defaultMsg:'Pop the confetti! Your achievement deserves the grandest celebration. This is your day to shine!',defaultTitleFont:"'Pacifico',cursive",defaultTitleSize:40,defaultMsgFont:"'Nunito',sans-serif",defaultMsgSize:14,defaultFromFont:"'Pacifico',cursive",defaultFromSize:18,render(d){return renderCard(d,'#fafafa',confetti());}},
+{id:8,name:'Royal Triumph',cat:'achievement',colors:{titleColor:'#ffd700',nameColor:'#fff8e1',msgColor:'#ffecb3',fromColor:'#ffc107'},defaultTitle:'Triumphant!',defaultMsg:'History remembers those who dared greatly and achieved magnificently. Today, you join their ranks.',defaultTitleFont:"'Cinzel',serif",defaultTitleSize:38,defaultMsgFont:"'Playfair Display',serif",defaultMsgSize:14,defaultFromFont:"'Great Vibes',cursive",defaultFromSize:24,render(d){return renderCard(d,'linear-gradient(135deg,#1a0033,#2d004d 50%,#1a0033)',goldBorder()+sparkles())}},
+{id:9,name:'Neon Victory',cat:'achievement',colors:{titleColor:'#00ff99',nameColor:'#ffffff',msgColor:'#b0ffe0',fromColor:'#00e5ff'},defaultTitle:'ACHIEVEMENT UNLOCKED',defaultMsg:'New level reached. Stats maxed. Achievement recorded in the history books. Epic!',defaultTitleFont:"'Bebas Neue',sans-serif",defaultTitleSize:44,defaultMsgFont:"'Montserrat',sans-serif",defaultMsgSize:13,defaultFromFont:"'Montserrat',sans-serif",defaultFromSize:14,render(d){return renderCard(d,'#050510',gridLines()+medal());}},
+{id:10,name:'Watercolor Win',cat:'achievement',colors:{titleColor:'#7b1fa2',nameColor:'#4a148c',msgColor:'#6a1b9a',fromColor:'#9c27b0'},defaultTitle:'Congratulations!',defaultMsg:'Your success is painted in the most beautiful colors of effort, courage, and brilliance. Savor every moment.',defaultTitleFont:"'Great Vibes',cursive",defaultTitleSize:50,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:14,defaultFromFont:"'Satisfy',cursive",defaultFromSize:20,render(d){return renderCard(d,'linear-gradient(135deg,#fde8f5,#e8f0fe 50%,#fef9e7)',watercolor());}},
+{id:11,name:'Holo Champion',cat:'achievement',colors:{titleColor:'#ffd700',nameColor:'#fff176',msgColor:'rgba(255,255,200,.9)',fromColor:'#ffc107'},defaultTitle:'Congratulations!',defaultMsg:'Your achievement shimmers with every color of brilliance — a holographic masterpiece of dedication and talent.',defaultTitleFont:"'Cinzel',serif",defaultTitleSize:38,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:14,defaultFromFont:"'Satisfy',cursive",defaultFromSize:20,render(d){return renderCard(d,'#0a0015',holographic()+sparkles());}},
+{id:12,name:'Rocket Launch',cat:'achievement',colors:{titleColor:'#ff6b35',nameColor:'#fff3e0',msgColor:'#ffe0b2',fromColor:'#ff8f00'},defaultTitle:'Sky\'s No Limit!',defaultMsg:'You set your target, fueled yourself with determination, and launched straight to the stars. Extraordinary!',defaultTitleFont:"'Righteous',cursive",defaultTitleSize:42,defaultMsgFont:"'Raleway',sans-serif",defaultMsgSize:14,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,render(d){return renderCard(d,'linear-gradient(180deg,#0d0020,#1a0840 50%,#0d0020)',rocket()+stars('rgba(255,150,50,.7)'));}},
+
+// ACADEMIC (13-22)
+{id:13,name:'Graduation Gold',cat:'academic',colors:{titleColor:'#ffd700',nameColor:'#fff8dc',msgColor:'#fffde7',fromColor:'#ffd700'},defaultTitle:'Congratulations Graduate!',defaultMsg:'Four years of dedication, late nights, and relentless effort have led to this magnificent achievement. You made it!',defaultTitleFont:"'Cinzel',serif",defaultTitleSize:34,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:14,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,render(d){return renderCard(d,'linear-gradient(135deg,#1a1000,#2d2000 50%,#1a1000)',graduation()+goldBorder());}},
+{id:14,name:'PhD Excellence',cat:'academic',colors:{titleColor:'#3f51b5',nameColor:'#e8eaf6',msgColor:'#c5cae9',fromColor:'#5c6bc0'},defaultTitle:'Doctor of Excellence',defaultMsg:'Years of research, inquiry, and intellectual courage have earned you the highest honor in academia. Congratulations, Doctor!',defaultTitleFont:"'Cinzel',serif",defaultTitleSize:34,defaultMsgFont:"'Playfair Display',serif",defaultMsgSize:13,defaultFromFont:"'Satisfy',cursive",defaultFromSize:20,render(d){return renderCard(d,'linear-gradient(135deg,#1a1f4e,#283593 40%,#1a1f4e)',stars('rgba(150,170,255,.7)')+diploma());}},
+{id:15,name:'Magna Cum Laude',cat:'academic',colors:{titleColor:'#d4af37',nameColor:'#f5f5dc',msgColor:'#fff8dc',fromColor:'#d4af37'},defaultTitle:'Magna Cum Laude',defaultMsg:'Academic excellence personified. Your brilliant performance stands as an inspiration to everyone who follows.',defaultTitleFont:"'Cinzel',serif",defaultTitleSize:36,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:14,defaultFromFont:"'Satisfy',cursive",defaultFromSize:22,render(d){return renderCard(d,'linear-gradient(135deg,#1a1a1a,#2d2d2d 50%,#1a1a1a)',marbleTexture()+goldBorder('rgba(212,175,55,.55)'));}},
+{id:16,name:'Class Top Scholar',cat:'academic',colors:{titleColor:'#e91e63',nameColor:'#fce4ec',msgColor:'#f8bbd9',fromColor:'#f06292'},defaultTitle:'Top of the Class!',defaultMsg:'You didn\'t just pass the bar — you set it. Your academic achievement is extraordinary and well-deserved.',defaultTitleFont:"'Playfair Display',serif",defaultTitleSize:36,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:14,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:20,render(d){return renderCard(d,'linear-gradient(135deg,#3a0020,#7b1040 40%,#3a0020)',laurelWreath()+sparkles('rgba(255,150,180,.7)'));}},
+{id:17,name:'Diploma Honor',cat:'academic',colors:{titleColor:'#33691e',nameColor:'#f1f8e9',msgColor:'#dcedc8',fromColor:'#558b2f'},defaultTitle:'Congratulations!',defaultMsg:'Your diploma is more than a certificate — it is the proof of your potential, your persistence, and your brilliance.',defaultTitleFont:"'Cinzel',serif",defaultTitleSize:36,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:14,defaultFromFont:"'Satisfy',cursive",defaultFromSize:20,render(d){return renderCard(d,'linear-gradient(135deg,#1a2e00,#2d5010 50%,#1a2e00)',diploma()+cornerAccents('rgba(150,220,50,.4)'));}},
+{id:18,name:'Scholar Bright',cat:'academic',colors:{titleColor:'#1565c0',nameColor:'#e3f2fd',msgColor:'#bbdefb',fromColor:'#1976d2'},defaultTitle:'Academic Achievement!',defaultMsg:'Knowledge gained, wisdom earned, excellence demonstrated. Your academic journey has been magnificent.',defaultTitleFont:"'Playfair Display',serif",defaultTitleSize:34,defaultMsgFont:"'Raleway',sans-serif",defaultMsgSize:14,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,render(d){return renderCard(d,'linear-gradient(180deg,#e3f2fd,#bbdefb 50%,#e3f2fd)',graduation()+doubleBorder('#1565c0','rgba(21,101,192,.2)'));}},
+{id:19,name:'Honor Roll',cat:'academic',colors:{titleColor:'#f57f17',nameColor:'#fff8e1',msgColor:'#ffecb3',fromColor:'#ff8f00'},defaultTitle:'Honor Roll!',defaultMsg:'Consistent excellence, unwavering focus, and intellectual curiosity have placed you at the very top. Outstanding!',defaultTitleFont:"'Oswald',sans-serif",defaultTitleSize:42,defaultMsgFont:"'Raleway',sans-serif",defaultMsgSize:14,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,render(d){return renderCard(d,'linear-gradient(135deg,#3e2000,#7a4200 50%,#3e2000)',sparkles('#ffd700')+medal());}},
+{id:20,name:'Dean\'s List',cat:'academic',colors:{titleColor:'#4a148c',nameColor:'#f3e5f5',msgColor:'#e1bee7',fromColor:'#7b1fa2'},defaultTitle:'Dean\'s List!',defaultMsg:'The Dean\'s List recognizes only the finest minds — and you have earned your place at the very pinnacle.',defaultTitleFont:"'Cinzel',serif",defaultTitleSize:38,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:14,defaultFromFont:"'Satisfy',cursive",defaultFromSize:20,render(d){return renderCard(d,'linear-gradient(135deg,#1a0033,#2a0050 50%,#1a0033)',hexPattern()+goldBorder('rgba(180,100,255,.4)'));}},
+{id:21,name:'Summa Scholar',cat:'academic',colors:{titleColor:'#bf360c',nameColor:'#fbe9e7',msgColor:'#ffccbc',fromColor:'#d84315'},defaultTitle:'Summa Cum Laude',defaultMsg:'The highest academic distinction, earned through exceptional brilliance and dedication. You are extraordinary.',defaultTitleFont:"'Cinzel',serif",defaultTitleSize:34,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:14,defaultFromFont:"'Great Vibes',cursive",defaultFromSize:24,render(d){return renderCard(d,'linear-gradient(135deg,#1a0800,#3a1800 50%,#1a0800)',sunburst()+diploma());}},
+{id:22,name:'Bright Future',cat:'academic',colors:{titleColor:'#00838f',nameColor:'#e0f7fa',msgColor:'#b2ebf2',fromColor:'#00acc1'},defaultTitle:'Graduated!',defaultMsg:'Today marks the end of one brilliant chapter and the start of an even more magnificent one. Congratulations!',defaultTitleFont:"'Pacifico',cursive",defaultTitleSize:40,defaultMsgFont:"'Nunito',sans-serif",defaultMsgSize:14,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,render(d){return renderCard(d,'linear-gradient(135deg,#e0f7fa,#b2ebf2 50%,#e0f2f1)',graduation()+confetti());}},
+
+// CAREER (23-33)
+{id:23,name:'Executive Promotion',cat:'career',colors:{titleColor:'#d4af37',nameColor:'#f5f5dc',msgColor:'#fff8dc',fromColor:'#c8a94a'},defaultTitle:'Congratulations!',defaultMsg:'Your leadership, vision, and dedication have earned you this well-deserved promotion. The team is thrilled for you!',defaultTitleFont:"'Cinzel',serif",defaultTitleSize:36,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:14,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,render(d){return renderCard(d,'linear-gradient(135deg,#0a0a0a,#1a1a1a 50%,#0a0a0a)',marbleTexture()+goldBorder()+rocket());}},
+{id:24,name:'Career Milestone',cat:'career',colors:{titleColor:'#1565c0',nameColor:'#e3f2fd',msgColor:'#bbdefb',fromColor:'#1976d2'},defaultTitle:'Well Deserved!',defaultMsg:'Every step of your career journey has led to this pivotal moment. Your hard work and expertise shine through.',defaultTitleFont:"'Oswald',sans-serif",defaultTitleSize:44,defaultMsgFont:"'Raleway',sans-serif",defaultMsgSize:14,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,render(d){return renderCard(d,'linear-gradient(135deg,#001233,#023e8a 40%,#001233)',stars('rgba(100,180,255,.6)')+medal());}},
+{id:25,name:'New Chapter',cat:'career',colors:{titleColor:'#2e7d32',nameColor:'#e8f5e9',msgColor:'#c8e6c9',fromColor:'#43a047'},defaultTitle:'New Beginnings!',defaultMsg:'A new role, a new chapter, and a world of opportunity ahead. You have earned every bit of this exciting new journey.',defaultTitleFont:"'Playfair Display',serif",defaultTitleSize:36,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:14,defaultFromFont:"'Satisfy',cursive",defaultFromSize:20,render(d){return renderCard(d,'linear-gradient(135deg,#f1f8e9,#dcedc8 50%,#f1f8e9)',doubleBorder('#2e7d32','rgba(46,125,50,.2)')+rocket());}},
+{id:26,name:'Launch Day',cat:'career',colors:{titleColor:'#ff6b35',nameColor:'#fff3e0',msgColor:'#ffe0b2',fromColor:'#f57c00'},defaultTitle:'Launch Day!',defaultMsg:'Your business is live, your vision is real, and your entrepreneurial journey is officially underway. This is just the beginning!',defaultTitleFont:"'Righteous',cursive",defaultTitleSize:42,defaultMsgFont:"'Montserrat',sans-serif",defaultMsgSize:13,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,render(d){return renderCard(d,'linear-gradient(135deg,#1a0500,#3a1200 50%,#1a0500)',fireworks());}},
+{id:27,name:'Corporate Gold',cat:'career',colors:{titleColor:'#d4af37',nameColor:'#fff8dc',msgColor:'#fffde7',fromColor:'#c8a94a'},defaultTitle:'Congratulations!',defaultMsg:'Professional excellence recognized. Your contributions have made a lasting impact and this achievement is thoroughly deserved.',defaultTitleFont:"'Cinzel',serif",defaultTitleSize:36,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:14,defaultFromFont:"'Satisfy',cursive",defaultFromSize:20,render(d){return renderCard(d,'linear-gradient(135deg,#14100a,#261e0e 50%,#14100a)',goldBorder('rgba(212,175,55,.6)')+sparkles());}},
+{id:28,name:'Team Award',cat:'career',colors:{titleColor:'#ffffff',nameColor:'#e0f7fa',msgColor:'#b2ebf2',fromColor:'#00acc1'},defaultTitle:'Top Performer!',defaultMsg:'You set the standard for what professional excellence looks like. The entire team celebrates your outstanding achievement.',defaultTitleFont:"'Oswald',sans-serif",defaultTitleSize:44,defaultMsgFont:"'Raleway',sans-serif",defaultMsgSize:14,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,render(d){return renderCard(d,'linear-gradient(135deg,#001a33,#003366 40%,#001a33)',trophy()+cornerAccents('rgba(0,200,255,.35)'));}},
+{id:29,name:'Work Anniversary',cat:'career',colors:{titleColor:'#7b1fa2',nameColor:'#f3e5f5',msgColor:'#e1bee7',fromColor:'#9c27b0'},defaultTitle:'Work Anniversary!',defaultMsg:'Years of consistent excellence, unwavering dedication, and genuine impact. Thank you for everything you do.',defaultTitleFont:"'Playfair Display',serif",defaultTitleSize:36,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:14,defaultFromFont:"'Satisfy',cursive",defaultFromSize:20,render(d){return renderCard(d,'linear-gradient(135deg,#1a0033,#2d004d 50%,#1a0033)',confetti()+doubleBorder('rgba(200,100,255,.3)','rgba(150,50,200,.1)'));}},
+{id:30,name:'Business Launch',cat:'career',colors:{titleColor:'#ff8f00',nameColor:'#fff8e1',msgColor:'#ffecb3',fromColor:'#ffa000'},defaultTitle:'Open for Business!',defaultMsg:'Your entrepreneurial vision is now a reality. Here\'s to the first of many milestones on this exciting journey!',defaultTitleFont:"'Righteous',cursive",defaultTitleSize:40,defaultMsgFont:"'Nunito',sans-serif",defaultMsgSize:14,defaultFromFont:"'Pacifico',cursive",defaultFromSize:18,render(d){return renderCard(d,'#fff9f0',ribbons());}},
+{id:31,name:'Sales Champion',cat:'career',colors:{titleColor:'#1b5e20',nameColor:'#e8f5e9',msgColor:'#c8e6c9',fromColor:'#2e7d32'},defaultTitle:'Sales Champion!',defaultMsg:'Numbers don\'t lie — you are the best. Your sales performance this period has been nothing short of extraordinary.',defaultTitleFont:"'Bebas Neue',sans-serif",defaultTitleSize:52,defaultMsgFont:"'Montserrat',sans-serif",defaultMsgSize:13,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,render(d){return renderCard(d,'linear-gradient(135deg,#0a2000,#1a4000 50%,#0a2000)',stars('rgba(100,220,80,.6)')+sparkles('rgba(100,255,100,.6)'));}},
+{id:32,name:'Leadership Award',cat:'career',colors:{titleColor:'#ffd700',nameColor:'#fff8dc',msgColor:'#fffde7',fromColor:'#ffb700'},defaultTitle:'True Leader!',defaultMsg:'Great leaders inspire others by example, and you have done exactly that. This award reflects your exceptional impact.',defaultTitleFont:"'Cinzel',serif",defaultTitleSize:38,defaultMsgFont:"'Playfair Display',serif",defaultMsgSize:14,defaultFromFont:"'Great Vibes',cursive",defaultFromSize:24,render(d){return renderCard(d,'radial-gradient(ellipse at 50% 0%,#1a1400,#0d0800 55%,#050300)',crown()+goldBorder());}},
+{id:33,name:'Certification Win',cat:'career',colors:{titleColor:'#0277bd',nameColor:'#e1f5fe',msgColor:'#b3e5fc',fromColor:'#0288d1'},defaultTitle:'Certified!',defaultMsg:'Your expertise is now officially recognized. This certification is a testament to your skill, knowledge, and commitment.',defaultTitleFont:"'Oswald',sans-serif",defaultTitleSize:44,defaultMsgFont:"'Raleway',sans-serif",defaultMsgSize:14,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,render(d){return renderCard(d,'linear-gradient(135deg,#e1f5fe,#b3e5fc 50%,#e1f5fe)',hexPattern()+diploma());}},
+
+// CELEBRATION (34-44)
+{id:34,name:'Grand Celebration',cat:'celebration',colors:{titleColor:'#ff6b6b',nameColor:'#ffd93d',msgColor:'#e0f0ff',fromColor:'#6bcb77'},defaultTitle:'Congratulations!',defaultMsg:'Break out the champagne and celebrate — you absolutely deserve this magnificent achievement!',defaultTitleFont:"'Pacifico',cursive",defaultTitleSize:42,defaultMsgFont:"'Nunito',sans-serif",defaultMsgSize:14,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,render(d){return renderCard(d,'linear-gradient(160deg,#0f2027,#203a43,#2c5364)',confetti());}},
+{id:35,name:'Party Time',cat:'celebration',colors:{titleColor:'#ff6bcd',nameColor:'#ffd93d',msgColor:'rgba(220,220,255,.9)',fromColor:'#6bcb77'},defaultTitle:'Let\'s Celebrate!',defaultMsg:'This achievement calls for the grandest celebration! You worked so hard and you deserve every bit of recognition.',defaultTitleFont:"'Lobster',cursive",defaultTitleSize:46,defaultMsgFont:"'Nunito',sans-serif",defaultMsgSize:14,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,render(d){return renderCard(d,'linear-gradient(135deg,#1a0030,#3d006a 40%,#1a0030)',confetti()+sparkles());}},
+{id:36,name:'Pop the Bubbly',cat:'celebration',colors:{titleColor:'#f9e79f',nameColor:'#fcf3cf',msgColor:'#f9e79f',fromColor:'#f0d060'},defaultTitle:'Cheers!',defaultMsg:'Pop the champagne! This achievement is worth every bubble. Here\'s to you and your spectacular success!',defaultTitleFont:"'Great Vibes',cursive",defaultTitleSize:52,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:14,defaultFromFont:"'Satisfy',cursive",defaultFromSize:22,render(d){return renderCard(d,'linear-gradient(180deg,#1a0800,#3a1a05 30%,#1a0800)',sparkles()+trophy());}},
+{id:37,name:'Golden Balloon',cat:'celebration',colors:{titleColor:'#ffd700',nameColor:'#2c3e50',msgColor:'#34495e',fromColor:'#e74c3c'},defaultTitle:'Congratulations!',defaultMsg:'Balloons up, heads up, spirits up! Everything is rising to celebrate your extraordinary achievement!',defaultTitleFont:"'Lobster',cursive",defaultTitleSize:44,defaultMsgFont:"'Nunito',sans-serif",defaultMsgSize:14,defaultFromFont:"'Pacifico',cursive",defaultFromSize:18,render(d){return renderCard(d,'linear-gradient(135deg,#ffecd2,#fcb69f)',confetti()+medal());}},
+{id:38,name:'Shooting Star',cat:'celebration',colors:{titleColor:'#ffd700',nameColor:'#fff9c4',msgColor:'#fff59d',fromColor:'#fbc02d'},defaultTitle:'Superstar!',defaultMsg:'You are an absolute superstar! Your achievement blazes across the sky for all to admire.',defaultTitleFont:"'Righteous',cursive",defaultTitleSize:44,defaultMsgFont:"'Raleway',sans-serif",defaultMsgSize:14,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,render(d){return renderCard(d,'linear-gradient(180deg,#0a0020,#1a1040 40%,#0a0020)',stars()+sparkles());}},
+{id:39,name:'Rainbow Win',cat:'celebration',colors:{titleColor:'#ffffff',nameColor:'#fff9c4',msgColor:'#fff59d',fromColor:'#ffd54f'},defaultTitle:'Amazing Achievement!',defaultMsg:'All the colors of success are yours today — vibrant, bold, and absolutely beautiful, just like your triumph!',defaultTitleFont:"'Bebas Neue',sans-serif",defaultTitleSize:48,defaultMsgFont:"'Raleway',sans-serif",defaultMsgSize:14,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,render(d){return renderCard(d,'linear-gradient(135deg,#f093fb,#f5576c 50%,#4facfe)',confetti());}},
+{id:40,name:'Milestone Marker',cat:'celebration',colors:{titleColor:'#e91e63',nameColor:'#fce4ec',msgColor:'#f8bbd9',fromColor:'#f06292'},defaultTitle:'Milestone Achieved!',defaultMsg:'Every great journey is marked by great milestones — and this one marks how far your exceptional talent has taken you.',defaultTitleFont:"'Great Vibes',cursive",defaultTitleSize:48,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:14,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,render(d){return renderCard(d,'linear-gradient(135deg,#3a0020,#7b1040 40%,#3a0020)',sparkles('rgba(255,100,180,.7)')+laurelWreath());}},
+{id:41,name:'Festival Colors',cat:'celebration',colors:{titleColor:'#e67e22',nameColor:'#2c3e50',msgColor:'#34495e',fromColor:'#e74c3c'},defaultTitle:'Congratulations!',defaultMsg:'Festival lights are shining for you! Your achievement is a cause for joyous celebration across every gathering.',defaultTitleFont:"'Pacifico',cursive",defaultTitleSize:40,defaultMsgFont:"'Nunito',sans-serif",defaultMsgSize:14,defaultFromFont:"'Pacifico',cursive",defaultFromSize:18,render(d){return renderCard(d,'#fff',ribbons()+confetti());}},
+{id:42,name:'Gold Rush',cat:'celebration',colors:{titleColor:'#ffd700',nameColor:'#fffde7',msgColor:'#fff9c4',fromColor:'#fdd835'},defaultTitle:'GOLD!',defaultMsg:'You struck gold with this achievement! The brilliance of your work is priceless and genuinely golden.',defaultTitleFont:"'Bebas Neue',sans-serif",defaultTitleSize:68,defaultMsgFont:"'Montserrat',sans-serif",defaultMsgSize:13,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,render(d){return renderCard(d,'linear-gradient(135deg,#1a0d00,#2d1a00 50%,#1a0d00)',sunburst()+sparkles());}},
+{id:43,name:'Disco Triumph',cat:'celebration',colors:{titleColor:'#ffd700',nameColor:'#ffffff',msgColor:'#fff9c4',fromColor:'#ffeb3b'},defaultTitle:'Unstoppable!',defaultMsg:'Dance your way through this incredible achievement — you have earned the right to celebrate with absolute joy!',defaultTitleFont:"'Righteous',cursive",defaultTitleSize:46,defaultMsgFont:"'Montserrat',sans-serif",defaultMsgSize:13,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,render(d){return renderCard(d,'linear-gradient(135deg,#1a1a2e,#16213e,#0f3460)',stars()+sparkles());}},
+{id:44,name:'Victory Lap',cat:'celebration',colors:{titleColor:'#00e5ff',nameColor:'#e0f7fa',msgColor:'#b2ebf2',fromColor:'#00acc1'},defaultTitle:'Victory!',defaultMsg:'The finishing line is crossed, the victory lap is yours. Congratulations on completing this extraordinary challenge!',defaultTitleFont:"'Oswald',sans-serif",defaultTitleSize:52,defaultMsgFont:"'Raleway',sans-serif",defaultMsgSize:14,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,render(d){return renderCard(d,'linear-gradient(135deg,#000428,#004e92)',neonGlow('rgba(0,229,255,.2)')+laurelWreath());}},
+
+// MODERN (45-55)
+{id:45,name:'Minimal Gold',cat:'modern',colors:{titleColor:'#b8860b',nameColor:'#4a3728',msgColor:'#5a4738',fromColor:'#8b6914'},defaultTitle:'Congratulations',defaultMsg:'Excellence recognized. Achievement celebrated. You have set the standard for what is possible.',defaultTitleFont:"'Cinzel',serif",defaultTitleSize:34,defaultMsgFont:"'Lato',sans-serif",defaultMsgSize:14,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,render(d){return renderCard(d,'#fafaf5',minimalLines()+cornerAccents('rgba(180,140,10,.2)',22));}},
+{id:46,name:'Bold Statement',cat:'modern',colors:{titleColor:'#000000',nameColor:'#1a1a1a',msgColor:'#2d2d2d',fromColor:'#000'},defaultTitle:'CONGRATULATIONS',defaultMsg:'Bold achievement. Bold recognition. This is your moment.',defaultTitleFont:"'Bebas Neue',sans-serif",defaultTitleSize:54,defaultMsgFont:"'Montserrat',sans-serif",defaultMsgSize:14,defaultFromFont:"'Montserrat',sans-serif",defaultFromSize:14,render(d){return renderCard(d,'#f5f5f0',geometricPattern());}},
+{id:47,name:'Aurora Success',cat:'modern',colors:{titleColor:'#80ffea',nameColor:'#b0fff0',msgColor:'rgba(200,255,240,.88)',fromColor:'#40e0d0'},defaultTitle:'Congratulations',defaultMsg:'Your success illuminates everything around it — pure, magnificent, and impossible to ignore.',defaultTitleFont:"'Raleway',sans-serif",defaultTitleSize:36,defaultMsgFont:"'Raleway',sans-serif",defaultMsgSize:14,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,render(d){return renderCard(d,'#050a14',aurora()+stars('rgba(80,255,200,.6)'));}},
+{id:48,name:'Navy Prestige',cat:'modern',colors:{titleColor:'#ffd700',nameColor:'#fff8dc',msgColor:'#fffde7',fromColor:'#ffd700'},defaultTitle:'Congratulations',defaultMsg:'Distinguished achievement. Prestige earned. Your excellence speaks for itself in every way.',defaultTitleFont:"'Cinzel',serif",defaultTitleSize:36,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:14,defaultFromFont:"'Satisfy',cursive",defaultFromSize:20,render(d){return renderCard(d,'#0a1628',doubleBorder('rgba(255,215,0,.3)','rgba(255,215,0,.1)')+sparkles());}},
+{id:49,name:'Glass Effect',cat:'modern',colors:{titleColor:'#ffffff',nameColor:'rgba(255,255,255,.9)',msgColor:'rgba(255,255,255,.8)',fromColor:'rgba(255,255,255,.7)'},defaultTitle:'Congratulations',defaultMsg:'Your achievement shines through brilliantly — transparent in its excellence, crystal clear in its significance.',defaultTitleFont:"'Montserrat',sans-serif",defaultTitleSize:34,defaultMsgFont:"'Raleway',sans-serif",defaultMsgSize:14,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,render(d){return renderCard(d,'linear-gradient(135deg,#667eea,#764ba2)',`<div style="position:absolute;inset:0;background:rgba(255,255,255,.08);backdrop-filter:blur(10px)"></div>`);}},
+{id:50,name:'Gradient Burst',cat:'modern',colors:{titleColor:'#ffffff',nameColor:'#fff9c4',msgColor:'#fff59d',fromColor:'#ffd54f'},defaultTitle:'Congratulations!',defaultMsg:'Your achievement erupts in glorious color — bold, dynamic, and absolutely impossible to miss.',defaultTitleFont:"'Righteous',cursive",defaultTitleSize:44,defaultMsgFont:"'Raleway',sans-serif",defaultMsgSize:14,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,render(d){return renderCard(d,'linear-gradient(135deg,#f7971e,#ffd200)',confetti());}},
+{id:51,name:'Dark Prestige',cat:'modern',colors:{titleColor:'#e0b0ff',nameColor:'#ffffff',msgColor:'rgba(220,200,255,.88)',fromColor:'#da70d6'},defaultTitle:'Extraordinary',defaultMsg:'Some achievements transcend ordinary recognition. Yours is one of them — truly, magnificently extraordinary.',defaultTitleFont:"'Cinzel',serif",defaultTitleSize:36,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:14,defaultFromFont:"'Satisfy',cursive",defaultFromSize:20,render(d){return renderCard(d,'radial-gradient(ellipse at 30% 25%,#1c0a3e,#0d0520 40%,#000012)',hexPattern());}},
+{id:52,name:'Electric Win',cat:'modern',colors:{titleColor:'#ff0080',nameColor:'#ffffff',msgColor:'#ffb3d9',fromColor:'#ff00ff'},defaultTitle:'INCREDIBLE!',defaultMsg:'Electrifying performance. Shocking achievement. Absolutely stunning results. You rewrote what\'s possible.',defaultTitleFont:"'Bebas Neue',sans-serif",defaultTitleSize:56,defaultMsgFont:"'Montserrat',sans-serif",defaultMsgSize:13,defaultFromFont:"'Montserrat',sans-serif",defaultFromSize:14,render(d){return renderCard(d,'#0a0a0a',neonGlow('rgba(255,0,128,.2)')+gridLines());}},
+{id:53,name:'Clean White',cat:'modern',colors:{titleColor:'#1a1a1a',nameColor:'#2d2d2d',msgColor:'#444',fromColor:'#666'},defaultTitle:'Congratulations',defaultMsg:'Clean lines, clear vision, exceptional results. Your achievement is as refined as your approach.',defaultTitleFont:"'Montserrat',sans-serif",defaultTitleSize:32,defaultMsgFont:"'Lato',sans-serif",defaultMsgSize:14,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,render(d){return renderCard(d,'#ffffff',minimalLines()+medal());}},
+{id:54,name:'Holographic Win',cat:'modern',colors:{titleColor:'#ffd700',nameColor:'#fff176',msgColor:'rgba(255,255,200,.9)',fromColor:'#ffc107'},defaultTitle:'Congratulations!',defaultMsg:'Your achievement shimmers with every angle — holographic in its brilliance, iridescent in its impact.',defaultTitleFont:"'Cinzel',serif",defaultTitleSize:36,defaultMsgFont:"'Cormorant Garamond',serif",defaultMsgSize:14,defaultFromFont:"'Satisfy',cursive",defaultFromSize:20,render(d){return renderCard(d,'#050010',holographic()+stars());}},
+{id:55,name:'Monochrome Bold',cat:'modern',colors:{titleColor:'#ffffff',nameColor:'#e0e0e0',msgColor:'rgba(200,200,200,.85)',fromColor:'rgba(150,150,150,.7)'},defaultTitle:'CONGRATULATIONS',defaultMsg:'Black. White. Bold. Excellence needs no color to stand out — and neither do you.',defaultTitleFont:"'Bebas Neue',sans-serif",defaultTitleSize:50,defaultMsgFont:"'Montserrat',sans-serif",defaultMsgSize:14,defaultFromFont:"'Dancing Script',cursive",defaultFromSize:18,render(d){return renderCard(d,'#0d0d0d',minimalLines()+cornerAccents('rgba(255,255,255,.25)'));}},
+];
+
+/* ===== TOGGLE SECTIONS ===== */
+function toggleSec(id){
+  const body=document.getElementById('sec-'+id);const chev=document.getElementById('chev-'+id);if(!body)return;
+  const open=body.classList.contains('expanded');
+  if(open){body.style.maxHeight=body.scrollHeight+'px';requestAnimationFrame(()=>{body.style.maxHeight='0';body.classList.remove('expanded');body.classList.add('collapsed');});}
+  else{body.classList.remove('collapsed');body.classList.add('expanded');body.style.maxHeight=body.scrollHeight+'px';setTimeout(()=>body.style.maxHeight='',400);}
+  if(chev)chev.classList.toggle('open',!open);
+}
+
+/* ===== APPLY DEFAULTS ===== */
+function applyDesignDefaults(design){
+  const setOpt=(id,v)=>{if(!v)return;const e=document.getElementById(id);if(!e)return;for(const o of e.options)if(o.value===v){e.value=v;return;}};
+  const setR=(id,lid,v,s)=>{if(v===undefined)return;const e=document.getElementById(id);if(!e)return;e.value=v;const l=document.getElementById(lid);if(l)l.textContent=v+(s||'');};
+  const set=(id,v)=>{if(v===undefined)return;const e=document.getElementById(id);if(e)e.value=v;};
+  if(design.defaultTitle)set('cardTitle',design.defaultTitle);
+  if(design.defaultMsg){set('customMessage',design.defaultMsg);const mc=document.getElementById('msgCount');if(mc)mc.textContent=design.defaultMsg.length+'/200';}
+  setOpt('titleFontSelect',design.defaultTitleFont);setR('titleSize','titleSizeVal',design.defaultTitleSize,'px');
+  setOpt('fontSelect',design.defaultMsgFont);setR('msgSize','msgSizeVal',design.defaultMsgSize,'px');
+  setOpt('fromFontSelect',design.defaultFromFont);setR('fromSize','fromSizeVal',design.defaultFromSize,'px');
+  if(design.colors){
+    const sc=(id,v)=>{if(v&&v.startsWith('#')){const e=document.getElementById(id);if(e)e.value=v;}};
+    sc('titleColor',design.colors.titleColor);sc('nameColor',design.colors.nameColor);
+    sc('msgColor',design.colors.msgColor);sc('fromColor',design.colors.fromColor);
+  }
+}
+
+/* ===== SELECT DESIGN ===== */
+function selectDesign(id){
+  selectedDesignId=id;const design=CARD_DESIGNS.find(d=>d.id===id);if(!design)return;
+  applyDesignDefaults(design);
+  document.querySelectorAll('.card-thumb').forEach(t=>t.classList.toggle('selected',parseInt(t.dataset.id)===id));
+  const sn=document.getElementById('selectedDesignName');if(sn)sn.textContent=design.name;
+  updatePreview();
+}
+
+/* ===== GET CARD DATA ===== */
+function getCardData(){
+  const g=id=>{const e=document.getElementById(id);return e?e.value:'';};
+  const from=document.getElementById('senderName').value.trim();
+  const senderLine=from?'— '+from:'';
+  const titleRaw=document.getElementById('cardTitle').value.trim()||'Congratulations!';
+  const tStyle=g('titleStyle')||'normal';
+  let titleDisplay=titleRaw;
+  if(tStyle==='uppercase')titleDisplay=titleRaw.toUpperCase();
+  else if(tStyle==='capitalize')titleDisplay=titleRaw.replace(/\b\w/g,c=>c.toUpperCase());
+  return{
+    w:CARD_W,h:CARD_H,
+    name:document.getElementById('recipientName').value.trim(),
+    achievement:document.getElementById('achievement').value.trim(),
+    from,senderLine,title:titleRaw,titleDisplay,
+    msg:document.getElementById('customMessage').value.trim()||'Your dedication and hard work have paid off. Congratulations on this wonderful achievement!',
+    font:g('fontSelect')||"'Cormorant Garamond',serif",
+    titleFont:g('titleFontSelect')||"'Cinzel',serif",
+    fromFont:g('fromFontSelect')||"'Dancing Script',cursive",
+    nameFont:g('nameFontSelect')||"'Great Vibes',cursive",
+    titleSize:parseInt(g('titleSize'))||40,
+    msgSize:parseInt(g('msgSize'))||14,
+    fromSize:parseInt(g('fromSize'))||18,
+    nameSize:parseInt(g('nameSize'))||32,
+    titleColor:g('titleColor')||'#f9d77e',
+    msgColor:g('msgColor')||'#f3e8d0',
+    fromColor:g('fromColor')||'#f9d77e',
+    nameColor:g('nameColor')||'#ffffff',
+    spacing:parseFloat(g('titleSpacing'))||1,
+    style:tStyle,lh:parseFloat(g('msgLineH'))||1.6,align:g('msgAlign')||'center',
+  };
+}
+
+/* ===== UPDATE PREVIEW ===== */
+function updatePreview(){
+  const design=CARD_DESIGNS.find(d=>d.id===selectedDesignId);if(!design)return;
+  const d=getCardData();
+  const canvas=document.getElementById('cardCanvas');
+  canvas.innerHTML=design.render(d);
+  canvas.style.width=d.w+'px';canvas.style.height=d.h+'px';
+  scalePreview();
+}
+function scalePreview(){
+  const outer=document.getElementById('cardPreviewOuter');const sc=document.getElementById('cardScaleContainer');if(!outer||!sc)return;
+  const avail=outer.clientWidth||outer.offsetWidth||300;const scale=avail/CARD_W;
+  sc.style.transform='scale('+scale+')';outer.style.height=(CARD_H*scale)+'px';
+}
+
+/* ===== POPULATE GRID ===== */
+function populateGrid(cat){
+  currentCategory=cat;const grid=document.getElementById('designGrid');
+  const list=cat==='all'?CARD_DESIGNS:CARD_DESIGNS.filter(d=>d.cat===cat);
+  grid.innerHTML='';
+  list.forEach(design=>{
+    const thumb=document.createElement('div');
+    thumb.className='card-thumb'+(design.id===selectedDesignId?' selected':'');
+    thumb.dataset.id=design.id;thumb.onclick=()=>selectDesign(design.id);
+    const sd={
+      w:600,h:300,name:'Alex',achievement:'Award Winner',from:'Team',senderLine:'— Team',
+      title:design.defaultTitle||'Congratulations!',titleDisplay:design.defaultTitle||'Congratulations!',
+      msg:(design.defaultMsg||'').slice(0,55),
+      font:design.defaultMsgFont||"'Cormorant Garamond',serif",
+      titleFont:design.defaultTitleFont||"'Cinzel',serif",
+      fromFont:design.defaultFromFont||"'Dancing Script',cursive",
+      nameFont:"'Great Vibes',cursive",
+      titleSize:Math.round((design.defaultTitleSize||40)*.52),
+      msgSize:Math.round((design.defaultMsgSize||14)*.56),
+      fromSize:Math.round((design.defaultFromSize||18)*.52),
+      nameSize:17,
+      titleColor:design.colors?.titleColor||'#f9d77e',
+      msgColor:design.colors?.msgColor||'rgba(255,255,255,.85)',
+      fromColor:design.colors?.fromColor||'rgba(255,255,255,.7)',
+      nameColor:design.colors?.nameColor||'#fff',
+      spacing:0,style:'normal',lh:1.3,align:'center',
+    };
+    const scale=100/300;
+    thumb.innerHTML=`<div style="width:100%;height:100px;overflow:hidden;position:relative;border-radius:6px"><div style="position:absolute;top:0;left:0;width:300px;height:200px;transform:scale(${scale});transform-origin:top left">${design.render(sd)}</div></div><div class="card-thumb-name">${design.name}</div><div class="select-badge"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>`;
+    grid.appendChild(thumb);
+  });
+}
+function filterCards(cat,btn){document.querySelectorAll('.category-tab').forEach(b=>b.classList.remove('active'));if(btn)btn.classList.add('active');populateGrid(cat);}
+
+/* ===== HIGH-RES RENDER ===== */
+async function generateHighRes(){
+  const design=CARD_DESIGNS.find(d=>d.id===selectedDesignId);if(!design)return null;
+  const d=getCardData();const rt=document.getElementById('cardRenderTarget');
+  rt.style.width=d.w+'px';rt.style.height=d.h+'px';rt.innerHTML=design.render(d);
+  await new Promise(r=>setTimeout(r,130));
+  const canvas=await html2canvas(rt,{scale:4,useCORS:true,allowTaint:true,width:d.w,height:d.h,backgroundColor:null});
+  rt.innerHTML='';return canvas;
+}
+
+/* ===== DOWNLOAD ===== */
+async function downloadCard(fmt){
+  const pg=document.getElementById('dlProgress');pg.classList.remove('hidden');
+  try{
+    const canvas=await generateHighRes();if(!canvas)return;
+    const d=getCardData();const n=(d.name||'Congratulations')+'-Card';
+    if(fmt==='pdf'){
+      const{jsPDF}=window.jspdf;
+      const pdf=new jsPDF({orientation:d.w>d.h?'landscape':'portrait',unit:'px',format:[d.w,d.h]});
+      pdf.addImage(canvas.toDataURL('image/png'),0,0,d.w,d.h);pdf.save(n+'.pdf');
+    }else{
+      const mime=fmt==='jpeg'?'image/jpeg':fmt==='webp'?'image/webp':'image/png';
+      const ext=fmt==='jpeg'?'jpg':fmt;
+      const a=document.createElement('a');a.href=canvas.toDataURL(mime,.95);a.download=n+'.'+ext;a.click();
+    }
+    showToast('Saved as '+fmt.toUpperCase()+'!','success');
+  }catch(e){showToast('Error generating file','error');console.error(e);}
+  finally{pg.classList.add('hidden');}
+}
+async function copyCardImage(){
+  const btn=document.getElementById('copyImgBtn');const pg=document.getElementById('dlProgress');pg.classList.remove('hidden');
+  const orig=btn.innerHTML;
+  try{
+    if(!navigator.clipboard?.write){showToast('Copy not supported','error');return;}
+    const canvas=await generateHighRes();if(!canvas)return;
+    const blob=await new Promise(res=>canvas.toBlob(res,'image/png'));
+    await navigator.clipboard.write([new ClipboardItem({'image/png':blob})]);
+    btn.innerHTML='<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Copied!';
+    showToast('Image copied!','success');setTimeout(()=>btn.innerHTML=orig,2500);
+  }catch(e){showToast('Copy failed','error');}
+  finally{pg.classList.add('hidden');}
+}
+function shuffleDesign(){const list=currentCategory==='all'?CARD_DESIGNS:CARD_DESIGNS.filter(d=>d.cat===currentCategory);selectDesign(list[Math.floor(Math.random()*list.length)].id);}
+function resetToDefault(){['recipientName','achievement','senderName','cardTitle','customMessage'].forEach(id=>{const e=document.getElementById(id);if(e)e.value='';});document.getElementById('msgCount').textContent='0/200';selectDesign(1);showToast('Reset to defaults','success');}
+function toggleFaq(btn){const c=btn.nextElementSibling;const ic=btn.querySelector('.faq-icon');c.classList.toggle('open');if(ic)ic.classList.toggle('open');}
+function showToast(msg,type){const t=document.getElementById('toastMsg');t.textContent=msg;t.className='toast-msg '+(type==='error'?'toast-error':'toast-success');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3000);}
+
+/* ===== INIT ===== */
+document.getElementById('mobileMenuBtn')?.addEventListener('click',()=>document.getElementById('mobileMenu')?.classList.toggle('open'));
+window.addEventListener('scroll',()=>document.getElementById('scrollTopBtn')?.classList.toggle('visible',window.scrollY>300));
+document.addEventListener('DOMContentLoaded',()=>{
+  populateGrid('all');selectDesign(1);
+  const outer=document.getElementById('cardPreviewOuter');
+  if(window.ResizeObserver)new ResizeObserver(()=>scalePreview()).observe(outer);
+  window.addEventListener('resize',scalePreview);setTimeout(scalePreview,80);
+});
+</script>
+</body>
+</html>
